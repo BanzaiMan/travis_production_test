@@ -1,7 +1,15 @@
-language: haskell
+language: ruby
 
 ghc:
   - 7.6.3
   - 7.4
+
+os:
+  - linux
+  - osx
+
+rvm:
+  - "1.9.3"
+  - "2.0.0"
 
 script: true
