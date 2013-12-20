@@ -1,4 +1,4 @@
-language: ruby
+language: haskell
 
 ghc:
   - 7.6.3
