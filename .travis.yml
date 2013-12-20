@@ -1,15 +1,8 @@
-language: haskell
-
-ghc:
-  - 7.6.3
-  - 7.4
-
-os:
-  - linux
-  - osx
+language: ruby
 
 rvm:
   - "1.9.3"
   - "2.0.0"
+  - "2.1.0-rc1"
 
-script: true
+script: ruby -v
