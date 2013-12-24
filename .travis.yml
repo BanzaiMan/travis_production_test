@@ -7,3 +7,8 @@ rvm:
 
 script: ruby -v
 
+notifications:
+  email:
+    - asari.ruby@gmail.com
+    - $USER@example.com
+
