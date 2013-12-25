@@ -5,5 +5,5 @@ rvm:
   - "2.0.0"
   - "2.1.0-rc1"
 
-script: echo $TRAVIS_BRANCH
+script: git --version
 
