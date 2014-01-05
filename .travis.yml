@@ -3,5 +3,5 @@ language: php
 install:
   - export RBENV_DEBUG=1
   - cat `which composer`
-  - 'composer require --prefer-dist --dev ''codeception/codeception \*'' ''codeception/specify \*'''
+  - 'composer require --prefer-dist --dev ''codeception/codeception *'' ''codeception/specify *'''
 
