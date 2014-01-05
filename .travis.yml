@@ -1,7 +1,7 @@
 language: php
 
 install:
-  - export RBENV_DEBUG=1
   - cat `which composer`
+  - cat ~/.phpenv/versions/5.3/bin/composer
   - 'composer require --prefer-dist --dev ''codeception/codeception *'' ''codeception/specify *'''
 
