@@ -1,5 +1,6 @@
 language: php
 
 install:
+  - which composer
   - 'composer require --prefer-dist --dev ''codeception/codeception \*'' ''codeception/specify \*'''
 
