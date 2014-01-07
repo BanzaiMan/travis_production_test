@@ -2,6 +2,6 @@ language: ruby
 
 
 script:
-  - bash -l -c "exit 0"
+  - bash -l -c "exit 5"
 
 
