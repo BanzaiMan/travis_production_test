@@ -1,7 +1,7 @@
-language: php
+language: ruby
 
-install:
-  - cat `which composer`
-  - cat ~/.phpenv/versions/5.3/bin/composer
-  - 'composer require --prefer-dist --dev ''codeception/codeception *'' ''codeception/specify *'''
+
+script:
+  - bash -l -c "exit 0"
+
 
