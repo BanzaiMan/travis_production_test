@@ -7,10 +7,6 @@ virtualenv:
     system_site_packages: true
 
 before_install:
-    - sudo usermod -a -G audio $USER
-    - 'echo $?'
-    - groups
-    - bash -l -c "groups"
     # Easy dependencies
     - travis_retry sudo apt-get update -qq
     - travis_retry sudo apt-get install -qq -y python-nose python-coverage python-scipy python-matplotlib python-pandas
@@ -39,6 +35,7 @@ before_script:
     - /usr/bin/jackd -r -s -d dummy -C 0 -P 2 -rate 44100 -p 128 &
 
 script:
+    - sudo -u travis -g audio groups
     - cd ${EXPYFUN_DIR}/../
     # Hack to skip using Pyo, since Travis doesn't allow "audio" group yet:
     # export _EXPYFUN_PYO_DUMMY_MODE=true
