@@ -5,8 +5,8 @@ python:
 
 before_install:
     - export FOO=1
-    - sudo usermod -a -G video $USER
+    - sudo usermod -a -G video,audio $USER
 script:
   - echo $FOO
-  - sudo -E sudo -u $USER -g audio -E bash -c 'groups; echo $FOO'
+  - sudo -E sudo -u $USER -E bash -c 'groups; echo $FOO'
 
