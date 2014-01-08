@@ -5,6 +5,7 @@ python:
 
 before_install:
     - export FOO=1
+    - sudo usermod -a -G video $USER
 script:
-    - sudo sudo -u $USER -g audio -g video 'groups; echo $FOO'
+    - sudo sudo -u $USER -g audio 'groups; echo $FOO'
 
