@@ -7,5 +7,6 @@ before_install:
     - export FOO=1
     - sudo usermod -a -G video $USER
 script:
-  - sudo sudo -u $USER -g audio -E bash -l -c 'groups; echo $FOO'
+  - echo $FOO
+  - sudo sudo -u $USER -g audio -E bash -c 'groups; echo $FOO'
 
