@@ -8,5 +8,5 @@ before_install:
     - sudo usermod -a -G video,audio $USER
 script:
   - echo $FOO
-  - sudo -E sudo -u $USER -E bash -c 'groups; echo $FOO'
+  - sudo -E su $USER -c 'groups; echo $FOO'
 
