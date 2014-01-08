@@ -3,6 +3,8 @@ language: python
 python:
     - "2.7"
 
+before_install:
+    - export FOO=1
 script:
-    - sudo sudo -u $USER -g audio -g video groups
+    - sudo sudo -u $USER -g audio -g video 'groups; echo $FOO'
 
