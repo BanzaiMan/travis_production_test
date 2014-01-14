@@ -8,3 +8,5 @@ before_install:
   - gem uninstall bundler -I -x
   - gem install bundler -v 1.3.5
 
+script: true
+
