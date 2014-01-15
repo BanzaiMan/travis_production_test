@@ -1,12 +1,9 @@
-language: ruby
-
-rvm:
-  - "1.9.3"
-  - "2.1.0"
-
-before_install:
-  - gem uninstall bundler -I -x
-  - gem install bundler -v 1.3.5
-
-script: true
-
+language: python
+matrix:
+  include:
+    - python: 2.7
+      env: FOO=true BAR=False
+    - python: 2.7
+      env: FAZ=true BOO=False
+    - python: 2.6
+      env: FOZ=true BAO=False
