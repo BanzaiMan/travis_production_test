@@ -2,5 +2,6 @@ language: python
 
 script:
   - gem --version
-  - sudo gem --version
+  - gem install foreman
+  - foreman --help
 
