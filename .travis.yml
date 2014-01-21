@@ -1,13 +1,6 @@
 language: python
 
-script: true
-
-matrix:
-  include:
-    - python: 2.7
-      env: FOO=true BAR=False
-    - python: 2.7
-      env: FAZ=true BOO=False
-    - python: 2.6
-      env: FOZ=true BAO=False
+script:
+  - gem --version
+  - sudo gem --version
 
