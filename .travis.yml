@@ -15,5 +15,5 @@ script: "npm test"
 
 env:
   global:
-    - DEFAULT_INTERNAL=`ruby -e "puts Encoding.default_internal"`
+    - DEFAULT_EXTERNAL=`ruby -e "puts Encoding.default_external"`
 
