@@ -15,5 +15,5 @@ script: "npm test"
 
 env:
   global:
-    - SERVER_HOST='127.0.0.1'
+    - DEFAULT_INTERNAL=`ruby -e "puts Encoding.default_internal"`
 
