@@ -1,19 +1,5 @@
-language: node_js
-node_js:
-  - "0.10"
-  - 0.11
+language: python
 
-matrix:
-  allow_failures:
-    - node_js: 0.11
-
-services:
-  - mongodb
-  - redis-server
-
-script: "npm test"
-
-env:
-  global:
-    - DEFAULT_EXTERNAL=`ruby\\ -e\\ "puts\\ Encoding.default_external"`
+script:
+  - echo $TRAVIS_COMMIT_MESSAGE
 
