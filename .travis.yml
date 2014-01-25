@@ -1,9 +1,5 @@
 language: python
 
 script:
-  - gem --version
-  - touch this
-  - gem install foreman
-  - foreman --help
-  - ls -l this
+  - echo $TRAVIS_COMMIT_MESSAGE
 
