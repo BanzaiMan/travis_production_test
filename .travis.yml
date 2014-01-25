@@ -1,5 +1,45 @@
-language: python
+language: node_js
+node_js:
+  - "0.10"
+  - 0.11
 
-script:
-  - echo $TRAVIS_COMMIT_MESSAGE
+matrix:
+  allow_failures:
+    - node_js: 0.11
 
+services:
+  - mongodb
+  - redis-server
+
+script: "npm test"
+
+env:
+  global:
+    - DEBUG="apn"
+    - NODE_ENV="testing"
+    - TZ="UTC"
+    - LOGGER_ENABLESRC=false
+    - LOGGER_STDOUT_ENABLED=true
+    - LOGGER_STDOUT_LEVEL='info'
+    - LOGGER_STDERR_ENABLED=true
+    - LOGGER_STDERR_LEVEL='error'
+    - LOGGER_RINGBUFFER_ENABLED=true
+    - LOGGER_RINGBUFFER_LEVEL='trace'
+    - LOGGER_RINGBUFFER_LIMIT=100
+    - LOGGER_SYSLOG_ENABLED=false
+    - LOGGER_SYSLOG_LEVEL='info'
+    - LOGGER_SYSLOG_STREAM_TYPE=null
+    - LOGGER_SYSLOG_STREAM_FACILITY=null
+    - LOGGER_SYSLOG_STREAM_HOST=127.0.0.1
+    - LOGGER_SYSLOG_STREAM_PORT=0
+    - REDIS_HOST="127.0.0.1"
+    - REDIS_PORT=6379
+    - REDIS_PASSWORD=""
+    - SERVER_BREAKDOWNSTACK=true
+    - SERVER_PRETTYLOCALS=false
+    - SERVER_SALTLENGTH=8
+    - SERVER_PORT=4000
+    - SERVER_HOST='127.0.0.1'
+    - SERVER_OAUTH_GOOGLE_REDIRECTURI="http://localhost:400§cl/auth/google"
+    - SERVER_GEOCODE_DEBUGTOFILE=false
+    - SERVER_STATSD_HOST="127.0.0.1"
