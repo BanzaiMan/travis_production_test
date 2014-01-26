@@ -4,8 +4,7 @@ addons:
   postgresql: '9.2'
 
 before_install:
-  - sudo dpkg -L postgresql-9.2
-  - sudo dpkg -L postgresql-9.2-postgis-2.1
+  - sudo dpkg -S /usr/share/postgresql/9.2/contrib/postgis-2.1
 script:
   - true
 
