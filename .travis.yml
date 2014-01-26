@@ -4,7 +4,8 @@ addons:
   postgresql: '9.3'
 
 before_install:
-  - sudo apt-get install postgresql-9.3-postgis-2.1
+  - sudo dpkg -L postgresql-9.3
+  - sudo dpkg -L postgresql-9.3-postgis-2.1
 script:
-  - echo $TRAVIS_COMMIT_MESSAGE
+  - true
 
