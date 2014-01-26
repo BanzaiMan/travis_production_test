@@ -1,11 +1,11 @@
 language: ruby
 
 addons:
-  postgresql: '9.3'
+  postgresql: '9.2'
 
 before_install:
-  - sudo dpkg -L postgresql-9.3
-  - sudo dpkg -L postgresql-9.3-postgis-2.1
+  - sudo dpkg -L postgresql-9.2
+  - sudo dpkg -L postgresql-9.2-postgis-2.1
 script:
   - true
 
