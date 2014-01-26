@@ -1,10 +1,10 @@
 language: ruby
 
 addons:
-  postgresql: '9.2'
+  postgresql: '9.3'
 
 before_install:
-  - sudo dpkg -S /usr/share/postgresql/9.2/contrib/postgis-2.1
+  - sudo apt-get install postgresql-9.3-postgis-scripts
 script:
   - true
 
