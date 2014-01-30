@@ -3,7 +3,7 @@ language: ruby
 before_install:
   - curl -O http://debian.neo4j.org/neotechnology.gpg.key
   - sudo apt-key add neotechnology.gpg.key && rm neotechnology.gpg.key
-  - sudo echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
+  - sudo bash -c "echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list"
   - sudo aptitude update -y
   - sudo aptitude install neo4j -y
 
