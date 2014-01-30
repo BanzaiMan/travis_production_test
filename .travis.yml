@@ -7,3 +7,4 @@ before_install:
   - sudo aptitude update -y
   - sudo aptitude install neo4j -y
 
+
