@@ -1,3 +1,8 @@
 language: ruby
 
 script: true
+
+env:
+  global:
+    - SERVER_OAUTH_GOOGLE_REDIRECTURI="http://localhost:400§cl/auth/google"
+
