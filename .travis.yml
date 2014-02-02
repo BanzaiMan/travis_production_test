@@ -1,9 +1,8 @@
-language: ruby
+language: php
 
 script: true
 
-env:
-  global:
-    - FOO='about to start'
-    - SERVER_OAUTH_GOOGLE_REDIRECTURI="http://localhost:400§cl/auth/google"
+php:
+  - '5.5.8'
+  - '5.4'
 
