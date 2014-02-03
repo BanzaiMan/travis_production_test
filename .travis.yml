@@ -1,8 +1,5 @@
 language: php
 
-script: echo $TMPDIR
+script: echo $TMP
 
-php:
-  - '5.5.8'
-  - '5.4'
 
