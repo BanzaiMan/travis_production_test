@@ -1,12 +1,3 @@
-GIT
-  remote: git://github.com/colszowka/simplecov.git
-  revision: 5a645d6eca1e32a26d934997e5790463b95aeb16
-  specs:
-    simplecov (0.8.2)
-      docile (~> 1.1.0)
-      multi_json
-      simplecov-html (~> 0.8.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -22,6 +13,10 @@ GEM
     rspec-expectations (2.14.4)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.4)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
 
 PLATFORMS
@@ -30,4 +25,4 @@ PLATFORMS
 DEPENDENCIES
   rake
   rspec
-  simplecov!
+  simplecov
