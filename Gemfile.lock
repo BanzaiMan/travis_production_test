@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/colszowka/simplecov.git
-  revision: a3387f7b25100939df6a5af339580cbe3055cdc6
-  ref: a3387f7
+  revision: 3459c3530ba925967613719a79df9bac813c870e
+  ref: 3459c35
   specs:
     simplecov (0.8.0.pre)
       multi_json
