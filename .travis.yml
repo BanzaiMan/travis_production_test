@@ -1,7 +1,14 @@
-language: php
+language: ruby
 
-php:
-  - "5.3"
+rvm:
+  - "2.1.0"
 
-script: grep intl ~/.phpenv/versions/*/etc/php.ini
+script:
+  - ruby -e "puts ENV['SAUCE_USERNAME']"
+  - ruby -e "puts ENV['SAUCE_ACCESS_KEY']"
+
+addons:
+  sauce_connect:
+    username: Foooooo
+    access_key: Barrrrrr
 
