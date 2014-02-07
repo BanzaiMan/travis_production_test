@@ -1,10 +1,7 @@
-language: java
+language: php
 
-jdk:
-  - oraclejdk8
+php:
+  - "5.3"
 
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install oracle-java8-installer
+script: grep intl ~/.phpenv/versions/*/etc/php.ini
 
-script: java -version
