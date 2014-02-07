@@ -1,6 +1,6 @@
-language: ruby
+language: java
 
-rvm:
-  - 1.9.3
-  - 2.1.0
+jdk:
+  - oraclejdk8
 
+script: java -version
