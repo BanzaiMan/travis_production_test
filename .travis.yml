@@ -1,14 +1,5 @@
 language: ruby
 
 rvm:
-  - "2.1.0"
-
-before_install:
-  - ruby -e "puts ENV['SAUCE_USERNAME']"
-  - ruby -e "puts ENV['SAUCE_ACCESS_KEY']"
-
-addons:
-  sauce_connect:
-    username: Foooooo
-    access_key: Barrrrrr
+  - jruby-19mode
 
