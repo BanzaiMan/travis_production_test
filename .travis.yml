@@ -3,7 +3,7 @@ language: ruby
 rvm:
   - "2.1.0"
 
-script:
+before_install:
   - ruby -e "puts ENV['SAUCE_USERNAME']"
   - ruby -e "puts ENV['SAUCE_ACCESS_KEY']"
 
