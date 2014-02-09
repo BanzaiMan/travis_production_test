@@ -2,8 +2,10 @@ language: node_js
 
 
 before_install:
+  - gem env
   - gem update --system
   - gem install bundler
   - gem which bundler
+  - gem list bundler
   - which bundler
   - bundle install
