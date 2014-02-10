@@ -5,4 +5,4 @@ script:
 env:
   secure: h+jnfP1QDOyLX2gmhz6SJrz38Iqg0vEABgqYjGP6hdED6Rbb+hPIN5funS0CabiO5QUC7ODNhMwZMs5RXNckt3eCbKBRUwesOxV87cNkrL6m60LDaV8PVe/kv9G71dUFvu+D387zvmKSmcWYdCXclxPGBgNM4hUublk2tTEoDSY=
   global:
-    secure: QdmDU1JDAzXbijSnPCdpDcfvfDqvkmUgm2OQpv/wQ2xKntuqTp1G+2PcYV45WYk+ZUqi/JXxarnKnBEWS+IEPs++xxKqR0I6u6rIzI1g9aZQ5cK379tKj/C28MFzXkJw0b52FrDDkNt57gQFOVS/K0dRGTtLAXxv60fmotmQ+HA=
+  - secure: jR+AhJISikYdEo+/+DeJRCGDt5HZj/VWww2a6l2pIDccirpXLDvcoeOfUu41RYBxbY2NrS7hR/jd4r757WMzNvptC/+eSZbZt4TJYxXGTYBqjwme7l9gk4wPzCOzOR9iCbqj56bKM/l8/z+n/zHVVmkwlln6bGggsl0+NGw1rhk=
