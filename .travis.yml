@@ -1,8 +1,6 @@
 language: ruby
 script:
-- echo $ENCKEY
 - echo $FOO
 env:
-  secure: h+jnfP1QDOyLX2gmhz6SJrz38Iqg0vEABgqYjGP6hdED6Rbb+hPIN5funS0CabiO5QUC7ODNhMwZMs5RXNckt3eCbKBRUwesOxV87cNkrL6m60LDaV8PVe/kv9G71dUFvu+D387zvmKSmcWYdCXclxPGBgNM4hUublk2tTEoDSY=
   global:
-  - secure: jR+AhJISikYdEo+/+DeJRCGDt5HZj/VWww2a6l2pIDccirpXLDvcoeOfUu41RYBxbY2NrS7hR/jd4r757WMzNvptC/+eSZbZt4TJYxXGTYBqjwme7l9gk4wPzCOzOR9iCbqj56bKM/l8/z+n/zHVVmkwlln6bGggsl0+NGw1rhk=
+    secure: h+koGpWwDYzfBgO9XH/tj5fzxh82iD0gcuHYbj71uBM0Qk0ijIjid43wmxHBREF2yJOjmglvSsByRUuL4tRJXSqddRGsbnsz4T84V2LHMmIfYyAK2Zo2IWHya4ROhbZsUXNqEXK9aSjYfT1gxJ/Ql6bPPyQoGnQHf96bDQu1MKI=
