@@ -1,12 +1,8 @@
 language: ruby
-
 script:
-  - echo $ENCKEY
-  - echo $FOO
-
+- echo $ENCKEY
+- echo $FOO
 env:
-  secure: "P9rVgEKCprA46vrZ/1Y2qjCsf1X033YcwSQEP2arkn7lJBfFGsPWI81lx9wvkHxsUokWBBSeE/G2VqpJsl+66AxADUGu9hPcKVMvVYV2PuiK13jSjSNAK1LXDPqG8MvvlkDFUxL7ps3UjWGq/d4rGTwt7ovI8V08KfYeuReorjc="
-  secure: "h+jnfP1QDOyLX2gmhz6SJrz38Iqg0vEABgqYjGP6hdED6Rbb+hPIN5funS0CabiO5QUC7ODNhMwZMs5RXNckt3eCbKBRUwesOxV87cNkrL6m60LDaV8PVe/kv9G71dUFvu+D387zvmKSmcWYdCXclxPGBgNM4hUublk2tTEoDSY="
-
-
-
+  secure: h+jnfP1QDOyLX2gmhz6SJrz38Iqg0vEABgqYjGP6hdED6Rbb+hPIN5funS0CabiO5QUC7ODNhMwZMs5RXNckt3eCbKBRUwesOxV87cNkrL6m60LDaV8PVe/kv9G71dUFvu+D387zvmKSmcWYdCXclxPGBgNM4hUublk2tTEoDSY=
+  global:
+    secure: QdmDU1JDAzXbijSnPCdpDcfvfDqvkmUgm2OQpv/wQ2xKntuqTp1G+2PcYV45WYk+ZUqi/JXxarnKnBEWS+IEPs++xxKqR0I6u6rIzI1g9aZQ5cK379tKj/C28MFzXkJw0b52FrDDkNt57gQFOVS/K0dRGTtLAXxv60fmotmQ+HA=
