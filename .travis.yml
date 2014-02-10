@@ -1,8 +1,12 @@
 language: ruby
 
-script: echo $ENCKEY
+script:
+  - echo $ENCKEY
+  - echo $FOO
 
 env:
   secure: "P9rVgEKCprA46vrZ/1Y2qjCsf1X033YcwSQEP2arkn7lJBfFGsPWI81lx9wvkHxsUokWBBSeE/G2VqpJsl+66AxADUGu9hPcKVMvVYV2PuiK13jSjSNAK1LXDPqG8MvvlkDFUxL7ps3UjWGq/d4rGTwt7ovI8V08KfYeuReorjc="
+  secure: "h+jnfP1QDOyLX2gmhz6SJrz38Iqg0vEABgqYjGP6hdED6Rbb+hPIN5funS0CabiO5QUC7ODNhMwZMs5RXNckt3eCbKBRUwesOxV87cNkrL6m60LDaV8PVe/kv9G71dUFvu+D387zvmKSmcWYdCXclxPGBgNM4hUublk2tTEoDSY="
+
 
 
