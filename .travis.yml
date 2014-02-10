@@ -1,11 +1,7 @@
-language: cpp
+language: ruby
 
-script: $COMMAND
+script: echo $ENCKEY
 
-matrix:
-  include:
-    - compiler: clang
-      env: COMMAND='./configure && make && make test'
-    - compiler: gcc
-      env: COMMAND='./configure && make && make test'
-    - env: COMMAND='cpplint'
+env:
+  secure: "i1Qk1UcMBVi7wTudSmjz7YQGO61Fxw7+7qmFjQTqpJuIO1601fXfeBanUYpUfF5ACMNEBreMPmv9sJgxXQiV56o3zXqpySzxvdCmxGu5Lu/V8jiOaJCQnPtnAe7An6U1s1gVn2hVt2MZnjDIEbpQleZYsD9641bWvLJmu4sUh28="
+
