@@ -3,4 +3,4 @@ script:
 - echo $FOO
 env:
   global:
-  - secure: iCFH/pkhgi3UiqeC3zdjDaUw4RANBldiRgaKveG8RJg705Sgx8oBA+BJv1gsYv7EriJM0agJCQZhk5Bi19pM1ivls8z4OxhG87LWpVGxoWG6pR5UXzo+Mt55EdBod9o13b9KuvdkaZBHNqtlwcJU6Olf+1NV9P8wF69Lan56gUI=
+    secure: cGuMjG2aXQehavCn9nTBCT+nHdqZ2/M5w6z10YJORWyk3F5Z2D3qtODce+eN2RhYTc6oz15aLSAWhvVyHcbmceIoC4zAaS8nfVAYpr28jqlBUiiKU+v8sCIb8b8zt/MNPGblFGJa7hGEpND3uLWW/XwFtvn+NUu1t4mE8lyQl9k=
