@@ -3,5 +3,6 @@ language: ruby
 script: echo $ENCKEY
 
 env:
-  secure: "QJssnQtmiSwvFojmYd4CXvWO4eO4ZREwYD6yN65MHmew3Bp6PnXybvG3KIAsErYQ+7bL/46YlcBQjfQmUg3fPGo83d0hS5V+1eTKX7NZSe7JkxMftZ6y/No/Rs5aUhzFWBKY57Wny/czdkpV8dFurtP89mNdAhQrmnLQ6jFJ+60="
+  secure: "P9rVgEKCprA46vrZ/1Y2qjCsf1X033YcwSQEP2arkn7lJBfFGsPWI81lx9wvkHxsUokWBBSeE/G2VqpJsl+66AxADUGu9hPcKVMvVYV2PuiK13jSjSNAK1LXDPqG8MvvlkDFUxL7ps3UjWGq/d4rGTwt7ovI8V08KfYeuReorjc="
+
 
