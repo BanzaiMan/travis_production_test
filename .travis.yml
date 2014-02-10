@@ -1,11 +1,11 @@
-language: node_js
+language: cpp
 
+script: $COMMAND
 
-before_install:
-  - gem env
-  - gem update --system
-  - gem install bundler
-  - gem which bundler
-  - gem list bundler
-  - which bundler
-  - bundle install
+matrix:
+  include:
+    - compiler: clang
+      env: COMMAND='./configure && make && make test'
+    - compiler: gcc
+      env: COMMAND='./configure && make && make test'
+    - env: COMMAND='cpplint'
