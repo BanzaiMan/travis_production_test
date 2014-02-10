@@ -1,6 +1,3 @@
-language: ruby
-script:
-- echo $FOO
-env:
-  global:
-    secure: PzxfXhrsU8MGfZaZV8MCPouITWk7ZjNYdj0PSPzdGOSvbtlq5VWO62BzB2wxPNchyOab+UGMPp9VuafXRJQrlNIAbboIqVC+EOytA7YpU8Iy0gcSFnNFoHJlHh4szNglNsu1EjocEQDPFbKHoOm6cov4zDTjMhzDxPTXjt0d4zA=
+language: c++
+script: gcc --vesrion
+
