@@ -1,3 +1,7 @@
-language: c++
-script: gcc --version
+language: ruby
+script: true
+
+notifications:
+  hipchat:
+    - "CTbcYhMyr0y4l2aJbsVThpA0sA9cdOyX1EGHOVE0@Travis CI"
 
