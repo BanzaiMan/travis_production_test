@@ -5,6 +5,10 @@ rvm:
   - "rbx-2"
 script: true
 
+matrix:
+  allow_failures:
+    - rvm: rbx-2
+
 notifications:
   hipchat:
     - "CTbcYhMyr0y4l2aJbsVThpA0sA9cdOyX1EGHOVE0@Travis CI"
