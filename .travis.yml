@@ -28,6 +28,8 @@ matrix:
      - { rvm: jruby, gemfile: test/gemfiles/Gemfile.rails-4.1.x }
      - { rvm: rbx-2, gemfile: test/gemfiles/Gemfile.rails-4.0.x }
      - { rvm: rbx-2, gemfile: test/gemfiles/Gemfile.rails-4.1.x }
+
+  fast_finish: true
      
 notifications:
   hipchat:
