@@ -2,6 +2,7 @@ language: ruby
 
 rvm:
   - 2.1.1
+  - ruby-head-clang
 
 notifications:
   hipchat:
