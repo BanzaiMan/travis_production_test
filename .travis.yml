@@ -3,6 +3,8 @@ language: ruby
 rvm:
   - 2.1.1
   - ruby-head-clang
+  
+script: ruby -v
 
 notifications:
   hipchat:
