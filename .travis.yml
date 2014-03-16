@@ -1,5 +1,5 @@
 rvm:
   - "2.0.0"
 
-before_install: travis_retry "sleep 5; echo 'hi'"
+before_install: travis_wait sleep 90
 script: true
