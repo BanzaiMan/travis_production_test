@@ -14,4 +14,9 @@ matrix:
     - compiler: gcc
       env: SANITIZE=undefined
 
+  allow_failures:
+    - compiler: clang
+      env: SANITIZE=address
+    - compiler: clang
+      env: SANITIZE=undefined
 script: true
