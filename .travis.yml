@@ -1,5 +1,16 @@
-rvm:
-  - "2.0.0"
+compiler:
+  - gcc
+  - clang
+matrix:
+  include:
+    - compiler: clang
+      env: SANITIZE=address
+    - compiler: clang
+      env: SANITIZE=undefined
+  allow_failures:
+    - compiler: clang
+      env: SANITIZE=address
+    - compiler: clang
+      env: SANITIZE=undefined
 
-before_install: travis_wait sleep 90
 script: true
