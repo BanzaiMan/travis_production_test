@@ -1,2 +1,5 @@
-language: ruby
-script: which berks
+rvm:
+  - "2.0.0"
+
+before_install: travis_wait sleep 90
+script: true
