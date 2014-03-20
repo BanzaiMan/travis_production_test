@@ -1,6 +1,6 @@
 rvm:
   - "2.0.0"
 
-before_install: travis_wait sleep 90
+before_install: travis_wait sleep 1500
 script: true
 
