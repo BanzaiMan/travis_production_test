@@ -1,8 +1,5 @@
 rvm:
   - "2.0.0"
 
-services:
-  - elasticsearch
-
-script: true
+script: travis_wait sleep 130
 
