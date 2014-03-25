@@ -1,9 +1,8 @@
-rvm:
-  - "2.0.0"
+language: python
 
 service:
   - mysql
   
 script:
-  - mysql -h '127.0.0.1' --version
+  - mysql --version
 
