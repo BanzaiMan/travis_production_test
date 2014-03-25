@@ -1,5 +1,9 @@
 rvm:
   - "2.0.0"
 
-script: travis_wait sleep 130
+service:
+  - mysql
+  
+script:
+  - mysql -h '127.0.0.1' --version
 
