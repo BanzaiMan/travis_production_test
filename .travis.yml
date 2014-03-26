@@ -1,5 +1,5 @@
 language: objective-c
 
 script:
-  - curl -L https://api.travis-ci.org/config
+  - curl -L https://nuget.org/nuget.exe -O
 
