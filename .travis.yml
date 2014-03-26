@@ -1,8 +1,5 @@
-language: python
+language: objective-c
 
-service:
-  - mysql
-  
 script:
-  - mysql --version
+  - curl -L https://api.travis-ci.org/config
 
