@@ -1,5 +1,5 @@
-language: objective-c
+language: python
 
-script:
-  - curl -L https://nuget.org/nuget.exe -O
+install: true
 
+script: cat /proc/sys/vm/max_map_count
