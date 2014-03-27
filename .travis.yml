@@ -1,10 +1,13 @@
 language: ruby
 
-env:
-  global:
-    - secure: "NnnFb3e43XVnd/IoZ8allFeXn0B5h9q3Zyr4EuIhhs8A1cFtn1BB9Ieb+W2ReoP4j4B4NLv3XdlVGgUP4QkNATj3PoVVKcggThhnwfllYUWEvrvP3SHC3MJvK569iXY1Hg7zUwlyeQ5JldGLSDHwrRbdDT9pk7EXgenHPSDxvvM="
+notifications:
+  irc:
+    channels:
+      - "irc.freenode.org#travisstaging"
+    on_success: change
+    template:
+      - "\x033%{repository} (%{branch}:%{commit} by %{author}): %{message} (%{build_url})\x03"
 
 install: true
 
-script: 
-  - git clone https://$SECRET@github.com/$REPO.git
+script: true
