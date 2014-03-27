@@ -1,13 +1,6 @@
 language: ruby
 
-notifications:
-  irc:
-    channels:
-      - "irc.freenode.org#travisstaging"
-    on_success: always
-    template:
-      - "\x033%{repository} (%{branch}:%{commit} by %{author}): %{message} (%{build_url})\x03"
-
+before_install: sudo apt-get update -qq
 install: true
 
 script: true
