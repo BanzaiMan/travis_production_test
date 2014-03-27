@@ -4,7 +4,7 @@ notifications:
   irc:
     channels:
       - "irc.freenode.org#travisstaging"
-    on_success: change
+    on_success: always
     template:
       - "\x033%{repository} (%{branch}:%{commit} by %{author}): %{message} (%{build_url})\x03"
 
