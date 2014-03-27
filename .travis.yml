@@ -1,5 +1,8 @@
-language: python
+language: objective-C
 
-install: true
+install:
+  - touch Foo
+  - touch foo
+  - ls -l *oo
 
-script: cat /proc/sys/vm/max_map_count
+script: true
