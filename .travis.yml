@@ -1,8 +1,6 @@
 language: objective-C
 
-install:
+script:
   - touch Foo
   - touch foo
   - ls -l *oo
-
-script: true
