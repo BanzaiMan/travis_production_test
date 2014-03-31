@@ -2,7 +2,6 @@ language: ruby
 
 install: true
 
-script: true
-
-deploy:
-  provider: heroku
+script:
+  - true
+  - false
