@@ -2,3 +2,4 @@ language: ruby
 
 rvm: jruby-head
 
+env: FOO=bar
