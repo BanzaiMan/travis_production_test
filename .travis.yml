@@ -4,6 +4,8 @@ os:
   - osx
   - linux
   
+osx_image: mavericks
+  
 install: true
 
 script:
