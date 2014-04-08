@@ -1,4 +1,11 @@
-language: ruby
+language: node_js
 
-rvm: jruby-head
+os:
+  - osx
+  - linux
+  
+install: true
 
+script:
+  - node -v
+  - true
