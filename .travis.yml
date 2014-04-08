@@ -2,7 +2,7 @@ language: ruby
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get upgrade openssl
+  - sudo apt-get install openssl
 
 install: true
 
