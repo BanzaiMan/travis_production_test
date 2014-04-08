@@ -1,4 +1,4 @@
-language: node_js
+language: python
 
 os:
   - osx
@@ -9,5 +9,5 @@ osx_image: mavericks
 install: true
 
 script:
-  - node -v
+  - python -v
   - true
