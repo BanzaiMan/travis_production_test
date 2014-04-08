@@ -1,12 +1,11 @@
 language: ruby
 
-os:
-  - osx
+before_install:
+  - sudo apt-get update
+  - sudo apt-get upgrade openssl
 
-osx_image: mavericks
-  
 install: true
 
 script:
-  - ruby -v
+  - ruby -v -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
   - true
