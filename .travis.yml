@@ -1,13 +1,12 @@
-language: python
+language: ruby
 
 os:
   - osx
-  - linux
-  
+
 osx_image: mavericks
   
 install: true
 
 script:
-  - python -v
+  - ruby -v
   - true
