@@ -1,11 +1,7 @@
 language: ruby
 
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install openssl
-
 install: true
 
 script:
-  - ruby -v -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'
+  - git show HEAD
   - true
