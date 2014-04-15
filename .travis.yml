@@ -1,8 +1,10 @@
-language: python
+language: ruby
 
-python: '2.7'
+services:
+  - riak
 
-install: pip install gevent
-
+before_install:
+  - sudo service riak start
+  
 script:
   - true
