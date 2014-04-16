@@ -8,3 +8,7 @@ before_install:
   
 script:
   - true
+
+branches:
+  only:
+    - master
