@@ -1,10 +1,9 @@
-language: ruby
-
-services:
-  - riak
-
-before_install:
-  - sudo service riak start
-  
-script:
-  - true
+language: objective-c
+xcode_project: SBJson.xcodeproj
+ 
+matrix:
+  include:
+    - xcode_sdk: iphonesimulator
+      xcode_scheme: sbjson-ios
+    - xcode_sdk: macosx
+      xcode_scheme: SBJson
