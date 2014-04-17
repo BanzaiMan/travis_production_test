@@ -4,5 +4,5 @@ env:
   - secure: "RaxzthmgBr/h7Fyi9V+OGd/gGpGxdw7TY1egLGSya4FcsT9pGowbpZbnhgZrzdVP1NWlikasMEPUmhiFUik645M+Kc5Mx4ddZ0DJ+AKhu9WAGfR44Sz834vRd03+ddBBIeuniMzceMyIJAH3ASMPexqqiRCFn0sOdTp7HfEnChU="
 
 script:
-  - echo FOO
+  - echo $FOO
 
