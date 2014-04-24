@@ -10,3 +10,6 @@ install:
 
 script:
   - gem list
+
+global_env:
+  - JRUBY_OPTS=--2.0
