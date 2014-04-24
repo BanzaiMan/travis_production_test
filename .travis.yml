@@ -1,7 +1,7 @@
 language: ruby
  
 rvm:
-  - jruby
+  - jruby-d19
 
 before_install: rvm use jruby-1.7.11 --install --binary --fuzzy --verify-downloads 1
 
