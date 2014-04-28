@@ -3,8 +3,8 @@ language: java
 jvm: openjdk6
  
 before_install:
-  - apt-get update
-  - apt-get install java
+  - sudo apt-get update
+  - sudo apt-get install java
 
 install:
   - true
