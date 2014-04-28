@@ -1,15 +1,13 @@
-language: ruby
- 
-rvm:
-  - jruby-d19
+language: java
 
-before_install: rvm use jruby-1.7.11 --install --binary --fuzzy --verify-downloads 1
+jvm: openjdk6
+ 
+before_install:
+  - apt-get update
+  - apt-get install java
 
 install:
-  - gem install bundler
+  - true
 
 script:
-  - gem list
-
-global_env:
-  - JRUBY_OPTS=--2.0
+  - java -version
