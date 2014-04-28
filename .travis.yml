@@ -4,7 +4,6 @@ rvm: 2.1.1
 
 script:
   - ruby -v
-  - bundle --install
-  
+
 before_install: cat ~/.rvm/gemsets/default.gems
 
