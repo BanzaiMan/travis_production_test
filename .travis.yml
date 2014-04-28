@@ -5,5 +5,7 @@ rvm: 2.1.1
 script:
   - ruby -v
 
-before_install: cat ~/.rvm/gemsets/default.gems
+before_install:
+  - cat ~/.rvm/gemsets/global.gems
+  - cat ~/.rvm/gemsets/default.gems
 
