@@ -1,13 +1,9 @@
-language: java
+language: ruby
 
-jdk: openjdk6
- 
-before_install:
-  - sudo apt-get update
-  - sudo apt-get install openjdk-6-jdk
-
-install:
-  - true
+before_script:
+  - export JRUBY_OPTS=--2.0
 
 script:
-  - java -version
+  - ruby -v
+  - bundle --version
+
