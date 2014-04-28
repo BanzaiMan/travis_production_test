@@ -1,9 +1,8 @@
 language: ruby
 
-before_script:
-  - export JRUBY_OPTS=--2.0
+rvm: 2.1.1
 
 script:
   - ruby -v
-  - bundle --version
+  - bundle --install
 
