@@ -1,6 +1,11 @@
 language: ruby
 
-rvm: 2.1.1
+rvm: 2.1.0
 
 script:
-  - ls -l /dev/input
+  - echo $JAKE_TESTING
+
+global:
+  env:
+    - secure: "mos37cTxRwCu2/zFU6OrRsJIxKm3IRtmmUAay9uGDrUGA046o2YUn3mci+2jJAeWK7obZ/N68bO5QSppDexmZudsvjkDcNtPAOKha11rNr2xDTzSGP/U7rVRioEr9EDJKSmBzCWSEf1HlIJlY3w/Ig/KnREmmZYsdq7BNbAqwRE="
+
