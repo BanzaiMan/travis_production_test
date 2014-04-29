@@ -5,7 +5,7 @@ rvm: 2.1.0
 script:
   - echo $JAKE_TESTING
 
-global:
-  env:
+env:
+  global:
     - secure: "mos37cTxRwCu2/zFU6OrRsJIxKm3IRtmmUAay9uGDrUGA046o2YUn3mci+2jJAeWK7obZ/N68bO5QSppDexmZudsvjkDcNtPAOKha11rNr2xDTzSGP/U7rVRioEr9EDJKSmBzCWSEf1HlIJlY3w/Ig/KnREmmZYsdq7BNbAqwRE="
 
