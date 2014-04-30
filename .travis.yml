@@ -1,10 +1,10 @@
-language: python
+language: php
 
-python:
-  - 3.4.0
+php:
+  - 5.2
 
 install:
   - true
 
 script:
-  - python --version
+  - phpunit --version
