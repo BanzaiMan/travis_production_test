@@ -1,9 +1,10 @@
-language: ruby
+language: python
 
-rvm: 2.1.0
+python:
+  - 3.4.0
 
 install:
   - true
 
 script:
-  - echo -ne "\033[34;4munderlined\033[24m; not underlined"
+  - python --version
