@@ -1,11 +1,10 @@
-language: php
+language: ruby
 
-php:
-  - 5.2
-  - 5.5.11
+rvm:
+  - ruby-head
 
 install:
   - true
 
 script:
-  - phpunit --version
+  - head -5 `which bundle`
