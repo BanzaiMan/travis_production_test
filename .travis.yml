@@ -1,7 +1,7 @@
 language: ruby
 
 script:
-  - true
+  - env
 
 install:
   - true
