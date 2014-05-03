@@ -4,9 +4,9 @@ otp_release:
   - 17.0
 
 before_install:
-  - env
   - sudo apt-get install unixodbc-dev
-  - kerl build $TRAVIS_OTP_RELEASE
+  - kerl build $TRAVIS_OTP_RELEASE ${TRAVIS_OTP_RELEASE}_odbc
+  - source $HOME/otp/${TRAVIS_OTP_RELEASE}_odbc/activate
   
 script:
   - true
