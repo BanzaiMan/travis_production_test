@@ -1,11 +1,11 @@
-language: ruby
+language: erlang
 
-env:
-  global:
-    - FAVOURITE_ISLAND=Viðey
+otp_release:
+  - 17.0
 
+before_install:
+  - sudo apt-get install unixodbc-dev
+  - kerl build $TRAVIS_OTP_RELEASE
+  
 script:
-  - true
-
-install:
   - true
