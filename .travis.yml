@@ -1,8 +1,8 @@
-language: php
+language: ruby
 
-install:
-  - true
-  
+rvm:
+  - 2.1.1
+
 script:
   - true
 
