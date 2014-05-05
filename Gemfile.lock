@@ -3,6 +3,9 @@ GEM
   specs:
     atomic (1.1.16)
     diff-lcs (1.2.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.0)
     rake (10.1.1)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -19,6 +22,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  net-sftp
   rake
   rspec
   thread_safe
