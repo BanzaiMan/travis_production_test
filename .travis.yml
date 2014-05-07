@@ -5,4 +5,4 @@ rvm:
 
 script:
   - true
-
+  - rvm use rbx-2.1.0
