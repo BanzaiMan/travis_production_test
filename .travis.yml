@@ -4,7 +4,7 @@ rvm:
   - 2.1.1
 
 before_install:
-  - wget http://launchpadlibrarian.net/101225632/git_1.7.9.5-1_amd64.deb && sudo dpkge -i git_1.7.9.5-1_amd64.deb
+  - wget http://launchpadlibrarian.net/101225632/git_1.7.9.5-1_amd64.deb && sudo dpkg -i git_1.7.9.5-1_amd64.deb
 
 install:
   true
