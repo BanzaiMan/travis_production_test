@@ -3,7 +3,12 @@ language: ruby
 rvm:
   - 2.1.1
 
+before_install:
+  - wget http://launchpadlibrarian.net/101225632/git_1.7.9.5-1_amd64.deb && sudo dpkge -i git_1.7.9.5-1_amd64.deb
+
+install:
+  true
+
 script:
-  - true
-  - rvm install rbx-2.1.0
-  - rvm use rbx-2.1.0
+  - git --version
+  
