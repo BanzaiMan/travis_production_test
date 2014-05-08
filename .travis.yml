@@ -1,17 +1,10 @@
-language: ruby
+language: java
 
-rvm:
-  - 2.1.1
+before_install:
+  - which npm
 
 install:
-  true
+  - npm install karma --save-dev
 
 script:
-  true
-
-notifications:
-  email:
-    recipients:
-      - asari.ruby+moretest@gmail.com
-    on_success: always
-
+  - true
