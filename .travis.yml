@@ -6,3 +6,6 @@ rvm:
 install:
   true
 
+script:
+  true
+
