@@ -9,3 +9,9 @@ install:
 script:
   true
 
+notifications:
+  email:
+    recipients:
+      - asari.ruby+moretest@gmail.com
+    on_success: always
+
