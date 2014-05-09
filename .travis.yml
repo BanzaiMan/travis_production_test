@@ -1,10 +1,11 @@
-language: java
+language: ruby
 
-before_install:
-  - which npm
+rvm:
+  - 2.1.2
+
 
 install:
-  - npm install karma --save-dev
+  - true
 
 script:
   - true
