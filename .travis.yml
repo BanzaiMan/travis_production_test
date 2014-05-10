@@ -11,6 +11,6 @@ install:
   - true
 
 script:
-  - ls -l
+  - ls -lU
   - df -aT
 
