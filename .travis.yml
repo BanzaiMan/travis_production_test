@@ -1,16 +1,12 @@
 language: ruby
 
 rvm:
-  - 2.0
-  - 2.0.0-p481
   - 2.1
-  - 2.1.2
-
 
 install:
   - true
 
 script:
-  - echo "travis_fold:start:SCRIPT"
+  - echo "travis_fold:start:SCRIPT folding starts"
   - true
-  - echo "travis_fold:end:SCRIPT"
+  - echo "travis_fold:end:SCRIPT folding ends"
