@@ -11,6 +11,6 @@ install:
   - true
 
 script:
-  - ls -lU
+  - if [ $TRAVIS_OS_NAME = 'linux' ]; then ls -lU; else ls -lf; fi
   - if [ $TRAVIS_OS_NAME = 'linux' ]; then df -aT; else df -a; fi
 
