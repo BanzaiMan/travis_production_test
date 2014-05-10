@@ -12,5 +12,5 @@ install:
 
 script:
   - ls -l
-  - df -a
+  - df -aT
 
