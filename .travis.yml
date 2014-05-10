@@ -11,4 +11,6 @@ install:
   - true
 
 script:
+  - echo "travis_fold:start:SCRIPT"
   - true
+  - echo "travis_fold:end:SCRIPT"
