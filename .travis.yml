@@ -12,5 +12,5 @@ install:
 
 script:
   - ls -lU
-  - df -aT
+  - if [ $TRAVIS_OS_NAME = 'linux' ]; then df -aT; else df -a; fi
 
