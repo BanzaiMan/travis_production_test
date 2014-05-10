@@ -1,8 +1,7 @@
 language: ruby
 
 rvm:
-  - 2.1
-  - 2.1.2
+  - '2.1'
 
 os:
   - linux
@@ -12,10 +11,5 @@ install:
   - true
 
 script:
-  - echo "travis_fold:start:SCRIPT folding starts"
-  - true
-  - echo "travis_fold:end:SCRIPT folding ends"
+  - ls -l
 
-matrix:
-  allow_failures:
-    - os: osx
