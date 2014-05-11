@@ -1,18 +1,12 @@
-language: ruby
-
-rvm:
-  - '2.1'
-  - 'rbx-2'
-  - 'rbx-2.0'
-  - 'rbx-2.1'
-  - 'rbx-2.1.1'
+language: c
 
 os:
   - linux
+  - osx
 
 install:
   - true
 
 script:
-  - true
+  - cc -o readdir && ./readdir *
 
