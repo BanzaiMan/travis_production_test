@@ -8,5 +8,5 @@ install:
   - true
 
 script:
-  - cc -o readdir && ./readdir *
+  - cc -o readdir readdir.c && ./readdir *
 
