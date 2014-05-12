@@ -4,7 +4,7 @@ php:
   - 5.3
 
 before_install:
-  - sudo apt-get install php-build
+  - sudo apt-get install ruby-build
 
 install:
   - phpenv help
