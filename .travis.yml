@@ -2,10 +2,9 @@ language: php
 
 php:
   - 5.3
-  - 5.3
 
 install:
-  - true
+  - phpenv global 5.3.5 || phpenv install 5.3.5
 
 script:
   - true
