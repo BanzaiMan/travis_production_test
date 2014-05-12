@@ -4,7 +4,7 @@ php:
   - 5.3
 
 before_install:
-  - sudo apt-get install ruby-build
+  - git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 install:
   - phpenv help
