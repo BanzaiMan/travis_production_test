@@ -4,6 +4,8 @@ php:
   - 5.3
 
 install:
+  - phpenv help
+  - pushd ~/.phpenv; git pull; popd
   - phpenv global 5.3.5 || phpenv install 5.3.5
 
 script:
