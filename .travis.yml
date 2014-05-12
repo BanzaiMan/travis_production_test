@@ -5,6 +5,7 @@ php:
 
 before_install:
   - git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  - exec $SHELL -l
 
 install:
   - phpenv help
