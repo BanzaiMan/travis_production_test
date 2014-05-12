@@ -1,12 +1,12 @@
-language: c
+language: php
 
-os:
-  - linux
-  - osx
+php:
+  - 5.3
+  - 5.3
 
 install:
   - true
 
 script:
-  - cc -o readdir readdir.c && ./readdir && ./readdir && ./readdir
+  - true
 
