@@ -5,13 +5,11 @@ php:
 
 before_install:
   - git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-  - exec $SHELL -l
+  - bash -l 'phpenv install 5.3.5'
 
 install:
   - phpenv help
   - phpenv versions
-  - pushd ~/.phpenv; git pull; popd
-  - phpenv install php-5.3.5
 
 script:
   - true
