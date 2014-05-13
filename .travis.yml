@@ -7,9 +7,6 @@ os:
   - linux
   - osx
 
-install:
-  - true
-
 script:
   - true
 
