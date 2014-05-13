@@ -3,3 +3,13 @@ language: ruby
 rvm:
   - 1.9.3
 
+os:
+  - linux
+  - osx
+
+install:
+  - true
+
+script:
+  - true
+
