@@ -1,12 +1,16 @@
-language: ruby
+language: node_js
 
-rvm:
-  - 1.9.3
-  - 2.1.2
+node_js:
+  - 0.8
+  - "0.10"
+  - "0.11"
 
 os:
   - linux
   - osx
+
+install:
+  - true
 
 script:
   - true
