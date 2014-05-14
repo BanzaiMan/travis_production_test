@@ -1,11 +1,11 @@
-language: python
+language: php
 
-python:
-  - 2.6
-  - 2.7
-  - 3.2
-  - 3.3
-  - 3.4
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - hhvm
+
 os:
   - linux
   - osx
