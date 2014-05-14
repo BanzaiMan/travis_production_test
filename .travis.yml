@@ -4,17 +4,13 @@ os:
   - osx
 
 env:
-  - MY_GO_VERSION=1.1
-  - MY_GO_VERSION=1.2
+  - MY_GO_VERSION=1.1.2
+  - MY_GO_VERSION=1.2.1
 
 install:
   - true
 
 before_install:
-  - pushd $HOME
-  - bash -x < <(curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-  - source /Users/travis/.gvm/scripts/gvm
-  - popd
-  - gvm use $MY_GO_VERSION --default
+  - ls -lad /usr/local/Cellar/go/*
+  - export PATH=/usr/local/Cellar/go/$MY_GO_VERSION/bin:$PATH
   - go version
-  - gvm list
