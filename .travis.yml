@@ -5,7 +5,7 @@ os:
 
 install:
   - bash < <(curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-  - `source /Users/travis/.gvm/scripts/gvm`
+  - source /Users/travis/.gvm/scripts/gvm
 
 script:
   - go version
