@@ -1,10 +1,6 @@
-language: go
+language: haskell
 
-go:
-  - 1.0
-  - 1.1
-  - 1.2
-  - tip
+ghc: 7.4
 
 os:
   - linux
