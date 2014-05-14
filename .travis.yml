@@ -1,16 +1,5 @@
-language: c
+language: ruby
 
-os:
-  - osx
+install: true
 
-env:
-  - MY_GO_VERSION=1.1.2
-  - MY_GO_VERSION=1.2.1
-
-install:
-  - true
-
-before_install:
-  - ls -lad /usr/local/Cellar/go/*
-  - export PATH=/usr/local/Cellar/go/$MY_GO_VERSION/bin:$PATH
-  - go version
+script: redis-cli --version
