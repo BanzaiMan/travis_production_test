@@ -1,14 +1,20 @@
-language: c
+language: java
 
 os:
   - osx
+  - linux
+
+env:
+  global:
+    - FOO=bar
 
 install:
-  - bash < <(curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-  - source /Users/travis/.gvm/scripts/gvm
+  - true
 
 script:
-  - go version
-  - gvm list
-  - gvm install tip
+  - true
 
+matrix:
+  allow_failures:
+    - os: linux
+    - os: osx
