@@ -8,6 +8,7 @@ env:
   - MY_GO_VERSION=go1.2
 
 before_install:
+  - brew install mercurial
   - pushd $HOME
   - bash -x < <(curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
   - source /Users/travis/.gvm/scripts/gvm
@@ -21,3 +22,6 @@ install:
 script:
   - go version
   - gvm list
+
+after_failure:
+  - cat $HOME/.gvm/logs/go-$MY_GO_VERSION-compile.log
