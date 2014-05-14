@@ -4,22 +4,17 @@ os:
   - osx
 
 env:
-  - MY_GO_VERSION=go1.1
-  - MY_GO_VERSION=go1.2
+  - MY_GO_VERSION=1.1
+  - MY_GO_VERSION=1.2
 
 install:
   - true
 
-script:
-  - brew install mercurial
+before_install:
   - pushd $HOME
   - bash -x < <(curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
   - source /Users/travis/.gvm/scripts/gvm
   - popd
-  - gvm install $MY_GO_VERSION
   - gvm use $MY_GO_VERSION --default
   - go version
   - gvm list
-
-after_failure:
-  - cat $HOME/.gvm/logs/go-$MY_GO_VERSION-compile.log
