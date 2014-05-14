@@ -3,13 +3,21 @@ language: c
 os:
   - osx
 
-install:
+env:
+  - TRAVIS_GO_VERSION=1.1
+  - TRAVIS_GO_VERSION=1.2
+
+before_install:
   - pushd $HOME
   - bash -x < <(curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
   - source /Users/travis/.gvm/scripts/gvm
   - popd
+  - gvm install $TRAVIS_GO_VERSION
+  - gvm use $TRAVIS_GO_VERSION --default
+
+install:
+  - true
 
 script:
   - go version
   - gvm list
-  - gvm install tip
