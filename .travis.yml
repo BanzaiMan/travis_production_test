@@ -1,20 +1,7 @@
-language: java
-
-os:
-  - osx
-  - linux
-
-env:
-  - FOO=bar
-  - BAR=baz
+language: ruby
 
 install:
-  - true
+  - ruby -v
 
 script:
   - true
-
-matrix:
-  allow_failures:
-    - os: linux
-    - os: osx
