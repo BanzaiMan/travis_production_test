@@ -1,11 +1,11 @@
-language: php
+language: perl
 
-php:
-  - 5.3
-  - 5.4
-  - 5.5
-  - hhvm
-
+perl:
+  - "5.16"
+  - "5.14"
+  - "5.12"
+  - "5.10"
+  - "5.8"
 os:
   - linux
   - osx
