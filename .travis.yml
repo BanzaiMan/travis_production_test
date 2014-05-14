@@ -1,8 +1,9 @@
-language: c
+language: java
 
-compiler:
-  - gcc
-  - clang
+jdk:
+  - oraclejdk7
+  - openjdk6
+  - openjdk8
 
 os:
   - linux
