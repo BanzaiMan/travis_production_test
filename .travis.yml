@@ -5,8 +5,8 @@ os:
   - linux
 
 env:
-  global:
-    - FOO=bar
+  - FOO=bar
+  - BAR=baz
 
 install:
   - true
