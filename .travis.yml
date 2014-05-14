@@ -1,13 +1,12 @@
 language: c
 
 os:
-  - linux
   - osx
 
 install:
-  - true
+  - bash < <(curl -s -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 
 script:
-  - true
-  - brew help
+  - go --version
+  - gvm list
 
