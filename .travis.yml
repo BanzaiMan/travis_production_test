@@ -1,9 +1,8 @@
-language: ruby
+language: c
 
 os:
   - linux
-  - osx
 
 install: true
 
-script: redis-cli --version
+script: echo $TRAVIS_PYTHON_VERSION
