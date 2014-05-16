@@ -4,7 +4,11 @@ os:
   - osx
 
 rvm:
-  - 1.9.3-p545
+  - 1.9.3
+
+before_install:
+  - rvm get head
+  - rvm use 1.9.3-p545
 
 install: true
 
