@@ -4,7 +4,7 @@ os:
   - osx
 
 rvm:
-  - 1.9.3
+  - 1.9.3-p545
 
 install: true
 
