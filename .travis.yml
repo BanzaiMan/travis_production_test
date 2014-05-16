@@ -8,7 +8,7 @@ rvm:
 
 before_install:
   - rvm get head
-  - rvm use 1.9.3-p545
+  - rvm use 1.9.3-p545 --install
 
 install: true
 
