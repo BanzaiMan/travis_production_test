@@ -1,14 +1,13 @@
 language: ruby
 
 os:
-  - osx
+  - linux
 
 rvm:
-  - 2.1.1
   - 1.9.3
 
 before_install:
-  - if [ $TRAVIS_RUBY_VERSION = '1.9.3' ]; then rvm get head; rvm use 1.9.3-p545 --install; fi || true
+  - travis_fold "echo 'yes' && echo 'no'"
 
 install: true
 
