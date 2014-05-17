@@ -4,13 +4,13 @@ os:
   - linux
 
 rvm:
+  - 1.8.7
+  - 1.9.2
   - 1.9.3
-
-before_install:
-  - echo $TZ
-  - date
-  - TZ=UTC date
-
+  - 2.0.0
+  - 2.1.0
+  - 2.1.1
+  - 2.1.2
 
 install: true
 
