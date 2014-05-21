@@ -1,12 +1,13 @@
-language: c
+language: ruby
 
-os:
-  - osx
+services:
+  - postgresql
 
-compiler:
-  - gcc
-  - clang
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - psql -c 'create extension postgis;' -U postgres travis_ci_test
 
 install: true
 
-script: true
+script:
+  - psql -c 'SELECT PostGIS_full_version();' -U postgres travis_ci_test
