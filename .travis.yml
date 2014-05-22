@@ -12,4 +12,4 @@ before_install:
   - hdiutil unmount /Volumes/XQuartz-${XQUARTZ_VERSION}
 
 script:
-  - locale
+  - /opt/X11/bin/xterm&
