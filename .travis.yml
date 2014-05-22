@@ -6,7 +6,7 @@ env:
   - XQUARTZ_VERSION=2.7.6
 
 before_install:
-  - curl -O http://xquartz.macosforge.org/downloads/SL/XQuartz-${XQUARTZ_VERSION}.dmg
+  - curl -L -O http://xquartz.macosforge.org/downloads/SL/XQuartz-${XQUARTZ_VERSION}.dmg
   - hdiutil mount XQuartz-${XQUARTZ_VERSION}.dmg
   - sudo installer -store -pkg /Volumes/XQuartz-${XQUARTZ_VERSION}/XQuartz.pkg -target /
   - hdiutil unmount /Volumes/XQuartz-${XQUARTZ_VERSION}
