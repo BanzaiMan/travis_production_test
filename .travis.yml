@@ -1,15 +1,9 @@
-language: objective-c
+language: ruby
 
 install: true
 
-env:
-  - XQUARTZ_VERSION=2.7.6
+script: true
 
-before_install:
-  - curl -L -O http://xquartz.macosforge.org/downloads/SL/XQuartz-${XQUARTZ_VERSION}.dmg
-  - hdiutil mount XQuartz-${XQUARTZ_VERSION}.dmg
-  - sudo installer -store -pkg /Volumes/XQuartz-${XQUARTZ_VERSION}/XQuartz.pkg -target /
-  - hdiutil unmount /Volumes/XQuartz-${XQUARTZ_VERSION}
-
-script:
-  - /opt/X11/bin/xterm&
+rvm:
+  - rbx-2
+  - 2.1.2
