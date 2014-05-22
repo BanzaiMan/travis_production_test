@@ -2,8 +2,14 @@ language: objective-c
 
 install: true
 
+env:
+  - XQUARTZ_VERSION=2.7.6
+
 before_install:
-  - export LANG="en_US.UTF-8"
+  - curl -O http://xquartz.macosforge.org/downloads/SL/XQuartz-${XQUARTZ_VERSION}.dmg
+  - hdiutil mount XQuartz-${XQUARTZ_VERSION}.dmg
+  - sudo installer -store -pkg /Volumes/XQuartz-${XQUARTZ_VERSION}/XQuartz.pkg -target /
+  - hdiutil unmount /Volumes/XQuartz-${XQUARTZ_VERSION}
 
 script:
   - locale
