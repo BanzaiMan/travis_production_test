@@ -14,4 +14,6 @@ deploy:
     - secure: "nSPUNLBBoWQyW0tvtgh/ERbbQNGXiWhrfZ33r/DugEX3hbaZmMSZ4yrW0UScaNZgUA+0JZ+ePLmYIfHIprY/i7TWY4Dm3IOAIthh7a3qx0mEXL06FkRLunvKkfUqWsHep73l3qacQ5UxEE5eHelsn68sx99kbh/GHJTdUv6T+ew="
   file: foo
   skip_cleanup: true
+  on:
+    tags: true
 
