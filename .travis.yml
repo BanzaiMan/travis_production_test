@@ -3,7 +3,7 @@ language: ruby
 install: true
 
 script: 
-  - true
+  - touch foo
 
 rvm:
   - 2.1.1
