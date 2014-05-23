@@ -2,8 +2,11 @@ language: ruby
 
 install: true
 
-script: true
+script: 
+  - touch foo
+  - git add foo
+  - git commit -m 'add foo'
+  - git push
 
 rvm:
-  - rbx-2
-  - 2.1.2
+  - 2.1.1
