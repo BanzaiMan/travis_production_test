@@ -3,19 +3,8 @@ language: ruby
 install: true
 
 script: 
-  - touch foo
+  - echo $TRAVIS_TAG
 
 rvm:
   - 2.1.1
-
-deploy:
-  provider: releases
-  api-key:
-    - secure: "nSPUNLBBoWQyW0tvtgh/ERbbQNGXiWhrfZ33r/DugEX3hbaZmMSZ4yrW0UScaNZgUA+0JZ+ePLmYIfHIprY/i7TWY4Dm3IOAIthh7a3qx0mEXL06FkRLunvKkfUqWsHep73l3qacQ5UxEE5eHelsn68sx99kbh/GHJTdUv6T+ew="
-  file: foo
-  skip_cleanup: true
-  on:
-    branch:
-      - master
-    tags: true
 
