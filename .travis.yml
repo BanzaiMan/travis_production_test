@@ -3,7 +3,10 @@ language: ruby
 install: true
 
 script: 
-  - echo $TRAVIS_TAG
+  - pcre-config --version
+  - sudo apt-get update -qq
+  - sudo apt-get install libpcre3 libpcre3-dev
+  - pcre-config --version
 
 rvm:
   - 2.1.1
