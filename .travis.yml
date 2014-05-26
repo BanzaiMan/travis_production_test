@@ -3,11 +3,8 @@ language: ruby
 install: true
 
 script: 
-  - pcre-config --version
-  - sudo apt-get update -qq
-  - sudo apt-get install libpcre3 libpcre3-dev
-  - pcre-config --version
-
+  - "
+  
 rvm:
   - 2.1.1
 
