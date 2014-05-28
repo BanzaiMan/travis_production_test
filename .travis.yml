@@ -1,8 +1,9 @@
-language: haskell
+language: ruby
 
-ghc: 7.8.2
-
+rvm:
+  - 2.1
+  
 install: true
 
 script: 
-  - echo $PATH
+  - true
