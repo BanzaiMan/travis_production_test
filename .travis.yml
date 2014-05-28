@@ -1,8 +1,8 @@
-language: ruby
+language: node_js
 
-rvm:
-  - 2.1
-  
+node_js:
+  - "0.10"
+
 install: true
 
 script: 
