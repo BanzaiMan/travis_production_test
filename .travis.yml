@@ -1,7 +1,7 @@
-language: node_js
+language: python
 
-node_js:
-  - "0.10.28"
+python:
+  - "2.7.3"
 
 install: true
 
