@@ -1,9 +1,7 @@
-language: python
-
-python:
-  - "2.7.3"
+language: objective-c
 
 install: true
 
 script: 
-  - true
+  - which oclint
+  
