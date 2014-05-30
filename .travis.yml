@@ -1,10 +1,7 @@
-language: ruby
+language: erlang
 
 install: true
 
 script: 
-  - echo $TRAVIS_TAG
-
-rvm:
-  - 2.1.1
+  - true
 
