@@ -9,4 +9,4 @@ script:
 branches:
   only:
     - master
-    - /^tag-.*$/
+    - /^(?i:Tag)-.*$/
