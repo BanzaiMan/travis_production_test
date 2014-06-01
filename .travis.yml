@@ -1,7 +1,12 @@
-language: objective-c
+language: ruby
 
 install:
-  - find / -name oclint -print
+  - true
 
 script: 
   - true
+  
+branches:
+  only:
+    - master
+    - /^tag-.*$/
