@@ -1,7 +1,7 @@
-language: erlang
+language: objective-c
 
-install: true
+install:
+  - find / -name oclint -print
 
 script: 
   - true
-
