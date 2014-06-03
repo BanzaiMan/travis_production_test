@@ -5,6 +5,7 @@ install:
 
 script: 
   - true
+  - true
   
 branches:
   only:
