@@ -4,10 +4,5 @@ install:
   - true
 
 script: 
-  - true
-  - true
+  - cat /etc/resolv.conf
   
-branches:
-  only:
-    - master
-    - /^S?tag-.*$/
