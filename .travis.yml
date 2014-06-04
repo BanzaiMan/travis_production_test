@@ -1,8 +1,12 @@
 language: ruby
 
+os:
+  - linux
+  - osx
+
 install:
   - true
 
 script: 
-  - cat /etc/resolv.conf
+  - echo $TRAVIS_OS_NAME
 
