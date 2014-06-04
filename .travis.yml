@@ -3,8 +3,6 @@ language: ruby
 install:
   - true
 
-branches:
-  only:
-    - master
-    - /^S?tag-.*$/
+script: 
+  - cat /etc/resolv.conf
 
