@@ -3,11 +3,8 @@ language: ruby
 install:
   - true
 
-script: 
-  - true
-  - true
-  
 branches:
   only:
     - master
     - /^S?tag-.*$/
+
