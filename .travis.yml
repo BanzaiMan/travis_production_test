@@ -1,9 +1,5 @@
 language: ruby
 
-os:
-  - linux
-  - osx
-
 install:
   - true
 
