@@ -1,6 +1,7 @@
 language: ruby
 
 before_install:
+  - sudo apt-get install libmagic-dev
   - gem install ruby-filemagic
 
 install:
