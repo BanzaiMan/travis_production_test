@@ -1,12 +1,11 @@
 language: ruby
 
-before_install:
-  - sudo apt-get install libmagic-dev
-  - gem install ruby-filemagic
 
 install:
   - true
 
 script: 
   - true
-  - true
+
+after_success:
+  - echo $TRAVIS_TEST_RESULT
