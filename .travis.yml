@@ -5,7 +5,7 @@ install:
   - true
 
 script: 
-  - true
+  - return 128
 
 after_success:
   - echo $TRAVIS_TEST_RESULT
