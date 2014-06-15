@@ -9,3 +9,6 @@ script:
 
 after_success:
   - echo $TRAVIS_TEST_RESULT
+
+after_failure:
+  - echo $TRAVIS_TEST_RESULT
