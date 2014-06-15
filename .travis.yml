@@ -2,13 +2,10 @@ language: ruby
 
 
 install:
-  - true
-
-script: 
   - bash -c "exit 128"
 
-after_success:
-  - echo $TRAVIS_TEST_RESULT
+script: 
+  - true
 
-after_failure:
+after_script:
   - echo $TRAVIS_TEST_RESULT
