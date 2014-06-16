@@ -2,10 +2,7 @@ language: ruby
 
 
 install:
-  - bash -c "exit 128"
-
-script: 
   - true
 
-after_script:
-  - echo $TRAVIS_TEST_RESULT
+script: 
+  - tar --version
