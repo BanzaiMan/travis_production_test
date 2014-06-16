@@ -1,5 +1,7 @@
 language: ruby
 
+os:
+  - osx
 
 install:
   - true
