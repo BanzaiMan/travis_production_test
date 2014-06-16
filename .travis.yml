@@ -7,3 +7,4 @@ install:
 script: 
   - which tar
   - tar --version
+  - /usr/bin/tar --version
