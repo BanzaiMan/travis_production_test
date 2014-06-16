@@ -2,6 +2,8 @@ language: ruby
 
 install:
   - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  - which heroku
+  - heroku plugins:install https://github.com/glenngillen/heroku-exit-status.git
 
 script: 
-  - which heroku
+  - true
