@@ -1,13 +1,7 @@
 language: ruby
 
-os:
-  - osx
-
 install:
-  - true
+  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 script: 
-  - which tar
-  - tar --version
-  - which bsdtar
-  - bsdtar --version
+  - true
