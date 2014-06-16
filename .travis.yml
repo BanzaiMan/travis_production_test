@@ -5,4 +5,5 @@ install:
   - true
 
 script: 
+  - which tar
   - tar --version
