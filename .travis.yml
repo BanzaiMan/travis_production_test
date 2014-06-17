@@ -7,9 +7,4 @@ install:
   - true
   
 script: 
-  - echo $FOO
-  - echo $BAR
-  - echo $BAZ
-  - echo $FOO1
-  - echo $BAR1
-  - echo $BAZ1
+  - env
