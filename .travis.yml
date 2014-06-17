@@ -1,7 +1,7 @@
 language: ruby
 
 env:
-  - FOO="a\\\nb" BAR="a\\nb" BAZ="a\nb"
+  - FOO="a\\\nb" BAR="a\\nb" BAZ="a\nb" FOO1='a\\\nb' BAR1='a\\nb' BAZ1='a\nb'
 
 install:
   - true
@@ -10,3 +10,6 @@ script:
   - echo $FOO
   - echo $BAR
   - echo $BAZ
+  - echo $FOO1
+  - echo $BAR1
+  - echo $BAZ1
