@@ -1,7 +1,7 @@
 language: ruby
 
 env:
-  - 'FOO=$\'a\nb\''
+  - "FOO=\$'a\nb'"
   
 install:
   - true
