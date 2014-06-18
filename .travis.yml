@@ -1,17 +1,11 @@
 language: ruby
 
-os:
-  - osx
-
-before_install:
-  - wget -O deps.tar.gz 'http://downloads.sourceforge.net/project/nomlib/2014-06-12_nomlib_osx-dependencies.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fnomlib%2Ffiles%2F&ts=1402551334&use_mirror=superb-dca3'
-  - /sbin/md5 deps.tar.gz
-  - mkdir third-party
+env:
+  global:
+  - 'APP_NAMES=\("App A" "App B"\)'
 
 install:
   - true
   
 script: 
-  - which tar
-  - tar --version
-  - tar xvf deps.tar.gz -C third-party
+  - echo ${APP_NAMES[1]}
