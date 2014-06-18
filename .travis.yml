@@ -1,8 +1,7 @@
 language: ruby
 
-env:
-  global:
-  - 'APP_NAMES=\("App A" "App B"\)'
+before_script:
+  - 'eval "export APP_NAMES=$(\"APP 1\" \"APP 2\")"'
 
 install:
   - true
