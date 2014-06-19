@@ -1,10 +1,15 @@
-language: php
+language: java
+
+jdk:
+  - oraclejdk7
+  - openjdk6
 
 before_script:
-  - true
+  - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+  - export PATH=$JAVA_HOME/bin:$PATH
 
 install:
   - true
   
 script: 
-  - phpunit --version
+  - 'java -version'
