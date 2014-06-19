@@ -1,10 +1,10 @@
-language: ruby
+language: php
 
 before_script:
-  - "eval 'export APP_NAMES=(\"APP 1\" \"APP 2\")'"
+  - true
 
 install:
   - true
   
 script: 
-  - echo ${APP_NAMES[1]}
+  - phpunit --version
