@@ -18,7 +18,7 @@ deploy:
   access_key_id:
     secure: "dHP944VVE5w57ntlrQD1S8KqB08aE9d1JH+MWTrCI9Z4NLExXfbc3E/eL1BJ2Ojhnd2V+vpVAVlbhHq96V2NqsZcZM8p0ZVI1F38aj2S5X7s0PKgc2tAvWv/uDTJpPPxINaSTjpOtwPxjW8EEUwedHifsBzPREutaSVvBJjpxQ4="
   secret_access_key:
-    secure: "SN8B2f0jk+wJU3NDWIzggXYIfMRpJi9H3fut5j9ocklt4uBVaHwd7NPVXefj13DG7/jK3uibIDCCNzq29h8+ikugGMG2PZMjzi8FiVG1Zlm1dhq6wY7cJzWG6EY0Rxd/3rU/J5caWI3ZlyWWaSdD51kEque67zBYg4Mj+3I5JNM="
+    secure: "Loel864GZtTfyTOW96MWAr3RNh3ILemeqswcpuTJNr/TOtYaM0/tEhwzYWwKZXQibiVX3G0NyRyEJjYhAT2qJrmu8kOwXAOSadHERwBLiOsrBm+xpGldARxDN8v5ejtodY6D9cPJImTwlR1uoJnEF45rhO1e0J5QwyS2J7YL1is="
   bucket: banzaiman_travis_artifacts
   skip_cleanup: true
   local-dir: foo
