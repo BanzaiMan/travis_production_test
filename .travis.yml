@@ -1,15 +1,21 @@
-language: java
+language: ruby
 
-jdk:
-  - oraclejdk7
-  - openjdk6
-
-before_script:
-  - export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-  - export PATH=$JAVA_HOME/bin:$PATH
+before_deploy:
+  - git clone -b ha-feature-newrelic-deployment https://github.com/travis-ci/dpl.git
+  - cd dpl && gem build dpl.gemspec
+  - rvm 1.9.3 do ruby -S gem install dpl-*.gem
+  - cd ..
 
 install:
   - true
-  
-script: 
-  - 'java -version'
+
+script:
+  - true
+
+deploy:
+  provider: s3
+  notify:
+    app_name: "foo"
+    application_id: "bar"
+    license_key: "baz"
+
