@@ -16,7 +16,7 @@ script:
 deploy:
   provider: s3
   access_key_id:
-    secure: "Kn+7oOhQ/HEroSsH/wm4XNSrHh+vch5Jyuz/QWMbkNfIQjAoQoqIGsmrD1IEHBMYSQgI63UNzfVDIb0Vs6It5znwWlgWT3uyyDnr2tQy479ZfTTrEm1Id12tlqLNxic6yZgAlW6whC9lrdfLNl3tYADgO8ef9ib07idbuRmCMzk="
+    secure: "dHP944VVE5w57ntlrQD1S8KqB08aE9d1JH+MWTrCI9Z4NLExXfbc3E/eL1BJ2Ojhnd2V+vpVAVlbhHq96V2NqsZcZM8p0ZVI1F38aj2S5X7s0PKgc2tAvWv/uDTJpPPxINaSTjpOtwPxjW8EEUwedHifsBzPREutaSVvBJjpxQ4="
   secret_access_key:
     secure: "SN8B2f0jk+wJU3NDWIzggXYIfMRpJi9H3fut5j9ocklt4uBVaHwd7NPVXefj13DG7/jK3uibIDCCNzq29h8+ikugGMG2PZMjzi8FiVG1Zlm1dhq6wY7cJzWG6EY0Rxd/3rU/J5caWI3ZlyWWaSdD51kEque67zBYg4Mj+3I5JNM="
   bucket: banzaiman_travis_artifacts
