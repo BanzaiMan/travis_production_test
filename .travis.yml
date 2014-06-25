@@ -17,16 +17,17 @@ script:
 deploy:
   provider: s3
   access_key_id:
-    secure: "dHP944VVE5w57ntlrQD1S8KqB08aE9d1JH+MWTrCI9Z4NLExXfbc3E/eL1BJ2Ojhnd2V+vpVAVlbhHq96V2NqsZcZM8p0ZVI1F38aj2S5X7s0PKgc2tAvWv/uDTJpPPxINaSTjpOtwPxjW8EEUwedHifsBzPREutaSVvBJjpxQ4="
+    secure: "EvilNFgqWmYJNklANZdQgjCfV3AfLBWe45yG+nOXK88D+8OmEsEyRXOYq5McUjS0sHVqe+y10pRGDh6NGoDHepafkNnLnScKRku/4S4zwGUYLE5QA3JR1bjQRulhAHa2fujw8MJg1WQNfI8sg4ncAX7msZKnO41UESo4QAgctL4="
   secret_access_key:
-    secure: "Loel864GZtTfyTOW96MWAr3RNh3ILemeqswcpuTJNr/TOtYaM0/tEhwzYWwKZXQibiVX3G0NyRyEJjYhAT2qJrmu8kOwXAOSadHERwBLiOsrBm+xpGldARxDN8v5ejtodY6D9cPJImTwlR1uoJnEF45rhO1e0J5QwyS2J7YL1is="
+    secure: "MU7MTVWqbtpc5qnCgLWyaeN5cVGdtc8jJD3mRoRTmZqTICQuyPOnS5kFKdKX/veO+QjvgV+StN92E0ENMIyTwd0zQFK5gJOK/Y1wrIZFuz4bB8x6F2mQSnnjQc5Aka1TgjsC5BFXLNZ9J0gk9P9GVlVzhEQlr1y5hFB1VQZSZ4M="
   bucket: banzaiman_travis_artifacts
   skip_cleanup: true
   local-dir: foo
   on:
     all_branches: true
   notify:
-    app_name: "foo"
-    application_id: "bar"
-    license_key: "baz"
+    master:
+      app_name: "foo"
+      application_id: "bar"
+      license_key: "baz"
 
