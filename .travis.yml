@@ -2,16 +2,10 @@ language: ruby
 
 rvm:
   - "1.9.3"
-  - 2.1.2
-matrix:
-  exclude:
-    - rvm: 1.9.3
 
 install:
   - true
 
 script:
-  - true
+  - seq 1 100000
 
-after_success:
-  - export TRAVIS_TEST_RESULT=1
