@@ -11,23 +11,7 @@ install:
   - true
 
 script:
-  - mkdir foo
-  - touch foo/bar
+  - true
 
-deploy:
-  provider: s3
-  access_key_id:
-    secure: "EvilNFgqWmYJNklANZdQgjCfV3AfLBWe45yG+nOXK88D+8OmEsEyRXOYq5McUjS0sHVqe+y10pRGDh6NGoDHepafkNnLnScKRku/4S4zwGUYLE5QA3JR1bjQRulhAHa2fujw8MJg1WQNfI8sg4ncAX7msZKnO41UESo4QAgctL4="
-  secret_access_key:
-    secure: "MU7MTVWqbtpc5qnCgLWyaeN5cVGdtc8jJD3mRoRTmZqTICQuyPOnS5kFKdKX/veO+QjvgV+StN92E0ENMIyTwd0zQFK5gJOK/Y1wrIZFuz4bB8x6F2mQSnnjQc5Aka1TgjsC5BFXLNZ9J0gk9P9GVlVzhEQlr1y5hFB1VQZSZ4M="
-  bucket: banzaiman_travis_artifacts
-  skip_cleanup: true
-  local-dir: foo
-  on:
-    all_branches: true
-  notify:
-    master:
-      app_name: "foo"
-      application_id: "bar"
-      license_key: "baz"
-
+after_success:
+  - export TRAVIS_TEST_RESULT=1
