@@ -17,6 +17,6 @@ before_deploy:
 
 deploy:
   provider: gae
-  oauth2_refresh_token: deadbeef0123456789
+  oauth_refresh_token: deadbeef0123456789
   skip_cleanup: true
   app_dir: foo # defaults to $TRAVIS_BUILD_DIR
