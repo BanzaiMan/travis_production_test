@@ -9,7 +9,7 @@ install:
 script:
   - true
 
-before_deploy:
+after_success:
   - git clone -b ha-feature-gae https://github.com/travis-ci/dpl.git
   - pushd dpl && gem build dpl.gemspec
   - rvm 1.9.3 do ruby -S gem install dpl-*.gem
