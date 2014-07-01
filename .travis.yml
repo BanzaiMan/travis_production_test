@@ -1,17 +1,10 @@
-language: ruby
+language: objective-c
 
-rvm:
-  - "1.9.3"
 
+env:
+  - xcode_scheme: MasterPassword\ iOS\ \(Development\)
 install:
-  - mkdir foo
-
-script:
   - true
 
-deploy:
-  provider: gae
-  oauth_refresh_token: deadbeef0123456789
-  skip_cleanup: true
-  app_dir: foo # defaults to $TRAVIS_BUILD_DIR
-  edge: true
+script:
+  - echo $TRAVIS_XCODE_SCHEME
