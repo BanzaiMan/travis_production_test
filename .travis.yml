@@ -2,7 +2,7 @@ language: objective-c
 
 
 env:
-  - xcode_scheme: MasterPassword\ iOS\ \(Development\)
+  - xcode_scheme: "MasterPassword\ iOS\ \(Development\)"
 install:
   - true
 
