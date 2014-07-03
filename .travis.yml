@@ -1,9 +1,7 @@
-language: objective-c
+language: python
 
-
-xcode_scheme: MasterPassword\ iOS\ \(Development\)
 install:
-  - true
+  - sudo apt-get install mongodb-clients mongodb-dev mongodb-server
 
 script:
-  - echo $TRAVIS_XCODE_SCHEME
+  - true
