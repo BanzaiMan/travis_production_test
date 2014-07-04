@@ -1,9 +1,12 @@
-language: python
+language: ruby
 
 install:
-  - sudo apt-get update -qq
-  - sudo apt-get --purge remove mongodb-10gen
-  - sudo apt-get install mongodb-clients mongodb-dev mongodb-server
+  - true
 
 script:
   - true
+
+deploy:
+  provider: s3
+  on:
+    branch: foo
