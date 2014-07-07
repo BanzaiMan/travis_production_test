@@ -1,12 +1,10 @@
-language: ruby
+language: java
+
+before_install:
+  - sudo apt-get install ca-certificates-java
 
 install:
   - true
 
 script:
   - true
-
-deploy:
-  provider: s3
-  on:
-    branch: foo
