@@ -1,5 +1,7 @@
 language: ruby
 
+sudo: false
+
 before_install:
   - cd $HOME
   - echo $PWD
