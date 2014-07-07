@@ -1,5 +1,8 @@
 language: java
 
+jvm:
+  - openjdk6
+
 before_install:
   - sudo apt-get install ca-certificates-java
 
