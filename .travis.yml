@@ -3,14 +3,4 @@ language: ruby
 sudo: false
 
 before_install:
-  - cd $HOME
-  - echo $PWD
-
-install:
-  - echo $PWD
-
-script:
-  - echo $PWD
-  
-after_script:
-  - echo $PWD
+  - travis_retry foobar
