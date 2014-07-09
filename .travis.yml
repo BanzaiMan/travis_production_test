@@ -4,6 +4,12 @@ sudo: false
 
 before_install:
   - mkdir foo
+  
+install:
+  - true
+
+script:
+  - true
 
 deploy:
   provider: s3
