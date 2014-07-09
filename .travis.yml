@@ -22,6 +22,7 @@ deploy:
   local-dir: foo
   on:
     all_branches: true
+    condition: $FOO = 'bar'
   notify:
     app_name: "foo"
     application_id: "bar"
