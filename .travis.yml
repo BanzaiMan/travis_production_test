@@ -11,19 +11,11 @@ install:
 script:
   - true
 
-deploy:
-  provider: s3
-  access_key_id:
-    secure: "dHP944VVE5w57ntlrQD1S8KqB08aE9d1JH+MWTrCI9Z4NLExXfbc3E/eL1BJ2Ojhnd2V+vpVAVlbhHq96V2NqsZcZM8p0ZVI1F38aj2S5X7s0PKgc2tAvWv/uDTJpPPxINaSTjpOtwPxjW8EEUwedHifsBzPREutaSVvBJjpxQ4="
-  secret_access_key:
-    secure: "Loel864GZtTfyTOW96MWAr3RNh3ILemeqswcpuTJNr/TOtYaM0/tEhwzYWwKZXQibiVX3G0NyRyEJjYhAT2qJrmu8kOwXAOSadHERwBLiOsrBm+xpGldARxDN8v5ejtodY6D9cPJImTwlR1uoJnEF45rhO1e0J5QwyS2J7YL1is="
-  bucket: banzaiman_travis_artifacts
-  skip_cleanup: true
-  local-dir: foo
-  on:
-    all_branches: true
-    condition: $FOO = 'bar'
-  notify:
-    app_name: "foo"
-    application_id: "bar"
-    license_key: "baz"
+rvm:
+  - 2.1.0
+  - 1.9.3
+
+matrix:
+  include:
+    - os: osx
+      rvm: 1.9.3
