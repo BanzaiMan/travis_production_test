@@ -10,7 +10,7 @@ before_install:
   - mkdir foo
   
 install:
-  - true
+  - perl -V
 
 script:
   - true
