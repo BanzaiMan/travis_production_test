@@ -1,8 +1,5 @@
-language: perl
+language: python
 
-perl:
-  - "5.18"
-  - "5.20"
 
 sudo: false
 
@@ -10,7 +7,7 @@ before_install:
   - mkdir foo
   
 install:
-  - perl -V
+  - python --version
 
 script:
   - true
