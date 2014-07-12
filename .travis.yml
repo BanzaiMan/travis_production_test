@@ -3,11 +3,8 @@ language: python
 
 sudo: false
 
-before_install:
-  - mkdir foo
-  
 install:
-  - python --version
+  - pip install arxiv2bib
 
 script:
   - true
