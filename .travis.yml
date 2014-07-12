@@ -1,17 +1,14 @@
-language: java
+language: perl
 
-jdk:
-  - oraclejdk7
-  - oraclejdk8
+perl:
+  - "5.18"
+  - "5.20"
 
 sudo: false
 
 before_install:
   - mkdir foo
   
-addons:
-  postgresql: "9.3"
-
 install:
   - true
 
