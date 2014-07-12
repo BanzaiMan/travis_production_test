@@ -5,6 +5,9 @@ sudo: false
 before_install:
   - mkdir foo
   
+addons:
+  postgresql: "9.3"
+
 install:
   - true
 
