@@ -17,3 +17,4 @@ deploy:
     condition:
       - '$FOO = bar'
       - '$BAR = baz'
+
