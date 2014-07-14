@@ -15,5 +15,5 @@ deploy:
   bucket: "S3 Bucket"
   on:
     condition:
-      - 'FOO = bar'
-      - 'BAR = baz'
+      - '$FOO = bar'
+      - '$BAR = baz'
