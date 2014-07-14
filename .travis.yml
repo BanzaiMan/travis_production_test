@@ -10,4 +10,6 @@ install:
   - true
   
 script:
-  - find ~/.phpenv/versions/$(phpenv version-name)/ -depth 3
+  - phpenv version-name
+  - ls ~/.phpenv/versions/$(phpenv version-name)/
+  - ls ~/.phpenv/versions/$(phpenv version-name)/etc
