@@ -1,18 +1,11 @@
-language: python
+language: php
+
+php:
+  - 5.5
+  - hhvm
 
 install:
   - true
   
 script:
-  - true
-
-deploy:
-  provider: s3
-  access_key_id: "YOUR AWS ACCESS KEY"
-  secret_access_key: "YOUR AWS SECRET KEY"
-  bucket: "S3 Bucket"
-  on:
-    condition:
-      - '$FOO = bar'
-      - '$BAR = baz'
-
+  - find ~/.phpenv/versions/$(phpenv version-name)/ -depth 3
