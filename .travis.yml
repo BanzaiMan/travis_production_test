@@ -5,6 +5,7 @@ sudo: false
 php:
   - 5.5
   - hhvm
+  - hhvm-nightly
 
 install:
   - true
