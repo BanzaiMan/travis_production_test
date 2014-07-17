@@ -1,16 +1,14 @@
-language: php
+language: ruby
 
-sudo: false
-
-php:
-  - 5.5
-  - hhvm
-  - hhvm-nightly
+os:
+  - linux
+  - osx
+  
+rvm:
+  - 2.1.2
 
 install:
   - true
   
 script:
-  - phpenv version-name
-  - ls ~/.phpenv/versions/$(phpenv version-name)/
-  - ls ~/.phpenv/versions/$(phpenv version-name)/etc
+  - true
