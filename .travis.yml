@@ -1,12 +1,10 @@
 language: ruby
 
-os:
-  - linux
-
-install:
-  - sudo apt-get install dnsutils
+rvm:
+  - rbx-2.2.10
   
+install:
+  - true
+
 script:
-  - dig getcomposer.org
-  - host getcomposer.org
-  - nslookup getcomposer.org
+  - true
