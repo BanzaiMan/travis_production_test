@@ -1,10 +1,8 @@
-language: ruby
+language: objective-c
 
-rvm:
-  - rbx-2.2.10
   
 install:
-  - true
+  - xctool --version
 
 script:
   - true
