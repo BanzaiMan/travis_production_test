@@ -2,13 +2,11 @@ language: ruby
 
 os:
   - linux
-  - osx
-  
-rvm:
-  - 2.1.2
 
 install:
-  - true
+  - sudo apt-get install dnsutils
   
 script:
-  - true
+  - dig getcomposer.org
+  - host getcomposer.org
+  - nslookup getcomposer.org
