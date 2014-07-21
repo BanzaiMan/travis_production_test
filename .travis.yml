@@ -1,4 +1,6 @@
 language: ruby
+
+sudo: false
   
 install:
   - gem install autobuild
