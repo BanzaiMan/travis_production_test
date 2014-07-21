@@ -1,8 +1,7 @@
-language: objective-c
-
+language: ruby
   
 install:
-  - xctool --version
+  - gem install autobuild
 
 script:
   - true
