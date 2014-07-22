@@ -2,8 +2,11 @@ language: ruby
 
 rvm: 1.9.3
   
+before_install:
+  - source aliases
+
 install:
-  - gem install autobuild
+  - foo
 
 script:
   - true
