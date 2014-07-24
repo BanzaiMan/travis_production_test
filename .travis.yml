@@ -1,12 +1,11 @@
 language: ruby
 
+sudo: false
+
 rvm: 1.9.3
-  
-before_install:
-  - source aliases
 
 install:
-  - foo
+  - echo $SHELL
 
 script:
   - true
