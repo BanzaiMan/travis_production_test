@@ -2,10 +2,15 @@ language: ruby
 
 sudo: false
 
-rvm: 1.9.3
+matrix:
+  include:
+    - rvm: 1.9.2
+      gemfile: .gemfiles/Gemfile.activerecord-3.2
+    - rvm: 1.9.3
+      gemfile: Gemfile
 
 install:
-  - echo $SHELL
+  - true
 
 script:
   - true
