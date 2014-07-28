@@ -1,13 +1,12 @@
-language: java
+language: scala
 
 sudo: false
 
-jdk:
-  - oraclejdk7
-  - openjdk7
-  
-install:
-  - true
-  
+scala:
+  - 2.10.4
+  - 2.11.1
+
+install: true
+
 script:
   - echo $JAVA_HOME
