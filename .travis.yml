@@ -1,10 +1,12 @@
 language: erlang
 
+sudo: false
+
 install:
   - true
   
 script:
   - ssh-keygen -t dsa -f $HOME/.ssh/id_rsa -P ''
   - cp $HOME/.ssh/id_rsa.pub $HOME/.ssh/authorized_keys
-  - ssh -N -f localhost
+  - ssh -N -f localhost -o StrictHostKeyChecking=no
   - 'ps -ef | grep ssh'
