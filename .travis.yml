@@ -1,12 +1,13 @@
-language: erlang
+language: java
 
 sudo: false
 
+jvm:
+  - oraclejdk7
+  - openjdk7
+  
 install:
   - true
   
 script:
-  - ssh-keygen -t dsa -f $HOME/.ssh/id_rsa -P ''
-  - cp $HOME/.ssh/id_rsa.pub $HOME/.ssh/authorized_keys
-  - ssh -N -f localhost -o StrictHostKeyChecking=no
-  - 'ps -ef | grep ssh'
+  - echo $JAVA_HOME
