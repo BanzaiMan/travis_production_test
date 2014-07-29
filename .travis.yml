@@ -1,15 +1,5 @@
 language: scala
 
-sudo: false
-
-scala:
-  - 2.10.4
-  - 2.11.1
-
-jdk:
-  - oraclejdk7
-  - openjdk6
-
 install: true
 
 script:
