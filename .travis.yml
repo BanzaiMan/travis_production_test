@@ -1,9 +1,6 @@
 language: ruby
 
-rvm:
-  - 2.1.2
-  - "rbx-2"
-
-install: true
+install:
+  - git --version
 
 script: true
