@@ -1,6 +1,8 @@
-language: haskell
+language: ruby
 
-ghc: 7.6
+rvm:
+  - 2.1.2
+  - "rbx-2"
 
 install: true
 
