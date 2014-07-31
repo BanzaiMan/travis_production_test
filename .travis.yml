@@ -1,11 +1,12 @@
-language: php
+language: java
 
-php:
-  - 5.5.9
-  - 5.5.15
+sudo: false
+
+jdk:
+  - oraclejdk7
   
 install:
-  - which php
+  - true
 
 script:
-  - true
+  - java -version
