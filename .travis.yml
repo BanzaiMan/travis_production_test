@@ -1,7 +1,10 @@
-language: ruby
+language: node_js
 
-rvm:
-  - "rbx-2"
+node_js:
+  - 0.10
+  
+install:
+  - true
 
 script:
   - true
