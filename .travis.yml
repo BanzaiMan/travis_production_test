@@ -4,6 +4,7 @@ before_install:
   - echo $PATH
   - which php
   - curl https://gist.githubusercontent.com/createproblem/eaea35a673e0c8696f2e/raw/php_install.sh | bash -x -s -- 5.5.9
+  - phpenv global 5.5.9
 
 install:
   - true
