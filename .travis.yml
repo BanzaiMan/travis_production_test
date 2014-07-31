@@ -4,7 +4,7 @@ rvm:
   - "rbx-2"
 
 before_install:
-  - echo "source https://rubygems.org\n  gem 'rake'" > Gemfile
+  - echo "source 'https://rubygems.org'\n  gem 'rake'" > Gemfile
 
 script:
   - true
