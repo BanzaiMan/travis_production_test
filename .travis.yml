@@ -5,6 +5,7 @@ rvm:
 
 before_install:
   - echo "source 'https://rubygems.org'\ngem 'rake'" > Gemfile
+  - cat Gemfile
 
 script:
   - true
