@@ -1,5 +1,7 @@
 language: ruby
 
+before_install:
+  - sudo add-apt-repository ppa:rethinkdb/ppa
 install:
   - git --version
 
