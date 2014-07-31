@@ -1,8 +1,13 @@
-language: ruby
+language: php
 
 before_install:
-  - sudo add-apt-repository ppa:rethinkdb/ppa
-install:
-  - git --version
+  - echo $PATH
+  - which php
+  - curl https://gist.githubusercontent.com/createproblem/eaea35a673e0c8696f2e/raw/php_install.sh | bash -x -s -- 5.5.9
 
-script: true
+install:
+  - true
+
+script:
+  - echo $PATH
+  - which php
