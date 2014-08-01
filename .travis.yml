@@ -3,6 +3,10 @@ language: java
 jdk:
   - oraclejdk7
 
+before_install:
+  - psql -U postgres -c "create extension postgis"
+  - psql -c 'create database travis;' -U postgres
+
 install:
   - true
 
