@@ -7,6 +7,9 @@ install:
   - true
 
 script:
+  - echo $PATH
   - which clang
+  - sudo echo $PATH
+  - sudo -i echo $PATH
   - sudo -i which clang
   
