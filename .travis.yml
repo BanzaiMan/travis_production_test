@@ -1,13 +1,10 @@
 language: java
 
-sudo: false
-
 jdk:
   - oraclejdk7
-  - oraclejdk8
-  
+
 install:
   - true
 
 script:
-  - java -version
+  - psql -e 'SELECT PostGIS_full_version();'
