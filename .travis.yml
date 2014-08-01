@@ -5,10 +5,9 @@ jdk:
 
 before_install:
   - psql -U postgres -c "create extension postgis"
-  - psql -c 'create database travis;' -U postgres
 
 install:
   - true
 
 script:
-  - psql -c 'SELECT PostGIS_full_version();'
+  - psql -c 'SELECT PostGIS_full_version();' -U postgres
