@@ -11,6 +11,7 @@ script:
   - which clang
   - sudo echo $PATH
   - sudo which clang
+  - sudo env | grep PATH
   - sudo -i echo $PATH
   - sudo -i which clang
-  
+  - sudo -i env | grep PATH
