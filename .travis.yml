@@ -10,6 +10,7 @@ script:
   - echo $PATH
   - which clang
   - sudo echo $PATH
+  - sudo which clang
   - sudo -i echo $PATH
   - sudo -i which clang
   
