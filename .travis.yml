@@ -7,4 +7,4 @@ install:
   - true
 
 script:
-  - psql -e 'SELECT PostGIS_full_version();'
+  - psql -c 'SELECT PostGIS_full_version();'
