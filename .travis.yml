@@ -8,5 +8,5 @@ install:
 
 script:
   - which clang
-  - sudo -i 'which clang'
+  - sudo -i which clang
   
