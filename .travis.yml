@@ -1,13 +1,12 @@
-language: java
+language: cpp
 
-jdk:
-  - oraclejdk7
-
-before_install:
-  - psql -U postgres -c "create extension postgis"
+compiler:
+  - clang
 
 install:
   - true
 
 script:
-  - psql -c 'SELECT PostGIS_full_version();' -U postgres
+  - which clang
+  - sudo -i 'which clang'
+  
