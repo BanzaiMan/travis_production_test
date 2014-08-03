@@ -1,17 +1,11 @@
-language: cpp
+language: java
 
-compiler:
-  - clang
-
+jdk:
+  - oraclejdk8
+  
 install:
   - true
 
 script:
-  - echo $PATH
-  - which clang
-  - sudo which clang
-  - sudo env | grep PATH
-  - sudo -E env
-  - sudo -E which clang
-  - sudo -i which clang
-  - sudo -i env | grep PATH
+  - echo $JAVA_HOME
+  - find $JAVA_HOME -name jfxrt.jar
