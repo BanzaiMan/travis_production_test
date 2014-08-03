@@ -1,7 +1,8 @@
 language: java
 
 jdk:
-  - oraclejdk8
+  - openjdk7
+
 install:
   - echo 'echo $JAVA_HOME' > echo.sh
   - chmod +x echo.sh
@@ -12,7 +13,7 @@ script:
   - ./echo.sh
   - export JAVA_HOME=$JAVA_HOME/jre
   - java -version
-  - sudo apt-get install oracle-java8-set-default
+  - sudo apt-get install oracle-java7-set-default
   - echo $JAVA_HOME
   - echo $PATH
 
