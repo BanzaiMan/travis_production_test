@@ -11,9 +11,6 @@ script:
   - echo $JAVA_HOME
   - find $JAVA_HOME
   - ./echo.sh
-  - export JAVA_HOME=$JAVA_HOME/jre
-  - java -version
-  - sudo apt-get install oracle-java7-set-default
-  - echo $JAVA_HOME
-  - echo $PATH
+  - javac PrintProperties.java
+  - java PrintProperties
 
