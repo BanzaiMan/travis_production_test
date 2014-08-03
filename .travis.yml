@@ -8,7 +8,7 @@ install:
 
 script:
   - echo $JAVA_HOME
-  - find $JAVA_HOME -name jfxrt.jar
+  - find $JAVA_HOME
   - ./echo.sh
   - export JAVA_HOME=$JAVA_HOME/jre
   - java -version
