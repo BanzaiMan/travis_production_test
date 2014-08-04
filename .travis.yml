@@ -1,16 +1,12 @@
-language: java
+language: objective-c
 
-jdk:
-  - openjdk7
-
+xcode_scheme:
+  - Foo
+  - Bar
+  
 install:
-  - echo 'echo $JAVA_HOME' > echo.sh
-  - chmod +x echo.sh
+  - true
 
 script:
-  - echo $JAVA_HOME
-  - find $JAVA_HOME
-  - ./echo.sh
-  - javac PrintProperties.java
-  - java PrintProperties
+  - true
 
