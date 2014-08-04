@@ -1,12 +1,9 @@
-language: objective-c
+language: ruby
 
-xcode_scheme:
-  - Foo
-  - Bar
   
 install:
   - true
 
 script:
-  - true
+  - echo $TRAVIS_TAG
 
