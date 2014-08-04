@@ -1,9 +1,11 @@
-language: ruby
+language: python
 
+python:
+  - pypy3
   
 install:
   - true
 
 script:
-  - echo $TRAVIS_TAG
+  - python --version
 
