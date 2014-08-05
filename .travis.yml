@@ -1,8 +1,8 @@
 language: php
 
 install:
-  - pecl install event
-  - pecl install event
+  - pecl install riak
+  - pecl install riak
 
 script:
   - perl -V
