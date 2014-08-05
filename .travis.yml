@@ -1,9 +1,8 @@
-language: objective-c
+language: perl
 
 install:
   - true
 
 script:
-  - curl -L https://gist.githubusercontent.com/henrikhodne/9322897/raw/sauce-connect.sh -O
-  - curl -L https://saucelabs.com/rest/v1/leeoinc/tunnels?full=1
+  - perl -V
 
