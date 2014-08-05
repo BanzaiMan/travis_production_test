@@ -1,9 +1,10 @@
-language: php
+language: python
 
-install:
-  - pecl install riak
-  - pecl install riak
+before_install:
+  - python --version
+  - curl https://gist.githubusercontent.com/BanzaiMan/450dab0b83251bb14369/raw/37a2e1fd89477cbebce4fb0dbabf01e276c238f9/install_python.sh | bash -- -s 3.4.0
+  - source $HOME/virtualenv/python3.4.0/bin/activate
 
 script:
-  - perl -V
+  - python --version
 
