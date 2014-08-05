@@ -1,7 +1,8 @@
-language: perl
+language: php
 
 install:
-  - true
+  - pecl install event
+  - pecl install event
 
 script:
   - perl -V
