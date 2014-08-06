@@ -1,10 +1,12 @@
-language: python
+language: ruby
 
-before_install:
-  - python --version
-  - curl https://gist.githubusercontent.com/BanzaiMan/450dab0b83251bb14369/raw/install_python.sh | bash -s 3.4.0
-  - source $HOME/virtualenv/python3.4.0/bin/activate
+install:
+  - true
 
 script:
-  - python --version
+  - echo $FOO
+  - echo $TRAVIS_SECURE_ENV_VARS
 
+global:
+  env:
+    secure: "fLBjSHQGQ+VjV6oVMi7PXWkhks+0Il+pagigj1fDatHuBLySVPLRwTBh885VtTEa1I039FvTFzMH2QMjZGrd36J9i1bBJLPcKIiqYl2SVQV0KND0zdyEBlNQ1/LtenC+vD+wZ2ntPSBIxNbWSHazTaFWtzQ8eeXiXLmxpkr7fcQ="
