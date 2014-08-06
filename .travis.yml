@@ -1,11 +1,10 @@
-language: php
-
-php:
-  - 5.5.9
-  - 5.5.15
+language: python
 
 install:
-  - true
+  - pip install scipy
 
 script:
   - true
+
+after_failure:
+  - cat /home/travis/.pip/pip.log
