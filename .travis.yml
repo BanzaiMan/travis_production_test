@@ -1,12 +1,11 @@
-language: ruby
+language: php
+
+php:
+  - 5.5.9
+  - 5.5.15
 
 install:
   - true
 
 script:
-  - echo $FOO
-  - echo $TRAVIS_SECURE_ENV_VARS
-
-global:
-  env:
-    secure: "fLBjSHQGQ+VjV6oVMi7PXWkhks+0Il+pagigj1fDatHuBLySVPLRwTBh885VtTEa1I039FvTFzMH2QMjZGrd36J9i1bBJLPcKIiqYl2SVQV0KND0zdyEBlNQ1/LtenC+vD+wZ2ntPSBIxNbWSHazTaFWtzQ8eeXiXLmxpkr7fcQ="
+  - true
