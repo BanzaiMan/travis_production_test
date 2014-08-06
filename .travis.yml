@@ -1,6 +1,9 @@
 language: python
 
 install:
+  - sudo apt-get update -qq
+  - sudo apt-get install libblas-dev
+  - sudo apt-get install mklibs
   - pip install scipy
 
 script:
