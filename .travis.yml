@@ -1,7 +1,7 @@
-language: objective-c
+language: ruby
 
 install:
-  - brew upgrade xctool
+  - true
 
 script:
-  - true
+  - cat $HOME/.gitconfig
