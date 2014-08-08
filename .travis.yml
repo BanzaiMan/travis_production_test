@@ -1,12 +1,7 @@
-language: python
+language: objective-c
 
 install:
-  - sudo apt-get update -qq
-  - sudo apt-get install python-scipy # install dependencies of scipy in one swoop
-  - pip install scipy
+  - brew upgrade xctool
 
 script:
   - true
-
-after_failure:
-  - cat /home/travis/.pip/pip.log
