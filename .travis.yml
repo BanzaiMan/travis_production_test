@@ -4,4 +4,4 @@ install:
   - true
 
 script:
-  - cd; git fetch -C BanzaiMan/travis_production_test origin
+  - git fetch -C BanzaiMan/travis_production_test origin
