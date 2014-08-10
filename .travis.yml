@@ -1,7 +1,7 @@
-language: php
+language: android
 
 install:
   - true
 
 script:
-  - git fetch -C BanzaiMan/travis_production_test origin
+  - echo $ANDROID_HOME
