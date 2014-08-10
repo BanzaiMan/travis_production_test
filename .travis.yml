@@ -4,4 +4,4 @@ install:
   - true
 
 script:
-  - php --version
+  - cd; git fetch -C BanzaiMan/travis_production_test origin
