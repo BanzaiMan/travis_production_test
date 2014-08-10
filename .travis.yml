@@ -1,7 +1,9 @@
-language: android
+language: ruby
 
 install:
   - true
 
 script:
-  - echo $ANDROID_HOME
+  - true
+
+queue: trusty
