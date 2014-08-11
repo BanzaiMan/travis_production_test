@@ -1,9 +1,7 @@
-language: ruby
+language: php
 
 install:
   - true
 
 script:
-  - true
-
-queue: trusty
+  - false | tee ; export TEST_PHPUNIT=${PIPESTATUS[0]} ; echo $TEST_PHPUNIT
