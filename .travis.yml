@@ -1,7 +1,7 @@
-language: php
+language: ruby
 
 install:
   - true
 
 script:
-  - false | tee ; export TEST_PHPUNIT=${PIPESTATUS[0]} ; echo $TEST_PHPUNIT
+  - sudo apt-get install libgeos++-dev
