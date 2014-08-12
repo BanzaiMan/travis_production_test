@@ -4,4 +4,4 @@ install:
   - true
 
 script:
-  - sudo apt-get install libgeos++-dev
+  - time sudo apt-get install libgeos++-dev libgdal1-dev
