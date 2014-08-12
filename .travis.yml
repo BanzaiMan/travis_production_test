@@ -1,7 +1,7 @@
 language: ruby
 
-install:
-  - true
+rvm:
+  - 2.1.0
 
 script:
-  - time sudo apt-get install libgeos++-dev libgdal1-dev
+  - true
