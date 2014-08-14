@@ -1,8 +1,7 @@
 language: ruby
 
-rvm:
-  - 2.1.0
-  - jruby-1.7.9
+install:
+  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 script:
   - true
