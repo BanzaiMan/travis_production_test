@@ -1,6 +1,6 @@
 language: java
 
-jvm:
+jdk:
   - openjdk6
 
 install:
