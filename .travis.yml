@@ -1,7 +1,10 @@
-language: ruby
+language: java
+
+jvm:
+  - openjdk6
 
 install:
-  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  - true
 
 script:
-  - true
+  - java -version
