@@ -4,4 +4,4 @@ install:
   - true
 
 script:
-  - cat ~/.php-build/share/php-build/definitions
+  - cat ~/.php-build/share/php-build/default_configure_options
