@@ -1,7 +1,13 @@
-language: php
+language: ruby
+
+rvm:
+  - jruby
+
+env:
+  - JRUBY_OPTS=--2.0
 
 install:
   - true
 
 script:
-  - cat ~/.php-build/share/php-build/default_configure_options
+  - ruby -v
