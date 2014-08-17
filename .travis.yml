@@ -1,8 +1,12 @@
 language: go
 
+before_install:
+  - sudo rm -rf /usr/local/maven
+  - sudo sed -ie '/M2_HOME/d' /etc/mavenrc
+  - sudo apt-get install maven
+
 install:
   - true
 
 script:
-  - echo $GOPATH
-  - echo $PATH
+  - mvn -version
