@@ -1,13 +1,8 @@
-language: ruby
-
-rvm:
-  - jruby
-
-env:
-  - JRUBY_OPTS=--2.0
+language: go
 
 install:
   - true
 
 script:
-  - ruby -v
+  - echo $GOPATH
+  - echo $PATH
