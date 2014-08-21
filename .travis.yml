@@ -1,8 +1,13 @@
-language: ruby
+language: android
+
+android:
+  components:
+    - build-tools-20.0.0
+    - android-18
+    - extra
 
 install:
   - true
 
 script:
-  - node --version
-  - python --version
+  - ls /usr/local/android-sdk/build-tools/
