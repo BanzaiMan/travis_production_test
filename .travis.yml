@@ -3,15 +3,8 @@ language: ruby
 services:
   - mysql
 
-before_script:
-  - 'sudo echo -e "\n[mysqld]\nlocal-infile\n\n[mysql]\nlocal-infile" >> /etc/mysql/my.cnf'
-  - "sudo service mysql status"
-  - "sudo service mysql restart"
-  - mysql -e 'create database test'
-
-
 install:
   - true
 
 script:
-  - ls /usr/local/android-sdk/build-tools/
+  - mysql -e "SHOW VARIABLES LIKE 'local_infile';"
