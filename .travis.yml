@@ -1,10 +1,14 @@
-language: android
+language: ruby
 
-android:
-  components:
-    - build-tools-20.0.0
-    - android-18
-    - extra
+services:
+  - mysql
+
+before_script:
+  - 'sudo echo -e "\n[mysqld]\nlocal-infile\n\n[mysql]\nlocal-infile" >> /etc/mysql/my.cnf'
+  - "sudo service mysql status"
+  - "sudo service mysql restart"
+  - mysql -e 'create database test'
+
 
 install:
   - true
