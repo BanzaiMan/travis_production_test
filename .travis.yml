@@ -1,10 +1,13 @@
 language: ruby
 
 services:
-  - mysql
+  - mongodb
+
+before_install:
+  - 'sudo apt-get -o Dpkg::Options::="--force-confold" install mongodb-10gen=2.4.10'
 
 install:
   - true
 
 script:
-  - mysql -e "SHOW VARIABLES LIKE 'local_infile';"
+  - mongodb --version
