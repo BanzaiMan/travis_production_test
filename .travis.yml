@@ -4,10 +4,13 @@ services:
   - mongodb
 
 before_install:
+  - cat /etc/mongod.conf
+　- 'sudo apt-get purge mongodb-10gen'
   - 'sudo apt-get -o Dpkg::Options::="--force-confold" install mongodb-10gen=2.4.10'
 
 install:
   - true
 
 script:
-  - mongodb --version
+  - cat /etc/mongod.conf
+  - mongod --version
