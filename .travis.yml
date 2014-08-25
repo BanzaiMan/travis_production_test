@@ -1,7 +1,7 @@
 language: ruby
 
 install:
-  - gem install corundrum -v 0.4.0
+  - gem install corundum -v 0.4.0
 
 script:
   - true
