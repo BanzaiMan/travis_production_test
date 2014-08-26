@@ -1,7 +1,10 @@
-language: Scala
+language: perl
+
+perl:
+  - 5.20-shrplib
 
 install:
   - true
 
 script:
-  - echo $TRAVIS_SCALA_VERSION
+  - perl -V
