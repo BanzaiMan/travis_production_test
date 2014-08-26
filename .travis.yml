@@ -1,7 +1,7 @@
-language: c
+language: Erlang
 
 install:
   - true
 
 script:
-  - true
+  - echo $TRAVIS_OTP_RELEASE
