@@ -1,7 +1,7 @@
 language: ruby
 
 install:
-  - gem install corundum -v 0.4.0
+  - TRAVIS_FOO=${TRAVIS_BUILD_NUMBER}
 
 script:
-  - true
+  - env | grep TRAVIS
