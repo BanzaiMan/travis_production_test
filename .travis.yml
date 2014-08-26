@@ -1,7 +1,7 @@
-language: Erlang
+language: Scala
 
 install:
   - true
 
 script:
-  - echo $TRAVIS_OTP_RELEASE
+  - echo $TRAVIS_SCALA_VERSION
