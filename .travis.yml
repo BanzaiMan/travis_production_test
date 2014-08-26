@@ -1,7 +1,7 @@
-language: ruby
+language: c
 
 install:
-  - TRAVIS_FOO=${TRAVIS_BUILD_NUMBER}
+  - true
 
 script:
-  - env | grep TRAVIS
+  - true
