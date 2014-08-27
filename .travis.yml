@@ -9,4 +9,6 @@ install:
 script:
   - echo $PATH
   - which psql
+  - psql --version
   - which pg_dump
+  - pg_dump --version
