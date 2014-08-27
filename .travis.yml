@@ -1,15 +1,10 @@
-language: node_js
+language: ruby
 
-addons:
-  postgresql: "9.3"
-
+rvm:
+  - jruby-1.7.14
+  
 install:
   - true
 
 script:
-  - echo $PATH
-  - which psql
-  - psql --version
-  - which pg_dump
-  - pg_dump --version
-  - java -version
+  - true
