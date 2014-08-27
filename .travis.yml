@@ -1,10 +1,12 @@
-language: perl
+language: node_js
 
-perl:
-  - 5.20-shrplib
+addons:
+  - postgresql: "9.3"
 
 install:
   - true
 
 script:
-  - perl -V
+  - echo $PATH
+  - which psql
+  - which pg_dump
