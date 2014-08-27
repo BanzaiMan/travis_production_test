@@ -1,4 +1,4 @@
-language: node_js
+language: java
 
 addons:
   postgresql: "9.3"
@@ -12,3 +12,4 @@ script:
   - psql --version
   - which pg_dump
   - pg_dump --version
+  - java -version
