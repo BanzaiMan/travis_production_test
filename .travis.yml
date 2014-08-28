@@ -1,6 +1,6 @@
-language: haskell
+language: node_js
 
-ghc: 7.8
+node_js: 0.10.30
 
 install:
   - true
