@@ -1,8 +1,7 @@
-language: ruby
+language: haskell
 
-rvm:
-  - jruby-1.7.14
-  
+ghc: 7.8
+
 install:
   - true
 
