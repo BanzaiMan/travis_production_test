@@ -1,13 +1,7 @@
-language: java
-
-jdk:
-  - oraclejdk7
-  - oraclejdk8
-  - openjdk7
+language: ruby
 
 install:
-  - which indexer
-  - indexer --version
+  - rvm list
 
 script:
   - true
