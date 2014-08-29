@@ -1,8 +1,13 @@
-language: python
+language: java
+
+jdk:
+  - oraclejdk7
+  - oraclejdk8
+  - openjdk7
 
 install:
-  - true
+  - which indexer
+  - indexer --version
 
 script:
-  - gvm list
   - true
