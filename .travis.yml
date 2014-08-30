@@ -4,8 +4,7 @@ php:
   - 5.5
 
 install:
-  - echo "#!/usr/bin/bash\nphp --version\n" > show_php.sh
-  - chmod +x show_php.sh
+  - true
 
 script:
   - ./show_php.sh
