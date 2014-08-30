@@ -1,7 +1,11 @@
-language: ruby
+language: php
+
+php:
+  - 5.5
 
 install:
-  - rvm list
+  - echo "#!/usr/bin/bash\nphp --version\n" > show_php.sh
+  - chmod +x show_php.sh
 
 script:
-  - true
+  - ./show_php.sh
