@@ -1,7 +1,13 @@
-language: objective-c
+language: node_js
+
+node_js:
+  - 0.10
+  - 0.1
+  - "0.10"
+  - "0.11"
 
 install:
   - true
 
 script:
-  - rvm list
+  - true
