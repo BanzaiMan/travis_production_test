@@ -1,10 +1,17 @@
-language: perl
+language: ruby
 
-perl:
-  - 5.20
+env:
+  matrix:
+    - os: linux
+      env: VAR1=VAL1
+    - os: linux
+      env: VAR2=VAL2
+    - os: osx
+      env: VAR3=VAL3
+    - os: osx
+      env: VAR4=VAL4
 
-install:
-  - true
+install: true
 
 script:
-  - true
+  - env | grep VAR
