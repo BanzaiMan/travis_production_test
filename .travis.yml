@@ -1,15 +1,19 @@
 language: ruby
 
+os:
+  - linux
+  - osx
+
 env:
-  matrix:
-    - os: linux
-      env: VAR1=VAL1
-    - os: linux
-      env: VAR2=VAL2
+  - VAR1=VAL1 VAR2=VAL2
+  - VAR3=VAL3 VAR4=VAL4
+
+matrix
+  exclude:
     - os: osx
-      env: VAR3=VAL3
-    - os: osx
-      env: VAR4=VAL4
+      VAR1=VAL1 VAR2=VAL2
+    - os: linux
+      VAR3=VAL3 VAR4=VAL4
 
 install: true
 
