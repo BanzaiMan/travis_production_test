@@ -11,9 +11,9 @@ env:
 matrix:
   exclude:
     - os: osx
-      VAR1=VAL1 VAR2=VAL2
+      env: VAR1=VAL1 VAR2=VAL2
     - os: linux
-      VAR3=VAL3 VAR4=VAL4
+      env: VAR3=VAL3 VAR4=VAL4
 
 install: true
 
