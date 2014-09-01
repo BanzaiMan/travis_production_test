@@ -8,7 +8,7 @@ env:
   - VAR1=VAL1 VAR2=VAL2
   - VAR3=VAL3 VAR4=VAL4
 
-matrix
+matrix:
   exclude:
     - os: osx
       VAR1=VAL1 VAR2=VAL2
