@@ -1,6 +1,6 @@
 language: objective-c
 
-install: true
+install: brew install openssl
 
 script: true
 
