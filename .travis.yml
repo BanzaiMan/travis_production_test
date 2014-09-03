@@ -1,5 +1,9 @@
-language: android
+language: objective-c
 
 install: true
 
-script: android list sdk --no-ui --all --extended
+script: true
+
+deploy:
+  provider: s3
+  
