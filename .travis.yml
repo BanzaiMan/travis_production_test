@@ -1,14 +1,6 @@
-language: objective-c
+language: ruby
 
-install:
-  - brew update
-  - brew install openssl
-
-script: true
-
-before_deploy:
-  - rvm reinstall 1.9.3
-
-deploy:
-  provider: s3
-  
+script:
+  - mkdir foo
+  - cd foo
+  - cd $PWD
