@@ -1,6 +1,6 @@
-language: ruby
+language: php
 
 install: true
 
 script:
-  - zcat /proc/config.gz | grep 'CONFIG_\(EXT3\|REISERFS\)'
+  - phpenv versions
