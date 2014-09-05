@@ -1,6 +1,9 @@
-language: perl
+language: android
+
+before_install:
+  - android list sdk --no-ui --all --extended
 
 install: true
 
 script:
-  - perlbrew list
+  - true
