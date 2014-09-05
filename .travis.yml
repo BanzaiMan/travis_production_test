@@ -1,6 +1,6 @@
-language: php
+language: perl
 
 install: true
 
 script:
-  - phpenv versions
+  - perlbrew list
