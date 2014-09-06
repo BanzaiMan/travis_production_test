@@ -4,7 +4,7 @@ services:
   - elasticsearch
 
 before_script:
-  - 'sudo cat "echo \"script.disable_dynamic: false\" >> /etc/elasticsearch/elasticsearch.yml"'
+  - 'sudo cat \"script.disable_dynamic: false\" >> /etc/elasticsearch/elasticsearch.yml'
 
 script:
   - cat /etc/elasticsearch/elasticsearch.yml
