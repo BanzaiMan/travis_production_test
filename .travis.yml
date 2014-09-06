@@ -1,9 +1,18 @@
 language: android
 
-before_install:
-  - android list sdk --no-ui --all --extended
-
 install: true
 
 script:
   - true
+env:
+  matrix:
+    - API=19 PRE_INST=1 NDK=ndk32 URHO3D_LIB_TYPE=STATIC LATEST=1
+    - API=18 PRE_INST=1 NDK=ndk32 URHO3D_LIB_TYPE=STATIC
+    - API=17 PRE_INST=1 NDK=ndk32 URHO3D_LIB_TYPE=SHARED
+    - API=L             NDK=ndk64 URHO3D_LIB_TYPE=STATIC
+    - API=L             NDK=ndk64 URHO3D_LIB_TYPE=SHARED
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env: API=L NDK=ndk64 URHO3D_LIB_TYPE=STATIC
+    - env: API=L NDK=ndk64 URHO3D_LIB_TYPE=SHARED
