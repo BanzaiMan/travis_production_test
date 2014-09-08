@@ -1,10 +1,7 @@
 language: ruby
 
-services:
-  - elasticsearch
-
 before_script:
-  - 'echo "script.disable_dynamic: false" | sudo tee -a /etc/elasticsearch/elasticsearch.yml'
+  - true
 
 script:
-  - cat /etc/elasticsearch/elasticsearch.yml
+  - ps -ef|grep couch
