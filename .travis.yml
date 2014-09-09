@@ -1,6 +1,6 @@
 language: java
 
-jvm: oraclejdk8
+jdk: oraclejdk8
 
 before_script:
   - sudo apt-get update -qq
