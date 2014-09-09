@@ -1,7 +1,10 @@
-language: ruby
+language: java
+
+jvm: oraclejdk8
 
 before_script:
-  - true
+  - sudo apt-get update -qq
+  - sudo apt-get install oracle-java8-installer
 
 script:
-  - ps -ef|grep couch
+  - java -version
