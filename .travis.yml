@@ -1,10 +1,10 @@
-language: java
+language: ruby
 
-jdk: oraclejdk8
-
+services:
+  - couchdb
+  
 before_script:
-  - sudo apt-get update -qq
-  - sudo apt-get install oracle-java8-installer
+  - ps -ef|grep couch
 
 script:
-  - java -version
+  - true
