@@ -1,8 +1,5 @@
 language: ruby
 
-services:
-  - couchdb
-  
 before_script:
   - ps -ef|grep couch
 
