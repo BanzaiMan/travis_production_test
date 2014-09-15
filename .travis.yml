@@ -1,6 +1,7 @@
 language: ruby
 
 before_script:
+  - sudo apt-get install traceroute
   - traceroute google.com
 
 script:
