@@ -1,7 +1,7 @@
 language: ruby
 
 before_script:
-  - curl http://bot.whatismyipaddress.com
+  - traceroute google.com
 
 script:
   - true
