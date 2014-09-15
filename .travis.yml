@@ -1,7 +1,7 @@
 language: ruby
 
 before_script:
-  - ps -ef|grep couch
+  - curl http://bot.whatismyipaddress.com
 
 script:
   - true
