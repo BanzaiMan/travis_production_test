@@ -1,9 +1,9 @@
-language: java
+language: android
 
 before_install:
   - gradle --version
   - curl -LO http://services.gradle.org/distributions/gradle-1.12-bin.zip
-  - unzip grade-1.12-bin.zip
+  - unzip gradle-1.12-bin.zip
   - sudo rm -rf /usr/local/gradle
   - sudo mv -f gradle-1.12 /usr/local/gradle
   - gradle --version
