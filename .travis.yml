@@ -1,12 +1,12 @@
-language: android
+language: ruby
+
+os:
+  - osx
 
 before_install:
-  - gradle --version
-  - curl -LO http://services.gradle.org/distributions/gradle-1.12-bin.zip
-  - unzip gradle-1.12-bin.zip
-  - sudo rm -rf /usr/local/gradle
-  - sudo mv -f gradle-1.12 /usr/local/gradle
-  - gradle --version
-  
+  - brew --prefix openssl
+  - echo `brew --prefix openssl`
+  - if [[ $TRAVIS_OS_NAME = 'osx' ]]; then echo `brew --prefix openssl`; fi
+
 script:
   - true
