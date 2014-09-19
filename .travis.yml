@@ -1,12 +1,13 @@
 language: ruby
 
 os:
-  - osx
+  - linux
+
+compiler:
+  - clang
 
 before_install:
-  - brew --prefix openssl
-  - echo `brew --prefix openssl`
-  - if [[ $TRAVIS_OS_NAME = 'osx' ]]; then echo `brew --prefix openssl`; fi
+  - true
 
 script:
   - true
