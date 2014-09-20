@@ -1,11 +1,7 @@
-language: ruby
-
-rvm:
-  - 2.2
-  - 2.1
+language: go
 
 before_install:
-  - true
+  - echo $GOPATH
 
 script:
   - true
