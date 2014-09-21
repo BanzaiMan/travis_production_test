@@ -1,9 +1,10 @@
-language: go
+language: ruby
 
-sudo: false
+services:
+  - elasticsearch
 
-before_install:
-  - echo $GOPATH
-
+install:
+  - true
+  
 script:
   - true
