@@ -1,6 +1,11 @@
 language: ruby
 
 before_install:
+  - bash --version
+  - env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
+  - sudo apt-get update -qq
+  - sudo apt-get install bash
+  - bash --version
   - env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
 
 install:
