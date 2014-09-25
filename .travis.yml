@@ -3,12 +3,14 @@ language: ruby
 before_install:
   - bash --version
   - env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
-  - env X='() { (a)=>\' bash -c "echo date"; cat echo
+  - env X='() { (a)=>\' bash -c "echo date"
+  - cat echo
   - sudo apt-get update -qq
   - sudo apt-get install bash
   - bash --version
   - env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
-  - env X='() { (a)=>\' bash -c "echo date"; cat echo
+  - env X='() { (a)=>\' bash -c "echo date"
+  - cat echo
 
 install:
   - true
