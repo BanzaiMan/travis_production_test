@@ -1,18 +1,11 @@
 language: ruby
 
-before_install:
-  - head `which bundle`
-  - which bundle
-  - gem uninstall bundler -x -a
-  - which bundle
-  - rvm @global do gem uninstall bundler --all --executables
-  - which bundle || true
-  - rvm @global do gem install bundler --version '~> 1.5.2'
-  - which bundle
-  - bundle --version
+env:
+  secure: "QHaLK5wPFGNPDwlLxfxoSNi+mj9sxKY8faulZyz4vasWJKEsBoINyd1uVsVb0GzEtzeKaiekI2RBbgdi0W9R67hA5xP3EomNdKqre/GPmdtBJIC0BhRSsrxkiBixt70c0OgUxJepQW12U5HCJiv9pbZxjqEDfStIKNTRk6vmMhs="
 
 install:
-  - true
+  - echo $TRAVIS_SECURE_ENV_VARS
+  - echo $FOO
   
 script:
   - true
