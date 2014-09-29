@@ -1,6 +1,7 @@
 language: ruby
 
 before_install:
+  - head `which bundle`
   - which bundle
   - gem uninstall bundler -x -a
   - which bundle
