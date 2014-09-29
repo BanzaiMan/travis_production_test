@@ -1,16 +1,9 @@
 language: ruby
 
 before_install:
-  - bash --version
-  - env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
-  - env X='() { (a)=>\' bash -c "echo date"
-  - cat echo
-  - sudo apt-get update -qq
-  - sudo apt-get install bash
-  - bash --version
-  - env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
-  - env X='() { (a)=>\' bash -c "echo date"
-  - cat echo
+  - rvm @global do gem uninstall bundler --all --executables
+  - gem install bundler --version '~> 1.5.2'
+  - bundle --version
 
 install:
   - true
