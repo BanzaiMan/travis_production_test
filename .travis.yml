@@ -4,6 +4,7 @@ addons:
   postgresql: "9.3"
 
 before_install:
+  - ls -l /var/lib/postgresql/*
   - sudo cat /usr/share/postgresql-common/init.d-functions
   - sudo cat /etc/init.d/postgresql
 
