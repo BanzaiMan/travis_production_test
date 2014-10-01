@@ -1,8 +1,8 @@
 language: ruby
 
-os: osx
-
+addons:
+  postgresql: "9.3"
 
 
 script:
-  - true
+  - ps aux | grep -v grep | grep postgres
