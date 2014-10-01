@@ -1,8 +1,7 @@
 language: objective-c
 
 before_install:
-  - xcodebuild -version -sdk iphoneos
-  - ls -l /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs
+  - rvm list
 
 install: true
 
