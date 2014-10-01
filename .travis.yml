@@ -3,6 +3,8 @@ language: ruby
 addons:
   postgresql: "9.3"
 
+before_install:
+  - sudo cat /etc/init.d/postgresql
 
 script:
   - ps aux | grep -v grep | grep postgres
