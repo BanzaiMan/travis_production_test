@@ -1,17 +1,10 @@
-language: ruby
-
-addons:
-  postgresql: "9.3"
+language: objective-c
 
 before_install:
-  - ls -lad /var/ramfs/postgresql/
-  - sudo service postgresql stop
-  - sudo rm -rf /var/ramfs/postgresql/*
-  - sudo service postgresql stop 9.1
-  - ls -lad /var/ramfs/postgresql/
-  - sudo service postgresql stop
-  - sudo service postgresql start 9.3
-  - ls -lad /var/ramfs/postgresql/
+  - xcodebuild -version -sdk iphoneos
+  - ls -l /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs
+
+install: true
 
 script:
-  - ps aux | grep -v grep | grep postgres
+  - true
