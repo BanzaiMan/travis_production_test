@@ -4,11 +4,11 @@ addons:
   postgresql: "9.3"
 
 before_install:
-  - sudo service stop postgresql
+  - sudo service postgresql stop
   - sudo rm -rf /var/ramfs/postgresql
-  - sudo service start postgresql 9.1
-  - sudo service stop postgresql
-  - sudo service start postgresql 9.3
+  - sudo service postgresql stop 9.1
+  - sudo service postgresql stop
+  - sudo service postgresql start 9.3
 
 script:
   - ps aux | grep -v grep | grep postgres
