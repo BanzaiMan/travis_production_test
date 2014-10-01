@@ -1,6 +1,7 @@
 language: ruby
-rvm:
-  - 2.1.2
-env: 
-  global:
-    - secure: "hLgerh2cfHWRR4pNUYvcnJK7Oh8FL3D87xVrQCKp3lugX5vRa58xNNWaaL58xISvORQkgZx+Chy42k8/RqTQtVlXjU7R4U+Jb9cEU4+aRpgSN5nfjyA06J7OnFGAlEX5+XUPdipkngdlDz2HYlSDgUwPLtaY0kYDO+YOTdExPTY="
+
+install:
+  - which service
+
+script:
+  - true
