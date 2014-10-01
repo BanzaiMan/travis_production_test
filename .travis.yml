@@ -1,11 +1,22 @@
 language: ruby
 
-env:
-  secure: "QHaLK5wPFGNPDwlLxfxoSNi+mj9sxKY8faulZyz4vasWJKEsBoINyd1uVsVb0GzEtzeKaiekI2RBbgdi0W9R67hA5xP3EomNdKqre/GPmdtBJIC0BhRSsrxkiBixt70c0OgUxJepQW12U5HCJiv9pbZxjqEDfStIKNTRk6vmMhs="
+language: ruby
+
+before_install:
+  - bash --version
+  - env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
+  - env X='() { (a)=>\' bash -c "echo date"
+  - cat echo
+  - rm echo
+  - sudo apt-get update -qq
+  - sudo apt-get install bash
+  - bash --version
+  - env x='() { :;}; echo vulnerable' bash -c "echo this is a test"
+  - env X='() { (a)=>\' bash -c "echo date"
+  - cat echo
 
 install:
-  - echo $TRAVIS_SECURE_ENV_VARS
-  - echo $FOO
+  - true
   
 script:
   - true
