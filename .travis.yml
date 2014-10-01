@@ -1,10 +1,8 @@
 language: ruby
 
-rvm: jruby-head
+os: osx
 
-before_install:
-  - rvm reinstall jruby-head
-  - ruby -v
+
 
 script:
   - true
