@@ -1,12 +1,17 @@
-language: ruby
-
-sudo: false
+language: android
 
 addons:
   postgresql: "9.3"
 
-install:
-  - ps -ef | grep -v grep | grep postgres
+before_install:
+  - ls -lad /var/ramfs/postgresql/
+  - sudo service postgresql stop
+  - sudo rm -rf /var/ramfs/postgresql/*
+  - sudo service postgresql stop 9.1
+  - ls -lad /var/ramfs/postgresql/
+  - sudo service postgresql stop
+  - sudo service postgresql start 9.3
+  - ls -lad /var/ramfs/postgresql/
 
 script:
-  - true
+  - ps aux | grep -v grep | grep postgres
