@@ -1,7 +1,12 @@
-language: objective-c
+language: ruby
+
+sudo: false
+
+addons:
+  postgresql: "9.3"
 
 install:
-  - (which service && sudo service couchdb stop 2>/dev/null) || true
+  - ps -ef | grep -v grep | grep postgres
 
 script:
   - true
