@@ -1,6 +1,7 @@
 language: java
 
 before_install:
+  - ls -l ~/virtualenv/*/bin/activate
   - source ~/virtualenv/python2.7/bin/activate
   - pip install codecov
 
