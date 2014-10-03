@@ -11,7 +11,7 @@ deploy:
 
 after_success:
   - rvm use 1.9.3
-  - gem install nokogiri -- --use-system-libraries
+  - gem install nokogiri
   - gem which nokogiri
 
 install:
