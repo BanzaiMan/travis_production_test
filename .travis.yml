@@ -1,17 +1,21 @@
 language: ruby
 
-addons:
-  postgresql: "9.3"
+deploy:
+  - provider: opsworks
+    access_key_id: XXXXXXXXXXXXXXXXXXXX
+    secret_access_key:
+      secure: XXXXXXXXXXXXXXXXXXXX
+    app-id: XXXXXXXXXXXXXXXXXXXXX
+    on:
+      branch: master
 
-before_install:
-  - ls -lad /var/ramfs/postgresql/
-  - sudo service postgresql stop
-  - sudo rm -rf /var/ramfs/postgresql/*
-  - sudo service postgresql stop 9.1
-  - ls -lad /var/ramfs/postgresql/
-  - sudo service postgresql stop
-  - sudo service postgresql start 9.3
-  - ls -lad /var/ramfs/postgresql/
+after_success:
+  - rvm use 1.9.3
+  - gem install nokogiri -- --use-system-libraries
+  - gem which nokogiri
+
+install:
+  - true
 
 script:
-  - ps aux | grep -v grep | grep postgres
+  - true
