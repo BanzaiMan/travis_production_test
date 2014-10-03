@@ -1,18 +1,8 @@
-language: ruby
+language: java
 
-deploy:
-  - provider: opsworks
-    access_key_id: XXXXXXXXXXXXXXXXXXXX
-    secret_access_key:
-      secure: XXXXXXXXXXXXXXXXXXXX
-    app-id: XXXXXXXXXXXXXXXXXXXXX
-    on:
-      branch: master
-
-after_success:
-  - rvm use 1.9.3
-  - gem install nokogiri
-  - gem which nokogiri
+before_install:
+  - source ~/virtualenv/python2.7/bin/activate
+  - pip install codecov
 
 install:
   - true
