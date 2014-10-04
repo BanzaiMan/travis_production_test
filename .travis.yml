@@ -1,11 +1,1 @@
-language: python
-
-before_install:
-  - ls -l ~/virtualenv/*/bin/activate
-  - pip install codecov
-
-install:
-  - true
-
-script:
-  - true
+language: go
