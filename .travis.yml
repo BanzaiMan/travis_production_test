@@ -1,1 +1,7 @@
-language: go
+language: ruby
+
+install:
+  - true
+
+script:
+  - which php
