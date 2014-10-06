@@ -4,4 +4,4 @@ install:
   - true
 
 script:
-  - which php
+  - true
