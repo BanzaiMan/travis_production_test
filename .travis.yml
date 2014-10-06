@@ -1,7 +1,7 @@
 language: ruby
 
 install:
-  - true
+  - gem install jasmine -v 1.3.2
 
 script:
   - true
