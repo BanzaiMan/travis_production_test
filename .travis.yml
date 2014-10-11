@@ -1,10 +1,10 @@
 language: ruby
 
-rvm:
-  - jruby
+env:
+  - FOO='env var with a colon:'
 
 install:
   - true
 
 script:
-  - true
+  - echo $FOO
