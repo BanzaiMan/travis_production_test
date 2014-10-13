@@ -1,14 +1,11 @@
 language: ruby
 
 os:
-  - linux
   - osx
-
-env:
-  - FOO='env var with a colon:'
 
 install:
   - true
 
 script:
-  - echo $FOO
+  - echo $TRAVIS_OS_NAME
+  - uname -a
