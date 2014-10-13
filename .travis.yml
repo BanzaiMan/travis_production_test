@@ -1,5 +1,9 @@
 language: ruby
 
+os:
+  - linux
+  - osx
+
 env:
   - FOO='env var with a colon:'
 
