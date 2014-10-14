@@ -1,12 +1,11 @@
-language: ruby
+language: php
 
-
-os:
-  - osx
+php:
+  - hhvm
+  - "5.2.17"
 
 install:
   - true
 
 script:
-  - echo $TRAVIS_OS_NAME
-  - uname -a
+  - true
