@@ -1,12 +1,7 @@
-language: php
-
-php:
-  - hhvm
-  - hhvm-nightly
-  - "5.2.17"
+language: generic
 
 install:
-  - true
+  - ps -ef | grep -v grep | grep couch
 
 script:
   - true
