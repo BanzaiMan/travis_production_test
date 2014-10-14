@@ -1,7 +1,7 @@
-language: generic
+language: android
 
 install:
-  - ps -ef | grep -v grep | grep couch
-
+  - true
+  
 script:
   - true
