@@ -1,8 +1,10 @@
-language: ruby
+language: objective-c
 
-services:
-    - elasticsearch
+before_install:
+    - rvm use default
 
 install:
-    - find /usr -name elasticsearch
-    - find /usr -name elasticsearch.in.sh
+    - true
+
+script:
+    - true
