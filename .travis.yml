@@ -1,5 +1,8 @@
-language: python
-python:
-    - "2.7"
+language: ruby
+
+services:
+    - elasticsearch
+
 install:
-    - true
+    - find /usr -name elasticsearch
+    - find /usr -name elasticsearch.in.sh
