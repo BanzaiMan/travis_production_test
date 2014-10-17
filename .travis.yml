@@ -1,6 +1,8 @@
 language: ruby
 
-dist: trusty
+before_install:
+  - which firefox || true
+  - ls -ld /usr/local/firefox-*
 
 install:
   - true
