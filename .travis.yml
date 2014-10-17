@@ -5,3 +5,9 @@ deploy:
   provider: gae
   oauth_refresh_token: FOOBAR
   app_dir: foo
+
+install:
+  - true
+  
+script:
+  - true
