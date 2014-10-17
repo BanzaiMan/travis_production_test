@@ -1,14 +1,6 @@
 language: ruby
 
-deploy:
-  edge: true
-  skip_cleanup: true
-  provider: gae
-  oauth_refresh_token: FOOBAR
-  app_dir: foo
-
-before_install:
-  - openssl aes-256-cbc -K $encrypted_5880cf525281_key -iv $encrypted_5880cf525281_iv -in README.md.enc -out README.md -d
+dist: trusty
 
 install:
   - true
