@@ -1,6 +1,7 @@
 language: ruby
 
 deploy:
+  edge: true
   skip_cleanup: true
   provider: gae
   oauth_refresh_token: FOOBAR
