@@ -4,4 +4,6 @@ install:
   - true
   
 script:
+  - echo $PATH
+  - echo $GOPATH
   - echo $PATH | grep "${GOPATH}/bin"
