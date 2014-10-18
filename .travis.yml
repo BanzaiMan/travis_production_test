@@ -1,9 +1,12 @@
-language: go
+language: ruby
+
+dist: trusty
+
+group: update
 
 install:
-  - true
+  - lsb_release -a
+  - rvm list
   
 script:
-  - echo $PATH
-  - echo $GOPATH
-  - echo $PATH | grep "${GOPATH}/bin"
+  - true
