@@ -1,11 +1,7 @@
-language: ruby
-
-before_install:
-  - which firefox || true
-  - ls -ld /usr/local/firefox-*
+language: go
 
 install:
   - true
   
 script:
-  - true
+  - echo $PATH | grep "${GOPATH}/bin"
