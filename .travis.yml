@@ -1,12 +1,12 @@
-language: ruby
+language: go
 
 dist: trusty
 
-group: update
+group: dev
 
 install:
   - lsb_release -a
-  - rvm list
+  - gvm list
   
 script:
   - true
