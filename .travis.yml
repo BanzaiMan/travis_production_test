@@ -1,9 +1,5 @@
 language: go
 
-dist: trusty
-
-group: dev
-
 install:
   - lsb_release -a
   - gvm list
