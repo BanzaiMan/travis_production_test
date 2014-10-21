@@ -1,8 +1,11 @@
-language: go
+language: ruby
+
+services:
+  - mongodb
+
 
 install:
-  - lsb_release -a
-  - gvm list
-  
-script:
   - true
+
+script:
+  - mongo --version
