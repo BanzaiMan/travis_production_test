@@ -1,11 +1,10 @@
 language: ruby
 
-services:
-  - mongodb
-
+os:
+  - osx
 
 install:
   - true
 
 script:
-  - mongo --version
+  - echo $JAVA_HOME
