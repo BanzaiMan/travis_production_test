@@ -1,4 +1,7 @@
 language: android
+
+sudo: false
+
 android:
   components:
     - build-tools-19.1.0
