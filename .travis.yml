@@ -2,4 +2,6 @@ language: ruby
 
 install: true
 
-script: zdump -v Pacific/Fiji | grep 2014
+script:
+  - dpkg --list | grep tzdata
+  - zdump -v Pacific/Fiji | grep 2014
