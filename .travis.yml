@@ -14,4 +14,4 @@ android:
     - android-sdk-license-bcbbd656
     - .*intel.+
 
-script: true
+script: android list sdk
