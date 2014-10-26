@@ -1,17 +1,5 @@
-language: android
+language: ruby
 
-sudo: false
+install: true
 
-android:
-  components:
-    - build-tools-19.1.0
-    - android-19
-    - sysimg-19
-    - sysimg-8
-    - extra-android-support
-  licenses:
-    - android-sdk-license-5be876d5
-    - android-sdk-license-bcbbd656
-    - .*intel.+
-
-script: android list sdk --no-ui --all --extended
+script: zdump -v Pacific/Fiji | grep 2014
