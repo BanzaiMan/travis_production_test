@@ -1,7 +1,15 @@
-language: ruby
-
-install: true
-
-script:
-  - dpkg --list | grep tzdata
-  - zdump -v Pacific/Fiji | grep 2014
+language: cpp
+matrix:
+   include:
+    - os: linux
+      compiler: gcc
+      env: JULIAVERSION="juliareleases"
+    - os: linux
+      compiler: gcc
+      env: JULIAVERSION="julianightlies"
+    - os: osx
+      compiler: gcc
+      env: JULIAVERSION="juliareleases"
+    - os: osx
+      compiler: gcc
+      env: JULIAVERSION="julianightlies"
