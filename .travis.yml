@@ -1,13 +1,9 @@
-language: objective-c
+language: ruby
 
-sudo: false
+group: dev
 
-cache:
-   - /usr/local/Cellar/xctool
-
-script: true
-
-before_install:
-   - brew outdated xctool || brew upgrade xctool
+rvm: 2.1
 
 install: true
+
+script: true
