@@ -1,5 +1,7 @@
 language: ruby
 
+sudo: false
+
 group: dev
 
 rvm: 2.1
