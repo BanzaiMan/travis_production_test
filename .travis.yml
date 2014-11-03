@@ -10,3 +10,9 @@ install: true
 
 script: true
 
+deploy:
+  provider: s3
+
+after_deploy:
+  - TRAVIS_TEST_RESULT=$?
+
