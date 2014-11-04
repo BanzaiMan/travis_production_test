@@ -1,18 +1,11 @@
 language: ruby
 
-sudo: false
-
-group: dev
-
-rvm: 2.1
+rvm:
+  - 2.1
+  - 2.2
 
 install: true
 
 script: true
 
-deploy:
-  provider: s3
-
-after_deploy:
-  - TRAVIS_TEST_RESULT=$?
 
