@@ -1,5 +1,7 @@
 language: android
 
+group: dev
+
 install: true
 
 script: true
