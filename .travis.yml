@@ -1,9 +1,5 @@
-language: php
+language: objective-c
 
-php: hhvm
-  
-install: true
+install: echo $JAVA_HOME
 
-script:
-  - ls -l /etc/hhvm/php.ini
-  - cat /etc/hhvm/php.ini
+script: true
