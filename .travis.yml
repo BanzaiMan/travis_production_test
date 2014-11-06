@@ -4,4 +4,6 @@ php: hhvm
   
 install: true
 
-script: cat /etc/hhvm/php.ini
+script:
+  - ls -l /etc/hhvm/php.ini
+  - cat /etc/hhvm/php.ini
