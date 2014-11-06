@@ -1,9 +1,7 @@
-language: ruby
+language: php
 
-rvm:
-  - 2.1.1-clang
+php: hhvm
   
 install: true
 
-script: true
-
+script: cat /etc/hhvm/php.ini
