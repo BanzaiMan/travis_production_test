@@ -1,7 +1,8 @@
-language: android
+language: ruby
 
-group: dev
-
+rvm:
+  - 2.1.1-clang
+  
 install: true
 
 script: true
