@@ -1,7 +1,9 @@
-language: objective-c
+language: ruby
 
-install: echo $JAVA_HOME
+addons:
+  firefox: 29.0
+
+install: true
 
 script: 
-  - java -version
-  - mvn -version
+  - firefox --version
