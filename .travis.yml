@@ -9,3 +9,4 @@ install: true
 
 script: 
   - true
+  - pwd
