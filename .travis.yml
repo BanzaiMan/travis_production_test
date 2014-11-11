@@ -1,6 +1,11 @@
 language: ruby
 
+sudo: false
+
+env:
+  - TRAVIS_BUILD_DIR=/
+
 install: true
 
 script: 
-  - ls -lad ~
+  - true
