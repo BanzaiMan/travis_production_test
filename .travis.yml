@@ -3,7 +3,7 @@ language: android
 install:
   - wget http://dl.google.com/android/ndk/android-ndk-r10c-linux-x86_64.bin
   - chmod 0755 android-ndk-r10c-linux-x86_64.bin
-  - ./android-ndk-r10c-linux-x86_64.bin
+  - ./android-ndk-r10c-linux-x86_64.bin >/dev/null
 
 script: 
   - df -h
