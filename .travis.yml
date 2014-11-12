@@ -1,6 +1,10 @@
-language: ruby
+language: android
 
-install: true
+install:
+  - wget http://dl.google.com/android/ndk/android-ndk-r10c-linux-x86_64.bin
+  - chmod 0755 android-ndk-r10c-linux-x86_64.bin
+  - ./android-ndk-r10c-linux-x86_64.bin
 
 script: 
-  - cat /etc/memcached.conf
+  - df -h
+  - du -hs /usr/local/android*/*
