@@ -8,3 +8,4 @@ install:
 script: 
   - df -h
   - du -hs /usr/local/android*/*
+  - du -hs andorid*/*
