@@ -1,13 +1,7 @@
-language: android
-
-sudo: false
+language: ruby
 
 install:
-  - wget http://dl.google.com/android/ndk/android-ndk-r10c-linux-x86_64.bin
-  - chmod 0755 android-ndk-r10c-linux-x86_64.bin
-  - ./android-ndk-r10c-linux-x86_64.bin >/dev/null
+  - sudo ifconfig -a
 
 script: 
-  - df -h
-  - du -hs /usr/local/android*/*
-  - du -hs android*/*
+  - true
