@@ -1,9 +1,14 @@
 language: ruby
 
-sudo: false
+dist: trusty
+
+group: dev
+
+rvm:
+  - "2.1.5"
 
 install:
-  - ip -6 addr show
+  - true
 
 script: 
   - true
