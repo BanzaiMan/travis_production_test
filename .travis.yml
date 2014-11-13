@@ -4,9 +4,6 @@ dist: trusty
 
 group: dev
 
-rvm:
-  - "2.1.5"
-
 install:
   - lsb_release -a
   - ls -l /usr/share/travis/system_info || true
