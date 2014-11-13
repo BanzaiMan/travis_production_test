@@ -1,11 +1,14 @@
 language: ruby
 
-sudo: false
-
 addons:
   firefox: "30.0"
 
+before_install:
+  - sudo ln -sf $HOME/firefox-30.0/firefox/firefox /usr/local/bin/firefox
+
 install:
   - which firefox
+  - firefox --version
+  
 script: 
   - true
