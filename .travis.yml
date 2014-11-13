@@ -1,12 +1,11 @@
 language: ruby
 
-dist: trusty
+sudo: false
 
-group: dev
+addons:
+  firefox: "30.0"
 
 install:
-  - lsb_release -a
-  - ls -l /usr/share/travis/system_info || true
-
+  - which firefox
 script: 
   - true
