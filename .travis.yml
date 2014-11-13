@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 install:
-  - ifconfig -a
+  - ip -6 addr show
 
 script: 
   - true
