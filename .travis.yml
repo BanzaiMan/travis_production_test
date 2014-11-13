@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 install:
-  - sudo ifconfig -a
+  - ifconfig -a
 
 script: 
   - true
