@@ -1,11 +1,9 @@
 language: ruby
 
-dist: trusty
-
-group: dev
-
 install:
-  - true
+  - echo "\033[34;1mBlue!\033[0m"
+  - echo "\033[35;1mMagenta!\033[0m"
+  - echo "\033[36;1mCyan!\033[0m"
 
 script: 
   - true
