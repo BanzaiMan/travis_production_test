@@ -1,12 +1,7 @@
-language: ruby
-
-sudo: false
-
-os:
-  - osx
+language: objective-c
 
 install:
   - true
   
 script: 
-  - true
+  - travis_retry false
