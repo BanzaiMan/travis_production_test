@@ -1,14 +1,11 @@
 language: ruby
 
-addons:
-  firefox: "30.0"
+dist: trusty
 
-before_install:
-  - sudo ln -sf $HOME/firefox-30.0/firefox/firefox /usr/local/bin/firefox
+group: dev
 
 install:
-  - which firefox
-  - firefox --version
-  
+  - true
+
 script: 
   - true
