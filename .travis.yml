@@ -1,19 +1,8 @@
-language: c
+language: ruby
 
-compiler:
-  - gcc
-  - clang
-matrix:
-  include:
-    - compiler: clang
-      env: SANITIZE=address
-    - compiler: clang
-      env: SANITIZE=undefined
-  allow_failures:
-    - compiler: clang
-      env: SANITIZE=address
-    - compiler: clang
-      env: SANITIZE=undefined
+group: dev
+
+dist: trusty
 
 install: true
 script: true
