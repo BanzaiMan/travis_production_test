@@ -1,7 +1,8 @@
-language: objective-c
+language: c
 
 install:
-  - true
+  - which clang
+  - which gcc
   
 script: 
-  - travis_retry false
+  - true
