@@ -1,11 +1,19 @@
-language: ruby
+language: c
 
+compiler:
+  - gcc
+  - clang
 matrix:
   include:
-    - rvm: 1.9.2
-      gemfile: .gemfiles/Gemfile.activerecord-3.2
-    - rvm: 1.9.3
-      gemfile: Gemfile
+    - compiler: clang
+      env: SANITIZE=address
+    - compiler: clang
+      env: SANITIZE=undefined
+  allow_failures:
+    - compiler: clang
+      env: SANITIZE=address
+    - compiler: clang
+      env: SANITIZE=undefined
 
 install: true
 script: true
