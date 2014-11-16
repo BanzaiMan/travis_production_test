@@ -1,4 +1,9 @@
-language: ruby
+language: php
+
+php:
+  - 5.5
+  - 5.6
+  - hhvm
 
 group: dev
 
