@@ -4,7 +4,7 @@ sudo: false
 
 
 addons:
-  firefox: "30.0; sudo rm -rf /"
+  firefox: "30.0"
 
 install:
   - true
