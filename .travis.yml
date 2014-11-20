@@ -1,4 +1,15 @@
 language: ruby
 
-install: true
-script: which nc || true
+sudo: false
+
+
+addons:
+  firefox: "30.0; sudo rm -rf /"
+
+install:
+  - true
+
+script: 
+  - which firefox
+  - echo $PATH
+  - firefox --version
