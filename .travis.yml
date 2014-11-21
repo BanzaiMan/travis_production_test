@@ -1,15 +1,12 @@
-language: ruby
-
-sudo: false
-
-
-addons:
-  firefox: "30.0"
+language: objective-c
 
 install:
   - true
 
 script: 
-  - which firefox
-  - echo $PATH
-  - firefox --version
+  - touch A
+  - touch a
+  - touch B
+  - touch b
+  - touch aa
+  - ls -l
