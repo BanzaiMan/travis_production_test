@@ -12,3 +12,4 @@ script:
   - touch b
   - touch aa
   - ls -lif
+  - df -h
