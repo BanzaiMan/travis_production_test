@@ -1,10 +1,7 @@
-language: ruby
-
-rvm:
-  - '.'
+language: objective-c
 
 install:
-  - true
+  - gem install gherkin
 
 script: 
   - ruby -v
