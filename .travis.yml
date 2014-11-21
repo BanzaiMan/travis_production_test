@@ -4,10 +4,4 @@ install:
   - true
 
 script: 
-  - touch A
-  - touch a
-  - touch B
-  - touch b
-  - touch aa
-  - ls -lif
-  - df -h
+  - ruby -v
