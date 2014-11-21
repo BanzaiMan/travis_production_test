@@ -1,4 +1,4 @@
-language: objective-c
+language: ruby
 
 install:
   - true
@@ -9,4 +9,4 @@ script:
   - touch B
   - touch b
   - touch aa
-  - ls -l
+  - ls -lif
