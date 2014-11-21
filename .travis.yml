@@ -1,5 +1,8 @@
 language: ruby
 
+rvm:
+  - '.'
+
 install:
   - true
 
