@@ -1,7 +1,16 @@
 language: objective-c
 
-install:
-  - gem install gherkin
+sudo: false
+
+before_install:
+  - touch z
+  - touch Z
+  - touch a
+  - touch AA
+  - touch X
+  - touch C
+  - ls -lif
 
 script: 
-  - ruby -v
+  - true
+  
