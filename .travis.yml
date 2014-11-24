@@ -1,5 +1,14 @@
-language: php
+language: ruby
 sudo: false
-php:
-  - hhvm-nightly
-  
+
+addons:
+  - firefox: "32.0"
+  - postgresql: "9.3"
+
+install:
+  - true
+
+script:
+  - which firefox
+  - firefox --version
+  - psql --version
