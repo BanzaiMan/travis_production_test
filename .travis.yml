@@ -1,9 +1,5 @@
-language: erlang
-
-group: dev
-
-before_install:
-  - true
+language: php
+sudo: false
+php:
+  - hhvm-nightly
   
-script: 
-  - elixir --version
