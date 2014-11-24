@@ -1,16 +1,9 @@
-language: objective-c
+language: erlang
 
-sudo: false
+group: dev
 
 before_install:
-  - touch z
-  - touch Z
-  - touch a
-  - touch AA
-  - touch X
-  - touch C
-  - ls -lif
-
-script: 
   - true
   
+script: 
+  - elixir --version
