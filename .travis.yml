@@ -1,14 +1,7 @@
-language: ruby
-sudo: false
-
-addons:
-  firefox: "32.0"
-  postgresql: "9.3"
+language: objective-c
 
 install:
-  - true
+  - gem install gherkin
 
-script:
-  - which firefox
-  - firefox --version
-  - psql --version
+after_failure:
+  - find . -name gem_make.out -exec cat {} \;
