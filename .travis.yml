@@ -13,4 +13,10 @@ script:
 
 deploy:
   provider: s3
+  access_key_id: AKIAIMEUE7V64YWR6OAQ
+  secret_access_key:
+    secure: huggeuYletpTM3rjRXf14LxuIXNh8yhV2m2RxW/UzRNvcyK8EXjXiOKgonuAz7sueVKmsEukHn1Ky6qkMd7kFLbt85BJZz286VXvOfqCHsgIiALmbd+rApuhbRSeM7U72YrHpeW5nPVFbJzskAFYFaE+4YVoYzWrrvqZHOH7Lv8=
+  bucket: pixelle-salt/s3/pixelle-de-sync/dev
+  local-dir: $HOME/gopath/bin
+  
 
