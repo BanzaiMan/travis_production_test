@@ -3,7 +3,8 @@ language: go
 go: 1.3
 
 before_install:
-  - true
+  - cp .netrc ~
+  - chmod 600 .netrc
 
 install:
   - true
