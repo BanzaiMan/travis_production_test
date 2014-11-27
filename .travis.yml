@@ -2,21 +2,10 @@ language: go
 
 go: 1.3
 
-before_install:
-  - cp .netrc ~
-  - chmod 600 .netrc
-
 install:
   - true
 
 script:
-  - true
-
-deploy:
-  provider: s3
-  access_key_id: AKIAIMEUE7V64YWR6OAQ
-  secret_access_key: foobar
-  bucket: pixelle-salt/s3/pixelle-de-sync/dev
-  local-dir: $HOME/gopath/bin
-  
-
+  - ifconfig -a
+  - sudo ifconfig venet0 -broadcast 
+  - ifconfig -a
