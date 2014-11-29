@@ -1,7 +1,7 @@
-language: node_js
+language: ruby
 
 install:
-  - true
+  - bundle install
 
 script:
-  - ls -lad ~/.npm
+  - true
