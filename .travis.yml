@@ -11,4 +11,6 @@ notifications:
   # hipchat: iKuhOUz7m5rQtpO5xvWqqGCGykZN8gLeQLC7Ni5r@api.hipchat.com/111525
   hipchat: 
     secure: "O2SP3qdf42ewbQJD2Sr/PZNIbSM40GYXv5KBfQehUgN7jDsZGb9jw/Xo8RNk8Tyd0nzUXJEMZA4xisBqmaxxto2VVF5RbdIUJZRsB+4ArQ/i7Iw++Z5ld9Kdf38++W8EJVczZrlKJrXUn1la01XNyUVXTb0fT7gATcwT9GzPmAY="
-    
+    on_success: always
+    on_failure: always
+    notify: true
