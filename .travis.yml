@@ -3,7 +3,8 @@ language: objective-c
 install: true
 
 script:
-  - mdls -name kMDItemVersion /Applications/Utilities/XQuartz.app
+  - ls -l /Applications/Utilities
+  - mdls -name kMDItemVersion /Applications/Utilities/*.app
 
 notifications:
   # hipchat: a21b28b2863acbee3ccb17da36a173
