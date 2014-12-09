@@ -1,4 +1,6 @@
-language: ruby
+language: android
+
+sudo: false
 
 install: true
 
