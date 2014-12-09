@@ -1,10 +1,9 @@
-language: objective-c
+language: ruby
 
 install: true
 
 script:
-  - ls -l /Applications/Utilities
-  - mdls -name kMDItemVersion /Applications/Utilities/*.app
+  - true
 
 notifications:
   # hipchat: a21b28b2863acbee3ccb17da36a173
