@@ -5,7 +5,8 @@ sudo: false
 install: true
 
 script:
-  - true
+  - grep Pkg.Revision /usr/local/android-sdk/tools/source.properties
+  - android list sdk --no-ui --all --extended | awk -F\" '/^id/ {print $2}' | sort
 
 notifications:
   # hipchat: a21b28b2863acbee3ccb17da36a173
