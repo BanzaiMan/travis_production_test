@@ -5,7 +5,11 @@ sudo: false
 install: true
 
 script:
+  - touch foobarbaz
   - rvm list
+
+after_success:
+  - git status
 
 notifications:
   # hipchat: a21b28b2863acbee3ccb17da36a173
