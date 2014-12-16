@@ -1,12 +1,11 @@
-language: julia
+language: python
 
 sudo: false
 
 install: true
 
 script:
-  - touch foobarbaz
-  - rvm list
+  - true
 
 after_success:
   - git status
