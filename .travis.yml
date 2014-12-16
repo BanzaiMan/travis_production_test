@@ -1,9 +1,9 @@
 language: python
 
-sudo: false
-
-install: true
-
+python:
+  - '2.7'
+  - '2.7.9'
+  
 script:
   - true
 
