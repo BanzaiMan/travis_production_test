@@ -8,6 +8,7 @@ script:
   - free -m
   - sudo service mysql stop
   - sudo service postgresql stop
+  - sudo umount /var/ramfs
   - df -h
   - free -m
 
