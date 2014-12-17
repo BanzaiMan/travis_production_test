@@ -6,6 +6,10 @@ install:
 script:
   - df -h
   - free -m
+  - sudo service mysql stop
+  - sudo service postgresql stop
+  - df -h
+  - free -m
 
 after_success:
   - git status
