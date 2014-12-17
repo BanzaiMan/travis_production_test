@@ -1,13 +1,11 @@
 language: python
 
-sudo: false
-
 before_install:
   - free && sync
-  - sudo sh -c 'echo 1 >/proc/sys/vm/drop_caches'
-  - sudo sh -c 'echo 2 >/proc/sys/vm/drop_caches'
-  - sudo sh -c 'echo 3 >/proc/sys/vm/drop_caches'
-
+  - echo 1 | sudo tee /proc/sys/vm/drop_caches
+  - echo 2 | sudo tee /proc/sys/vm/drop_caches
+  - echo 3 | sudo tee /proc/sys/vm/drop_caches
+  
 install:
   - true
 
