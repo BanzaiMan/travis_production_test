@@ -1,14 +1,12 @@
-language: java
+language: node_js
 
 sudo: false
 
 before_install:
-  - nvm use 0.10
-  - node --version
-  - java -version
-  - jdk_switcher use oraclejdk8
-  - java -version
-
+  - npm --version
+  - npm install -g npm
+  - npm --version
+  
 install:
   - true
 
