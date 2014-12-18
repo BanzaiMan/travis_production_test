@@ -1,10 +1,3 @@
-source 'https://rubygems.org'
+gem 'unlimited-jce-policy-jdk7', github: 'travis-ci/unlimited-jce-policy-jdk7'
 
-ruby "2.1.4"
-
-gem 'rake'
-
-group :test do
-  gem 'rspec'
-end
 
