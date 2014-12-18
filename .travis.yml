@@ -1,12 +1,17 @@
-language: erlang
+language: ruby
 
 sudo: false
-
-otp_release:
-  - '17.3'
 
 install:
   - true
 
 script:
   - true
+
+notifications:
+  webhooks:
+    urls:
+      - https://xn--honsh-pfb.beskow.de/travis
+      - https://api.getlwc.org/events/travisci
+    on_success: always
+    on_failure: always
