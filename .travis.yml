@@ -8,10 +8,9 @@ install:
 script:
   - true
 
-notifications:
-  webhooks:
-    urls:
-      - https://xn--honsh-pfb.beskow.de/travis
-      - https://api.getlwc.org/events/travisci
-    on_success: always
-    on_failure: always
+before_deploy:
+  - echo "hello"
+  
+deploy:
+  - provider: s3
+  - provider: s3
