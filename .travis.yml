@@ -1,6 +1,11 @@
-language: ruby
+language: node_js
 
 sudo: false
+
+before_install:
+  - java -version
+  - jdk_switcher use oraclejdk8
+  - java -version
 
 install:
   - true
@@ -8,9 +13,4 @@ install:
 script:
   - true
 
-before_deploy:
-  - echo "hello"
-  
-deploy:
-  - provider: s3
-  - provider: s3
+\
