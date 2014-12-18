@@ -1,8 +1,10 @@
-language: node_js
+language: java
 
 sudo: false
 
 before_install:
+  - nvm use 0.10
+  - node --version
   - java -version
   - jdk_switcher use oraclejdk8
   - java -version
