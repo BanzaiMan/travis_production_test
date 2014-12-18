@@ -4,8 +4,5 @@ rvm: jruby
 
 sudo: false
 
-install:
-  - true
-
 script:
   - bundle exec ./test.rb
