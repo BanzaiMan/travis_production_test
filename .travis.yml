@@ -1,23 +1,10 @@
-language: python
+language: erlang
 
-before_install:
-  - free && sync
-  - echo 1 | sudo tee -a /proc/sys/vm/drop_caches
-  - echo 2 | sudo tee -a /proc/sys/vm/drop_caches
-  - echo 3 | sudo tee -a /proc/sys/vm/drop_caches
-  
+otp_release:
+  - '17.3'
+
 install:
   - true
 
 script:
-  - df -h
-  - free -m
-  - sudo service mysql stop
-  - sudo service postgresql stop
-  - sudo umount /var/ramfs
-  - df -h
-  - free -m
-
-after_success:
-  - git status
-
+  - true
