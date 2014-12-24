@@ -2,6 +2,9 @@ language: ruby
 
 sudo: false
 
+services:
+  - mongodb
+
 install:
   - true
 
