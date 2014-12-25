@@ -1,9 +1,10 @@
 language: ruby
 
-rvm:
-  - '2.2.0'
-
 sudo: false
+
+before_install:
+  - rvm get stable
+  - rvm use 2.2.0
 
 install:
   - true
