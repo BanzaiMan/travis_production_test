@@ -5,7 +5,7 @@ sudo: false
 before_install:
   - rvm get stable
   - rvm alias delete 2.2.0
-  - rvm use 2.2.0
+  - rvm use 2.2.0 --install
 
 install:
   - true
