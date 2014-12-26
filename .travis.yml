@@ -1,11 +1,9 @@
-language: ruby
+language: php
 
 sudo: false
 
-before_install:
-  - cat /etc/resolv.conf
-  - ruby -rresolv -e 'resolver=Resolv::DNS.new(); puts resolver.getaddress("www.cs.utah.edu")'
-  - wget http://www.cs.utah.edu/plt/snapshots/current/installers/min-racket-current-x86_64-linux-precise.sh
+php:
+  - hhvm-nightly
 
 install:
   - true
