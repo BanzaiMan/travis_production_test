@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 before_install:
-  - traceroute www.cs.utha.edu
+  - ruby -rresolv -e 'resolver=Resolv::DNS.new(:nameserver => ["8.8.8.8"]); puts resolver.getaddress("www.cs.utah.edu")'
   - curl -L -o installer.sh http://www.cs.utah.edu/plt/snapshots/current/installers/min-racket-current-x86_64-linux-precise.sh
 
 install:
