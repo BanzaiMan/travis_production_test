@@ -3,8 +3,7 @@ language: ruby
 sudo: false
 
 before_install:
-  - rvm alias delete 2.2.0
-  - rvm use 2.2.0 --install
+  - curl -L -o installer.sh http://www.cs.utah.edu/plt/snapshots/current/installers/min-racket-current-x86_64-linux-precise.sh
 
 install:
   - true
