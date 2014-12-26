@@ -1,9 +1,9 @@
-language: php
+language: python
 
 sudo: false
 
-php:
-  - hhvm-nightly
+python:
+  - 3.4
 
 install:
   - true
