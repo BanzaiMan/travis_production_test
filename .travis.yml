@@ -6,7 +6,7 @@ python:
   - 3.4
 
 install:
-  - true
+  - cat /etc/hosts
 
 script:
   - true
