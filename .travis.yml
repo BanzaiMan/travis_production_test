@@ -1,7 +1,7 @@
 language: ruby
 
 rvm:
-  - jruby-19mode
+  - jruby-1.7.18
   - jruby
 
 install:
