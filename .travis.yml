@@ -3,10 +3,11 @@ language: ruby
 sudo: false
 
 rvm:
-  - 2.2
+  - jruby-19mode
+  - jruby
 
 install:
-  - cat /etc/hosts
+  - rvm alias list
 
 script:
   - true
