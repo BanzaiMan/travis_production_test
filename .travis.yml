@@ -1,7 +1,5 @@
 language: ruby
 
-sudo: false
-
 rvm:
   - jruby-19mode
   - jruby
