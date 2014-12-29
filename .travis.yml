@@ -4,8 +4,12 @@ rvm:
   - jruby-1.7.18
   - jruby
 
+before_install:
+  - rvm uninstall jruby
+  - rvm isntall jruby-1.7.18
+  - rvm alias create jruby jruby-1.7.18
 install:
   - rvm alias list
 
 script:
-  - true
+  - ruby --version
