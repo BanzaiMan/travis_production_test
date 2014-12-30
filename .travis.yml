@@ -1,9 +1,3 @@
-language: Java
+language: Scala
 
 sudo: false
-
-install:
-  - true
-
-script:
-  - true
