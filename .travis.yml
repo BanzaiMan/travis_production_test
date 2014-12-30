@@ -10,7 +10,7 @@ env:
   - CUSTOM_RUBY_VERSION=2.2.0
 
 before_install:
-  - rvm use $CUSTOM_RUBY_VERSION
+  - rvm use $CUSTOM_RUBY_VERSION --install
   - ruby --version
 
 script:
