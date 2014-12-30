@@ -1,10 +1,17 @@
-language: python
+language: php
 
 sudo: false
 
-python:
-  - pypy
+php:
+  - 5.6
+  - 5.5
+env:
+  - CUSTOM_RUBY_VERSION=2.1.5
+  - CUSTOM_RUBY_VERSION=2.2.0
+
+before_install:
+  - rvm use $CUSTOM_RUBY_VERSION
+  - ruby --version
 
 script:
-  - ls -l /home/travis/virtualenv/pypy-2.4.0/
-  - ls -l /home/travis/virtualenv/pypy-2.4.0/include
+  - dpkg -l | grep libicu-dev
