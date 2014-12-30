@@ -4,7 +4,8 @@ sudo: false
 
 install: true
 
-script: true
+script:
+  - touch thisfileandthat
 
 deploy:
   edge: true
