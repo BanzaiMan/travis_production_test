@@ -1,5 +1,7 @@
 language: Java
 
+sudo: false
+
 install:
   - true
 
