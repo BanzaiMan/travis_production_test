@@ -1,3 +1,10 @@
-language: scala
+language: python
 
 sudo: false
+
+python:
+  - pypy
+
+script:
+  - ls -l /home/travis/virtualenv/pypy-2.4.0/
+  - ls -l /home/travis/virtualenv/pypy-2.4.0/include
