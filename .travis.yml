@@ -1,2 +1,4 @@
-language: php
+language: ruby
+
+script: true
 
