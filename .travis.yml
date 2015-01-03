@@ -1,4 +1,5 @@
-language: ruby
+language: go
 
-script: true
+go:
+  - tip
 
