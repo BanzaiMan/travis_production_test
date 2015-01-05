@@ -5,5 +5,6 @@ install:
 
 script:
   - dpkg -l | grep ping || sudo apt-get install iputils-ping
-  - ls -l `which ping` || true
-
+  - sudo chmod -s `which ping`
+  - ls -l `which ping`
+  - ping -c 5 google.com
