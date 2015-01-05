@@ -1,5 +1,11 @@
 language: go
 
-go:
-  - tip
+sudo: false
+
+install:
+  - true
+
+script:
+  - dpkg -l | grep ping || true
+  - ls -l `which ping` || true
 
