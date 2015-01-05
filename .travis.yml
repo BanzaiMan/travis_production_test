@@ -1,11 +1,9 @@
 language: go
 
-sudo: false
-
 install:
   - true
 
 script:
-  - dpkg -l | grep ping || true
+  - dpkg -l | grep ping || sudo apt-get install iputils-ping
   - ls -l `which ping` || true
 
