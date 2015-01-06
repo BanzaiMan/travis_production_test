@@ -1,10 +1,13 @@
-language: go
+language: ruby
+
+rvm:
+  - jruby
+  - jruby-1.7.18-d18
+
+group: dev
 
 install:
   - true
 
 script:
-  - dpkg -l | grep ping || sudo apt-get install iputils-ping
-  - sudo chmod -s `which ping`
-  - ls -l `which ping`
-  - ping -c 5 google.com
+  - true
