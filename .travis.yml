@@ -1,4 +1,4 @@
-language: ruby
+language: objective-c
 
 rvm:
   - 2.1.5
@@ -7,7 +7,7 @@ rvm:
 os: osx
 
 install:
-  - rm -f foo* FOO*
+  - rm -rf foo* FOO*
   - touch foo FOO foo.txt foo.TXT FOO.txt FOO.TXT
   - ls -l foo* FOO*
 
