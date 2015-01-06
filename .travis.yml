@@ -1,15 +1,13 @@
-language: objective-c
+language: ruby
 
 rvm:
   - 2.1.5
   - 2.2.0
 
-os: osx
-
 install:
   - rm -rf foo* FOO*
   - touch foo FOO foo.txt foo.TXT FOO.txt FOO.TXT
-  - ls -l foo* FOO*
+  - ls -l foo* FOO* || true
 
 script:
   - ruby -ve 'Dir.glob("*.txt")'
