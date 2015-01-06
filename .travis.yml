@@ -1,4 +1,4 @@
-language: objective-c
+language: ruby
 
 rvm:
   - 2.1.5
@@ -7,7 +7,7 @@ rvm:
 install:
   - rm -rf foo* FOO*
   - touch foo FOO FOO.txt FOO.TXT foo.txt Foo.TxT
-  - echo "File system is case-insensitive"
+  - echo "File system is case-sensitive"
   - ls -l foo* FOO*
 
 script:
