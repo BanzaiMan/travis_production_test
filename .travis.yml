@@ -1,13 +1,17 @@
 language: ruby
 
 rvm:
-  - jruby
-  - jruby-1.7.18-d18
+  - 2.1.5
+  - 2.2.0
 
-group: dev
+os: osx
 
 install:
-  - true
+  - rm -f foo* FOO*
+  - touch foo FOO foo.txt foo.TXT FOO.txt FOO.TXT
+  - ls -l foo* FOO*
 
 script:
-  - true
+  - ruby -ve 'Dir.glob("*.txt")'
+  - ruby -ve 'Dir.glob("foo.txt")'
+  - ruby -ve 'Dir.glob("FOO.txt")'
