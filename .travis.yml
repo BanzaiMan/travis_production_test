@@ -10,6 +10,6 @@ install:
   - ls -l foo* FOO* || true
 
 script:
-  - ruby -ve 'Dir.glob("*.txt")'
-  - ruby -ve 'Dir.glob("foo.txt")'
-  - ruby -ve 'Dir.glob("FOO.txt")'
+  - ruby -ve 'p Dir.glob("*.txt")'
+  - ruby -ve 'p Dir.glob("foo.txt")'
+  - ruby -ve 'p Dir.glob("FOO.txt")'
