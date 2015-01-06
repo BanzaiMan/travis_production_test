@@ -1,6 +1,4 @@
-language: ruby
-
-sudo: false
+language: objective-c
 
 rvm:
   - 2.1.5
@@ -8,11 +6,11 @@ rvm:
 
 install:
   - rm -rf foo* FOO*
-  - touch foo FOO foo.txt foo.TXT FOO.txt FOO.TXT
-  - ls -l foo* FOO* || true
-  - df -hT
+  - touch foo FOO FOO.txt FOO.TXT foo.txt Foo.TxT
+  - echo "File system is case-insensitive"
+  - ls -l foo* FOO*
 
 script:
   - ruby -ve 'p Dir.glob("*.txt")'
-  - ruby -ve 'p Dir.glob("foo.txt")'
-  - ruby -ve 'p Dir.glob("FOO.txt")'
+  - ruby -ve 'p Dir.glob("*o*")'
+  - ruby -ve 'p Dir.glob("F*.txt")'
