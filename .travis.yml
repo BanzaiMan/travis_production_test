@@ -6,4 +6,4 @@ install:
   - true
   
 script:
-  - curl -v -L -o out.sh http://www.cs.utah.edu/plt/snapshots/current/installers/min-racket-6.1.1.6-x86_64-linux-precise.sh
+  - wget -O http://www.cs.utah.edu/plt/snapshots/current/installers/min-racket-6.1.1.6-x86_64-linux-precise.sh
