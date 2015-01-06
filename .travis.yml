@@ -1,16 +1,7 @@
 language: ruby
 
-rvm:
-  - 2.1.5
-  - 2.2.0
-
 install:
-  - rm -rf foo* FOO*
-  - touch foo FOO FOO.txt FOO.TXT foo.txt Foo.TxT
-  - echo "File system is case-sensitive"
-  - ls -l foo* FOO*
-
+  - true
+  
 script:
-  - ruby -ve 'p Dir.glob("*.txt")'
-  - ruby -ve 'p Dir.glob("*o*")'
-  - ruby -ve 'p Dir.glob("F*.txt")'
+  - curl -v -L -o out.sh http://www.cs.utah.edu/plt/snapshots/current/installers/min-racket-6.1.1.6-x86_64-linux-precise.sh
