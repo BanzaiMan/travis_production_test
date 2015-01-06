@@ -8,6 +8,7 @@ install:
   - rm -rf foo* FOO*
   - touch foo FOO foo.txt foo.TXT FOO.txt FOO.TXT
   - ls -l foo* FOO* || true
+  - df -hT
 
 script:
   - ruby -ve 'p Dir.glob("*.txt")'
