@@ -1,9 +1,13 @@
 language: ruby
 
+rvm:
+  - jruby
+  - jruby-18mode
+
 sudo: false
 
 install:
   - true
   
 script:
-  - wget -O out.sh http://www.cs.utah.edu/plt/snapshots/current/installers/min-racket-6.1.1.6-x86_64-linux-precise.sh
+  - true
