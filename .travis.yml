@@ -6,6 +6,9 @@ rvm:
 
 sudo: false
 
+before_install:
+  - openssl aes-256-cbc -K $encrypted_5880cf525281_key -iv $encrypted_5880cf525281_iv -in foo.enc -out foo -d
+
 install:
   - true
   
