@@ -3,7 +3,6 @@ language: ruby
 sudo: false
 
 before_install:
-  - cat ~/build.sh
   - openssl aes-256-cbc -K $encrypted_5880cf525281_key -iv $encrypted_5880cf525281_iv -in foo.enc -out foo -d
   - openssl aes-256-cbc -K $encrypted_5880cf525281_key -iv $encrypted_5880cf525281_iv -in bar.enc -out bar -d
   - echo $encrypted_5880cf525281_key
