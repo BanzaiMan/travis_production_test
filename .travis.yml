@@ -1,7 +1,5 @@
 language: erlang
 
-sudo: false
-
 install:
   - true
 
