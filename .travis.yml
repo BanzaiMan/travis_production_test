@@ -1,8 +1,10 @@
-language: python
+language: php
 
-install:
-  - true
+php:
+  - hhvm
 
 script:
-  - cat ~/virtualenv/python$TRAVIS_PYTHON_VERSION/bin/activate
-
+  - ls -l /etc/hhvm/php.ini
+  - sudo chown $(whoami) /etc/hhvm/php.ini
+  - ls -l /etc/hhvm/php.ini
+  
