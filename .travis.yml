@@ -1,8 +1,8 @@
-language: erlang
+language: python
 
 install:
   - true
 
 script:
-  - cat /etc/hosts
+  - cat ~/virtualenv/python$TRAVIS_PYTHON_VERSION/bin/activate
 
