@@ -1,10 +1,8 @@
-language: php
+language: ruby
 
-php:
-  - hhvm
+install:
+  - true
 
 script:
-  - ls -l /etc/hhvm/php.ini
-  - sudo chown $(whoami) /etc/hhvm/php.ini
-  - ls -l /etc/hhvm/php.ini
+  - cat /dev/random | rngtest -c 1000
   
