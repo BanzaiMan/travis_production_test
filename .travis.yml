@@ -4,5 +4,8 @@ install:
   - true
 
 script:
-  - cat /dev/random | rngtest -c 1000
-  
+  - false
+
+notifications:
+  email:
+    notifications@travis-ci.org
