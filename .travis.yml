@@ -1,8 +1,9 @@
 language: ruby
 
-script:
-  - false
+os: osx
 
-notifications:
-  email:
-    notifications@travis-ci.org
+script:
+  - true
+
+rvm:
+  - 2.0.0
