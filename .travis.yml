@@ -1,9 +1,6 @@
 language: ruby
-
 os: osx
-
 script:
   - true
-
 rvm:
   - 2.0.0
