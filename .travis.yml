@@ -1,4 +1,7 @@
 language: ruby
+
+sudo: false
+
 os: osx
 script:
   - true
