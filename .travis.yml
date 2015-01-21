@@ -1,6 +1,9 @@
-language: ruby
+language: java
 
 sudo: false
 
 script:
-  - false
+  - echo $JAVA_HOME
+  - jdk_switcher use oraclejdk8
+  - echo $JAVA_HOME
+  - jdk_switcher use openjdk7
