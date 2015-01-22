@@ -1,9 +1,10 @@
-language: java
+language: python
 
 sudo: false
 
-script:
-  - echo $JAVA_HOME
-  - jdk_switcher use oraclejdk8
-  - echo $JAVA_HOME
-  - jdk_switcher use openjdk7
+cache:
+  - pip
+
+before_install:
+  - pip install -U pip
+  - pip --version
