@@ -6,7 +6,6 @@ cache:
   - pip
 
 before_install:
-  - pip install -U pip
   - pip --version
 
 script:
