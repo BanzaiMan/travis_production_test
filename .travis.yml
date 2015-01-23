@@ -1,12 +1,10 @@
-language: python
+language: c
 
 sudo: false
 
-cache:
-  - pip
-
-before_install:
-  - pip --version
+addons:
+  apt_packages:
+    - graphicsmagick
 
 script:
   - true
