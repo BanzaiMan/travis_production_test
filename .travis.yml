@@ -5,6 +5,9 @@ android:
     - android-19
 sudo: false
 
+script: true
+
 cache:
   directories:
     - /usr/local/android-sdk
+
