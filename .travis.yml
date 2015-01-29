@@ -4,4 +4,7 @@ install:
   - true
 
 script:
-  - false
+  - true
+
+after_script:
+  - true
