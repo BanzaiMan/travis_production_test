@@ -4,4 +4,4 @@ install:
   - true
 
 script:
-  - true
+  - false
