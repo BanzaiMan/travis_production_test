@@ -1,4 +1,10 @@
-language: haskell
+language: dart
+
+dart:
+  - dev
+  - stable
+
+sudo: false
 
 install:
   - true
