@@ -3,6 +3,8 @@ language: elixir
 otp_releases:
   - '17.4'
 
+group: dev
+
 install:
   - true
 
