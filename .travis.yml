@@ -1,16 +1,10 @@
-language: dart
+language: elixir
 
-dart:
-  - dev
-  - stable
-
-sudo: false
+otp_releases:
+  - '17.4'
 
 install:
   - true
 
 script:
   - true
-
-after_script:
-  - find
