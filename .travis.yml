@@ -1,19 +1,10 @@
-language: ruby
+language: go
 
-rvm:
-  - 2.1.5
-  - 2.2.0
-  - 1.9.3
-  - 1.8.7
-  - jruby
+sudo: false
 
-env:
-  - FOO=bar
-  - BAR=baz
-  - BAZ=foo
-
+go:
+  - tip
 install:
-  - sleep 300
-
+  - true
 script:
   - true
