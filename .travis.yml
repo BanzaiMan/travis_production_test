@@ -1,6 +1,8 @@
-language: elixir
+language: node_js
 
-otp_release: 17.3
+node_js:
+  - iojs
 
 install: true
+
 script: true
