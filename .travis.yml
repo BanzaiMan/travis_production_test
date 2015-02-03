@@ -1,8 +1,8 @@
-language: node_js
+language: ruby
 
-node_js:
-  - iojs
+rvm:
+  - 2.1.3
 
 install: true
 
-script: true
+script: locale
