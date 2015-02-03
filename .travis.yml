@@ -1,10 +1,11 @@
-language: go
+language: ruby
 
-sudo: false
+script: false
 
-go:
-  - tip
-install:
-  - true
-script:
-  - true
+rvm:
+  - 2.2.0
+
+matrix:
+  allow_failures:
+    - rvm: 2.2.0
+  fast_finish: true
