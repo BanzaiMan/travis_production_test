@@ -1,13 +1,9 @@
 language: ruby
-
 sudo: false
-
+install: false
 script: false
-
 rvm:
   - 2.2.0
-
 matrix:
   allow_failures:
     - rvm: 2.2.0
-  fast_finish: true
