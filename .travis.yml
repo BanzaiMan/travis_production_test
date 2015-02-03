@@ -1,9 +1,6 @@
-language: ruby
-sudo: false
-install: false
-script: false
-rvm:
-  - 2.2.0
-matrix:
-  allow_failures:
-    - rvm: 2.2.0
+language: elixir
+
+otp_release: 17.3
+
+install: true
+script: true
