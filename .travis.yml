@@ -10,3 +10,4 @@ install: true
 script:
   - locale
   - git --version
+  - git --unshallow
