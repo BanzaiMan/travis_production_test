@@ -1,10 +1,9 @@
-language: elixir
+language: node_js
 
 group: dev
 
-otp_release:
-  - 17.3
-  - 17.4
+node_js:
+  - iojs
   
 install: true
 
