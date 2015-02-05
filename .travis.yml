@@ -2,7 +2,7 @@ language: elixir
 
 group: dev
 
-otp_rlease:
+otp_release:
   - 17.1
   - 17.3
   - 17.4
