@@ -3,6 +3,7 @@ language: elixir
 group: dev
 
 otp_rlease:
+  - 17.1
   - 17.3
   - 17.4
 
