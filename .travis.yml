@@ -1,13 +1,12 @@
-language: node_js
+language: elixir
 
 group: dev
 
-node_js:
-  - iojs
-  
+otp_rlease:
+  - 17.3
+  - 17.4
+
 install: true
 
 script:
-  - locale
-  - git --version
-  - git fetch --unshallow
+  - iex --version
