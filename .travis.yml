@@ -1,13 +1,9 @@
-language: node_js
+language: python
 
-node_js:
-  - "0.10"
-  - iojs
-
-before_install:
-  - git fetch --unshallow
+python:
+  - 2.7
 
 install: true
 
 script:
-  - git --version
+  - find / -name cython
