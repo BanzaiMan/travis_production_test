@@ -4,4 +4,4 @@ node_js:
 sudo: false
 addons:
   apt_packages:
-    - graphicsmagick
+    - enchant
