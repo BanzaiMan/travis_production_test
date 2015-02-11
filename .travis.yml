@@ -1,9 +1,12 @@
-language: python
+language: php
 
-python:
-  - 2.7_with_system_site_packages
+php:
+  - 5.2
+
+group: dev
 
 install: true
 
 script:
-  - find ~/virtualenv/2.7_with_system_site_packages -type d
+  - true
+  
