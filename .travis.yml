@@ -1,12 +1,12 @@
-language: php
+language: ruby
 
-php:
-  - 5.2
-
-group: dev
+sudo: false
 
 install: true
 
 script:
-  - true
+  - wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-source.zip
+  - unzip phantomjs-2.0.0-source.zip
+  - cd phantomjs-2.0.0
+  - echo -e "y\n" | ./build.sh
   
