@@ -7,5 +7,5 @@ script:
   - wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-source.zip
   - unzip phantomjs-2.0.0-source.zip >/dev/null
   - cd phantomjs-2.0.0
-  - echo -e "y\n" | travis_wait 20 ./build.sh
+  - travis_wait 20 ./build.sh --confirm --silent
   
