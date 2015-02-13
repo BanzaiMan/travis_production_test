@@ -1,11 +1,16 @@
-language: ruby
+language: php
 
-install: true
+php:
+  - 7
+  - 5.6
+
+matrix:
+  include:
+    - php: 7
+      env: BUILD=true
+
+install:
+  - true
 
 script:
-  - sudo apt-get install gperf libsqlite3-dev libfontconfig1-dev libicu-dev libfreetype6 libssl-dev libpng-dev libjpeg-dev
-  - wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.0.0-source.zip
-  - unzip phantomjs-2.0.0-source.zip >/dev/null
-  - cd phantomjs-2.0.0
-  - travis_wait 50 ./build.sh --confirm --silent
-  
+  - true
