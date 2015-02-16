@@ -2,15 +2,11 @@ language: php
 
 sudo: false
 
-matrix:
-  include:
-    - php: 5.6
-      env: BUILD=true
+php:
+  - 5.2
 
 install:
-  - if [[ $BUILD = 'true' ]]; then pushd $HOME; git clone https://github.com/php/php-src.git; pushd php-src; ./buildconf -f; ./configure --prefix=$HOME/.phpenv/versions/7 && make && make install; phpenv global 7; popd; popd; php --version; fi
+  - true
 
 script:
-  - tar czf $HOME/php-7-archive.tar.gz $HOME/.phpenv/versions/7
-  - du -hs $HOME/.phpenv/versions/7
-  - du -hs $HOME/php-7-archive.tar.gz
+  - true
