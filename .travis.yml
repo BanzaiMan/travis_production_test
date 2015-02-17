@@ -1,7 +1,5 @@
 language: php
 
-sudo: false
-
 services:
   - neo4j
 
