@@ -2,6 +2,9 @@ language: php
 
 sudo: false
 
+services:
+  - neo4j
+
 php:
   - 5.2
 
