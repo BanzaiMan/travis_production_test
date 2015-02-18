@@ -8,7 +8,7 @@ matrix:
 
 install:
   - pushd $HOME/.php-build/bin
-  - env PHP_VERSION=master ./php-build -i development master $HOME/.phpenv/versions/master
+  - travis_wait env PHP_VERSION=master ./php-build -i development master $HOME/.phpenv/versions/master
   - phpenv global 7
   - php --version
   - popd
