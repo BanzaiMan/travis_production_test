@@ -9,7 +9,7 @@ matrix:
 install:
   - wget https://s3.amazonaws.com/travis-php-archives/travis-pro/php-src-builder/5/5.1/home/travis/php-7-archive.tar.bz2
   - tar xjf php-7-archive.tar.bz2 --directory=$HOME/.phpenv/versions
-  - php global 7
+  - phpenv global 7
   - php --version
 
 script:
