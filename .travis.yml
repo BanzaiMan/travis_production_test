@@ -1,9 +1,12 @@
-language: ruby
+language: php
 
 sudo: false
 
+php:
+  - hhvm-nightly
+
 install:
   - true
-  
+
 script:
-  - cat /proc/sys/net/ipv4/tcp_ecn
+  - true
