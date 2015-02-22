@@ -8,7 +8,7 @@ env:
 
 matrix:
   allow_failures:
-    - SLEEP=1800
+    - env: SLEEP=1800
 
 fast_finish: true
 
