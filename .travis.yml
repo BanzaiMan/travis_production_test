@@ -2,11 +2,18 @@ language: php
 
 sudo: false
 
-php:
-  - hhvm-nightly
+env:
+  - SLEEP=50
+  - SLEEP=1800
+
+matrix:
+  allow_failures:
+    - SLEEP=1800
+
+fast_finish: true
 
 install:
   - true
 
 script:
-  - true
+  - sleep $SLEEP
