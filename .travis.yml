@@ -3,7 +3,7 @@ language: php
 sudo: false
 
 env:
-  - SLEEP=50
+  - SLEEP=10
   - SLEEP=1800
 
 fast_finish: true
@@ -13,3 +13,4 @@ install:
 
 script:
   - sleep $SLEEP
+  - false
