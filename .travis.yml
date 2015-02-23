@@ -5,6 +5,10 @@ sudo: false
 env:
   - SLEEP=10
   - SLEEP=1800
+  
+matrix:
+  allowed_failures:
+    - SLEEP=1800
 
 fast_finish: true
 
