@@ -6,10 +6,6 @@ env:
   - SLEEP=50
   - SLEEP=1800
 
-matrix:
-  allow_failures:
-    - env: SLEEP=1800
-
 fast_finish: true
 
 install:
