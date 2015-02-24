@@ -1,20 +1,14 @@
-language: php
+language: ruby
 
-sudo: false
+group: dev
 
-env:
-  - SLEEP=10
-  - SLEEP=1800
-  
-matrix:
-  allow_failures:
-    - env: SLEEP=1800
-
-fast_finish: true
+rvm:
+  - 1.9.3
+  - 2.1.5
+  - 2.2.0
 
 install:
   - true
 
 script:
-  - sleep $SLEEP
-  - false
+  - true
