@@ -1,14 +1,9 @@
 language: ruby
 
-group: dev
-
-rvm:
-  - 1.9.3
-  - 2.1.5
-  - 2.2.0
+sudo: false
 
 install:
   - true
-
+  
 script:
-  - true
+  - cat /proc/sys/net/ipv4/tcp_ecn
