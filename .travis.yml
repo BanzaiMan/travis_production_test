@@ -1,9 +1,13 @@
-language: ruby
+language: php
 
 sudo: false
 
+php:
+  - '7'
+  - '7.0'
+  - nightly
 install:
   - true
   
 script:
-  - cat /proc/sys/net/ipv4/tcp_ecn
+  - true
