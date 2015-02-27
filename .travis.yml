@@ -2,13 +2,8 @@ language: ruby
 
 sudo: false
 
-before_install:
-  - shopt -s expand_aliases
-  - alias foo=ruby
-  - foo --version
-
 install:
   - true
   
 script:
-  - true
+  - dpkg -l build-essential make
