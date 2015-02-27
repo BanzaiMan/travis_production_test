@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 before_install:
-  - setopt -s expand_aliases
+  - shopt -s expand_aliases
   - alias foo=ruby
   - foo --version
 
