@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 before_install:
-  - alias python foo
+  - alias foo=python
   - foo --version
 
 install:
