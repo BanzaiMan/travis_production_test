@@ -1,11 +1,11 @@
-language: php
+language: ruby
 
 sudo: false
 
-php:
-  - '7'
-  - '7.0'
-  - nightly
+before_install:
+  - python --version
+  - which pip && pip install --user awscli || true
+
 install:
   - true
   
