@@ -3,8 +3,8 @@ language: ruby
 sudo: false
 
 before_install:
-  - python --version
-  - which pip && pip install --user awscli || true
+  - alias foo python
+  - foo --version
 
 install:
   - true
