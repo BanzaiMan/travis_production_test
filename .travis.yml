@@ -1,9 +1,10 @@
 language: ruby
 
-sudo: false
-
 install:
   - true
   
+before_script:
+  - ulimit -l unlimited
+
 script:
-  - dpkg -l build-essential make
+  - ulimit -l
