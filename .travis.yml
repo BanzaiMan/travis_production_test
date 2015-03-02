@@ -5,9 +5,9 @@ sudo: false
 install:
   - true
   
-before_script:
-  - ulimit -l
-  - ulimit -l unlimited
+env:
+  matrix:
+    - secure: "LTvnELZTIcqcbYEL0yzOwtY3FWOB/t5dz0VfthEAxsVm/+Gu6MTAVD1/xCgrKzEwUj7R5/s+nUluyerzgwFn9R7heLYnIWD43Maq8q3ijRZU88V1GFEokBOSIv/NgrIQTPZBNPefCfugY0uZIPRX7R3RHisXjHWuZLyNHH7kbYY="
 
 script:
   - ulimit -l
