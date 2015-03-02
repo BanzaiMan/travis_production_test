@@ -6,6 +6,7 @@ install:
   - true
   
 before_script:
+  - ulimit -l
   - ulimit -l unlimited
 
 script:
