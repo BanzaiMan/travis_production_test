@@ -1,13 +1,7 @@
-language: ruby
-
-sudo: false
+language: objective-c
 
 install:
   - true
   
-before_script:
-  - ulimit -l
-  - ulimit -l unlimited
-
 script:
-  - ulimit -l
+  - xcodebuild -version
