@@ -1,7 +1,12 @@
-language: objective-c
-
+language: ruby
+sudo: false
 install:
-  - true
-  
+- true
+env:
+  matrix:
+  - secure: LTvnELZTIcqcbYEL0yzOwtY3FWOB/t5dz0VfthEAxsVm/+Gu6MTAVD1/xCgrKzEwUj7R5/s+nUluyerzgwFn9R7heLYnIWD43Maq8q3ijRZU88V1GFEokBOSIv/NgrIQTPZBNPefCfugY0uZIPRX7R3RHisXjHWuZLyNHH7kbYY=
 script:
-  - xcodebuild -version
+- ulimit -l
+notifications:
+  slack:
+    secure: ZqzhbFsGCVycro3rl1VVug3fAYd0iXZEfS+pymOX7o7o5eaCC6xaTCKIPd9KrH9FbhfavANNU6Oh9arYnY+P5Z8ZmjnWN8QuLeNwx0tcyCGfIB/HEuEKK37ePWWPWhP+iiHxo6MqRSeLOlLg0zwUW331dkM/u0+KW/U8JfWFKcY=
