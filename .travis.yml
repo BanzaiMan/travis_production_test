@@ -1,7 +1,9 @@
-language: objective-c
+language: elixir
 
-install:
-  - true
+elixir:
+  - 1.0.2
+  - 1.0.3
   
-script:
-  - xcodebuild -version
+install: true
+
+script: true
