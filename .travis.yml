@@ -1,10 +1,10 @@
-language: elixir
+language: python
 sudo: false
 
-elixir:
-  - 1.0.2
-  - 1.0.3
-  
+addons:
+  apt_packages:
+    - swig
+
 install: true
 
 script: true
