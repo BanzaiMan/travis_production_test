@@ -5,7 +5,4 @@ sudo: false
 install: true
 
 script:
-  - git clone https://bitbucket.org/mirror/cpython
-  - rm -rf cpython
-  - git clone --depth=1 https://bitbucket.org/mirror/cpython
-  - rm -rf cpython
+  - true
