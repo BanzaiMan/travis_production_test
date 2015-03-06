@@ -1,10 +1,10 @@
-language: elixir
-sudo: false
+language: node_js
 
-elixir:
-  - 1.0.2
-  - 1.0.3
-  
-install: true
+node_js:
+- iojs
 
-script: true
+install:
+  - true
+
+script:
+  - echo $TRAVIS_COMMIT_RANGE
