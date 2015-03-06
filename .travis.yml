@@ -8,3 +8,11 @@ rvm:
 install: true
 
 script: true
+
+deploy:
+  - provider: opsworks
+    access_key_id: key
+    secret_access_key: secret
+    app-id: id
+    on:
+       branch: production
