@@ -1,10 +1,10 @@
-language: python
+language: objective-c
+
 sudo: false
 
-addons:
-  apt_packages:
-    - swig
-
+rvm:
+  - 1.9.3
+  
 install: true
 
 script: true
