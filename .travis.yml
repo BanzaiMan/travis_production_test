@@ -1,6 +1,7 @@
 language: ruby
 
+sudo: false
 
 script:
-  - ruby -ractive_support/core_ext -e 'puts Date.new(2000,3,1) - 1.day'
+  - bundle exec ruby -ractive_support/core_ext -e 'puts Date.new(2000,3,1) - 1.day'
 
