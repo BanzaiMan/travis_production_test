@@ -4,8 +4,9 @@ node_js:
   - '0.12'
 
 install:
-  - curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+  - FOO=bar
+  - echo $FOO
 
 script:
-  - sudo docker run -i -t ubuntu /bin/date
+  - true
 
