@@ -1,14 +1,12 @@
-language: node_js
+language: php
 
 sudo: false
 
-node_js:
-  - '0.12'
-
+php:
+  - nightly
+  
 install:
-  - FOO=bar
-  - echo $FOO
-
-script:
   - true
+script:
+  - ls /home/travis/.phpenv/versions/nightly/etc/php-fpm.d/*.conf
 
