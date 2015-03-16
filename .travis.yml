@@ -10,5 +10,5 @@ php:
 install:
   - true
 script:
-  - ls /home/travis/.phpenv/versions/nightly/etc/php-fpm.d/*.conf
+  - ls /home/travis/.phpenv/versions/${TRAVIS_PHP_VERSION}/etc/php-fpm.d/*.conf
 
