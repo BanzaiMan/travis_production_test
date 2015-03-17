@@ -1,8 +1,6 @@
-language: php
-
-dist: trusty
+language: c
 
 install:
   - true
 script:
-  - docker run -i -t ubuntu /bin/date
+  - true
