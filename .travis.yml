@@ -1,7 +1,7 @@
-language: php
+language: ruby
 
-php:
-  - 5.6
+ruby:
+  - 2.2.0
 
 group: dev
 
