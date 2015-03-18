@@ -1,5 +1,7 @@
 language: c
 
+sudo: false
+
 env:
   - CC=gcc-4.8
 
