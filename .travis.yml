@@ -6,6 +6,7 @@ env:
   - CC=gcc-4.8
 
 install:
-  - true
+  - env CC=gcc-4.8 cc --version
+  - ls /usr/bin/gcc*
 script:
   - true
