@@ -4,6 +4,7 @@ sudo: false
 
 cache:
   branch: foo
+  code_fetch_verbose: true
   directories:
     - $TRAVIS_BUILD_DIR/vendor
 install:
