@@ -8,5 +8,7 @@ env:
 install:
   - env CC=g++-4.8 cc --version
   - ls /usr/bin/gcc* /usr/bin/g++*
+  - dpkg -l gcc
+  - dpkg -l g++
 script:
   - true
