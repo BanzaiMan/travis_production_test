@@ -1,12 +1,12 @@
-language: c
+language: cpp
 
 sudo: false
 
 env:
-  - CC=gcc-4.8
+  - CC=g++-4.8
 
 install:
-  - env CC=gcc-4.8 cc --version
-  - ls /usr/bin/gcc*
+  - env CC=g++-4.8 cc --version
+  - ls /usr/bin/gcc* /usr/bin/g++*
 script:
   - true
