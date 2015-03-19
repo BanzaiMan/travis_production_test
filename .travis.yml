@@ -2,12 +2,9 @@ language: cpp
 
 sudo: false
 
-cache:
-  branch: foo
-  code_fetch_verbose: true
-  directories:
-    - $TRAVIS_BUILD_DIR/vendor
-install:
-  - true
+install: true
+
 script:
-  - true
+  - which ksh || true
+  - which zsh || true
+  
