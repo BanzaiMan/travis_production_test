@@ -1,10 +1,23 @@
-language: cpp
+language: node_js
 
 sudo: false
+
+node_js:
+  - '0.10'
+  - '0.11'
 
 install: true
 
 script:
-  - which ksh || true
-  - which zsh || true
+  - echo $TRAVIS_NODE_VERSION
+
+deploy:
+  provider: s3
+  access_key_id: "YOUR AWS ACCESS KEY"
+  secret_access_key: "YOUR AWS SECRET KEY"
+  skip_cleanup: true
+  bucket: "S3 Bucket"
+  on:
+    branch: master
+    node: '0.10'
   
