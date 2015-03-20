@@ -10,7 +10,7 @@ install: true
 script:
   - echo $TRAVIS_NODE_VERSION
 
-prepare_cache:
+before_cache:
   - echo FIRST!
 
 deploy:
