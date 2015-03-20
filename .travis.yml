@@ -12,6 +12,7 @@ script:
 
 before_cache:
   - echo FIRST!
+  - false
 
 deploy:
   provider: s3
