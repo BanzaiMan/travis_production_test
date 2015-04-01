@@ -3,12 +3,8 @@ language: php
 install: true
 
 script:
-  - echo first listing
-  - ls -lt --timestyle=full-iso
   - touch file1
   - touch file2
   - find . -name file\* -printf "%T+\t%p\n" | sort
-  - ls -lt --timestyle=full-iso
   - touch file1
   - find . -name file\* -printf "%T+\t%p\n" | sort
-  - ls -lt --timestyle=full-iso
