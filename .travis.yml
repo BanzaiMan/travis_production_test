@@ -1,8 +1,16 @@
-language: ruby
+language: php
 
 sudo: false
 
 install: true
 
 script:
-  - dpkg -l
+  - echo first listing
+  - ls -lt --timestyle=full-iso
+  - touch file1
+  - touch file2
+  - find . -name file\* -printf "%T+\t%p\n" | sort
+  - ls -lt --timestyle=full-iso
+  - touch file1
+  - find . -name file\* -printf "%T+\t%p\n" | sort
+  - ls -lt --timestyle=full-iso
