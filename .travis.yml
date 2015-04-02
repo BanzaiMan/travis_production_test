@@ -5,5 +5,5 @@ sudo: false
 install: true
 
 script:
-  - find /usr -name math.h -exec dpkg -S {} \;
+  - find /usr -name libm\.* -exec dpkg -S {} \;
   
