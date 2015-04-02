@@ -5,8 +5,5 @@ sudo: false
 install: true
 
 script:
-  - touch file1
-  - touch file2
-  - find . -name file\* -printf "%T+\t%p\n" | sort
-  - touch file1
-  - find . -name file\* -printf "%T+\t%p\n" | sort
+  - find /usr -name math.h -exec dpkg -S {} \;
+  
