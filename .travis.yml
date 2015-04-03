@@ -1,12 +1,7 @@
 language:
-  - objective-c
-
-env:
-  matrix:
-    - FOO=BAR
-    - BAR=BAZ
+  - ruby
 
 install: true
 
 script:
-- echo "done."
+  - dpkg -l | grep -i mysql
