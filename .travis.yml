@@ -1,10 +1,6 @@
-language: elixir
+language: ruby
 
-otp_release:
-  - 17.3
 
-install: true
-
+install: source travis/build_wheel.sh
 script:
-  - dpkg -l | grep mysql
-  
+- echo "done."
