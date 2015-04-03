@@ -1,6 +1,7 @@
 language: ruby
 
 
-install: source travis/build_wheel.sh
+install: true
+
 script:
 - echo "done."
