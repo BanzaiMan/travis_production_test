@@ -1,9 +1,15 @@
-language: php
+language: elixir
 
-sudo: false
+elixir:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+
+otp_release:
+  - 17.3
 
 install: true
 
 script:
-  - find /usr -name libm\.* -exec dpkg -S {} \;
+  - true
   
