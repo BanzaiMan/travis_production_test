@@ -1,6 +1,10 @@
 language:
   - objective-c
 
+env:
+  matrix:
+    - FOO=BAR
+    - BAR=BAZ
 
 install: true
 
