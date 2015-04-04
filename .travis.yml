@@ -8,4 +8,6 @@ script: true
 cache:
   directories:
     - bundler
+  edge: true
+  debug: true
   
