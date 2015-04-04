@@ -3,5 +3,9 @@ language:
 
 install: true
 
-script:
-  - dpkg -l | grep -i mysql
+script: true
+
+cache:
+  directories:
+    - bundler
+  
