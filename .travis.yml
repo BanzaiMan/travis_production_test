@@ -1,8 +1,13 @@
-language:
-  - ruby
+language: ruby
+
+sudo: false
 
 install: true
 
+before_script:
+  - mkdir bundler
+  - touch bundler/foo
+  
 script: true
 
 cache:
@@ -10,4 +15,5 @@ cache:
     - bundler
   edge: true
   debug: true
-  
+
+
