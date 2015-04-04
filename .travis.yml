@@ -5,6 +5,7 @@ sudo: false
 install: true
 
 before_script:
+  - cat $HOME/.casher/fetch.log
   - touch bundler/foo
   
 script: true
