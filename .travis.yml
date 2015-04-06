@@ -7,4 +7,4 @@ android:
 
 install: true
 
-script: env
+script: env | sort
