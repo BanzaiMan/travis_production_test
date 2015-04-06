@@ -1,19 +1,11 @@
-language: ruby
+language: java
 
 sudo: false
 
 install: true
 
 before_script:
-  - cat $HOME/.casher/fetch.log
-  - touch bundler/foo
+  - which virtualenv
+  - which pip
   
 script: true
-
-cache:
-  directories:
-    - bundler
-  edge: true
-  debug: true
-
-
