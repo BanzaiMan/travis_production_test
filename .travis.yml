@@ -1,11 +1,10 @@
-language: java
+language: elixir
 
 sudo: false
 
 install: true
 
 before_script:
-  - cat /etc/profile.d/virtualenv_settings.sh
-  - which pip
+  - kiex list
   
 script: true
