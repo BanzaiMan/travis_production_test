@@ -5,7 +5,7 @@ sudo: false
 install: true
 
 before_script:
-  - which virtualenv
+  - cat /etc/profile.d/virtualenv_settings.sh
   - which pip
   
 script: true
