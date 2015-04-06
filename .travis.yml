@@ -1,10 +1,10 @@
-language: elixir
-
-sudo: false
+env: http_proxy=proxy HTTP_PROXY= proxy https_proxy= proxy HTTPS_PROXY= proxy ftp_proxy= proxy FTP_PROXY= proxy no_proxy="ignore these" NO_PROXY="ignore these" 
+language: android
+android:
+  components:
+    - build-tools-21.1.2 
+    - android-21
 
 install: true
 
-before_script:
-  - kiex list
-  
-script: true
+script: env
