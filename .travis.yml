@@ -1,8 +1,8 @@
-language: ruby
+language: elixir
+
+sudo: false
 
 install: true
 
 script:
-  - false
-  - false
-  - true
+  - kiex list
