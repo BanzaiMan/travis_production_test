@@ -1,7 +1,8 @@
 language: elixir
 
-services:
-  - neo4j
+elixir:
+  - '1.0.4'
+  - '1.0.2'
 
 install: true
 
