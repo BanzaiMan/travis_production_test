@@ -4,6 +4,11 @@ elixir:
   - '1.0.4'
   - '1.0.2'
 
+otp_release:
+  - '17.5'
+
+group: dev
+
 install: true
 
 script:
