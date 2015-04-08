@@ -1,5 +1,8 @@
 language: elixir
 
+services:
+  - neo4j
+
 sudo: false
 
 install: true
