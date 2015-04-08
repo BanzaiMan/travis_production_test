@@ -1,15 +1,13 @@
-language: elixir
+language: ruby
 
-elixir:
-  - '1.0.4'
-  - '1.0.2'
-
-otp_release:
-  - '17.5'
+rvm:
+  - '1.9'
+  - '2.1'
+  - '2.2'
 
 group: dev
 
 install: true
 
 script:
-  - kiex list
+  - true
