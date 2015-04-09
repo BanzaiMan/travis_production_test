@@ -1,15 +1,8 @@
-language: elixir
+language: php
 
-elixir:
-  - '1.0.4'
-
-otp_release:
-  - '17.5'
-  
-matrix:
-  include:
-    - elixir: '1.0.2'
-      otp_release: '17.3'
+php:
+  - 5.3.3
+  - 5.3.29
 
 group: dev
 
