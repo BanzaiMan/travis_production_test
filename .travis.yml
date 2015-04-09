@@ -1,9 +1,11 @@
 language: ruby
 
-before_install:
-  - rvm uninstall jruby-1.7.19-d19
+jdk:
+  - oraclejdk8
+
+group: dev
 
 install: true
 
 script:
-  - source /home/travis/.rvm/scripts/rvm && rvm 1.9.3 do /home/travis/.rvm/bin/rvm install jruby-1.7.19 --verify-downloads 1 -j 3 --19 && find ~/.rvm/rubies/ -type d -name .git -print | xargs /bin/rm -rf
+  - true
