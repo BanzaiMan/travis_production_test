@@ -8,4 +8,4 @@ group: dev
 install: true
 
 script:
-  - true
+  - java -version
