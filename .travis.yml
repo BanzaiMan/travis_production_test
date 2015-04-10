@@ -1,5 +1,9 @@
 language: ruby
 
+notifications:
+  hipchat: dafkaddfjakdfjakdfja;dsf
+
+sudo: false
 
 install: true
 
