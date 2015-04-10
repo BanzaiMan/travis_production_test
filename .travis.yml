@@ -1,11 +1,7 @@
 language: ruby
 
-jdk:
-  - oraclejdk8
-
-group: dev
 
 install: true
 
 script:
-  - java -version
+  - false
