@@ -1,7 +1,4 @@
-language: ruby
-
-notifications:
-  hipchat: dafkaddfjakdfjakdfja;dsf
+language: java
 
 sudo: false
 
