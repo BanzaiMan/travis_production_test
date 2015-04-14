@@ -7,6 +7,10 @@ otp_release:
   - 17.4
   - 17.5
 
+before_script:
+  - mysql --version
+  - mysql -e 'create database myapp_test;'
+
 install: true
 
 script:
