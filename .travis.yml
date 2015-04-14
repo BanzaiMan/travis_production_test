@@ -1,15 +1,9 @@
-language: elixir
+language: ruby
 
-elixir:
-  - '1.0.4'
-
-otp_release:
-  - 17.4
-  - 17.5
+group: dev
 
 before_script:
-  - mysql --version
-  - mysql -e 'create database myapp_test;'
+  - gem install ffi
 
 install: true
 
