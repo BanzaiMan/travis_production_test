@@ -6,8 +6,6 @@ elixir:
 otp_release:
   - 17.4
 
-sudo: false
-
 install: true
 
 script:
