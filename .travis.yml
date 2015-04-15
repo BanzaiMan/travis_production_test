@@ -5,8 +5,6 @@ group: dev
 before_script:
   - npm install foo
 
-sudo: false
-
 cache:
   directories:
     - node_modules
