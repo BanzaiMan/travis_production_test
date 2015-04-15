@@ -1,9 +1,15 @@
-language: ruby
+language: node-js
 
 group: dev
 
 before_script:
-  - gem install ffi
+  - npm install foo
+
+sudo: false
+
+cache:
+  directories:
+    - node_modules
 
 install: true
 
