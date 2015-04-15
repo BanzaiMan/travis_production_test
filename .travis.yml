@@ -9,3 +9,4 @@ install: true
 
 script:
   - mysql --version
+  - dkpg -l | grep -i postgresql
