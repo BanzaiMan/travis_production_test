@@ -8,4 +8,4 @@ before_script:
 install: true
 
 script:
-  - true
+  - mysql --version
