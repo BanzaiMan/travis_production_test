@@ -7,8 +7,5 @@ services:
 
 install: true
 
-before_script:
-  - sudo service mongodb restart
-
 script:
   - find /var/log/mongodb || find /var/log
