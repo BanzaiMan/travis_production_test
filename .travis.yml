@@ -8,4 +8,5 @@ services:
 install: true
 
 script:
-  - find /var/log/mongodb || find /var/log
+  - ls -l /etc/init.d
+  - dpkg -S couchdb | grep etc
