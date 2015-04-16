@@ -2,11 +2,7 @@ language: elixir
 
 dist: trusty
 
-services:
-  - mongodb
-
 install: true
 
 script:
-  - ls -l /etc/init.d
-  - dpkg -S couchdb | grep etc
+  - sudo apt-get update
