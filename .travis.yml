@@ -1,7 +1,5 @@
 language: elixir
 
-sudo: false
-
 dist: trusty
 
 services:
