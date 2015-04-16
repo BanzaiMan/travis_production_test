@@ -2,10 +2,13 @@ language: elixir
 
 sudo: false
 
+services:
+  - mongodb
+
 install: true
 
+before_script:
+  - sudo service mongodb restart
+
 script:
-  - ls -l $HOME/.kiex/bin/kiex
-  - curl -o $HOME/.kiex/bin/kiex https://raw.githubusercontent.com/travis-ci/kiex/ha-feature-debug/kiex
-  - kiex list known
-  - for i in $(seq 0 10); do kiex install 1.0.4; kiex uninstall 1.0.4; done
+  - find /var/log/mongodb || find /var/log
