@@ -5,4 +5,5 @@ dist: trusty
 install: true
 
 script:
+  - sudo rm -rf /var/lib/apt/lists/*
   - sudo apt-get update
