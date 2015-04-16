@@ -1,16 +1,11 @@
-language: node-js
+language: elixir
 
-group: dev
-
-before_script:
-  - npm install foo
-
-cache:
-  directories:
-    - node_modules
+sudo: false
 
 install: true
 
 script:
-  - mysql --version
-  - dpkg -l | grep -i postgresql
+  - ls -l $HOME/.kiex/bin/kiex
+  - curl -o $HOME/.kiex/bin/kiex https://raw.githubusercontent.com/travis-ci/kiex/ha-feature-debug/kiex
+  - kiex list known
+  - for i in $(seq 0 10); do kiex install 1.0.4; kiex uninstall 1.0.4; done
