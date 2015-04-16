@@ -1,9 +1,10 @@
-language: elixir
+language: java
 
-dist: trusty
+jdk:
+  - oraclejdk8
 
 install: true
 
 script:
-  - sudo rm -rf /var/lib/apt/lists/*
-  - sudo apt-get update
+  - sudo apt-get update && sudo apt-get install oracle-java8-installer
+  - java -version
