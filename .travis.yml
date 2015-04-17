@@ -4,8 +4,6 @@ sudo: false
 
 cache: ccache
 
-install: true
-
 script:
   - env | sort
   - mysql --version
