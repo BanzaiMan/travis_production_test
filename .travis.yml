@@ -3,4 +3,5 @@ language: ruby
 install: true
 
 script:
-  - dpkg -l | grep -i valgrind
+  - mysql --version
+  - dpkge | grep -i postgresql
