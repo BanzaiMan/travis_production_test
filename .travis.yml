@@ -1,17 +1,6 @@
-language: java
-
-services:
-  - couchdb
-  - rabbitmq
-  - riak
-  - redis-server
-  - cassandra
-  - neo4j
-  - elasticsearch
-  - kestrel
-  - mongodb
+language: ruby
 
 install: true
 
 script:
-  - true
+  - dpkg -l | grep -i valgrind
