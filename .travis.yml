@@ -1,8 +1,8 @@
-language: c
-
-sudo: false
+language: ruby
 
 cache: ccache
+
+group: dev
 
 script:
   - env | sort
