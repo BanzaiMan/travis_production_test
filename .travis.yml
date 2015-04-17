@@ -5,6 +5,6 @@ cache: ccache
 group: dev
 
 script:
-  - env | sort
+  - ps -ef | grep mysql
   - mysql -e 'CREATE DATABASE foo'
-  - dpkg -l | awk '$2 ~ /^postgresql-[0-9]+\.[0-9]+$/ {print $3}' | grep -E --only '^[^-]+'
+  - ps -ef | grep mysql
