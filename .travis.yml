@@ -1,9 +1,11 @@
-language: ruby
+language: cpp
 
 sudo: false
+
+cache: ccache
 
 install: true
 
 script:
   - mysql --version
-  - dpkg -l | awk '$2 ~ /^postgresql-[0-9]+\.[0-9]+$/ {print $3}' | grep --only '^[^-]+'
+  - dpkg -l | awk '$2 ~ /^postgresql-[0-9]+\.[0-9]+$/ {print $3}' | grep -E --only '^[^-]+'
