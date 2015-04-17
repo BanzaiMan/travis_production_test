@@ -1,12 +1,19 @@
 language: java
 
-sudo: required
+dist: trusty
 
-jdk:
-  - oraclejdk8
+services:
+  - couchdb
+  - rabbitmq
+  - riak
+  - redis-server
+  - cassandra
+  - neo4j
+  - elasticsearch
+  - kestrel
+  - mongodb
 
 install: true
 
 script:
-  - sudo apt-get update && sudo apt-get install oracle-java8-installer
-  - java -version
+  - true
