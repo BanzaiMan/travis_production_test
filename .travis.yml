@@ -1,7 +1,8 @@
 language: ruby
 
-group: dev
+sudo: false
 
 install: true
 
-script: true
+script:
+  - /sbin/ifconfig -a || /usr/sbin/ifconfig -a || true
