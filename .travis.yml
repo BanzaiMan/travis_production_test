@@ -1,8 +1,7 @@
 language: ruby
 
-cache: ccache
+group: dev
 
-sudo: false
+install: true
 
-script:
-  - ifconfig -a
+script: true
