@@ -2,5 +2,7 @@ language: ruby
 
 install: true
 
+sudo: false
+
 script:
-  - /sbin/ifconfig -a || /usr/sbin/ifconfig -a || true
+  - find / -name ifconfig || true
