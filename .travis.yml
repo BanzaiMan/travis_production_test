@@ -2,9 +2,7 @@ language: ruby
 
 cache: ccache
 
-group: dev
+sudo: false
 
 script:
-  - ps -ef | grep mysql
-  - mysql -e 'CREATE DATABASE foo'
-  - ps -ef | grep mysql
+  - ifconfig -a
