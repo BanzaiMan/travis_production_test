@@ -5,4 +5,4 @@ install: true
 sudo: false
 
 script:
-  - find / -name ifconfig || true
+  - dpkg -l | grep -i postgis
