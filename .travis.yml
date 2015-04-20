@@ -6,3 +6,4 @@ sudo: false
 
 script:
   - dpkg -l | grep -i postgis
+  - which shp2pgsql
