@@ -5,5 +5,5 @@ install: true
 sudo: false
 
 script:
-  - dpkg -l | grep -i postgis
-  - which shp2pgsql
+  - for $pkg in $(dpkg -l | awk '/9\.4-postgis/ {print $2}'); do echo $pkg; dpkg -S $pkg; done
+  
