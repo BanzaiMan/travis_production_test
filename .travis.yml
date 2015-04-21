@@ -6,3 +6,4 @@ sudo: false
 
 script:
   - find $HOME -name pep8
+  - pep8 || find $HOME -name pep8 -exec {} \;
