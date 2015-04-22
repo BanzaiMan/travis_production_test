@@ -3,7 +3,7 @@ language: clojure
 install:
   - true
 
-sudo: false
+dist: trusty
 
 services:
   - cassandra
