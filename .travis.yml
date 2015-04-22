@@ -1,9 +1,12 @@
-language: php
+language: clojure
 
 install:
   - true
 
 sudo: false
 
+services:
+  - cassandra
+  
 script:
-  - cat /etc/profile.d/phpenv.sh
+  - /usr/local/cassandra/bin/nodetool version
