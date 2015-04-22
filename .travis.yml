@@ -10,3 +10,4 @@ services:
   
 script:
   - /usr/local/cassandra/bin/nodetool version
+  - ruby -r socket -e 'puts TCPSocket.new("localhost", 9042)'
