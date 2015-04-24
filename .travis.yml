@@ -1,13 +1,12 @@
-language: clojure
+language: java
 
 install:
   - true
 
-dist: trusty
-
-services:
-  - cassandra
-  
 script:
-  - /usr/local/cassandra/bin/nodetool version
-  - ruby -r socket -e 'puts TCPSocket.new("localhost", 9042)'
+  - python --version
+  - python3 --version
+  - rvm list
+  - ruby --version
+  - nvm list
+  - node --version
