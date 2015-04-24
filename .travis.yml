@@ -1,12 +1,10 @@
-language: java
+language: node-js
+
+before_install:
+  - npm install -g npm@^2.7.5
 
 install:
   - true
 
 script:
-  - python --version
-  - python3 --version
-  - rvm list
-  - ruby --version
-  - nvm list
-  - node --version
+  - npm --version
