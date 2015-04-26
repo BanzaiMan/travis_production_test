@@ -1,13 +1,9 @@
-language: ruby
+language: go
 
-rvm:
-  - 2.1
-  - 2.2
-  
 group: dev
 
 install:
   - true
 
 script:
-  - ps -ef | grep -i couch || true
+  - mongod --version
