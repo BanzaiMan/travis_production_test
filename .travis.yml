@@ -10,4 +10,4 @@ install:
   - true
 
 script:
-  - mysql --version
+  - ps -ef | grep -i couch || true
