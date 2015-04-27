@@ -1,9 +1,9 @@
-language: elixir
+language: node-js
 
-group: dev
 
 install:
   - true
 
 script:
-  - kiex list
+  - nvm --version
+  
