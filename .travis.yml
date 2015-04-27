@@ -1,9 +1,9 @@
-language: node-js
+language: elixir
 
 
 install:
   - true
 
 script:
-  - nvm --version
+  - true
   
