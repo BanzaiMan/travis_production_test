@@ -1,4 +1,4 @@
-language: go
+language: elixir
 
 group: dev
 
@@ -6,4 +6,4 @@ install:
   - true
 
 script:
-  - mongod --version
+  - kiex list
