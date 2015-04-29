@@ -1,11 +1,13 @@
 language: php
 
+sudo: false
+
 php:
-  - hhvm-nightly
+  - nightly
 
 install:
   - true
 
 script:
-  - true
+  - find ~/.phpenv/versions/nightly
   
