@@ -1,5 +1,10 @@
 language: ruby
 
+sudo: false
+
+rvm:
+  - '2.1.6'
+
 install:
   - true
 
