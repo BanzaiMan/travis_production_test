@@ -1,11 +1,8 @@
-language: php
-
-php:
-  - hhvm
+language: ruby
 
 install:
   - true
 
 script:
-  - true
+  - rvm list
   
