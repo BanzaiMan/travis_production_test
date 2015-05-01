@@ -12,5 +12,5 @@ install:
   - true
 
 script:
-  - echo $JAVA_HOME
+  - java -XX:+PrintFlagsFinal -version 2>&1 | grep MaxHeapSize
   
