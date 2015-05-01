@@ -1,5 +1,7 @@
 language: android
 
+sudo: false
+
 jdk:
   - openjdk6
   - openjdk7
