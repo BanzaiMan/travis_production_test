@@ -12,5 +12,4 @@ install:
   - true
 
 script:
-  - java -XX:+PrintFlagsFinal -version 2>&1 | grep MaxHeapSize
-  
+  - for x in 5 10 100 1000 10000 100000 1000000 1280000; do echo $x; java -Xmx${x}g -XX:+PrintFlagsFinal -version 2>&1 | grep MaxHeapSize; done  
