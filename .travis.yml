@@ -1,18 +1,12 @@
 language: android
 
-jdk:
-  - openjdk6
-  - openjdk7
-  - oraclejdk7
-  - oraclejdk8
+sudo: false
 
 install:
   - true
 
 script:
-  - env | grep MALLOC
-  - ldd --version
-  - for x in 5 10 100 1000 10000 100000 1000000 1280000; do echo $x; java -Xmx${x}g -XX:+PrintFlagsFinal -version 2>&1 | grep MaxHeapSize; done  
+  - true
 
 notifications:
   webhooks:
