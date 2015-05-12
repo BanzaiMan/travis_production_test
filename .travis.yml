@@ -1,14 +1,10 @@
-language: android
+language: rust
 
-sudo: false
+os: osx
 
 install:
   - true
 
 script:
   - true
-
-notifications:
-  webhooks:
-    - secure: "cHgKqqxdm86ad5GDdsQy68F6kuox7CccP0R3pYsspIDi5zskNphdvkY8a+6EIe8WYX51q85LFbhWDoGHdg9E1WM3aN/ws7H+mmXWptfcN7036MYqK2lvRxVGbWqbul1Z6AokdZvOgQ77glcBG28leRJ5tK5JWeAzG4phxDjY78Q="
 
