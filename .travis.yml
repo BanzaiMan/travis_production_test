@@ -1,6 +1,6 @@
 language: rust
 
-rust: '1.0'
+rust: '1.0.0'
 
 sudo: false
 
