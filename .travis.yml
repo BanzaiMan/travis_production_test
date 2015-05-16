@@ -1,12 +1,12 @@
-language: rust
-
-rust: '1.0.0'
+language: node_js
 
 sudo: false
 
 install:
-  - true
+  - false
 
 script:
   - true
 
+after_failure:
+  - cat npm-debug.log
