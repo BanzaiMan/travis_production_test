@@ -6,4 +6,4 @@ install:
   - true
 
 script:
-  - true
+  - echo $LANG
