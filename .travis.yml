@@ -1,12 +1,9 @@
-language: node_js
+language: rust
 
 sudo: false
 
 install:
-  - false
+  - true
 
 script:
   - true
-
-after_failure:
-  - cat npm-debug.log
