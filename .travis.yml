@@ -1,4 +1,4 @@
-language: python
+language: rust
 
 sudo: false
 
@@ -6,4 +6,4 @@ install:
   - true
 
 script:
-  - locale
+  - true
