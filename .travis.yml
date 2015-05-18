@@ -1,4 +1,4 @@
-language: rust
+language: ruby
 
 sudo: false
 
@@ -6,4 +6,4 @@ install:
   - true
 
 script:
-  - echo $LANG
+  - locale
