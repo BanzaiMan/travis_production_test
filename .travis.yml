@@ -1,8 +1,9 @@
 language: rust
 
+sudo: false
 
 install:
-  - true
+  - curl -I -vv https://sqs.us-west-2.amazonaws.com
 
 script:
   - true
