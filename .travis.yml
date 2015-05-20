@@ -1,12 +1,7 @@
-language: php
-
-php:
-  - 5.4
-
-sudo: false
+language: objective-c
 
 install:
-  - true
+  - echo "111.20.3.2 foo.example" | sudo tee -a /etc/hosts
   
 script:
   - true
