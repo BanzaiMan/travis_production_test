@@ -1,4 +1,7 @@
-language: android
+language: ruby
+
+rvm:
+  - jruby-head
 
 sudo: false
 
