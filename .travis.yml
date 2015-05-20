@@ -1,9 +1,9 @@
-language: rust
+language: android
 
 sudo: false
 
 install:
-  - curl -I -vv https://sqs.us-west-2.amazonaws.com
-
+  - true
+  
 script:
   - true
