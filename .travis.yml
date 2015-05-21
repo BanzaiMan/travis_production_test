@@ -5,3 +5,10 @@ install:
   
 script:
   - true
+
+notifications:
+  email:
+    recipients:
+      - daniel.buch+BanzaiMan-travis_production_test@gmail.com
+    on_success: change
+    on_failure: always
