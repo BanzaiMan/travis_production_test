@@ -4,7 +4,7 @@ install:
   - echo "111.20.3.2 foo.example" | sudo tee -a /etc/hosts
   
 script:
-  - true
+  - false
 
 notifications:
   email:
