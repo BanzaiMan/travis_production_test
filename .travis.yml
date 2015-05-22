@@ -1,7 +1,16 @@
-language: objective-c
+language: node_js
 
 install:
-  - echo "111.20.3.2 foo.example" | sudo tee -a /etc/hosts
+  - true
   
 script:
   - true
+  
+after_success:
+  - cat ~/.npmrc
+
+deploy:
+  provider: npm
+  email: foo@example.com
+  api_key: FOOBAR
+  
