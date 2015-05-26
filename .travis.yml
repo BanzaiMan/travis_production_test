@@ -7,12 +7,3 @@ install:
   
 script:
   - true
-  
-after_success:
-  - cat ~/.npmrc
-
-deploy:
-  provider: npm
-  email: foo@example.com
-  api_key: FOOBAR
-  
