@@ -7,3 +7,6 @@ install:
   
 script:
   - true
+
+deploy:
+  provider: npm
