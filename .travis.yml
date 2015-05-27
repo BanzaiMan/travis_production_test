@@ -9,5 +9,5 @@ install:
   - true
   
 script:
-  - bunlde --version
+  - bundle --version
 
