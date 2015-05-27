@@ -6,7 +6,8 @@ install:
   - true
   
 script:
-  - env | grep OPTS
+  - sudo cat /etc/hosts
+  - true
 
 
 deploy:
