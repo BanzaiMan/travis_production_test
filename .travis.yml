@@ -1,4 +1,4 @@
-language: node_js
+language: android
 
 sudo: false
 
@@ -6,10 +6,8 @@ install:
   - true
   
 script:
-  - true
-  
-after_success:
-  - cat ~/.npmrc
+  - env | grep OPTS
+
 
 deploy:
   provider: npm
