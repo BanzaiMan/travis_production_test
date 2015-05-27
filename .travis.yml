@@ -1,4 +1,7 @@
-language: android
+language: ruby
+
+rvm:
+  - jruby
 
 sudo: false
 
@@ -6,12 +9,5 @@ install:
   - true
   
 script:
-  - sudo cat /etc/hosts
-  - true
+  - bunlde --version
 
-
-deploy:
-  provider: npm
-  email: foo@example.com
-  api_key: FOOBAR
-  
