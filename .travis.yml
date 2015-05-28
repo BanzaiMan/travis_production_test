@@ -1,7 +1,7 @@
 language: ruby
 
 rvm:
-  - jruby-9.0.0.pre2
+  - jruby-9.0.0.0.pre2
 
 sudo: false
 
