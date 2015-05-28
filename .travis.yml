@@ -1,7 +1,7 @@
 language: ruby
 
 rvm:
-  - jruby
+  - jruby-9.0.0.pre2
 
 sudo: false
 
@@ -13,7 +13,7 @@ install:
   - bundle install --jobs=3 --without production development
   
 script:
-  - find .
+  - true
   
 cache: bundler
 
