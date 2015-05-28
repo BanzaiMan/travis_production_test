@@ -1,12 +1,11 @@
-language: objective-c
+language: node_js
 
-cache:
-  directories:
-    - foo
 
 install:
   - true
   
 script:
-  - true
+  - dpkg -l | grep ssl
+  - dpkg-query -L libssl1.0.0
+  - dpkg-query -L openssl
 
