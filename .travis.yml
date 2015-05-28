@@ -5,6 +5,10 @@ rvm:
 
 sudo: false
 
+env:
+  global:
+    - JRUBY_OPTS=--2.0
+
 install:
   - true
   
