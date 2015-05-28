@@ -1,12 +1,13 @@
-language: node_js
+language: objective-c
 
-node_js:
-  - iojs-v2.0.2
+osx_image: xcode_beta6.3
 
-sudo: false
+cache:
+  - bundler
+  - cocoapods
 
 install:
-  - npm install bitcoin
+  - true
   
 script:
   - true
