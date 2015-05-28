@@ -5,10 +5,6 @@ rvm:
 
 sudo: false
 
-env:
-  global:
-    - JRUBY_OPTS=--2.0
-
 install:
   - bundle install --jobs=3 --without production development
   
