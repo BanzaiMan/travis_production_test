@@ -2,6 +2,8 @@ language: node_js
 
 sudo: false
 
+group: foobar
+
 install:
   - true
   
