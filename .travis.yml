@@ -1,7 +1,8 @@
 language: objective-c
 
 cache:
-  cocoapods
+  directories:
+    - foo
 
 install:
   - true
