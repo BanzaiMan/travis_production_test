@@ -1,15 +1,13 @@
-language: ruby
+language: node_js
 
-rvm:
-  - jruby-9.0.0.0.pre2
+node_js:
+  - iojs-v2.0.2
 
 sudo: false
 
 install:
-  - bundle install --jobs=3 --without production development
+  - npm install bitcoin
   
 script:
   - true
-  
-cache: bundler
 
