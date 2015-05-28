@@ -1,9 +1,7 @@
 language: objective-c
 
-osx_image: xcode_beta6.3
-
 cache:
-  - cocoapods
+  cocoapods
 
 install:
   - true
