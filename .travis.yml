@@ -3,7 +3,7 @@ language: objective-c
 osx_image: xcode_beta6.3
 
 cache:
-  - bundler
+  - cocoapods
 
 install:
   - true
