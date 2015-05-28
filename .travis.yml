@@ -13,7 +13,7 @@ install:
   - bundle install --jobs=3 --without production development
   
 script:
-  - bundle --version
+  - find .
   
 cache: bundler
 
