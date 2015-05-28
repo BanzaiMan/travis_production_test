@@ -14,4 +14,6 @@ install:
   
 script:
   - bundle --version
+  
+cache: bundler
 
