@@ -10,7 +10,7 @@ env:
     - JRUBY_OPTS=--2.0
 
 install:
-  - true
+  - bundle install --jobs=3 --without production development
   
 script:
   - bundle --version
