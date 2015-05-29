@@ -1,12 +1,10 @@
-language: node_js
+language: ruby
 
-group: foobar
+os: osx
 
-install:
-  - true
-  
+rvm:
+  - ruby-head
+
 script:
-  - dpkg -l | grep ssl
-  - dpkg-query -L libssl1.0.0
-  - dpkg-query -L openssl
+  - bundle --version
 
