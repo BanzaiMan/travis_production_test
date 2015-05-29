@@ -1,10 +1,12 @@
 language: ruby
 
-os: osx
+sudo: false
 
-rvm:
-  - ruby-head
+install:
+  - mkdir $HOME/bin
+  - ln -sf /usr/share/postgresql-common/pg_wrapper $HOME/bin/shp2pgsql
+  - export PATH=$HOME/bin:$PATH
 
 script:
-  - bundle --version
+  - shp2pgsql --version
 
