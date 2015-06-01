@@ -1,15 +1,9 @@
-language: ruby
+language: python
 
 sudo: false
 
 install:
-  - mkdir $HOME/bin
-  - ln -sf /usr/share/postgresql-common/pg_wrapper $HOME/bin/shp2pgsql
-  - export PATH=$HOME/bin:$PATH
+  - true
 
 script:
-  - if true; then
-    # bar
-    echo 'yo'
-    fi
-
+  - echo $HOME
