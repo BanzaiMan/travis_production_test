@@ -8,5 +8,8 @@ install:
   - export PATH=$HOME/bin:$PATH
 
 script:
-  - shp2pgsql --version
+  - if true; then
+    # bar
+    echo 'yo'
+    fi
 
