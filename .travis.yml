@@ -1,6 +1,6 @@
 language: ruby
 
-sudo: false
+os: osx
 
 rvm:
   - ruby-2.2.0
