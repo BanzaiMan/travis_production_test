@@ -1,6 +1,9 @@
-language: objective-c
+language: ruby
 
-osx_image: beta-xcode6.3
+sudo: false
+
+install:
+  - true
 
 script:
-  - bundle --version
+  - curl -L -o installer.sh http://www.cs.utah.edu/plt/snapshots/current/installers/min-racket-current-x86_64-linux-precise.sh
