@@ -3,7 +3,7 @@ language: objective-c
 osx_image: beta-xcode6.3
 
 rvm:
-  - ruby-2.2.2
+  - ruby-2.2.0
 
 script:
   - bundle --version
