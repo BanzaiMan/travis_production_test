@@ -1,10 +1,9 @@
 language: ruby
 
-os: osx
+sudo: false
 
 rvm:
-  - ruby-2.2.0
-  - ruby-head
+  - ruby-2.2.2
 
 script:
   - bundle --version
