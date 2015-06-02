@@ -1,9 +1,13 @@
-language: ruby
+language: node_js
 
 sudo: false
+
+node_js:
+  - '0.10'
+  - '0.12'
 
 install:
   - true
 
 script:
-  - curl -L -o installer.sh http://www.cs.utah.edu/plt/snapshots/current/installers/min-racket-current-x86_64-linux-precise.sh
+  - true
