@@ -3,6 +3,7 @@ language: ruby
 sudo: false
 
 rvm:
+  - ruby-2.2.0
   - ruby-head
 
 script:
