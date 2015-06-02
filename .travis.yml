@@ -1,9 +1,9 @@
-language: python
+language: ruby
 
 sudo: false
 
-install:
-  - true
+rvm:
+  - ruby-head
 
 script:
-  - echo $HOME
+  - bundle --version
