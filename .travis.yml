@@ -1,10 +1,4 @@
-language: elixir
-
-elixir:
-  - 1.0.4
-
-otp_release:
-  - 17.4
+language: go
 
 sudo: false
 
@@ -12,4 +6,4 @@ install:
   - true
 
 script:
-  - true
+  - echo $GOMAXPROCS
