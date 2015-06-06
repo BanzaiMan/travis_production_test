@@ -1,10 +1,13 @@
-language: python
+language: ruby
 
-python:
-  - nightly
+os:
+  - osx
+
+rvm:
+  - ruby-head-clang
 
 install:
   - true
 
 script:
-  - true
+  - ruby -rrbconfig -e 'puts RbConfig::CONFIG["configure_args"]'
