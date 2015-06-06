@@ -1,7 +1,7 @@
-language: java
+language: python
 
-jdk:
-  - oraclejdk8
+python:
+  - nightly
 
 install:
   - true
