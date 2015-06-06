@@ -1,13 +1,18 @@
 language: ruby
 
+sudo: false
+
 os:
   - osx
 
 rvm:
+  - ruby-head
   - ruby-head-clang
 
 install:
   - true
 
 script:
+  - cat ~/.rvmrc || true
+  - ruby -rrbconfig -e 'puts RbConfig::CONFIG["CC"]'
   - ruby -rrbconfig -e 'puts RbConfig::CONFIG["configure_args"]'
