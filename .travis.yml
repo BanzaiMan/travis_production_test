@@ -5,14 +5,11 @@ sudo: false
 os:
   - osx
 
-rvm:
-  - ruby-head
-  - ruby-head-clang
-
 install:
-  - true
+  - echo "rvm_remote_server_url=http://rubies.travis-ci.org" >> ~/.rvmrc
+  - echo "rvm_system_server_path=osx/10.9/x86_64" >> ~/.rvmrc
 
 script:
-  - cat ~/.rvmrc || true
+  - rvm use ruby-head-clang --install --fuzzy --binary
   - ruby -rrbconfig -e 'puts RbConfig::CONFIG["CC"]'
   - ruby -rrbconfig -e 'puts RbConfig::CONFIG["configure_args"]'
