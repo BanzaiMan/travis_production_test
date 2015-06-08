@@ -1,7 +1,9 @@
 language: objective-c
 
+osx_image: beta-xcode6.2
+
 install:
   - true
 
 script:
-  - cat /etc/mavenrc
+  - true
