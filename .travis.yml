@@ -6,4 +6,4 @@ install:
   - true
 
 script:
-  - cat /etc/mvnrc
+  - cat /etc/mavenrc
