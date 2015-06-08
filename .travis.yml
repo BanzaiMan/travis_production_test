@@ -6,4 +6,4 @@ install:
   - true
 
 script:
-  - cat ~/.mvnrc
+  - cat /etc/mvnrc
