@@ -1,6 +1,4 @@
-language: clojure
-
-sudo: false
+language: objective-c
 
 install:
   - true
