@@ -1,9 +1,10 @@
-language: objective-c
+language: go
 
-osx_image: beta-xcode6.2
+go:
+  - tip
 
 install:
-  - true
+  - sudo sysctl kern.rthreads=1
 
 script:
   - true
