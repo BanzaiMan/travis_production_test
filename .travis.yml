@@ -7,4 +7,11 @@ install:
   - sudo sysctl kern.rthreads=1
 
 script:
-  - true
+  - false
+
+notifications:
+  email:
+    recipients:
+      - daniel.buch+BanzaiMan-travis_production_test@gmail.com
+    on_success: change
+    on_failure: always
