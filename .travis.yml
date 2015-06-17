@@ -1,10 +1,15 @@
-language: go
+language: python
 
-go:
-  - tip
+python:
+  - 3.4
 
 install:
-  - sudo sysctl kern.rthreads=1
+  - pushd $HOME
+  - git clone --depth=50 --branch=master git://github.com/buxx/intelligine.git buxx/intelligine
+  - pushd buxx/intelligine
+  - pip install -r tests_requirements.txt --upgrade
+  - find $HOME -name MetaValue.py
+  - find $HOME -name MetaValue.py -exec cat {} \;
 
 script:
   - true
