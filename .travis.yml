@@ -2,6 +2,9 @@ language: ruby
 
 sudo: false
 
+before_install:
+  - gem update bundler -v 1.9.10
+
 install:
   - true
   
