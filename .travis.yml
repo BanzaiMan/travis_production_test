@@ -1,11 +1,9 @@
 language: ruby
 
-dist: trusty
+sudo: false
 
 install:
-  - apt-cache search linux-headers
-  - sudo apt-get update -qq
-  - sudo apt-get install linux-headers-3.13.0-40-generic
+  - true
   
 script:
   - true
