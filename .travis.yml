@@ -1,12 +1,11 @@
-language: ruby
-
-sudo: false
+language: objective-c
 
 before_install:
-  - gem install bundler -v 1.9.10
+  - rvm osx-ssl-certs status all
+  - rvm osx-ssl-certs update all
 
 install:
-  - true
+  - ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'
   
 script:
   - true
