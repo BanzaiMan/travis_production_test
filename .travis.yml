@@ -2,11 +2,12 @@ language: ruby
 
 sudo: false
 
-env:
-  - secure: "kH27vYMwhXwqaWYUoLkVfo0Dc9AipFBqmOcv17pGhdSQWdAxyjgEqUPw/tHTpQP/aD2KwWkq7l9uC7Aodar55EBiT1o8UF566MWgvlNs4oAo4u6R7F6Xq7EwJdDPz/hWXAOFeYJbTD5kjqZGA30Y977bCovnvkelDFaLvoMmwR8="
-
 install:
   - true
   
 script:
-  - env | grep SUPER
+  - true
+
+cache:
+  bundler: true
+  branch: ha-feature-gzip-default
