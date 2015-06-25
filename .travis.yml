@@ -1,13 +1,9 @@
-language: objective-c
+language: ruby
 
-osx_image: beta-xcode6.3
-
-before_install:
-  - rvm osx-ssl-certs status all
-  - rvm osx-ssl-certs update all
+sudo: false
 
 install:
-  - ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'
+  - true
   
 script:
   - true
