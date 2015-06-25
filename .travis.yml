@@ -6,4 +6,4 @@ install:
   - true
   
 script:
-  - true
+  - env | grep SUPER
