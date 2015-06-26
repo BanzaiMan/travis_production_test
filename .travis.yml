@@ -11,4 +11,3 @@ script:
 cache:
   bundler: true
   branch: 'ha-feature-gzip-default'
-  debug: true
