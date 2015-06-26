@@ -9,8 +9,6 @@ before_install:
   - echo "export BAR=BAZ" >> ~/.bashrc
   - source ~/.bashrc
 
-install:
+script:
   - true
 
-script:
-  - env | grep BAR
