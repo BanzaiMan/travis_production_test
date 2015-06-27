@@ -5,10 +5,9 @@ sudo: false
 rvm:
   - 2.1.5
   
-before_install:
-  - echo "export BAR=BAZ" >> ~/.bashrc
-  - source ~/.bashrc
+install:
+  - true
 
 script:
-  - true
+  - env | grep SECRET
 
