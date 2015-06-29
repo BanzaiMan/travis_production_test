@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-gem 'actionmailer', '= 4.1.11'
+gem 'i18n'
 
