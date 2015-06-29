@@ -8,9 +8,6 @@ cache:
 
 rvm:
   - 2.1.5
-  
-install:
-  - true
 
 script:
   - true
