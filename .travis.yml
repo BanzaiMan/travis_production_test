@@ -5,7 +5,7 @@ sudo: false
 cache: bundler
 
 before_install:
-  - echo -e "souce 'https://rubygems.org'\ngem 'rake'\n" > Gemfile
+  - echo -e "source 'https://rubygems.org'\ngem 'rake'\n" > Gemfile
 
 script:
   - true
