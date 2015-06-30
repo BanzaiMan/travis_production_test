@@ -6,6 +6,7 @@ cache: bundler
 
 before_install:
   - echo -e "source 'https://rubygems.org'\ngem 'rake'\n" > Gemfile
+  - rm Gemfile.lock
 
 script:
   - true
