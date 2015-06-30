@@ -1,13 +1,11 @@
-language: perl6
+language: ruby
 
 sudo: false
 
-perl6:
-  - latest
-  - 2015.06
+cache: bundler
 
-install:
-  - true
+before_install:
+  - echo -e "souce 'https://rubygems.org'\ngem 'rake'\n" > Gemfile
 
 script:
   - true
