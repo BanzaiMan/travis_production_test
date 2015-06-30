@@ -1,12 +1,10 @@
-language: ruby
+language: perl6
+perl6:
+  - latest
+  - 2015.06
 
-sudo: false
-
-cache:
-  bundler: true
-
-rvm:
-  - 2.1.5
+install:
+  - true
 
 script:
   - true
