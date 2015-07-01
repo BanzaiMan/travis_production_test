@@ -4,9 +4,13 @@ sudo: false
 
 cache: bundler
 
-before_install:
-  - echo -e "source 'https://rubygems.org'\ngem 'rake'\n" > Gemfile
-  - rm Gemfile.lock
+addons:
+  apt:
+    packages:
+      - libsdl1.2-dev
+
+install:
+  - true
 
 script:
   - true
