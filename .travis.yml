@@ -3,6 +3,7 @@ language: ruby
 sudo: false
 
 cache:
+  edge: true
   directories:
     - foo
 
