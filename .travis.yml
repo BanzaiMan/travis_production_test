@@ -2,17 +2,14 @@ language: ruby
 
 sudo: false
 
-cache: bundler
-
-addons:
-  apt:
-    packages:
-      - libsdl1.2-dev
+cache:
+  directories:
+    - foo
 
 install:
-  - true
+  - mkdir foo
+  - touch foo/bar
 
 script:
   - true
-  
-  
+
