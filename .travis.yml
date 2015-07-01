@@ -7,7 +7,6 @@ cache:
     - foo
 
 install:
-  - mkdir foo
   - touch foo/bar
 
 script:
