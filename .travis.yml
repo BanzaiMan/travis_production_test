@@ -3,6 +3,7 @@ language: ruby
 sudo: false
 
 cache:
+  branch: ha-feature-md5deep
   directories:
     - foo
 
