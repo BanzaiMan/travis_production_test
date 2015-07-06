@@ -4,7 +4,11 @@ sudo: false
 
 cache:
   branch: md5deep_debug
-  bundler: true
+  directories:
+    - vendor/bundle
+
+install:
+  - bundle install
 
 script:
   - true
