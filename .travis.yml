@@ -4,10 +4,10 @@ sudo: false
 
 cache:
   branch: md5deep_debug
-  bundler: true
   directories:
     - $HOME/.gradle
     - cache
+    - vendor/bundle
 
 install:
   - touch $HOME/.gradle/foo
