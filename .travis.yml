@@ -3,12 +3,12 @@ language: ruby
 sudo: false
 
 cache:
-  edge: true
+  branch: md5deep
   directories:
-    - foo
+    - $HOME/.gradle
 
 install:
-  - touch foo/bar
+  - touch $HOME/.gradle/foo
 
 script:
   - true
