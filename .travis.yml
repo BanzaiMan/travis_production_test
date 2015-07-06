@@ -11,8 +11,8 @@ script:
 
 before_cache:
   - ls -l $CASHER_DIR
-  - cat $CASHER_DIR/mtime.yml || true
-  - cat $CASHER_DIR/md5sums || true
-  - cat $CASHER_DIR/paths || true
+  # - cat $CASHER_DIR/mtime.yml
+  - cat $CASHER_DIR/md5sums
+  - cat $CASHER_DIR/paths
   - md5deep -x $CASHER_DIR/md5sums -r $HOME/.gradle || true
 
