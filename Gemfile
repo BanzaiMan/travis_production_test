@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-gem 'i18n', '~> 0.6.11'
+gem 'i18n'
 
