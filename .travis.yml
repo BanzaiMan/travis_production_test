@@ -4,6 +4,7 @@ sudo: false
 
 cache:
   branch: md5deep_debug
+  bundler: true
   directories:
     - $HOME/.gradle
     - cache
@@ -12,6 +13,7 @@ install:
   - touch $HOME/.gradle/foo
   - echo "bar" > $HOME/.gradle/foo
   - touch cache/empty_file
+  - bundle install
 
 script:
   - true
