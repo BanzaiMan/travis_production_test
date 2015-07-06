@@ -3,11 +3,8 @@ language: ruby
 sudo: false
 
 cache:
-  directories:
-    - vendor/bundle
-
-install:
-  - bundle install
+  branch: md5deep_debug
+  bundler: true
 
 script:
   - true
@@ -15,5 +12,6 @@ script:
 before_cache:
   - cat $CASHER_DIR/mtime.yml || true
   - cat $CASHER_DIR/md5sums || true
+  - cat $CASHER_DIR/paths || true
   - md5deep -x $CASHER_DIR/md5sums -r $HOME/.gradle || true
 
