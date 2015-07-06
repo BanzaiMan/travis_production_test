@@ -10,7 +10,7 @@ script:
   - cat $CASHER_DIR/bin/casher
 
 before_cache:
-  - ll $CASHER_DIR
+  - ls -l $CASHER_DIR
   - cat $CASHER_DIR/mtime.yml || true
   - cat $CASHER_DIR/md5sums || true
   - cat $CASHER_DIR/paths || true
