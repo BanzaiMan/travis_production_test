@@ -7,7 +7,7 @@ cache:
   bundler: true
 
 script:
-  - true
+  - cat $CASHER_DIR/bin/casher
 
 before_cache:
   - cat $CASHER_DIR/mtime.yml || true
