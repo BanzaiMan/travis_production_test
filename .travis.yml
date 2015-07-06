@@ -9,6 +9,7 @@ cache:
 
 install:
   - touch $HOME/.gradle/foo
+  - echo "bar" >> $HOME/.gradle/foo
 
 script:
   - true
