@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 cache:
-  branch: md5deep
+  branch: md5deep_debug
   directories:
     - $HOME/.gradle
 
