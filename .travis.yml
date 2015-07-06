@@ -10,7 +10,7 @@ script:
   - true
 
 before_cache:
-  - cat $CASHER_DIR/mtime.yml
-  - cat $CASHER_DIR/md5sums
-  - md5deep -x $CASHER_DIR/md5sums -r $HOME/.gradle
+  - cat $CASHER_DIR/mtime.yml || true
+  - cat $CASHER_DIR/md5sums || true
+  - md5deep -x $CASHER_DIR/md5sums -r $HOME/.gradle || true
 
