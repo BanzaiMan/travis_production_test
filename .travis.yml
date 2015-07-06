@@ -1,10 +1,10 @@
-language: ruby
+language: python
 
 sudo: false
 
 cache:
   branch: md5deep_debug
-  bundler: true
+  pip: true
 
 script:
   - cat $CASHER_DIR/bin/casher
