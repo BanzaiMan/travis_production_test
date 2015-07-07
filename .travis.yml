@@ -1,10 +1,11 @@
-language: python
+language: node_js
 
 sudo: false
 
 cache:
   branch: md5deep_debug
-  pip: true
+  directories:
+    - node_modules
 
 script:
   - cat $CASHER_DIR/bin/casher
