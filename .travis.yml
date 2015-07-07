@@ -9,6 +9,7 @@ cache:
 
 script:
   - cat $CASHER_DIR/bin/casher
+  - touch node_modules/foo
 
 before_cache:
   - ls -l $CASHER_DIR
