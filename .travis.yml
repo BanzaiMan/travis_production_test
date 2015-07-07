@@ -2,9 +2,16 @@ language: java
 
 sudo: false
 
-apt:
-  packages:
-    - oracle-java9-installer
+addons:
+  apt:
+    packages:
+      - oracle-java9-installer
+
+before_install:
+  - remove_dir_from_path $JAVA_HOME/bin
+  - export JAVA_HOME=/usr/lib/jvm/java-8-oracle-amd64
+  - export PATH=$JAVA_HOME/bin:$PATH
+  - java -version
 
 script:
   - true
