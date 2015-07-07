@@ -1,20 +1,14 @@
-language: node_js
+language: java
 
 sudo: false
 
-cache:
-  #  branch: md5deep_debug
-  directories:
-    - node_modules
+apt:
+  packages:
+    - oracle-java9-installer
 
 script:
-  - cat $CASHER_DIR/bin/casher
-  - touch node_modules/foo
+  - true
 
 before_cache:
-  - ls -l $CASHER_DIR
-  # - cat $CASHER_DIR/mtime.yml
-  - cat $CASHER_DIR/md5sums
-  - cat $CASHER_DIR/paths
-  - md5deep -x $CASHER_DIR/md5sums -r $HOME/.gradle || true
+  - true
 
