@@ -7,7 +7,7 @@ cache:
     - foo
     - bar
 
-before_install:
+install:
   - ls foo bar
   - touch foo/bar
   - touch bar/baz
