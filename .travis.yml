@@ -18,4 +18,4 @@ script:
   
 before_cache:
   - cat $CASHER_DIR/md5sums
-
+  - cat $CASHER_DIR/paths
