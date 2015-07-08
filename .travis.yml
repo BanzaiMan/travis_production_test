@@ -14,4 +14,7 @@ install:
 
 script:
   - true
+  
+before_cache:
+  - cat $CASHER_DIR/md5sums
 
