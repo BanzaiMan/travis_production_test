@@ -14,7 +14,7 @@ install:
   - touch bar/baz
 
 script:
-  - true
+  - cat $CASHER_DIR/bin/casher
   
 before_cache:
   - cat $CASHER_DIR/md5sums
