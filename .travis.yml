@@ -1,21 +1,10 @@
-language: java
+language: erlang
 
-sudo: false
-
-cache:
-  branch: md5deep_debug
-  directories:
-    - foo
-    - bar
+otp_release:
+  - '17.2'
 
 install:
-  - ls foo bar
-  - touch foo/bar
-  - touch bar/baz
+  - true
 
 script:
-  - cat $CASHER_DIR/bin/casher
-  
-before_cache:
-  - cat $CASHER_DIR/md5sums
-  - cat $CASHER_DIR/paths
+  - true
