@@ -6,4 +6,4 @@ install:
   - true
 
 script:
-  - which jq
+  - which bc
