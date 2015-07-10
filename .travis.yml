@@ -1,9 +1,12 @@
-language: ruby
+language: objective-c
 
-sudo: false
+osx_image: beta-xcode6.3
+
+cache:
+  bundler: true
 
 install:
   - true
 
 script:
-  - which bc
+  - true
