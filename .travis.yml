@@ -1,10 +1,9 @@
-language: erlang
+language: ruby
 
-otp_release:
-  - '17.2'
+sudo: false
 
 install:
   - true
 
 script:
-  - true
+  - which jq
