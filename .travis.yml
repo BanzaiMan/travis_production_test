@@ -1,12 +1,15 @@
-language: objective-c
+language: haskell
 
-osx_image: beta-xcode6.3
+sudo: false
 
-cache:
-  bundler: true
+env:
+  - GHCVER=7.8.4
+  - GHCVER=7.10.1
+  - GHCVER=head
 
-install:
-  - true
-
-script:
-  - true
+addons:
+  apt:
+    sources:
+    - hvr-ghc
+    packages:
+    - ghc-$GHCVER
