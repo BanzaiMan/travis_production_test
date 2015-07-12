@@ -1,7 +1,9 @@
-language: python
+language: ruby
 
 sudo: false
 
-cache: pip
+install:
+  - true
 
-script: true
+script:
+  - which firefox
