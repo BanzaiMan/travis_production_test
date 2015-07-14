@@ -10,6 +10,7 @@ cache:
   
 install:
   - touch foo/bar bar/baz
+  - touch foo/baz bar/foo
 
 script:
   - true
