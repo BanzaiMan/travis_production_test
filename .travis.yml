@@ -2,8 +2,12 @@ language: ruby
 
 sudo: false
 
+cache:
+  - foo
+  - bar
+  
 install:
-  - true
+  - touch foo/bar bar/baz
 
 script:
-  - which firefox
+  - true
