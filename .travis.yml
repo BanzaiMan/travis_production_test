@@ -3,6 +3,7 @@ language: ruby
 sudo: false
 
 cache:
+  branch: master
   directories:
     - foo
     - bar
