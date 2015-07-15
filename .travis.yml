@@ -1,15 +1,18 @@
-language: python
+language: ruby
 
 sudo: false
 
-python:
-  - pypy3
-  - pypy
-
 install:
   - true
+  
+before_script:
+  - echo "echo hello" > script.sh
+  - chmod +x script.sh
 
 script:
-  - ls -lad /opt/python/*/lib-python/
-  - ls -lad /opt/python/*/lib-python/*
-  - ls -lad /opt/python/*/lib-python/*/*
+  - true
+  
+deploy:
+  edge: true
+  provider: script
+  script: script.sh
