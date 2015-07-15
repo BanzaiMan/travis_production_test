@@ -16,3 +16,5 @@ deploy:
   edge: true
   provider: script
   script: script.sh
+  on:
+    branch: master
