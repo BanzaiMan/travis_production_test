@@ -10,3 +10,4 @@ install:
 script:
   - ls -lad /opt/python/*/lib-python/
   - ls -lad /opt/python/*/lib-python/*
+  - ls -lad /opt/python/*/lib-python/*/*
