@@ -2,15 +2,7 @@ language: java
 
 sudo: false
 
-before_install:
-  - wget http://apache.mirror.iphh.net/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
-  - tar xfz apache-maven-3.0.5-bin.tar.gz
-  - export PATH=$PWD/apache-maven-3.0.5/bin:$PATH
-  - export M2_HOME=$PWD/apache-maven-3.0.5
-  - which mvn
-  - mvn --version
-  - $PWD/apache-maven-3.0.5/bin/mvn --version
-  - md5sum $PWD/apache-maven-3.0.5/bin/mvn
+
 
 install:
   - true
