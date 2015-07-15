@@ -15,7 +15,7 @@ script:
 deploy:
   edge: true
   provider: script
-  script: script.sh
+  script: ./script.sh
   skip_cleanup: true
   on:
     branch: default
