@@ -1,5 +1,7 @@
 language: python
 
+sudo: false
+
 python:
   - pypy3
   - pypy
