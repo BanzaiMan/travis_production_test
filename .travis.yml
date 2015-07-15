@@ -4,8 +4,6 @@ python:
   - pypy3
   - pypy
 
-sudo: false
-
 install:
   - true
 
