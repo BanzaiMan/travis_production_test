@@ -1,16 +1,14 @@
-language: ruby
+language: python
+
+python:
+  - pypy3
+  - pypy
 
 sudo: false
 
-cache:
-  branch: master
-  directories:
-    - foo
-    - bar
-  
 install:
-  - touch foo/bar bar/baz
-  - touch foo/baz bar/foo
+  - true
 
 script:
-  - true
+  - ls -lad /opt/python/*/lib-python/
+  - ls -lad /opt/python/*/lib-python/*
