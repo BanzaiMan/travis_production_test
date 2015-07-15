@@ -1,21 +1,12 @@
-language: ruby
+language: go
 
 sudo: false
 
 install:
-  - true
+  - ruby --version # before
+  - rvm use 2.1.6 --binary --fuzzy --install
+  - ruby --version # after
   
-before_script:
-  - echo "exit 1" > script.sh
-  - chmod +x script.sh
-
 script:
   - true
   
-deploy:
-  edge: true
-  provider: script
-  script: ./script.sh
-  skip_cleanup: true
-  on:
-    branch: default
