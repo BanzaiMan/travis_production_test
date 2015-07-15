@@ -6,7 +6,7 @@ install:
   - true
   
 before_script:
-  - echo "echo hello" > script.sh
+  - echo "exit 1" > script.sh
   - chmod +x script.sh
 
 script:
