@@ -3,6 +3,7 @@ language: java
 sudo: false
 
 cache:
+  edge: true
   directories:
     - fo*
 
