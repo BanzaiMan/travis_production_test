@@ -1,15 +1,10 @@
-language: java
+language: ruby
 
 sudo: false
 
-cache:
-  edge: true
-  directories:
-    - fo*
-
 install:
   - true
-  
+
 script:
-  - true
-  
+  - echo $TRAVIS_RUBY_VERSION
+
