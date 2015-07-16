@@ -2,9 +2,21 @@ language: ruby
 
 sudo: false
 
-install:
-  - true
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-precise-3.6
+      - debian-sid
+      - kalakris-cmake
+    packages:
+      - build-essential
+      - clang-3.6
+      - clang-format-3.6
+      - llvm-3.6
+      - llvm-3.6-dev
+      - cmake
 
-script:
-  - echo $TRAVIS_RUBY_VERSION
+install: true
+
+script: true
 
