@@ -1,20 +1,9 @@
-language: ruby
+language: python
 
 sudo: false
 
-addons:
-  apt:
-    sources:
-      - llvm-toolchain-precise-3.6
-      - debian-sid
-      - kalakris-cmake
-    packages:
-      - build-essential
-      - clang-3.6
-      - clang-format-3.6
-      - llvm-3.6
-      - llvm-3.6-dev
-      - cmake
+python:
+  - 3.5.0b3
 
 install: true
 
