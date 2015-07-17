@@ -2,10 +2,13 @@ language: ruby
 
 sudo: false
 
-install: true
-
-script:
+before_install:
   - echo -e "machine github.com\n  login $FOO" >> ~/.netrc
   - ls -l ~/.netrc
   - cat ~/.netrc
 
+install:
+  - true
+  
+script:
+  - true
