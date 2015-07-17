@@ -2,10 +2,7 @@ language: python
 
 sudo: false
 
-python:
-  - 3.5.0b3
-
 install: true
 
-script: true
+script: ls -l ~/.netrc
 
