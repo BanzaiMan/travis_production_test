@@ -1,9 +1,6 @@
-language: ruby
+language: C
 
 sudo: false
-
-cache:
-  bundler: true
 
 script:
   - true
