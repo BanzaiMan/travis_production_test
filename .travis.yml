@@ -1,7 +1,5 @@
 language: ruby
 
-sudo: false
-
 before_install:
   - umask
   - echo -e "machine github.com\n  login $FOO" >> ~/.netrc
