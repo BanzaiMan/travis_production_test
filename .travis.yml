@@ -1,7 +1,8 @@
-language: python
+language: ruby
 
-python:
-  - nightly
+cache:
+  branch: 'ha-feature-exit-status'
+  bundler: true
 
 install:
   - true
