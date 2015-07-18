@@ -1,10 +1,7 @@
-language: ruby
+language: python
 
-before_install:
-  - umask
-  - echo -e "machine github.com\n  login $FOO" >> ~/.netrc
-  - ls -l ~/.netrc
-  - cat ~/.netrc
+python:
+  - nightly
 
 install:
   - true
