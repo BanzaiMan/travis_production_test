@@ -1,4 +1,4 @@
-language: C
+language: Erlang
 
 sudo: false
 
