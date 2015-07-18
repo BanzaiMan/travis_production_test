@@ -1,5 +1,7 @@
 language: ruby
 
+sudo: false
+
 cache:
   branch: 'ha-feature-exit-status'
   bundler: true
