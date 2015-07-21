@@ -26,4 +26,4 @@ install:
   - true
   
 script:
-  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "sudo apt-get install libruby1.9.1; ruby -rjson -e 'puts 1'"
+  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "sudo apt-get install ruby1.9.1; ruby1.9.1 -rjson -e 'puts 1'"
