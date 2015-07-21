@@ -26,4 +26,4 @@ install:
   - true
   
 script:
-  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "git clone https://github.com/flori/json.git; cd json; sudo ruby ./install.rb; ruby1.9.1 -rjson -e 'puts 1'"
+  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "git clone https://github.com/flori/json.git; cd json; sudo ruby ./install.rb; ruby -rjson -e 'puts 1'"
