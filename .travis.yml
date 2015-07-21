@@ -2,14 +2,37 @@ language: bash
 
 sudo: 9000
 
-install:
-  - true
+dist: trusty
 
-script:
+env:
+  global:
+    - DEBIAN_FRONTEND=noninteractive
+    - SSH_OPTS='-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+
+before_install:
+  - if [ -z $PACKAGE ]; then echo "\$PACKAGE not defined" && travis_terminate 2; fi
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GITHUB_OAUTH_TOKEN}:@github.com" > .git/credentials 2>/dev/null
   - git config --global user.email "contact@travis-ci.com"
   - git config --global user.name "Travis CI APT package tester"
-  - export GITHUB_ISSUES_URL="https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${ISSUE_NUMBER}"
-  - echo ${GITHUB_ISSUES_URL}/comments
-  - curl ${GITHUB_ISSUES_URL}/comments
+  - pushd ..
+  - git clone https://github.com/travis-ci/apt-package-whitelist.git
+  - popd
+  - sudo apt-get update -y -qq
+  - sudo apt-get install -yqq lvm2 xfsprogs sshpass
+  - if ! command -v docker ; then curl -sSL https://get.docker.io | bash; fi
+  - sudo usermod -a -G docker travis
+  - docker pull quay.io/travisci/travis-ruby:latest
+  - jq --version || sudo curl -sSL -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && sudo chmod 0755 /usr/local/bin/jq
+  - docker images | grep -q -E '^travis\\s+\\bruby\\b\\s+' || docker tag quay.io/travisci/travis-ruby:latest travis:ruby
+  - docker run -v /var/tmp:/var/tmp -v /home/travis/build:/home/travis/build -d travis:ruby | tee docker_id
+  - docker inspect $(< docker_id) | awk -F '"' '/IPAddress/ {print $4}' | tee docker_ip_address
+  - docker ps
+  - while ! nc -v -z -w 30 $(< docker_ip_address) 22; do sleep 1; done
+
+install:
+  - true
+  
+script:
+  - sshpass -p travis scp $SSH_OPTS build.sh travis@$(< docker_ip_address):.
+  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "which ruby; ruby --version; gem install jron; ruby -rjson -e 'puts 1'"
