@@ -26,5 +26,4 @@ install:
   - true
   
 script:
-  - sshpass -p travis scp $SSH_OPTS build.sh travis@$(< docker_ip_address):.
-  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "which ruby; ruby --version; gem install jron; ruby -rjson -e 'puts 1'"
+  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "rvm use 2.1.6 --install --fuzzy; which ruby; ruby --version; gem install jron; ruby -rjson -e 'puts 1'"
