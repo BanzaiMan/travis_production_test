@@ -1,9 +1,9 @@
-language: ruby
+language: bash
 
-sudo: false
+sudo: 9000
 
 install:
   - true
 
 script:
-  - true
+  - while ! nc -v -z -w 30 localhost 22; do
