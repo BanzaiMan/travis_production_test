@@ -6,4 +6,4 @@ install:
   - true
 
 script:
-  - while ! nc -v -z -w 30 localhost 22; do
+  - while ! nc -v -z -w 30 localhost 22; do sleep 1; done
