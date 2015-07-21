@@ -26,4 +26,5 @@ install:
   - true
   
 script:
-  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3; curl -sSL https://get.rvm.io | sudo bash -s stable; ~/.rvm/bin/rvm use --binary --fuzzy --install 2.1.5; which ruby; ruby --version; gem install jron; ruby -rjson -e 'puts 1'"
+  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3; curl -sSL https://get.rvm.io | sudo bash -s stable"
+  - sshpass -p travis ssh -n -t -t $SSH_OPTS travis@$(< docker_ip_address) "rvm use --binary --fuzzy --install 2.1.5; which ruby; ruby --version; gem install jron; ruby -rjson -e 'puts 1'"
