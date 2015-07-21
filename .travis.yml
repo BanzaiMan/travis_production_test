@@ -11,5 +11,5 @@ script:
   - git config --global user.email "contact@travis-ci.com"
   - git config --global user.name "Travis CI APT package tester"
   - export GITHUB_ISSUES_URL="https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${ISSUE_NUMBER}"
-  - echo ${GITHUB_ISSUES_URL}
-  - curl ${GITHUB_ISSUES_URL}
+  - echo ${GITHUB_ISSUES_URL}/comments
+  - curl ${GITHUB_ISSUES_URL}/comments
