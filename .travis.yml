@@ -6,4 +6,10 @@ install:
   - true
 
 script:
-  - while ! nc -v -z -w 30 localhost 22; do sleep 1; done
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GITHUB_OAUTH_TOKEN}:@github.com" > .git/credentials 2>/dev/null
+  - git config --global user.email "contact@travis-ci.com"
+  - git config --global user.name "Travis CI APT package tester"
+  - export GITHUB_ISSUES_URL="https://api.github.com/repos/${TRAVIS_REPO_SLUG}/issues/${ISSUE_NUMBER}"
+  - echo "GITHUB_ISSUES_URL: ${GITHUB_ISSUES_URL}"
+  - curl ${GITHUB_ISSUES_URL}
