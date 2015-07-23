@@ -2,15 +2,11 @@ language: ruby
 
 sudo: false
 
-matrix:
-  include:
-    - addons:
-        mariadb: '10.0'
-      rvm: jruby
-    - rvm: jruby
-
+rvm:
+  - jruby-9.0.0.0
+  
 install:
   - true
   
 script:
-  - mysql --version
+  - true
