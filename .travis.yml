@@ -2,10 +2,9 @@ language: ruby
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - p7zip-full
+env:
+  - TRAVIS_POSTGRESQL_VERSION=9.4
+  - TRAVIS_POSTGRESQL_VERSION=9.3
 
 install:
   - true
