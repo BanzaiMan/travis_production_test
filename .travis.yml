@@ -2,10 +2,10 @@ language: ruby
 
 sudo: false
 
-env:
-  - TRAVIS_POSTGRESQL_VERSION=9.4
-  - TRAVIS_POSTGRESQL_VERSION=9.3
-
+before_install:
+  - ulimit -c
+  - ulimit -c unlimited
+  - ulimit -c
 install:
   - true
   
