@@ -2,9 +2,11 @@ language: ruby
 
 sudo: false
 
-rvm:
-  - jruby-9.0.0.0
-  
+addons:
+  apt:
+    packages:
+      - p7zip-full
+
 install:
   - true
   
