@@ -2,10 +2,12 @@ language: ruby
 
 sudo: false
 
-before_install:
-  - ulimit -c
-  - ulimit -c unlimited
-  - ulimit -c
+rvm:
+  - jruby-9.0.0.0
+
+before_install
+  - rvm get head
+  - rvm use --install jruby-9.0.0.0
 install:
   - true
   
