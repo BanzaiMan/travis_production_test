@@ -5,7 +5,7 @@ sudo: false
 rvm:
   - jruby-9.0.0.0
 
-before_install
+before_install:
   - rvm get head
   - rvm use --install jruby-9.0.0.0
 install:
