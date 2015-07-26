@@ -1,10 +1,13 @@
-language: node_js
+language: ruby
 
 sudo: false
+
+ruby:
+  - jruby-9.0.0.0
 
 install:
   - true
   
 script:
-  - echo $TRAVIS_NODE_VERSION
+  - echo $TRAVIS_RUBY_VERSION
 
