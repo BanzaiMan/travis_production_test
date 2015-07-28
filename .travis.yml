@@ -7,11 +7,6 @@ sudo: false
 
 matrix:
   include:
-    # fully specify builds, include can't dynamically expand matrix entries
-    - os: osx
-      compiler: clang
-      env: TARGET="osx"
-      sudo: required
     - env: TARGET="android" OPT="armv7"
       addons:
         apt:
