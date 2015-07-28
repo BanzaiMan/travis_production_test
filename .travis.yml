@@ -1,13 +1,13 @@
 language: ruby
 
+rvm: '2.1.5'
+
 sudo: false
 
-ruby:
-  - jruby-9.0.0.0
-
-install:
-  - true
-  
-script:
-  - echo $TRAVIS_RUBY_VERSION
-
+matrix:
+  include:
+    - sudo: false
+      addons:
+        apt:
+          packages:
+          - p7zip-full
