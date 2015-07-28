@@ -1,5 +1,3 @@
-os:
-  - linux
 language: c++
 compiler: gcc
 sudo: false
@@ -7,14 +5,12 @@ sudo: false
 
 matrix:
   include:
-    - env: TARGET="android" OPT="armv7"
-      sudo: false
+    - sudo: false
       addons:
         apt:
           packages:
           - p7zip-full
-    - env: TARGET="android" OPT="x86"
-      sudo: fasle
+    - sudo: false
       addons:
         apt:
           packages:
