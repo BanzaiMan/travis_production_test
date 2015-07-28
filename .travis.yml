@@ -11,8 +11,7 @@ matrix:
         apt:
           packages:
           - p7zip-full
-    - sudo: false
-      addons:
-        apt:
-          packages:
-          - p7zip-full      
+
+install: true
+
+script: true
