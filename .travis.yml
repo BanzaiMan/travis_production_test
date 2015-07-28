@@ -1,13 +1,24 @@
-language: ruby
-
-rvm: '2.1.5'
-
+os:
+  - linux
+language: c++
+compiler: gcc
 sudo: false
+
 
 matrix:
   include:
-    - sudo: false
+    # fully specify builds, include can't dynamically expand matrix entries
+    - os: osx
+      compiler: clang
+      env: TARGET="osx"
+      sudo: required
+    - env: TARGET="android" OPT="armv7"
       addons:
         apt:
           packages:
           - p7zip-full
+    - env: TARGET="android" OPT="x86"
+      addons:
+        apt:
+          packages:
+          - p7zip-full      
