@@ -6,6 +6,7 @@ sudo: false
 matrix:
   include:
     - sudo: false
+      env: FOO=BAR
       addons:
         apt:
           packages:
