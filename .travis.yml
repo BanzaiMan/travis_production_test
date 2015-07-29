@@ -1,17 +1,9 @@
-language: c++
-compiler: gcc
+language: ruby
+
 sudo: false
 
-
-matrix:
-  include:
-    - sudo: false
-      env: FOO=BAR
-      addons:
-        apt:
-          packages:
-          - p7zip-full
-
-install: true
+cache:
+  branch: ha-feature-comprehensive-logging
+  bundler: true
 
 script: true
