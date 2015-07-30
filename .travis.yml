@@ -1,11 +1,11 @@
-language: objective-c
+language: android
 
 env:
   - FOO=BAR
 
 matrix:
   include:
-    - language: android
+    - language: objective-c
       env: FOO=BAZ
 
 install:
