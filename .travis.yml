@@ -1,8 +1,12 @@
 language: objective-c
 
+env:
+  - FOO=BAR
+
 matrix:
   include:
     - language: android
+      env: FOO=BAZ
 
 install:
   - true
