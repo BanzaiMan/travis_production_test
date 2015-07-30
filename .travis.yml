@@ -1,8 +1,12 @@
-language: android
+language: php
 
-matrix:
-  include:
-    - os: osx
+php:
+  - 7
+
+before_install:
+  - echo $PATH
+  - which phpdbg || true
+  - find $HOME -name phpdbg || true
 
 install:
   - true
