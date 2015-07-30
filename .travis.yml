@@ -9,6 +9,7 @@ before_install:
   - echo $PATH
   - which phpdbg || true
   - find $HOME -name phpdbg || true
+  - ls $HOME/.phpenv/{shims,bin}
   - cat $HOME/.phpenv/shims/phpdbg || true
 
 install:
