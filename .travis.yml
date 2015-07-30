@@ -3,10 +3,13 @@ language: php
 php:
   - 7
 
+sudo: false
+
 before_install:
   - echo $PATH
   - which phpdbg || true
   - find $HOME -name phpdbg || true
+  - cat $HOME/.phpenv/shims/phpdbg || true
 
 install:
   - true
