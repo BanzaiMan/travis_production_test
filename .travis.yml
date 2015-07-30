@@ -5,8 +5,7 @@ env:
 
 matrix:
   include:
-    - language: objective-c
-      env: FOO=BAZ
+    - os: osx
 
 install:
   - true
