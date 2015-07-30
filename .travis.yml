@@ -1,9 +1,11 @@
-language: ruby
+language: objective-c
 
-sudo: false
+matrix:
+  include:
+    - language: android
 
-cache:
-  branch: ha-feature-comprehensive-logging
-  bundler: true
+install:
+  - true
 
-script: true
+script:
+  - true
