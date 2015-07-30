@@ -1,8 +1,5 @@
 language: android
 
-env:
-  - FOO=BAR
-
 matrix:
   include:
     - os: osx
