@@ -1,7 +1,9 @@
-language: ruby
+language: php
 
 sudo: false
 
+php:
+ - foo 
 install:
   - true
 
