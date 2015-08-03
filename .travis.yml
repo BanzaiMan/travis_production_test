@@ -1,8 +1,9 @@
-language: java
+language: php
 
 sudo: false
 
-
+php:
+  - 7.0.0beta2
 
 install:
   - true
