@@ -1,15 +1,13 @@
-language: ruby
+language: go
 
 sudo: false
 
-env:
-  global:
-    - CURL_LOG_LEVEL=debug
-    - CASHER_LOG_LEVEL=debug
-
 cache:
-  bundler: true
-  branch: verbose-logging
+  directories:
+    - vendor/bundle
+
+install:
+  - echo foo
 
 script:
-  - true
+  - cat ~/build.sh
