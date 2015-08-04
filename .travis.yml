@@ -2,13 +2,13 @@ language: java
 
 sudo: false
 
-env:
-  global:
-    - MAVEN_OPTS=foobar
-    
+addons:
+  apt:
+    packages:
+      - uuid-dev
+
 install:
-  - cat /etc/mavenrc
-  - echo $MAVEN_OPTS
+  - true
 
 script:
-  - true
+  - find /usr/include -name \*uuid\*
