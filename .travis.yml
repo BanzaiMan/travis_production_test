@@ -1,9 +1,9 @@
-language: python
-
-python:
-  - 2.7.8
+language: ruby
 
 sudo: false
+
+addons:
+  mariadb: '10.1'
 
 install:
   - true
