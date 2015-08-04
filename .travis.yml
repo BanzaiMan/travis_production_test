@@ -1,17 +1,13 @@
-language: go
+language: java
 
 sudo: false
 
-cache:
-  directories:
-    - vendor/bundle
+env:
+  global:
+    - MAVEN_OPTS=foobar
     
-before_install:
-  - cat $CASHER_DIR/paths || true
-  - pwd
-
 install:
-  - echo foo
+  - echo $MAVEN_OPTS
 
 script:
   - true
