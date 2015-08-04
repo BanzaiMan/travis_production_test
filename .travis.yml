@@ -4,6 +4,7 @@ sudo: false
 
 cache:
   bundler: true
+  branch: verbose-logging
 
 script:
   - true
