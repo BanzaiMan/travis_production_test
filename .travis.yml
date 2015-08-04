@@ -7,6 +7,7 @@ env:
     - MAVEN_OPTS=foobar
     
 install:
+  - cat /etc/mavenrc
   - echo $MAVEN_OPTS
 
 script:
