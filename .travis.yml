@@ -14,4 +14,4 @@ install:
   - echo foo
 
 script:
-  - cat ~/build.sh
+  - true
