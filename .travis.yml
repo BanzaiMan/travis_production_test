@@ -5,6 +5,10 @@ sudo: false
 cache:
   directories:
     - vendor/bundle
+    
+before_install:
+  - cat $CASHER_DIR/paths || true
+  - pwd
 
 install:
   - echo foo
