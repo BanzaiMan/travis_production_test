@@ -2,13 +2,9 @@ language: java
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - uuid-dev
 
 install:
   - true
 
 script:
-  - find /usr/include -name \*uuid\*
+  - cat /etc/mavenrc
