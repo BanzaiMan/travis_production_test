@@ -12,3 +12,5 @@ deploy:
   provider: pypi
   user: foo
   password: bar
+  on:
+    all_branches: true
