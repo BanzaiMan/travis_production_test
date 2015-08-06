@@ -1,14 +1,9 @@
-language: python
+language: ruby
+
+sudo: false
 
 install:
   - true
   
 script:
-  - cat /etc/mavenrc
-
-deploy:
-  provider: pypi
-  user: foo
-  password: bar
-  on:
-    all_branches: true
+  - true
