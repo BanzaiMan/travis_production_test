@@ -1,10 +1,14 @@
-language: ruby
+language: python
 
 sudo: false
 
-cache:
-  branch: verbose-logging
-  bundler: true
-
+install:
+  - true
+  
 script:
   - cat /etc/mavenrc
+
+deploy:
+  provider: pypi
+  user: foo
+  password: bar
