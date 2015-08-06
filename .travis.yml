@@ -14,4 +14,4 @@ install:
   - true
   
 script:
-  - true
+  - env | sort
