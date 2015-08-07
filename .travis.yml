@@ -1,4 +1,8 @@
-language: scala
+language: python
+
+python:
+  - 3.4.3
+  - 3.3.6
 
 sudo: false
 
@@ -6,5 +10,4 @@ install:
   - true
   
 script:
-  - find ~/.m2
-  - ls -l ~/.m2/settings.xml
+  - true
