@@ -1,13 +1,4 @@
-language: ruby
-
-os:
-  - linux
-
-matrix:
-  include:
-    - os: linux
-      rvm: 2.1
-      env: STYLE_CHECKS=true
+language: scala
 
 sudo: false
 
@@ -15,5 +6,4 @@ install:
   - true
   
 script:
-  - ruby -e "puts ENV.fetch('TRAVIS_OS_NAME')"
-  
+  - find ~/.m2
