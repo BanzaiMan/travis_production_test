@@ -10,8 +10,7 @@ sudo: false
 
 matrix:
   include:
-    - os: linux
-      rvm: 2.1
+    - rvm: 2.1
       env: FOO=BAR
 
 install:
