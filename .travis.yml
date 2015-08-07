@@ -7,4 +7,4 @@ install:
   
 script:
   - find ~/.m2
-  - cat ~/.m2/settings.xml
+  - ls -l ~/.m2/settings.xml
