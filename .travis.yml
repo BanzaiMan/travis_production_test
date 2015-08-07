@@ -5,7 +5,8 @@ os:
 
 matrix:
   include:
-    - rvm: 2.1
+    - os: linux
+      rvm: 2.1
       env: STYLE_CHECKS=true
 
 sudo: false
