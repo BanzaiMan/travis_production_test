@@ -1,20 +1,27 @@
 language: ruby
 
-rvm:
-  - 1.9.3
-
 os:
   - linux
 
-sudo: false
+env:
+  - IMAGEMAGICK_VERSION=6.6.9-10
+  - IMAGEMAGICK_VERSION=6.7.7-10
+  - IMAGEMAGICK_VERSION=latest
+
+rvm:
+  - 2.0
+  - 2.1
 
 matrix:
   include:
     - rvm: 2.1
-      env: FOO=BAR
+      env: STYLE_CHECKS=true
+
+sudo: false
 
 install:
   - true
   
 script:
   - true
+  
