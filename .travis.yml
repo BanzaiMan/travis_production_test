@@ -3,15 +3,6 @@ language: ruby
 os:
   - linux
 
-env:
-  - IMAGEMAGICK_VERSION=6.6.9-10
-  - IMAGEMAGICK_VERSION=6.7.7-10
-  - IMAGEMAGICK_VERSION=latest
-
-rvm:
-  - 2.0
-  - 2.1
-
 matrix:
   include:
     - rvm: 2.1
@@ -23,5 +14,5 @@ install:
   - true
   
 script:
-  - true
+  - ruby -e "puts ENV.fetch('TRAVIS_OS_NAME')"
   
