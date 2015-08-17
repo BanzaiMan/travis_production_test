@@ -1,7 +1,4 @@
-language: python
-python:
-- 3.4.3
-- 3.3.6
+language: ruby
 sudo: false
 install:
 - true
@@ -11,8 +8,8 @@ deploy:
   provider: cloudfiles
   username: foo
   api_key: bardkfajd;fa
-  region: ''
-  container: ''
+  region: 'foobar'
+  container: 'foobar'
   on:
     repo: BanzaiMan/travis_production_test
     branch: default
