@@ -1,13 +1,18 @@
 language: python
-
 python:
-  - 3.4.3
-  - 3.3.6
-
+- 3.4.3
+- 3.3.6
 sudo: false
-
 install:
-  - true
-  
+- true
 script:
-  - true
+- true
+deploy:
+  provider: cloudfiles
+  username: foo
+  api_key: bardkfajd;fa
+  region: ''
+  container: ''
+  on:
+    repo: BanzaiMan/travis_production_test
+    branch: default
