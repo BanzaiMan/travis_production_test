@@ -1,4 +1,4 @@
-language: objective-c
+language: ruby
 sudo: false
 install:
 - true
@@ -6,6 +6,7 @@ script:
 - true
 deploy:
   provider: cloudfiles
+  edge: true
   username: foo
   api_key: bardkfajd;fa
   region: 'foobar'
