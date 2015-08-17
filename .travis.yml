@@ -1,4 +1,4 @@
-language: ruby
+language: objective-c
 sudo: false
 install:
 - true
