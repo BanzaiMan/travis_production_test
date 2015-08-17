@@ -1,12 +1,13 @@
 language: objective-c
 sudo: false
+before_install:
+  - rvm 1.9.3 gem install net-ssh -v 2.9.2
 install:
 - true
 script:
 - true
 deploy:
   provider: cloudfiles
-  edge: true
   username: foo
   api_key: bardkfajd;fa
   region: 'foobar'
