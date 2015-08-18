@@ -1,17 +1,7 @@
-language: objective-c
+language: node_js
+node_js: "0.12"
 sudo: false
-before_install:
-  - rvm list
 install:
 - true
 script:
 - true
-deploy:
-  provider: cloudfiles
-  username: foo
-  api_key: bardkfajd;fa
-  region: 'foobar'
-  container: 'foobar'
-  on:
-    repo: BanzaiMan/travis_production_test
-    branch: default
