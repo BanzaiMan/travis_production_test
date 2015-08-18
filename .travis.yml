@@ -7,4 +7,4 @@ install:
 - which firefox
 script:
 - firefox --version
-- /usr/bin/firefox --version
+- find /usr -name firefox -print -exec {} version \;
