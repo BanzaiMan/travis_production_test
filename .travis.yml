@@ -1,17 +1,14 @@
 language: node_js
 
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - python3
+
 install:
   - true
 script:
-  - true
+  - python3 --version
 
-deploy:
-  provider: npm
-  edge: true
-  email: foo@example.com
-  api_key: foobarbaz
-  on:
-    all_branches: true
-
-after_deploy:
-  - npm version --no-git-tag-version minor
