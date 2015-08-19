@@ -1,13 +1,14 @@
-language: ruby
-
-rvm:
-  - ruby-head
-
-os: osx
-
-osx_image: xcode6.4
+language: node_js
 
 install:
   - true
 script:
   - true
+
+deploy:
+  provider: npm
+  email: foo@example.com
+  api_key: foobarbaz
+
+after_deploy:
+  - npm version --no-git-tag-version minor
