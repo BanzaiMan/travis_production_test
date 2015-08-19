@@ -1,6 +1,11 @@
-language: node_js
+language: ruby
+
+rvm:
+  - ruby-head
+
+os: osx
 
 install:
   - true
 script:
-  - ls -lad /usr/share/apport/apport
+  - true
