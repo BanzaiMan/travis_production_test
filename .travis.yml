@@ -5,6 +5,8 @@ rvm:
 
 os: osx
 
+osx_image: xcode6.4
+
 install:
   - true
 script:
