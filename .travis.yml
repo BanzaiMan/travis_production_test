@@ -12,7 +12,7 @@ deploy:
   provider: npm
   email: reg+npmjs@asari.net
   api_key:
-    secure: "JGbunuKsnK3JT91b2Q8cKJWtriioVYWTRcddHdcNqeZVDOmESai7SF272ObHqn5hFD0Fe8vR7L4v5DQw47CFSh8YrufM9J7lBtSBLE6Yp8XIZ6pJQZv5Ov1LvolYk39QgpKGSBKSmSPv2gY1amE1Hg7CothP1/01X48e3Ixev4o="
+    secure: "dX9sksamjIYqrg68O1yclGMUZlcmx/Eb/GdXfFf6vKBttnnDozG+WcgVCKV1Vhtnro7b8YSuGWYX3gCMZCqKkQrvIaeKZxj8Q1HIz2FACz7+Pb2sLprLeMwjmSBLJvNK2fan6NJCKotKfxoyIc3/shL/5SRfEkJinxn+hn4DAlQ="
   on:
     all_branches: true
     repo: "BanzaiMan/travis_production_test"
