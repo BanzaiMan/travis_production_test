@@ -17,3 +17,6 @@ deploy:
     all_branches: true
     repo: "BanzaiMan/travis_production_test"
 
+after_deploy:
+  - cat npm-debug.log
+
