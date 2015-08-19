@@ -9,6 +9,8 @@ deploy:
   provider: npm
   email: foo@example.com
   api_key: foobarbaz
+  on:
+    all_branches: true
 
 after_deploy:
   - npm version --no-git-tag-version minor
