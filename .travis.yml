@@ -2,13 +2,17 @@ language: node_js
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - python3
-
 install:
   - true
+
 script:
-  - python3 --version
+  - true
+
+deploy:
+  provider: npm
+  email: reg+npmjs@asari.net
+  api_key:
+    secure: "gHFPTSlRJTXqZ3G9EFYZFv8AkXX+BTsIFsUAyjjxXKr9pMy4NQ5b5yv4F8PvBEjZdDTQJWuiyCsypZpnUrSb3yVdHjkDJH/Z3lzCfAlpO4N81FZcm6SJwuK9pnmydSyF9BUwJMNQwLcGy5nJ/f/+uUlxwrEkG8A9HSuRXyV3p4Y="
+  on:
+    all_branches: true
 
