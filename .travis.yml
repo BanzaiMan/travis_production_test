@@ -1,14 +1,12 @@
-language: ruby
-
+language: c++
+compiler: gcc
 matrix:
   include:
-    - sudo: required
-      services:
-        - docker
-    - sudo: false
+    - os: linux
+      env: TARGET="linux"
+  exclude:
+    - compiler: gcc
 
-install:
-  - true
+install: true
 
-script:
-  - true
+script: echo $TARGET
