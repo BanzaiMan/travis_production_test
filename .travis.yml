@@ -1,12 +1,14 @@
-language: node_js
+language: ruby
 
-node_js:
-  - '0.12'
-
+matrix:
+  include:
+    - sudo: required
+      services:
+        - docker
+    - sudo: false
 
 install:
   - true
 
 script:
-  - cat /proc/sys/kernel/core_pattern
-
+  - true
