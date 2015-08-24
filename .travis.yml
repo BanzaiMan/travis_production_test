@@ -4,8 +4,7 @@ matrix:
   include:
     - os: linux
       env: TARGET="linux"
-  exclude:
-    - compiler: gcc
+      compiler: gcc
 
 install: true
 
