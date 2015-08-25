@@ -10,10 +10,12 @@ install: true
 script: true
 
 before_deploy:
-  - git clone https://github.com/johanneswuerbach/dpl.git
+  - git clone https://github.com/travis-ci/dpl.git
   - pushd dpl
   - unset CI
-  - git checkout s3-aws-sdk-v2
+  - git remote add johanneswuerbach https://github.com/johanneswuerbach/dpl.git
+  - git fetch johanneswuerbach
+  - git merge johanneswuerbach/s3-aws-sdk-v2 master
   - rvm 1.9.3 do gem build dpl.gemspec
   - mv dpl-*.gem ..
   - popd
