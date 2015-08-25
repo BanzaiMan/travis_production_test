@@ -1,11 +1,10 @@
-language: php
+language: node_js
 
 sudo: false
 
-php:
- - foo 
-install:
-  - true
+node_js:
+  - '0.12'
 
-script:
-  - which firefox
+before_install:
+  - npm install -g npm@'>=2.13.0'
+
