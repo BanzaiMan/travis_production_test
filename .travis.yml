@@ -9,6 +9,9 @@ cache:
   directories:
     - /home/travis/.rvm/gems/ruby-1.9.3-p551/gems/nokogiri-1.6.6.2
 
+before_install:
+  - rvm 1.9.3 do gem install nokogiri -v 1.6.6.2
+
 install: true
 
 script: true
