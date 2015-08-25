@@ -13,6 +13,7 @@ before_install:
   - git checkout s3-aws-sdk-v2
   - rvm 1.9.3 do gem build dpl.gemspec
   - rvm 1.9.3 do gem install dpl-*.gem
+  - popd; popd
 
 install: true
 
