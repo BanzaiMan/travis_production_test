@@ -6,6 +6,6 @@ node_js:
   - '0.12'
 
 before_install:
-  - eval 'npm install -g npm@$(jq .engines.npm package.json)'
+  - eval "npm install -g npm@$(jq .engines.npm package.json)"
   - npm --version
 
