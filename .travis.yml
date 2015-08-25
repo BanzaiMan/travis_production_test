@@ -5,22 +5,22 @@ sudo: false
 rvm:
   - 2.1.5
 
-before_install:
-  - pushd $HOME
+install: true
+
+script: true
+
+before_deploy:
   - git clone https://github.com/johanneswuerbach/dpl.git
   - pushd dpl
   - unset CI
   - git checkout s3-aws-sdk-v2
   - rvm 1.9.3 do gem build dpl.gemspec
-  - rvm 1.9.3 do gem install dpl-*.gem
-  - popd; popd
-
-install: true
-
-script: true
+  - mv dpl-*.gem ..
+  - popd
 
 deploy:
   provider: s3
+  edge: local
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: hiro-test-bucket
