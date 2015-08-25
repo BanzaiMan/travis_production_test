@@ -5,12 +5,14 @@ sudo: false
 rvm:
   - 2.1.5
 
-cache:
-  directories:
-    - /home/travis/.rvm/gems/ruby-1.9.3-p551/gems/nokogiri-1.6.6.2
-
 before_install:
-  - rvm 1.9.3 do gem list nokogiri || rvm 1.9.3 do gem install nokogiri -v 1.6.6.2
+  - pushd $HOME
+  - git clone https://github.com/johanneswuerbach/dpl.git
+  - pushd dpl
+  - unset CI
+  - git checkout s3-aws-sdk-v2
+  - rvm 1.9.3 do gem build dpl.gemspec
+  - rvm 1.9.3 do gem install dpl-*.gem
 
 install: true
 
