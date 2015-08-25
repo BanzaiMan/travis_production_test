@@ -1,19 +1,21 @@
-language: c++
-compiler:
-  - gcc
-  - clang
-matrix:
-  include:
-    - compiler: clang
-      env: SANITIZE=address
-    - compiler: clang
-      env: SANITIZE=undefined
-  allow_failures:
-    - compiler: clang
-      env: SANITIZE=address
-    - compiler: clang
-      env: SANITIZE=undefined
+language: ruby
+
+rvm:
+  - 2.1.5
+
+cache:
+  directories:
+    - /home/travis/.rvm/gems/ruby-1.9.3-p551/gems/nokogiri-1.6.6.2
 
 install: true
 
 script: true
+
+deploy:
+  provider: s3
+  access_key_id: "YOUR AWS ACCESS KEY"
+  secret_access_key: "YOUR AWS SECRET KEY"
+  bucket: "S3 Bucket"
+  skip_cleanup: true
+  on:
+    all_branches: true
