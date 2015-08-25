@@ -11,6 +11,8 @@ script: true
 
 before_deploy:
   - git clone https://github.com/travis-ci/dpl.git
+  - git config --global user.email "you@example.com"
+  - git config --global user.name "Your Name"
   - pushd dpl
   - unset CI
   - git remote add johanneswuerbach https://github.com/johanneswuerbach/dpl.git
