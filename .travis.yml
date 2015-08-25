@@ -17,7 +17,7 @@ before_deploy:
   - unset CI
   - git remote add johanneswuerbach https://github.com/johanneswuerbach/dpl.git
   - git fetch johanneswuerbach
-  - git merge johanneswuerbach/s3-aws-sdk-v2 master
+  - git merge --commit johanneswuerbach/s3-aws-sdk-v2 master
   - rvm 1.9.3 do gem build dpl.gemspec
   - mv dpl-*.gem ..
   - popd
