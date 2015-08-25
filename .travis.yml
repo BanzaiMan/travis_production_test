@@ -1,11 +1,19 @@
 language: c++
-compiler: gcc
+compiler:
+  - gcc
+  - clang
 matrix:
   include:
-    - os: linux
-      env: TARGET="linux"
-      compiler: gcc
+    - compiler: clang
+      env: SANITIZE=address
+    - compiler: clang
+      env: SANITIZE=undefined
+  allow_failures:
+    - compiler: clang
+      env: SANITIZE=address
+    - compiler: clang
+      env: SANITIZE=undefined
 
 install: true
 
-script: echo $TARGET
+script: true
