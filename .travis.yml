@@ -1,33 +1,11 @@
-language: ruby
+language: php
 
 sudo: false
 
-rvm:
-  - 2.1.5
-
+php:
+  - 7.0.0RC1
+  
 install: true
 
 script: true
 
-before_deploy:
-  - git clone https://github.com/travis-ci/dpl.git
-  - git config --global user.email "you@example.com"
-  - git config --global user.name "Your Name"
-  - pushd dpl
-  - unset CI
-  - git remote add johanneswuerbach https://github.com/johanneswuerbach/dpl.git
-  - git fetch johanneswuerbach
-  - git merge --no-edit johanneswuerbach/s3-aws-sdk-v2 master
-  - rvm 1.9.3 do gem build dpl.gemspec
-  - mv dpl-*.gem ..
-  - popd
-
-deploy:
-  provider: s3
-  edge: local
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: hiro-test-bucket
-  skip_cleanup: true
-  on:
-    all_branches: true
