@@ -6,22 +6,12 @@ node_js:
 
 sudo: false
 
+branches:
+  only:
+    - default
+
 install:
   - true
 
 script:
   - true
-
-deploy:
-  provider: npm
-  edge: true
-  email: reg+npmjs@asari.net
-  api_key:
-    secure: "dX9sksamjIYqrg68O1yclGMUZlcmx/Eb/GdXfFf6vKBttnnDozG+WcgVCKV1Vhtnro7b8YSuGWYX3gCMZCqKkQrvIaeKZxj8Q1HIz2FACz7+Pb2sLprLeMwjmSBLJvNK2fan6NJCKotKfxoyIc3/shL/5SRfEkJinxn+hn4DAlQ="
-  on:
-    all_branches: true
-    repo: "BanzaiMan/travis_production_test"
-
-after_deploy:
-  - cat npm-debug.log
-
