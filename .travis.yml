@@ -11,5 +11,5 @@ script:
   - pushd $HOME/.php-build
   - git checkout master && git reset --hard HEAD && git pull origin master
   - popd
-  - cat ~/.php-build/share/php-build/definitions/$VERSION
+  - cat ~/.php-build/share/php-build/default_configure_options
 
