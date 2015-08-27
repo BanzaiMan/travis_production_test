@@ -9,5 +9,6 @@ services:
 
 install: true
 
-script: true
+script:
+  - env | grep -i TMP
 
