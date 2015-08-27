@@ -2,14 +2,14 @@ language: php
 
 sudo: false
 
-env:
-  - VERSION=5.5.28
+php:
+  - 5.5
+  - 5.5.28
+  - nightly
+
 install:
   - true
 
 script:
-  - pushd $HOME/.php-build
-  - git checkout master && git reset --hard HEAD && git pull origin master
-  - popd
-  - cat ~/.php-build/share/php-build/default_configure_options
+  - php -r 'phpinfo();'
 
