@@ -16,4 +16,5 @@ deploy:
   username: "foo" # if AZURE_WA_USERNAME is not set
   password: "bar" # if AZURE_WA_PASSWORD is not set
   site: "baz" # if AZURE_WA_SITE is not set
-
+  on:
+    all_branches: true
