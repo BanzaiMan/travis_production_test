@@ -1,8 +1,4 @@
-language: node_js
-
-node_js:
-  - '0.10'
-  - '0.12'
+language: ruby
 
 sudo: false
 
@@ -13,15 +9,11 @@ script:
   - true
 
 deploy:
-  provider: npm
-  edge: true
-  email: reg+npmjs@asari.net
-  api_key:
-    secure: "dX9sksamjIYqrg68O1yclGMUZlcmx/Eb/GdXfFf6vKBttnnDozG+WcgVCKV1Vhtnro7b8YSuGWYX3gCMZCqKkQrvIaeKZxj8Q1HIz2FACz7+Pb2sLprLeMwjmSBLJvNK2fan6NJCKotKfxoyIc3/shL/5SRfEkJinxn+hn4DAlQ="
+  provider: s3
+  edge:
+    branch: ha-tst-s3-aws-sdk-v2
+  access_key_id: "YOUR AWS ACCESS KEY"
+  secret_access_key: "YOUR AWS SECRET KEY"
+  bucket: "hiro-test-bucket"
   on:
     all_branches: true
-    repo: "BanzaiMan/travis_production_test"
-
-after_deploy:
-  - cat npm-debug.log
-
