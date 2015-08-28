@@ -1,12 +1,15 @@
-language: android
+language: node_js
 
 sudo: false
 
+services:
+  - docker
+
 install:
-  - true
+  - sudo apt-get install naturaldocs
 
 before_script:
-  - sed -e 's/timeout_in_sec=.*/timeout_in_sec=600/' `which android-wait-for-emulator`
+  - true
 
 script:
   - true
