@@ -33,9 +33,15 @@ addons:
     - libappindicator1
     - libcurl3
     - xdg-utils
+    
+before_install:
+  - curl -sSL -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - ar x google-chrome-stable_current_amd64.deb
+  - tar xvf data.tar.xz --strip-components 2 -C $HOME ./opt/google
+  - export PATH=$HOME/google/chrom:$PATH
 
 install:
   - true
 
 script:
-  - true
+  - google-chrome
