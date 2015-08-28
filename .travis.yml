@@ -3,33 +3,38 @@ language: cpp
 sudo: false
 
 addons:
-  apt:
-    packages:
-      - cmake
-      - libsdl1.2-dev
-      - libsdl-mixer1.2-dev
-      - libsdl-image1.2-dev
-      - libsdl-gfx1.2-dev 
-      - libboost-dev
-
-env:
-  - BUILD_TYPE=Debug EXTRA_WARNING_FLAGS=""
-  - BUILD_TYPE=Release EXTRA_WARNING_FLAGS=""
-  - BUILD_TYPE=Debug EXTRA_WARNING_FLAGS="-Wall -Wextra"
-  - BUILD_TYPE=Release EXTRA_WARNING_FLAGS="-Wall -Wextra"
-
-before_install:
-  - if [ $TRAVIS_OS_NAME == osx ]; then brew update && brew install yaml-cpp sdl sdl_gfx sdl_image sdl_mixer --with-flac --with-libmikmod --with-libvorbis --with-static-lib; fi
-  - if [ $TRAVIS_OS_NAME == linux ]; then mkdir ./dependency-prefix; fi
-  - if [ $TRAVIS_OS_NAME == linux ]; then export PKG_CONFIG_PATH=./dependency-prefix/lib/pkgconfig; fi
+  packages:
+  - gconf-service
+  - libasound2
+  - libcairo2
+  - libcups2
+  - libfontconfig1
+  - libgconf-2-4
+  - libgdk-pixbuf2.0-0
+  - libgtk2.0-0
+  - libnspr4
+  - libnss3
+  - libpango1.0-0
+  - libx11-6
+  - libxcomposite1
+  - libxcursor1
+  - libxdamage1
+  - libxext6
+  - libxfixes3
+  - libxi6
+  - libxrandr2
+  - libxrender1
+  - libxss1
+  - libxtst6
+  - libdbusmenu-glib4
+  - libdbusmenu-gtk4
+  - libindicator7
+  - libappindicator1
+  - libcurl3
+  - xdg-utils
 
 install:
-  - if [ $TRAVIS_OS_NAME == linux ]; then mkdir -p ./dependencies/; fi
-  - if [ $TRAVIS_OS_NAME == linux ]; then pushd ./dependencies/ && git clone https://github.com/nemomobile-packages/libsdl-mixer.git && pushd libsdl-mixer && git checkout release-1.2.12 && ./configure --prefix=$TRAVIS_BUILD_DIR/dependency-prefix && make install && popd && popd; fi
-  - if [ $TRAVIS_OS_NAME == linux ]; then pushd ./dependencies/ && git clone https://github.com/jbeder/yaml-cpp.git && pushd yaml-cpp && git checkout release-0.5.1 && cmake -DCMAKE_INSTALL_PREFIX=./dependency-prefix -DCMAKE_BUILD_TYPE="${BUILD_TYPE}" -DYAML_CPP_BUILD_CONTRIB=NO -DYAML_CPP_BUILD_TOOLS=NO . && make -j2 && make install && popd && popd; fi
+  - true
 
-      
-before_script:
-  - cmake . -DCMAKE_BUILD_TYPE="${BUILD_TYPE}" -DYAMLCPP_INCLUDE_DIR=./dependency-prefix/include -DCMAKE_CXX_FLAGS="${EXTRA_WARNING_FLAGS}" -DCMAKE_C_FLAGS="${EXTRA_WARNING_FLAGS}"
-
-script: make 
+script:
+  - true
