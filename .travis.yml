@@ -1,52 +1,9 @@
-language: cpp
+language: android
 
 sudo: false
-
-addons:
-  apt:
-    packages:
-    - gconf-service
-    - libasound2
-    - libcairo2
-    - libcups2
-    - libfontconfig1
-    - libgconf-2-4
-    - libgdk-pixbuf2.0-0
-    - libgtk2.0-0
-    - libnspr4
-    - libnss3
-    - libpango1.0-0
-    - libx11-6
-    - libxcomposite1
-    - libxcursor1
-    - libxdamage1
-    - libxext6
-    - libxfixes3
-    - libxi6
-    - libxrandr2
-    - libxrender1
-    - libxss1
-    - libxtst6
-    - libdbusmenu-glib4
-    - libdbusmenu-gtk4
-    - libindicator7
-    - libappindicator1
-    - libcurl3
-    - xdg-utils
-    
-before_install:
-  - curl -sSL -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - ar x google-chrome-stable_current_amd64.deb
-  - tar xvf data.tar.xz --strip-components 2 -C $HOME ./opt/google
-  - export PATH=$HOME/google/chrome:$PATH
 
 install:
   - true
 
-before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
-
 script:
-  - google-chrome
+  - ls -l `which android-wait-for-emulator`
