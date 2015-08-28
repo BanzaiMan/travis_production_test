@@ -5,5 +5,8 @@ sudo: false
 install:
   - true
 
+before_script:
+  - sed -e 's/timeout_in_sec=.*/timeout_in_sec=600/' `which android-wait-for-emulator`
+
 script:
-  - ls -l `which android-wait-for-emulator`
+  - true
