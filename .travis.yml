@@ -2,19 +2,15 @@ language: php
 
 sudo: false
 
+addons:
+  apt:
+    sources:
+      - elasticsearch-1.7
+    packages:
+      - elasticsearch
+
 install:
   - true
 
 script:
-  - php -r 'phpinfo();'
-  
-deploy:
-  provider: azure_web_apps
-  edge:
-    source: felixrieseberg/dpl
-    branch: azure-web-apps
-  username: "foo" # if AZURE_WA_USERNAME is not set
-  password: "bar" # if AZURE_WA_PASSWORD is not set
-  site: "baz" # if AZURE_WA_SITE is not set
-  on:
-    all_branches: true
+  - true
