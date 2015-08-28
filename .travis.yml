@@ -9,12 +9,11 @@ script:
   - php -r 'phpinfo();'
   
 deploy:
-  provider: azure_web_apps
+  provider: gae
   edge:
-    source: felixrieseberg/dpl
-    branch: azure-web-apps
-  username: "foo" # if AZURE_WA_USERNAME is not set
-  password: "bar" # if AZURE_WA_PASSWORD is not set
-  site: "baz" # if AZURE_WA_SITE is not set
+    source: travis-ci/dpl
+    branch: ha-test-pr-316
+  project: foo
+  default: false
   on:
     all_branches: true
