@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - php -r 'phpinfo();'
+  - true
   
 deploy:
   provider: gae
