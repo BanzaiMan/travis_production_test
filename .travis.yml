@@ -5,6 +5,8 @@ matrix:
     - sudo: required
       services:
         - docker
+      before_install:
+        - sudo apt-get install alex
     - sudo: false
       addons:
         apt:
