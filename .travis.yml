@@ -1,12 +1,20 @@
-language: android
+language: python
 
-sudo: false
+matrix:
+  include:
+    - sudo: required
+      services:
+        - docker
+      env:
+        - RELEASE=trusty
+    - sudo: false
+      addons:
+        apt:
+          packages:
+            - alex
+      env:
+        - RELEASE=precise
 
-before_script:
-  - cp `which android-wait-for-emulator` .
-  - sed -i -e 's/timeout_in_sec=.*/timeout_in_sec=600/' android-wait-for-emulator
-  - ./android-wait-for-emulator
-  
 install:
   - true
 
