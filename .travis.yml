@@ -5,15 +5,11 @@ matrix:
     - sudo: required
       services:
         - docker
-      env:
-        - RELEASE=trusty
     - sudo: false
       addons:
         apt:
           packages:
             - alex
-      env:
-        - RELEASE=precise
 
 install:
   - true
