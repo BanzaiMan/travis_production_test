@@ -12,8 +12,6 @@ deploy:
     branch: ha-feature-travis-ci
   # http://docs.travis-ci.com/user/triggering-builds/
   repo: 'travis-ci/cpython-builder'
-  token:
-    secure: SECURE_STUFF # or define TRAVIS_BUILD_TOKEN
   request:
     message: "test dependent build"
     branch: "default"
