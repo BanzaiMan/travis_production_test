@@ -1,19 +1,5 @@
 language: python
 
-matrix:
-  include:
-    - sudo: required
-      services:
-        - docker
-      before_install:
-        - sudo apt-get update -qq
-        - sudo apt-get install alex
-    - sudo: false
-      addons:
-        apt:
-          packages:
-            - alex
-
 install:
   - true
 
@@ -37,3 +23,5 @@ deploy:
           - TEST=unit
       script:
           - true
+  on:
+    all_branches: true
