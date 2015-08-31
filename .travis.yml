@@ -12,14 +12,6 @@ deploy:
     branch: ha-feature-travis-ci
   # http://docs.travis-ci.com/user/triggering-builds/
   repo: 'travis-ci/cpython-builder'
-  request_payload:
-    message: "test dependent build"
-    branch: "default"
-    config:
-      env:
-        matrix:
-          - TEST=unit
-      script:
-          - true
+  request: '{"message":"test dependent build","branch":"default","config":{"env":{"matrix":["TEST=unit"]},"script":[true]}}'
   on:
     all_branches: true
