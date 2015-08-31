@@ -3,6 +3,11 @@ language: python
 python:
   - 3.5.0rc2
 
+sudo: required
+
+services:
+  - docker
+
 install:
   - true
 
