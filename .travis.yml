@@ -1,12 +1,16 @@
-language: python
+language: haskell
 
-python:
-  - 3.5.0rc2
+ghc:
+  - 7.10.2
 
-sudo: required
+sudo: false
 
-services:
-  - docker
+addons:
+  apt:
+    sources:
+      - hvr-ghc
+    packages:
+      - ghc-7.10.2
 
 install:
   - true
