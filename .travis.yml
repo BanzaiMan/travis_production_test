@@ -12,7 +12,7 @@ deploy:
     branch: ha-feature-travis-ci
   # http://docs.travis-ci.com/user/triggering-builds/
   repo: 'travis-ci/cpython-builder'
-  request:
+  request_payload:
     message: "test dependent build"
     branch: "default"
     config:
