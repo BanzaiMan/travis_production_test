@@ -1,6 +1,9 @@
 language: objective-c
 
+osx_image: xcode7
+
 before_install:
+  - echo $PATH
   - gem install cocoapods --pre
   - which pod
   - pod --version
