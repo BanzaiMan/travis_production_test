@@ -3,6 +3,7 @@ language: objective-c
 before_install:
   - gem install cocoapods --pre
   - which pod
+  - pod --version
   
 install:
   - true
