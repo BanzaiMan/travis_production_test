@@ -1,16 +1,6 @@
-language: haskell
+language: objective-c
 
-ghc:
-  - "7.10"
-
-sudo: false
-
-addons:
-  apt:
-    sources:
-      - hvr-ghc
-    packages:
-      - ghc-7.10.2
+osx_image: xcode7
 
 install:
   - true
