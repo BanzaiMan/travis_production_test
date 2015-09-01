@@ -17,6 +17,7 @@ deploy:
   script: ./echo.sh
   on:
     all_branches: true
+  skip_cleanup: true
 
 after_deploy:
   - false
