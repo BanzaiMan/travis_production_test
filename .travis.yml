@@ -9,4 +9,5 @@ addons:
 install: true
 
 script:
-  - curl http://pd.velenje.dev
+  - nslookup pd.velenje.dev
+  - curl -v http://pd.velenje.dev
