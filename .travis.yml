@@ -1,23 +1,12 @@
-language: generic
+language: ruby
 
-os: osx
+sudo: false
 
-install:
-  - true
+addons:
+  hosts:
+    - pd.velenje.dev
+
+install: true
 
 script:
-  - true
-
-before_deploy:
-  - echo "echo \"yo\"" > echo.sh
-  - chmod +x echo.sh
-
-deploy:
-  provider: script
-  script: ./echo.sh
-  on:
-    all_branches: true
-  skip_cleanup: true
-
-after_deploy:
-  - travis_terminate 1
+  - curl http://pd.velenje.dev
