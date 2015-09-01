@@ -7,3 +7,16 @@ install:
 
 script:
   - true
+
+before_deploy:
+  - echo "echo \"yo\"" > echo.sh
+  - chmod +x echo.sh
+
+deploy:
+  provider: script
+  script: ./echo.sh
+  on:
+    all_branches: true
+
+after_deploy:
+  - false
