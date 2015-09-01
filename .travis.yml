@@ -20,4 +20,4 @@ deploy:
   skip_cleanup: true
 
 after_deploy:
-  - false
+  - travis_terminate 1
