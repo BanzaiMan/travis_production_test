@@ -1,12 +1,9 @@
-language: ruby
+language: generic
 
-sudo: required
-
-services:
-  - docker
+os: osx
 
 install:
   - true
 
 script:
-  - which md5deep || true
+  - true
