@@ -2,8 +2,14 @@ language: ruby
 
 sudo: false
 
+addons:
+  apt:
+    sources:
+      - debian-sid
+    packages:
+      - thrift-compiler
+
 install: true
 
 script:
-  - which convert || true
-  - dpkg -l | grep -i magick || true
+  - true
