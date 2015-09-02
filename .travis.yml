@@ -1,13 +1,12 @@
 language: ruby
 
-sudo: false
+sudo: required
 
-addons:
-  hosts:
-    - pd.velenje.dev
+services:
+  - docker
 
 install: true
 
 script:
-  - nslookup pd.velenje.dev
-  - curl -v http://pd.velenje.dev
+  - which convert || true
+  - dpkg -l | grep -i magick || true
