@@ -5,9 +5,11 @@ sudo: false
 addons:
   apt:
     sources:
-      - debian-sid
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-precise
+    - llvm-toolchain-precise-3.6
+    - debian-sid
     packages:
-      - locales
       - thrift-compiler
 
 install: true
