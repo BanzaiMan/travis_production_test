@@ -1,18 +1,17 @@
 language: ruby
 
-sudo: false
+os: osx
 
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    - llvm-toolchain-precise
-    - llvm-toolchain-precise-3.6
-    - debian-sid
-    packages:
-      - thrift-compiler
+osx_image: xcode7
 
 install: true
 
 script:
   - true
+
+deploy:
+  provider: s3
+  access_key_id: "YOUR AWS ACCESS KEY"
+  secret_access_key: "YOUR AWS SECRET KEY"
+  bucket: "S3 Bucket"
+
