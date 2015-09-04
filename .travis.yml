@@ -5,7 +5,7 @@ sudo: false
 addons:
   apt:
     sources:
-      - "mongodb-3.0-precise"
+      - "mongodb-upstart"
     packages:
       - mongodb-org-server
 
