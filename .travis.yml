@@ -11,5 +11,4 @@ before_install:
 install: true
 
 script:
-  - docker run -e MYSQL_ROOT_PASSWORD=my-secret-pw mysql mysql --version
-
+  - docker run -e MYSQL_ROOT_PASSWORD=my-secret-pw mysql mysql 'SHOW VARIABLES LIKE "%version%";'
