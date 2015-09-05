@@ -17,7 +17,7 @@ install:
 
 script:
   - date
-  - mysql -u root -h $(< docker_ip_address) -P 3306 --password=password -e 'SHOW VARIABLES LIKE "%version%";'
+  - mysql -u root -P 3306 --password=password -e 'SHOW VARIABLES LIKE "%version%";'
 
 after_script:
   - date
