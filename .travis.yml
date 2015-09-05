@@ -7,8 +7,10 @@ services:
 
 before_install:
   - docker pull mysql:5.6
-  - docker run --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.6
+  - docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.6
+  - docker inspect mysql-server | awk -F '"' '/IPAddress/ {print $4}' | tee docker_ip_address
 install: true
 
 script:
-  - docker exec mysql sh -c "mysql -u root -p my-secret-pw 'SHOW VARIABLES LIKE \"%version%\";'"
+  - docker run -i --link mysql-server:mysql --rm mysql sh -c 'exec mysql -h"$(< docker_ip_address)" -uroot -p"my-secret-pw" "SHOW VARIABLES LIKE \'%version%\';"'
+  - docker exec -t mysql sh -c "mysql -u root -p my-secret-pw 'SHOW VARIABLES LIKE \"%version%\";'"
