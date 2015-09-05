@@ -7,10 +7,9 @@ services:
 
 before_install:
   - docker pull mysql:5.6
-  #- docker run --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.6
-  - docker run -e "MYSQL_ROOT_PASSWORD=123" --rm --name mysql mysql
+  - docker run --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.6
 install: true
 
 script:
-  - docker run -e MYSQL_ROOT_PASSWORD=123 mysql mysql --version
+  - docker run -e MYSQL_ROOT_PASSWORD=my-secret-pw mysql mysql --version
 
