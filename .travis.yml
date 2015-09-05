@@ -10,6 +10,8 @@ before_install:
   - docker pull mysql:5.6
   - docker run --privileged --name mysql-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.6
   - docker inspect mysql-server | awk -F '"' '/IPAddress/ {print $4}' | tee docker_ip_address
+  - docker inspect --format '{{ .NetworkSettings.IPAddress }}' mysql-server
+  - docker inspect
 install: true
 
 script:
