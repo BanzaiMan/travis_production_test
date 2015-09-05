@@ -8,7 +8,7 @@ services:
 before_install:
   - date
   - docker pull mysql:5.6
-  - docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.6
+  - docker run --privileged --name mysql-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.6
   - docker inspect --format '{{ .NetworkSettings.IPAddress }}' mysql-server | tee docker_ip_address
   - docker inspect mysql-server
 install:
