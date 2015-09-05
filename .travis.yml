@@ -6,6 +6,7 @@ services:
   - docker
 
 before_install:
+  - date
   - docker pull mysql:5.6
   - docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.6
   - docker inspect mysql-server | awk -F '"' '/IPAddress/ {print $4}' | tee docker_ip_address
