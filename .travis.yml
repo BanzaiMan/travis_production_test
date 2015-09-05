@@ -11,4 +11,4 @@ before_install:
 install: true
 
 script:
-  - docker exec mysql mysql -u root -p my-secret-pw 'SHOW VARIABLES LIKE "%version%";'
+  - docker exec mysql sh -c "mysql -u root -p my-secret-pw 'SHOW VARIABLES LIKE \"%version%\";'"
