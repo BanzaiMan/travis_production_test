@@ -12,5 +12,9 @@ before_install:
 install: true
 
 script:
-  - docker run -i --link mysql-server:mysql --rm mysql sh -c "exec mysql -h'$(< docker_ip_address)' -uroot -p'my-secret-pw' 'SHOW VARIABLES LIKE \"%version%\";'"
+  - docker run -t --link mysql-server:mysql --rm mysql sh -c "exec mysql -h'$(< docker_ip_address)' -uroot -p'my-secret-pw' 'SHOW VARIABLES LIKE \"%version%\";'"
   - docker exec -t mysql-server sh -c "mysql -u root -p my-secret-pw 'SHOW VARIABLES LIKE \"%version%\";'"
+
+after_script:
+  - docker logs mysql-server
+  
