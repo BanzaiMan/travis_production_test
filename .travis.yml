@@ -5,23 +5,6 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - date
-  - id -a
-  - sudo usermod `whoami` -G -a docker || true
-  - docker pull mysql:5.6
-  - docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=password -d mysql:5.6
-  - docker inspect --format '{{ .NetworkSettings.IPAddress }}' mysql-server | tee docker_ip_address
-  - docker inspect mysql-server
 install:
-  - sudo apt-get update -qq
-  - sudo apt-get install mysql-client-5.6
-
-script:
-  - date
-  - mysql -u root -h$(< docker_ip_address) -P 3306 --password=password -e 'SHOW VARIABLES LIKE "%version%";'
-
-after_script:
-  - date
-  - docker logs mysql-server
-  
+  - curl -vO -1 https://arch.localmsp.org/arch/iso/2015.09.01/archlinux-bootstrap-2015.09.01-x86_64.tar.gz || true
+  - curl -vO https://arch.localmsp.org/arch/iso/2015.09.01/archlinux-bootstrap-2015.09.01-x86_64.tar.gz || true
