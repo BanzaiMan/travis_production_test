@@ -1,9 +1,6 @@
 language: ruby
 
-sudo: required
-
-services:
-  - docker
+sudo: false
 
 install:
   - curl -vO -1 https://arch.localmsp.org/arch/iso/2015.09.01/archlinux-bootstrap-2015.09.01-x86_64.tar.gz || true
