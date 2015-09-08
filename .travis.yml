@@ -1,18 +1,13 @@
 language: ruby
-sudo: false
-
-addons:
-  apt:
-    sources:
-    - heroku
-    packages:
-    - heroku-toolbelt
+sudo: required
 
 services:
   - docker
 
 install:
-  - which heroku || true
-  
+  - CID=$(docker run -d -p 80:80 ubuntu)
+  - CID2=$(docker run --privileged -d -p 80:80 ubuntu)
+
 script:
-  - true
+  - docker exec -it $CID pwd
+  - docker exec -it $CID2 pwd
