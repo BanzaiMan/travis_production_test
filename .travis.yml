@@ -1,5 +1,9 @@
 language: ruby
-sudo: false
+sudo: required
+
+services:
+  - docker
+
 gemfile: path/to/Gemfile
 before_install: cd $(dirname $BUNDLE_GEMFILE)
-script: bundle exec rake
+script: docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
