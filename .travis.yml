@@ -7,6 +7,8 @@ services:
 install:
   - CID=$(docker run -d -p 80:80 ubuntu)
   - CID2=$(docker run --privileged -d -p 80:80 ubuntu)
+  - sleep 15
+  - docker ps
 
 script:
   - docker exec -it $CID pwd
