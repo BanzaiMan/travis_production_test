@@ -1,9 +1,18 @@
 language: ruby
-sudo: required
+sudo: false
+
+addons:
+  apt:
+    sources:
+    - heroku
+    packages:
+    - heroku-toolbelt
 
 services:
   - docker
 
-gemfile: path/to/Gemfile
-before_install: cd $(dirname $BUNDLE_GEMFILE)
-script: docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+install:
+  - which heroku || true
+  
+script:
+  - true
