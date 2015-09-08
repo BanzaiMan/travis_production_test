@@ -2,4 +2,4 @@ language: ruby
 sudo: false
 gemfile: path/to/Gemfile
 before_install: cd $(dirname $BUNDLE_GEMFILE)
-script: true
+script: bundle exec rake
