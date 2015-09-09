@@ -10,7 +10,11 @@ script:
 
 deploy:
   provider: s3
-  bucket: "hiro-test-bucket"
+  access_key_id:
+    secure: "Tb9p1L5gKyVudSxs4nGatZRECpC/Fu3HTHyEDDBjQF08nao+q4lqe3ulpY1Zz+wFDuEAF+uQ1/vFkeWoQMl/wWaka7H62bkuhPX+65yC8ich0OhHkH0zmL5yhp1EP0tX9MusDXQTupRuUZg+Dsy3JC6GOEXad9bTUMyonPezTsA="
+  secret_access_key:
+    secure: "FSgPYPsWd6mz2/m3+47dfemFcpFZBy7+Ci+4b9UjbNq1Lx1reV3Y2zvzbd59iii6kNOreh3QTVtsNAHHikenIsql2kBkSzejqP3ywYwc4D6WB/jBn8iEmmns7GuBgNTLR6ot+bTZBIte0TNlaa9gOS389aRTha0wCGaDZ791fwU="
+  bucket: "hiro-test-bucket-2"
   region: 'us-west-2'
   on:
     all_branches: true
