@@ -3,7 +3,7 @@ os:
   - osx
 
 install:
-  - sudo -v
+  - sudo date
 
 script:
   - true
