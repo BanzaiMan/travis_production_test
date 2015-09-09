@@ -3,10 +3,13 @@ sudo: required
 services:
   - docker
 
+before_install:
+  - sudo -E apt-add-repository -y deb https://packagecloud.io/chef/current/ubuntu/ precise main
+  - sudo apt-get update -qq
+
 install:
-  - docker pull ubuntu
+  - sudo apt-get install pyzmq
 
 script:
-  - docker run -it ubuntu adduser travis
-  - docker run -it --privileged ubuntu adduser travis
+  - true
 
