@@ -1,15 +1,13 @@
-language: ruby
-sudo: required
+language: node_js
 
-services:
-  - docker
+node_js:
+  - 4.0.0
+
+sudo: false
 
 install:
-  - CID=$(docker run -d -p 80:80 ubuntu)
-  - CID2=$(docker run --privileged -d -p 88:88 ubuntu)
-  - sleep 15
-  - docker ps
+  - true
 
 script:
-  - docker exec -it $CID pwd
-  - docker exec -it $CID2 pwd
+  - true
+
