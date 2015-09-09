@@ -1,12 +1,9 @@
-language: node_js
-
-node_js:
-  - 4.0.0
-
-sudo: false
+language: c
+os:
+  - osx
 
 install:
-  - true
+  - sudo -v
 
 script:
   - true
