@@ -1,10 +1,12 @@
 language: c
-os:
-  - osx
+sudo: required
+services:
+  - docker
 
 install:
-  - sudo date
+  - docker pull ubuntu
 
 script:
-  - true
+  - docker run -it ubuntu adduser travis
+  - docker run -it --privileged ubuntu adduser travis
 
