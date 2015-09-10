@@ -14,9 +14,12 @@ script:
 deploy:
   provider: lambda
   function_name: "lambda-test"
-  role: $AWS_LAMBDA_ROLE
+  role:
+    secure: "fadMKjOzWzKwlznUvXoJWJ2a1wjgJ/pzOh3+UD5YeP87giflGR4K7NqIeG1PBJ+FplmMxVtTSKbIWhCzLj5iaoRd9XVH9G/cRGXyNXMsxDofHUhAgq7T7m6UtdpEQnQmWLxZfEEB0/AawHclcakACEDkM/hMPrEfahZKkWRFbqo="
   handler_name: "index.handler"
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  access_key_id:
+    secure: "MUi6f5NTqkQ1juYmYF74GSKthzCpI0V1gmSFlP+I8YiwwU0nevmCRUnPNivYUGQ4Tehu8B/LiBOCUQztjejrO1eFSEdFA4g1bf37ExYC2Qmem3VXMuT80sn7xlbmzD8oruZWPOBLe97JZNBZeMDx7XJBMF7byIxRH8+7udgTcPY="
+  secret_access_key:
+    secure: "ckfeG/tEDnlEZ9wVUstoZKmx1PucAB9nZyCsZCOx/SAW4sW7xVVPFTPz/LLUuUEJazTLm2xFbm+6rd9upVdtxaslV8RUt8XY75rRTgQSYlfnrQlbjiM6LYcytazES1ppLfUEmA6uer2A/3JQ8JdHM+ZUJYadk6PWFz5fVi92Wg8="
   on:
     branch: default
