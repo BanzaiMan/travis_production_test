@@ -2,3 +2,4 @@ language: ruby
 
 sudo: false
 
+gemfile: Gemfile
