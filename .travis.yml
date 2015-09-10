@@ -15,7 +15,7 @@ deploy:
   provider: lambda
   function_name: "lambda-test"
   role:
-    secure: "fadMKjOzWzKwlznUvXoJWJ2a1wjgJ/pzOh3+UD5YeP87giflGR4K7NqIeG1PBJ+FplmMxVtTSKbIWhCzLj5iaoRd9XVH9G/cRGXyNXMsxDofHUhAgq7T7m6UtdpEQnQmWLxZfEEB0/AawHclcakACEDkM/hMPrEfahZKkWRFbqo="
+    secure: "X5b7XBcb86p0OaBuhF8q1h2zDXiEiwYMv8mQBp3NK9Ha64EvFqFi4YAsR5Ow7LlmZTY31vwXGN/XUOb25IAf+pcpiGhesOFOSW28EqyilqFNmAPXz4kT82ZS+lUnv2AKQ/CXO2iKVtctIug4T9RfQdAOUmqM1prYAD1sFtzGJCA="
   handler_name: "index.handler"
   access_key_id:
     secure: "MUi6f5NTqkQ1juYmYF74GSKthzCpI0V1gmSFlP+I8YiwwU0nevmCRUnPNivYUGQ4Tehu8B/LiBOCUQztjejrO1eFSEdFA4g1bf37ExYC2Qmem3VXMuT80sn7xlbmzD8oruZWPOBLe97JZNBZeMDx7XJBMF7byIxRH8+7udgTcPY="
