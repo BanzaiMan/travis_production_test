@@ -10,7 +10,7 @@ before_install:
   - export NVM_DIR=$HOME/.nvm
   - export PATH=$PATH:$NVM_DIR/$NODEJS_VERSION/bin
   - source $NVM_DIR/nvm.sh
-  - nvm install v0.10.30
+  - nvm install $NODEJS_VERSION
 
 script:
   - true
