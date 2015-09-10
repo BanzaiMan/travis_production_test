@@ -1,14 +1,16 @@
-language: node_js
-
-node_js:
-  - '0.10'
-  - '4.0'
+language: ruby
 
 sudo: false
+
+addons:
+  sauce_connect:
+    username: "Your Sauce Labs username"
+    access_key: "Your Sauce Labs access key"
 
 install:
   - true
 
 script:
-  - true
+  - ls -l
+  - ls -l sc-*
 
