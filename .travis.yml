@@ -4,7 +4,12 @@ sudo: false
 
 osx_image: beta-xcode6.3
 
-install:
+before_install:
+  - curl https://raw.githubusercontent.com/creationix/nvm/v0.14.0/install.sh | bash
+  - export NODEJS_VERSION=v0.10.31
+  - export NVM_DIR=$HOME/.nvm
+  - export PATH=$PATH:$NVM_DIR/$NODEJS_VERSION/bin
+  - source $NVM_DIR/nvm.sh
   - nvm install v0.10.30
 
 script:
