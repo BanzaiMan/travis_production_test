@@ -18,3 +18,5 @@ deploy:
   handler_name: "index.handler"
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_ACCESS_KEY
+  on:
+    branch: default
