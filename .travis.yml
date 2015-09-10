@@ -1,16 +1,12 @@
-language: ruby
+language: objective-c
 
 sudo: false
 
-addons:
-  sauce_connect:
-    username: "Your Sauce Labs username"
-    access_key: "Your Sauce Labs access key"
+osx_image: beta-xcode6.3
 
 install:
-  - true
+  - nvm install v0.10.30
 
 script:
-  - ls -l
-  - ls -l sc-*
+  - true
 
