@@ -1,14 +1,13 @@
-language: ruby
+language: python
+
+python:
+  - '3.5.0'
 
 sudo: false
-
-addons:
-  hosts:
-    - example.com
 
 install:
   - true
 
 script:
-  - cat /etc/hosts
+  - true
   
