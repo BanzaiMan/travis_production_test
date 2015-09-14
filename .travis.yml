@@ -17,3 +17,7 @@ install:
 script:
   - true
   
+deploy:
+  - provider: s3
+    foo: bar
+  
