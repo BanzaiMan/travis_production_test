@@ -1,9 +1,15 @@
 language: python
 
 python:
-  - '3.5'
+  - pypy
 
 sudo: false
+
+addons:
+  apt:
+    packages:
+      - pypy
+      - pypy-env
 
 install:
   - true
