@@ -9,7 +9,7 @@ addons:
   apt:
     packages:
       - pypy
-      - pypy-env
+      - pypy-dev
 
 install:
   - true
