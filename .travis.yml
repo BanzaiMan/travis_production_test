@@ -6,10 +6,5 @@ install:
   - true
 
 script:
-  - true
+  - git --version
 
-deploy:
-  provider: script
-  script: ./false_script
-  on:
-    all_branches: true
