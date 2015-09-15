@@ -1,10 +1,12 @@
 language: ruby
-
 sudo: false
-
 install:
-  - true
-
+- true
 script:
-  - git --version
+- git --version
+notifications:
+  email:
+    recipients:
+      - secure: GVBj5MKzFHxiU0T9cXu9cZ6j1PhvTkT36xGmD3LucyBoYp+65E/fp8r1lbxIPK4VhAAqUtsIM3nK0GXeMJZzrxG9OZeVx/Kq66DgxhOOhN6WbrbH/R17r6kMJCtqimlWGEyzfD9R1NNrFsgK/hQ1GB6z1mwGTG398h2XRuAgZH8=
+    on_success: always
 
