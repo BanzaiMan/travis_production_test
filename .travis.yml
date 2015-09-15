@@ -2,23 +2,14 @@ language: ruby
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - pypy
-      - pypy-dev
-
-env:
-  global:
-    - IN_TRAVIS="1"
-  matrix:
-    - LINT_CHECK="1"
-    - TESTS="1"
-
 install:
   - true
 
 script:
-  - echo $IN_TRAVIS
-  - echo $LINT_CHECK
-  - echo $TESTS
+  - true
+
+deploy:
+  provider: script
+  script: ./false_script
+  on:
+    all_branches: true
