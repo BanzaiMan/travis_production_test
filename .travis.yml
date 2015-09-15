@@ -7,6 +7,6 @@ script:
 notifications:
   email:
     recipients:
-      - secure: GVBj5MKzFHxiU0T9cXu9cZ6j1PhvTkT36xGmD3LucyBoYp+65E/fp8r1lbxIPK4VhAAqUtsIM3nK0GXeMJZzrxG9OZeVx/Kq66DgxhOOhN6WbrbH/R17r6kMJCtqimlWGEyzfD9R1NNrFsgK/hQ1GB6z1mwGTG398h2XRuAgZH8=
+      - secure: Q6hebs7S51I2rLu/lLM3LJBadXom8ObeOOYang+gx0OXKDUVzOHWL+qGRTDx8v5IKt4h4zGx2gUZZPrB5MP5jaSyf/DPfHKXmIeyNfbCyqkEpo6wqhNrYyaWtrF9AewCzY38ew7Rl4k8J93UpdA6iCraQvTItejjLciFjLBKG2E=
     on_success: always
 
