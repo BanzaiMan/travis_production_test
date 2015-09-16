@@ -10,9 +10,7 @@ before_deploy:
   - cd path/to
 
 deploy:
-  edge:
-    branch: ha-feature-script-improvements
-  provider: script
-  script: ./show_php.sh
+  provider: codedeploy
+  bucket: "fobarr"
   on:
     all_branches: true
