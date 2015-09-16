@@ -6,6 +6,9 @@ install:
 script:
 - true
 
+before_deploy:
+  - ls .
+
 deploy:
   edge:
     branch: ha-feature-script-improvements
