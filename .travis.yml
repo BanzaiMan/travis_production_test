@@ -10,7 +10,7 @@ before_deploy:
   - cd path/to
 
 deploy:
-  provider: codedeploy
+  provider: s3
   bucket: "fobarr"
   on:
     all_branches: true
