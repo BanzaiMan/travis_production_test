@@ -4,10 +4,8 @@ sudo: false
 install:
 - true
 script:
-- true
+- env | sort | grep AWS | cut -f1 -d'='
 
-before_deploy:
-  - cd path/to
 
 deploy:
   provider: s3
