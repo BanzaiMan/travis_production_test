@@ -6,13 +6,10 @@ install:
 script:
 - true
 
-before_deploy:
-  - ls .
-
 deploy:
   edge:
     branch: ha-feature-script-improvements
   provider: script
-  script: show_php.sh
+  script: ./show_php.sh
   on:
     all_branches: true
