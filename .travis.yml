@@ -1,13 +1,15 @@
 language: ruby
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - redis-server
 install:
 - true
 script:
 - redis-cli --version
 
-
+deployment:
+  edge:
+    branch: ha-feature-script-improvements
+  provider: script
+  script: show_php.sh
+  on:
+    all_branches: true
