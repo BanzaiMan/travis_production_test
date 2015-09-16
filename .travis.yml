@@ -1,12 +1,13 @@
 language: ruby
 sudo: false
+
+addons:
+  apt:
+    packages:
+      - redis-server
 install:
 - true
 script:
-- git --version
-notifications:
-  email:
-    recipients:
-      - secure: Q6hebs7S51I2rLu/lLM3LJBadXom8ObeOOYang+gx0OXKDUVzOHWL+qGRTDx8v5IKt4h4zGx2gUZZPrB5MP5jaSyf/DPfHKXmIeyNfbCyqkEpo6wqhNrYyaWtrF9AewCzY38ew7Rl4k8J93UpdA6iCraQvTItejjLciFjLBKG2E=
-    on_success: always
+- redis-cli --version
+
 
