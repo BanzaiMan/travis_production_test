@@ -1,14 +1,9 @@
 language: php
 sudo: false
+php:
+  - '7.0'
 
 install:
 - true
 script:
-- env | sort | grep AWS | cut -f1 -d'='
-
-
-deploy:
-  provider: s3
-  bucket: "fobarr"
-  on:
-    all_branches: true
+- true
