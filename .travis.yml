@@ -1,12 +1,12 @@
-language: php
+language: python
 
 sudo: false
 
-php:
-  - '7.0'
+python:
+  - '3.5.0'
 
 install:
   - true
 
 script:
-  - true
+  - pytest --version
