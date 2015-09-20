@@ -9,4 +9,4 @@ install:
   - true
 
 script:
-  - pytest --version
+  - py.test --version
