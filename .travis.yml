@@ -1,32 +1,10 @@
-language: python
-python:
-  - "2.6"
-  - "2.7"
-  - "pypy"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5.0b3"
-  - "3.5-dev"
-  - "nightly"
+language: php
 
-env:
-  - JYTHON=true
-  - JYTHON=false
+php:
+  - '7.0'
 
 install:
   - true
 
 script:
   - true
-
-matrix:
-  fast_finish: true 
-  allow_failures:
-    - python: 3.2
-    - python: 3.3
-    - python: 3.4
-    - python: 3.5.0b3
-    - python: 3.5-dev
-    - python: nightly
-    - env: JYTHON=true
