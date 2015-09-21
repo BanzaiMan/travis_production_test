@@ -5,6 +5,7 @@ sudo: false
 addons:
   apt:
     packages:
+      - gfortran
       - liblapack-dev
       - libblas-dev
 
