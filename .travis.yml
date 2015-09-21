@@ -10,11 +10,14 @@ addons:
       - libblas-dev
 
 python:
-  - 3.4
+  - 3.5
 
 cache:
   directories:
     - $HOME/.cache/pip
+    
+before_install:
+  - pip install --upgrade pip
 
 install:
   - pip install --user scipy
