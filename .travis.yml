@@ -10,7 +10,9 @@ addons:
       - libblas-dev
 
 python:
+  - 3.3
   - 3.4
+  - 3.5
 
 cache:
   directories:
