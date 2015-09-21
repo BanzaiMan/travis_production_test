@@ -9,4 +9,5 @@ install:
   - true
 
 script:
-  - ls -l /etc/rabbitmq 
+  - cat /etc/rabbitmq/rabbitmq.config
+  - cat /etc/rabbitmq/rabbitmq-env.conf
