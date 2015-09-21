@@ -17,7 +17,7 @@ cache:
     - $HOME/.cache/pip
 
 install:
-  - pip install scipy
+  - pip install --user scipy
 
 script:
   - python -c 'import scipy; print scipy.version.full_version'
