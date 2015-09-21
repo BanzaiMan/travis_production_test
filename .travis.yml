@@ -2,27 +2,21 @@ language: python
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - gfortran
-      - liblapack-dev
-      - libblas-dev
+env:
+  - VAR1=value1
 
-python:
-  - 3.3
-  - 3.4
-  - 3.5
-
-cache:
-  directories:
-    - $HOME/.cache/pip
-    
-before_install:
-  - pip install --upgrade pip
+matrix:
+  include:
+    - env:
+        - VAR1=value2
+      addons:
+        sauce_connect:
+          username: "Your Sauce Labs username"
+          access_key: "super_secure"
 
 install:
-  - pip install scipy
+  - true
 
 script:
-  - python -c 'import scipy; print(scipy.version.full_version)'
+  - true
+  
