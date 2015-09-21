@@ -1,12 +1,16 @@
-language: node_js
+language: python
 
 sudo: false
 
-node_js:
-  - latest
+python:
+  - 3.4
+
+cache:
+  directories:
+    - $HOME/.cache/pip
 
 install:
-  - true
+  - pip install scipy
 
 script:
-  - true
+  - python -c 'import scipy; print scipy.version.full_version'
