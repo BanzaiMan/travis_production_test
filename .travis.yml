@@ -22,7 +22,7 @@ before_install:
   - pip install --upgrade pip
 
 install:
-  - pip install --user scipy
+  - pip install scipy
 
 script:
   - python -c 'import scipy; print(scipy.version.full_version)'
