@@ -9,5 +9,4 @@ install:
   - true
 
 script:
-  - find /etc -name \*rabbitmq\*
-  
+  - find /etc -type f -name \*rabbitmq\* -exec ls -l {}; 
