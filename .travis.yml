@@ -1,13 +1,20 @@
-language: python
+language: go
+
+go:
+  - 1.5
+  - tip
 
 sudo: false
 
 services:
-  - rabbitmq
+  - redis-server
+
+env:
+  global:
+    - JAR_JAR_REDIS=localhost:6379
 
 install:
   - true
 
 script:
-  - cat /etc/rabbitmq/rabbitmq.config
-  - cat /etc/rabbitmq/rabbitmq-env.conf
+  - true
