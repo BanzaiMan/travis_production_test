@@ -2,9 +2,12 @@ language: python
 
 sudo: false
 
+services:
+  - rabbitmq
+
 install:
-  - git clone --depth=1 git://develop.git.wordpress.org/ wordpress
+  - true
 
 script:
-  - true
+  - find /etc -name \*rabbitmq\*
   
