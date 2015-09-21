@@ -2,20 +2,8 @@ language: python
 
 sudo: false
 
-env:
-  - VAR1=value1
-
-matrix:
-  include:
-    - env:
-        - VAR1=value2
-      addons:
-        sauce_connect:
-          username: "Your Sauce Labs username"
-          access_key: "super_secure"
-
 install:
-  - true
+  - git clone --depth=1 git://develop.git.wordpress.org/ wordpress
 
 script:
   - true
