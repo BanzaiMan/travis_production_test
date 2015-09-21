@@ -23,4 +23,4 @@ install:
   - pip install --user scipy
 
 script:
-  - python -c 'import scipy; print scipy.version.full_version'
+  - python -c 'import scipy; print(scipy.version.full_version)'
