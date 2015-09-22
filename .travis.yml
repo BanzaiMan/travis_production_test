@@ -8,4 +8,4 @@ install:
 script:
   - true
   
-after_success: "[[ $TRAVIS_BRANCH = 'master' ]] && gem install dpl && dpl --provider=script --script='bundle exec cap integration deploy'"
+after_success: "[[ $TRAVIS_BRANCH = 'default' ]] && gem install dpl && dpl --provider=script --script='bundle exec cap integration deploy'"
