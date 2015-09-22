@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 install:
-  - true
+  - bundle install capistrano
 
 script:
   - true
