@@ -14,7 +14,7 @@ install:
   - true
 
 script:
-  - ls /etc/apt/sources.list.d/*.list
-  - cat /etc/apt/sources.list.d/*.list
+  - ls /etc/apt/sources.list**/*.list
+  - cat /etc/apt/sources.list**/*.list
   - cat ~/apt-get-update.log
   - google-chrome --version
