@@ -1,12 +1,13 @@
-language: python
+﻿language: go
+
+go:
+  - 1.5
+  - tip
 
 sudo: false
 
-python:
-  - 3.5
-
-before_install:
-  - ls -l /opt/python/3.5**/lib
-
+install:
+  - true
 script:
   - true
+
