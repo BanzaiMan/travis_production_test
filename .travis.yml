@@ -17,3 +17,6 @@ install:
 
 script:
   - google-chrome --version
+
+after_failure:
+  - tail /etc/apt/sources.list
