@@ -10,7 +10,7 @@ script:
 
 deploy:
   provider: script
-  script: bundle exec cap integration deploy
+  script: rvm 1.9.3 do bundle exec cap integration deploy
   on:
     branch: default
 
