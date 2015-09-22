@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 before_install:
-  - echo "gem source 'https://rubygems.org'\ngem 'capistrano'" > Gemfile
+  - true
 
 script:
   - true
