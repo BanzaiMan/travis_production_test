@@ -9,12 +9,11 @@ addons:
 
 sudo: false
 
+services:
+  - docker
 
 install:
   - true
 
 script:
-  - find /etc/apt
-  - cat /etc/apt/sources**/*.list
-  - cat ~/apt-get-update.log
   - google-chrome --version
