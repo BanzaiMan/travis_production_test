@@ -1,20 +1,17 @@
 language: go
 
-go:
-  - 1.5
-  - tip
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 
 sudo: false
 
-services:
-  - redis-server
-
-env:
-  global:
-    - JAR_JAR_REDIS=localhost:6379
 
 install:
   - true
 
 script:
-  - true
+  - google-chrome --version
