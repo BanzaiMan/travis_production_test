@@ -10,4 +10,5 @@ script:
   
 after_success:
   - ruby -v
+  - "[[ $TRAVIS_BRANCH = 'default' ]] && gem install dpl && ruby -v -S dpl --provider=script --script='echo $PATH'"
   - "[[ $TRAVIS_BRANCH = 'default' ]] && gem install dpl && ruby -v -S dpl --provider=script --script='bundle exec cap integration deploy'"
