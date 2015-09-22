@@ -1,7 +1,4 @@
-language: python
-
-python:
-  - 3.5.0
+language: ruby
 
 sudo: false
 
@@ -9,4 +6,6 @@ install:
   - true
 
 script:
-  - find /home/travis/virtualenv/python3.5.0/lib/python3.5/site-packages
+  - true
+  
+after_success: "[[ $TRAVIS_BRANCH = 'master' ]] && gem install dpl && dpl --provider=script --script='bundle exec cap integration deploy'"
