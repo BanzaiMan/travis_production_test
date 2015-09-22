@@ -1,17 +1,12 @@
-language: ruby
+language: python
 
 sudo: false
 
+python:
+  - 3.5
+
 before_install:
-  - true
+  - ls -l /opt/python/3.5**/lib
 
 script:
   - true
-
-deploy:
-  provider: script
-  script: rvm 1.9.3 do bundle exec cap integration deploy
-  skip_cleanup: true
-  on:
-    branch: default
-
