@@ -2,6 +2,9 @@ language: ruby
 
 sudo: false
 
+rvm:
+  - 2.1.5
+
 before_install:
   - true
 
@@ -11,6 +14,7 @@ script:
 deploy:
   provider: script
   script: rvm 1.9.3 do bundle exec cap integration deploy
+  skip_cleanup: true
   on:
     branch: default
 
