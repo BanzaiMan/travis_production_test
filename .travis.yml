@@ -1,11 +1,7 @@
-language: go
+language: python
 
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+python:
+  - 3.5
 
 sudo: false
 
@@ -13,7 +9,4 @@ install:
   - true
 
 script:
-  - google-chrome --version
-
-after_failure:
-  - tail /etc/apt/sources.list
+  - find /home/travis/virtualenv/python3.5.0/lib/python3.5/site-packages
