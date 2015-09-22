@@ -2,8 +2,8 @@ language: ruby
 
 sudo: false
 
-install:
-  - bundle install capistrano
+before_install:
+  - echo "gem source 'https://rubygems.org'\ngem "capistrano"' > Gemfile
 
 script:
   - true
