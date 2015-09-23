@@ -8,6 +8,7 @@ sudo: false
 before_install:
   - rvm get head
   - rvm reload
+  - rvm get master
   - rvm --version
   - rvm install 2.1 --latest
   - rvm use 2.1
