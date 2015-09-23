@@ -6,7 +6,7 @@ rvm:
 sudo: false
 
 before_install:
-  - sed -i -e 'd/rvm_autoupdate_flag/' ~/.rvmrc
+  - sed -i -e '/rvm_autoupdate_flag/ d' ~/.rvmrc
   - rvm get head
   - rvm install 2.1 --latest
   - rvm use 2.1
