@@ -1,16 +1,8 @@
-language: ruby
-
-rvm:
-  - '2.1'
-
+language: java
 dist: trusty
-
-before_install:
-  - jdk_switcher use openjdk8
-  - java -version
 
 install:
   - true
 script:
-  - true
+  - java -version
 
