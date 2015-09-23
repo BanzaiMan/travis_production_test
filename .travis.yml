@@ -6,8 +6,8 @@ rvm:
 sudo: false
 
 before_install:
-  - rm ~/.rvmrc
   - rvm get head
+  - rvm reload
   - rvm install 2.1 --latest
   - rvm use 2.1
   - ruby -v
