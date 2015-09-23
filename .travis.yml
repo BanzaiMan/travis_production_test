@@ -6,6 +6,7 @@ rvm:
 dist: trusty
 
 before_install:
+  - jdk_switcher use openjdk8
   - java -version
 
 install:
