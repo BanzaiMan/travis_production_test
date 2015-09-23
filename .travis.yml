@@ -3,16 +3,10 @@ language: ruby
 rvm:
   - '2.1'
 
-sudo: false
+dist: trusty
 
 before_install:
-  - \curl -sSL https://get.rvm.io | bash
-  - rvm reload
-  - rvm get master
-  - rvm --version
-  - rvm install 2.1 --latest
-  - rvm use 2.1
-  - ruby -v
+  - java -version
 
 install:
   - true
