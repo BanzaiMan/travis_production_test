@@ -7,7 +7,8 @@ sudo: false
 
 before_install:
   - rvm get head
-  - rvm use 2.1 --latest --install --binary --fuzzy
+  - rvm install 2.1 --latest
+  - rvm use 2.1
   - ruby -v
 
 install:
