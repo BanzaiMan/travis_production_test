@@ -6,7 +6,7 @@ rvm:
 sudo: false
 
 before_install:
-  - rvm get head
+  - \curl -sSL https://get.rvm.io | bash
   - rvm reload
   - rvm get master
   - rvm --version
