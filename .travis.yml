@@ -12,5 +12,5 @@ addons:
 install:
   - true
 script:
-  - java -version
+  - cat ~/apt-get-update.log
 
