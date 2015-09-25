@@ -9,6 +9,7 @@ env:
   global:
     - GOOGLE_EMAIL=foobar@gmail.com
     - CI_GOOGLE_TOKEN=1234567890abcdef
+    - CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 before_install:
   - "echo \"$CI_GOOGLE_TOKEN\" > ~/gcloud.json"
