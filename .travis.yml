@@ -6,8 +6,9 @@ services:
   - docker
   
 env:
-  - GOOGLE_EMAIL=foobar@gmail.com
-  - CI_GOOGLE_TOKEN=1234567890abcdef
+  global:
+    - GOOGLE_EMAIL=foobar@gmail.com
+    - CI_GOOGLE_TOKEN=1234567890abcdef
 
 before_install:
   - "echo \"$CI_GOOGLE_TOKEN\" > ~/gcloud.json"
