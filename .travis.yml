@@ -1,20 +1,17 @@
-language: ruby
+language: elixir
 
-sudo: false
+elixir:
+  - 1.0.5
 
-services:
-  - mysql
-  - elasticsearch
+otp_release: 17.3
 
-addons:
-  apt:
-    sources:
-      - elasticsearch-1.7
-    packages:
-      - elasticsearch
+matrix:
+  include:
+    - elixir: 1.2
+      otp_release: 18.0
 
 install:
   - true
-script:
-  - cat ~/apt-get-update.log
 
+script:
+  - true
