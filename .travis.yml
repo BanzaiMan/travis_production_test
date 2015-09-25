@@ -1,17 +1,14 @@
-language: elixir
+language: ruby
 
-elixir:
-  - 1.0.5
+sudo: required
 
-otp_release: 17.3
+services:
+  - docker
+  
+env:
+  - GOOGLE_EMAIL=foobar@gmail.com
+  - CI_GOOGLE_TOKEN=1234567890abcdef
 
-matrix:
-  include:
-    - elixir: 1.2
-      otp_release: 18.0
-
-install:
-  - true
-
-script:
-  - true
+before_install:
+  - "echo \"$CI_GOOGLE_TOKEN\" > ~/gcloud.json"
+  - "gcloud auth activate-service-account \"$GOOGLE_EMAIL\" --key-file ~/gcloud.json"
