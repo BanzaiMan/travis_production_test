@@ -11,5 +11,5 @@ env:
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_5880cf525281_key -iv $encrypted_5880cf525281_iv -in travis-dpl-2a4f43e4f7dd.json.enc -out travis-dpl-2a4f43e4f7dd.json -d
-  - pip install --user pyopenssl
+  - pip install pyopenssl
   - "gcloud auth activate-service-account \"$GOOGLE_EMAIL\" --key-file travis-dpl-2a4f43e4f7dd.json"
