@@ -2,6 +2,10 @@ language: ruby
 
 sudo: false
 
+services:
+  - mysql
+  - elasticsearch
+
 addons:
   apt:
     sources:
