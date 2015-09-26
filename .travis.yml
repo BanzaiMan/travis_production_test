@@ -1,15 +1,11 @@
-language: ruby
+language: python
 
-sudo: required
+sudo: false
 
-services:
-  - docker
+python:
+  - nightly
 
-env:
-  global:
-    - CLOUDSDK_PYTHON_SITEPACKAGES=1
+install: true
 
-before_install:
-  - openssl aes-256-cbc -K $encrypted_5880cf525281_key -iv $encrypted_5880cf525281_iv -in travis-dpl-2a4f43e4f7dd.json.enc -out travis-dpl-2a4f43e4f7dd.json -d
-  - sudo -H pip install --upgrade pyopenssl
-  - "gcloud auth activate-service-account \"$GOOGLE_EMAIL\" --key-file travis-dpl-2a4f43e4f7dd.json"
+script:
+  - ls -l /opt/python
