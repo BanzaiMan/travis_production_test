@@ -1,11 +1,11 @@
-language: php
+language: node_js
 
 sudo: false
 
-php:
-  - 7
-  - nightly
-  - 7.0.0RC3
+before_install:
+  - echo $PATH | grep node_modules || true
+  - nvm deactivate
+  - echo $PATH | grep node_modules || true
 
 install: true
 
