@@ -3,9 +3,7 @@ language: node_js
 sudo: false
 
 before_install:
-  - echo $PATH | grep node_modules || true
-  - nvm deactivate
-  - echo $PATH | grep node_modules || true
+  - cat /etc/profile.d/nvm.sh
 
 install: true
 
