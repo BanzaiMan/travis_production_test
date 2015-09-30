@@ -1,16 +1,15 @@
-language: node_js
+language: php
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - git
-
-before_install:
-  - cat /etc/profile.d/nvm.sh
+matrix:
+  include:
+    - sudo: required
+    - sudo: required
+      services:
+        - docker
 
 install: true
 
 script:
-  - true
+  - find / -name travis-ci-apache -print -exec cat {} \;
