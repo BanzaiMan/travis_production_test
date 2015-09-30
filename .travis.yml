@@ -1,15 +1,10 @@
 language: php
 
-sudo: false
-
-matrix:
-  include:
-    - sudo: required
-    - sudo: required
-      services:
-        - docker
+php:
+  - 7
+  - nightly
 
 install: true
 
 script:
-  - find / -name travis-ci-apache -print -exec cat {} \;
+  - which pecl || true
