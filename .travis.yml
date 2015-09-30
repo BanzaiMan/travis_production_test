@@ -1,10 +1,10 @@
 language: php
 
 php:
-  - 7
+  - 7.0.0RC3
   - nightly
 
 install: true
 
 script:
-  - which pecl || true
+  - pecl help
