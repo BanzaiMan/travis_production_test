@@ -13,3 +13,4 @@ script:
 notifications:
   email: false
   slack: '<account>:<token>#development'
+
