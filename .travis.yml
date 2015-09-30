@@ -1,16 +1,24 @@
-language: php
+language: python
 
 sudo: false
 
-php:
-  - 7
+python:
+  - nightly
 
 install: true
 
 script:
-  - pecl help
+  - ls -l /opt/python
 
-notifications:
-  email: false
-  slack: '<account>:<token>#development'
-
+deploy:
+  provider: cloudfiles
+  edge:
+    branch: ha-cloud_files
+  username: travis-worker
+  api_key:
+      secure: "ilWZL8wbTP/DNDMQgIsD2UfFOwofhEVqjiejyfM+/J9HcbKpzB08G5a1HIlT/mN1bmbVwXZLhhGGUg7U2XHdpBgCW3JEN8bRVj4MnIaG6Uu+cobPyV85YBmhN7tZPHhDoW2BHqi6wP96PdSCCVGD6S86/IGhSnUDLL7IG3VdgIw="
+  region: ORD
+  container: travis_wheels
+  skip_cleanup: true
+  on:
+    all_branches: true
