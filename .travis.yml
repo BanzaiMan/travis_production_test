@@ -1,7 +1,10 @@
 language: php
 
 php:
+  - 7.0.0RC1
+  - 7.0.0RC2
   - 7.0.0RC3
+  - 7
   - nightly
 
 install: true
