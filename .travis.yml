@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - true
+  - touch 'foo bar'
 
 deploy:
   provider: s3
@@ -18,3 +18,5 @@ deploy:
   region: 'us-west-2'
   on:
     all_branches: true
+  skip_cleanup: true
+
