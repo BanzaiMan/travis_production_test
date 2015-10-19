@@ -1,19 +1,7 @@
-language: rust
-
-sudo: false
-
-rust:
-  - nightly
-  - stable
-
-install: true
-
-script:
-  - true
+language: generic
 
 deploy:
-  provider: s3
-  skip_cleanup: true
-  on:
-    rust: stable
-    all_branches: true
+  - provider: script
+    script: deploy.sh
+    on:
+      branch: master
