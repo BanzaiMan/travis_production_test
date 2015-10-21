@@ -9,7 +9,7 @@ script: true
 notifications:
   irc:
     channels:
-      - secure: "HG6NULIEesFw/C46muw1P6CKf645+AROlBTf6+6F9IttsU0baFK8HYzbW5COMy8oag0odSZymLSN3B3vS+vDRRiImxaayJksnaq+Gxn8o/7RklCskeDCEhVghYaJqbZQq6LsiEV1wn+Hfp1ocLPeb90j6YhJsPhRsSBZey8anyY="
+      - 'ircs://chat.us.freenode.net:7000#travis'
     on_success: always
     on_failure: always
 
