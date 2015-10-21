@@ -11,7 +11,7 @@ notifications:
     channels:
       - 'irc.freenode.org#travisstaging'
     nick: guest38471341
-    password: secret
+    channel_key: secret
     on_success: always
     on_failure: always
 
