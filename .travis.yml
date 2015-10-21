@@ -2,12 +2,11 @@ language: generic
 
 sudo: false
 
-addons:
-  apt:
-    sources:
-      - debian-sid
-    packages:
-      - mysql-server-5.6
+install: true
 
-script:
-  - mysql --version
+script: true
+
+nofitications:
+  irc:
+    channels:
+      - 'chat.freenode.net#travisstaging'
