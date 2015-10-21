@@ -9,6 +9,6 @@ script: true
 notifications:
   irc:
     channels:
-      - 'chat.freenode.net#travis'
+      - 'irc.freenode.org#travis'
     on_success: always
     on_failure: always
