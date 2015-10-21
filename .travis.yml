@@ -1,7 +1,12 @@
 language: generic
 
-deploy:
-  - provider: script
-    script: deploy.sh
-    on:
-      branch: master
+sudo: false
+
+apt:
+  sources:
+    - debian-sid
+  packages:
+    - mysql-servr-5.6
+
+script:
+  - mysql --version
