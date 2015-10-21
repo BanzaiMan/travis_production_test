@@ -9,7 +9,8 @@ script: true
 notifications:
   irc:
     channels:
-      - 'ircs://chat.us.freenode.net:7000#travis'
+      - 'irc.freenode.org#travis'
+    nick: guest38471341
     on_success: always
     on_failure: always
 
