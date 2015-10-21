@@ -2,11 +2,12 @@ language: generic
 
 sudo: false
 
-apt:
-  sources:
-    - debian-sid
-  packages:
-    - mysql-servr-5.6
+addons:
+  apt:
+    sources:
+      - debian-sid
+    packages:
+      - mysql-servr-5.6
 
 script:
   - mysql --version
