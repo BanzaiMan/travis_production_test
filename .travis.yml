@@ -9,4 +9,6 @@ script: true
 nofitications:
   irc:
     channels:
-      - 'chat.freenode.net#travisstaging'
+      - 'chat.freenode.net#travis'
+    on_success: always
+    on_failure: always
