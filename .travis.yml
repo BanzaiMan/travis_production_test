@@ -12,3 +12,4 @@ notifications:
       - 'irc.freenode.org#travis'
     on_success: always
     on_failure: always
+
