@@ -9,7 +9,7 @@ script: true
 notifications:
   irc:
     channels:
-      - 'irc.freenode.org#travis'
+      - 'irc.freenode.org#travisstaging'
     nick: guest38471341
     on_success: always
     on_failure: always
