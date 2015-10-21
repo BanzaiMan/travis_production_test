@@ -7,7 +7,7 @@ addons:
     sources:
       - debian-sid
     packages:
-      - mysql-servr-5.6
+      - mysql-server-5.6
 
 script:
   - mysql --version
