@@ -11,7 +11,8 @@ notifications:
     channels:
       - 'irc.freenode.org#travisstaging'
     nick: guest38471341
-    channel_key: secret
+    channel_key:
+      secure: "H+T39UMm3nqdME2jopSZAVDX17BUkbd9Sa3aZdB1QCrmI/jmX+Tmdn34VYVecwB71+R/06XbgcFMUAEdS+g+yN+0UHJwKu1tPQN+vZ8CJLPpPhD3bQszgHUwWiiYq5jWlSxsF0X6AKV1VML9wymiUJC247ZJXX8IhpB4VwKS5nk="
     on_success: always
     on_failure: always
 
