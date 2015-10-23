@@ -6,7 +6,8 @@ install:
   - true
 
 script:
-  - touch 'foo bar'
+  - mkdir -p dist/deploy/locate/
+  - touch 'dist/deploy/locate/index - Copy.html'
 
 deploy:
   provider: s3
