@@ -2,6 +2,10 @@ language: java
 
 sudo: false
 
+addons:
+  apt:
+    packages: python3
+
 install: python3 --version
 
 script: true
