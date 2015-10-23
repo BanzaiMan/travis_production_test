@@ -1,12 +1,11 @@
-language: java
+language: ruby
 
-sudo: false
+sudo: required
 
-addons:
-  apt:
-    packages: python3
+services:
+  - docker
 
-install: python3 --version
+install: true
 
 script: true
 
