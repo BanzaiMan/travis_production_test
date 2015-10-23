@@ -1,4 +1,4 @@
-language: generic
+language: ruby
 
 sudo: false
 
@@ -6,12 +6,4 @@ install: true
 
 script: true
 
-notifications:
-  irc:
-    channels:
-      - 'irc.freenode.org#travisstaging'
-    nick: guest38471341
-    channel_key: secret
-    on_success: always
-    on_failure: always
 
