@@ -1,13 +1,16 @@
 language: cpp
 
-sudo: required
-
-services:
-  - docker
+sudo: false
 
 install: true
 
 script:
-  - which python || true
+  - true
+
+deploy:
+  provider: releases
+  on:
+    tags: true
+  skip_cleanup: true
 
 
