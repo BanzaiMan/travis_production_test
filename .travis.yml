@@ -6,8 +6,10 @@ install:
   - true
 
 script:
-  - mkdir -p dist/deploy/locate/
-  - touch 'dist/deploy/locate/index - Copy.html'
+  - true
+
+after_script:
+  - true
 
 deploy:
   provider: s3
