@@ -7,10 +7,11 @@ install: true
 script:
   - true
 
-deploy:
-  provider: releases
-  on:
-    tags: true
-  skip_cleanup: true
-
-
+notifications:
+  email: false
+  irc:
+    channels:
+      - 'irc.freenode.org#travisstaging'
+    channel_key:
+      secure: "ho2rz2G2Wq31fyb241DbKyvTO2A5WG1O2sg+kbWUiHpswBvZXh0qi0sXf/cYlrRBQ9Ckw1/pmGPsRDUCgYLOndIrU5RmEOA3u5rNDyYloQ/DTANE74/tV0Uj98M8LkXaxoapQaLj0Dbgm9F3EoHikEiWbjZyOmv2eIUGyLgQWKc="
+    nick: guest13345813
