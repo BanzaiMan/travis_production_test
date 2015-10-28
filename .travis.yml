@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - true
+  - touch 'foo bar'
 
 after_script:
   - true
