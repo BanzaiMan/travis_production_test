@@ -13,6 +13,8 @@ after_script:
 
 deploy:
   provider: s3
+  edge:
+    branch: ha-bug-encoding-for
   access_key_id:
     secure: "Tb9p1L5gKyVudSxs4nGatZRECpC/Fu3HTHyEDDBjQF08nao+q4lqe3ulpY1Zz+wFDuEAF+uQ1/vFkeWoQMl/wWaka7H62bkuhPX+65yC8ich0OhHkH0zmL5yhp1EP0tX9MusDXQTupRuUZg+Dsy3JC6GOEXad9bTUMyonPezTsA="
   secret_access_key:
@@ -22,7 +24,7 @@ deploy:
   on:
     all_branches: true
   skip_cleanup: true
-#  detect_encoding: true
+  detect_encoding: true
 #  cache_control: "max-age=31536000"
   expires: "2012-12-21 00:00:00 -0000"
   upload-dir: foo
