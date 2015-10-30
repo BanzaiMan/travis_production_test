@@ -1,4 +1,7 @@
-language: ruby
+language: perl
+
+perl:
+  - 5.22.0
 
 sudo: false
 
@@ -7,5 +10,3 @@ install: true
 script:
   - true
 
-cache:
-  bundler: true
