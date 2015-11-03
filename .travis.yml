@@ -1,12 +1,19 @@
-language: perl
-
-perl:
-  - 5.22.0
+language: android
 
 sudo: false
 
-install: true
+jdk:
+  - openjdk7
+
+android:
+  components:
+    - tools
+    - build-tools-23.0.2
+    - android-23
+    - extra-android-m2repository
+
+install:
+  - true
 
 script:
   - true
-
