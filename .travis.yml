@@ -1,20 +1,14 @@
-language: android
+language: ruby
 
 sudo: false
 
-jdk:
-  - openjdk7
-
-android:
-  components:
-    - tools
-    - tools-24.4.1
-    - build-tools-23.0.2
-    - android-23
-    - extra-android-m2repository
+addons:
+  apt:
+    packages:
+      - wget
 
 install:
-  - true
+  - wget http://www.cmake.org/files/v3.2/cmake-3.2.3-Linux-x86_64.tar.gz
 
 script:
   - true
