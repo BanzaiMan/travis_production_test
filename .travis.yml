@@ -13,8 +13,6 @@ after_script:
 
 deploy:
   provider: s3
-  edge:
-    branch: ha-bug-encoding-for
   access_key_id:
     secure: "Tb9p1L5gKyVudSxs4nGatZRECpC/Fu3HTHyEDDBjQF08nao+q4lqe3ulpY1Zz+wFDuEAF+uQ1/vFkeWoQMl/wWaka7H62bkuhPX+65yC8ich0OhHkH0zmL5yhp1EP0tX9MusDXQTupRuUZg+Dsy3JC6GOEXad9bTUMyonPezTsA="
   secret_access_key:
