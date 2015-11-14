@@ -1,14 +1,11 @@
-language: ruby
-
-rvm:
-  - 1.8.7-head
+language: c
 
 sudo: required
 
 dist: trusty
 
 install:
-  - true
+  - rvm use 1.8.7-head --binary --install
 
 script:
   - true
