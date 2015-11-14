@@ -5,6 +5,7 @@ sudo: required
 dist: trusty
 
 install:
+  - rvm get head
   - rvm install 1.8.7-head --binary
 
 script:
