@@ -1,12 +1,11 @@
-language: elixir
+language: ruby
 
-elixir:
-  - 1.1
+ruby:
+  - 1.8.7
 
-otp_release:
-  - 18.1
+sudo: required
 
-sudo: false
+dist: trusty
 
 install:
   - true
