@@ -5,9 +5,7 @@ sudo: required
 dist: trusty
 
 install:
-  - gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-  - rvm get head
-  - rvm install 1.8.7-head --binary
+  - find / -name  libruby.so.1.8
 
 script:
   - true
