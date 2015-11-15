@@ -7,4 +7,4 @@ install:
   - true
 
 script:
-  - true
+  - python -c "import sys; opts = {1114111: 'ucs4', 65535: 'ucs2'}; print(opts.get(sys.maxunicode));"
