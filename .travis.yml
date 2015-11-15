@@ -2,7 +2,7 @@ language: python
 sudo: required
 dist: trusty
 python:
-  - "2.7"
+  - "2.7.10"
 install:
   - true
 
