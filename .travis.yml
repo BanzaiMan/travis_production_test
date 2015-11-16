@@ -1,12 +1,8 @@
-language: php
+language: c
 sudo: false
 
-php:
-  - 7
-  - nightly
-
 install:
-  - true
+  - rvm list
 
 script:
   - true
