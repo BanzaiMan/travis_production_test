@@ -1,7 +1,9 @@
 language: php
 sudo: false
 
-php: nightly
+php:
+  - 7
+  - nightly
 
 install:
   - true
