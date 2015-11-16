@@ -1,8 +1,15 @@
 language: c
 sudo: false
 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-5
+
 install:
-  - rvm list
+  - true
 
 script:
   - true
