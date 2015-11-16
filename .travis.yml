@@ -1,15 +1,20 @@
 language: c
 sudo: false
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - gcc-5
+env:
+  - TEST=1
+  - TEST=2
+  - TEST=3
+  - TEST=4
+  - TEST=5
+  - TEST=6
+  - TEST=7
+  - TEST=8
+  - TEST=9
+  - TEST=0
 
 install:
-  - true
+  - curl -v -o test https://silk-releng.s3.amazonaws.com/master/repocache/repocache-linux-base.tgz
 
 script:
   - true
