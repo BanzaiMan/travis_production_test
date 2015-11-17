@@ -1,15 +1,12 @@
-language: scala
-jdk:
-  - oraclejdk8
-scala:
-  - 2.11.7
-services:
-  - mongodb
+language: ruby
 
 sudo: false
+
+addons:
+  firefox: 39.0.3
 
 install:
   - true
 
 script:
-  - ruby -rsocket -e 's = TCPSocket.new("localhost",27017)'
+  - true
