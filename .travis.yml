@@ -1,20 +1,15 @@
-language: c
+language: scala
+jdk:
+  - oraclejdk8
+scala:
+  - 2.11.7
+services:
+  - mongodb
+
 sudo: false
 
-env:
-  - TEST=1
-  - TEST=2
-  - TEST=3
-  - TEST=4
-  - TEST=5
-  - TEST=6
-  - TEST=7
-  - TEST=8
-  - TEST=9
-  - TEST=0
-
 install:
-  - curl -v -o test https://silk-releng.s3.amazonaws.com/master/repocache/repocache-linux-base.tgz
+  - true
 
 script:
-  - true
+  - ruby -rsocket -e 's = TCPSocket.new("localhost",27017)'
