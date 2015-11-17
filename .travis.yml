@@ -23,7 +23,7 @@ deploy:
     bucket: "hiro-test-bucket-2"
     region: 'us-west-2'
     on:
-      branch: default
+      branch: test-s3-deployment
     skip_cleanup: true
     detect_encoding: true
   #  cache_control: "max-age=31536000"
@@ -37,7 +37,7 @@ deploy:
     bucket: "hiro-test-bucket-2"
     region: 'us-west-2'
     on:
-      branch: test-s3-deployment
+      branch: default
     skip_cleanup: true
     detect_encoding: true
   #  cache_control: "max-age=31536000"
