@@ -1,17 +1,12 @@
-language: php
+language: ruby
 
-sudo: required
-dist: trusty
+sudo: false
 
-php:
-  - '7'
-  - '5.4'
-  - '5.5'
-  - '5.6'
-  - nightly
+rvm:
+  - 2.1.6
 
 install:
-  - true
+  - find ~ -maxdepth 1 -name .rvm\*
 
 script:
   - true
