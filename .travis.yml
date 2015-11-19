@@ -1,12 +1,12 @@
-language: ruby
+language: node_js
 
 sudo: false
 
-rvm:
-  - 2.1.6
+node_js:
+  - stable
 
 install:
-  - find ~ -maxdepth 1 -name .rvm\* -type f -print -exec cat {} \;
+  - true
 
 script:
   - true
