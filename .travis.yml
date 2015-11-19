@@ -1,9 +1,9 @@
-language: ruby
+language: php
 
 sudo: false
 
-addons:
-  firefox: 39.0.3
+php:
+  - '7'
 
 install:
   - true
