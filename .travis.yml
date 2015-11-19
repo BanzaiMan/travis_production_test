@@ -6,7 +6,7 @@ rvm:
   - 2.1.6
 
 install:
-  - find ~ -maxdepth 1 -name .rvm\*
+  - find ~ -maxdepth 1 -name .rvm\* -type f -print -exec cat {} \;
 
 script:
   - true
