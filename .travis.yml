@@ -1,4 +1,7 @@
-language: ruby
+language: python
+
+python:
+  - '2.7'
 
 sudo: false
 
@@ -7,12 +10,6 @@ install:
 
 script:
   - touch 'foo bar'
-
-after_script:
-  - true
-
-before_deploy:
-  - rvm 1.9.3 do gem install aws-sdk -v 2.1.36
 
 deploy:
   - provider: s3
