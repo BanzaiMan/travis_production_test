@@ -6,7 +6,8 @@ python:
 sudo: false
 
 install:
-  - true
+  - pip install sphinx sphinx-autobuild
+  - pip install recommonmark
 
 script:
   - touch 'foo bar'
