@@ -6,7 +6,7 @@ python:
   - '3.5'
 
 addons:
-  - mariadb
+  mariadb: '10.0'
 
 install:
   - true
