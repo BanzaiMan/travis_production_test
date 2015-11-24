@@ -6,5 +6,5 @@ install:
   - true
 
 script:
-  - git log -1
+  - git log FETCH_HEAD
   - echo $TRAVIS_COMMIT
