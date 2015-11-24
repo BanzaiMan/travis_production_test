@@ -1,17 +1,13 @@
-language: python
+language: php
 
-sudo: required
-dist: precise
-group: edge
+sudo: false
 
-python:
-  - '3.5'
-
-addons:
-  mariadb: '10.0'
+php:
+  - '5.5'
+  - '7'
 
 install:
   - true
 
 script:
-  - true
+  - cat ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
