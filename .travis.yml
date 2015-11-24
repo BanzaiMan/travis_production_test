@@ -21,4 +21,4 @@ install:
   - true
 
 script:
-  - find /usr/include -name math-finite.h -print -exec apt-file search {} \;
+  - find /usr/include -name math-finite.h -print -exec dpkg -S {} \;
