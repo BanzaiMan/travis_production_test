@@ -1,15 +1,10 @@
-language: python
+language: ruby
 
 sudo: false
-
-python:
-  - '3.5'
-
-addons:
-  mariadb: '10.0'
 
 install:
   - true
 
 script:
-  - true
+  - git log FETCH_HEAD -1
+  - echo $TRAVIS_COMMIT
