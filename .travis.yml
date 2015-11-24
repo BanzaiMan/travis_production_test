@@ -1,24 +1,10 @@
-language: cpp
-
-compiler:
-- clang
+language: ruby
 
 sudo: false
-
-addons:
-  apt:
-    packages:
-    - libboost-dev
-    - libboost-date-time-dev
-    - libboost-thread-dev
-    - libjpeg8-dev
-    - libopenexr-dev
-    - libpng12-dev
-    - libtiff4-dev
-    - zlib1g-dev
 
 install:
   - true
 
 script:
-  - find /usr/include -name math-finite.h -print -exec dpkg -S {} \;
+  - git log -1
+  - echo $TRAVIS_COMMIT
