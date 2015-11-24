@@ -10,4 +10,8 @@ script:
 
 notifications:
   slack:
-    secure: "QOytVJHTAvVIxGxjeMS/ybezghEfsbsy/i4KfC/tX/br/fsb3y6nDb4smKRNo6ghKkN8CGFuQbLDkMZJlIDH/XsMRzka/0eNNo3ISGyobYysYwqDDjLV2Yzmni0RbIUl/m8yNGj6Xj5ZXQ2Erq3VtKgiWfissjnSuY2+KTSB4Jg="
+    rooms:
+      - secure: "QOytVJHTAvVIxGxjeMS/ybezghEfsbsy/i4KfC/tX/br/fsb3y6nDb4smKRNo6ghKkN8CGFuQbLDkMZJlIDH/XsMRzka/0eNNo3ISGyobYysYwqDDjLV2Yzmni0RbIUl/m8yNGj6Xj5ZXQ2Erq3VtKgiWfissjnSuY2+KTSB4Jg="
+    on_success: never
+    on_failure: never
+    on_start: always
