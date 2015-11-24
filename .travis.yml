@@ -1,13 +1,24 @@
-language: php
+language: cpp
+
+compiler:
+- clang
 
 sudo: false
 
-php:
-  - '5.5'
-  - '7'
+addons:
+  apt:
+    packages:
+    - libboost-dev
+    - libboost-date-time-dev
+    - libboost-thread-dev
+    - libjpeg8-dev
+    - libopenexr-dev
+    - libpng12-dev
+    - libtiff4-dev
+    - zlib1g-dev
 
 install:
   - true
 
 script:
-  - cat ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - find /usr/include -name math-finite.h -print -exec apt-file search {} \;
