@@ -1,7 +1,18 @@
 sudo: false
 language: ruby
-rvm: 1.8.7-p371
 
+addons:
+  apt:
+    sources: 
+      - elasticsearch-2.0
+    packages:
+      - elasticsearch
+
+services:
+  - elasticsearch
 install: true
 
-script: true
+script: 
+  - elasticsearch -v
+  - curl http://localhost:9200/
+
