@@ -1,5 +1,8 @@
 language: ruby
 
+rvm:
+  - ruby-head
+
 matrix:
   include:
   - os: linux
