@@ -1,18 +1,9 @@
 sudo: false
 language: ruby
+rvm:
+  - ruby-head
 
-addons:
-  apt:
-    sources: 
-      - elasticsearch-2.0
-    packages:
-      - elasticsearch
-
-services:
-  - elasticsearch
 install: true
 
-script: 
-  - elasticsearch -v
-  - curl http://localhost:9200/
-
+script:
+  - find /home/travis/.rvm/rubies/$TRAVIS_RUBY_VERSION -type f -name ruby -print -exec ldd {} ;
