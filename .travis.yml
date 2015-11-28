@@ -1,9 +1,18 @@
-sudo: false
 language: ruby
-rvm:
-  - ruby-head
+
+matrix:
+  include:
+  - os: linux
+    sudo: required
+    dist: precise
+    group: edge
+  - os: linux
+    services: docker
+    group: edge
+  - os: linux
+    sudo: false
 
 install: true
 
 script:
-  - find /home/travis/.rvm/rubies/$TRAVIS_RUBY_VERSION -type f -name ruby -print -exec ldd {} ;
+  - dpkg -l | egrep '(tcl|tk)'
