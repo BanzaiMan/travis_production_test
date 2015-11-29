@@ -15,4 +15,5 @@ script:
   - wget https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/14.04/x86_64/ruby-1.8.7.tar.bz2
   - tar xjvf ruby-1.8.7.tar.bz2 --directory $rvm_path/rubies
   - find $rvm_path/rubies/ruby-1.8.7 -name ruby -type f -print -exec ldd {} \;
+  - find $rvm_path/rubies/ruby-1.8.7 -name \*.so -type f -print -exec ldd {} \;
 
