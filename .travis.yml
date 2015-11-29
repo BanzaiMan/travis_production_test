@@ -1,21 +1,18 @@
 language: ruby
 
 rvm:
-  - ruby-head
+  - 2.2
 
 matrix:
   include:
   - os: linux
-    sudo: required
-    dist: precise
-    group: edge
-  - os: linux
     services: docker
     group: edge
-  - os: linux
-    sudo: false
 
 install: true
 
 script:
-  - dpkg -l | egrep '(tcl|tk)'
+  - wget https://s3.amazonaws.com/travis-rubies/binaries/ubuntu/14.04/x86_64/ruby-1.8.7-head.tar.bz2
+  - tar xjvf ruby-1.8.7-head.tar.bz2 --directory $rvm_path/rubies
+  - find $rvm_path/rubies/ruby-1.8.7-head -name ruby -type f -print -exec ldd {} \;
+
