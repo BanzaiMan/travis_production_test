@@ -1,33 +1,16 @@
 language: c
 
-matrix:
-  include:
-    - os: linux
-      dist: trusty
-      group: edge
-      compiler: clang
-    - os: linux
-      dist: precise
-      group: edge
-      compiler: clang
-    - os: linux
-      dist: trusty
-      group: edge
-      compiler: gcc
-    - os: linux
-      dist: precise
-      group: edge
-      compiler: gcc
-  allow_failures:
-    - os: linux
-      dist: trusty
-      group: edge
-      compiler: gcc
-    - os: linux
-      dist: precise
-      group: edge
-      compiler: gcc
+os: linux
+dist: precise
+group: edge
+compiler: clang
 
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-precise-3.5
+   packages:
+    - clang-3.5
 
 install: true
 
