@@ -14,5 +14,5 @@ install:
   - cat ~/.ssh/known_hosts || true
 
 script: 
-  - git clone ssh://git@stash.code.easyscott.com/app/pod-specs.git
+  - git clone ssh://git@stash.code.easyscott.com/app/pod-specs.git || cat ~/.ssh/known_hosts
 
