@@ -10,6 +10,7 @@ env:
 sudo: false
 
 install:
+  - find ~/.ssh || mkdir ~/.ssh
   - cat ~/.ssh/known_hosts || true
 
 script: 
