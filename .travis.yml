@@ -4,9 +4,15 @@ osx_image: xcode7
 
 rvm: '2.0'
 
+env:
+  - GIT_SSH_COMMAND=\"ssh -i ~/.ssh/id_rsa -p 7999\""
+
 sudo: false
 
 install:
-  - cat ~/.ssh/known_hosts
+  - cat ~/.ssh/known_hosts || true
 
-script: true
+script: 
+  - ssh-keygen -y -f ~/.ssh/id_rsa
+  - git clone ssh://git@stash.code.easyscott.com/app/pod-specs.git
+
