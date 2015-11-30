@@ -1,9 +1,10 @@
 language: objective-c
 
+rvm: '2.2'
+
 sudo: false
 
-cache: bundler
-
-#install: true
+install:
+  - cat ~/.ssh/known_hosts
 
 script: true
