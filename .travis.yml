@@ -1,5 +1,7 @@
 language: objective-c
 
+osx_image: xcode7
+
 rvm: '2.0'
 
 sudo: false
