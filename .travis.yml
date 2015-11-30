@@ -9,6 +9,9 @@ env:
 
 sudo: false
 
+addons:
+  ssh_known_hosts: stash.code.easyscott.com
+
 install:
   - find ~/.ssh || mkdir ~/.ssh
   - cat ~/.ssh/known_hosts || true
