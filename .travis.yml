@@ -1,10 +1,9 @@
-language: c
+language: objective-c
 
 sudo: false
 
-addons:
-  ssh_known_hosts: richodemus.com
+cache: bundler
 
-install: true
+#install: true
 
 script: true
