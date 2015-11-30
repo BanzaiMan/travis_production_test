@@ -2,23 +2,9 @@ language: c
 
 sudo: false
 
-compiler: clang-3.5
-
-env:
-  - CXX=clang-3.5
-
 addons:
-  apt:
-    sources:
-      - llvm-toolchain-precise-3.5
-      - ubuntu-toolchain-r-test
-    packages:
-      - clang-3.5
-      - g++-4.8
+  ssh_known_hosts: richodemus.com
 
 install: true
 
-script:
-  - echo -e "#include <array>\nstd::array<int, 1> arr = {0}; int main() {return 0;}" > foo.cpp
-  - $CXX -std=c++11 -o /dev/null foo.cpp || g++ -std=c++11 -o /dev/null foo.cpp
-
+script: true
