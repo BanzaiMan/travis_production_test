@@ -2,7 +2,7 @@ language: c
 
 sudo: false
 
-compiler: clang
+compiler: clang-3.6
 
 env:
   - CXX=clang-3.6
@@ -11,6 +11,7 @@ addons:
   apt:
     sources:
       - llvm-toolchain-precise-3.6
+      - ubuntu-toolchain-r-test
     packages:
       - clang-3.6
       - libclang1-3.6
