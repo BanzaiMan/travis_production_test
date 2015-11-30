@@ -14,13 +14,7 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - clang-3.6
-      - libclang1-3.6
-      - libllvm3.6
-      - libstdc++-4.8-dev
-      - libgcc-4.8-dev
-      - libgcc-4.8-dev
-      - libobjc-4.8-dev
-      - libclang-common-3.6-dev
+      - g++-4.8
 
 install: true
 
