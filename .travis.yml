@@ -1,19 +1,26 @@
 language: c
 
-os: linux
-dist: precise
-group: edge
+sudo: false
+
 compiler: clang
 
 env:
-  - CXX=clang-3.5
+  - CXX=clang-3.6
 
 addons:
   apt:
     sources:
-      - llvm-toolchain-precise-3.5
+      - llvm-toolchain-precise-3.6
+      - ubuntu-toolchain-r-test
     packages:
-      - clang-3.5
+      - clang-3.6
+      - libclang1-3.6
+      - libllvm3.6
+      - libstdc++-4.8-dev
+      - libgcc-4.8-dev
+      - libgcc-4.8-dev
+      - libobjc-4.8-dev
+      - libclang-common-3.6-dev
 
 install: true
 
