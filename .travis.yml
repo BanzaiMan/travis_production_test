@@ -22,11 +22,11 @@ matrix:
     - os: linux
       dist: trusty
       group: edge
-      compiler: clang
+      compiler: gcc
     - os: linux
       dist: precise
       group: edge
-      compiler: clang
+      compiler: gcc
 
 
 install: true
