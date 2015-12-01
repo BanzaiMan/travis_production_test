@@ -1,21 +1,22 @@
-language: objective-c
+language: ruby
 
-osx_image: xcode7
-
-rvm: '2.0'
-
-env:
-  - GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -p 7999"
+rvm:
+  - '1.9'
 
 sudo: false
 
-addons:
-  ssh_known_hosts: stash.code.easyscott.com
-
 install:
-  - find ~/.ssh || mkdir ~/.ssh
-  - cat ~/.ssh/known_hosts || true
+  - true
 
-script: 
-  - git clone ssh://git@stash.code.easyscott.com/app/pod-specs.git || cat ~/.ssh/known_hosts
+script:
+  - true
+
+notifications:
+  slack:
+    rooms:
+      - secure: "QOytVJHTAvVIxGxjeMS/ybezghEfsbsy/i4KfC/tX/br/fsb3y6nDb4smKRNo6ghKkN8CGFuQbLDkMZJlIDH/XsMRzka/0eNNo3ISGyobYysYwqDDjLV2Yzmni0RbIUl/m8yNGj6Xj5ZXQ2Erq3VtKgiWfissjnSuY2+KTSB4Jg="
+    on_success: :always
+    on_failure: always
+    on_start: always
+    on_pull_requests: false
 
