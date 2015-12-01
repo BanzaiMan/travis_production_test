@@ -1,13 +1,10 @@
-language: php
+language: ruby
 
 sudo: false
-
-php:
-  - 7.0.0beta2
 
 install:
   - true
   
 script:
-  - true
+  - false
   
