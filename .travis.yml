@@ -2,8 +2,9 @@ language: ruby
 
 sudo: false
 
-install:
-  - ture
-script: 
-  - (echo true)
+cache: bundler
 
+install: true
+
+script:
+  - true
