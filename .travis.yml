@@ -1,11 +1,11 @@
-language: node_js
+language: ruby
 
 sudo: false
 
-node_js:
-  - '0.12'
+cache: bundler
 
-before_install:
-  - eval "npm install -g npm@$(jq .engines.npm package.json)"
-  - npm --version
+install: true
 
+script:
+  - true
+  
