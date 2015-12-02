@@ -4,7 +4,5 @@ sudo: false
 
 cache: pip
 
-install: true
-
 script:
   - true
