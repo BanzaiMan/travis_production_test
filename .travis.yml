@@ -10,5 +10,7 @@ script:
   - true
 
 after_script:
+  - cat $CASHER_DIR/md5sums_before || true
+  - cat $CASHER_DIR/md5sums_after || true
   - cat $CASHER_DIR/checksum_diff || true
   
