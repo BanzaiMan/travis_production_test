@@ -1,16 +1,13 @@
 language: python
 
-sudo: false
+python:
+  - 2.7.10
 
-cache:
-  pip: true
-  # edge: true
+sudo: false
 
 script:
   - true
 
 after_script:
-  - cat $CASHER_DIR/md5sums_before || true
-  - cat $CASHER_DIR/md5sums_after || true
-  - cat $CASHER_DIR/checksum_diff || true
-  
+  - python -c "import sysconfig; print(sysconfig.get_config_vars())"
+  - python -c "print distutils.sysconfig.get_config_var('CONFIG_ARGS')"
