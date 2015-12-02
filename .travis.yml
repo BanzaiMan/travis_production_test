@@ -9,5 +9,4 @@ script:
   - true
 
 after_script:
-  - python -c "import sysconfig; print(sysconfig.get_config_vars())"
-  - python -c "print distutils.sysconfig.get_config_var('CONFIG_ARGS')"
+  - python -c "import sys; print sys.maxunicode"
