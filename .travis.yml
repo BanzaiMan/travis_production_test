@@ -2,7 +2,9 @@ language: python
 
 sudo: false
 
-cache: pip
+cache:
+  pip: true
+  edge: true
 
 script:
   - true
