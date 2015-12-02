@@ -8,3 +8,7 @@ cache:
 
 script:
   - true
+
+after_script:
+  - cat $CASHER_DIR/checksum_diff || true
+  
