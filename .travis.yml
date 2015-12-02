@@ -5,7 +5,7 @@ dist: precise
 group: edge
 
 install:
-  - false
+  - true
 
 script:
   - rvm list
