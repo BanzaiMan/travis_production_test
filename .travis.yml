@@ -1,12 +1,11 @@
-language: python
+language: ruby
 
-python:
-  - 2.7.10
+sudo: required
+dist: precise
+group: edge
 
-sudo: false
+install:
+  - false
 
 script:
-  - true
-
-after_script:
-  - python -c "import sys; print sys.maxunicode"
+  - rvm list
