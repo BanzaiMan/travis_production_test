@@ -4,7 +4,7 @@ sudo: false
 
 cache:
   pip: true
-  edge: true
+  # edge: true
 
 script:
   - true
