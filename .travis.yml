@@ -1,11 +1,7 @@
 language: node_js
 
-sudo: false
-
 install:
   - true
 
 script:
-  - ls -ld /var
-  - ls -ld /var/log
-  - ls -la /var/log
+  - cat /etc/hosts
