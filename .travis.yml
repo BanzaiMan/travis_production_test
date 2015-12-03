@@ -1,9 +1,9 @@
-language: ruby
+language: node_js
 
-sudo: required
+sudo: false
 
 install:
-  - true
+  - npm install -g npm@2.4.11
 
 script:
   - rvm list
