@@ -10,4 +10,4 @@ install:
 
 script:
   - phpunit --version || true
-  
+  - command -v phpunit
