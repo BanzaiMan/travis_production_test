@@ -9,5 +9,5 @@ script:
 deploy:
   provider: script
   script: ruby -v
-after_deploy
+after_deploy:
   - ruby -v
