@@ -11,3 +11,6 @@ install:
 script:
   - phpunit --version || true
   - command -v phpunit
+  - curl -s -o $HOME/.phpenv/versions/5.5/bin/phpunit https://phar.phpunit.de/phpunit-old.phar
+  - chmod +x $HOME/.phpenv/versions/5.5/bin/phpunit
+  - phpunit --version
