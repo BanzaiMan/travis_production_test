@@ -9,5 +9,8 @@ script:
 deploy:
   provider: script
   script: ruby -v
+  on:
+    branch:
+      - default
 after_deploy:
   - ruby -v
