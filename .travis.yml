@@ -1,16 +1,10 @@
-language: ruby
-ruby:
-  - 2.2.0
+language: php
+
+php:
+  - 5.5.30
+
 sudo: false
 install:
   - true
 script:
-  - true
-deploy:
-  provider: script
-  script: ruby -v
-  on:
-    branch:
-      - default
-after_deploy:
-  - ruby -v
+  - pecl install redis
