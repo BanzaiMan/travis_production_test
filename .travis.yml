@@ -1,7 +1,10 @@
-language: ruby
+language: php
+
+php:
+  - '5.5'
 
 sudo: required
 dist: precise
 
-install: true
+install: phpunit --version
 script: true
