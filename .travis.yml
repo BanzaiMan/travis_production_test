@@ -1,14 +1,6 @@
 language: python
 python:
   - "2.7"
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - gcc-4.8
-    - g++-4.8
 before_install:
-  - pip install codecov
-  - source ~/virtualenv/python3.4/bin/activate
-  - pip2 install mechanize
+  - command -v pip2
+  - dpkg -S `command -v pip2` || true
