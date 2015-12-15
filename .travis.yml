@@ -4,8 +4,7 @@ sudo: requried
 dist: precise
 
 php:
-  - '5.6'
-  - '5.6.15'
+  - 7.0snapshot
 install:
   - true
 script:
