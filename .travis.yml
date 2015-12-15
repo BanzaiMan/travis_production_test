@@ -2,6 +2,8 @@ language: python
 sudo: false
 python:
   - "2.7"
-before_install:
-  - command -v pip2
-  - dpkg -S `command -v pip2` || true
+
+install:
+  - pip install pyzmq
+script:
+  - true
