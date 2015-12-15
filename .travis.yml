@@ -1,10 +1,10 @@
-language: python
+language: ruby
 
-python:
-  - '3.5'
-  
+rvm:
+  - '2.2.3'
+
 sudo: required
-dist: trusty
+dist: precise
 
 install: true
-script: python -c "import setuptools"
+script: true
