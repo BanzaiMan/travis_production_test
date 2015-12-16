@@ -4,7 +4,7 @@ sudo: required
 dist: precise
 
 before_install:
-  - hostname
+  - hostname -f
   - cat /etc/hosts
   - sudo hostname "$(hostname | cut -c1-63)"
   - sed -e "s/^\\(127\\.0\\.0\\.1.*\\)/\\1 $(hostname | cut -c1-63)/" /etc/hosts | sudo tee /etc/hosts
