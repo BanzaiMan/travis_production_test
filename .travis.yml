@@ -1,4 +1,4 @@
-language: ruby
+language: java
 
 sudo: required
 dist: precise
