@@ -10,5 +10,5 @@ before_install:
 install:
   - true
 script:
-  - which python
-  - which python3
+  - echo $PATH
+  - ls -l ~/virtualenv/*/bin/
