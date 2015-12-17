@@ -6,7 +6,7 @@ dist: trusty
 install:
   - true
 script:
-  - PATH=$(echo $PATH | tr ':' "\n" | sed ':/opt/python:d' | tr "\n" ":" | sed "s|::|:|g")
+  - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
   - echo $PATH
   - which python
   - which python3
