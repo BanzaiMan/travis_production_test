@@ -1,15 +1,14 @@
-language: java
+language: php
+
+php:
+  - '5.5'
 
 sudo: required
 dist: precise
 
 before_install:
-  - hostname -f
-  - cat /etc/hosts
-  - sudo hostname "$(hostname | cut -c1-63)"
-  - sed -e "s/^\\(127\\.0\\.0\\.1.*\\)/\\1 $(hostname | cut -c1-63)/" /etc/hosts | sudo tee /etc/hosts
-  - cat /etc/hosts
-
+  - find ~/.phpenv/versions/$(phpenv version-name) -name \*.so -print -exec ldd {} \;
+  
 install:
   - true
 script:
