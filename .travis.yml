@@ -7,5 +7,5 @@ install:
   - true
 script:
   - which python
-  - ~/virtualenv/python2.7/bin/deactivate
+  - deactivate
   - which python
