@@ -1,12 +1,14 @@
-language: php
+language: perl
 
-php:
-  - hhvm
-
+perl:
+  - '5.8'
+  - '5.10'
+  - '5.20'
+  
 sudo: required
-dist: trusty
+dist: precise
 
 install:
   - true
 script:
-  - true
+  - find ~/.cpanm || true
