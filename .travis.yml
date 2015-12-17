@@ -1,14 +1,11 @@
-language: perl
+language: c
 
-perl:
-  - '5.8'
-  - '5.10'
-  - '5.20'
-  
 sudo: required
-dist: precise
+dist: trusty
 
 install:
   - true
 script:
-  - find ~/.cpanm || true
+  - which python
+  - ~/virtualenv/python2.7/bin/deactivate
+  - which python
