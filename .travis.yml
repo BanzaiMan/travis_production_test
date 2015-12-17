@@ -1,15 +1,11 @@
 language: php
 
 php:
-  - '5.5'
+  - hhvm
 
 sudo: required
-dist: precise
+dist: trusty
 
-before_install:
-  - export LD_LIBRARY_PATH="~/.phpenv/versions/$(phpenv $TRAVIS_PHP_VERSION)/lib:$LD_LIBRARY_PATH"
-  - find ~/.phpenv/versions/$(phpenv $TRAVIS_PHP_VERSION) -name \*.so -print -exec ldd {} \;
-  
 install:
   - true
 script:
