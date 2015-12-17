@@ -6,10 +6,7 @@ dist: trusty
 install:
   - true
 script:
-  - echo $PATH
-  - ls -l ~/virtualenv/*/bin/
-  - source ~/virtualenv/python2.7/bin/activate
-  - deactivate
+  - PATH=$(echo $PATH | tr ':' "\n" | sed ':/opt/python:d' | tr "\n" ":" | sed "s|::|:|g")
   - echo $PATH
   - which python
   - which python3
