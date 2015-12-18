@@ -1,17 +1,8 @@
-language: c
+language: node_js
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-    - sudo: required
-      dist: trusty
+sudo: false
 
 install:
   - true
 script:
-  - echo $PATH
-  - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
-  - echo $PATH
-  - which python
-  - which python3
+  - npm config get user-agent
