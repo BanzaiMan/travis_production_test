@@ -1,11 +1,16 @@
 language: c
 
-sudo: required
-dist: trusty
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+    - sudo: required
+      dist: trusty
 
 install:
   - true
 script:
+  - echo $PATH
   - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" | sed "s|::|:|g")
   - echo $PATH
   - which python
