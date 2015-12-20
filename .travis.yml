@@ -2,6 +2,8 @@ language: c
 compiler:
   - gcc-4.8
   
+sudo: false
+
 addons:
   apt:
     sources:
