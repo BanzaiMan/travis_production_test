@@ -9,7 +9,8 @@ env:
   - NPM_VERSION=3
 
 before_install:
-  - npm update -g npm@$NPM_VERSION
+  - npm install -g npm@$NPM_VERSION
+  - npm --version
 
 script:
   - true
