@@ -1,17 +1,16 @@
-language: node_js
-node_js:
-  - '4'
-sudo: false
+language: c
+compiler:
+  - gcc-4.8
+  
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
 
-env:
-  - NPM_VERSION=3.5.2
-  - NPM_VERSION=3.5
-  - NPM_VERSION=3
-
-before_install:
-  - npm install -g npm@$NPM_VERSION
-  - npm --version
-
+install:
+  - true
 script:
   - true
-
