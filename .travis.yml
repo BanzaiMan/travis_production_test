@@ -12,6 +12,6 @@ matrix:
 
 install:
   - echo $LD_LIBRARY_PATH
-    rvm $TRAVIS_RUBY_VERSION do echo $LD_LIBRARY_PATH
+  - rvm $TRAVIS_RUBY_VERSION do echo $LD_LIBRARY_PATH
 script:
   - true
