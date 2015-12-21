@@ -4,6 +4,17 @@ matrix:
   include:
     - sudo: required
       dist: trusty
+      rvm: 2.2.4
+      env:
+        - RELEASE=trusty
+    - sudo: required
+      dist: trusty
+      group: edge
+      rvm: 2.2.4
+      env:
+        - RELEASE=trusty-edge
+    - sudo: required
+      dist: trusty
       rvm: 1.8.7
       env:
         - RELEASE=trusty
