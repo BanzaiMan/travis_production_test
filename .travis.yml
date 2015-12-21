@@ -32,6 +32,7 @@ matrix:
 install:
   - true
 script:
+  - gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   - rvm get head
   - wget http://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-1.8.7-head.tar.bz2
   - ls -lad $HOME/.rvm
