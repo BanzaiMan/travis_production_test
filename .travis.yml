@@ -7,6 +7,8 @@ matrix:
       dist: precise
       env: RELEASE=precise
       rvm: 1.8.7
+    - sudo: false
+      rvm: 1.8.7
 
 install:
   - true
