@@ -1,15 +1,17 @@
 language: ruby
 
-rvm: 1.8.7-head
-  
+
 matrix:
   include:
     - sudo: required
       dist: trusty
+      env: RELEASE=trusty
     - sudo: required
       dist: precise
+      env: RELEASE=precise
 
 install:
-  - true
+  - echo $LD_LIBRARY_PATH
+    rvm $TRAVIS_RUBY_VERSION do echo $LD_LIBRARY_PATH
 script:
   - true
