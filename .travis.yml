@@ -13,5 +13,6 @@ matrix:
 install:
   - true
 script:
+  - gcc --print-search-dirs
   - ldd `command -v ruby`
   - echo $LD_LIBRARY_PATH
