@@ -7,12 +7,14 @@ matrix:
       env:
         - RELEASE=trusty
     - sudo: required
+      dist: trusty
+      group: edge
+      env:
+        - RELEASE=trusty-edge
+    - sudo: required
       dist: precise
       env:
         - RELEASE=precise
-
-rvm:
-  - 2.1.5
 
 install:
   - true
