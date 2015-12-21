@@ -32,6 +32,7 @@ matrix:
 install:
   - true
 script:
+  - rvm get head
   - wget http://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-1.8.7-head.tar.bz2
   - ls -lad $HOME/.rvm
   - ls -lad $HOME/.rvm/rubies
