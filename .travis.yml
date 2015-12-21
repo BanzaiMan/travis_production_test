@@ -1,16 +1,9 @@
-language: c
-compiler:
-  - gcc-4.8
+language: python
+python:
+  - pypy-4.0
+  - pypy3-2.4
   
 sudo: false
-
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - gcc-4.8
-    - g++-4.8
 
 install:
   - true
