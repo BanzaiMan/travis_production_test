@@ -1,47 +1,16 @@
 language: ruby
 
-matrix:
-  include:
-    - sudo: required
-      dist: trusty
-      rvm: 2.2.4
-      env:
-        - RELEASE=trusty
-    - sudo: required
-      dist: trusty
-      group: edge
-      rvm: 2.2.4
-      env:
-        - RELEASE=trusty-edge
-    - sudo: required
-      dist: trusty
-      rvm: 1.8.7
-      env:
-        - RELEASE=trusty
-    - sudo: required
-      dist: trusty
-      group: edge
-      rvm: 1.8.7
-      env:
-        - RELEASE=trusty-edge
-    - sudo: required
-      dist: precise
-      env:
-        - RELEASE=precise
+rvm:
+  - 2.1.5
+  
+sudo: false
+
+addons:
+  apt:
+    packages:
+      - openssl
 
 install:
   - true
 script:
-  - find ~/.rvm/config -type f -print -exec cat {} \;
-  - gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-  - rvm get head
-  - rvm --version
-  - wget http://rubies.travis-ci.org/ubuntu/14.04/x86_64/ruby-1.8.7-head.tar.bz2
-  - ls -lad $HOME/.rvm; ls -lad $HOME/.rvm/rubies; mkdir -p $HOME/.rvm/rubies $HOME/.rvm/gems/ruby-1.8.7-head
-  - tar xjf ruby-1.8.7-head.tar.bz2 --directory $HOME/.rvm/rubies
-  - ldd `command -v ruby`
-  - echo $LD_LIBRARY_PATH
-  - rvm use 1.8.7-head; rvm use 1.8.7-head --create
-  - ruby --version
-  - sudo ldconfig
-  - ruby --version
+  - openssl -v
