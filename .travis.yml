@@ -13,4 +13,5 @@ addons:
 install:
   - true
 script:
-  - openssl -v
+  - openssl version
+
