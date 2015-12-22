@@ -11,5 +11,5 @@ install:
 script:
   - command -v openssl
   - dpkg -S `command -v openssl`
-  - dpkg -l openssl
+  - env COLUMNS=132 dpkg -l openssl
   - openssl version
