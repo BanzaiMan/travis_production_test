@@ -5,13 +5,11 @@ rvm:
   
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - openssl
 
 install:
   - true
 script:
-  - command -v openssl version
+  - command -v openssl
+  - dpkg -S `command -v openssl`
+  - dpkg -l openssl
   - openssl version
