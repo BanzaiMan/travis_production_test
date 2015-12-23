@@ -1,27 +1,44 @@
-language: ruby
+language: python
 
-rvm:
-  - 2.1.5
-  
-sudo: false
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - debian-sid
-    packages:
-      - gcc-4.8
-      - g++-4.8
-      - python2.7
-      - wget
-      - pkg-config
-      - zip
-      - zlib1g-dev
-      - libunwind8-dev
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env:
+        - ENV=precise
+      python: '2.7'
+    - sudo: required
+      dist: precise
+      env:
+        - ENV=precise-system_site_packages
+      python: '2.7'
+      virtualenv:
+        system_site_packages: true
+    - sudo: required
+      dist: precise
+      env:
+        - ENV=precise-gce
+      python: '2.7'
+    - sudo: required
+      dist: precise
+      env:
+        - ENV=precise-gce-system_site_packages
+      python: '2.7'
+      virtualenv:
+        system_site_packages: true
+    - sudo: false
+      env:
+        - ENV=precise-docker
+      python: '2.7'
+    - sudo: false
+      env:
+        - ENV=precise-docker-system_site_packages
+      python: '2.7'
+      virtualenv:
+        system_site_packages: true
 
 install:
   - true
 script:
-  - true
-  
+  - python -c "import sys; print(opts.get(sys.maxunicode))"
+
