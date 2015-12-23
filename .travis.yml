@@ -40,5 +40,5 @@ matrix:
 install:
   - true
 script:
-  - python -c "import sys; print(opts.get(sys.maxunicode))"
+  - python -c "import sys; print(sys.maxunicode)"
 
