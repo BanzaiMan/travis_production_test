@@ -1,44 +1,11 @@
-language: python
+language: ruby
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env:
-        - ENV=precise
-      python: '2.7'
-    - sudo: required
-      dist: precise
-      env:
-        - ENV=precise-system_site_packages
-      python: '2.7'
-      virtualenv:
-        system_site_packages: true
-    - sudo: required
-      dist: precise
-      env:
-        - ENV=precise-gce
-      python: '2.7'
-    - sudo: required
-      dist: precise
-      env:
-        - ENV=precise-gce-system_site_packages
-      python: '2.7'
-      virtualenv:
-        system_site_packages: true
-    - sudo: false
-      env:
-        - ENV=precise-docker
-      python: '2.7'
-    - sudo: false
-      env:
-        - ENV=precise-docker-system_site_packages
-      python: '2.7'
-      virtualenv:
-        system_site_packages: true
+sudo: false
+
+rvm:
+  - jruby-9.0.4.0
 
 install:
   - true
 script:
-  - python -c "import sys; print(sys.maxunicode)"
-
+  - true
