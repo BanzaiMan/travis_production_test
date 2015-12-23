@@ -2,8 +2,22 @@ language: ruby
 
 sudo: false
 
-rvm:
-  - jruby-9.0.4.0
+matrix:
+  include:
+    - sudo: false
+      addons:
+        packages:
+          - foo
+      rvm: 2.1.5
+      env:
+        - COMBO=2.1.5_foo
+    - sudo: false
+      addons:
+        packages:
+          - bar
+      rvm: 2.2.0
+      evn:
+        - COMOB=2.2.0_bar
 
 install:
   - true
