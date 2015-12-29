@@ -1,25 +1,97 @@
-language: ruby
-
-sudo: false
+language: smalltalk
 
 matrix:
   include:
-    - sudo: false
-      addons:
-        packages:
-          - foo
-      rvm: 2.1.5
-      env:
-        - COMBO=2.1.5_foo
-    - sudo: false
-      addons:
-        packages:
-          - bar
-      rvm: 2.2.0
-      env:
-        - COMBO=2.2.0_bar
+    - smalltalk: Squeak-trunk
+      os: linux
+    - smalltalk: Squeak-trunk
+      os: osx
+    - smalltalk: Squeak-5.0
+      os: linux
+    - smalltalk: Squeak-5.0
+      os: osx
+    - smalltalk: Squeak-4.6
+      os: linux
+    - smalltalk: Squeak-4.6
+      os: osx
+    - smalltalk: Squeak-4.5
+      os: linux
+    - smalltalk: Squeak-4.5
+      os: osx
+    - smalltalk: Pharo-alpha
+      os: linux
+    - smalltalk: Pharo-alpha
+      os: osx
+    - smalltalk: Pharo-stable
+      os: linux
+    - smalltalk: Pharo-stable
+      os: osx
+    - smalltalk: Pharo-5.0
+      os: linux
+    - smalltalk: Pharo-5.0
+      os: osx
+    - smalltalk: Pharo-4.0
+      os: linux
+    - smalltalk: Pharo-4.0
+      os: osx
+    - smalltalk: Pharo-3.0
+      os: linux
+    - smalltalk: Pharo-3.0
+      os: osx
+
+    - smalltalk: Squeak-4.4
+      os: linux
+      sudo: required
+      env: BUILDERCI=true
+    - smalltalk: Squeak-4.3
+      os: linux
+      sudo: required
+      env: BUILDERCI=true
+
+    - smalltalk: Pharo-2.0
+      os: linux
+      sudo: required
+      env: BUILDERCI=true
+    - smalltalk: Pharo-1.4
+      os: linux
+      sudo: required
+      env: BUILDERCI=true
+    - smalltalk: PharoCore-1.2
+      os: linux
+      sudo: required
+      env: BUILDERCI=true
+    - smalltalk: PharoCore-1.1
+      os: linux
+      sudo: required
+      env: BUILDERCI=true
+
+    - smalltalk: GemStone-3.2.7
+      os: linux
+      sudo: required
+    - smalltalk: GemStone-3.2.0
+      os: linux
+      sudo: required
+    - smalltalk: GemStone-3.1.0.6
+      os: linux
+      sudo: required
+    - smalltalk: GemStone-3.1.0.2
+      os: linux
+      sudo: required
+    - smalltalk: GemStone-3.0.1
+      os: linux
+      sudo: required
+    - smalltalk: GemStone-2.4.6
+      os: linux
+      sudo: required
+    - smalltalk: GemStone-2.4.5
+      os: linux
+      sudo: required
+    - smalltalk: GemStone-2.4.4.1
+      os: linux
+      sudo: required
 
 install:
   - true
+
 script:
   - true
