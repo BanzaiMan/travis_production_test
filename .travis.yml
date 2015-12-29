@@ -1,9 +1,11 @@
-language: php
+language: android
 
-sudo: false
+sudo: required
+
+dist: trusty
 
 install:
-  - travis_wait 2 sleep 630 || true
+  - true
 
 script:
   - true
