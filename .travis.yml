@@ -1,16 +1,13 @@
-sudo: required
+language: ruby
 
-services:
-  - docker
+rvm:
+  - 2.1.5
 
-before_install:
-- docker pull glot/clang
+os: osx
+
 
 install:
-- true
+- which brew || true
 
 script:
-  - docker run -v "$(pwd)":/app -w /app glot/clang ls -lad .
-  - docker run -v "$(pwd)":/app -w /app glot/clang whoami
-  - docker run -v "$(pwd)":/app -w /app glot/clang g++ -o /app/a.out main.cpp
-  - docker run -v "$(pwd)":/app -w /app glot/clang g++ -o ~/a.out main.cpp
+  - true
