@@ -11,5 +11,6 @@ install:
 
 script:
   - docker run -v "$(pwd)":/app -w /app glot/clang ls -lad .
+  - docker run -v "$(pwd)":/app -w /app glot/clang whoami
   - docker run -v "$(pwd)":/app -w /app glot/clang g++ -o /app/a.out main.cpp
   - docker run -v "$(pwd)":/app -w /app glot/clang g++ -o ~/a.out main.cpp
