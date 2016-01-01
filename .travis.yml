@@ -5,13 +5,13 @@ sudo: required
 dist: trusty
 
 before_install:
-- docker pull ubuntu
+- docker pull gcc:4.8
 
 install:
 - which brew || true
 
 script:
-  - docker run -v "$(pwd)":/app -w /app ubuntu ls -lad .
-  - docker run -v "$(pwd)":/app -w /app ubuntu whoami
-  - docker run -v "$(pwd)":/app -w /app ubuntu g++ -o /app/a.out main.cpp
-  - docker run -v "$(pwd)":/app -w /app ubuntu g++ -o ~/a.out main.cpp
+  - docker run -v "$(pwd)":/app -w /app gcc:4.8 ls -lad .
+  - docker run -v "$(pwd)":/app -w /app gcc:4.8 whoami
+  - docker run -v "$(pwd)":/app -w /app gcc:4.8 g++ -o /app/a.out main.cpp
+  - docker run -v "$(pwd)":/app -w /app gcc:4.8 g++ -o ~/a.out main.cpp
