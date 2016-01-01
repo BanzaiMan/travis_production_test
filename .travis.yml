@@ -1,13 +1,15 @@
-sudo: required
+language: ruby
 
-services:
-  - docker
+rvm:
+  - 2.1.5
+
+os: osx
 
 before_install:
 - docker pull ubuntu
 
 install:
-- true
+- which brew || true
 
 script:
   - docker run -v "$(pwd)":/app -w /app ubuntu ls -lad .
