@@ -8,11 +8,7 @@ matrix:
   fast_finish: true
   include:
     env:
-      # https://github.com/agh/ansible-test-containers/blob/master/debian-7
-      - distribution: 'debian'
-        version: '7'
-        init: '/sbin/init'
-        run_opts: ''
+      - FOO=bar
 
 install:
   - true
