@@ -1,12 +1,20 @@
-language: objective-c
+sudo: required
+dist: trusty
 
-before_install:
-  - "wget --no-cookies --no-check-certificate --header \"Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie\" http://download.oracle.com/otn-pub/java/jdk/8u66-b17/jdk-8u66-macosx-x64.dmg"
-  - hdiutil mount jdk-8u66-macosx-x64.dmg
-  - sudo installer -pkg /Volumes/JDK\ 8\ Update\ 66/JDK\ 8\ Update\ 66.pkg -target LocalSystem
+services:
+  - docker
+
+matrix:
+  fast_finish: true
+  include:
+    env:
+      # https://github.com/agh/ansible-test-containers/blob/master/debian-7
+      - distribution: 'debian'
+        version: '7'
+        init: '/sbin/init'
+        run_opts: ''
 
 install:
-  - java -version
-
+  - true
 script:
   - true
