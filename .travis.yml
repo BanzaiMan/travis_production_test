@@ -5,6 +5,8 @@ dist: trusty
 
 python:
   - '2.7'
+  - '2.7.10'
+  - '3.5'
 
 install:
   - true
