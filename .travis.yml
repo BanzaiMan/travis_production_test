@@ -1,16 +1,7 @@
+language: python
+
 sudo: required
 dist: trusty
 
-services:
-  - docker
-
-matrix:
-  fast_finish: true
-  include:
-    env:
-      - FOO=bar
-
-install:
-  - true
-script:
-  - true
+python:
+  - '2.7'
