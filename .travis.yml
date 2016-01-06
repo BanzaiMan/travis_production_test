@@ -1,13 +1,16 @@
-language: objective-c
+language: php
 
-rvm:
-  - 2.1.5
+php:
+  - '5.5'
+  - '5.6'
+  - '7.0'
 
 before_install:
-  - ls -l ~/.ssh
+  - php -i
 
 install:
   - true
 
 script:
-  - git clone git@github.com:travis-ci/travis-web.git
+  - curl -vvvI https://email.us-east-1.amazonaws.com/
+  - dpkg -l
