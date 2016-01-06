@@ -5,3 +5,9 @@ dist: trusty
 
 python:
   - '2.7'
+
+install:
+  - true
+
+script:
+  - python -c "import sys; print ('UCS4 build' if sys.maxunicode > 65535 else 'UCS2 build')"
