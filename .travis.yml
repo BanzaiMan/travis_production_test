@@ -8,7 +8,8 @@ dist: precise
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get remove libcurl4-gnutls-dev
+  - sudo apt-get remove libcurl3-gnutls-dev || true
+  - sudo apt-get remove libcurl4-gnutls-dev || true
   - sudo apt-get install libcurl4-openssl-dev
   - php -i
 
