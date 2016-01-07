@@ -9,6 +9,7 @@ before_install:
   - ls -l ~/.ssh
   - cat /etc/ssh_config
   - cat ~/.ssh/known_hosts
+  - cat ~/.ssh/config
 
 install:
   - true
