@@ -1,7 +1,4 @@
-language: ruby
-
-sudo: false
-
+language: objective-c
 rvm:
   - 2.1.5
 
