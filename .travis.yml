@@ -1,21 +1,16 @@
-language: php
+language: objective-c
 
-php:
-  - '5.6'
-
-sudo: required
-dist: precise
+rvm:
+  - 2.1.5
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get remove libcurl3-gnutls-dev || true
-  - sudo apt-get remove libcurl4-gnutls-dev || true
-  - sudo apt-get install libcurl4-openssl-dev
-  - php -i
+  - ls -l ~/.ssh
+  - cat /etc/ssh_config
+  - cat ~/.ssh/known_hosts
 
 install:
   - true
 
 script:
-  - curl -vvvI https://email.us-east-1.amazonaws.com/
-  - dpkg -l
+  - rm ~/.ssh/known_hosts
+  - git clone git@github.com:travis-ci/travis-web.git
