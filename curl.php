@@ -1,6 +1,6 @@
 <?php
 
-$ch = curl_init("https://google.com/");
+$ch = curl_init("https://email.us-east-1.amazonaws.com/");
 $fp = fopen("example_homepage.txt", "w");
 
 curl_setopt($ch, CURLOPT_FILE, $fp);
