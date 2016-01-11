@@ -10,10 +10,10 @@ install:
   - true
 
 script:
-  - touch file-$FOO
+  - echo $FOO > file-$FOO
 
 before_deploy:
-  - ls file-$FOO
+  - ls -l file-$FOO
 
 deploy:
   provider: releases
