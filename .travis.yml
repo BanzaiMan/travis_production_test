@@ -1,14 +1,10 @@
-language: node_js
-
-node_js:
-  - 4
+language: erlang
 
 sudo: false
-
-before_install: true
 
 install:
   - true
 
 script:
-  - rvm install 2.0.0 && rvm use 2.0.0
+  - ls -l ~/.kerl || true
+  - which kerl
