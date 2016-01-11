@@ -1,10 +1,10 @@
-language: python
+language: erlang
 
 sudo: false
 
-python:
-  - '3.5'
-
+otp_release:
+  - 18.2.1
+  
 install:
   - true
 script:
