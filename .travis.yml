@@ -1,14 +1,11 @@
-language: ruby
+language: python
 
-sudo: required
-dist: trusty
+sudo: false
+
+python:
+  - '3.5'
 
 install:
-  - 'wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.6.0.deb'
-  - 'sudo dpkg -i elasticsearch-1.6.0.deb'
-  - sudo service elasticsearch start
-
+  - true
 script:
-  - sudo lsof -P | grep TCP
-  - until (ruby -rsocket -e 'TCPSocket.new("localhost",9200)' 2>/dev/null); do echo .; sleep 1; done
-  - sudo lsof -P | grep TCP
+  - true
