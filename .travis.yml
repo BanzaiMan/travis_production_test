@@ -3,14 +3,20 @@ language: php
 sudo: required
 dist: trusty
 
-php:
-  - 5.5
-  - 5.6
-  - 7.0
+env:
+  - PG_VERSION='9.5'
+  - PG_VERSION='9.6'
+  - PG_VERSION='9.7'
+
+before_install:
+  - sudo /etc/init.d/postgresql stop
+  - wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+  - sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main $PG_VERSION" >> /etc/apt/sources.list.d/postgresql.list'
+  - sudo apt-get update
+  - sudo apt-get install postgresql-$PG_VERSION
 
 install:
   - true
 
 script:
-  - php curl.php
-  - cat example_homepage.txt
+  - true
