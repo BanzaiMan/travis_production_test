@@ -1,7 +1,8 @@
-language: ruby
+language: bash
 
+services:
+  - docker
 sudo: required
-dist: trusty
 
 install:
   - true
