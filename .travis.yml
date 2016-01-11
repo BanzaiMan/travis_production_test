@@ -4,18 +4,22 @@ sudo: required
 dist: trusty
 
 env:
-  - PG_VERSION='9.5'
-  - PG_VERSION='9.6'
-  - PG_VERSION='9.7'
-
-before_install:
-  - sudo /etc/init.d/postgresql stop
-  - sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main $PG_VERSION" >> /etc/apt/sources.list.d/postgresql.list'
-  - sudo apt-get update
-  - sudo apt-get install postgresql-$PG_VERSION
+  - FOO=bar
+  - FOO=baz
 
 install:
   - true
 
 script:
-  - true
+  - touch file-$FOO
+
+before_deploy:
+  - ls file-$FOO
+
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: file-$FOO
+  skip_cleanup: true
+  on:
+    tags: true
