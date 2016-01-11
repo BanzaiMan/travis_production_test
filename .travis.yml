@@ -2,4 +2,4 @@ language: bash
 
 sudo: false
 
-install: true
+before_install: true
