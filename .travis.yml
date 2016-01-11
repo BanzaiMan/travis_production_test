@@ -1,6 +1,7 @@
-language: bash
+language: ruby
 
-sudo: false
+sudo: required
+dist: trusty
 
 install:
   - true
