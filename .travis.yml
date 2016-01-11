@@ -1,7 +1,6 @@
 language: php
 
-sudo: required
-dist: trusty
+sudo: false
 
 env:
   - FOO=bar
@@ -18,7 +17,8 @@ before_deploy:
 
 deploy:
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
+  api_key:
+    secure: "JDr+iUZelZJZ7yyFc4/gpXnM7j5IpXTbaBNaPF6b1RqHdFua7T3v9GKsUFf/pRk0wN43Ebsbfb3OKFlAg6nByOk2miIE9Hz852JpS3J2sZBREhpi3gMRxPmEaRzLJOlSYNprNBGe6+JPk1mVjoVIQVDUH90UE/bTXGQnVcNT+3E="
   file: file-$FOO
   skip_cleanup: true
   on:
