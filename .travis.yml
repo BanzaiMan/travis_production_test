@@ -1,10 +1,12 @@
-language: erlang
+language: rust
+
+notifications:
+  email: false
 
 sudo: false
 
 install:
   - true
 
-script:
-  - ls -l ~/.kerl || true
-  - which kerl
+services:
+  - cassandra
