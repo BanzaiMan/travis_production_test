@@ -10,3 +10,4 @@ install:
 
 script:
   - travis_wait 2 sleep 180
+  - cat ~/build.sh
