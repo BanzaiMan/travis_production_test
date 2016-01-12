@@ -1,4 +1,4 @@
-language: rust
+language: ruby
 
 notifications:
   email: false
@@ -8,5 +8,5 @@ sudo: false
 install:
   - true
 
-services:
-  - cassandra
+script:
+  - travis_wait 2 sleep 180
