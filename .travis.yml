@@ -1,13 +1,13 @@
-language: ruby
+language: android
 
 notifications:
   email: false
 
-sudo: false
+sudo: required
+dist: trusty
 
 install:
   - true
 
 script:
-  - travis_wait 2 sleep 180
-  - cat ~/build.sh
+  - true
