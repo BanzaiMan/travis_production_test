@@ -1,4 +1,4 @@
-language: go
+language: python
 
 notifications:
   email: false
@@ -8,7 +8,7 @@ dist: trusty
 group: edge
 
 install:
-  - true
+  - pip install --upgrade pip
 
 script:
   - true
