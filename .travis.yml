@@ -5,7 +5,6 @@ notifications:
 
 sudo: required
 dist: trusty
-group: edge
 
 install:
   - pip install --upgrade pip
