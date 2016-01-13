@@ -3,7 +3,8 @@ language: ruby
 notifications:
   email: false
 
-sudo: false
+sudo: required
+dist: trusty
 
 rvm:
   - 2.1.8
