@@ -1,13 +1,12 @@
-language: python
+language: ruby
 
 notifications:
   email: false
 
-sudo: required
-dist: trusty
+sudo: false
 
-install:
-  - pip install --upgrade pip
+rvm:
+  - 2.1.8
 
 script:
   - true
