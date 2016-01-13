@@ -1,13 +1,19 @@
-language: ruby
+language: cpp
 
 notifications:
   email: false
 
-sudo: required
-dist: trusty
+sudo: false
 
-rvm:
-  - 2.1.8
+addons:
+  apt:
+    sources:
+      - debian-sid
+    packages:
+      - gcc-arm-none-eabi
+
+install:
+  - true
 
 script:
   - true
