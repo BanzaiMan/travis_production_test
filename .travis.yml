@@ -1,4 +1,4 @@
-language: android
+language: go
 
 notifications:
   email: false
