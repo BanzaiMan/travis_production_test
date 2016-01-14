@@ -7,13 +7,11 @@ sudo: false
 
 addons:
   apt:
-    sources:
-      - debian-sid
     packages:
-      - gcc-arm-none-eabi
+      - libcxsparse3.1.2
 
 install:
-  - true
+  - cat ~/apt-get-update.log
 
 script:
   - true
