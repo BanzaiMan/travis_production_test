@@ -1,17 +1,12 @@
-language: cpp
+language: python
 
 notifications:
   email: false
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - libcxsparse3.1.2
-
 install:
-  - cat ~/apt-get-update.log
+  - true
 
 script:
-  - true
+  - travis_wait 2 sleep 30
