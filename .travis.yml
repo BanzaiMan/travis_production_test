@@ -1,4 +1,7 @@
-language: python
+language: ruby
+
+rvm:
+  - jruby
 
 notifications:
   email: false
@@ -9,4 +12,4 @@ install:
   - true
 
 script:
-  - travis_wait 2 sleep 30
+  - echo $JRUBY_OPTS
