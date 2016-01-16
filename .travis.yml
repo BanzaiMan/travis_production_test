@@ -6,7 +6,8 @@ rvm:
 notifications:
   email: false
 
-sudo: false
+sudo: required
+dist: trusty
 
 install:
   - true
