@@ -1,16 +1,18 @@
-language: ruby
+language: php
 
-rvm:
-  - jruby
+php:
+  - 5.6
 
 notifications:
   email: false
 
-sudo: required
-dist: trusty
+sudo: false
+
+before_install:
+  - echo "extension=memcache.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
 
 install:
   - true
 
 script:
-  - echo $JRUBY_OPTS
+  - php --ini
