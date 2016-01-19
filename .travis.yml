@@ -1,20 +1,21 @@
-language: php
+language: ruby
 
-php:
-  - 5.6
+rvm:
+  - 2.1.5
 
 notifications:
   email: false
 
-sudo: false
+sudo: true
+dist: trusty
+group: edge
 
-before_install:
-  - echo "extension=memcache.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+services:
+  - cassandra
+
 
 install:
   - true
 
 script:
-  - php --ini
-  - cat /home/travis/.phpenv/versions/5.6.5/etc/php.ini
-  - cat ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - true
