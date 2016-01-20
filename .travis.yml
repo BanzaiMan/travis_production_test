@@ -1,15 +1,37 @@
-language: objective-c
-
-rvm:
-  - 2.1.5
+language: rust
 
 notifications:
   email: false
 
-osx_image: xcode7.1
+sudo: false
 
 install:
   - true
 
 script:
   - true
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-precise-3.7
+    packages:
+      - llvm-3.7-dev
+      - libllvm3.7
+      - libclang-3.7-dev
+      - libclang-common-3.7-dev
+      - lib32z1-dev
+      - libedit-dev
+
+before_install:
+  - export PATH=/usr/lib/llvm-3.7/bin/:$PATH
+
+install:
+  - ls /usr/share/llvm-3.7/cmake/
+  - ls /usr/lib/llvm-3.7 # bin, include, lib
+  - whereis clang
+  - dpkg --get-selections | grep -v deinstall | grep llvm
+  - dpkg --get-selections | grep -v deinstall | grep clang
+  - llvm-config --version
+  - llvm-config --prefix
