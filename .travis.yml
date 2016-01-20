@@ -1,17 +1,10 @@
-language: ruby
+language: objective-c
 
 rvm:
   - 2.1.5
 
 notifications:
   email: false
-
-sudo: true
-dist: trusty
-group: edge
-
-services:
-  - cassandra
 
 
 install:
