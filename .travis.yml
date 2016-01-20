@@ -8,6 +8,10 @@ notifications:
 
 osx_image: xcode7.1
 
+branches:
+  only:
+    - default
+
 install:
   - true
 
