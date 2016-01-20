@@ -6,6 +6,7 @@ rvm:
 notifications:
   email: false
 
+osx_image: xcode7.1
 
 install:
   - true
