@@ -11,6 +11,13 @@ services:
 install:
   - true
 
+addons:
+  apt:
+    sources:
+      - elasticsearch-1.7
+    packages:
+      - elasticsearch
+
 script:
   - true
 
