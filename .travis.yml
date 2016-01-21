@@ -3,13 +3,11 @@ language: python
 notifications:
   email: false
 
-sudo: false
+sudo: required
+dist: trusty
 
 services:
   - elasticsearch
-
-install:
-  - true
 
 addons:
   apt:
@@ -18,11 +16,11 @@ addons:
     packages:
       - elasticsearch
 
-script:
+install:
   - true
 
 before_script:
   - sleep 10
 
-install:
+script:
   - "curl http://localhost:9200/twitter"
