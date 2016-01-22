@@ -9,12 +9,9 @@ dist: precise
 services:
   - elasticsearch
 
-addons:
-  apt:
-    sources:
-      - elasticsearch-1.7
-    packages:
-      - elasticsearch
+env:
+  global:
+    - DEBIAN_FRONTEND=noninteractive
 
 install:
   - "sudo service elasticsearch restart"
@@ -22,4 +19,14 @@ install:
   - "whereis elasticsearch"
 
 script:
+  - "curl 'localhost:9200'"
+  - "curl 'localhost:9200/_cat/indices?v'"
+  - "curl -sSL 'https://packages.elastic.co/GPG-KEY-elasticsearch' | sudo -E apt-key add -"
+  - "echo 'deb http://packages.elastic.co/elasticsearch/1.7/debian stable main' | sudo tee -a /etc/apt/sources.list > /dev/null"
+  - "sudo -E apt-get -yq update"
+  - "sudo -E apt-get -yq --no-install-suggests --no-install-recommends --force-yes install elasticsearch"
+  - "sudo service elasticsearch restart"
+  - "sleep 10"
+  - "whereis elasticsearch"
+  - "curl 'localhost:9200'"
   - "curl 'localhost:9200/_cat/indices?v'"
