@@ -3,16 +3,23 @@ language: python
 notifications:
   email: false
 
-sudo: false
+sudo: required
+dist: precise
 
 services:
   - elasticsearch
 
-install:
-  - true
+addons:
+  apt:
+    sources:
+      - elasticsearch-1.7
+    packages:
+      - elasticsearch
 
-before_script:
-  - sleep 10
+install:
+  - "sudo service elasticsearch restart"
+  - "sleep 10"
+  - "whereis elasticsearch"
 
 script:
   - "curl 'localhost:9200/_cat/indices?v'"
