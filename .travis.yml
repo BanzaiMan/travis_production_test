@@ -3,11 +3,7 @@ language: python
 notifications:
   email: false
 
-sudo: required
-dist: trusty
-
-services:
-  - elasticsearch
+sudo: false
 
 addons:
   apt:
@@ -23,4 +19,4 @@ before_script:
   - sleep 10
 
 script:
-  - "curl http://localhost:9200/twitter"
+  - "curl 'localhost:9200/_cat/indices?v'"
