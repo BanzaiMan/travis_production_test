@@ -1,22 +1,14 @@
 sudo: false
-language: c
+language: android
 
-compiler: gcc-4.4
-matrix:
-  include:
-    - compiler: gcc-4.5
-      addons:
-        apt:
-          packages:
-            - gcc-4.4
-            - gcc-4.5
+android:
+  components:
+    - platform-tools
+    - tools
+    - build-tools-23.0.2
 
-
-addons:
-  apt:
-    packages:
-      - gcc-4.4
-      - gcc-4.5
+install:
+  - true
 
 script:
-  - which $CC
+  - true
