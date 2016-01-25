@@ -1,14 +1,11 @@
-sudo: false
-language: android
-
-android:
-  components:
-    - platform-tools
-    - tools
-    - build-tools-23.0.2
+language: php
+php:
+  - hhvm
+sudo: required
+dist: trusty
 
 install:
-  - true
+	- true
 
 script:
-  - true
+	- true
