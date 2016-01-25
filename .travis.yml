@@ -8,8 +8,8 @@ group: edge
 notifications:
   email: false
 
-install:
-  - true
+	install:
+	  - true
 
 script:
   - true
