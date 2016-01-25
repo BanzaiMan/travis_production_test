@@ -3,6 +3,10 @@ php:
   - hhvm
 sudo: required
 dist: trusty
+group: edge
+
+notifications:
+  email: false
 
 install:
   - true
