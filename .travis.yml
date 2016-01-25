@@ -1,15 +1,18 @@
-language: php
-php:
-  - hhvm
-sudo: required
-dist: trusty
-group: edge
+language: phyton
+sudo: false
 
 notifications:
   email: false
 
-	install:
-	  - true
-
 script:
   - true
+
+matrix:
+  include:
+    - env: ENV=docs
+      python: 2.7
+      # Note: graphviz is needed for grapgs embedded in the docs
+      addons:
+        apt:
+          packages:
+            - graphviz
