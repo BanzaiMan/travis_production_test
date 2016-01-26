@@ -4,15 +4,8 @@ sudo: false
 notifications:
   email: false
 
-script:
+install:
   - true
-
-matrix:
-  include:
-    - env: ENV=docs
-      python: 2.7
-      # Note: graphviz is needed for grapgs embedded in the docs
-      addons:
-        apt:
-          packages:
-            - graphviz
+script:
+  - dkpg -S /lib/x86_64-linux-gnu/libc.so.6
+  - dpkg -l $(dkpg -S /lib/x86_64-linux-gnu/libc.so.6 | cut -f1 -d:)
