@@ -1,7 +1,5 @@
 language: phyton
 sudo: required
-dist: trusty
-group: edge
 
 notifications:
   email: false
@@ -9,4 +7,5 @@ notifications:
 install:
   - true
 script:
-  - dpkg -l | grep memcache
+  - dpkg -S /lib/x86_64-linux-gnu/libc.so.6
+  - dpkg -l $(dpkg -S /lib/x86_64-linux-gnu/libc.so.6 | cut -f1 -d:)
