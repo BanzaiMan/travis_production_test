@@ -1,5 +1,6 @@
 language: phyton
-sudo: false
+sudo: required
+dist: trusty
 
 notifications:
   email: false
@@ -7,5 +8,4 @@ notifications:
 install:
   - true
 script:
-  - dkpg -S /lib/x86_64-linux-gnu/libc.so.6
-  - dpkg -l $(dkpg -S /lib/x86_64-linux-gnu/libc.so.6 | cut -f1 -d:)
+  - dpkg -l | grep memcache
