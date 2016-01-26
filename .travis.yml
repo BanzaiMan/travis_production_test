@@ -1,5 +1,7 @@
-language: phyton
-sudo: required
+language: ruby
+sudo: false
+rvm:
+  - '2.1.6'
 
 notifications:
   email: false
@@ -7,5 +9,4 @@ notifications:
 install:
   - true
 script:
-  - dpkg -S /lib/x86_64-linux-gnu/libc.so.6
-  - dpkg -l $(dpkg -S /lib/x86_64-linux-gnu/libc.so.6 | cut -f1 -d:)
+  - true
