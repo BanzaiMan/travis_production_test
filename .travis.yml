@@ -1,6 +1,7 @@
 language: phyton
 sudo: required
 dist: trusty
+group: edge
 
 notifications:
   email: false
