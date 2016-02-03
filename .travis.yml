@@ -1,9 +1,15 @@
 language: ruby
-sudo: required
-dist: trusty
+sudo: false
 
 rvm:
   - '2.1.6'
+
+addons:
+  apt:
+    sources:
+      - git-core
+    packages:
+      - git
 
 notifications:
   email: false
@@ -11,4 +17,4 @@ notifications:
 install:
   - true
 script:
-  - true
+  - git --version
