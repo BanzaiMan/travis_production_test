@@ -1,16 +1,15 @@
 language: ruby
 
-rvm:
-  - '2.1.8'
-  - '2.1'
-
 matrix:
   include:
     - sudo: required
       dist: precise
+      rvm: '2.1.8'
     - sudo: required
       dist: trusty
+      rvm: '2.1.8'
     - sudo: false
+      rvm: '2.1.8'
 
 notifications:
   email: false
