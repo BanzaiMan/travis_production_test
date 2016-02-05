@@ -8,6 +8,8 @@ rvm:
 notifications:
   email: false
 
+install:
+  - true
 
 script:
   - cat /home/travis/.rvm/gemsets/global.gems
