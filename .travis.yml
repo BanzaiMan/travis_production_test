@@ -1,8 +1,15 @@
 language: ruby
-sudo: required
 
 rvm:
-  - '2.1'
+  - '2.1.8'
+
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+    - sudo: required
+      dist: trusty
+    - sudo: false
 
 notifications:
   email: false
@@ -10,3 +17,4 @@ notifications:
 script:
   - cat /home/travis/.rvm/gemsets/*.gems
   - git --version
+  - ldd `which ruby`
