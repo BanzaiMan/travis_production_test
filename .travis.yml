@@ -1,6 +1,5 @@
 language: ruby
 sudo: required
-dist: trusty
 
 rvm:
   - '2.1'
