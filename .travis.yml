@@ -18,3 +18,4 @@ script:
   - cat /home/travis/.rvm/gemsets/*.gems
   - git --version
   - ldd `which ruby`
+  - gem install rdiscount
