@@ -18,7 +18,7 @@ script:
   - cat /home/travis/.rvm/gemsets/*.gems
   - git --version
   - ldd `which ruby`
-  - gem install rdiscount
+  - gem install --debug rdiscount
 
 after_failure:
   - cat /home/travis/.rvm/gems/ruby-2.1.8/extensions/x86_64-linux/2.1.0/rdiscount-2.1.8/gem_make.out
