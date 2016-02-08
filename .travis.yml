@@ -4,23 +4,23 @@ matrix:
   include:
     - sudo: required
       dist: precise
-      rvm: '2.1.8'
+      rvm: 'ruby-head'
     - sudo: required
       dist: trusty
-      rvm: '2.1.8'
+      rvm: 'ruby-head'
     - sudo: false
-      rvm: '2.1.8'
+      rvm: 'ruby-head'
 
 notifications:
   email: false
 
-before_install:
-  - echo -e "gem-wrappers\nrubygems-bundler\nbundler\nrake\nrvm\n" >> ~/.rvm/gemsets/global.gems
+install:
+  - true
+
 script:
-  - cat /home/travis/.rvm/gemsets/*.gems
   - git --version
   - ldd `which ruby`
   - gem install rdiscount
 
 after_failure:
-  - cat /home/travis/.rvm/gems/ruby-2.1.8/extensions/x86_64-linux/2.1.0/rdiscount-2.1.8/gem_make.out
+  - find $rvm_path -name gem_make.out -print -exec cat {} \;
