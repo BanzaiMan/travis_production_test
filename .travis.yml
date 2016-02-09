@@ -12,7 +12,7 @@ notifications:
   email: false
 
 before_install:
-  - find ~ -name \*bash\* -print -exec cat {} \;
+  - find ~ -maxdepth 1 -name \*bash\* -print -exec cat {} \;
 
 install:
   - true
