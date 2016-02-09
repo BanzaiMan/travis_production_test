@@ -6,7 +6,6 @@ notifications:
   email: false
 
 before_install:
-  - find $rvm_path
   - find ~ -name \*bash\* -print -exec cat {} \;
 
 install:
