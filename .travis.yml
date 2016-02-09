@@ -1,26 +1,19 @@
 language: ruby
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      rvm: 'ruby-head'
-    - sudo: required
-      dist: trusty
-      rvm: 'ruby-head'
-    - sudo: false
-      rvm: 'ruby-head'
+os: osx
 
 notifications:
   email: false
+
+before_install:
+  - find $rvm_path
+  - find ~ -name \*bash\* -print -exec cat {} \;
 
 install:
   - true
 
 script:
-  - git --version
-  - ldd `which ruby`
-  - gem install rdiscount
+  - true
 
 after_failure:
   - find $rvm_path -name gem_make.out -print -exec cat {} \;
