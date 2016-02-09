@@ -1,4 +1,4 @@
-language: go
+language: objective-c
 
 notifications:
   email: false
