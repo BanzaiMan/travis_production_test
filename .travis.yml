@@ -1,9 +1,13 @@
-language: objective-c
+language: ruby
 
+rvm: '2.1.3'
+
+sudo: false
 notifications:
   email: false
 
-os: osx
+env:
+  - FOO=var
 
 addons:
   ssh_known_hosts:
@@ -13,4 +17,4 @@ install:
   - true
 
 script:
-  - true
+  - echo $TRAVIS_OS_NAME
