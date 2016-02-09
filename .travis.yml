@@ -1,5 +1,11 @@
 language: ruby
 
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode7.3
+    - os: osx
+      osx_image: xcode7.1
 os: osx
 
 notifications:
@@ -15,4 +21,4 @@ script:
   - true
 
 after_failure:
-  - find $rvm_path -name gem_make.out -print -exec cat {} \;
+  - find $rvm_path -maxdepth 1 -name gem_make.out -print -exec cat {} \;
