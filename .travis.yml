@@ -2,19 +2,22 @@ language: ruby
 
 rvm: '2.1.3'
 
-sudo: false
+sudo: required
+dist: trusty
+
 notifications:
   email: false
 
 env:
   - FOO=var
 
-addons:
-  ssh_known_hosts:
-    - bitbucket.org
+before_install:
+  - sudo apt-get update -qq >& /dev/null
+  - sudo apt-get install docker-engine
+  - sudo service docker restart
 
 install:
   - true
 
 script:
-  - echo $TRAVIS_OS_NAME
+  - docker --version
