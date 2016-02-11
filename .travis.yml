@@ -15,4 +15,5 @@ install:
 
 script:
   - pear config-show
-  - cat ~/.pearrc
+  - mv pearrc ~/.pearrc
+  - pear config-show
