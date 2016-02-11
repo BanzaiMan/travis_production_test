@@ -13,4 +13,4 @@ install:
   - true
 
 script:
-  - pear show-config
+  - pear config-show
