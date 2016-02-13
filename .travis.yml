@@ -3,8 +3,7 @@ language: ruby
 rvm:
   - 2.1
 
-sudo: required
-dist: trusty
+sudo: false
 
 addons:
   postgresql: '9.4'
@@ -16,7 +15,7 @@ notifications:
   email: false
 
 before_install:
-  - sudo psql -U postgres -c 'create extension hstore;'
+  - psql -U postgres -c 'create extension hstore;'
 
 install:
   - true
