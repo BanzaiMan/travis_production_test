@@ -15,7 +15,7 @@ notifications:
   email: false
 
 before_install:
-  - psql -U postgres -c 'create extension hstore;'
+  - psql -c 'create extension hstore;'
 
 install:
   - true
