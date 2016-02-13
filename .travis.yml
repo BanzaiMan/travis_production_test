@@ -3,7 +3,7 @@ language: ruby
 rvm:
   - 2.1
 
-sudo: required
+sudo: false
 
 addons:
   postgresql: '9.4'
