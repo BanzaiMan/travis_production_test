@@ -1,16 +1,15 @@
-language: erlang
+language: php
 
-sudo: required
-dist: trusty
+php:
+  - hhvm
+
+sudo: false
 
 notifications:
   email: false
-
-otp_release:
-  - '18.1'
 
 install:
   - true
 
 script:
-  - true
+  - which phpunit
