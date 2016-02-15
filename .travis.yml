@@ -1,18 +1,26 @@
-language: python
+language: ruby
+
+rvm:
+  - 2.1
 
 sudo: false
+
+addons:
+  postgresql: '9.4'
+
+services:
+  - postgresql
 
 notifications:
   email: false
 
-env:
-  - FOO=var
-
-cache:
-  - pip
+before_install:
+  - psql -c 'create extension hstore;'
 
 install:
   - true
 
 script:
-  - true
+  - "psql -c \"select hstore_to_json('string');\""
+  - "psql -c \"select hstore_to_json('string'::hstore);\""
+  - "psql -c \"select hstore_to_json('a=>1,a=>2'::hstore);\""
