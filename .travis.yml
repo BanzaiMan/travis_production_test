@@ -1,26 +1,16 @@
-language: ruby
+language: erlang
 
-rvm:
-  - 2.1
-
-sudo: false
-
-addons:
-  postgresql: '9.4'
-
-services:
-  - postgresql
+sudo: required
+dist: trusty
 
 notifications:
   email: false
 
-before_install:
-  - psql -c 'create extension hstore;'
+otp_release:
+  - '18.1'
 
 install:
   - true
 
 script:
-  - "psql -c \"select hstore_to_json('string');\""
-  - "psql -c \"select hstore_to_json('string'::hstore);\""
-  - "psql -c \"select hstore_to_json('a=>1,a=>2'::hstore);\""
+  - true
