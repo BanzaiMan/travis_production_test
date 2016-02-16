@@ -12,6 +12,8 @@ cache:
   bundler: true
   directories:
     - 'vendor/bundle'
+  edge:
+    branch: 'ha-sort-diff-file'
 
 script:
   - true
