@@ -1,15 +1,17 @@
-language: php
+language: ruby
 
-php:
-  - hhvm
+rvm:
+  - '2.1.3'
 
 sudo: false
 
 notifications:
   email: false
 
-install:
-  - true
+cache:
+  bundler: true
+  directories:
+    - 'vendor/bundle'
 
 script:
-  - which phpunit
+  - true
