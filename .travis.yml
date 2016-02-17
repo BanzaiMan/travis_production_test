@@ -1,18 +1,3 @@
-language: ruby
+language: swift
+osx_image: xcode7.1
 
-rvm:
-  - '2.1.3'
-
-sudo: false
-
-notifications:
-  email: false
-
-cache:
-  bundler: true
-  directories:
-    - 'vendor/bundle'
-  branch: 'ha-sort-diff-file'
-
-script:
-  - true
