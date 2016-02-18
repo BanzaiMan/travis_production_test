@@ -6,6 +6,7 @@ install: true
 
 script:
   - echo $R_LIBS_SITE
+  - grep -n export ~/build.sh
 
 notifications:
   email: false
