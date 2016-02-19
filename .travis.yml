@@ -2,8 +2,6 @@ sudo: false
 
 language: ruby
 
-install: true
-
 bundler_args: '--system'
 
 script:
