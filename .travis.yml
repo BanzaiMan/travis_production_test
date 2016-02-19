@@ -3,6 +3,7 @@ sudo: false
 language: ruby
 
 bundler_args: '--system'
+gemfile: Gemfile
 
 script:
   - true
