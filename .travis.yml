@@ -1,11 +1,13 @@
-language: ruby
-
 sudo: false
 
-cache: bundler
+language: ruby
 
 install: true
 
+bundler_args: '--system'
+
 script:
   - true
-  
+
+notifications:
+  email: false
