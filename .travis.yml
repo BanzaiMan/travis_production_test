@@ -5,6 +5,8 @@ language: ruby
 bundler_args: '--system'
 gemfile: Gemfile
 
+cache: bunlder
+
 script:
   - true
 
