@@ -2,13 +2,13 @@ sudo: false
 
 language: ruby
 
-bundler_args: '--system'
-gemfile: Gemfile
-
-cache: bundler
+install:
+  - echo 'echo -e "\n${ANSI_GREEN}Log:${ANSI_RESET}\n"' > ansi_script
+  - chmod +x ansi_script
 
 script:
-  - true
+  - echo -e "\n${ANSI_GREEN}Hello there!${ANSI_RESET}\n"
+  - travis_wait ./ansi_script
 
 notifications:
   email: false
