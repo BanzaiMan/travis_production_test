@@ -2,12 +2,8 @@ sudo: false
 
 language: ruby
 
-install:
-  - echo 'echo -e "\n${ANSI_GREEN}Log:${ANSI_RESET}\n"' > ansi_script
-  - chmod +x ansi_script
-
 script:
-  - echo -e "\n${ANSI_GREEN}Hello there!${ANSI_RESET}\n"
+  - ./ansi_script
   - travis_wait ./ansi_script
 
 notifications:
