@@ -4,10 +4,10 @@ sudo: true
 scala:
  - "2.11.7"
 jdk:
- - oraclejdk7
  - openjdk7
- - oraclejdk8
- - openjdk8
+
+before_install:
+  - cat /etc/hosts
 
 install: true
 
