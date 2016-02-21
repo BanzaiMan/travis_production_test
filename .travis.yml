@@ -1,10 +1,19 @@
-sudo: false
+language: scala
+dist: trusty
+sudo: true
+scala:
+ - "2.11.7"
+jdk:
+ - oraclejdk7
+ - openjdk7
+ - oraclejdk8
+ - openjdk8
 
-language: ruby
+install: true
 
 script:
-  - ./ansi_script
-  - travis_wait ./ansi_script
+  - hostname
 
-notifications:
-  email: false
+addons:
+ #workaround for openjdk buffer overflow
+ hostname: dummy
