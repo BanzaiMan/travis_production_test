@@ -6,4 +6,5 @@ install:
    - true
 
 script:
-   - dpkg -L libgeos-dev
+  - dpkg -l | grep libgeos-dev
+  - dpkg -L libgeos-dev
