@@ -2,12 +2,8 @@ language: cpp
 
 sudo: false
 
-compiler:
-  - gcc-4.8
-
 install:
    - true
 
 script:
-   - echo $CC
-   - echo $CXX
+   - dpkg -L libgeos-dev
