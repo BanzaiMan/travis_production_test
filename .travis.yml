@@ -8,4 +8,4 @@ rvm:
   - '2.3.0'
 
 script:
-  - true
+  - cat $rvm_path/gemsets/global.gems
