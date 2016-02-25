@@ -11,4 +11,4 @@ install:
   - true
 
 script:
-  - cat $rvm_path/gemsets/global.gems
+  - find /usr -name rabbitmqctl -print -exec ls -l {} \;
