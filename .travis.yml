@@ -2,10 +2,9 @@ language: ruby
 
 sudo: required
 
-dist: trusty
+dist: precise
 
-rvm:
-  - '2.3.0'
+rvm: default
 
 install:
   - true
