@@ -1,10 +1,11 @@
-language: cpp
+language: ruby
 
-sudo: false
+sudo: required
 
-install:
-   - true
+dist: trusty
+
+rvm:
+  - '2.3.0'
 
 script:
-  - dpkg -l | grep libgeos-dev
-  - dpkg -L libgeos-dev
+  - true
