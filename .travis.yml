@@ -1,11 +1,6 @@
 language: ruby
 
-sudo: required
-
-dist: precise
-
-addons:
-  hostname: 'shorthostname'
+os: osx
 
 rvm: default
 
@@ -13,4 +8,4 @@ install:
   - true
 
 script:
-  - true
+  - ruby -v
