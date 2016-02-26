@@ -1,14 +1,13 @@
 language: ruby
 
-os: osx
+sudo: false
 
 rvm: default
-
-osx_image: xcode7.2
 
 install:
   - true
 
 script:
-  - ruby -v
-  - cat $rvm_path/gemsets/global.gems
+  - set -e
+  - false
+  - set +e
