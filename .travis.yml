@@ -1,6 +1,8 @@
 language: ruby
 
-sudo: false
+sudo: required
+
+dist: precise
 
 addons:
   hostname: 'shorthostname'
