@@ -1,12 +1,14 @@
+language: ruby
+
 sudo: false
 
-language: r
+addons:
+  hostname: 'shorthostname'
 
-install: true
+rvm: default
+
+install:
+  - true
 
 script:
-  - echo $R_LIBS_SITE
-  - grep -n export ~/build.sh
-
-notifications:
-  email: false
+  - true
