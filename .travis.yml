@@ -1,8 +1,9 @@
 language: ruby
 
-sudo: required
+sudo: false
 
-dist: precise
+addons:
+  hostname: 'shorthostname'
 
 rvm: default
 
@@ -10,4 +11,4 @@ install:
   - true
 
 script:
-  - find /usr -name rabbitmqctl -print -exec ls -l {} \;
+  - true
