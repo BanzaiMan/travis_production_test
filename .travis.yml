@@ -9,6 +9,9 @@ env:
     - PATH=$HOME/.local/bin:$PATH
 
 install:
+  - which pip
+  - which python
+  - python --version
   - pip --version
   - pip install --user --upgrade pip
   - pip --version
