@@ -1,13 +1,19 @@
-language: ruby
+language: java
 
 sudo: false
 
 rvm: default
 
+env:
+  global:
+    - PATH=$HOME/.local/bin:$PATH
+
 install:
-  - true
+  - pip --version
+  - pip install --user --upgrade pip
+  - pip --version
 
 script:
-  - set -e
-  - false
-  - set +e
+  - true
+
+
