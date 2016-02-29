@@ -1,22 +1,8 @@
-language: java
+language: elixir
 
 sudo: false
 
-rvm: default
-
-env:
-  global:
-    - PATH=$HOME/.local/bin:$PATH
-
-install:
-  - which pip
-  - which python
-  - python --version
-  - pip --version
-  - pip install --ignore-installed --user pip
-  - pip --version
-
-script:
-  - true
-
-
+elixir:
+  - 1.2.3
+otp_release:
+  - 18.2.1
