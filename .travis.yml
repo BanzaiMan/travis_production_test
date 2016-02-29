@@ -1,22 +1,12 @@
 language: java
 
-sudo: false
+sudo: required
 
-rvm: default
-
-env:
-  global:
-    - PATH=$HOME/.local/bin:$PATH
+addons:
+  hostname: shorty
 
 install:
-  - which pip
-  - which python
-  - python --version
-  - pip --version
-  - pip install --ignore-installed --user pip
-  - pip --version
-
+  - true
+  
 script:
   - true
-
-
