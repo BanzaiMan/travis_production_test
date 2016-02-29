@@ -2,9 +2,21 @@ language: ruby
 
 sudo: false
 
+rvm: default
+
+env:
+  global:
+    - PATH=$HOME/.local/bin:$PATH
+
 install:
-  - true
-  
+  - which pip
+  - which python
+  - python --version
+  - pip --version
+  - pip install --ignore-installed --user pip
+  - pip --version
+
 script:
-  - false
-  
+  - true
+
+
