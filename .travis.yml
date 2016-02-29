@@ -13,7 +13,7 @@ install:
   - which python
   - python --version
   - pip --version
-  - pip install --user pip
+  - pip install --ignore-installed --user pip
   - pip --version
 
 script:
