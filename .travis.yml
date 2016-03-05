@@ -4,6 +4,8 @@ sudo: required
 
 dist: trusty
 
+group: edge
+
 elixir: '1.2.3'
 
 otp_release: '18.2'
