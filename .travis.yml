@@ -1,14 +1,19 @@
-language: generic
+language: elixir
 
 sudo: required
 
 dist: trusty
 
+elixir: '1.2.3'
+
+otp_release: '18.2'
+
+
 install:
   - true
 
 script:
-  - which md5deep
+  - tue
 
 notifications:
   email: false
