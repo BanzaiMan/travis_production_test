@@ -1,21 +1,15 @@
-language: elixir
+language: php
 
-sudo: required
+sudo: false
 
-dist: trusty
-
-group: edge
-
-elixir: '1.2.3'
-
-otp_release: '18.2'
+php: 5.6.18
 
 
 install:
   - true
 
 script:
-  - tue
+  - phpunit --version
 
 notifications:
   email: false
