@@ -16,7 +16,7 @@ install:
   - true
 
 script:
-  - dpkg -L | grep -i haveged || true
+  - dpkg -l | grep -i haveged || true
 
 notifications:
   email: false
