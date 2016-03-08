@@ -1,21 +1,15 @@
 language: ruby
 
-matrix:
-  include:
-  - os: linux
-    sudo: required
-    dist: precise
-    group: edge
-  - os: linux
-    sudo: required
-    services: docker
-    group: edge
-
+os: linux
+sudo: required
+dist: precise
+group: edge
 
 install:
   - true
 
 script:
+  - hostname
   - dpkg -l | grep -i haveged || true
 
 notifications:
