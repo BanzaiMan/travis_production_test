@@ -4,7 +4,7 @@ sudo: false
 
 addons:
   apt:
-    souces:
+    sources:
       - travis-ci-sqlite3
     packages:
       - sqlite3
@@ -15,4 +15,5 @@ install:
   - true
 
 script:
+  - cat ~/apt-get-update.log
   - sqlite3 --version
