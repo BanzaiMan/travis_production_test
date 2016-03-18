@@ -3,7 +3,11 @@ language: ruby
 sudo: false
 
 addons:
-  hostname: 'shorthostname'
+  apt:
+    souces:
+      - travis-ci-sqlite3
+    packages:
+      - sqlite3
 
 rvm: default
 
@@ -11,4 +15,4 @@ install:
   - true
 
 script:
-  - true
+  - sqlite3 --version
