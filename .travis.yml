@@ -7,6 +7,7 @@ sudo: false
 
 before_install:
   - gem uninstall bundler -v 1.6.9
+  - bundle --version
 
 install:
   - true
