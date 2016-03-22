@@ -3,11 +3,18 @@ language: ruby
 rvm:
   - ruby-head
 
-sudo: false
+matrix:
+  include:
+    - sudo: false
+    - sudo: required
+    - sudo: required
+      dist: trusty
 
 before_install:
+  - echo $GEM_PATH
   - gem uninstall bundler -v 1.6.9
   - bundle --version
+  - for d in $(echo $GEM_PATH | tr ':' ' '); do ls -l $d/gems; done
 
 install:
   - true
