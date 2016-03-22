@@ -11,9 +11,9 @@ matrix:
 
 before_install:
   - echo $GEM_PATH
+  - for d in $(echo $GEM_PATH | tr ':' ' '); do ls -l $d/gems; done
   - gem uninstall bundler -v 1.6.9
   - bundle --version
-  - for d in $(echo $GEM_PATH | tr ':' ' '); do ls -l $d/gems; done
 
 install:
   - true
