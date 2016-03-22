@@ -1,16 +1,14 @@
-language: ruby
+language: node_js
 
-os: linux
-sudo: required
-dist: precise
-group: edge
+node_js:
+  - '5'
 
 install:
   - true
 
 script:
-  - hostname
-  - dpkg -l | grep -i haveged || true
+  - true
 
 notifications:
   email: false
+
