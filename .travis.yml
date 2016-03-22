@@ -1,9 +1,12 @@
-language: node_js
+language: ruby
 
-node_js:
-  - '5'
+rvm:
+  - ruby-head
 
 sudo: false
+
+before_install:
+  - gem uninstall bundler -v 1.6.9
 
 install:
   - true
