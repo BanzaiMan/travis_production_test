@@ -2453,7 +2453,7 @@ before_install: |
 
 
 install:
-  - nvm --verion
+  - nvm --version
 
 script:
   - true
