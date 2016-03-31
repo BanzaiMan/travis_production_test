@@ -2453,6 +2453,7 @@ before_install: |
 
 
 install:
+  - source ~/.nvm/nvm.sh
   - nvm --version
 
 script:
