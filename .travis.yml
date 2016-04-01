@@ -3,6 +3,8 @@ language: ruby
 rvm:
   - default
 
+sudo: false
+
 addons:
   apt:
     packages:
