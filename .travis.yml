@@ -4,7 +4,8 @@ python:
   - '2.7'
   - '2.7.10'
 
-sudo: false
+sudo: required
+dist: trusty
 
 install:
   - true
