@@ -1,14 +1,10 @@
-matrix:
-  include:
-    - sudo: required
-      dist: trusty
-    - sudo: false
-language: ruby
-rvm:
-  - default
+language: node_js
+os: osx
 
-cache: bundler
-
+node_js:
+  - '5'
+install:
+  - true
 script:
   - true
 
