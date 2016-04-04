@@ -1,8 +1,7 @@
-language: python
+language: ruby
 
-python:
-  - '2.7'
-  - '2.7.11'
+rvm:
+  - default
 
 sudo: required
 dist: trusty
@@ -11,7 +10,11 @@ install:
   - true
 
 script:
-  - python -c "import sys; print ('UCS4 build' if sys.maxunicode > 65535 else 'UCS2 build')"
+  - docker pull ubuntu
+  - docker run -d --name ubuntu ubuntu
+  - docker exec ubuntu apt-get install curl
+  - docker exec ubuntu curl -I yum.puppetlabs.com
+  - docker stop ubuntu
 
 notifications:
   email: false
