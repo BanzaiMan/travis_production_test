@@ -3,7 +3,8 @@ language: ruby
 rvm:
   - default
 
-sudo: false
+sudo: required
+dist: trusty
 
 addons:
   mariadb: '10.1'
