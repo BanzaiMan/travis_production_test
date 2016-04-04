@@ -2,7 +2,7 @@ matrix:
   include:
     - sudo: required
       dist: trusty
-      - sudo: false
+    - sudo: false
 language: ruby
 rvm:
   - default
