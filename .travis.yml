@@ -1,21 +1,12 @@
-language: ruby
-
-rvm:
-  - default
-
-sudo: required
-dist: trusty
-
-addons:
-  mariadb: '10.1'
+sudo: false
+language: node_js
+node_js: 5
 
 install:
   - true
 
 script:
-  - sudo cat /var/log/mysql.err
-  - sudo cat /var/log/mysql.log
+  - true
 
 notifications:
   email: false
-
