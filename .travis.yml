@@ -11,11 +11,7 @@ install:
 
 script:
   - docker pull ubuntu
-  - container_id=`docker run -d --name ubuntu ubuntu`
-  - sleep 30
-  - docker exec $container_id apt-get install curl
-  - docker exec $container_id curl -I yum.puppetlabs.com
-  - docker stop $container_id
+  - docker run --rm -it ubuntu bash -c "apt-get install -y curl && echo && curl -I yum.puppetlabs.com"
 
 notifications:
   email: false
