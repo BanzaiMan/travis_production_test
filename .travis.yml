@@ -10,8 +10,8 @@ install:
   - true
 
 script:
-  - docker pull centos5
-  - docker run --rm -it centos5 bash -c "apt-get install -y curl && echo && curl -I yum.puppetlabs.com"
+  - docker pull centos:5
+  - docker run --rm -it centos:5 bash -c "apt-get install -y curl && echo && curl -I yum.puppetlabs.com"
 
 notifications:
   email: false
