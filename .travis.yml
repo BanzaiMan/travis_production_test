@@ -13,8 +13,8 @@ install:
   - true
 
 script:
-  - cat /var/log/mysql.err
-  - cat /var/log/mysql.log
+  - sudo cat /var/log/mysql.err
+  - sudo cat /var/log/mysql.log
 
 notifications:
   email: false
