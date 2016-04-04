@@ -3,15 +3,17 @@ language: ruby
 rvm:
   - default
 
-sudo: required
-dist: trusty
+sudo: false
+
+addons:
+  mariadb: '10.1'
 
 install:
   - true
 
 script:
-  - docker pull centos:5
-  - docker run --rm -it centos:5 bash -c "yum install -y curl && echo && curl -I yum.puppetlabs.com"
+  - cat /var/log/mysql.err
+  - cat /var/log/mysql.log
 
 notifications:
   email: false
