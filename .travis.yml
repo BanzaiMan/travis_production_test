@@ -1,7 +1,7 @@
 language: elixir
 
 sudo: required
-
+group: edge
 dist: trusty
 
 elixir:
