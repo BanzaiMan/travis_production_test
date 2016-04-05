@@ -1,12 +1,13 @@
-language: node_js
-os: osx
+language: elixir
 
-node_js:
-  - '5'
-install:
-  - true
-script:
-  - true
+sudo: required
+
+dist: trusty
+
+elixir:
+  - 1.2.2
+otp_release:
+  - 18.2.1
 
 notifications:
   email: false
