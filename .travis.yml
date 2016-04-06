@@ -1,13 +1,10 @@
-language: elixir
+language: ruby
 
-sudo: required
-group: edge
-dist: trusty
+rvm:
+  - default
 
-elixir:
-  - 1.2.2
-otp_release:
-  - 18.2.1
-
+sudo: false
+install: true
+script: true
 notifications:
   email: false
