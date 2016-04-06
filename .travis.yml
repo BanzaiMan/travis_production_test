@@ -3,7 +3,13 @@ language: ruby
 rvm:
   - default
 cache: bundler
-sudo: false
+sudo: required
+dist: trusty
+group: edge
+
+services:
+  - elasticsearch
+
 install: true
 script: true
 notifications:
