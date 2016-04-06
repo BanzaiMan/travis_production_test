@@ -2,7 +2,7 @@ language: ruby
 
 rvm:
   - default
-
+cache: bundler
 sudo: false
 install: true
 script: true
