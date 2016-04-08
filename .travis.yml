@@ -2,15 +2,14 @@ language: ruby
 
 rvm:
   - default
-cache: bundler
 sudo: required
 dist: trusty
-group: edge
-
-services:
-  - elasticsearch
+# group: edge
 
 install: true
-script: true
+script:
+  - ps -ef | grep -i mysql
+  - sudo service mysql restart
+
 notifications:
   email: false
