@@ -4,7 +4,7 @@ rvm:
   - default
 sudo: required
 dist: trusty
-# group: edge
+group: edge
 
 install: true
 script:
