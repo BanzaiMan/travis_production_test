@@ -6,7 +6,7 @@ sudo: false
 
 install: true
 script:
-  - true
+  - cd $HOME
 
 deploy:
   provider: script
