@@ -11,6 +11,8 @@ script:
 deploy:
   provider: script
   script: pwd
+  on:
+    branch: default
 
 notifications:
   email: false
