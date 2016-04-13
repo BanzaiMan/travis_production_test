@@ -1,18 +1,13 @@
-language: ruby
+language: Erlang
 
-rvm:
-  - default
+otp_release:
+  - 18.2
+
 sudo: false
 
 install: true
 script:
-  - cd $HOME
-
-deploy:
-  provider: script
-  script: pwd
-  on:
-    branch: default
+  - true
 
 notifications:
   email: false
