@@ -5,7 +5,7 @@ jdk: oraclejdk8
 sudo: false
 
 addons:
-  mariadb: 10.0
+  mariadb: 10.1
 
 install: true
 script:
