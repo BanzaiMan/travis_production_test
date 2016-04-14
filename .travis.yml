@@ -1,13 +1,18 @@
-language: Erlang
+language: java
 
-otp_release:
-  - 18.2
+jdk:
+  - oraclejdk7
 
-sudo: false
+matrix:
+  include:
+    - sudo: false
+    - sudo: required
+      dist: trusty
 
 install: true
 script:
-  - true
+  - cat /etc/mavenrc || true
+  - cat ~/.mavenrc || true
 
 notifications:
   email: false
