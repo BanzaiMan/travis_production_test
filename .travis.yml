@@ -2,16 +2,14 @@ language: java
 
 jdk: oraclejdk8
 
-matrix:
-  include:
-    - sudo: false
-    - sudo: required
-      dist: trusty
+sudo: false
+
+addons:
+  mariadb: 10.0
 
 install: true
 script:
-  - cat /etc/mavenrc || true
-  - cat ~/.mavenrc || true
+  - true
 
 notifications:
   email: false
