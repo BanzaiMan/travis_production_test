@@ -1,15 +1,16 @@
-language: java
+language: ruby
 
-jdk: oraclejdk8
-
-sudo: required
-
-addons:
-  mariadb: 10.1
+matrix:
+  include:
+    - sudo: false
+    - sudo: required
+      dist: trusty
 
 install: true
+
 script:
-  - true
+  - ps -ef | grep -i postgres
+  - psql -c 'show version();'
 
 notifications:
   email: false
