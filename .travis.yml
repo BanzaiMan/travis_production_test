@@ -1,19 +1,19 @@
 language: ruby
 
-sudo: false
+rvm: jruby-19mode
 
-addons:
-  apt:
-    sources:
-      - travis-ci/sqlite3
-    packages:
-      - sqlite3
+env:
+  global:
+    - JRUBY_OPTS="--server -Xcext.enabled=true -Xcompile.invokedynamic=false"
 
-rvm: default
+sudo: required
 
-install:
-  - true
+install: true
 
 script:
-  - cat ~/apt-get-update.log
-  - sqlite3 --version
+  - jruby -v
+  - unset JRUBY_OPTS
+  - jruby -v
+
+notifications:
+  email: false
