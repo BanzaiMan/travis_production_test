@@ -1,19 +1,15 @@
-language: ruby
+language: php
 
-rvm: jruby-19mode
+php:
+  - '5.6.19'
+  - '7'
 
-env:
-  global:
-    - JRUBY_OPTS="--server -Xcext.enabled=true -Xcompile.invokedynamic=false"
-
-sudo: required
+sudo: false
 
 install: true
 
 script:
-  - jruby -v
-  - unset JRUBY_OPTS
-  - jruby -v
+  - find /home/travis/.phpenv/versions -name *\.so
 
 notifications:
   email: false
