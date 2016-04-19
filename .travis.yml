@@ -2,12 +2,8 @@ language: c
 
 sudo: false
 
-os: linux
-compiler: gcc
-
-matrix:
-  include:
-    - os: osx
-      compiler: clang
-      osx_image: xcode7
-      env: VARIANT=asan
+addons:
+  artifacts:
+    paths:
+    - artifacts
+    target_paths: /
