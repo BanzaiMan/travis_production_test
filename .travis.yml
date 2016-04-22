@@ -1,16 +1,22 @@
 language: ruby
 
-matrix:
-  include:
-    - sudo: false
-    - sudo: required
-      dist: trusty
+rvm:
+  - default
 
-install: true
+dist: trusty
+sudo: true
+
+addons:
+  hosts:
+  - admin.svelto-test.dev
+  - manage.svelto-test.dev
+
+install:
+  - true
 
 script:
-  - ps -ef | grep -i postgres
-  - psql -c 'show version();'
+  - ruby -rsocket -e 'puts TCPSocket.gethostbyname("admin.svelto-test.dev")'
+  - ruby -rsocket -e 'puts TCPSocket.new("manage.svelto-test.dev", 22)'
 
 notifications:
   email: false
