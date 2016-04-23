@@ -1,18 +1,16 @@
-language: php
+language: ruby
 
-php:
-  - '5.6'
+rvm:
+  - default
 
 sudo: false
-
-env:
-  - FOO=$(./show_php.sh)
 
 install:
   - true
 
 script:
-  - echo $FOO
+  - "echo \"\\\\033[0;31mNo GITHUB_TOKEN defined!\\\\033[0;39m\""
+  - "echo \"${ANSI_RED}No GITHUB_TOKEN defined!${ANSI_RESET}\""
 
 notifications:
   email: false
