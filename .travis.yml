@@ -9,7 +9,7 @@ install:
   - true
 
 script:
-  - "echo \"\\\\033[0;31mNo GITHUB_TOKEN defined!\\\\033[0;39m\""
+  - "echo \"\\\\\\\\033[0;31mNo GITHUB_TOKEN defined!\\\\\\\\033[0;39m\""
   - "echo \"${ANSI_RED}No GITHUB_TOKEN defined!${ANSI_RESET}\""
 
 notifications:
