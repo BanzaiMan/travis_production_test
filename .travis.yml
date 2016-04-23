@@ -1,20 +1,16 @@
-language: ruby
+language: php
 
-rvm:
-  - default
+php:
+  - '5.6'
 
 sudo: required
-dist: trusty
-group: edge
-
-services:
-  - mongodb
+dist: precise
 
 install:
   - true
 
 script:
-  - true
+  - "ruby -rsocket -rtimeout -e 'Timeout::timeout(30) { puts TCPSocket.new(\"smtp.mandrillapp.com\", 587) }'"
 
 notifications:
   email: false
