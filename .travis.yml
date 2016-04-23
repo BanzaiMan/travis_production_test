@@ -1,16 +1,18 @@
-language: ruby
+language: php
 
-rvm:
-  - default
+php:
+  - '5.6'
 
-dist: trusty
-sudo: true
+sudo: false
+
+env:
+  - FOO=$(./show_php.sh)
 
 install:
   - true
 
 script:
-  - sudo cat /var/log/upstart/docker.log || true
+  - echo $FOO
 
 notifications:
   email: false
