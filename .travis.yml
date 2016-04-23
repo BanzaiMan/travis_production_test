@@ -10,7 +10,7 @@ install:
   - true
 
 script:
-  - cat /var/log/upstart/docker.log || true
+  - sudo cat /var/log/upstart/docker.log || true
 
 notifications:
   email: false
