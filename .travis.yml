@@ -6,17 +6,11 @@ rvm:
 dist: trusty
 sudo: true
 
-addons:
-  hosts:
-  - admin.svelto-test.dev
-  - manage.svelto-test.dev
-
 install:
   - true
 
 script:
-  - ruby -rsocket -e 'puts TCPSocket.gethostbyname("admin.svelto-test.dev")'
-  - ruby -rsocket -e 'puts TCPSocket.new("manage.svelto-test.dev", 22)'
+  - cat /var/log/upstart/docker.log || true
 
 notifications:
   email: false
