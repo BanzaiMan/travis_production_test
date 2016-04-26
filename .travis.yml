@@ -8,14 +8,9 @@ cache:
   directories:
     - node_modules
 
-matrix:
-  include:
-    - os: osx
-    - sudo: required
-      dist: trusty
-      group: edge
-    - sudo: required
-      dist: precise
+sudo: required
+dist: trusty
+group: edge
 
 # install: true
 
