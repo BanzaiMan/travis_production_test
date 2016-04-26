@@ -13,6 +13,7 @@ matrix:
     - os: osx
     - sudo: required
       dist: trusty
+      group: edge
     - sudo: required
       dist: precise
 
