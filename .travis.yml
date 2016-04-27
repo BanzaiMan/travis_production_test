@@ -1,11 +1,14 @@
-language: node_js
-node_js:
-  - <%= node_version %>
+language: ruby
+
+rvm:
+  - default
 
 cache: bundler
 
 sudo: false
-install: true
+
+install:
+    - gem install -u autobuild
 
 script:
   - true
