@@ -5,6 +5,7 @@ php:
 
 sudo: required
 dist: trusty
+group: edge
 
 install:
   - true
