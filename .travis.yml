@@ -1,24 +1,16 @@
-language: node_js
+language: ruby
 
-node_js:
-  - '4'
-sudo: false
-
-cache:
-  directories:
-    - node_modules
+rvm:
+  - '2.3.0'
 
 sudo: required
 dist: trusty
 group: edge
 
-# install: true
+install: true
 
 script:
-  - cat ~/.bashrc    || true
-  - cat /etc/bashrc  || true
-  - cat ~/.profile   || true
-  - cat /etc/profile || true
+  - true
 
 notifications:
   email: false
