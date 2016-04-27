@@ -8,7 +8,7 @@ cache: bundler
 sudo: false
 
 before_install:
-  - gem install rubygems-update -v 2.2.2
+  - rvm install --force rubygems 2.2.2
 
 install:
   - gem install -u autobuild
