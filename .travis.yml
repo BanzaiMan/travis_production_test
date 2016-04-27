@@ -12,7 +12,8 @@ group: edge
 install: true
 
 script:
-  - true
+  - cat ~/.rvm/scripts/rvm || true
+  - find ~/.rvm -maxdepth 1 || true
 
 notifications:
   email: false
