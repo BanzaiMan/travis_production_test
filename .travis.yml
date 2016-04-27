@@ -14,7 +14,7 @@ notifications:
   email: false
 
 after_success:
-  - 'curl -X POST -H "Authorizaton: token ${GITHUB_TOKEN}" https://api.github.com/repos/${TRAVIS_REPO_SLUG}/deployments&ref=${TRAVIS_COMMIT}'
+  - 'curl -X POST -H "Authorizaton: token ${GITHUB_TOKEN}" -d "{\"ref\":\"$TRAVIS_COMMIT\"}" https://api.github.com/repos/${TRAVIS_REPO_SLUG}/deployments'
 
 # notifications:
 #   email: false
