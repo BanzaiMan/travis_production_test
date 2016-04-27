@@ -5,18 +5,16 @@ rvm:
 
 cache: bundler
 
-sudo: required
-dist: trusty
-
+sudo: false
 install: true
 
 script:
-  - cat ~/.rvm/scripts/rvm || true
-  - find ~/.rvm -maxdepth 1 || true
-
+  - true
 notifications:
   email: false
 
+after_success:
+  - curl -X POST -H "Authorizaton: token ${GITHUB_TOKEN}" https://api.github.com/repos/${TRAVIS_REPO_SLUG}/deployments&ref=${TRAVIS_COMMIT}
 
 # notifications:
 #   email: false
