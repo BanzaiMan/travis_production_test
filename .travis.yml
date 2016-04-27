@@ -1,17 +1,13 @@
-language: ruby
+language: php
 
-rvm:
-  - default
+php:
+  - hhvm
 
-cache: bundler
-
-sudo: false
-
-before_install:
-  - rvm install --force rubygems 2.2.2
+sudo: required
+dist: trusty
 
 install:
-  - gem install -u autobuild
+  - true
 
 script:
   - true
