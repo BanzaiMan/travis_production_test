@@ -1,7 +1,6 @@
-language: ruby
-
-rvm:
-  - default
+language: node_js
+node_js:
+  - <%= node_version %>
 
 cache: bundler
 
