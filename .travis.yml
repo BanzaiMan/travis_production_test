@@ -7,7 +7,6 @@ cache: bundler
 
 sudo: required
 dist: trusty
-group: edge
 
 install: true
 
