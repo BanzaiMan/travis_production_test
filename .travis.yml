@@ -14,7 +14,7 @@ notifications:
   email: false
 
 after_success:
-  - 'curl -X POST -H "Authorization: token ${GITHUB_TOKEN}" -d "{\"ref\":\"$TRAVIS_COMMIT\", \"required_contexts\":\"[]\"}" https://api.github.com/repos/${TRAVIS_REPO_SLUG}/deployments'
+  - 'curl -X POST -H "Authorization: token ${GITHUB_TOKEN}" -d "{\"ref\":\"$TRAVIS_COMMIT\", \"required_contexts\":[]}" https://api.github.com/repos/${TRAVIS_REPO_SLUG}/deployments'
 
 # notifications:
 #   email: false
