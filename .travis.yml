@@ -15,8 +15,12 @@ before_deploy:
 deploy:
   - provider: script
     script: echo 'first'
+    on:
+      branch: default
   - provider: script
     script: echo 'second'
+    on:
+      branch: default
 
 after_deploy:
   - echo "after_deploy"
