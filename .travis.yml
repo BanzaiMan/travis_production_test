@@ -8,7 +8,7 @@ install:
   - true
 
 script:
-  - true
+  - cat ~/build.sh
 
 before_deploy:
   - echo "before_deploy"
