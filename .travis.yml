@@ -12,6 +12,7 @@ script:
 
 before_deploy:
   - echo "before_deploy"
+  - date
 deploy:
   - provider: script
     script: bash ./echo.sh first
@@ -23,7 +24,9 @@ deploy:
       branch: default
 
 after_deploy:
+  - sleep 5
   - echo "after_deploy"
+  - date
 
 notifications:
   email: false
