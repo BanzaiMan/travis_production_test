@@ -4,12 +4,20 @@ rvm: jruby-head
 
 sudo: false
 
+addons:
+  apt:
+    packages:
+      - haveged
+
 matrix:
   include:
     - sudo: required
       dist: precise
+      before_install:
+        - sudo service haveged start
     - sudo: required
       dist: trusty
+        - sudo service haveged start
 
 install:
   - true
