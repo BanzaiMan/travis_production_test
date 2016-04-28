@@ -20,7 +20,7 @@ matrix:
         - sudo service haveged start
 
 install:
-  - true
+  - cat ~/.rvm/gemsets/default.gems
 
 script:
   - true
