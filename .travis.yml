@@ -1,8 +1,18 @@
-language: objective-c
+language: ruby
 
-osx_image: xcode7.3
+rvm: jruby-head
 
-cache: bundler
+sudo: false
+
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+    - sudo: required
+      dist: trusty
+
+install:
+  - true
 
 script:
   - true
