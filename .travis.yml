@@ -1,29 +1,25 @@
 language: ruby
 
-rvm: jruby-head
+rvm: default
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - haveged
-
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      before_install:
-        - sudo service haveged start
-    - sudo: required
-      dist: trusty
-        - sudo service haveged start
-
 install:
-  - cat ~/.rvm/gemsets/default.gems
+  - true
 
 script:
   - true
+
+before_deploy:
+  - echo "before_deploy"
+deploy:
+  - provider: script
+    script: echo 'first'
+  - provider: script
+    script: echo 'second'
+
+after_deploy:
+  - echo "after_deploy"
 
 notifications:
   email: false
