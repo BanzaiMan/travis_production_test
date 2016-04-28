@@ -8,17 +8,17 @@ install:
   - true
 
 script:
-  - cat ~/build.sh
+  - true
 
 before_deploy:
   - echo "before_deploy"
 deploy:
   - provider: script
-    script: echo 'first'
+    script: bash ./echo.sh first
     on:
       branch: default
   - provider: script
-    script: echo 'second'
+    script: bash ./echo.sh second
     on:
       branch: default
 
