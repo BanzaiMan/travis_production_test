@@ -1,32 +1,14 @@
-language: ruby
+language: android
 
-rvm: default
+sudo: required
 
-sudo: false
+dist: trusty
 
 install:
   - true
 
 script:
   - true
-
-before_deploy:
-  - echo "before_deploy"
-  - date
-deploy:
-  - provider: script
-    script: bash ./echo.sh first
-    on:
-      branch: default
-  - provider: script
-    script: bash ./echo.sh second
-    on:
-      branch: default
-
-after_deploy:
-  - sleep 5
-  - echo "after_deploy"
-  - date
 
 notifications:
   email: false
