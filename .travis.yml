@@ -1,14 +1,12 @@
-language: haskell
+language: python
 
-sudo: required
-
-dist: trusty
+os: osx
 
 install:
-  - true
+  - which virtualenv || true
 
 script:
-  - true
+  - foo
 
 notifications:
   email: false
