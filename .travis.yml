@@ -1,12 +1,24 @@
-language: python
+language: android
 
-os: osx
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+    - sudo: required
+      dist: trusty
+      group: edge
+android:
+  components:
+    - tools
+    - build-tools-23.0.3
+    - android-23
+    - extra-android-m2repository
 
 install:
-  - which virtualenv || true
+  - true
 
 script:
-  - foo
+  - true
 
 notifications:
   email: false
