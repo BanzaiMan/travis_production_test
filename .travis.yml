@@ -1,18 +1,10 @@
-language: android
+language: perl
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-    - sudo: required
-      dist: trusty
-      group: edge
-android:
-  components:
-    - tools
-    - build-tools-23.0.3
-    - android-23
-    - extra-android-m2repository
+perl:
+  - '5.22'
+
+sudo: false
+
 
 install:
   - true
