@@ -1,17 +1,10 @@
-language: cpp
-
-sudo: required
-
-dist: trusty
-
-before_install:
-  - sudo apt-get install qt5-qmake
+language: swift
 
 install:
   - true
 
 script:
-  - qmake --version
+  - true
 
 notifications:
   email: false
