@@ -1,4 +1,6 @@
-language: swift
+language: ruby
+
+os: osx
 
 install:
   - true
