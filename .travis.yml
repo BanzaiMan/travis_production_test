@@ -4,7 +4,7 @@ install:
   - true
 
 script:
-  - true
+  - uname -a
 
 notifications:
   email: false
