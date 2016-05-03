@@ -1,16 +1,17 @@
-language: perl
+language: cpp
 
-perl:
-  - '5.22'
+sudo: required
 
-sudo: false
+dist: trusty
 
+before_install:
+  - sudo apt-get install qt5-qmake
 
 install:
   - true
 
 script:
-  - true
+  - qmake --version
 
 notifications:
   email: false
