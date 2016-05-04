@@ -1,12 +1,22 @@
-language: ruby
+language: python
 
-os: osx
+python: '3.5'
 
+sudo: false
+
+matrix:
+  include:
+    - sudo: required
+      dist: trusty
+      env: RELEASE=trusty
+    - sudo: required
+      dist: precise
+      env: RELEASE=precise
 install:
   - true
 
 script:
-  - uname -a
+  - true
 
 notifications:
   email: false
