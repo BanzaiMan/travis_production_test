@@ -1,14 +1,12 @@
-language: ruby
+language: node_js
 
-osx_image: xcode7.3
-
-os: osx
+sudo: false
 
 install:
-  - true
+  - npm install -g npm@next
 
 script:
-  - sudo echo "foo"
+  - true
 
 notifications:
   email: false
