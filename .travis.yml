@@ -1,12 +1,18 @@
-language: node_js
+language: php
+
+php: '7.0.5'
+
+env:
+  - NODE_JS_VERSION=5
 
 sudo: false
 
 install:
-  - npm install -g npm@next
+  - true
 
 script:
-  - true
+  - bash -c "nvm use $NODE_JS_VERSION"
+  - bash -c "srouce ~/.nvm/nvm.sh; nvm use $NODE_JS_VERSION; node --version"
 
 notifications:
   email: false
