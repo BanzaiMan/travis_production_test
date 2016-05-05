@@ -11,6 +11,7 @@ install:
   - true
 
 script:
+  - curl -o ~/.nvm/nvm.sh https://github.com/creationix/nvm/blob/v0.31.0/nvm.sh # update nvm
   - bash -c "nvm use $NODE_JS_VERSION"
   - bash -c "source ~/.nvm/nvm.sh; nvm install $NODE_JS_VERSION; node --version"
 
