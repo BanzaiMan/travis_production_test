@@ -1,19 +1,11 @@
-language: php
+language: ruby
 
-php: '7.0.5'
+os: osx
 
-env:
-  - NODE_JS_VERSION=5
-
-sudo: false
-
-install:
-  - true
+cache: bundler
 
 script:
-  - curl -o ~/.nvm/nvm.sh https://raw.githubusercontent.com/creationix/nvm/v0.31.0/nvm.sh # update nvm
-  - bash -c "nvm use $NODE_JS_VERSION" || true
-  - bash -c "source ~/.nvm/nvm.sh; nvm install $NODE_JS_VERSION; node --version"
+  - true
 
 notifications:
   email: false
