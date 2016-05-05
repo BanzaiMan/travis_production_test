@@ -12,7 +12,7 @@ install:
 
 script:
   - bash -c "nvm use $NODE_JS_VERSION"
-  - bash -c "source ~/.nvm/nvm.sh; nvm use $NODE_JS_VERSION; node --version"
+  - bash -c "source ~/.nvm/nvm.sh; nvm install $NODE_JS_VERSION; node --version"
 
 notifications:
   email: false
