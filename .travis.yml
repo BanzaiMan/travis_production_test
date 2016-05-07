@@ -8,6 +8,7 @@ cache:
 osx_image: xcode7.3
 install:
   - touch '/Users/travis/Library/Application Support/Fusetools/foo'
+  - ls '/Users/travis/Library/Application Support/Fusetools'
 
 script:
   - true
