@@ -1,17 +1,19 @@
-language: ruby
+language: python
+
+python:
+  - '3.4'
+  - '3.5'
+  - '3.5.1'
+  - 'nightly'
 
 install:
   - true
 
 script:
-  - true
+  - python -c 'import lzma; print("foo")'
 
 notifications:
   email: false
-
-deploy:
-  provider: script
-  script: echo foo
 
 # notifications:
 #   email: false
