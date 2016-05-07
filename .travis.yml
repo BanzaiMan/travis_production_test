@@ -1,16 +1,16 @@
 language: python
 
-python:
-  - '3.4'
-  - '3.5'
-  - '3.5.1'
-  - 'nightly'
+sudo: false
 
+matrix:
+  include:
+    - sudo: required
+      dist: trusty
 install:
   - true
 
 script:
-  - python -c 'import lzma; print("foo")'
+  - curl -sSfvL https://facebook.com
 
 notifications:
   email: false
