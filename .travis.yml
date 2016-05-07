@@ -11,8 +11,8 @@ install:
   - true
 
 script:
-  - curl -sSfvL https://facebook.com
-  - curl -sSfvL https://connect.facebook.net
+  - curl -sSvL https://facebook.com
+  - curl -sSvL https://connect.facebook.net
 
 notifications:
   email: false
