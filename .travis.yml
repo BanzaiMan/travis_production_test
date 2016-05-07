@@ -1,4 +1,4 @@
-language: python
+language: ruby
 
 sudo: false
 
@@ -6,11 +6,14 @@ matrix:
   include:
     - sudo: required
       dist: trusty
+    - os: osx
+      osx_image: xcode7.3
 install:
   - true
 
 script:
   - curl -sSfvL https://facebook.com
+  - curl -sSfvL https://connect.facebook.net
 
 notifications:
   email: false
