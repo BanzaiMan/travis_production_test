@@ -1,6 +1,7 @@
 language: objective-c
 
 cache:
+  edge: true
   directories:
     - '/Users/travis/Library/Application\ Support/Fusetools/'
 
