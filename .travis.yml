@@ -8,8 +8,14 @@ cache:
     directories:
       - vendor/bundle
 
+before_install:
+  - cat ~/build.sh
+
 script:
   - true
+
+before_cache:
+  - cat ~/.casher/*
 
 notifications:
   email: false
