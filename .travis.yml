@@ -1,21 +1,12 @@
-language: ruby
+language: smalltalk
+
+os:
+  - linux
 
 sudo: false
 
-cache:
-  directories:
-    bundler: true
-    directories:
-      - vendor/bundle
-
-before_install:
-  - cat ~/build.sh
-
 script:
-  - true
-
-before_cache:
-  - cat ~/.casher/*
+  - env | grep TRAVIS
 
 notifications:
   email: false
