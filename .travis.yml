@@ -5,14 +5,18 @@ sudo: false
 addons:
   apt:
     sources:
-      - deadsnakes
+      - debian-sid
     packages:
-      - python3.5
-
+      - qt5-default
+      - qtbase5-dev
+      - qtbase5-dev-tools
+      - qttools5-dev-tools
+      - libqt5webkit5-dev
+      - qtdeclarative5-dev
 install:
   - true
 script:
-  - python3 --version
+  - true
 
 notifications:
   email: false
