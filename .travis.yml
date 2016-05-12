@@ -5,7 +5,7 @@ sudo: false
 addons:
   apt:
     sources:
-      - deadsnake
+      - deadsnakes
     packages:
       - python3.5
 
