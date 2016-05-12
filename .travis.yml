@@ -1,16 +1,11 @@
-language: android
+language: ruby
 
 sudo: false
 
-android:
-  components:
-    - platform-tools
-    - tools
-    - build-tools-25.1.3
-    - android-25
-
-script:
+install:
   - true
+script:
+  - which scp || true
 
 notifications:
   email: false
