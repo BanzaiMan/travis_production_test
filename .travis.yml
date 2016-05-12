@@ -12,7 +12,7 @@ addons:
 install:
   - true
 script:
-  - true
+  - python3 --version
 
 notifications:
   email: false
