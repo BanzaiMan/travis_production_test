@@ -1,12 +1,14 @@
-language: smalltalk
-
-os:
-  - linux
+language: android
 
 sudo: false
 
+android:
+  components:
+    - tools
+    - andorid-25.1.3
+
 script:
-  - env | grep TRAVIS
+  - true
 
 notifications:
   email: false
