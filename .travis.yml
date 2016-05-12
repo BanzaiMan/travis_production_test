@@ -1,11 +1,18 @@
-language: ruby
+language: python
 
 sudo: false
+
+addons:
+  apt:
+    sources:
+      - deadsnake
+    packages:
+      - python3.5
 
 install:
   - true
 script:
-  - which scp || true
+  - true
 
 notifications:
   email: false
