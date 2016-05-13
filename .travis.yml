@@ -5,14 +5,12 @@ sudo: false
 addons:
   apt:
     sources:
-      - debian-sid
+      - mongodb-upstart
+      - mongodb-3.2-precise
     packages:
-      - qt5-default
-      - qtbase5-dev
-      - qtbase5-dev-tools
-      - qttools5-dev-tools
-      - libqt5webkit5-dev
-      - qtdeclarative5-dev
+      - mongodb-org-server
+      - mongodb-org-shell
+
 install:
   - true
 script:
