@@ -5,11 +5,10 @@ sudo: false
 addons:
   apt:
     sources:
-      - mongodb-upstart
-      - mongodb-3.2-precise
+      - ubuntu-sdk-team
     packages:
-      - mongodb-org-server
-      - mongodb-org-shell
+      - libqt5webkit5-dev
+      - qtdeclarative5-dev
 
 install:
   - true
