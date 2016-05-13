@@ -1,6 +1,7 @@
-language: python
+language: ruby
 
-sudo: false
+sudo: required
+dist: trusty
 
 addons:
   apt:
