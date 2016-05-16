@@ -10,7 +10,7 @@ android:
     - android-25
 
 script:
-  - true
+  - android list sdk
 
 notifications:
   email: false
