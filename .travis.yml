@@ -1,19 +1,16 @@
-language: ruby
+language: android
 
 sudo: false
 
-install:
-  - true
+android:
+  components:
+    - tools # to find repository-11.xml
+    - tools # get SDK 25.1.6
+    - build-tools-23.0.3
+    - android-25
 
 script:
-  - mkdir foo
-  - cd foo
-
-deploy:
-  provider: script
-  script: pwd
-  on:
-    all_branches: true
+  - env | grep HOME
 
 notifications:
   email: false
