@@ -4,7 +4,8 @@ sudo: false
 
 android:
   components:
-    - tools
+    - tools # to find repository-11.xml
+    - tools # get SDK 25.1.6
     - build-tools-23.0.3
     - android-25
 
