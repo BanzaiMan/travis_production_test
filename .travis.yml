@@ -4,10 +4,11 @@ sudo: false
 
 android:
   components:
-    - build-tools-23.0.3
     - platform-tools
     - tools
-    - android-25
+    - build-tools-23.0.3
+    - android
+    - tools
 
 script:
   - android list sdk -e
