@@ -6,7 +6,8 @@ install:
   - true
 
 script:
-  - cd $HOME
+  - mkdir foo
+  - cd foo
 
 deploy:
   provider: script
