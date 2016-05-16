@@ -1,18 +1,14 @@
-language: ruby
+language: android
 
-sudo: required
-dist: trusty
+sudo: false
 
-addons:
-  apt:
-    sources:
-      - ubuntu-sdk-team
-    packages:
-      - libqt5webkit5-dev
-      - qtdeclarative5-dev
+android:
+  components:
+    - platform-tools
+    - tools
+    - build-tools-23.0.3
+    - android-25.1.3
 
-install:
-  - true
 script:
   - true
 
