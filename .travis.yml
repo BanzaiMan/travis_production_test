@@ -10,7 +10,7 @@ android:
     - android-25
 
 script:
-  - android list sdk --filter android
+  - android -e list sdk
 
 notifications:
   email: false
