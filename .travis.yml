@@ -6,7 +6,10 @@ install:
   - true
 
 script:
-  - echo bar > foo
+  - mkdir foo
+  - pushd foo
+  - curl -L -O http://releases.ubuntu.com/16.04/ubuntu-16.04-desktop-amd64.iso
+  - popd
 
 notifications:
   email: false
@@ -16,7 +19,7 @@ deploy:
   repo: BanzaiMan/travis_production_test
   api_key:
     secure: "OdfyMRp9g/bnjQpMAqqkWtbN0kucYkH6RspD2ddV+nVDeGsSSj2y8+6fgzPsa573stNPZY5CPYVcGXijZ2Y28j1OpvujK0Rhst2vdXHLZ0ZLv+r3OIcwgRQW/bikatl/O0baVsWanrd28u0iz1AN9YSdDDm53yoIZEYUYNGs2wI="
-  file: foo
+  file: foo/ubuntu-16.04-desktop-amd64.iso
   skip_cleanup: true
   on:
     tags: true
