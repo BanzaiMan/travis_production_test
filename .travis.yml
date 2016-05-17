@@ -6,16 +6,20 @@ install:
   - true
 
 script:
-  - curl -O -L http://hackage.haskell.org/packages/archive/00-index.tar.gz
+  - touch foo
 
 notifications:
   email: false
 
 deploy:
-  provider: script
-  script: echo foo && echo bar
+  provider: releases
+  repo: BanzaiMan/travis_production_test
+  api_key:
+    secure: "OdfyMRp9g/bnjQpMAqqkWtbN0kucYkH6RspD2ddV+nVDeGsSSj2y8+6fgzPsa573stNPZY5CPYVcGXijZ2Y28j1OpvujK0Rhst2vdXHLZ0ZLv+r3OIcwgRQW/bikatl/O0baVsWanrd28u0iz1AN9YSdDDm53yoIZEYUYNGs2wI="
+  file: foo
+  skip_cleanup: true
   on:
-    branch: default
+    tags: true
 
 # notifications:
 #   email: false
