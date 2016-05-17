@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - touch foo
+  - echo bar > foo
 
 notifications:
   email: false
