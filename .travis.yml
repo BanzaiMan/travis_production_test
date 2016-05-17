@@ -1,12 +1,12 @@
 language: ruby
 
-sudo: false
+os: osx
 
 install:
   - true
 
 script:
-  - curl http://ppa.launchpad.net
+  - tty || true
 
 notifications:
   email: false
