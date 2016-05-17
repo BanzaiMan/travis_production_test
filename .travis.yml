@@ -1,15 +1,21 @@
-language: generic
+language: ruby
 
-os: osx
+sudo: false
 
 install:
   - true
 
 script:
-  - tty || true
+  - true
 
 notifications:
   email: false
+
+deploy:
+  provider: script
+  script: echo foo && echo bar
+  on:
+    branch: default
 
 # notifications:
 #   email: false
