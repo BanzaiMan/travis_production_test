@@ -6,23 +6,10 @@ install:
   - true
 
 script:
-  - mkdir foo
-  - pushd foo
-  - curl -L -o foo.war http://releases.ubuntu.com/16.04/ubuntu-16.04-server-amd64.iso
-  - popd
+  - true
 
 notifications:
   email: false
-
-deploy:
-  provider: releases
-  repo: BanzaiMan/travis_production_test
-  api_key:
-    secure: "OdfyMRp9g/bnjQpMAqqkWtbN0kucYkH6RspD2ddV+nVDeGsSSj2y8+6fgzPsa573stNPZY5CPYVcGXijZ2Y28j1OpvujK0Rhst2vdXHLZ0ZLv+r3OIcwgRQW/bikatl/O0baVsWanrd28u0iz1AN9YSdDDm53yoIZEYUYNGs2wI="
-  file: foo/foo.war
-  skip_cleanup: true
-  on:
-    tags: true
 
 # notifications:
 #   email: false
