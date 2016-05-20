@@ -13,7 +13,7 @@ notifications:
 
 
 after_success:
-  - travis_terminate 1
+  - travis_result 1
 
 # notifications:
 #   email: false
