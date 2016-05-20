@@ -11,6 +11,10 @@ script:
 notifications:
   email: false
 
+
+after_success:
+  - travis_terminate 1
+
 # notifications:
 #   email: false
 #   slack:
