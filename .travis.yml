@@ -13,7 +13,8 @@ addons:
 
 matrix:
   include:
-    - env: ENV=docs
+    - env:
+        - ENV=docs
       python: 2.7
       addons:
         apt:
