@@ -24,7 +24,7 @@ matrix:
   include:
     - env: ENV=docs
       python: 2.7
-      before_script: TOX_ENV=docs-travis
+      # before_script: TOX_ENV=docs-travis
       # Note: graphviz is needed for grapgs embedded in the docs
       addons:
         apt:
