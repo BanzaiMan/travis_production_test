@@ -1,9 +1,15 @@
 language: python
 sudo: false
+# Add or remove version for match with Travis support
 python:
+    - 2.6
     - 2.7
-
-os: linux
+    - 3.2
+    - 3.3
+    - 3.4
+    - 3.5
+    - pypy
+    - pypy3
 
 # Note: graphviz is needed for grapgs embedded in the docs
 addons:
@@ -12,10 +18,11 @@ addons:
       - graphviz
 
 matrix:
+  # fast_finish: true
   include:
-    - env:
-        - ENV=docs
+    - env: ENV=docs
       python: 2.7
+      # Note: graphviz is needed for grapgs embedded in the docs
       addons:
         apt:
           packages:
