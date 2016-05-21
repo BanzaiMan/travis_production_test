@@ -32,7 +32,7 @@ matrix:
             - graphviz
             - gcc
       # Trigger ReadTheDocs build
-      after_success: ./contrib/trigger_rtd_build.py 8284
+      # after_success: ./contrib/trigger_rtd_build.py 8284
 
 install:
   - true
