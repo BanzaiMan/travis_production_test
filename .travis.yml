@@ -10,8 +10,6 @@ python:
     - 3.5
     - pypy
     - pypy3
-os:
-  - linux
 
 # Note: graphviz is needed for grapgs embedded in the docs
 addons:
