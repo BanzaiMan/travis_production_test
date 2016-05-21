@@ -2,6 +2,23 @@ language: ruby
 
 sudo: false
 
+addons:
+  apt:
+    packages:
+      - alex
+
+env:
+  - FOO=BAR
+
+matrix:
+  include:
+    - env:
+        - FOO=BAZ
+      addons:
+        apt:
+          packages:
+            - a2ps
+
 install:
   - true
 
@@ -10,10 +27,6 @@ script:
 
 notifications:
   email: false
-
-
-after_success:
-  - travis_result 1
 
 # notifications:
 #   email: false
