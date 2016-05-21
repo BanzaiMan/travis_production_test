@@ -3,8 +3,7 @@ sudo: false
 python:
     - 2.7
 
-os:
-  - linux
+os: linux
 
 # Note: graphviz is needed for grapgs embedded in the docs
 addons:
