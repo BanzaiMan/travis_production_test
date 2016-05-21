@@ -1,6 +1,9 @@
-language: ruby
-
+language: python
 sudo: false
+# Add or remove version for match with Travis support
+python:
+    - '2.6'
+    - '2.7'
 
 addons:
   apt:
@@ -12,7 +15,8 @@ env:
 
 matrix:
   include:
-    - env:
+    - python: '2.7'
+      env:
         - FOO=BAZ
       addons:
         apt:
