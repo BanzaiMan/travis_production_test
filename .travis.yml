@@ -20,7 +20,7 @@ addons:
       - graphviz
 
 matrix:
-  fast_finish: true
+  # fast_finish: true
   include:
     - env: ENV=lint
       python: 2.7
