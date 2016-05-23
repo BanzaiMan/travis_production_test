@@ -1,5 +1,5 @@
 language: python
-sudo: false
+sudo: required
 python:
     - 2.7
 
@@ -8,16 +8,48 @@ os: linux
 # Note: graphviz is needed for grapgs embedded in the docs
 addons:
   apt:
+    sources:
+    - boost-latest
+    # kubuntu-ppa/backports contains OpenCV
+    - kubuntu-backports
+    # the PPA xorg-edgers contains cairo 1.12 (required for rotoscoping)
+    - ppa:xorg-edgers/ppa
+    # ubuntu-toolchain-r/test contains recent versions of gcc
+    - ubuntu-toolchain-r-test
+    # get a recent ffmpeg (>=2.5) for precise from ppa:archivematica/externals(2.5.1) or ppa:pavlyshko/precise(2.6.1)
+    - ppa:archivematica/externals
+    - kalakris-cmake
     packages:
-      - libimage-exiftool-perl
-
+    - gcc-4.9
+    - g++-4.9
+    - libavcodec-dev
+    - libavformat-dev
+    - libswscale-dev
+    - libavutil-dev
+    - libswresample-dev
+    - libtinyxml-dev
+    - liblcms2-dev
+    - libyaml-cpp-dev
+    - libboost-dev
+    - libopenexr-dev
+    - libilmbase-dev
+    - libopenjpeg-dev
+    - libtiff4-dev
+    - libjpeg-dev
+    - libpng-dev
+    - libboost-filesystem-dev
+    - libboost-regex-dev
+    - libboost-thread-dev
+    - libboost-system-dev
+    - libwebp-dev
+    - libfreetype6-dev
+    - libssl-dev
 
 install:
   - true
 
 script:
-  - exiftool -ver
-  - 'echo "EXIFTOOL: $(exiftool -ver)"'
+  - true
 
 notifications:
   email: false
