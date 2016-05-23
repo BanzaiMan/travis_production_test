@@ -16,7 +16,7 @@ install:
   - true
 
 script:
-  - exiftool -v
+  - exiftool -ver
   - 'echo "EXIFTOOL: $(exiftool -ver)"'
 
 notifications:
