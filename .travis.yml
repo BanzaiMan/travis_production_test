@@ -9,24 +9,15 @@ os: linux
 addons:
   apt:
     packages:
-      - graphviz
+      - libimage-exiftool-perl
 
-matrix:
-  include:
-    - env:
-        - ENV=docs
-      python: 2.7
-      addons:
-        apt:
-          packages:
-            - graphviz
-            - gcc
 
 install:
   - true
 
 script:
-  - true
+  - exiftool -v
+  - 'echo "EXIFTOOL: $(exiftool -ver)"'
 
 notifications:
   email: false
