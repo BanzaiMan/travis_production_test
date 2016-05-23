@@ -5,7 +5,7 @@ python:
 
 before_install:
   - sudo apt-get install -y binutils:i386
-  - sudo apt-get install -y g++:i386
+  - sudo apt-get install -y g++:i386 cpp:i386 gcc:i386 g++-4.6:i386 gcc-4.6:i386 binutils:i386
 
 install:
   - true
