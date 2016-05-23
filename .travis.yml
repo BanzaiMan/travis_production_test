@@ -7,7 +7,9 @@ install:
   - true
 
 script:
-  - env | grep TRAVIS | sort
+  - ulimit -n
+  - ulimit -n 50000
+  - ulimit -n
 
 notifications:
   email: false
