@@ -11,6 +11,7 @@ addons:
       - gcc:i386
       - g++-4.6:i386
       - gcc-4.6:i386
+      - binutils:i386
 
 install:
   - true
