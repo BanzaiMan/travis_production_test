@@ -3,13 +3,20 @@ sudo: false
 python:
     - 2.7
 
+addons:
+  apt:
+    packages:
+      - g++:i386
+      - cpp:i386
+      - gcc:i386
+      - g++-4.6:i386
+      - gcc-4.6:i386
+
 install:
   - true
 
 script:
-  - ulimit -n
-  - ulimit -n 50000
-  - ulimit -n
+  - true
 
 notifications:
   email: false
