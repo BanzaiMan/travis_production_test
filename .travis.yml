@@ -13,6 +13,7 @@ matrix:
     - sudo: required
       dist: trusty
       php: hhvm
+      group: edge
 
 install:
   - true
