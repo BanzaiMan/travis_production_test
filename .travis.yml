@@ -3,9 +3,6 @@ sudo: false
 
 cache:
   ccache: true
-  directories:
-    - $HOME/.cache/pip
-    - $HOME/opt
   branch: debug-mtimes-false
 
 install:
