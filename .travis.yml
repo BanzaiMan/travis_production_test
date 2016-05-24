@@ -1,19 +1,20 @@
-language: php
+language: ruby
 
-sudo: false
-
-php:
-  - hhvm
+sudo: required
+dist: precise
 
 matrix:
   include:
     - sudo: required
       dist: precise
-      php: hhvm
-    - sudo: required
-      dist: trusty
-      php: hhvm
-      group: edge
+      rvm: jruby-d19
+      addons:
+        apt:
+          packages:
+            - haveged
+
+rvm:
+  - jruby-d19
 
 install:
   - true
