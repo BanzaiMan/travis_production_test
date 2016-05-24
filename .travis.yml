@@ -1,14 +1,14 @@
-language: python
-sudo: required
-python:
-    - 2.7
+language: cpp
+sudo: false
 
-before_install:
-  - sudo apt-get install -y binutils:i386
-  - sudo apt-get install -y g++:i386 cpp:i386 gcc:i386 g++-4.6:i386 gcc-4.6:i386 binutils:i386
+cache:
+  ccache: true
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/opt
 
 install:
-  - true
+  - find $CASHER_DIR -type f
 
 script:
   - true
