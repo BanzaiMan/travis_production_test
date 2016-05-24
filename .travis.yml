@@ -6,8 +6,7 @@ cache:
   directories:
     - $HOME/.cache/pip
     - $HOME/opt
-  edge:
-    branch: debug-mtimes-false
+  branch: debug-mtimes-false
 
 install:
   - find $CASHER_DIR -type f
