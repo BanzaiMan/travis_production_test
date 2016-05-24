@@ -1,12 +1,21 @@
-language: cpp
+language: php
+
 sudo: false
 
-cache:
-  ccache: true
-  branch: debug-mtimes-false
+php:
+  - hhvm
+
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      php: hhvm
+    - sudo: required
+      dist: trusty
+      php: hhvm
 
 install:
-  - find $CASHER_DIR -type f
+  - true
 
 script:
   - true
