@@ -16,6 +16,10 @@ matrix:
 rvm:
   - jruby-d19
 
+before_install:
+  - 'ps -ef | grep haveged'
+  - sudo service haveged start
+  - 'ps -ef | grep haveged'
 install:
   - true
 
