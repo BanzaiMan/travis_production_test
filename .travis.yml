@@ -1,30 +1,16 @@
-language: ruby
+
+language: python
 
 sudo: required
-dist: precise
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      rvm: jruby-d19
-      addons:
-        apt:
-          packages:
-            - haveged
+python:
+  - '3.5'
 
-rvm:
-  - jruby-d19
-
-before_install:
-  - 'ps -ef | grep haveged'
-  - sudo service haveged start
-  - 'ps -ef | grep haveged'
 install:
   - true
 
 script:
-  - true
+  - python -c 'import lzma; print("foo")'
 
 notifications:
   email: false
