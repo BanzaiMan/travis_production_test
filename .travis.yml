@@ -1,16 +1,16 @@
+language: php
 
-language: python
+sudo: false
 
-sudo: required
-
-python:
-  - '3.5'
+php:
+  - '7.0'
+  - '7.0.7'
 
 install:
   - true
 
 script:
-  - python -c 'import lzma; print("foo")'
+  - true
 
 notifications:
   email: false
