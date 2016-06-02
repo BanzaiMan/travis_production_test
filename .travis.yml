@@ -1,17 +1,14 @@
-language: cpp
-
-compiler: clang
-
-sudo: required
-
-dist: trusty
-
+language: node_js
+node_js:
+  - "4"
+env:
+  - CXX=g++-4.8
 addons:
   apt:
     sources:
-      - sourceline: 'ppa:h-rayflood/llvm'
+      - ubuntu-toolchain-r-test
     packages:
-      - clang
+      - g++-4.8
 
 install:
   - true
