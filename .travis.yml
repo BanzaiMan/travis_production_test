@@ -4,12 +4,14 @@ compiler: clang
 
 sudo: required
 
+dist: trusty
+
 addons:
   apt:
     sources:
       - sourceline: 'ppa:h-rayflood/llvm'
     packages:
-      - clang-3.2
+      - clang
 
 install:
   - true
