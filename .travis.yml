@@ -1,13 +1,15 @@
-language: php
+language: cpp
 
-sudo: false
+compiler: clang
 
-php:
-  - '7.0'
-  - '7.0.7'
+sudo: required
 
 addons:
-  hostname: tooshort
+  apt:
+    sources:
+      - 'ppa:h-rayflood/llvm'
+    packages:
+      - clang-3.6
 
 install:
   - true
