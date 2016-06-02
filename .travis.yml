@@ -9,7 +9,7 @@ addons:
     sources:
       - sourceline: 'ppa:h-rayflood/llvm'
     packages:
-      - clang-3.6
+      - clang-3.2
 
 install:
   - true
