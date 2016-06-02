@@ -7,7 +7,7 @@ sudo: required
 addons:
   apt:
     sources:
-      - 'ppa:h-rayflood/llvm'
+      - sourceline: 'ppa:h-rayflood/llvm'
     packages:
       - clang-3.6
 
