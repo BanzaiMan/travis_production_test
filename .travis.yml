@@ -1,20 +1,19 @@
-language: elixir
+language: ruby
 
-elixir: 1.2.0
-
-otp_release: 18.0
-
-sudo: required
-
-dist: trusty
-
-group: edge
+sudo: false
 
 install:
   - true
 
 script:
   - true
+
+before_deploy:
+  - rvm default do gem install dpl -v 1.8.14
+
+deploy:
+  provider: script
+  script: echo hello
 
 notifications:
   email: false
