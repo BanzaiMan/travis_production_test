@@ -5,11 +5,16 @@ sudo: required
 dist: trusty
 group: edge
 
+services:
+  - mongodb
+  - redis-server
+
 install:
   - true
 
 script:
-  - ps -ef | grep -i rabbit
+  - ps -ef | grep -i mongo
+  - ps -ef | grep -i redis
 
 notifications:
   email: false
