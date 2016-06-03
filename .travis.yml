@@ -13,6 +13,7 @@ before_deploy:
 
 deploy:
   provider: script
+  all_branches: true
   script: echo hello
 
 notifications:
