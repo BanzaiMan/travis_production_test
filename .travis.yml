@@ -1,20 +1,19 @@
 language: ruby
 
-sudo: required
+sudo: false
 
-dist: trusty
-group: edge
+env:
+  matrix:
+    -
 
-services:
-  - mongodb
-  - redis-server
+cache:
+  - bundler
 
 install:
   - true
 
 script:
-  - ps -ef | grep -i mongo
-  - ps -ef | grep -i redis
+  - true
 
 notifications:
   email: false
