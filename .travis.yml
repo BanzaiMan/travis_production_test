@@ -8,13 +8,12 @@ install:
 script:
   - true
 
-before_deploy:
-  - rvm default do gem install dpl -v 1.8.14
-
 deploy:
   provider: script
   on:
     all_branches: true
+  edge:
+    branch: v1.8.14
   script: echo hello
 
 notifications:
