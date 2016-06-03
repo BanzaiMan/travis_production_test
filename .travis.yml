@@ -1,20 +1,12 @@
 language: ruby
 
-sudo: false
+sudo: required
 
 install:
   - true
 
 script:
-  - true
-
-deploy:
-  provider: script
-  on:
-    all_branches: true
-  edge:
-    branch: v1.8.14
-  script: echo hello
+  - ps -ef | grep -i rabbit
 
 notifications:
   email: false
