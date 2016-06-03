@@ -3,6 +3,8 @@ language: ruby
 sudo: false
 
 env:
+  global:
+    - FOO=BAR
   matrix:
     -
 
