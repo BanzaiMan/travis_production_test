@@ -1,5 +1,3 @@
-language: cpp
-
 matrix:
   include:
     - language: android
@@ -8,6 +6,7 @@ matrix:
       sudo: false
     - os: osx
       osx_image: xcode7.3
+      language: cpp
 
 sudo: false
 
