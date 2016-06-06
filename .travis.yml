@@ -12,6 +12,7 @@ install:
 
 script:
   - psql --version
+  - psql -c 'select version();' postgres
 
 notifications:
   email: false
