@@ -1,19 +1,19 @@
-language: ruby
+language: cpp
+
+matrix:
+  include:
+    - language: android
+    - os: osx
+      osx_image: xcode7.3
+
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - postgresql-9.4
-      - postgresql-client-9.4
-  postgresql: '9.4'
 
 install:
   - true
 
 script:
-  - psql --version
-  - psql -c 'select version();' postgres
+  - true
 
 notifications:
   email: false
