@@ -11,7 +11,7 @@ install:
   - true
 
 script:
-  - true
+  - psql --version
 
 notifications:
   email: false
