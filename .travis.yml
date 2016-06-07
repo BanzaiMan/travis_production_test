@@ -7,10 +7,13 @@ matrix:
       sudo: false
     - os: osx
       osx_image: xcode7.3
+    - os: osx
+      osx_image: beta-xcode6.3
+    - os: osx
+      osx_image: xcode6.4
 
   allow_failures:
     - os: osx
-      osx_image: xcode7.3
 
 install:
   - true
