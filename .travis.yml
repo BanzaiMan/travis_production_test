@@ -1,14 +1,17 @@
-language: java
+language: ruby
+sudo: false
 
-os: osx
-
-osx_image: xcode7.3
+cache:
+  edge: true
+  directories:
+    - foo/bar/baz
+    - /tmp/foo
 
 install:
   - true
 
 script:
-  - java -version
+  - true
 
 notifications:
   email: false
