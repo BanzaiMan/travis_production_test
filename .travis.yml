@@ -11,7 +11,7 @@ install:
   - true
 
 script:
-  - ls -l /usr/local/android
+  - ls -lad /usr/local/android*
 
 notifications:
   email: false
