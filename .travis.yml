@@ -1,26 +1,18 @@
-language: android
+language: ruby
 
 sudo: false
-
-android:
-  components:
-    - platform-tools
-    - tools
 
 install:
   - true
 
 script:
-  - ls -lad /usr/local/android*
-  - ls -l /usr/local/android-sdk/
+  - true
 
 notifications:
   email: false
 
-# notifications:
-#   email: false
-#   slack:
-#     rooms:
-#       - secure: "lJvygEEwbvbTua6vhOQCgg/voA7iH9sgm6yj9pC9fnYBf++8DWbyyM3sUB3ZIBaeqUlwiEXmn5HjgQlzB1+JTHPtOJtd05m72kOOSEIcXqcLK3Of51E4fEzjrAZ4x/nJQeIIrUzpnlVrSpgFkCP1qNWq1AV+miSjoFFbTn2v7hA="
-#     template:
-#       - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time})"
+  slack:
+    rooms:
+      - secure: "lJvygEEwbvbTua6vhOQCgg/voA7iH9sgm6yj9pC9fnYBf++8DWbyyM3sUB3ZIBaeqUlwiEXmn5HjgQlzB1+JTHPtOJtd05m72kOOSEIcXqcLK3Of51E4fEzjrAZ4x/nJQeIIrUzpnlVrSpgFkCP1qNWq1AV+miSjoFFbTn2v7hA="
+    template:
+      - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message}"
