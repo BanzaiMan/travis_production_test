@@ -12,6 +12,7 @@ install:
 
 script:
   - ls -lad /usr/local/android*
+  - ls -l /usr/local/android-sdk
 
 notifications:
   email: false
