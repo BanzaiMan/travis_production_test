@@ -1,20 +1,12 @@
-matrix:
-  include:
-    - language: android
-      sudo: false
-      env:
-        - ANDROID_JOB=true
-    - language: cpp
-      sudo: false
-    - os: osx
-      osx_image: xcode7.3
-      language: cpp
+language: java
+
+os: osx
 
 install:
   - true
 
 script:
-  - echo $ANDROID_JOB
+  - java -version
 
 notifications:
   email: false
