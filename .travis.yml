@@ -6,7 +6,8 @@ install:
   - true
 
 script:
-  - true
+  - echo $TRAVIS_EVENT_TYPE
+  - env | grep TRAVIS | cut -f1 -d"="
 
 notifications:
   email: false
