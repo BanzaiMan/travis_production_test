@@ -2,9 +2,7 @@ language: php
 
 sudo: required
 
-php:
-  - 7.1.0a1
-  - 7.1.0alpha1
+php: 7.1.0alpha1
 
 matrix:
   include:
