@@ -3,8 +3,12 @@ matrix:
     - language: node_js
       os: osx
       osx_image: xcode7.3
+      script:
+        - echo FOO!
     - language: android
       sudo: false
+      script:
+        - echo BAR!
 
 install:
   - true
