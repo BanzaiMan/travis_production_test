@@ -9,6 +9,8 @@ install:
   - true
 
 script:
+  - curl -O https://raw.githubusercontent.com/creationix/nvm/v0.31.0/nvm.sh
+  - source nvm.sh
   - which npm
 
 notifications:
