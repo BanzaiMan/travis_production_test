@@ -4,6 +4,12 @@ sudo: required
 
 dist: trusty
 
+addons:
+  apt:
+    packages:
+      - lzma
+      - liblzma-dev
+
 python: '3.5.0'
 
 install:
