@@ -8,7 +8,7 @@ matrix:
     - language: android
       sudo: false
       script:
-        - echo BAR!
+        - nvm install 4
 
 install:
   - true
