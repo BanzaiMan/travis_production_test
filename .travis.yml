@@ -1,21 +1,15 @@
-language: php
+language: csharp
 
-php: 7.1.0alpha1
+sudo: false
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: RELEASE=precise
-    - sudo: required
-      dist: trusty
-      env: RELEASE=trusty
+before_install:
+  - nvm use 5
 
 install:
   - true
 
 script:
-  - true
+  - which npm
 
 notifications:
   email: false
