@@ -1,12 +1,10 @@
-language: android
-
-sudo: false
-
 matrix:
   include:
     - language: node_js
       os: osx
       osx_image: xcode7.3
+    - language: android
+      sudo: false
 
 install:
   - true
