@@ -1,22 +1,16 @@
-language: python
+language: android
 
-sudo: required
+os: osx
 
-dist: trusty
+osx_image: xcode7.3
 
-addons:
-  apt:
-    packages:
-      - lzma
-      - liblzma-dev
-
-python: '3.5.0'
+sudo: false
 
 install:
   - true
 
 script:
-  - python -c 'import lzma; print("foo")'
+  - true
 
 notifications:
   email: false
