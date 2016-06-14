@@ -1,20 +1,18 @@
-matrix:
-  include:
-    - language: node_js
-      os: osx
-      osx_image: xcode7.3
-      script:
-        - echo FOO!
-    - language: android
-      sudo: false
-      script:
-        - nvm install 4
+language: python
+
+sudo: false
+
+python: '3.5'
+
+before_install:
+  - rvm use 2.3.0 --install --binary
 
 install:
   - true
 
 script:
-  - true
+  - python --version
+  - ruby --version
 
 notifications:
   email: false
