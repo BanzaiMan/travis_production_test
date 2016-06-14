@@ -10,8 +10,7 @@ before_install:
   - pushd $HOME
   - wget -O docker.pkg https://github.com/docker/toolbox/releases/download/v$DOCKER_VERSION/DockerToolbox-$DOCKER_VERSION.pkg
   - sudo installer -pkg docker.pkg -target /
-  - source '/Applications/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
-  - docker images
+  - find "/Applications/Docker*" -name start.sh
 
 install:
   - true
