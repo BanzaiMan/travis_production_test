@@ -8,7 +8,7 @@ env:
 
 before_install:
   - pushd $HOME
-  - wget -O dockr.pkg https://github.com/docker/toolbox/releases/download/v$DOCKER_VERSION/DockerToolbox-$DOCKER_VERSION.pkg
+  - wget -O docker.pkg https://github.com/docker/toolbox/releases/download/v$DOCKER_VERSION/DockerToolbox-$DOCKER_VERSION.pkg
   - sudo installer -pkg docker.pkg -target /
   - bash '/Applications/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'
   - docker images
