@@ -20,7 +20,6 @@ addons:
   apt:
     packages:
       - curl
-      - ca-certificates
 
 install:
   - true
