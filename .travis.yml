@@ -1,22 +1,25 @@
-language: objective-c
+language: ruby
 
-osx_image: xcode7.3
+sudo: false
 
-env:
-  global:
-    - DOCKER_VERSION=1.11.2
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+    - sudo: required
+      dist: trusty
 
-before_install:
-  - pushd $HOME
-  - wget -O docker.pkg https://github.com/docker/toolbox/releases/download/v$DOCKER_VERSION/DockerToolbox-$DOCKER_VERSION.pkg
-  - sudo installer -pkg docker.pkg -target /
-  - find "/Applications/Docker*" -name start.sh
+addons:
+  apt:
+    packages:
+      - curl
+      - ca-certificates
 
 install:
   - true
 
 script:
-  - true
+  - curl -vf https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh
 
 notifications:
   email: false
