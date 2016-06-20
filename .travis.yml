@@ -1,26 +1,10 @@
-language: ruby
-
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env:
-        - RELEASE=precise
-    - sudo: required
-      dist: trusty
-      env:
-        - RELEASE=trusty
-    - sudo: false
-      env:
-        - RELEASE=precise CONTAINER=true
-    - os: osx
-      osx_image: xcode7.3
+language: python
 
 install:
-  - true
+  - pip install --user -r requriements.txt
 
 script:
-  - curl -vf https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh
+  - true
 
 notifications:
   email: false
