@@ -1,14 +1,17 @@
-language: python
+language: ruby
 
 sudo: false
 
-python:
-  - '3.5'
-  - '3.3'
-  - '2.7.11'
+rvm:
+  - jruby-9.0.5.0
+
+addons:
+  apt:
+    packages:
+      - haveged
 
 install:
-  - pip install --user -r requriements.txt
+  - true
 
 script:
   - true
