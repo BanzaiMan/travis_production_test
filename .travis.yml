@@ -1,14 +1,6 @@
-language: ruby
+language: swift
 
 sudo: false
-
-rvm:
-  - jruby-9.0.5.0
-
-addons:
-  apt:
-    packages:
-      - haveged
 
 install:
   - true
