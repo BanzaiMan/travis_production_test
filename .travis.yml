@@ -1,4 +1,4 @@
-language: swift
+language: ruby
 
 sudo: false
 
@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - true
+  - grep -r -i chrome /etc/apt
 
 notifications:
   email: false
