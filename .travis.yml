@@ -1,12 +1,18 @@
 language: ruby
 
-sudo: false
+matrix:
+  include:
+    - dist: precise
+      sudo: required
+    - dist: trusty
+      sudo: required
 
 install:
   - true
 
 script:
-  - grep -r -i chrome /etc/apt
+  - sudo dpkg --add-architecture i386
+  - sudo apt-get update
 
 notifications:
   email: false
