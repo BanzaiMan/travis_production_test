@@ -11,6 +11,7 @@ install:
   - true
 
 script:
+  - grep -i -r chrome /etc/apt || true
   - sudo dpkg --add-architecture i386
   - sudo apt-get update
 
