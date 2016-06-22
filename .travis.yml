@@ -16,7 +16,7 @@ deploy:
   api_key:
     secure: FOOBAR
   environment:
-    develop: staging
+    default: staging
   app: myapp1
 
   # slack:
