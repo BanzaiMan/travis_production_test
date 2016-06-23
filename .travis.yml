@@ -1,23 +1,17 @@
 language: ruby
 
-sudo: false
+os: osx
+
+osx_image: xcode7.3
 
 install:
-  - true
+  - rvm implode --force
 
 script:
   - true
 
 notifications:
   email: false
-
-deploy:
-  provider: engineyard
-  api_key:
-    secure: FOOBAR
-  environment:
-    default: staging
-  app: myapp1
 
   # slack:
   #   rooms:
