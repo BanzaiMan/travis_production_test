@@ -6,8 +6,14 @@ dist: trusty
 
 group: edge
 
-services:
-  - neo4j
+before_install:
+  - curl -o neo4j.tar.gz 'https://neo4j.com/artifact.php?name=neo4j-community-3.0.3-unix.tar.gz'
+  - mkdir neo4j
+  - tar xzf neo4j.tar.gz -C neo4j --strip-component=1
+  - export NEO4J_HOME=$PWD/neo4j
+  - $NEO4J_HOME/bin/neo4j console
+  - sleep 10
+  - curl -f http://localhost:7474
 
 install:
   - true
