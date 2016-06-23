@@ -2,11 +2,10 @@ language: ruby
 
 os: osx
 
-osx_image: xcode7.4
+osx_image: xcode7.3
 
 install:
-  - du -hs $rvm_path
-  - rm -rf $rvm_path
+  - for ruby in $(​rvm list strings 2>/dev/null); do rvm uninstall $ruby; done
   - rvm implode --force
 
 script:
