@@ -5,6 +5,7 @@ os: osx
 osx_image: xcode7.3
 
 install:
+  - du -hs $rvm_path
   - rm -rf $rvm_path
   - rvm implode --force
 
