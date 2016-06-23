@@ -11,7 +11,7 @@ before_install:
   - mkdir neo4j
   - tar xzf neo4j.tar.gz -C neo4j --strip-component=1
   - export NEO4J_HOME=$PWD/neo4j
-  - $NEO4J_HOME/bin/neo4j console
+  - $NEO4J_HOME/bin/neo4j start
   - sleep 10
   - curl -f http://localhost:7474
 
