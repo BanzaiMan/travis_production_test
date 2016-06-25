@@ -11,6 +11,7 @@ addons:
 
 
 before_install:
+  - "echo 'update_initramfs=no' | sudo tee /etc/initramfs-tools/update-initramfs.conf > /dev/null"
   - "sudo apt-get install ccache debhelper devscripts doxygen dput espeak g++-4.8 gcc-4.8 graphviz libc6-i386 libespeak-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-0:amd64 libgstreamer1.0-dev libopenscenegraph-dev libsdl1.2-dev libudev-dev texlive-font-utils wget"
 
 install:
