@@ -4,6 +4,7 @@ install:
   - true
 
 script:
+  - open requirements.txt
   - open README.md
 
 notifications:
