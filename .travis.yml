@@ -1,11 +1,15 @@
-language: objective-c
+language: perl
+
+os: osx
+
+perl:
+  - '5.24.0'
 
 install:
   - true
 
 script:
-  - open requirements.txt
-  - open -a /Applications/TextEdit.app README.md
+  - true
 
 notifications:
   email: false
