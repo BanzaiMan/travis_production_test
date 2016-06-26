@@ -1,23 +1,10 @@
-language: ruby
-
-sudo: required
-
-dist: trusty
-
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-
-
-before_install:
-  - "sudo apt-get install -y ccache debhelper devscripts doxygen dput espeak g++-4.8 gcc-4.8 graphviz libc6-i386 libespeak-dev libgstreamer-plugins-base1.0-dev libgstreamer1.0-0:amd64 libgstreamer1.0-dev libopenscenegraph-dev libsdl1.2-dev libudev-dev texlive-font-utils wget"
+language: objective-c
 
 install:
   - true
 
 script:
-  - true
+  - open README.md
 
 notifications:
   email: false
