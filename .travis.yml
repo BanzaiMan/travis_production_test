@@ -5,7 +5,7 @@ install:
 
 script:
   - open requirements.txt
-  - open README.md
+  - open -a /Applications/TextEdit.app README.md
 
 notifications:
   email: false
