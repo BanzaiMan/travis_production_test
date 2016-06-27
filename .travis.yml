@@ -16,6 +16,7 @@ deploy:
   provider: script
   script:
     - eb --version
+  all_branches: true
 
 notifications:
   email: false
