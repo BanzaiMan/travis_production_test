@@ -1,23 +1,19 @@
-language: node_js
+language: cpp
 
 sudo: false
+
+addons:
+  apt:
+    sources:
+      - llvm-toolchain-precise-3.8
+    packages:
+      - clang-3.8
 
 install:
   - true
 
 script:
   - true
-
-before_deploy:
-  - pip install --user awsebcli
-  - export PATH=$PATH:$HOME/.local/bin
-
-deploy:
-  provider: script
-  script:
-    - eb --version
-  on:
-    all_branches: true
 
 notifications:
   email: false
