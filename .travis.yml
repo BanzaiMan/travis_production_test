@@ -2,7 +2,7 @@ language: erlang
 
 sudo: false
 
-otp_releases:
+otp_release:
   - '18.3'
   - '19.0'
 
