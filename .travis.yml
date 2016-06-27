@@ -1,13 +1,21 @@
-language: objective-c
+language: node_js
 
-osx_image: xcode7.4
+sudo: false
 
 install:
   - true
 
 script:
-  - sw_vers
-  - uname -a
+  - true
+
+before_deploy:
+  - pip install --user awsebcli
+  - export PATH=$PATH:$HOME/.local/bin
+
+deploy:
+  provider: script
+  script:
+    - eb --version
 
 notifications:
   email: false
