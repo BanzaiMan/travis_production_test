@@ -1,12 +1,21 @@
-language: objective-c
+language: r
+
+sudo: false
+
+r:
+  - devel
 
 install:
-  - brew update
-  - brew install duti
-  - duti -s /Applications/TextEdit.app .md all
+  - true
 
 script:
-  - open README.md
+  - true
+
+deploy:
+  provider: script
+  script: echo true
+  on:
+    r: release
 
 notifications:
   email: false
