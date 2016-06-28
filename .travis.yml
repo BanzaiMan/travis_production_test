@@ -1,19 +1,11 @@
-language: cpp
-
-sudo: false
-
-addons:
-  apt:
-    sources:
-      - llvm-toolchain-precise-3.8
-    packages:
-      - clang-3.8
+language: objective-c
 
 install:
-  - true
+  - brew install dutil
+  - duti -s /Applications/TextEdit.app .md all
 
 script:
-  - true
+  - open README.md
 
 notifications:
   email: false
