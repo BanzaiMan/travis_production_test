@@ -1,21 +1,19 @@
-language: r
+language: objective-c
 
-sudo: false
+os: osx
 
-r:
-  - devel
+matrix:
+  include:
+    - os: osx
+      osx_iamge: xcode7.3
+    - os: osx
 
 install:
   - true
 
 script:
-  - true
-
-deploy:
-  provider: script
-  script: echo true
-  on:
-    r: release
+  - which firefox || true
+  - firefox --version || true
 
 notifications:
   email: false
