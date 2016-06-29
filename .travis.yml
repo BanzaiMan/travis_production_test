@@ -1,19 +1,10 @@
-language: objective-c
+language: ruby
 
-os: osx
+sudo: false
 
-matrix:
-  include:
-    - os: osx
-      osx_iamge: xcode7.3
-    - os: osx
-
-install:
-  - true
 
 script:
-  - which firefox || true
-  - firefox --version || true
+  - true
 
 notifications:
   email: false
