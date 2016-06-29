@@ -1,20 +1,16 @@
 language: node_js
 
-os: ubuntu
-
-addons:
-  apt:
-    packages:
-      - jq
-      - s3cmd
-
 sudo: false
+
+env:
+  global:
+    - secure: "JTgy8zhOFPfjBGVWJlHTxnd+fSCU8qbyBjxEg6Puy6VHExit8c3HbsJ4Wmf+i1eXnLRKu+rBQown68BJv4PSez/mr2/bHmiQ0npQiLtre016L3VdCBlppjvvnZWctCSl8GIRZxudPYHCmnHw8Vfc1gKNBxYRZKYFWjOQfHD3KpU="
 
 install:
   - true
 
 script:
-  - true
+  - echo $FOO
 
 notifications:
   email: false
