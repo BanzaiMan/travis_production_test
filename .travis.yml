@@ -1,9 +1,15 @@
-language: ruby
+language: node_js
+
+addons:
+  apt:
+    packages:
+      - jq
+      - s3cmd
 
 sudo: false
 
-rvm:
-  - 2.1.5
+install:
+  - true
 
 script:
   - true
