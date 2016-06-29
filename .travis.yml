@@ -10,7 +10,7 @@ install:
   - true
 
 script:
-  - echo $FOO
+  - echo $BAR
 
 notifications:
   email: false
