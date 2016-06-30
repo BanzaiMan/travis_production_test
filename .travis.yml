@@ -10,6 +10,7 @@ env:
   - BUNDLER_VERSION=1.10.6
 
 before_install:
+  - for dir in $(echo $GEM_PATH | tr ':' ' '); do gem uninstall -i $dir bundler -a -x; done
   - gem uninstall bundler -a
   - gem install bundler -v $BUNDLER_VERSION
 
