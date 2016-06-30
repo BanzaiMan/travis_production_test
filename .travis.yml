@@ -3,22 +3,27 @@ language: ruby
 sudo: false
 
 env:
-  matrix:
-    - BUNDLER_VERSION=1.12.5
-    - BUNDLER_VERSION=1.11.2
-  global:
-    - FOO=BAR
-    - BAR=BAZ
-
-matrix:
-  exclude:
-    - env: BUNDLER_VERSION=1.12.5 FOO=BAR
+  - SCRIPT=SCRIPT1
+  - SCRIPT=SCRIPT2
+  - SCRIPT=SCRIPT3
 
 install:
   - true
 
-script:
-  - true
+script: |
+  case $TRAVIS_EVENT_TYPE in
+    'push' )
+      SCRIPT1=build_all_apps
+      SCRIPT2=run_smoke_tests
+      SCRIPT3=lint
+      ;;
+    'cron' )
+      SCRIPT1='ops/build_and_test_otp_release admin'
+      SCRIPT2='ops/build_and_test_otp_release api'
+      SCRIPT3='ops/build_and_test_otp_release shard_builder_cli'
+      ;;
+  esac
+  eval "echo \$$SCRIPT"
 
 notifications:
   email: false
