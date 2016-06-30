@@ -2,28 +2,22 @@ language: ruby
 
 sudo: false
 
+rvm: 2.1.10
+
 env:
-  - SCRIPT=SCRIPT1
-  - SCRIPT=SCRIPT2
-  - SCRIPT=SCRIPT3
+  - BUNDLER_VERSION=1.12.5
+  - BUNDLER_VERSION=1.11.2
+  - BUNDLER_VERSION=1.10.6
+
+before_install:
+  - gem uninstall bundler -a
+  - gem install bundler -v $BUNDLER_VERSION
 
 install:
   - true
 
-script: |
-  case $TRAVIS_EVENT_TYPE in
-    'push' )
-      SCRIPT1=build_all_apps
-      SCRIPT2=run_smoke_tests
-      SCRIPT3=lint
-      ;;
-    'cron' )
-      SCRIPT1='ops/build_and_test_otp_release admin'
-      SCRIPT2='ops/build_and_test_otp_release api'
-      SCRIPT3='ops/build_and_test_otp_release shard_builder_cli'
-      ;;
-  esac
-  eval "echo \$$SCRIPT"
+script:
+  - bundle --version
 
 notifications:
   email: false
