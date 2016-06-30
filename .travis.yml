@@ -3,18 +3,22 @@ language: ruby
 sudo: false
 
 env:
-  - BUNDLER_VERSION=1.12.5
-  - BUNDLER_VERSION=1.11.2
-  - BUNDLER_VERSION=1.10.6
+  matrix:
+    - BUNDLER_VERSION=1.12.5
+    - BUNDLER_VERSION=1.11.2
+  global:
+    - FOO=BAR
+    - BAR=BAZ
 
-before_install:
-  - gem install bundler -v $BUNDLER_VERSION
+matrix:
+  exclude:
+    - env: BUNDLER_VERSION=1.12.5 FOO=BAR
 
 install:
   - true
 
 script:
-  - bundle _${BUNDLER_VERSION}_ --version
+  - true
 
 notifications:
   email: false
