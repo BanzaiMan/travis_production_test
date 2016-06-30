@@ -8,14 +8,13 @@ env:
   - BUNDLER_VERSION=1.10.6
 
 before_install:
-  - gem uninstall bundler -a
   - gem install bundler -v $BUNDLER_VERSION
 
 install:
   - true
 
 script:
-  - bundle --version
+  - bundle _$BUNDLER_VERSION_ --version
 
 notifications:
   email: false
