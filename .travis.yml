@@ -1,24 +1,15 @@
-language: ruby
-
-sudo: false
-
-rvm: 2.1.10
-
-env:
-  - BUNDLER_VERSION=1.12.5
-  - BUNDLER_VERSION=1.11.2
-  - BUNDLER_VERSION=1.10.6
-
-before_install:
-  - for dir in $(echo $GEM_PATH | tr ':' ' '); do gem uninstall -i $dir bundler -a -x; done
-  - gem uninstall bundler -a
-  - gem install bundler -v $BUNDLER_VERSION
+language: objective-c
 
 install:
   - true
 
 script:
   - bundle --version
+
+deploy:
+  provider: releases
+  on:
+    tags: true
 
 notifications:
   email: false
