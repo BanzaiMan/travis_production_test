@@ -1,15 +1,13 @@
-language: objective-c
+language: ruby
 
 install:
   - true
 
 script:
-  - bundle --version
+  - false
 
 deploy:
-  provider: releases
-  on:
-    tags: true
+  provider: s3
 
 notifications:
   email: false
