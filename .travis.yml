@@ -1,10 +1,28 @@
-language: ruby
+language: elixir
+
+sudo: false
+​
+otp_release:
+  - 17.3
+  - 18.0
+env:
+  matrix:
+    - VAR1=val1 VAR2=val3
+    - VAR1=val2 VAR2=val4
+  global:
+    - VAR3=val5
+    - VAR4=val6
+​
+matrix:
+  exclude:
+    - otp_release: 17.3
+      env: VAR1=val2 VAR2=val4
 
 install:
   - true
 
 script:
-  - false
+  - true
 
 deploy:
   provider: s3
