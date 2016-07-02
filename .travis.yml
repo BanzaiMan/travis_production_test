@@ -1,16 +1,12 @@
-language: python
+language: objective-c
 
-python:
-  - '3.5.2'
-  - '3.5'
-
-sudo: false
+osx_image: xcode8
 
 install:
   - true
 
 script:
-  - true
+  - ruby --version
 
 notifications:
   email: false
