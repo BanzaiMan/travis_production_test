@@ -1,12 +1,14 @@
-language: objective-c
-
-osx_image: xcode8
+language: ruby
 
 install:
   - true
 
 script:
-  - ruby --version
+  - false
+
+deploy:
+  provider: script
+  script: echo DEPLOY!
 
 notifications:
   email: false
