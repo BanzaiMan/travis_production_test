@@ -10,7 +10,7 @@ deploy:
   provider: script
   script: echo foo!
 
-after_deploy:
+after_scrpit:
   - sleep 1
 
 notifications:
