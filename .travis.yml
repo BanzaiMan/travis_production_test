@@ -1,13 +1,17 @@
 language: ruby
 
-rvm:
-  - 2.4.0-preview1
-
 install:
   - true
 
 script:
   - true
+
+deploy:
+  provider: script
+  script: echo foo!
+
+after_deploy:
+  - sleep 1
 
 notifications:
   email: false
