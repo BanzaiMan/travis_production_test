@@ -2,14 +2,11 @@ language: ruby
 
 sudo: false
 
-rvm:
-  - 2.4.0-preview1
-
 install:
   - true
 
 script:
-  - true
+  - echo $PATH | grrep `::` || true
 
 notifications:
   email: false
