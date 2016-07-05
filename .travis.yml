@@ -3,18 +3,13 @@ language: ruby
 sudo: false
 
 rvm:
-  - default
   - 2.4.0-preview1
-
-before_install:
-  - rvm get head
-  - rvm use 2.4.0-preview1 --install --fuzzy --binary
 
 install:
   - true
 
 script:
-  - ruby --version
+  - true
 
 notifications:
   email: false
