@@ -8,6 +8,7 @@ matrix:
     - sudo: required
       dist: trusty
       env: RELEASE=trusty
+    - sudo: false
 install:
   - true
 
