@@ -2,9 +2,6 @@ language: ruby
 
 sudo: false
 
-gemfile:
-  - Gemfile
-
 install:
   - true
 
