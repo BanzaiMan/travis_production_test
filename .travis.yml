@@ -8,7 +8,7 @@ install:
 script:
   - echo $BUNDLE_GEMFILE
   - bash -c "echo $BUNDLE_GEMFILE"
-  - ruby -e 'echo ENV["BUNDLE_GEMFILE"]'
+  - ruby -e 'puts ENV["BUNDLE_GEMFILE"]'
 
 notifications:
   email: false
