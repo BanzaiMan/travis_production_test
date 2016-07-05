@@ -1,7 +1,13 @@
 language: ruby
 
-sudo: false
-
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: RELEASE=precise
+    - sudo: required
+      dist: trusty
+      env: RELEASE=trusty
 install:
   - true
 
