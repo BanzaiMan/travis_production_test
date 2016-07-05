@@ -4,14 +4,7 @@ install:
   - true
 
 script:
-  - true
-
-deploy:
-  provider: script
-  script: echo foo!
-
-after_script:
-  - sleep 1
+  - cat /etc/mavenrc
 
 notifications:
   email: false
