@@ -12,7 +12,7 @@ install:
   - true
 
 script:
-  - echo $PATH | grrep `::` || true
+  - echo $PATH | grep '::' || true
 
 notifications:
   email: false
