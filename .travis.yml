@@ -1,10 +1,16 @@
 language: ruby
 
+sudo: false
+
+gemfile:
+  - nonexistent_gemfile
+
 install:
   - true
 
 script:
-  - cat /etc/mavenrc
+  - echo $BUNDLE_GEMFILE
+  - bash -c "echo $BUNDLE_GEMFILE"
 
 notifications:
   email: false
