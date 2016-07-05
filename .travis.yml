@@ -1,20 +1,16 @@
 language: ruby
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: RELEASE=precise
-    - sudo: required
-      dist: trusty
-      env: RELEASE=trusty
-      group: edge
-    - sudo: false
+sudo: false
+
+gemfile:
+  - Gemfile
+  - Gemfile2
+
 install:
   - true
 
 script:
-  - echo $PATH | grep '::' || true
+  - echo $BUNDLE_GEMFILE
 
 notifications:
   email: false
