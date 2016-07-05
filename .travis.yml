@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 gemfile:
-  - nonexistent_gemfile
+  - Gemfile
 
 install:
   - true
