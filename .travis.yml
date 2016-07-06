@@ -6,7 +6,7 @@ install:
   - true
 
 script:
-  - echo $TRAVIS_COMMIT_RANGE
+  - true
 
 notifications:
   email: false
