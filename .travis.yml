@@ -7,6 +7,11 @@ matrix:
       python: 3.5
       env: RELEASE=trusty
     - sudo: required
+      dist: trusty
+      python: 3.5
+      group: edge
+      env: RELEASE=trusty-edge
+    - sudo: required
       dist: precise
       python: 3.5
       env: RELEASE=precise
