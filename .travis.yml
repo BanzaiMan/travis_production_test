@@ -1,25 +1,12 @@
-language: node_js
-node_js:
-  - '0.12'
-os:
-  - osx
-before_install:
-  - git clone https://github.com/creationix/nvm.git /tmp/.nvm
-  - source /tmp/.nvm/nvm.sh
-  - nvm install $TRAVIS_NODE_VERSION
-  - nvm use --delete-prefix $TRAVIS_NODE_VERSION
-  - brew update
-  - brew install redis
-before_script:
-  - redis-server &
-  - until ruby -rsocket -e '$stderr=File.open(File::NULL,"w"); TCPSocket.new("localhost",6379)'; do sleep 1; done
+language: ruby
 
+sudo: false
 
 install:
   - true
 
 script:
-  - true
+  - echo $TRAVIS_COMMIT_RANGE
 
 notifications:
   email: false
