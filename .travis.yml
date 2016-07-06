@@ -1,12 +1,27 @@
 language: python
 
-sudo: required
-
-dist: trusty
-
-python:
-  - 3.5
-  - 3.5.2
+matrix:
+  include:
+    - sudo: required
+      dist: trusty
+      python: 3.5
+      env: RELEASE=trusty
+    - sudo: required
+      dist: precise
+      python: 3.5
+      env: RELEASE=precise
+    - sudo: false
+      python: 3.5
+    - sudo: required
+      dist: trusty
+      python: 3.5.2
+      env: RELEASE=trusty
+    - sudo: required
+      dist: precise
+      python: 3.5.2
+      env: RELEASE=precise
+    - sudo: false
+      python: 3.5.2
 
 install:
   - true
