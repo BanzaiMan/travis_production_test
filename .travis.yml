@@ -11,7 +11,8 @@ before_install:
   - brew update
   - brew install redis
 before_script:
-  - sh -c "sudo redis-server start"
+  - redis-server &
+  - until ruby -rsocket -e '$stderr=File.open(File::NULL,"w"); TCPSocket.new("localhost",6379)'; do sleep 1; done
 
 
 install:
