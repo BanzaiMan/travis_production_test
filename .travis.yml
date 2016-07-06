@@ -1,16 +1,17 @@
-language: ruby
+language: php
 
 sudo: false
 
-gemfile:
-  - Gemfile
-  - Gemfile2
+php:
+  - 7.0.8
+  - 5.6.23
+  - 5.5.37
 
 install:
   - true
 
 script:
-  - echo $BUNDLE_GEMFILE
+  - true
 
 notifications:
   email: false
