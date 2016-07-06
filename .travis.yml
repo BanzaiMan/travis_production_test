@@ -11,7 +11,7 @@ install:
   - true
 
 script:
-  - true
+  - phpunit --version
 
 notifications:
   email: false
