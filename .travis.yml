@@ -1,39 +1,24 @@
-language: python
+language: node_js
+node_js:
+  - '0.12'
+os:
+  - osx
+before_install:
+  - git clone https://github.com/creationix/nvm.git /tmp/.nvm
+  - source /tmp/.nvm/nvm.sh
+  - nvm install $TRAVIS_NODE_VERSION
+  -nvm use --delete-prefix $TRAVIS_NODE_VERSION
+  - brew update
+  - brew install redis
+before_script:
+  - sh -c "sudo redis-server start"
 
-matrix:
-  include:
-    - sudo: required
-      dist: trusty
-      python: 3.5
-      env: RELEASE=trusty
-    - sudo: required
-      dist: trusty
-      python: 3.5
-      group: edge
-      env: RELEASE=trusty-edge
-    - sudo: required
-      dist: precise
-      python: 3.5
-      env: RELEASE=precise
-    - sudo: false
-      python: 3.5
-    - sudo: required
-      dist: trusty
-      python: 3.5.2
-      env: RELEASE=trusty
-    - sudo: required
-      dist: precise
-      python: 3.5.2
-      env: RELEASE=precise
-    - sudo: false
-      python: 3.5.2
 
 install:
   - true
 
 script:
-  - python -c 'import sys; print(sys.version)'
-  - python -c 'import lzma; print("hello")'
+  - true
 
 notifications:
   email: false
