@@ -8,6 +8,13 @@ install:
 script:
   - true
 
+deploy:
+  provider: script
+  scriipt: echo hello
+  on:
+    branch:
+      - default
+
 notifications:
   email: false
 
