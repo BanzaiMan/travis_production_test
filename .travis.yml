@@ -1,14 +1,13 @@
 matrix:
   include:
     - language: ruby
+      scipt: echo $TRAVIS_RUBY_VERSION
     - language: python
+      scipt: echo $TRAVIS_PYTHON_VERSION
 
 sudo: false
 
 install:
-  - true
-
-script:
   - true
 
 notifications:
