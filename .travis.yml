@@ -1,7 +1,7 @@
-language: elixir
+language: php
 
-elixir:
-  - 1.3.0
+php:
+  - '7.1'
 
 sudo: false
 
