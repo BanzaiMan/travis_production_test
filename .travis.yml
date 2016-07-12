@@ -6,6 +6,7 @@ install:
   - true
 
 script:
+  - echo "Dominic's build!"
   - echo $SUPER_DUPER_SECRET
 
 notifications:
