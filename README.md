@@ -1,2 +1,4 @@
 # travis_production_test
-Repo for testing Travis production 
+
+[![Build Status](https://travis-ci.org/BanzaiMan/travis_production_test.svg)](https://travis-ci.org/BanzaiMan/travis_production_test)
+
