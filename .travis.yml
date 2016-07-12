@@ -1,7 +1,4 @@
-language: php
-
-php:
-  - '7.1'
+language: ruby
 
 sudo: false
 
@@ -9,7 +6,7 @@ install:
   - true
 
 script:
-  - true
+  - echo $SUPER_DUPER_SECRET
 
 notifications:
   email: false
