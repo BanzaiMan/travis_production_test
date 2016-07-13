@@ -2,11 +2,13 @@ language: ruby
 
 sudo: false
 
+cache: bundler
+
 install:
   - true
 
 script:
-  - echo $SUPER_DUPER_SECRET
+  - false
 
 notifications:
   email: false
@@ -17,3 +19,5 @@ notifications:
   #   template:
   #     - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message}"
   #   on_success: change
+
+
