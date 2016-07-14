@@ -1,12 +1,15 @@
 language: ruby
 
-sudo: false
+addons:
+  hosts:
+    - travis.stage.seamlessdocs.com
 
 install:
   - true
 
 script:
-  - ./script_with_folds
+  - cat /etc/hosts
+  - curl -kIL https://travis.stage.seamlessdocs.com
 
 notifications:
   email: false
