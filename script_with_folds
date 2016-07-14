@@ -8,8 +8,12 @@ travis_fold() {
 
 travis_fold start foo
 
+echo "This line appears in the fold's 'header'"
+
 echo "Stuff inside"
 
 sleep 2
+
+echo "More stuff"
 
 travis_fold end foo
