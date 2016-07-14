@@ -9,7 +9,7 @@ install:
 
 script:
   - cat /etc/hosts
-  - curl -kIL https://travis.stage.seamlessdocs.com
+  - curl -vkIL https://travis.stage.seamlessdocs.com
 
 notifications:
   email: false
