@@ -1,15 +1,19 @@
 language: ruby
 
-addons:
-  hosts:
-    - travis.stage.seamlessdocs.com
+sudo: false
+
+rvm:
+  - default
 
 install:
   - true
 
 script:
-  - cat /etc/hosts
-  - curl -vkIL https://travis.stage.seamlessdocs.com
+  - true
+
+matrix:
+  exclude:
+    - rvm: default
 
 notifications:
   email: false
