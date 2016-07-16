@@ -1,19 +1,15 @@
-language: ruby
+language: php
 
 sudo: false
 
-rvm:
-  - default
+php:
+  - 7.1
 
 install:
   - true
 
 script:
   - true
-
-matrix:
-  exclude:
-    - rvm: default
 
 notifications:
   email: false
