@@ -2,6 +2,9 @@ language: rust
 
 sudo: false
 
+before_script:
+  - cat ~/build.sh
+
 notifications:
   email: false
 
