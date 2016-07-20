@@ -2,12 +2,13 @@ language: php
 
 sudo: false
 
-php:
-  - '5.6'
-  - '7.0'
+addons:
+
+install:
+  - true
 
 script:
-  - curl -sfIL https://api.reporting.cloud
+  - true
 
 notifications:
   email: false
