@@ -1,6 +1,4 @@
-language: php
-
-sudo: false
+language: objective-c
 
 addons:
 
