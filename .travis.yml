@@ -2,8 +2,17 @@ language: ruby
 
 sudo: false
 
-install:
-  - true
+cache: bundler
+
+matrix:
+  include:
+    - sudo: required
+      env: RELEASE=precise
+    - sudo: required
+      env: RELEASE=trusty
+      dist: trusty
+    - os: osx
+      env: OS=osx
 
 script:
   - true
