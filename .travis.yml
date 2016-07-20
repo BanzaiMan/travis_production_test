@@ -1,9 +1,12 @@
-language: rust
+language: ruby
 
 sudo: false
 
-before_script:
-  - cat ~/build.sh
+install:
+  - true
+
+script:
+  - true
 
 notifications:
   email: false
