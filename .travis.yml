@@ -10,7 +10,7 @@ script:
 
 deploy:
   edge:
-    branch: master
+    branch: ha-test-json_pure
   provider: script
   script: echo foo
   on:
