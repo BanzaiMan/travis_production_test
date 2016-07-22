@@ -12,6 +12,8 @@ deploy:
   edge: true
   provider: script
   script: echo foo
+  on:
+    all_branches: true
 
 notifications:
   email: false
