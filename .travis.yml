@@ -9,7 +9,8 @@ script:
   - true
 
 deploy:
-  edge: true
+  edge:
+    branch: master
   provider: script
   script: echo foo
   on:
