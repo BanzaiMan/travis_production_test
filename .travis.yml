@@ -6,15 +6,7 @@ install:
   - true
 
 script:
-  - true
-
-deploy:
-  edge:
-    branch: ha-test-json_pure
-  provider: script
-  script: echo foo
-  on:
-    all_branches: true
+  - echo $TRAVIS_COMMIT_RANGE
 
 notifications:
   email: false
