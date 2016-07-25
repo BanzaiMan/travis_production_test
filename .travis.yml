@@ -13,6 +13,8 @@ deploy:
     edge:
       source: $TRAVIS_REPO_SLUG
       branch: $TRAVIS_BRANCH
+    on:
+      all_branches: true
 
 notifications:
   email: false
