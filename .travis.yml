@@ -1,19 +1,9 @@
-language: ruby
-
-rvm: default
+language: rust
 
 sudo: false
 
-install: true
-
-script: true
+before_script:
+  - cat ~/build.sh
 
 notifications:
   email: false
-
-branches:
-  only:
-    - gh-pages
-
-after_success:
-  - [[ $TRAVIS_PULL_REQUEST == 'false' ]] && curl "https://labs.w3.org/echidna/api/request" --data "url=$URL" --data "decision=$DECISION" --data "token=$TOKEN"
