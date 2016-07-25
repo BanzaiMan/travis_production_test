@@ -6,7 +6,13 @@ install:
   - true
 
 script:
-  - echo $TRAVIS_COMMIT_RANGE
+  - true
+
+deploy:
+  - provider: script
+    edge:
+      source: $TRAVIS_REPO_SLUG
+      branch: $TRAVIS_BRANCH
 
 notifications:
   email: false
