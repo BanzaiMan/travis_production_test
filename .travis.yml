@@ -2,6 +2,10 @@ language: ruby
 
 sudo: false
 
+install: true
+
+script: true
+
 deploy:
   - provider: script
     edge:
