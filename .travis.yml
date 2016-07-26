@@ -1,20 +1,16 @@
-language: ruby
+language: objective-c
+
+cache:
+  directories:
+    - /usr/local
 
 sudo: false
 
 install: true
 
-script: true
-
-deploy:
-  - provider: script
-    edge:
-      source: travis-ci/dpl
-    script: echo "foo"
-  - provider: script
-    edge:
-      source: travis-ci/dpl
-    script: echo "bar"
+script:
+  - brew update
+  - which pcgrep || brew install pcre
 
 notifications:
   email: false
