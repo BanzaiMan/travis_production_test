@@ -2,7 +2,7 @@ language: objective-c
 
 cache:
   directories:
-    - /usr/local
+    - /usr/local/Cellar
 
 sudo: false
 
