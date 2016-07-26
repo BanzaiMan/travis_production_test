@@ -1,10 +1,16 @@
-language: rust
+language: ruby
 
 sudo: false
 
-script:
-  - true
-  - false
+deploy:
+  - provider: script
+    edge:
+      source: travis-ci/dpl
+    script: echo "foo"
+  - provider: script
+    edge:
+      source: travis-ci/dpl
+    script: echo "bar"
 
 notifications:
   email: false
