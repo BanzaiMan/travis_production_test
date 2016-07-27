@@ -1,17 +1,14 @@
 language: rust
-
-os: osx
-
-osx_image: xcode7.3
-
-cache: cargo
-
 sudo: false
-
-install: true
-
-script:
-  - true
-
+cache: cargo
+rust:
+  - 1.8.0
+  - stable
+  - nightly
+os:
+  - osx
+env:
+  - ARCH=x86_64
+  - ARCH=i686
 notifications:
   email: false
