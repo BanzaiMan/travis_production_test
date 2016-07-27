@@ -2,6 +2,8 @@ language: rust
 
 os: osx
 
+osx_image: xcode7.3
+
 cache: cargo
 
 sudo: false
