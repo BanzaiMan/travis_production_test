@@ -1,16 +1,15 @@
-language: objective-c
+language: rust
 
-cache:
-  directories:
-    - /usr/local/Cellar
+os: osx
+
+cache: cargo
 
 sudo: false
 
 install: true
 
 script:
-  - brew update
-  - which pcgrep || brew install pcre
+  - true
 
 notifications:
   email: false
