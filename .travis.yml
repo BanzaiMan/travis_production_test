@@ -1,20 +1,18 @@
 language: ruby
 
-sudo: false
+matrix:
+  include:
+    - sudo: required
+      env: RELEASE=precise
+    - sudo: required
+      dist: trusty
+      env: RELEASE=trusty
 
 install:
   - true
 
 script:
   - true
-
-deploy:
-  edge:
-    branch: ha-test-json_pure
-  provider: script
-  script: echo foo
-  on:
-    all_branches: true
 
 notifications:
   email: false
