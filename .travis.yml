@@ -3,14 +3,13 @@ language: ruby
 sudo: false
 
 addons:
-  jwt:
-    secure: "DmuH1TAE2EIRW/44/9jAh6rtt21/KBv01y1xScSGsxE30e7YqdL7vrQNKaExZAbLwX2BOODkMe/j6BpxKCl0IR+9c9RoP1qPsqmwNUStLUTg4AUz5sOxPbSARfoieQ3Fz1Ua3MRtCT4R1TdupKM2aALxtdl3EZ0hvfQduwqdRO6/OwMdWXNULexlVTuOU2vVLVK5VB51xTeplyoOa09yo+SDam4JknEY6b7jv4C5SermYMKvOURLsChmG6q2FnUXA5aTF64DJc+IIcP3+2UIVNW8hzdFerocxZ+HAsT6qftQ6D3Z9oVu8aDgjUSS0z+ld8KKWXTks9QvIqRagTdpYHMeqEwrANFJmBez8AaQSgHAz5n5RzcACce2lMYPo04okE5Q5l/H6TOUXOzgoyro7USHtwhgAdYgbKBzaR+BYGWAY3bcrnn32HqIYDmrO+U6YvRtLSVka+5fQjeOehpeM284l4ghJhrZUHjLa+52E4EsYqfcbHG5wF/DmAqF0qUAta2X9zBn9gS3go60LAprIVQLfNLUOw+1UVc4FJiV39FRFEoHYQodDItoA8Pr9T0/KzEeQgbDELQuftrKMNVpclOJ6JuSqNbDHJgHqYlkzuztZxb9ciScw6KCDvrpq1oHqxtggobVWVaRXtfV9FNG2wUpGBIbd3nZ8w3Byb4zCBo="
+  firefox: '47.0'
 
 install:
   - true
 
 script:
-  - echo $SAUCE_ACCESS_KEY
+  - true
 
 notifications:
   email: false
