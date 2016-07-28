@@ -1,18 +1,15 @@
-language: objective-c
+language: ruby
 
-matrix:
-  include:
-    - os: osx
-      osx_image: xcode7.3
-    - os: osx
-      osx_image: xcode7.2
+sudo: false
 
 install:
-  - brew update
-  - brew install imagemagick
+  - true
 
 script:
-  - which identify || true
+  - true
+
+after_success:
+  - travis_terminate 1
 
 notifications:
   email: false
