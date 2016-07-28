@@ -3,7 +3,8 @@ language: ruby
 sudo: false
 
 addons:
-  firefox: '47.0'
+  firefox:
+    secure: "C7WYAkX5lwnWdNyuh231GPa0pPoaZreYJyy/t70ZCyQVeOuDwQaSNcecqtjBG7VG7Bl7u1LAVv5DPE/YBfaqFgdsDVumERPS4/binPmalCgsuyoC5LKMcSuUu+5/YOYBqlC6brjrT4FlFuaoi9o3gl92boGLFmJNgepE1QGjiCc="
 
 install:
   - true
