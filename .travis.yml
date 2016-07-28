@@ -1,16 +1,17 @@
-language: ruby
+language: objective-c
 
-sudo: false
-
-addons:
-  firefox:
-    secure: "C7WYAkX5lwnWdNyuh231GPa0pPoaZreYJyy/t70ZCyQVeOuDwQaSNcecqtjBG7VG7Bl7u1LAVv5DPE/YBfaqFgdsDVumERPS4/binPmalCgsuyoC5LKMcSuUu+5/YOYBqlC6brjrT4FlFuaoi9o3gl92boGLFmJNgepE1QGjiCc="
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode7.3
+    - os: osx
+      osx_image: xcode7.2
 
 install:
   - true
 
 script:
-  - true
+  - which identify || true
 
 notifications:
   email: false
