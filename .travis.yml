@@ -1,15 +1,21 @@
+
 language: ruby
 
 sudo: false
 
+env:
+  global:
+    - SKYLIGHT_ENABLE_TRACE_LOGS=true
+  matrix:
+    # The first one is intentionally empty in order to run without any extra env vars
+    -
+    - SKYLIGHT_DISABLE_AGENT=true
 install:
   - true
 
 script:
   - true
 
-after_success:
-  - travis_terminate 1
 
 notifications:
   email: false
