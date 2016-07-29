@@ -13,7 +13,6 @@ env:
   matrix:
     # The first one is intentionally empty in order to run without any extra env vars
     -
-    - SKYLIGHT_DISABLE_AGENT=true
 
 rvm:
   - 2.3.0
