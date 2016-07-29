@@ -12,7 +12,7 @@ env:
     - WORKER_SPAWN_TIMEOUT=15
   matrix:
     # The first one is intentionally empty in order to run without any extra env vars
-    -
+    # -
 
 rvm:
   - 2.3.0
