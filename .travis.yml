@@ -6,16 +6,21 @@ sudo: false
 env:
   global:
     - SKYLIGHT_ENABLE_TRACE_LOGS=true
+    - SKYLIGHT_REQUIRED=true
+    - SKYLIGHT_TEST_DIR=/tmp
+    - RAILS_ENV=development
+    - EMBEDDED_HTTP_SERVER_TIMEOUT=30
+    - WORKER_SPAWN_TIMEOUT=15
   matrix:
     # The first one is intentionally empty in order to run without any extra env vars
     -
     - SKYLIGHT_DISABLE_AGENT=true
+
 install:
   - true
 
 script:
   - true
-
 
 notifications:
   email: false
