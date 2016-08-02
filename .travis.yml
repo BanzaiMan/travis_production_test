@@ -1,16 +1,29 @@
-language: ruby
+language: cpp
+
+compiler: gcc
 
 sudo: false
 
-env:
-  global:
-    - ENVS=$(env)
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - cmake
+    - zlib1g-dev
+    - libssl-dev
+    - libpcre3-dev
+    - libbz2-dev
+    - libmysqlclient-dev
+    - libmysql++-dev
+    - gcc-5
+    - g++-5
 
 install:
   - true
 
 script:
-  - echo $ENVS
+  - which gcc
 
 notifications:
   email: false
