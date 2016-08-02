@@ -23,6 +23,7 @@ install:
   - export CC=gcc-5 CXX=g++-5
 
 script:
+  - ${CC} --version
   - which gcc
 
 notifications:
