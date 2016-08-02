@@ -4,10 +4,6 @@ compiler: gcc
 
 sudo: false
 
-env:
-  global:
-    - CC=gcc-5 CXX=g++-5
-
 addons:
   apt:
     sources:
@@ -24,7 +20,7 @@ addons:
     - g++-5
 
 install:
-  - true
+  - export CC=gcc-5 CXX=g++-5
 
 script:
   - which gcc
