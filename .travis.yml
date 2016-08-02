@@ -4,14 +4,13 @@ sudo: false
 
 env:
   global:
-    - PLATFORM=Linux
+    - ENVS=$(env)
 
 install:
   - true
 
 script:
-  - wget -O archive.tgz https://scan.coverity.com/download/${PLATFORM} --post-data "project=$COVERITY_SCAN_PROJECT_NAME&token=$COVERITY_SCAN_TOKEN"
-  - tar tzvf archive.tgz
+  - echo $ENVS
 
 notifications:
   email: false
