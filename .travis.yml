@@ -1,23 +1,12 @@
-language: node_js
-
-node_js:
-  - 'stable'
-  - '4'
-  - '0.10'
+language: ruby
 
 sudo: false
-
-matrix:
-  include:
-  - os: osx
-    node_js: stable
-    osx_image: xcode7.3
 
 install:
   - true
 
 script:
-  - true
+  - curl -svf 'https://openrct2.org/altapi/?command=push-build' || true
 
 notifications:
   email: false
