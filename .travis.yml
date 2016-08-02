@@ -25,6 +25,7 @@ install:
 script:
   - ${CC} --version
   - which gcc
+  - which ${CC}
 
 notifications:
   email: false
