@@ -1,12 +1,17 @@
 language: ruby
 
-sudo: required
+sudo: false
+
+env:
+  global:
+    - PLATFORM=Linux
 
 install:
   - true
 
 script:
-  - curl -svf 'https://openrct2.org/altapi/?command=push-build' || true
+  - wget -O archive.tgz https://scan.coverity.com/download/${PLATFORM} --post-data "project=$COVERITY_SCAN_PROJECT_NAME&token=$COVERITY_SCAN_TOKEN"
+  - tar tzvf archive.tgz
 
 notifications:
   email: false
