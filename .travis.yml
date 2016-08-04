@@ -6,7 +6,7 @@ dist: trusty
 
 before_install:
   - docker version
-  - sudo apt-get -o Dpkg::Options::="--force-overwrite" -y install docker-engine
+  - sudo apt-get -o Dpkg::Options::="--force-confnew" --force-yes -y install docker-engine
   - docker version
 
 install:
