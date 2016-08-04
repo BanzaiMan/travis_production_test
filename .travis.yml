@@ -1,13 +1,11 @@
 language: ruby
 
-sudo: required
+sudo: false
 
-dist: trusty
+cache: bundler
 
 before_install:
-  - docker version
-  - sudo apt-get -o Dpkg::Options::="--force-confnew" --force-yes -y install docker-engine
-  - docker version
+  - set -e
 
 install:
   - true
@@ -15,9 +13,15 @@ install:
 script:
   - true
 
+deploy:
+  provider: script
+  script:
+    - 'false'
+  on:
+    all_branches: true
+
 notifications:
   email: false
-
 
   # slack:
   #   rooms:
