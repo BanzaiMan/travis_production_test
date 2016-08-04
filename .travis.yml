@@ -6,7 +6,7 @@ dist: trusty
 
 before_install:
   - docker version
-  - sudo apt-get install docker
+  - sudo apt-get install docker-engine
   - docker version
 
 install:
