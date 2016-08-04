@@ -4,28 +4,12 @@ compiler: gcc
 
 sudo: false
 
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - cmake
-    - zlib1g-dev
-    - libssl-dev
-    - libpcre3-dev
-    - libbz2-dev
-    - libmysqlclient-dev
-    - libmysql++-dev
-    - gcc-5
-    - g++-5
-
 install:
-  - export CC=gcc-5 CXX=g++-5
-
+  - true
 script:
-  - ${CC} --version
-  - which gcc
-  - which ${CC}
+  - dpkg -l | grep -i lzma
+  - dpkg -L liblzma-dev
+  - dpkg -L lzma5
 
 notifications:
   email: false
