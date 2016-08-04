@@ -1,28 +1,19 @@
-language: cpp
+language: ruby
 
-compiler: gcc
+sudo: required
 
-sudo: false
+dist: trusty
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - gcc-4.8
-      - g++-4.8
-      - python2.7
-      - wget
-      - pkg-config
-      - zip
-      - zlib1g-dev
+before_install:
+  - docker version
+  - sudo apt-get install docker
+  - docker version
 
 install:
   - true
+
 script:
-  - dpkg -l | grep -i lzma
-  - dpkg -L liblzma-dev
-  - dpkg -L liblzma5
+  - true
 
 notifications:
   email: false
