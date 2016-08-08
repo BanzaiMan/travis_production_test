@@ -1,24 +1,16 @@
-language: ruby
+language: erlang
+
+otp_release:
+  - '18.0'
 
 sudo: false
 
-cache: bundler
-
-before_install:
-  - set -e
 
 install:
   - true
 
 script:
   - true
-
-deploy:
-  provider: script
-  script:
-    - 'false'
-  on:
-    all_branches: true
 
 notifications:
   email: false
