@@ -1,11 +1,15 @@
 language: ruby
 
-os: osx
+sudo: required
 
-cache: bundler
+dist: trusty
 
 script:
   - true
+
+deploy:
+  provider: script
+  script: echo 'true'
 
 notifications:
   email: false
