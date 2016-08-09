@@ -1,15 +1,18 @@
-language: python
+language: php
 
-python:
-  - '3.5'
+php: '5.5'
 
-sudo: false
+sudo: required
+
+dist: trusty
 
 install:
   - true
 
 script:
-  - true
+  - php --version
+  - which pecl
+  - pecl --version
 
 notifications:
   email: false
