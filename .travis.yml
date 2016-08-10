@@ -9,6 +9,7 @@ dist: trusty
 
 addons:
   hostname: travis-brmo
+  hosts: travis-brmo
 
 script:
   - true
