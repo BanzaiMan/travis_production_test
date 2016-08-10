@@ -1,7 +1,4 @@
-language: java
-
-jdk:
-  - oraclejdk8
+language: ruby
 
 sudo: required
 
@@ -10,11 +7,8 @@ dist: trusty
 install:
   - true
 
-before_script:
-  - rvm use 1.9.3
-
 script:
-  - ruby --version
+  - cat /etc/hosts
 
 notifications:
   email: false
