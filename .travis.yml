@@ -4,6 +4,9 @@ sudo: required
 
 dist: precise
 
+addons:
+  hostname: travis-brmo
+
 script:
   - true
 
