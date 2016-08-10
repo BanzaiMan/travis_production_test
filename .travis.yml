@@ -7,16 +7,14 @@ sudo: required
 
 dist: trusty
 
-addons:
-  hostname: travis-brmo
-  hosts: travis-brmo
-
-script:
+install:
   - true
 
-deploy:
-  provider: script
-  script: echo 'true'
+before_script:
+  - rvm use 1.9.3
+
+script:
+  - ruby --version
 
 notifications:
   email: false
