@@ -5,7 +5,7 @@ jdk:
 
 sudo: required
 
-dist: precise
+dist: trusty
 
 addons:
   hostname: travis-brmo
