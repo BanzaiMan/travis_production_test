@@ -1,14 +1,17 @@
-language: java
+language: ruby
 
 sudo: required
 
 dist: trusty
 
+services:
+  - mongod
+
 install:
   - true
 
 script:
-  - cat /etc/hosts
+  - ps -ef | grep mongo
 
 notifications:
   email: false
