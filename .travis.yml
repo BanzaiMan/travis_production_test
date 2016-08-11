@@ -15,7 +15,7 @@ matrix:
         directories: that
 
 script:
-  - install
+  - true
 
 notifications:
   email: false
