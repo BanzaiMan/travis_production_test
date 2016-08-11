@@ -1,15 +1,17 @@
-language: perl
+language: ruby
 
-perl:
-  - 5.22
+sudo: required
 
-sudo: false
+dist: trusty
+
+services:
+  - mongodb
 
 install:
   - true
 
 script:
-  - ls ~
+  - ps -ef | grep mongo
 
 notifications:
   email: false
