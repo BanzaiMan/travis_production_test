@@ -16,6 +16,8 @@ deploy:
   app: bar
   include:
     - baz
+  on:
+    all_branchs: true
 
 notifications:
   email: false
