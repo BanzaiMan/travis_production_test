@@ -1,8 +1,6 @@
 language: ruby
 
-sudo: required
-
-dist: precise
+sudo: false
 
 install:
   - true
