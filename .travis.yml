@@ -2,7 +2,7 @@ language: ruby
 
 sudo: required
 
-dist: trusty
+dist: precise
 
 services:
   - mongod
@@ -12,6 +12,7 @@ install:
 
 script:
   - ps -ef | grep mongo
+  - mongod --version
 
 notifications:
   email: false
