@@ -17,7 +17,7 @@ deploy:
   include:
     - baz
   on:
-    all_branchs: true
+    all_branches: true
 
 notifications:
   email: false
