@@ -1,23 +1,21 @@
 language: ruby
 
-sudo: false
+sudo: required
+
+dist: trusty
+
+addons:
+  hosts:
+    - foobar
 
 install:
   - true
 
-script:
-  - true
+before_script:
+  - ruby -rsocket -e 'TCPServer.new("foobar", 2000); loop do sleep 1; end' &
 
-deploy:
-  provider: atlas
-  token: foo
-  app: bar
-  include:
-    - baz
-  on:
-    all_branches: true
-  edge:
-    branch: atlas-debug
+script:
+  - ruby -rsocket -e 'TCPSocket.new("foobar",2000)'
 
 notifications:
   email: false
