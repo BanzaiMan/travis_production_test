@@ -1,17 +1,11 @@
-language: ruby
-
 sudo: required
-
 dist: trusty
-
-services:
-  - mongodb
-
-install:
-  - true
+language: cpp
+compiler:
+  - clang
 
 script:
-  - ps -ef | grep mongo
+  - which $CC
 
 notifications:
   email: false
