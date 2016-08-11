@@ -1,21 +1,14 @@
-language: ruby
+language: java
 
-sudo: false
+sudo: required
+
+dist: trusty
 
 install:
   - true
 
-matrix:
-  include:
-    - env: FOO=bar
-      cache:
-        directories: this
-    - env: FOO=baz
-      cache:
-        directories: that
-
 script:
-  - true
+  - cat /etc/hosts
 
 notifications:
   email: false
