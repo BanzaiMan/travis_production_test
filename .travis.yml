@@ -4,18 +4,17 @@ sudo: required
 
 dist: trusty
 
-addons:
-  hosts:
-    - foobar
+before_install:
+  - cat /etc/hosts
+  - sudo hostname "$(hostname | cut -c1-63)"
+  - sed -e "s/^\\(127\\.0\\.0\\.1.*\\)/\\1 $(hostname | cut -c1-63)/" /etc/hosts | sudo tee /etc/hosts
+  - cat /etc/hosts
 
 install:
   - true
 
-before_script:
-  - ruby -rsocket -e 'TCPServer.new("foobar", 2000); loop do sleep 1; end' &
-
 script:
-  - ruby -rsocket -e 'TCPSocket.new("foobar",2000)'
+  - true
 
 notifications:
   email: false
