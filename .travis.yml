@@ -1,21 +1,15 @@
-language: ruby
+language: perl
 
-sudo: required
+perl:
+  - 5.22
 
-dist: trusty
-
-addons:
-  hosts:
-    - foobar
+sudo: false
 
 install:
   - true
 
-before_script:
-  - ruby -rsocket -e 'TCPServer.new("foobar", 2000); loop do sleep 1; end' &
-
 script:
-  - ruby -rsocket -e 'TCPSocket.new("foobar",2000)'
+  - ls ~
 
 notifications:
   email: false
