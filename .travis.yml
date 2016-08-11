@@ -16,6 +16,8 @@ deploy:
     - baz
   on:
     all_branches: true
+  edge:
+    branch: atlas-debug
 
 notifications:
   email: false
