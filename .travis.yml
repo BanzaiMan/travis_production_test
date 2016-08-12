@@ -4,11 +4,16 @@ sudo: required
 
 dist: trusty
 
+before_install:
+  - cat /etc/hosts
+  - "sed -e 's/^127\\.0\\.1\\.1 localhost \\(.*\\)$/127.0.1.1 \\1/' /etc/hosts > /tmp/hosts"
+  - "sudo mv /tmp/hosts /etc/hosts"
+
 install:
   - true
 
 script:
-  - xxd /etc/hosts
+  - cat /etc/hosts
 
 notifications:
   email: false
