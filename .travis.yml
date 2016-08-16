@@ -7,6 +7,7 @@ install:
 
 script:
   - env | grep GO
+  - git --version
 
 deploy:
   provider: atlas
