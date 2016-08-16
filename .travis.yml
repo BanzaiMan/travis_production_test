@@ -1,8 +1,6 @@
 language: ruby
 
-sudo: required
-
-dist: precise
+sudo: false
 
 install:
   - true
@@ -16,6 +14,8 @@ deploy:
   app: bar
   include:
     - baz
+  edge:
+    branch: atlas-debug
   on:
     all_branches: true
 
