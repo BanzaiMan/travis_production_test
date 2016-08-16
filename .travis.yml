@@ -1,19 +1,16 @@
 language: php
 
-sudo: false
+php: 5.4.44
 
-addons:
-  apt:
-    sources:
-      - elasticsearch-2.x
-    packages:
-      elasticsearch
+sudo: required
+
+dist: trusty
 
 install:
   - true
 
 script:
-  - elasticsearch --version
+  - php -m
 
 notifications:
   email: false
