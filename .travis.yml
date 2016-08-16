@@ -1,19 +1,19 @@
 language: php
 
-sudo: required
+sudo: false
 
-dist: trusty
-
-php:
-  - '5.4.44'
-  - '5.4.45'
-  - '5.4'
+addons:
+  apt:
+    sources:
+      - elasticsearch-2.1
+    packages:
+      elasticsearch
 
 install:
   - true
 
 script:
-  - pecl config-show
+  - true
 
 notifications:
   email: false
