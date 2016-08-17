@@ -1,11 +1,15 @@
-sudo: required
-dist: trusty
-language: cpp
-compiler:
-  - clang
+language: php
+
+sudo: false
+
+php:
+  - '7.1'
+
+install:
+  - true
 
 script:
-  - which $CC
+  - phpunit --version
 
 notifications:
   email: false
