@@ -1,15 +1,29 @@
-language: php
+language: ruby
 
 sudo: false
 
-php:
-  - '7.1'
+addons:
+  apt:
+    packages:
+      - git
 
 install:
   - true
 
 script:
-  - phpunit --version
+  - env | grep GO
+  - git --version
+
+deploy:
+  provider: atlas
+  token: foo
+  app: bar
+  include:
+    - baz
+  edge:
+    branch: atlas-debug
+  on:
+    all_branches: true
 
 notifications:
   email: false
