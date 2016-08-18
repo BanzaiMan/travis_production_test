@@ -1,29 +1,15 @@
 language: ruby
 
-sudo: false
+sudo: required
 
 addons:
-  apt:
-    packages:
-      - git
+  postgresql: '9.5'
 
 install:
   - true
 
 script:
-  - env | grep GO
-  - git --version
-
-deploy:
-  provider: atlas
-  token: foo
-  app: bar
-  include:
-    - baz
-  edge:
-    branch: atlas-debug
-  on:
-    all_branches: true
+  - psql -c "show SERVER_VERSION;"
 
 notifications:
   email: false
