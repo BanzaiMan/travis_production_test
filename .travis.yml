@@ -1,15 +1,17 @@
-language: php
+language: python
 
 sudo: false
 
-php:
-  - '7.1'
+python:
+  - '3.6-dev'
+  - '3.4.5'
+  - '3.4'
 
 install:
   - true
 
 script:
-  - phpunit --version
+  - python -c 'import sysconfig; print(sysconfig.get_config_vars())'
 
 notifications:
   email: false
