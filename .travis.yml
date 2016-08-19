@@ -1,16 +1,22 @@
 language: python
 
-sudo: false
-
-python:
-  - '3.3.6'
-  - '3.3'
+matrix:
+  include:
+    - sudo: false
+    - sudo: required
+      dist: precise
+      env:
+        - RELEASE=precise
+    - sudo: required
+      dist: trusty
+      env:
+        - RELEASE=trusty
 
 install:
   - true
 
 script:
-  - python -c 'import sysconfig; print(sysconfig.get_config_vars())'
+  - "for i in $(ls ~/virtualenv); do echo $i; source ~/virtualenv/$i/bin/activate; python --version; python -c 'import sysconfig; print(sysconfig.get_config_vars())' | grep --color fPIC -c; done"
 
 notifications:
   email: false
