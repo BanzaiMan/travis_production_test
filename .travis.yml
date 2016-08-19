@@ -3,9 +3,8 @@ language: python
 sudo: false
 
 python:
-  - '3.6-dev'
-  - '3.4.5'
-  - '3.4'
+  - '3.5.2'
+  - '3.5'
 
 install:
   - true
