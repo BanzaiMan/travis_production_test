@@ -1,12 +1,9 @@
 language: python
 
-sudo: required
-
-dist: trusty
+sudo: false
 
 python:
-  - '3.5.2'
-  - '3.5'
+  - '3.3.6'
 
 install:
   - true
