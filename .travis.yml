@@ -15,7 +15,7 @@ rvm:
   - ruby-head
 
 matrix:
-   include:
+  include:
     - rvm: jruby-9.0.5.0
       gemfile: Gemfile
     - rvm: ruby-head
