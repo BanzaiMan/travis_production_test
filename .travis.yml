@@ -1,22 +1,18 @@
-language: python
+language: ruby
+
+sudo: false
 
 matrix:
   include:
-    - sudo: false
-    - sudo: required
-      dist: precise
-      env:
-        - RELEASE=precise
-    - sudo: required
-      dist: trusty
-      env:
-        - RELEASE=trusty
+    - rvm: 2.0.0
+  exclude:
+    - rvm: default
 
 install:
   - true
 
 script:
-  - "for i in $(ls ~/virtualenv); do echo $i; source ~/virtualenv/$i/bin/activate; python --version; python -c 'import sysconfig; print(sysconfig.get_config_vars())' | grep --color fPIC -c; done"
+  - true
 
 notifications:
   email: false
