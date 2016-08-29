@@ -1,34 +1,15 @@
 language: ruby
 
-sudo: false
+sudo: required
 
-env:
-  - COVERALL=1
-
-gemfile:
-  - Gemfile.activesupport-4.x
-rvm:
-  - 2.0
-  - 2.1
-  - 2.2
-  - jruby-9.0.5.0
-  - ruby-head
-
-matrix:
-  include:
-    - rvm: jruby-9.0.5.0
-      gemfile: Gemfile
-    - rvm: ruby-head
-      gemfile: Gemfile
-  allow_failures:
-    - rvm: ruby-head
-    - rvm: jruby-9.0.5.0
+before_install:
+  - sudo sysctl -w vm.max_map_count=262144
 
 install:
   - true
 
 script:
-  - true
+  - sudo sysctl vm.max_map_count
 
 notifications:
   email: false
