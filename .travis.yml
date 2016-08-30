@@ -20,6 +20,8 @@ deploy:
   strategy: git
   api_key:
     secure: "hpbL67C3lvxPHQ9mcmhwSzBJOW0o04Pt7IyuYszXAnAvhN2aSsuoPPcnL/9LKzRrcuM4mEYTrZot9gLpOuKnzZ7MM/yAekFf36c4//VJKdirbhhe/DMcheFPnxaZbcM5XTHFyy5bUcSrSoA+Gz7+Ds6Qrco3MsPHywvv9Vdv/ok="
+  on:
+    all_branches: true
 
 notifications:
   email: false
