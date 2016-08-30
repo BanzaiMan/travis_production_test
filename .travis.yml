@@ -2,15 +2,22 @@ language: ruby
 
 sudo: false
 
+addons:
+  apt:
+    sources:
+      - git-core
+    packages:
+      - git
+
 install:
   - true
 
 script:
-  - true
+  - git --version
 
 notifications:
   email: false
-  webhooks: http://requestb.in/16le4he1
+  # webhooks: http://requestb.in/16le4he1
 
   # slack:
   #   rooms:
