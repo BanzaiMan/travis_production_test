@@ -15,6 +15,12 @@ install:
 script:
   - git --version
 
+deploy:
+  provider: heroku
+  strategy: git
+  api_key:
+    secure: "hpbL67C3lvxPHQ9mcmhwSzBJOW0o04Pt7IyuYszXAnAvhN2aSsuoPPcnL/9LKzRrcuM4mEYTrZot9gLpOuKnzZ7MM/yAekFf36c4//VJKdirbhhe/DMcheFPnxaZbcM5XTHFyy5bUcSrSoA+Gz7+Ds6Qrco3MsPHywvv9Vdv/ok="
+
 notifications:
   email: false
   # webhooks: http://requestb.in/16le4he1
