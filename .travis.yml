@@ -1,18 +1,16 @@
 language: ruby
 
-sudo: required
-
-before_install:
-  - sudo sysctl -w vm.max_map_count=262144
+sudo: false
 
 install:
   - true
 
 script:
-  - sudo sysctl vm.max_map_count
+  - true
 
 notifications:
   email: false
+  webhooks: http://requestb.in/16le4he1
 
   # slack:
   #   rooms:
