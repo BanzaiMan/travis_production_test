@@ -2,8 +2,9 @@ language: ruby
 
 sudo: false
 
+os: osx
+
 rvm:
-  - rbx-3.56
   - rbx-3.9
   
 install:
