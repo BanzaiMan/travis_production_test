@@ -6,11 +6,14 @@ python:
   - '3.5'
   - pypy3
 
+before_install:
+  - sudo apt-get python-numpy
+
 install:
   - pip install numpy
 
 script:
-  - python -c 'import numpy'
+  - python -c 'import numpy; print(numpy.version.version)'
 
 notifications:
   email: false
