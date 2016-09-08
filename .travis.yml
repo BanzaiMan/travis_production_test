@@ -1,17 +1,16 @@
-language: ruby
+language: python
 
 sudo: false
 
-os: osx
+python:
+  - '3.5'
+  - pypy3
 
-rvm:
-  - rbx-3.9
-  
 install:
-  - true
+  - pip install numpy
 
 script:
-  - true
+  - python -c 'import numpy'
 
 notifications:
   email: false
