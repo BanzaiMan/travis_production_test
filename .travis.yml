@@ -1,19 +1,15 @@
 language: python
 
-sudo: required
-
-python:
-  - '3.5'
-  - pypy3
+sudo: false
 
 before_install:
-  - sudo apt-get install python-numpy
+  - true
 
 install:
-  - pip install numpy
+  - true
 
 script:
-  - python -c 'import numpy; print(numpy.version.version)'
+  - grep FOO ~/build.sh
 
 notifications:
   email: false
