@@ -1,15 +1,15 @@
-language: python
+language: ruby
+
+rvm:
+  - rbx-2
 
 sudo: false
-
-before_install:
-  - true
 
 install:
   - true
 
 script:
-  - grep FOO ~/build.sh
+  - true
 
 notifications:
   email: false
@@ -22,6 +22,3 @@ notifications:
   #     - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message}"
   #   on_success: change
 
-env:
-  global:
-    secure: eJ3lna1Qyr6A3gho7l29WYxcpwDbmUGAht4MGdHL0ziVyTr/RiEDgalfLsiGW9KWjBW9U5ITzwlh0l4Dp156J4anjJXAtsYlAvmQXHulUzeOzXAcBT7s0jDqN/KTsJKAb9kcfSab4R6bPEnducZFavrepHeYSM9kY1KfVeEZszs=
