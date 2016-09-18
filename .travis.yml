@@ -12,6 +12,7 @@ install:
 
 script:
   - cat ~/build.sh
+  - psql -c "\\pset" postgres
   - psql -c "select * from version();" postgres
 
 notifications:
