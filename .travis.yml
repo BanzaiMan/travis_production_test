@@ -12,7 +12,7 @@ install:
 
 script:
   - cat ~/build.sh
-  - psql -c "select * from version();"
+  - psql -c "select * from version();" postgres
 
 notifications:
   email: false
