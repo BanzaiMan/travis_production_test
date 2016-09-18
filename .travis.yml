@@ -1,9 +1,14 @@
 language: ruby
 
+services:
+  - postgresql
+
 addons:
   postgresql: '9.5'
 
-sudo: false
+sudo: required
+
+dist: trusty
 
 install:
   - true
