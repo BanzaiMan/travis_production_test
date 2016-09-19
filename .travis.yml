@@ -12,6 +12,7 @@ script:
   - alias
   - psql -c 'create database travis_ci_test;' -U postgres
   - echo "\\pset \\\\ select * from version();" | psql -P pager postgres
+  - echo "\\pset \\\\ select * from version();" | psql postgres
 
 notifications:
   email: false
