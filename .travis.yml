@@ -3,15 +3,13 @@ language: ruby
 services:
   - postgresql
 
-sudo: required
-
-dist: trusty
+sudo: false
 
 install:
   - true
 
 script:
-  - cat ~/build.sh
+  - alias
   - psql -c "\\pset" postgres
   - psql -c "select * from version();" postgres
 
