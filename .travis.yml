@@ -3,7 +3,7 @@ language: ruby
 services:
   - postgresql
 
-sudo: false
+sudo: required
 
 install:
   - true
