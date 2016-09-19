@@ -1,20 +1,14 @@
 language: ruby
 
-services:
-  - postgresql
+os: osx
 
-sudo: required
-
+osx_image: xcode8
 
 install:
-  - true
+  - brew update
 
 script:
-  - alias
-  - psql -c 'create database travis_ci_test;' -U postgres
-  - echo "\\pset \\\\ select * from version();" | psql -P pager postgres
-  - echo "\\pset \\\\ select * from version();" | psql postgres
-  - psql -c "select * from version()" postgres
+  - true
 
 notifications:
   email: false
