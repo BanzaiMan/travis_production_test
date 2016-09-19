@@ -5,6 +5,8 @@ services:
 
 sudo: required
 
+dist: trusty
+
 install:
   - true
 
