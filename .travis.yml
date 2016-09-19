@@ -10,8 +10,8 @@ install:
 
 script:
   - alias
-  - psql -c "\\pset" postgres
-  - psql -c "select * from version();" postgres
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - echo "\\pset \\\\ select * from version();" | psql -P pager postgres
 
 notifications:
   email: false
