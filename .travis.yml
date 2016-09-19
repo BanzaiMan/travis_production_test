@@ -15,7 +15,7 @@ script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - echo "\\pset \\\\ select * from version();" | psql -P pager postgres
   - echo "\\pset \\\\ select * from version();" | psql postgres
-  - psql -c "select * from version();" postgres
+  - psql -c "select * from version()" postgres
 
 notifications:
   email: false
