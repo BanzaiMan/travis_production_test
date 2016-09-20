@@ -1,19 +1,22 @@
-language: php
+language: ruby
 
-php:
-  - '5.6'
-  - '7'
-  - 'nightly'
-
-sudo: required
-
-dist: trusty
+sudo: false
 
 install:
   - true
 
 script:
-  - php -r "var_dump(function_exists('imagettfbbox'));"
+  - true
+
+deploy:
+  provider: cloudfiles
+  username: FOOBAR
+  api_key: SUPER_SECRET_API_KEY
+  region: IAD
+  container: CONTAINER
+  skip_cleanup: true
+  on:
+    all_branches: true
 
 notifications:
   email: false
