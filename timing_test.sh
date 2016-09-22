@@ -27,5 +27,11 @@ function travis_nanoseconds() {
 }
 
 travis_time_start
+echo "Sleeping for 5 seconds"
 sleep 5
+travis_time_finish
+
+travis_time_start
+echo "Sleeping for 10 more seconds"
+sleep 10
 travis_time_finish
