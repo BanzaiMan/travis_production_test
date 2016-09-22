@@ -2,11 +2,15 @@ language: ruby
 
 sudo: false
 
+addons:
+  jwt:
+    - secure: "MnrMhWSpgdNQ6FAtaHaLvey8FR2gaLxXrkET0iDPpJ/O1mwZihVniE9/TBToU/Q1qSr+ujqgxobGJj8CgMsWGYZxdHwVDWGWqyvwE+TZ9vpCdG5dq7CZsUo9P6Ou35OIIfsTazDVSxyvwwtaR5nUPuBFrk7qOo6nYlXU0jFQNbQ="
+
 install:
   - true
 
 script:
-  - ./timing_test.sh
+  - env | grep SAUCE
 
 notifications:
   email: false
