@@ -1,13 +1,12 @@
-language: objective-c
+language: ruby
 
-osx_image: xcode8
+sudo: false
 
 install:
   - true
 
 script:
-  - gem uninstall cocoapods -a
-  - gem install --no-ri --no-rdoc cocoapods -v '1.1.0.rc.2'
+  - ./timing_test.sh
 
 notifications:
   email: false
