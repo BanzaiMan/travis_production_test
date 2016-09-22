@@ -1,14 +1,13 @@
-language: php
+language: objective-c
 
-sudo: required
-
-dist: trusty
+osx_image: xcode8
 
 install:
   - true
 
 script:
-  - ls -lad node_modules || true
+  - gem uninstall cocoapods -a
+  - gem install --no-ri --no-rdoc cocoapods -v '1.1.0.rc.2'
 
 notifications:
   email: false
