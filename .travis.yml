@@ -1,8 +1,10 @@
 language: ruby
 
-rvm: jruby-1.7.17
+rvm: '2.1'
 
-sudo: false
+sudo: required
+
+dist: trusty
 
 script:
   - true
