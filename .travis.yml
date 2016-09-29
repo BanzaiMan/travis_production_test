@@ -4,6 +4,11 @@ rvm: jruby-9.0.4.0
 
 sudo: required
 
+addons:
+  apt:
+    packages:
+      - haveged
+
 matrix:
   include:
     - dist: precise
