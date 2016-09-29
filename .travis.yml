@@ -1,23 +1,12 @@
-language: ruby
+language: node_js
 
-rvm: jruby-9.0.4.0
+sudo: false
 
-sudo: required
-
-addons:
-  apt:
-    packages:
-      - haveged
-
-matrix:
-  include:
-    - dist: precise
-      env: RELEASE=precise
-    - dist: trusty
-      env: RELEASE=trusty
+install:
+  - true
 
 script:
-  - true
+  - npm config ls -l
 
 notifications:
   email: false
