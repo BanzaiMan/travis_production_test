@@ -2,12 +2,10 @@ language: ruby
 
 rvm: '2.1'
 
-sudo: required
-
-dist: trusty
+sudo: false
 
 script:
-  - true
+  - env | sort | grep TRAVIS_
 
 notifications:
   email: false
