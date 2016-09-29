@@ -1,11 +1,18 @@
 language: ruby
 
-rvm: '2.1'
+rvm: jruby-9.0.4.0
 
-sudo: false
+sudo: required
+
+matrix:
+  include:
+    - dist: precise
+      env: RELEASE=precise
+    - dist: trusty
+      env: RELEASE=trusty
 
 script:
-  - env | sort | grep TRAVIS_
+  - true
 
 notifications:
   email: false
