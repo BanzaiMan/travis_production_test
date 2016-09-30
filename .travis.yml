@@ -7,7 +7,7 @@ install:
 
 script:
   - node --version
-  - nvm use
+  - nvm install
   - node --version
 
 notifications:
