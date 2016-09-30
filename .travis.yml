@@ -1,12 +1,17 @@
-language: node_js
+language: ruby
 
-sudo: false
+os: osx
+
+osx_image: xcode8
+
+before_install:
+  - rvm get head
 
 install:
   - true
 
 script:
-  - npm config ls -l
+  - true
 
 notifications:
   email: false
