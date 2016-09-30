@@ -1,17 +1,14 @@
 language: ruby
 
-os: osx
-
-osx_image: xcode8
-
-before_install:
-  - rvm get stable
+sudo: false
 
 install:
   - true
 
 script:
-  - true
+  - node --version
+  - nvm use
+  - node --version
 
 notifications:
   email: false
