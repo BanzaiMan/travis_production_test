@@ -1,4 +1,7 @@
-language: ruby
+language: php
+
+php:
+  - hhvm-nightly
 
 sudo: false
 
@@ -6,9 +9,7 @@ install:
   - true
 
 script:
-  - node --version
-  - nvm install
-  - node --version
+  - cat ~/build.sh
 
 notifications:
   email: false
