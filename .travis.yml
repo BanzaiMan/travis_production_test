@@ -3,7 +3,9 @@ language: php
 php:
   - hhvm-nightly
 
-sudo: false
+sudo: required
+
+dist: trusty
 
 install:
   - true
