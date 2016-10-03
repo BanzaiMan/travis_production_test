@@ -1,9 +1,6 @@
-language: ruby
+language: java
 
 sudo: false
-
-jdk:
-  - oraclejdk8
 
 addons:
   apt:
@@ -14,6 +11,7 @@ install:
   - true
 
 script:
+  - jdk_switcher use oraclejdk8
   - java -version
 
 notifications:
