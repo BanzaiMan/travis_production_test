@@ -1,20 +1,23 @@
-language: php
+language: ruby
 
-sudo: required
+sudo: false
 
-dist:
-  - trusty
-
-php:
-  - '7.0'
-  - nightly
-  - hhvm-nightly
-
+env:
+  global:
+    - DEPLOY_VAR=FOO
 install:
   - true
 
 script:
   - true
+
+deploy:
+  provider: script
+  script: deploy.sh
+  branch:
+    only:
+      - master
+      - default
 
 notifications:
   email: false
