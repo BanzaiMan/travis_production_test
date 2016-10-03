@@ -2,22 +2,16 @@ language: ruby
 
 sudo: false
 
-env:
-  global:
-    - DEPLOY_VAR=FOO
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+
 install:
   - true
 
 script:
-  - true
-
-deploy:
-  provider: script
-  script: ./deploy.sh
-  on:
-    branch:
-      - master
-      - default
+  - java -version
 
 notifications:
   email: false
