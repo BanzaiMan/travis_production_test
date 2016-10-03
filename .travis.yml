@@ -14,8 +14,8 @@ script:
 deploy:
   provider: script
   script: deploy.sh
-  branch:
-    only:
+  on:
+    branch:
       - master
       - default
 
