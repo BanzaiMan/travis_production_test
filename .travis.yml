@@ -1,18 +1,13 @@
-language: java
+language: ruby
 
 sudo: false
-
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
 
 install:
   - true
 
 script:
-  - jdk_switcher use oraclejdk8
-  - java -version
+  - sleep 100
+  - false
 
 notifications:
   email: false
