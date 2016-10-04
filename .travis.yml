@@ -1,6 +1,13 @@
-language: ruby
+language: php
 
-sudo: false
+sudo: required
+
+dist: trusty
+
+php:
+  - hhvm-nightly
+  - hhvm
+  - hhvm-3.12
 
 install:
   - true
