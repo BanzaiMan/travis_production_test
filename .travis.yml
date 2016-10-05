@@ -1,11 +1,8 @@
-language: java
+language: erlang
 
-jdk:
-  - oraclejdk8
+otp_release: '19.1'
 
-sudo: required
-
-dist: trusty
+sudo: false
 
 install:
   - true
