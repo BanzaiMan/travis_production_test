@@ -16,7 +16,7 @@ addons:
 install:
   - true
 
-befoer_script:
+before_script:
   - psql -U postgres -c "create extension postgis"
 
 script:
