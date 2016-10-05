@@ -1,11 +1,23 @@
-language: erlang
+language: ruby
 
-otp_release: '19.1'
+sudo: required
 
-sudo: false
+dist: trusty
+
+addons:
+  postgresql: '9.4'
+  apt:
+    packages:
+      - cmake
+      - postgresql-9.4-postgis-2.1
+      - pgadmin3
+      - postgresql-contrib
 
 install:
   - true
+
+befoer_script:
+  - psql -U postgres -c "create extension postgis"
 
 script:
   - true
