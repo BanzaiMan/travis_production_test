@@ -20,6 +20,7 @@ deploy:
     region: 'us-east-1'
     on:
       branch: test-s3-deployment
+      condition: $TRAVIS_EVENT_TYPE = cron
     skip_cleanup: true
     detect_encoding: true
   #  cache_control: "max-age=31536000"
