@@ -13,9 +13,9 @@ script:
 deploy:
   - provider: s3
     access_key_id:
-      secure: "Tb9p1L5gKyVudSxs4nGatZRECpC/Fu3HTHyEDDBjQF08nao+q4lqe3ulpY1Zz+wFDuEAF+uQ1/vFkeWoQMl/wWaka7H62bkuhPX+65yC8ich0OhHkH0zmL5yhp1EP0tX9MusDXQTupRuUZg+Dsy3JC6GOEXad9bTUMyonPezTsA="
+      secure: "BZ5sn7H0WGzLk0HA2QBWGoE6hSgq2ua3ukQSMQlA4JXkSGpBXY4HjMKp4xi9lrgmRYh8s+i5ewTxrNDtKvsUV8KqdWGKrsAs6nV2Lc/8i0khxpy3hmwRQl7SRsHE57Txf6oCbfUVmPgnubw8w2R7VRCu9enWwqzeeL06rFm5QNM="
     secret_access_key:
-      secure: "FSgPYPsWd6mz2/m3+47dfemFcpFZBy7+Ci+4b9UjbNq1Lx1reV3Y2zvzbd59iii6kNOreh3QTVtsNAHHikenIsql2kBkSzejqP3ywYwc4D6WB/jBn8iEmmns7GuBgNTLR6ot+bTZBIte0TNlaa9gOS389aRTha0wCGaDZ791fwU="
+      secure: "Ld2IKkprljIQA9VexEWPG5b3bcvN6vpfC7anBByHRP805ssnMT+LpZAzb1SqrfhcmzVwRxEGVtGxDkcKCZeviVLZY72eWPipqg037bpvTi+cl8S4LoImTp/YKDHUON+/x/H3NbPatLGzLmtv1quFNu7KgHG+HFr9RKbOflIgDrc="
     bucket: "hiro.test.bucket.com"
     region: 'us-east-1'
     on:
