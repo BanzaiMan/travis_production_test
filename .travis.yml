@@ -1,14 +1,17 @@
-language: csharp
+language: python
 
-sudo: required
+python:
+  - nightly
+  - 3.6-dev
+  - 3.5-dev
 
-dist: trusty
+sudo: false
 
 install:
   - true
 
 script:
-  - rvm use 2.3.0 --binary --fuzzy --install
+  - true
 
 notifications:
   email: false
