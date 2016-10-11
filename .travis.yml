@@ -24,7 +24,7 @@ install:
   - true
 
 script:
-  - env | egrep "excludegroup|xdebug|lint"
+  - egrep "excludegroup|xdebug|lint" ~/build.sh
 
 notifications:
   email: false
