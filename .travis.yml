@@ -6,7 +6,10 @@ install:
   - true
 
 script:
-  - nc smtp.mandrillapp.com 587
+  - true
+
+addons:
+  srcclr: true
 
 notifications:
   email: false
