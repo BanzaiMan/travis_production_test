@@ -9,7 +9,8 @@ script:
   - true
 
 addons:
-  srcclr: true
+  srcclr:
+    debug: true
 
 notifications:
   email: false
