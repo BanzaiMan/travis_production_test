@@ -8,6 +8,10 @@ install:
 script:
   - true
 
+env:
+  global:
+    - SUPER_DUPER_SECRET=yay
+
 addons:
   srcclr:
     debug: true
