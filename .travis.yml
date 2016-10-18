@@ -5,16 +5,14 @@ sudo: false
 install:
   - true
 
+before_script: false
+
 script:
   - true
 
 env:
   global:
     - SUPER_DUPER_SECRET=yay
-
-addons:
-  srcclr:
-    debug: true
 
 notifications:
   email: false
