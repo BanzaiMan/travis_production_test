@@ -5,7 +5,7 @@ sudo: false
 install:
   - true
 
-before_script: false
+before_script: "false"
 
 script:
   - true
