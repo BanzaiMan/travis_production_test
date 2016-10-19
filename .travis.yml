@@ -11,6 +11,8 @@ script:
 deploy:
   provider: script
   script: echo true
+  on:
+    all_branches: true
 
 notifications:
   email: false
