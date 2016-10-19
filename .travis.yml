@@ -1,20 +1,16 @@
-language: objective-c
+language: ruby
 
-osx_image: xcode6.4
+rvm: '2.2'
 
-sudo: false
+sudo: required
+
+dist: trusty
 
 install:
-  - true
+  - gem install rugged
 
 script:
   - true
-
-deploy:
-  provider: script
-  script: echo true
-  on:
-    all_branches: true
 
 notifications:
   email: false
