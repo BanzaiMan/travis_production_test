@@ -1,18 +1,16 @@
-language: ruby
+language: objective-c
 
 sudo: false
 
 install:
   - true
 
-before_script:
-  - false
+script:
+  - true
 
-script: false
-
-env:
-  global:
-    - SUPER_DUPER_SECRET=yay
+deploy:
+  provider: script
+  script: echo true
 
 notifications:
   email: false
