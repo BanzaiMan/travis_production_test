@@ -1,13 +1,14 @@
 language: ruby
 
-rvm: '2.2'
+sudo: false
 
-sudo: required
-
-dist: trusty
+addons:
+  apt:
+    packages:
+      - ca-certificates
 
 install:
-  - gem install rugged
+  - curl -vL -O "https://www.kernel.org/pub/software/scm/git/git-2.2.2.tar.gz"
 
 script:
   - true
