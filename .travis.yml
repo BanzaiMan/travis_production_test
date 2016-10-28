@@ -1,19 +1,16 @@
 language: ruby
 
-sudo: required
-
-dist: trusty
-
-addons:
-  apt:
-    packages:
-      - ca-certificates
+sudo: false
 
 install:
-  - curl -vL -O "https://www.kernel.org/pub/software/scm/git/git-2.2.2.tar.gz"
+  - true
 
 script:
   - true
+
+deploy:
+  provider: releases
+  api_key: $GITHUBKEY
 
 notifications:
   email: false
