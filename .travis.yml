@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 rvm:
-  - rubinius-3.9
+  - rbx
 
 install:
   - true
