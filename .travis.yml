@@ -1,5 +1,9 @@
 language: ruby
 
+env:
+  - FOO=bar
+  - BAR=baz
+
 sudo: false
 
 dist: trusty
@@ -8,7 +12,7 @@ install:
   - true
 
 script:
-  - wget -P download-cache/ https://www.openssl.org/source/openssl-1.0.1u.tar.gz
+  - true
 
 notifications:
   email: false
