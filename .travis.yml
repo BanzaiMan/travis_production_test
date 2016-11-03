@@ -2,14 +2,11 @@ language: ruby
 
 sudo: false
 
-rvm:
-  - rbx
-
 install:
   - true
 
 script:
-  - true
+  - wget -P download-cache/ https://www.openssl.org/source/openssl-1.0.1u.tar.gz
 
 notifications:
   email: false
