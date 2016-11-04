@@ -10,7 +10,7 @@ install:
   - true
 
 script:
-  - true
+  - COLUMNS=132 dpkg -l
 
 notifications:
   email: false
