@@ -1,9 +1,14 @@
 language: python
 
 python:
-  - '3.6'
+  - '3.6-dev'
 
 sudo: false
+
+services:
+  - redis-server
+
+dist: trusty
 
 install:
   - true
