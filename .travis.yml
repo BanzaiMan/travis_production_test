@@ -5,16 +5,13 @@ python:
 
 sudo: false
 
-services:
-  - redis-server
-
 dist: trusty
 
 install:
   - true
 
 script:
-  - true
+  - ls -dl $HOME
 
 notifications:
   email: false
