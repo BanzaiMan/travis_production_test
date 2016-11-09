@@ -14,7 +14,7 @@ script:
   - ls -dl $HOME
   - ls -la $HOME
   - wget https://s3.amazonaws.com/travis-python-archives/binaries/ubuntu/14.04/x86_64/python-3.4.tar.bz2
-  - tar xzvf python-3.4.tar.bz2 -C / || true
+  - tar xvf python-3.4.tar.bz2 -C / || true
   - ls -ld $HOME
   - ls -la $HOME
 
