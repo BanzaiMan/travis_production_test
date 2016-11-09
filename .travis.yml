@@ -12,7 +12,7 @@ install:
 
 script:
   - ls -dl $HOME
-  - ls -l $HOME
+  - ls -la $HOME
 
 notifications:
   email: false
