@@ -1,23 +1,19 @@
 language: python
 
 python:
-  - '3.5'
+  - '3.4.5'
 
 sudo: false
 
 dist: trusty
 
+cache: pip
+
 install:
   - true
 
 script:
-  - ls -dl $HOME
-  - ls -la $HOME
-  - wget https://s3.amazonaws.com/travis-python-archives/binaries/ubuntu/14.04/x86_64/python-3.4.tar.bz2
-  - tar xf python-3.4.tar.bz2 -C / || true
-  - ls -ld $HOME
-  - ls -la $HOME
-  - mkdir -p $HOME/.debug
+  - true
 
 notifications:
   email: false
