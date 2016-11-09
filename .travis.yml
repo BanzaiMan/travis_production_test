@@ -5,7 +5,7 @@ python:
   - '3.4'
   - '2.6'
 
-sudo: false
+sudo: required
 
 dist: trusty
 
