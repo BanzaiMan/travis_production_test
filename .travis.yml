@@ -1,6 +1,6 @@
 language: ruby
 
-sudo: required
+sudo: false
 
 dist: trusty
 
@@ -8,7 +8,9 @@ install:
   - true
 
 script:
-  - env | sort | egrep "USER|TERM"
+  - cat /etc/profile
+  - cat /etc/bash.bashrc
+  - ls -l /etc/profile.d
 
 notifications:
   email: false
