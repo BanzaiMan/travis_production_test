@@ -14,6 +14,9 @@ script:
   - cat $HOME/.bashrc
   - cat /etc/profile
   - cat /etc/bash.bashrc
+  - cat $HOME/.bash_profile || true
+  - cat $HOME/.bash_login || true
+  - cat $HOME/.profile  || true
   - ls -l /etc/profile.d
   - env | sort | egrep "USER|TERM" || true
 
