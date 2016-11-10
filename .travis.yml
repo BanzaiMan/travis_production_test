@@ -5,7 +5,7 @@ sudo: false
 dist: trusty
 
 before_install:
-  - source /etc/profile
+  - source /etc/profile; souce ~/.bashrc; source ~/.bash_profile; source ~/.profile || true
 
 install:
   - true
