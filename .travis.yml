@@ -1,8 +1,11 @@
 language: ruby
 
-sudo: required
+sudo: false
 
 dist: trusty
+
+before_install:
+  - source /etc/profile
 
 install:
   - true
@@ -11,6 +14,7 @@ script:
   - cat /etc/profile
   - cat /etc/bash.bashrc
   - ls -l /etc/profile.d
+  - env | sort | egrep "USER|TERM" || true
 
 notifications:
   email: false
