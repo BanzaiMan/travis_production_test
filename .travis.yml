@@ -19,6 +19,7 @@ script:
   - cat $HOME/.profile  || true
   - ls -l /etc/profile.d
   - env | sort | egrep "USER|TERM" || true
+  - echo $-
 
 notifications:
   email: false
