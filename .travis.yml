@@ -1,15 +1,13 @@
-language: python
+language: ruby
 
-python:
-  - '3.4.5'
-  - '3.4'
-  - '2.6'
-
-sudo: required
+sudo: false
 
 dist: trusty
 
-cache: pip
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
 
 install:
   - true
