@@ -2,16 +2,13 @@ language: ruby
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
+dist: trusty
 
 install:
   - true
 
 script:
-  - true
+  - env | sort | egrep "USER|TERM"
 
 notifications:
   email: false
