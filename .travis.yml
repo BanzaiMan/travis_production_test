@@ -18,7 +18,7 @@ script:
   - cat $HOME/.bash_login || true
   - cat $HOME/.profile  || true
   - ls -l /etc/profile.d
-  - env | sort | egrep "USER|TERM" || true
+  - env | sort 
   - echo $-
   - echo $0
 
