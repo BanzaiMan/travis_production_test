@@ -11,6 +11,7 @@ install:
   - true
 
 script:
+  - cat $HOME/.bashrc
   - cat /etc/profile
   - cat /etc/bash.bashrc
   - ls -l /etc/profile.d
