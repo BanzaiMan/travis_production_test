@@ -1,26 +1,13 @@
 language: ruby
 
-sudo: required
-
-dist: trusty
-
-before_install:
-  - source /etc/profile; souce ~/.bashrc; source ~/.bash_profile; source ~/.profile || true
+sudo: false
 
 install:
-  - true
+  - echo "echo \$TERM" > echo.sh
+  - chmod +x ./echo.sh
 
 script:
-  - cat $HOME/.bashrc
-  - cat /etc/profile
-  - cat /etc/bash.bashrc
-  - cat $HOME/.bash_profile || true
-  - cat $HOME/.bash_login || true
-  - cat $HOME/.profile  || true
-  - ls -l /etc/profile.d
-  - env | sort 
-  - echo $-
-  - echo $0
+  - ./echo.sh
 
 notifications:
   email: false
