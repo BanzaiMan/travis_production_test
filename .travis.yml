@@ -1,13 +1,12 @@
-language: ruby
+language: objective-c
 
-sudo: false
+osx_image: xcode8.1sneakpeek
 
 install:
-  - echo "echo \$TERM" > echo.sh
-  - chmod +x ./echo.sh
+  - sw_vers
 
 script:
-  - ./echo.sh
+  - true
 
 notifications:
   email: false
