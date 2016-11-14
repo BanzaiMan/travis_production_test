@@ -1,9 +1,20 @@
-language: objective-c
+language: java
 
-osx_image: xcode8.1sneakpeek
+jdk:
+  - oraclejdk8
+
+sudo: false
+
+dist: trusty
+
+addons:
+  apt:
+    packages:
+      - oracle-java8-set-default
+      - oracle-java8-installer
 
 install:
-  - sw_vers
+  - true
 
 script:
   - true
