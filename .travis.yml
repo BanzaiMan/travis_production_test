@@ -1,7 +1,4 @@
-language: java
-
-jdk:
-  - oraclejdk8
+language: ruby
 
 sudo: required
 
@@ -11,7 +8,7 @@ install:
   - true
 
 script:
-  - true
+  - sudo apt-get update
 
 notifications:
   email: false
