@@ -16,6 +16,8 @@ script:
 matrix:
   include:
     - sudo: required
+      dist: precise
+    - sudo: required
       dist: trusty
     - sudo: false
       dist: trusty
