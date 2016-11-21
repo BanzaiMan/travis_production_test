@@ -2,14 +2,25 @@ language: ruby
 
 sudo: required
 
-dist: trusty
+dist: precise
+
+addons:
+  postgresql: "9.5"
 
 install:
   - true
 
 script:
-  - echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" | sudo tee -a /etc/apt/sources.list.d/docker.list
-  - sudo apt-get update
+  - psql "postgresql://localhost:5432/postgres?sslmode=disable" -c "show server_version"
+
+matrix:
+  include:
+    - sudo: required
+      dist: trusty
+    - sudo: false
+      dist: trusty
+    - sudo: false
+      dist: trusty
 
 notifications:
   email: false
