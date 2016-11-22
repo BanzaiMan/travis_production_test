@@ -6,12 +6,21 @@ install:
   - true
 
 script:
-  - |
-    if [[ -z "$(command -v gpg)" ]]; then
-      export YARN_GPG=no
-    fi
   - "curl -o- -L https://yarnpkg.com/install.sh | bash"
 
+matrix:
+  include:
+    - osx_image: xcode8.2
+    - osx_image: xcode8.1
+    - osx_image: xcode8
+    - osx_image: xcode7.3 # default
+    - osx_image: xcode7.2
+    - osx_image: xcode7.1
+    - osx_image: xcode7
+    - osx_image: xcode6.4
+    - osx_image: beta-xcode6.3
+    - osx_image: beta-xcode6.2
+    - osx_image: beta-xcode6.1
 notifications:
   email: false
   # webhooks: http://requestb.in/16le4he1
