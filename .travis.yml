@@ -1,28 +1,16 @@
-language: ruby
+language: node_js
 
-sudo: required
-
-dist: precise
-
-addons:
-  postgresql: "9.4"
+os: osx
 
 install:
   - true
 
 script:
-  - psql "postgresql://localhost:5432/postgres?sslmode=disable" -c "show server_version"
-
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-    - sudo: required
-      dist: trusty
-    - sudo: false
-      dist: trusty
-    - sudo: false
-      dist: trusty
+  - |
+    if [[ -z "$(command -v gpg)" ]]; then
+      export YARN_GPG=no
+    fi
+  - "curl -o- -L https://yarnpkg.com/install.sh | bash"
 
 notifications:
   email: false
