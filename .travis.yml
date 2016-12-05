@@ -5,16 +5,12 @@ sudo: false
 rvm:
   - '2.2'
 
-matrix:
-  include:
-    - language: node_js
-      node_js: '6'
-
 install:
   - true
 
 script:
-  - true
+  - __dots() { while true ; do echo -en "\a" ; sleep 30 ; done } ; __dots &
+  - sleep 660 # 11 minutes
 
 notifications:
   email: false
