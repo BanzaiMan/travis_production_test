@@ -1,14 +1,16 @@
-language: android
+language: node_js
 
-sudo: required
+sudo: false
 
 dist: precise
+
+node_js: lts
 
 install:
   - true
 
 script:
-  - curl -IL https://plugins.gradle.org/api/gradle/2.8/plugin/use/de.lemona.gradle/0.0.7
+  - true
 
 notifications:
   email: false
