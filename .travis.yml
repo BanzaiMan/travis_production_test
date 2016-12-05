@@ -4,7 +4,7 @@ sudo: false
 
 dist: precise
 
-node_js: lts
+node_js: 'lts/*'
 
 install:
   - true
