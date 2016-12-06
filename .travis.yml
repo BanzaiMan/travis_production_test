@@ -5,16 +5,7 @@ sudo: required
 dist: trusty
 
 addons:
-  apt:
-    packages:
-      - libcurl3
-      - libcurl3-gnutls
-      - libcurl4-openssl-dev
-      - xvfb
-      - chromium-browser
-      - libgmp3-dev
-      - imagemagick
-      - libmagickwand-dev
+  mariadb: '10.1'
 
 rvm:
   - '2.2'
@@ -23,12 +14,10 @@ install:
   - true
 
 before_install:
-  - sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-5.6 mysql-client-core-5.6
-  - sudo apt-get install mysql-client-5.5 mysql-server-5.5 mysql-client-core-5.5 || sudo rm -f /var/lib/mysql/debian-*.flag && sudo apt-get -f install
-  - sudo service mysql restart
+  - mysql --host localhost --user root --execute "CREATE TABLE FOOBAR;"
 
 script:
-  - mysql -e "SHOW VARIABLES LIKE \"%version%\";"
+  - mysql --host localhost --user root -e "SHOW VARIABLES LIKE \"%version%\";"
 
 notifications:
   email: false
