@@ -7,12 +7,6 @@ dist: trusty
 addons:
   apt:
     packages:
-      - mysql-client
-      - mysql-client-5.5
-      - libmysqlclient-dev
-      - mysql-server
-      - mysql-server-5.5
-      - mysql-server-core-5.5
       - libcurl3
       - libcurl3-gnutls
       - libcurl4-openssl-dev
@@ -27,6 +21,10 @@ rvm:
 
 install:
   - true
+
+before_install:
+  - sudo rm /var/lib/mysql/debian-*.flag
+  - sudo apt-get install mysql-client-5.5 mysql-server-5.5 libmysqlclient-dev
 
 script:
   - true
