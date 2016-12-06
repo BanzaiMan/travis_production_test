@@ -8,8 +8,10 @@ addons:
   apt:
     packages:
       - mysql-client
+      - mysql-client-5.5
       - libmysqlclient-dev
       - mysql-server
+      - mysql-server-5.5
       - libcurl3
       - libcurl3-gnutls
       - libcurl4-openssl-dev
