@@ -27,7 +27,7 @@ before_install:
   - sudo apt-get install mysql-client-5.5
 
 script:
-  - true
+  - mysql --version
 
 notifications:
   email: false
