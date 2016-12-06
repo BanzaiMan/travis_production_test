@@ -23,8 +23,8 @@ install:
   - true
 
 before_install:
-  - sudo rm -f /var/lib/mysql/debian-*.flag
-  - sudo apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install mysql-client-5.5 mysql-server-5.5 libmysqlclient-dev
+  - sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-5.6 mysql-client-core-5.6
+  - sudo apt-get install mysql-client-5.5
 
 script:
   - true
