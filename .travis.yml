@@ -1,6 +1,23 @@
 language: ruby
 
-sudo: false
+sudo: required
+
+dist: trusty
+
+addons:
+  apt:
+    packages:
+      - mysql-client
+      - libmysqlclient-dev
+      - mysql-server
+      - libcurl3
+      - libcurl3-gnutls
+      - libcurl4-openssl-dev
+      - xvfb
+      - chromium-browser
+      - libgmp3-dev
+      - imagemagick
+      - libmagickwand-dev
 
 rvm:
   - '2.2'
@@ -9,8 +26,7 @@ install:
   - true
 
 script:
-  - __dots() { while true ; do echo -en "\a" ; sleep 30 ; done } ; __dots &
-  - sleep 660 # 11 minutes
+  - true
 
 notifications:
   email: false
