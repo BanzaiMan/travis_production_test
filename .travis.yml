@@ -14,7 +14,7 @@ install:
   - true
 
 before_install:
-  - mysql --host localhost --user root --execute "CREATE TABLE FOOBAR;"
+  - mysql --host localhost --user root --execute "CREATE DATABASE FOOBAR;"
 
 script:
   - mysql --host localhost --user root -e "SHOW VARIABLES LIKE \"%version%\";"
