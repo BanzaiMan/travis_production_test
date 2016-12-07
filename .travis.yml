@@ -1,17 +1,19 @@
 language: ruby
 
-sudo: required
-
-dist: trusty
-
-rvm:
-  - jruby-1.7.26
+sudo: false
 
 install:
   - true
 
 script:
   - true
+
+deploy:
+  provider: script
+  script: echo foo
+  on:
+    branch:
+      - /default/
 
 notifications:
   email: false
