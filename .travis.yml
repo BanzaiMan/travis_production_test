@@ -13,7 +13,7 @@ deploy:
   script: echo foo
   on:
     branch:
-      - /default/
+      - default
 
 notifications:
   email: false
