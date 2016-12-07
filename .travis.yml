@@ -11,8 +11,8 @@ install:
   - true
 
 before_install:
-  - sudo service mysql start
-  - mysql --host localhost --user root --execute "CREATE DATABASE FOOBAR;"
+  - mysql --host localhost --user root --execute "CREATE DATABASE FOOBAR;" || true
+  - mysql --host '127.0.0.1' --user root --execute "CREATE DATABASE FOOBAR;" || true
 
 script:
   - mysql --host localhost --user root -e "SHOW VARIABLES LIKE \"%version%\";"
