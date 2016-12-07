@@ -4,31 +4,14 @@ sudo: required
 
 dist: trusty
 
-addons:
-  apt:
-    packages:
-      - libcurl3
-      - libcurl3-gnutls
-      - libcurl4-openssl-dev
-      - xvfb
-      - chromium-browser
-      - libgmp3-dev
-      - imagemagick
-      - libmagickwand-dev
-
 rvm:
-  - '2.2'
+  - jruby-1.7.26
 
 install:
   - true
 
-before_install:
-  - sudo apt-get purge mysql-server mysql-client mysql-common mysql-server-core-5.6 mysql-client-core-5.6
-  - sudo apt-get install mysql-client-5.5 mysql-server-5.5 mysql-client-core-5.5 || sudo rm -f /var/lib/mysql/debian-*.flag && sudo apt-get -f install
-  - sudo service mysql restart
-
 script:
-  - mysql -e "SHOW VARIABLES LIKE \"%version%\";"
+  - true
 
 notifications:
   email: false
