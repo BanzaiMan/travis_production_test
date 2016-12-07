@@ -4,9 +4,6 @@ sudo: required
 
 dist: trusty
 
-addons:
-  mariadb: '10.1'
-
 rvm:
   - '2.2'
 
@@ -14,6 +11,7 @@ install:
   - true
 
 before_install:
+  - sudo service mysql start
   - mysql --host localhost --user root --execute "CREATE DATABASE FOOBAR;"
 
 script:
