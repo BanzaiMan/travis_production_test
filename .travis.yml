@@ -1,5 +1,3 @@
-language: ruby
-
 sudo: false
 
 install:
@@ -7,13 +5,6 @@ install:
 
 script:
   - true
-
-deploy:
-  provider: script
-  script: echo foo
-  on:
-    branch:
-      - default
 
 notifications:
   email: false
