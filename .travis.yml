@@ -2,7 +2,7 @@ language: go
 
 sudo: required
 
-dist: trusty
+dist: precise
 
 go: '1.7'
 
