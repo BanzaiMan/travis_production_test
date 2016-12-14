@@ -1,16 +1,16 @@
-language: ruby
+language: go
 
-sudo: false
+sudo: required
 
-rvm:
-  - rbx-2
-  - 1.8.7
+dist: trusty
+
+go: '1.7'
 
 install:
   - true
 
 script:
-  - true
+  - echo $PATH
 
 notifications:
   email: false
