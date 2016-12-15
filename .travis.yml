@@ -2,9 +2,7 @@ language: ruby
 
 sudo: required
 
-dist: trusty
-
-go: '1.7'
+dist: precise
 
 install:
   - true
