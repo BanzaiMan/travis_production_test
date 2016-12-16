@@ -1,16 +1,14 @@
-language: ruby
+language: python
 
-os: osx
+sudo: false
 
+dist: precise
 
 install:
   - true
 
 script:
-  - gem update fastlane
-  - gem list fastlane
-  - sudo gem update fastlane
-  - sudo gem list fastlane
+  - curl -v --tlsv1.0 https://api.braintreegateway.com
 
 notifications:
   email: false
