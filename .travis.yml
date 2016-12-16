@@ -11,7 +11,7 @@ install:
   - true
 
 script:
-  - ls -l ~
+  - ls -la ~
 
 notifications:
   email: false
