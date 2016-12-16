@@ -8,7 +8,7 @@ install:
   - true
 
 script:
-  - curl -v --tlsv1.0 https://api.braintreegateway.com
+  - curl -v --tlsv1 https://api.braintreegateway.com
 
 notifications:
   email: false
