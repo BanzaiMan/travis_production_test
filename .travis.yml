@@ -2,7 +2,7 @@ language: php
 
 sudo: required
 
-dist: precise
+dist: trusty
 
 php:
   - '5.5'
@@ -13,6 +13,7 @@ install:
 script:
   - test -f /opt/jdk_switcher/jdk_switcher.sh && source /opt/jdk_switcher/jdk_switcher.sh
   - jdk_switcher use oraclejdk8
+  - java -version
 
 notifications:
   email: false
