@@ -1,14 +1,16 @@
 language: ruby
 
-sudo: required
+os: osx
 
-dist: precise
 
 install:
   - true
 
 script:
-  - git lfs track "*.psd"
+  - gem update fastlane
+  - gem list fastlane
+  - sudo gem update fastlane
+  - sudo gem list fastlane
 
 notifications:
   email: false
