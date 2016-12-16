@@ -1,4 +1,4 @@
-language: java
+language: php
 
 sudo: required
 
@@ -11,7 +11,8 @@ install:
   - true
 
 script:
-  - ls -la ~
+  - test -f /opt/jdk_switcher/jdk_switcher.sh && source /opt/jdk_switcher/jdk_switcher.sh
+  - jdk_switcher use oraclejdk8
 
 notifications:
   email: false
