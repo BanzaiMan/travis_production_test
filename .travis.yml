@@ -1,14 +1,17 @@
-language: python
+language: php
 
-sudo: false
+sudo: required
 
 dist: trusty
+
+php:
+  - '5.5'
 
 install:
   - true
 
 script:
-  - curl -v --tlsv1.0 https://api.braintreegateway.com
+  - ls -l ~
 
 notifications:
   email: false
