@@ -22,7 +22,7 @@ deploy:
   script: echo foo
   on:
     all_branches: true
-    condition: $FOO=0
+    condition: $FOO = 0
 
 notifications:
   email: false
