@@ -21,6 +21,7 @@ deploy:
   provider: script
   script: echo foo
   on:
+    all_branches: true
     condition: $FOO=0
 
 notifications:
