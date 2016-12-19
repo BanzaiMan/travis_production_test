@@ -1,8 +1,12 @@
 language: php
 
-sudo: required
+sudo: false
 
 dist: trusty
+
+env:
+  - FOO=0
+  - FOO=1
 
 php:
   - '5.5'
@@ -11,9 +15,13 @@ install:
   - true
 
 script:
-  - test -f /opt/jdk_switcher/jdk_switcher.sh && source /opt/jdk_switcher/jdk_switcher.sh
-  - jdk_switcher use oraclejdk8
-  - java -version
+  - true
+
+deploy:
+  provider: script
+  script: echo foo
+  on:
+    condition: $FOO=0
 
 notifications:
   email: false
