@@ -2,27 +2,16 @@ language: php
 
 sudo: false
 
+services:
+ - postgresql
+
 dist: trusty
-
-env:
-  - FOO=0
-  - FOO=1
-
-php:
-  - '5.5'
 
 install:
   - true
 
 script:
-  - true
-
-deploy:
-  provider: script
-  script: echo foo
-  on:
-    all_branches: true
-    condition: $FOO = 0
+  - ps -ef
 
 notifications:
   email: false
