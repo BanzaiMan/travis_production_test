@@ -12,6 +12,8 @@ install:
 
 script:
   - ps -ef
+  - mysql --version
+  - mysql -e "SHOW GLOBAL VARIABLES LIKE '%version%'"
 
 notifications:
   email: false
