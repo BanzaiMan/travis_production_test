@@ -18,7 +18,7 @@ script:
   - ps -ef
   - mysql --version
   - mysql -e "SHOW GLOBAL VARIABLES LIKE '%version%'"
-  - psql -c "SELECT version();"
+  - psql -c "SELECT version();" psql -U postgres
 
 notifications:
   email: false
