@@ -2,8 +2,12 @@ language: php
 
 sudo: false
 
+php:
+  - '5.5'
+  - hhvm
+
 services:
- - postgresql
+  - postgresql
 
 dist: trusty
 
@@ -14,6 +18,7 @@ script:
   - ps -ef
   - mysql --version
   - mysql -e "SHOW GLOBAL VARIABLES LIKE '%version%'"
+  - psql -c "SELECT version();"
 
 notifications:
   email: false
