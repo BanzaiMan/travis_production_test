@@ -1,13 +1,15 @@
-language: c
+language: php
 
 sudo: false
+
+dist: trusty
 
 install:
   - true
 
 script:
-  - gcc --version
-  - gcc -std=c11 -o a.out readdir.c
+  - mysql --execute "CREATE DATABASE FOOBAR"
+  - mysql --execute "CREATE TABLE t (c CHAR(20) CHARACTER SET utf8 COLLATE utf8_bin);" FOOBAR
 
 notifications:
   email: false
