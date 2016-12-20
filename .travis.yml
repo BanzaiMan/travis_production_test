@@ -1,9 +1,6 @@
-language: php
+language: ruby
 
 sudo: false
-
-php:
-  - '7'
 
 install: true
 
