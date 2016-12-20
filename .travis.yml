@@ -5,13 +5,9 @@ sudo: false
 php:
   - '7'
 
-install:
-  - true
+install: false
 
-script:
-  - ls -l /var/run/mysql*/mysqld.sock
-  - mysql --execute "CREATE DATABASE FOOBAR" --user root --password ""
-  - mysql --execute "CREATE TABLE t (c CHAR(20) CHARACTER SET utf8 COLLATE utf8_bin);" FOOBAR --user root --password ""
+script: false
 
 notifications:
   email: false
