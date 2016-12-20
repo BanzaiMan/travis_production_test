@@ -1,24 +1,13 @@
-language: php
+language: c
 
 sudo: false
-
-php:
-  - '5.5'
-  - hhvm
-
-services:
-  - postgresql
-
-dist: trusty
 
 install:
   - true
 
 script:
-  - ps -ef
-  - mysql --version
-  - mysql -e "SHOW GLOBAL VARIABLES LIKE '%version%'"
-  - psql -c "SELECT version();" -U postgres
+  - gcc --version
+  - gcc -std=c11 -o a.out readdir.c
 
 notifications:
   email: false
