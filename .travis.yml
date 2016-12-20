@@ -8,6 +8,7 @@ install:
   - true
 
 script:
+  - ls -l /var/run/mysql*/mysqld.sock
   - mysql --execute "CREATE DATABASE FOOBAR"
   - mysql --execute "CREATE TABLE t (c CHAR(20) CHARACTER SET utf8 COLLATE utf8_bin);" FOOBAR
 
