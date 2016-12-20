@@ -2,9 +2,9 @@ language: ruby
 
 sudo: false
 
-install: true
+install: false
 
-script: true
+script: false
 
 notifications:
   email: false
