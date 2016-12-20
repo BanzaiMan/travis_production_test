@@ -10,8 +10,8 @@ install:
 
 script:
   - ls -l /var/run/mysql*/mysqld.sock
-  - mysql --execute "CREATE DATABASE FOOBAR"
-  - mysql --execute "CREATE TABLE t (c CHAR(20) CHARACTER SET utf8 COLLATE utf8_bin);" FOOBAR
+  - mysql --execute "CREATE DATABASE FOOBAR" --user root --password ""
+  - mysql --execute "CREATE TABLE t (c CHAR(20) CHARACTER SET utf8 COLLATE utf8_bin);" FOOBAR --user root --password ""
 
 notifications:
   email: false
