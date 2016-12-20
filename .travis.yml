@@ -5,9 +5,9 @@ sudo: false
 php:
   - '7'
 
-install: false
+install: true
 
-script: false
+script: true
 
 notifications:
   email: false
