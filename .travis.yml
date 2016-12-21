@@ -5,6 +5,11 @@ python:
 
 sudo: false
 
+addons:
+  apt:
+    packages:
+      - openssl
+
 install:
   - true
 
