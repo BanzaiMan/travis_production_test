@@ -1,21 +1,12 @@
 language: python
 
-python:
-  - '2.7.13'
-
 sudo: false
-
-addons:
-  apt:
-    packages:
-      - openssl
-      - ca-certificates
 
 install:
   - true
 
 script: 
-  - python -c "import urllib2; print(urllib2.urlopen('https://tlstest.paypal.com/').read())"
+  - env | sort | grep TRAVIS
 
 notifications:
   email: false
