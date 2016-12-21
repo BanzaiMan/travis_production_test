@@ -1,15 +1,20 @@
 language: python
 
 python:
-  - '3.5'
+  - '2.7.13'
 
 sudo: false
+
+addons:
+  apt:
+    packages:
+      - openssl
 
 install:
   - true
 
 script: 
-  - python -c "import urllib.request; print(urllib.request.urlopen('https://tlstest.paypal.com/').read())"
+  - python -c "import urllib2; print(urllib2.urlopen('https://tlstest.paypal.com/').read())"
 
 notifications:
   email: false
