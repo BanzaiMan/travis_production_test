@@ -1,14 +1,9 @@
 language: python
 
 python:
-  - '2.7'
+  - '2.7.13'
 
 sudo: false
-
-addons:
-  apt:
-    packages:
-      - ca-certificates
 
 install:
   - true
