@@ -5,6 +5,8 @@ python:
 
 sudo: false
 
+dist: trusty
+
 install:
   - true
 
