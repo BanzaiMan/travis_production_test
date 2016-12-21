@@ -1,16 +1,12 @@
 language: python
 
-sudo: required
-
-before_install:
-  - rvm get stable --auto-dotfiles
-  - rvm install 2.1.10
+sudo: false
 
 install:
   - true
 
 script: 
-  - true
+  - env | grep PAGER || true
 
 notifications:
   email: false
