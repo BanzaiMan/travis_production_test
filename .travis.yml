@@ -1,12 +1,16 @@
 language: python
 
-sudo: false
+sudo: required
+
+before_install:
+  - rvm get stable --auto-dotfiles
+  - rvm install 2.1.10
 
 install:
   - true
 
 script: 
-  - env | sort | grep TRAVIS
+  - true
 
 notifications:
   email: false
