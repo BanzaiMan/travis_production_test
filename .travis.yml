@@ -5,7 +5,10 @@ python:
 
 sudo: false
 
-dist: trusty
+addons:
+  apt:
+    packages:
+      - ca-certificates
 
 install:
   - true
