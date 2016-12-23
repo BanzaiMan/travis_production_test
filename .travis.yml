@@ -1,12 +1,17 @@
 language: python
 
-sudo: required
+sudo: false
+
+dist: trusty
+
+python:
+  - '3.6'
 
 install:
   - true
 
 script: 
-  - env | grep PAGER || true
+  - true
 
 notifications:
   email: false
