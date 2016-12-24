@@ -1,11 +1,11 @@
-language: python
+language: ruby
 
 sudo: false
 
 dist: trusty
 
-python:
-  - '3.6'
+rvm:
+  - '2.4.0'
 
 install:
   - true
