@@ -4,6 +4,10 @@ sudo: false
 
 dist: trusty
 
+os:
+  - linux
+  - osx
+
 rvm:
   - '2.4.0'
 
