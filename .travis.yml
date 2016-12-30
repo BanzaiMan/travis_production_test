@@ -6,11 +6,8 @@ install:
   - true
 
 script:
-  - |
-    if [[ -z "$(command -v gpg)" ]]; then
-      export YARN_GPG=no
-    fi
-  - "curl -o- -L https://yarnpkg.com/install.sh | bash"
+  - brew install couchdb
+  - couchdb
 
 notifications:
   email: false
