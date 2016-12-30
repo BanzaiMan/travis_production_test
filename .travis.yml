@@ -7,6 +7,7 @@ install:
 
 script:
   - brew install couchdb
+  - ls -l /usr/local/etc/couchdb || true
   - couchdb
 
 notifications:
