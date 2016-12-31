@@ -2,20 +2,17 @@ language: ruby
 
 sudo: false
 
-dist: trusty
-
-os:
-  - linux
-  - osx
-
-rvm:
-  - '2.4.0'
-
 install:
   - true
 
 script: 
   - true
+
+deploy:
+  provider: script
+  script: false
+  on:
+    all_branches: true
 
 notifications:
   email: false
