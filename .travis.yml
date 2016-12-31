@@ -1,21 +1,12 @@
 language: ruby
 
-sudo: false
-
-dist: trusty
-
-os:
-  - linux
-  - osx
-
-rvm:
-  - '2.4.0'
+sudo: required
 
 install:
   - true
 
 script: 
-  - true
+  - curl -vIL https://coveralls.io/api/v1/jobs 
 
 notifications:
   email: false
