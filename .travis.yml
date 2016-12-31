@@ -1,4 +1,7 @@
-language: ruby
+language: python
+
+python:
+  - '3.6'
 
 sudo: false
 
@@ -7,12 +10,6 @@ install:
 
 script: 
   - true
-
-deploy:
-  provider: script
-  script: "false"
-  on:
-    all_branches: true
 
 notifications:
   email: false
