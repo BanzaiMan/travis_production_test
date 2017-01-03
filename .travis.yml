@@ -1,14 +1,21 @@
-language: go
+language: ruby
 
-go:
-  - 1.6.x
+os: osx
 
-sudo: false
+osx_image: xcode8.1
+
+rvm:
+  - '2.3.3'
+  - '2.2.6'
+
+env:
+  global:
+    - PAGER=less
 
 install:
   - true
 
-script: 
+script:
   - true
 
 notifications:
@@ -21,4 +28,3 @@ notifications:
   #  template:
   #    - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
   #  on_success: always
-
