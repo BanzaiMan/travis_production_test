@@ -15,7 +15,7 @@ install:
   - true
 
 script:
-  - true
+  - bash echo.sh
 
 notifications:
   email: false
