@@ -16,6 +16,8 @@ deploy:
   provider: gae
   edge:
     branch: gae-python-2.7
+  on:
+    all_branches: true
 
 notifications:
   email: false
