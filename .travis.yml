@@ -1,15 +1,6 @@
-language: objective-c
+language: ruby
 
-osx_image: xcode8.1
-
-matrix:
-  include:
-    - language: android
-      sudo: false
-
-env:
-  global:
-    - PAGER=less
+sudo: false
 
 install:
   - true
