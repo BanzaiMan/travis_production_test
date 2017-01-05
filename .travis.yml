@@ -1,14 +1,21 @@
-language: ruby
+language: python
+
+python: '3.5'
 
 sudo: false
 
-dist: trusty
+dist: precise
 
 install:
   - true
 
 script:
-  - bash echo.sh
+  - true
+
+deploy:
+  provider: gae
+  edge:
+    branch: gae-python-2.7
 
 notifications:
   email: false
