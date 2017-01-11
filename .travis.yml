@@ -1,20 +1,11 @@
-language: python
-
-python:
-  - '3.5.0'
-  - '3.4'
-
-sudo: false
-
-dist: precise
+language: objective-c
+osx_image: xcode8.2
 
 install:
   - true
 
 script:
-  - echo $PATH
-  - python3-config --includes
-  - which python3-config
+  - true
 
 notifications:
   email: false
