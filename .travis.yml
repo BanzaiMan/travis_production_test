@@ -1,7 +1,6 @@
 language: python
 
 python:
-  - '3.5.3'
   - '3.5.0'
   - '3.4'
 
@@ -13,6 +12,7 @@ install:
   - true
 
 script:
+  - echo $PATH
   - python3-config --includes
   - which python3-config
 
