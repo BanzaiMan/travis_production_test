@@ -1,23 +1,17 @@
-language: python
+language: ruby
 
-python: '2.7'
+rvm:
+  - jruby-9.1.5
 
 sudo: false
 
-dist: precise
+dist: trusty
 
 install:
   - true
 
 script:
   - true
-
-deploy:
-  provider: gae
-  edge:
-    branch: gae-python-2.7
-  on:
-    all_branches: true
 
 notifications:
   email: false
