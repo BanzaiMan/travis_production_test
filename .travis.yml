@@ -6,10 +6,10 @@ sudo: false
 env:
   global:
   - FOO=bar
-matrix:
-  - SCRIPT=lint
-  - SCRIPT=test
-  - E2Eweb=true
+  matrix:
+    - SCRIPT=lint
+    - SCRIPT=test
+    - E2Eweb=true
 
 install:
   - true
