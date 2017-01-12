@@ -2,10 +2,10 @@ language: objective-c
 osx_image: xcode8.2
 
 install:
-  - gem install cocoapods --pre
+  - true
 
 script:
-  - true
+  - sw_vers
 
 notifications:
   email: false
