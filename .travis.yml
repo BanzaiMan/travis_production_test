@@ -1,19 +1,21 @@
-language: php
+language: node_js
 
-php:
-  - '5.5'
-  - '5.6'
-  - '7'
+node_js: 6
 
 sudo: false
 
-dist: trusty
+matrix:
+  include:
+    - os: linux
+      env: TARGET="linux"
+  exlcude:
+    - node_js: '0.10'
 
 install:
   - true
 
 script:
-  - php ssl.php
+  - true
 
 notifications:
   email: false
