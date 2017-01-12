@@ -1,15 +1,15 @@
 language: node_js
 
-node_js: 6
-
 sudo: false
 
+
+env:
+  global:
+  - FOO=bar
 matrix:
-  include:
-    - os: linux
-      env: TARGET="linux"
-  exlcude:
-    - node_js: '0.10'
+  - SCRIPT=lint
+  - SCRIPT=test
+  - E2Eweb=true
 
 install:
   - true
