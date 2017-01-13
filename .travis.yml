@@ -23,7 +23,8 @@ before_deploy: |
 deploy:
   provider: script
   script: sleep 700 # over 10 mintues
-  all_branches: true
+  on:
+    all_branches: true
 
 notifications:
   email: false
