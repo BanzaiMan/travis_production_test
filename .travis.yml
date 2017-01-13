@@ -4,17 +4,25 @@ sudo: false
 
 dist: trusty
 
-addons:
-  sauce_connect:
-    username: "Your Sauce Labs username"
-    access_key: "Your Sauce Labs access key"
-
-
 install:
   - true
 
 script:
   - true
+
+before_deploy: |
+  function keep_alive() {
+    while true; do
+      echo -en "\a"
+      sleep 5
+    done
+  }
+  keep_alive &
+
+
+deploy:
+  provider: script
+  script: sleep 700 # over 10 mintues
 
 notifications:
   email: false
