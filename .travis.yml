@@ -1,4 +1,9 @@
-language: generic
+language: python
+
+python:
+  - '3.6-dev'
+
+os: osx
 
 sudo: false
 
@@ -8,23 +13,8 @@ install:
   - true
 
 script:
-  - true
-
-before_deploy: |
-  function keep_alive() {
-    while true; do
-      echo -en "\a"
-      sleep 5
-    done
-  }
-  keep_alive &
-
-
-deploy:
-  provider: script
-  script: sleep 700 # over 10 mintues
-  on:
-    all_branches: true
+  - python --version
+  - sw_vers
 
 notifications:
   email: false
