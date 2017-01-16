@@ -1,20 +1,20 @@
-language: python
-
-python:
-  - '3.6-dev'
-
-os: osx
-
 sudo: false
-
-dist: trusty
 
 install:
   - true
 
 script:
-  - python --version
-  - sw_vers
+  - true
+
+before_deploy:
+  - npm --version
+
+deploy:
+  provider: npm
+  email: foo@example.com
+  api_key: SUPER_SECRET
+  on:
+    all_branches: true
 
 notifications:
   email: false
