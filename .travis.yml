@@ -1,3 +1,8 @@
+language: php
+
+php:
+  - '7.0'
+
 sudo: false
 
 install:
@@ -5,16 +10,6 @@ install:
 
 script:
   - true
-
-before_deploy:
-  - npm --version
-
-deploy:
-  provider: npm
-  email: foo@example.com
-  api_key: SUPER_SECRET
-  on:
-    all_branches: true
 
 notifications:
   email: false
