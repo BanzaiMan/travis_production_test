@@ -1,18 +1,15 @@
 language: python
 
-matrix:
-  exclude:
-    - python: '2.7'
-  include:
-    - python: '3.5'
-
-sudo: false
+sudo: required
 
 install:
   - true
 
 script:
-  - true
+  - sudo sysctl -a | grep -E "shm(all|max)"
+  - echo "kernel.shmmax=134217728" | sudo tee -a /etc/sysctl.conf
+  - sudo sysctl -p
+  - sudo sysctl -a | grep -E "shm(all|max)"
 
 notifications:
   email: false
