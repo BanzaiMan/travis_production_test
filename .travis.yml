@@ -1,12 +1,17 @@
-language: python
+language: ruby
 
 sudo: false
+
+rvm:
+  - rbx
+
+dist: trusty
 
 install:
   - true
 
 script:
-  - sysctl -a | grep -E "shm(all|max)"
+  - true
 
 notifications:
   email: false
