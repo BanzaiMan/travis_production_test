@@ -18,11 +18,9 @@ env:
     - lt_branch=RC_1_0 qt=4 gui=false
   allow_failures:
     - os: osx
-      env: lt_branch=RC_1_0 qt=4 gui=true foo=bar
+      env: lt_branch=RC_1_0 qt=4 gui=true
     - os: osx
       env: lt_branch=RC_1_0 qt=4 gui=false
-  global:
-    - foo=bar
 install:
   - true
 
