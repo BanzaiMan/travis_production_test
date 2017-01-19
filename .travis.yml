@@ -9,7 +9,9 @@ cache:
   bundler
 
 script:
-  - true
+  - env | grep BUNDLE
+  - export BUNDLE_PATH=/home/travis/.bundle
+  - env | grep BUNDLE
 
 notifications:
   email: false
