@@ -4,7 +4,7 @@ dist: trusty
 
 env:
   global:
-    - BUNDLE_PATH=~/.bundle
+    - BUNDLE_PATH=/home/travis/.bundle
 cache:
   bundler
 
