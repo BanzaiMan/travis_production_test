@@ -4,13 +4,12 @@ dist: trusty
 
 env:
   global:
-    - BUNDLE_PATH=$HOME/.bundle
+    - BUNDLE_PATH=~/.bundle
 cache:
   bundler
 
 script:
-  - env | grep BUNDLE
-  - cat ~/build.sh
+  - true
 
 notifications:
   email: false
