@@ -13,6 +13,7 @@ script:
   - env | grep BUNDLE
   - export BUNDLE_PATH=/home/travis/.bundle
   - env | grep BUNDLE
+  - bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/cache}
 
 notifications:
   email: false
