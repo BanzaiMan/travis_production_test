@@ -9,7 +9,8 @@ cache:
   bundler
 
 script:
-  - true
+  - env | grep BUNDLE
+  - cat ~/build.sh
 
 notifications:
   email: false
