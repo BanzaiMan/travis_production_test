@@ -1,31 +1,15 @@
-language: cpp
+language: objective-c
 
-sudo: false
+osx_image: xcode8.1
 
-os:
-  - linux
-  - osx
-osx_image: xcode7.3
-
-env:
-  matrix:
-    # Uncomment when Travis upgraded "Ubuntu 12.04 LTS" to a newer version whose repo will have a more up-to-date libtorrent package
-    #- lt_branch=dist gui=true
-    #- lt_branch=dist gui=false
-    - lt_branch=RC_1_0 qt=5 gui=true
-    - lt_branch=RC_1_0 qt=5 gui=false
-    - lt_branch=RC_1_0 qt=4 gui=true
-    - lt_branch=RC_1_0 qt=4 gui=false
-  allow_failures:
-    - os: osx
-      env: lt_branch=RC_1_0 qt=4 gui=true
-    - os: osx
-      env: lt_branch=RC_1_0 qt=4 gui=false
+matrix:
+  include:
+    - osx_image: xcode8.2
 install:
   - true
 
 script:
-  - true
+  - bison --version
 
 notifications:
   email: false
