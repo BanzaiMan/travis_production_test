@@ -1,15 +1,18 @@
-language: objective-c
+language: ruby
+sudo: false
+dist: trusty
 
-osx_image: xcode8.1
+env:
+  global:
+    - BUNDLE_PATH=$HOME/.bundle
+cache:
+  bundler
 
-matrix:
-  include:
-    - osx_image: xcode8.2
 install:
   - true
 
 script:
-  - bison --version
+  - true
 
 notifications:
   email: false
