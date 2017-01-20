@@ -4,13 +4,13 @@ dist: trusty
 
 install: true
 
-before_script:
-  - |
-    function sig_handler() {
-      echo "caught TRAP"
-      travis_result 0
-    }
-    trap sig_handler TRAP
+# before_script:
+#   - |
+#     function sig_handler() {
+#       echo "caught TRAP"
+#       travis_result 0
+#     }
+#     trap sig_handler TRAP
 
 script:
   - kill -TRAP $$
