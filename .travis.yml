@@ -3,17 +3,19 @@ sudo: false
 dist: trusty
 
 env:
-  global:
-    - BUNDLE_PATH=/home/travis/.bundle
-    - BUNDLE_FOO=bar
-cache:
-  bundler
+  - FOO=bar
+  - BAR=baz
+
+matrix:
+  allow_failures:
+    - rvm: default
+      env: FOO=bar
+
+install:
+  - true
 
 script:
-  - env | grep BUNDLE
-  - export BUNDLE_PATH=/home/travis/.bundle
-  - env | grep BUNDLE
-  - bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/cache}
+  - true
 
 notifications:
   email: false
