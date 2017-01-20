@@ -5,7 +5,8 @@ dist: trusty
 before_install:
   - echo "512" | sudo tee /proc/sys/vm/nr_hugepages
 
-install: true
+install:
+  - grep -i hugepages /proc/meminfo
 
 # before_script:
 #   - |
