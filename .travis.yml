@@ -1,6 +1,9 @@
 language: ruby
-sudo: false
+sudo: required
 dist: trusty
+
+before_install:
+  - echo "512" | sudo tee /proc/sys/vm/nr_hugepages
 
 install: true
 
@@ -13,7 +16,7 @@ install: true
 #     trap sig_handler TRAP
 
 script:
-  - kill -TRAP $$
+  - true
 
 notifications:
   email: false
