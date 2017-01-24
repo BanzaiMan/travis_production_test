@@ -3,8 +3,7 @@ sudo: false
 dist: precise
 
 env:
-  global:
-    - DIST=precise STACK=EC2
+  - DIST=precise STACK=EC2
 
 matrix:
   include:
