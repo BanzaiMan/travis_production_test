@@ -2,24 +2,19 @@ language: ruby
 sudo: false
 dist: trusty
 
-env:
-  - FOO=bar
-  - BAR=baz
-
-rvm:
-  - '2.4.0'
-  - '2.3.1'
-
-matrix:
-  allow_failures:
-    - env: FOO=bar
-      rvm: '2.4.0'
-
 install:
   - true
 
 script:
-  - false
+  - true
+
+deploy:
+  provider: releases
+  edge:
+    source: codesuki/dpl
+    branch: conditional_require
+  on:
+    all_branches: true
 
 notifications:
   email: false
