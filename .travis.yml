@@ -1,14 +1,14 @@
-language: python
+language: php
 sudo: false
 dist: precise
 
-python: '3.6'
+php: 7.0
 
 install:
   - true
 
 script:
-  - cat ~/build.sh
+  - echo $archive_url
 
 
 notifications:
