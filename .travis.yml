@@ -1,6 +1,8 @@
-language: ruby
+language: php
 sudo: false
 dist: precise
+
+php: 7.0
 
 install:
   - true
@@ -8,12 +10,6 @@ install:
 script:
   - true
 
-deploy:
-  provider: releases
-  edge:
-    branch: conditional_require-debug
-  on:
-    all_branches: true
 
 notifications:
   email: false
