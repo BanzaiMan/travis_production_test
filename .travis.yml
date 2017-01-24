@@ -19,6 +19,11 @@ matrix:
     - os: osx
       osx_image: xcode8.2
       env: OS=sierra
+  exclude:
+    - os: osx
+      osx_image: xcode8.2
+      env: OS=sierra
+      branch: default
   allow_failures:
     - os: osx
 
