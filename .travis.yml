@@ -11,8 +11,7 @@ script:
 deploy:
   provider: releases
   edge:
-    source: codesuki/dpl
-    branch: conditional_require
+    branch: conditional_require-debug
   on:
     all_branches: true
 
