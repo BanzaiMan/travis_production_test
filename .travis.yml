@@ -16,16 +16,7 @@ matrix:
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
-    - os: osx
-      osx_image: xcode8.2
-      env: OS=sierra
-  exclude:
-    - os: osx
-      osx_image: xcode8.2
-      env: OS=sierra
-      branch: default
-  allow_failures:
-    - os: osx
+      install: echo yes
 
 install:
   - true
