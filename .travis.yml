@@ -1,28 +1,25 @@
-language: ruby
+language: c
 sudo: false
-dist: precise
-
-env:
-  - DIST=precise STACK=EC2
-
+compiler:
+  - gcc
+  - clang
 matrix:
   include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-      install: echo yes
+    - compiler: clang
+      env: SANITIZE=address
+    - compiler: clang
+      env: SANITIZE=undefined
+  allow_failures:
+    - compiler: clang
+      env: SANITIZE=address
+    - compiler: clang
+      env: SANITIZE=undefined
 
 install:
   - true
 
 script:
-  - git lfs
+  - true
 
 
 notifications:
