@@ -1,19 +1,12 @@
-language: c
+language: python
+
 sudo: false
-compiler:
-  - gcc
-  - clang
-matrix:
-  include:
-    - compiler: clang
-      env: SANITIZE=address
-    - compiler: clang
-      env: SANITIZE=undefined
-  allow_failures:
-    - compiler: clang
-      env: SANITIZE=address
-    - compiler: clang
-      env: SANITIZE=undefined
+
+dist: trusty
+
+python:
+  - pypy
+  - pypy3
 
 install:
   - true
