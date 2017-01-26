@@ -1,12 +1,16 @@
-language: python
+language: ruby
 
 sudo: false
 
 dist: trusty
 
-python:
-  - pypy
-  - pypy3
+rvm:
+  - '2.1.5'
+  - '2.4.0'
+
+matrix:
+  exclude:
+    rvm: '2.4.0'
 
 install:
   - true
