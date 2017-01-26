@@ -1,4 +1,4 @@
-language: java
+language: php
 sudo: false
 dist: precise
 
@@ -21,7 +21,8 @@ install:
   - true
 
 script:
-  - jdk_switcher use oraclejdk8
+  - ls -l /etc/profile.d
+  - ls -la $HOME
 
 
 notifications:
