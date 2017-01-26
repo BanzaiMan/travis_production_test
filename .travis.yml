@@ -23,7 +23,7 @@ install:
   - true
 
 script:
-  - true
+  - echo "feature!"
 
 branches:
   only:
