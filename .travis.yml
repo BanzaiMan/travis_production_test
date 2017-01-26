@@ -9,15 +9,15 @@ env:
 
 matrix:
   include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
 
 install:
   - true
@@ -25,6 +25,9 @@ install:
 script:
   - true
 
+branch:
+  only:
+    - default
 
 notifications:
   email: false
