@@ -1,4 +1,4 @@
-language: php
+language: java
 sudo: false
 dist: precise
 
