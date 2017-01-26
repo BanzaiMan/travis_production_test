@@ -21,7 +21,7 @@ install:
   - true
 
 script:
-  - jdk_switcher oraclejdk8
+  - jdk_switcher use oraclejdk8
 
 
 notifications:
