@@ -1,4 +1,4 @@
-language: php
+language: ruby
 sudo: false
 dist: precise
 
@@ -21,8 +21,7 @@ install:
   - true
 
 script:
-  - ls -l /etc/profile.d
-  - ls -la $HOME
+  - jq --version
 
 
 notifications:
