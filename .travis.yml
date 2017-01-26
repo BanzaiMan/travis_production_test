@@ -1,22 +1,14 @@
-language: ruby
+language: php
 
 sudo: false
 
-dist: trusty
-
-rvm:
-  - '2.1.5'
-  - '2.4.0'
-
-matrix:
-  exclude:
-    rvm: '2.4.0'
+dist: precise
 
 install:
   - true
 
 script:
-  - true
+  - jdk_switcher use oraclejdk8
 
 
 notifications:
