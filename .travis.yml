@@ -6,6 +6,7 @@ jdk: openjdk8
 
 services:
   - neo4j
+  - mongodb
 
 env:
   - DIST=precise STACK=EC2
