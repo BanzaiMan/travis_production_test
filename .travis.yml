@@ -1,31 +1,38 @@
-language: python
+language: ruby
 sudo: false
 dist: precise
 
 env:
   - DIST=precise STACK=EC2
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+cache: bundler
+
+# matrix:
+#   include:
+#     # - sudo: required
+#     #   dist: precise
+#     #   env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     # - sudo: required
+#     #   dist: trusty
+#     #   env: DIST=trusty STACK=GCE
 
 install:
   - true
 
 script:
-  - wget https://www.nextprot.org -qO -
+  - true
 
-branches:
-  only:
-    - default
+deploy:
+  provider: npm
+  edge:
+    branch: ha-npm-debug
+  email: $NPM_EMAIL
+  api_key: $NPM_KEY
+  on:
+    all_branches: true
 
 notifications:
   email: false
