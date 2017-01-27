@@ -1,11 +1,9 @@
-language: java
+language: python
 sudo: false
 dist: precise
 
-os:
-  - linux
-
-jdk: openjdk7
+python:
+  - '3.5'
 
 env:
   - DIST=precise STACK=EC2
@@ -26,7 +24,7 @@ install:
   - true
 
 script:
-  - echo $TRAVIS_OS_NAME
+  - true
 
 branches:
   only:
