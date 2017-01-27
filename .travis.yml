@@ -2,6 +2,9 @@ language: java
 sudo: false
 dist: precise
 
+os:
+  - linux
+
 jdk: openjdk7
 
 env:
@@ -23,8 +26,8 @@ install:
   - true
 
 script:
-  - echo $JAVA_HOME
-  - which javac
+  - echo $TRAVIS_OS_NAME
+
 branches:
   only:
     - default
