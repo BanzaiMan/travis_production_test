@@ -1,27 +1,29 @@
-language: python
+language: ruby
 sudo: false
 dist: precise
 
 env:
   - DIST=precise STACK=EC2
 
+cache: bundler
+
 matrix:
   include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
 
 install:
   - true
 
 script:
-  - wget https://www.nextprot.org -qO -
+  - true
 
 branches:
   only:
