@@ -24,8 +24,7 @@ install:
   - true
 
 script:
-  - ruby -rsocket -e 'TCPSocket.new("localhost",27017)'
-
+  - echo $JAVA_HOME
 branches:
   only:
     - default
