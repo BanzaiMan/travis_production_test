@@ -5,10 +5,20 @@ dist: precise
 python:
   - '3.5'
 
+env:
+  - DIST=precise STACK=EC2
+
 matrix:
   include:
-    dist: trusty
-    dist: precise
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 install:
   - true
