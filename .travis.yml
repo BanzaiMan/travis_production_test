@@ -24,7 +24,7 @@ install:
   - true
 
 script:
-  - true
+  - wget https://www.nextprot.org -qO
 
 branches:
   only:
