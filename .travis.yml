@@ -25,10 +25,6 @@ install:
 script:
   - true
 
-branches:
-  only:
-    - default
-
 notifications:
   email: false
   # webhooks: http://requestb.in/16le4he1
