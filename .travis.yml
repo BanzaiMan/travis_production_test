@@ -2,8 +2,7 @@ language: java
 sudo: false
 dist: precise
 
-services:
-  - mongodb
+jdk: openjdk7
 
 env:
   - DIST=precise STACK=EC2
