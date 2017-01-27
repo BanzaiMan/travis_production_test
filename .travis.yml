@@ -1,38 +1,26 @@
-language: ruby
+language: android
 sudo: false
 dist: precise
 
-env:
-  - NPM_EMAIL=foo@example.com NPM_KEY=deadbeef
+jdk: oraclejdk8
 
-cache: bundler
-
-# matrix:
-#   include:
-#     # - sudo: required
-#     #   dist: precise
-#     #   env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     # - sudo: required
-#     #   dist: trusty
-#     #   env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 install:
   - true
 
 script:
   - true
-
-deploy:
-  provider: npm
-  edge:
-    branch: ha-npm-debug
-  email: $NPM_EMAIL
-  api_key: $NPM_KEY
-  on:
-    all_branches: true
 
 notifications:
   email: false
