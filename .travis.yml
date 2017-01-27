@@ -2,9 +2,6 @@ language: python
 sudo: false
 dist: precise
 
-python:
-  - '3.5'
-
 env:
   - DIST=precise STACK=EC2
 
