@@ -1,26 +1,28 @@
-language: android
-sudo: false
-dist: precise
+language: python
 
-jdk: 
-  - oraclejdk8
-  - oraclejdk7
+sudo: false
+
+python:
+  - '2.7'
+  - '3.3'
+  - '3.4'
+  - '2.6'
 
 os:
-  - linux
   - osx
+#   - osx
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
 
 install:
   - true
