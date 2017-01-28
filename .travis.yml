@@ -5,8 +5,6 @@ sudo: false
 python:
   - '2.7'
   - '3.3'
-  - '3.4'
-  - '2.6'
 
 os: osx
 #   - osx
@@ -28,7 +26,7 @@ install:
   - true
 
 script:
-  - true
+  - env | grep TRAVIS | sort
 
 notifications:
   email: false
