@@ -8,21 +8,21 @@ python:
   - '3.4'
   - '2.6'
 
-os:
-  - osx
+os: osx
 #   - osx
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      # dist: precise
+      env: DIST=precise STACK=GCE
 #     - sudo: false
 #       dist: trusty
 #       env: DIST=trusty STACK=EC2
 #     - sudo: required
 #       dist: trusty
 #       env: DIST=trusty STACK=GCE
+
 
 install:
   - true
