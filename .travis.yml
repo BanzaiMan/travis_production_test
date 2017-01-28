@@ -2,7 +2,9 @@ language: android
 sudo: false
 dist: precise
 
-jdk: oraclejdk8
+jdk: 
+  - oraclejdk8
+  - oraclejdk7
 
 os:
   - linux
