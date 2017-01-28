@@ -1,10 +1,10 @@
-language: python
+language: ruby
 
 sudo: false
 
-python:
-  - '2.7'
-  - '3.3'
+rvm:
+  - '2.3.0'
+  - '2.1.5'
 
 os:
   - osx
