@@ -9,7 +9,7 @@ addons:
   apt:
     packages:
       - language-pack-es
-  postgresql: '9.5'
+  postgresql: '9.4'
 
 matrix:
   include:
