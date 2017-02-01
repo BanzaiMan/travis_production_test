@@ -33,7 +33,7 @@ deploy:
   script: echo yes
   on:
     branch: default
-    condition: $(git diff --name-only $TRAVIS_COMMIT_RANGE | cut -d/ -f1 | sort | uniq) == application
+    condition: $(git diff --name-only $TRAVIS_COMMIT_RANGE | cut -d/ -f1 | sort | uniq) == .travis.yml
 
 notifications:
   email: false
