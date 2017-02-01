@@ -20,13 +20,13 @@ matrix:
     - dist: precise
 
 before_install:
-  - false
+  - true
 
 install:
   - true
 
 script:
-  - false
+  - true
 
 deploy:
   provider: script
