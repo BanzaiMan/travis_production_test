@@ -5,12 +5,6 @@ dist: precise
 env:
   - DIST=precise STACK=EC2
 
-addons:
-  apt:
-    packages:
-      - language-pack-es
-  postgresql: '9.5'
-
 matrix:
   include:
     - sudo: required
@@ -33,6 +27,13 @@ install:
 
 script:
   - false
+
+deploy:
+  provider: script
+  script: echo yes
+  on:
+    branch: default
+    condition: $(git diff --name-only $TRAVIS_COMMIT_RANGE | cut -d/ -f1 | sort | uniq) == application
 
 notifications:
   email: false
