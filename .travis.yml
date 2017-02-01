@@ -31,8 +31,8 @@ script:
 deploy:
   provider: script
   script: ruby -e "puts $RUBY_VERSION"
-  # on:
-  #   branch: default
+  on:
+    branch: default
   #   condition: $(git diff --name-only $TRAVIS_COMMIT_RANGE | cut -d/ -f1 | sort | uniq) == .travis.yml
 
 notifications:
