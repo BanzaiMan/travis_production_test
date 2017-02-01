@@ -1,4 +1,4 @@
-language: java
+language: php
 sudo: false
 dist: precise
 
@@ -24,7 +24,7 @@ install:
   - true
 
 script:
-  - env | grep TRAVIS | sort
+  - false
 
 notifications:
   email: false
