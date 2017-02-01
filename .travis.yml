@@ -19,7 +19,8 @@ matrix:
   allow_failures:
     - dist: precise
 
-before_install: false
+before_install:
+  - false
 
 install:
   - true
