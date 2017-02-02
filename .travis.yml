@@ -5,19 +5,19 @@ dist: precise
 env:
   - DIST=precise STACK=EC2
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-  allow_failures:
-    - dist: precise
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
+#   allow_failures:
+#     - dist: precise
 
 before_install:
   - true
@@ -31,6 +31,8 @@ script:
 deploy:
   provider: script
   script: ruby -e "puts $RUBY_VERSION"
+  edge:
+    branch: 'v1.8.28'
   on:
     branch: default
   #   condition: $(git diff --name-only $TRAVIS_COMMIT_RANGE | cut -d/ -f1 | sort | uniq) == .travis.yml
