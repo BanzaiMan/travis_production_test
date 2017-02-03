@@ -23,6 +23,7 @@ before_install:
   - true
 
 install:
+  - TRAVIS_SKIP=true
   - if [ -z "$TRAVIS_SKIP" ]; then echo hi; fi
 
 script: true
