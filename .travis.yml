@@ -23,7 +23,7 @@ before_install:
   - true
 
 install:
-  - true
+  - env | grep TRAVIS | sort
 
 script: true
 
