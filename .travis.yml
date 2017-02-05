@@ -1,21 +1,21 @@
-language: php
+language: csharp
 sudo: false
 dist: precise
 
 env:
   - DIST=precise STACK=EC2
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 #   allow_failures:
 #     - dist: precise
 
@@ -23,8 +23,8 @@ before_install:
   - true
 
 install:
-  - TRAVIS_SKIP=true
-  - if [ -z "$TRAVIS_SKIP" ]; then echo hi; fi
+  - ls -la $HOME
+  - mkdir -p $HOME/.config/NuGet
 
 script: true
 
