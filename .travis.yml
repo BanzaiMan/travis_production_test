@@ -1,16 +1,9 @@
-language: ruby
-
-rvm:
-  - '2.3'
-
-os:
-  - linux
-  - osx
+language: objective-c
 
 install:
   - true
 script:
-  - true
+  - env | grep TRAVIS | sort
 
 notifications:
   email: false
