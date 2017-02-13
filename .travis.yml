@@ -1,33 +1,11 @@
-language: python
-sudo: false
-dist: precise
+language: objective-c
 
-env:
-  - DIST=precise STACK=EC2
-
-services:
-  - mysql-5.6
-
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-
-before_install:
-  - true
 
 install:
-  - true
+  - Xvfb :99 -ac -screen 0 1024x768x8
 
 script:
-  - df -h
+  - true
 
 notifications:
   email: false
