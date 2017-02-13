@@ -3,29 +3,19 @@ sudo: false
 dist: trusty
 
 env:
-  matrix:
-    - DIST=trusty STACK=EC2
+  - DIST=trusty STACK=EC2
+
 matrix:
   include:
-    - os: linux
-      env: TOXENV=py27_ubuntu CACHE_DIRS="LINUX_DIR_1 LINUX_DIR_2"
-    - os: osx
-      env: TOXENV=py27_ubuntu CACHE_DIRS="MAC_DIR_1 MAC_DIR_2"
-cache:
-  directories:
-    - $CACHE_DIRS
-
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 before_install:
   - true
@@ -34,7 +24,7 @@ install:
   - true
 
 script:
-  - true
+  - df -h
 
 notifications:
   email: false
