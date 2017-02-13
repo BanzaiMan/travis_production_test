@@ -25,11 +25,12 @@ before_install:
   - true
 
 install:
-  - find / -name lib2to3\*
-  - which 2to3
-  - touch this.py && 2to3 this.py
+  - true
 
-script: true
+script:
+  - find / -name lib2to3\* || true
+  - which 2to3 || true
+  - touch this.py && 2to3 this.py
 
 notifications:
   email: false
