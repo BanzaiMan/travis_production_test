@@ -9,7 +9,7 @@ env:
     - DIST=trusty STACK=EC2
 cache:
   directories:
-    - CACHE_DIRS
+    - $CACHE_DIRS
 # matrix:
 #   include:
 #     - sudo: required
