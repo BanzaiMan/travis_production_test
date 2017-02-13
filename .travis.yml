@@ -1,9 +1,13 @@
-language: php
+language: python
 sudo: false
-dist: precise
+dist: trusty
 
 env:
-  - DIST=precise STACK=EC2
+  - DIST=trusty STACK=EC2
+
+python:
+  - '3.5'
+  - '3.6'
 
 # matrix:
 #   include:
@@ -16,15 +20,14 @@ env:
 #     - sudo: required
 #       dist: trusty
 #       env: DIST=trusty STACK=GCE
-#   allow_failures:
-#     - dist: precise
 
 before_install:
   - true
 
 install:
-  - TRAVIS_SKIP=true
-  - if [ -z "$TRAVIS_SKIP" ]; then echo hi; fi
+  - find / -name lib2to3\*
+  - which 2to3
+  - touch this.py && 2to3 this.py
 
 script: true
 
