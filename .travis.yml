@@ -3,12 +3,13 @@ sudo: false
 dist: trusty
 
 env:
-  - DIST=trusty STACK=EC2
-
-python:
-  - '3.5'
-  - '3.6'
-
+  global:
+    - CACHE_DIRS="foo bar baz"
+  matrix:
+    - DIST=trusty STACK=EC2
+cache:
+  directories:
+    - CACHE_DIRS
 # matrix:
 #   include:
 #     - sudo: required
@@ -28,9 +29,7 @@ install:
   - true
 
 script:
-  - find / -name lib2to3\* || true
-  - which 2to3 || true
-  - touch this.py && 2to3 this.py
+  - true
 
 notifications:
   email: false
