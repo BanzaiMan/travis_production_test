@@ -3,13 +3,18 @@ sudo: false
 dist: trusty
 
 env:
-  global:
-    - CACHE_DIRS="foo bar baz"
   matrix:
     - DIST=trusty STACK=EC2
+matrix:
+  include:
+    - os: linux
+      env: TOXENV=py27_ubuntu CACHE_DIRS="LINUX_DIR_1 LINUX_DIR_2"
+    - os: osx
+      env: TOXENV=py27_ubuntu CACHE_DIRS="MAC_DIR_1 MAC_DIR_2"
 cache:
   directories:
     - $CACHE_DIRS
+
 # matrix:
 #   include:
 #     - sudo: required
