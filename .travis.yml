@@ -1,9 +1,9 @@
-language: ruby
+language: java
 sudo: false
 dist: precise
 
-rvm:
-  - 2.3.1
+jdk:
+  - oraclejdk8
 
 env:
   - DIST=precise STACK=EC2
@@ -30,7 +30,7 @@ install:
   - true
 
 script:
-  - df -h
+  - echo $JAVA_HOME
 
 notifications:
   email: false
