@@ -29,7 +29,7 @@ install:
   - true
 
 script:
-  - echo $JAVA_HOME
+  - cat ~/build.sh
 
 notifications:
   email: false
