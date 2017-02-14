@@ -1,7 +1,9 @@
-language: java
+language: ruby
 sudo: false
-jdk: oraclejdk8
 dist: precise
+
+rvm:
+  - 2.3.1
 
 env:
   - DIST=precise STACK=EC2
