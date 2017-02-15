@@ -2,8 +2,7 @@ language: php
 sudo: false
 dist: precise
 
-php:
-  - 5.6.29
+php: 5.6.29
 
 env:
   - DIST=precise STACK=EC2
