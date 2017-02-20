@@ -1,6 +1,11 @@
 language: ruby
-sudo: required
+sudo: false
 dist: trusty
+
+addons:
+  apt:
+    packages:
+      - libatlas3gf-base
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -24,7 +29,7 @@ install:
   - true
 
 script:
-  - sudo apt-get install -qq -y libatlas3gf-base libmemcached-dev libxmlsec1-dev
+  - true
 
 notifications:
   email: false
