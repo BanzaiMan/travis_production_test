@@ -2,11 +2,10 @@ language: ruby
 sudo: false
 dist: trusty
 
-addons:
-  apt:
-    packages:
-      - libatlas3gf-base
-
+env:
+  - SLEEP=10
+  - SLEEP=100
+  - SLEEP=300
 # env:
 #   - DIST=precise STACK=EC2
 
@@ -29,7 +28,7 @@ install:
   - true
 
 script:
-  - cat ~/build.sh
+  - sleep $SLEEP
 
 notifications:
   email: false
