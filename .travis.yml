@@ -1,11 +1,26 @@
-language: ruby
-sudo: false
-dist: trusty
+language: go
 
 env:
-  - SLEEP=10
-  - SLEEP=100
-  - SLEEP=300
+  global:
+    - TEST_ON_MACOSX=true
+    - MACHINE_NAME="eris-test-osx-$TRAVIS_BUILD_ID"
+matrix:
+  allow_failures:
+    #Native Docker job, expect potential failures as it's still fresh
+    - env:
+        - DOCKER_NATIVE=true
+  include:
+    #Docker machine job, expect this to pass
+    - go: 1.7.3
+      env:
+        - DOCKER_MACHINE=true
+      after_script:
+        - tests/dm_cleanup.sh
+        #Native Docker job, expect potential failures as it's still fresh
+    - go: 1.7.3
+      env:
+        - DOCKER_NATIVE=true
+
 # env:
 #   - DIST=precise STACK=EC2
 
@@ -28,7 +43,7 @@ install:
   - true
 
 script:
-  - sleep $SLEEP
+  - true
 
 notifications:
   email: false
