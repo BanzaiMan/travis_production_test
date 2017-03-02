@@ -9,20 +9,21 @@ addons:
   apt:
     packages:
       - oracle-java9-installer
-# env:
-#   - DIST=precise STACK=EC2
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+env:
+  - DIST=precise STACK=EC2
+
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 before_install:
   - true
