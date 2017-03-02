@@ -1,27 +1,6 @@
-os: osx
+language: android
 
-language: go
-
-env:
-  global:
-    - TEST_ON_MACOSX=true
-    - MACHINE_NAME="eris-test-osx-$TRAVIS_BUILD_ID"
-matrix:
-  allow_failures:
-    #Native Docker job, expect potential failures as it's still fresh
-    - env:
-        - DOCKER_NATIVE=true
-  include:
-    #Docker machine job, expect this to pass
-    - go: 1.7.3
-      env:
-        - DOCKER_MACHINE=true
-      after_script:
-        - tests/dm_cleanup.sh
-        #Native Docker job, expect potential failures as it's still fresh
-    - go: 1.7.3
-      env:
-        - DOCKER_NATIVE=true
+sudo: false
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -46,6 +25,14 @@ install:
 
 script:
   - true
+
+matrix:
+  include:
+    - language: node_js
+      install:
+        - echo hello!
+      script:
+        - echo more!
 
 notifications:
   email: false
