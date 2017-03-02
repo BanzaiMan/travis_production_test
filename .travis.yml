@@ -1,26 +1,37 @@
-os: osx
+language: java
 
-language: go
+sudo: false
 
-go: 1.7.3
+jdk:
+  - oraclejdk9
 
-env:
-  matrix:
-    - DOCKER_NATIVE=true
-  global:
-    - TEST_ON_MACOSX=true
-    - MACHINE_NAME="eris-test-osx-$TRAVIS_BUILD_ID"
-matrix:
-  allow_failures:
-    #Native Docker job, expect potential failures as it's still fresh
-    - env: DOCKER_NATIVE=true
-  include:
-    #Docker machine job, expect this to pass
-    - go: 1.7.3
-      env:
-        - DOCKER_MACHINE=true
-      after_script:
-        - true
+addons:
+  apt:
+    packages:
+      - oracle-java9-installer
+# env:
+#   - DIST=precise STACK=EC2
+
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
+
+before_install:
+  - true
+
+install:
+  - true
+
+script:
+  - true
 
 notifications:
   email: false
