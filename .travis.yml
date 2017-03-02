@@ -2,6 +2,9 @@ language: android
 
 sudo: false
 
+env:
+  - FOO=bar
+
 # env:
 #   - DIST=precise STACK=EC2
 
