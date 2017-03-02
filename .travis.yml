@@ -2,8 +2,9 @@ language: android
 
 sudo: false
 
-env:
-  - FOO=bar
+android:
+  components:
+    - build-tools-24.0.2
 
 # env:
 #   - DIST=precise STACK=EC2
