@@ -1,42 +1,29 @@
-language: android
+os: osx
 
-sudo: false
+language: go
 
-android:
-  components:
-    - build-tools-24.0.2
+go: 1.7.3
 
-# env:
-#   - DIST=precise STACK=EC2
-
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
-
-before_install:
-  - true
-
-install:
-  - true
-
-script:
-  - true
-
+env:
+  matrix:
+    - DOCKER_NATIVE=true
+  global:
+    - TEST_ON_MACOSX=true
+    - MACHINE_NAME="eris-test-osx-$TRAVIS_BUILD_ID"
 matrix:
+  allow_failures:
+    #Native Docker job, expect potential failures as it's still fresh
+    - go: 1.7.3
+      os: osx
+      env:
+        - DOCKER_NATIVE=true
   include:
-    - language: node_js
-      install:
-        - echo hello!
-      script:
-        - echo more!
+    #Docker machine job, expect this to pass
+    - go: 1.7.3
+      env:
+        - DOCKER_MACHINE=true
+      after_script:
+        - true
 
 notifications:
   email: false
