@@ -1,15 +1,10 @@
-language: ruby
+language: java
 sudo: false
 
-env:
-  - SLEEP=0
-  - SLEEP=10
-  - SLEEP=100
-
-# addons:
-#   apt:
-#     packages:
-#       - oracle-java9-installer
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -26,11 +21,6 @@ env:
 #       dist: trusty
 #       env: DIST=trusty STACK=GCE
 
-matrix:
-  fast_finish: true
-  allow_failures:
-    - env: SLEEP=10
-
 before_install:
   - true
 
@@ -38,8 +28,7 @@ install:
   - true
 
 script:
-  - sleep $SLEEP
-  - false
+  - true
 
 notifications:
   email: false
