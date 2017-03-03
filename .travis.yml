@@ -6,6 +6,8 @@ addons:
     packages:
       - oracle-java8-installer
 
+jdk: oraclejdk8
+
 # env:
 #   - DIST=precise STACK=EC2
 
