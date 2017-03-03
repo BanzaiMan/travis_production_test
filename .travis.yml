@@ -4,9 +4,9 @@ sudo: false
 addons:
   apt:
     packages:
-      - oracle-java8-installer
+      - openjdk-8-jdk
 
-jdk: oraclejdk8
+jdk: openjdk8
 
 # env:
 #   - DIST=precise STACK=EC2
