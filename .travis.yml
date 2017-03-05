@@ -3,7 +3,7 @@ sudo: false
 
 env:
   - DIST=precise STACK=EC2
-  - secure: "MI4eKPojn4LMFPUjHYwImeJEGDRUY/KQLRL4F7iP82bPzHOtcrTgtRiO1niB1fgNgy3PpwRIcLQYpT2hLwaJ5GjpPa1Ka9S4fAb80Sg4jruou/JU6AKN8z0zv6XvgbVgneYv3bSZuz2ABhZTsD2kgPWhaZ3iupAaFGUhXwb4yDk="
+  - secure: "gbpCUfPdT7kye6mnRs52JYnCwb3pAxbpZsXwex3ecEQmE2tY0Uk04dxrzfu8hsfuAnvErbkV5nHxu9PfYA1Q+l+GB2x+wysDB/Cxz/Ih5XP+uTZEpEv39yog+rA/ebYLGeApRhwIro935MjDFR9itkCTG98wXKgOn6J6NaY/+U0="
 
 # matrix:
   # include:
