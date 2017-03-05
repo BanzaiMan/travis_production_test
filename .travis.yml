@@ -10,18 +10,19 @@ jdk: openjdk8
 
 env:
   - DIST=precise STACK=EC2
+  - secure: "MI4eKPojn4LMFPUjHYwImeJEGDRUY/KQLRL4F7iP82bPzHOtcrTgtRiO1niB1fgNgy3PpwRIcLQYpT2hLwaJ5GjpPa1Ka9S4fAb80Sg4jruou/JU6AKN8z0zv6XvgbVgneYv3bSZuz2ABhZTsD2kgPWhaZ3iupAaFGUhXwb4yDk="
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+# matrix:
+  # include:
+  #   - sudo: required
+  #     dist: precise
+  #     env: DIST=precise STACK=GCE
+  #   - sudo: false
+  #     dist: trusty
+  #     env: DIST=trusty STACK=EC2
+  #   - sudo: required
+  #     dist: trusty
+  #     env: DIST=trusty STACK=GCE
 
 before_install:
   - true
