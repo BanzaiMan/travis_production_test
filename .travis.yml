@@ -1,4 +1,4 @@
-language: go
+language: scala
 sudo: false
 
 env:
@@ -23,7 +23,7 @@ install:
   - true
 
 script:
-  - true
+  - ls -l `which sbt`
 
 notifications:
   email: false
