@@ -1,9 +1,8 @@
-language: java
+language: go
 sudo: false
 
 env:
   - DIST=precise STACK=EC2
-  - secure: "gbpCUfPdT7kye6mnRs52JYnCwb3pAxbpZsXwex3ecEQmE2tY0Uk04dxrzfu8hsfuAnvErbkV5nHxu9PfYA1Q+l+GB2x+wysDB/Cxz/Ih5XP+uTZEpEv39yog+rA/ebYLGeApRhwIro935MjDFR9itkCTG98wXKgOn6J6NaY/+U0="
 
 # matrix:
   # include:
