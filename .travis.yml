@@ -25,6 +25,7 @@ install:
 script:
   - echo "foobar"
   - echo "echo more"
+  - yes '' | echo
 
 notifications:
   email: false
