@@ -1,5 +1,9 @@
-language: ruby
+language: php
+
 sudo: false
+
+php:
+  - nightly
 
 env:
   - DIST=precise STACK=EC2
@@ -23,10 +27,7 @@ install:
   - true
 
 script:
-  - echo "foobar"
-  - echo "echo more"
-  - yes '' | echo
-  - echo "foobar"
+  - php -i | grep -i ICU
 
 notifications:
   email: false
