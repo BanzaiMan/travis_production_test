@@ -1,4 +1,4 @@
-language: scala
+language: ruby
 sudo: false
 
 env:
@@ -23,7 +23,7 @@ install:
   - true
 
 script:
-  - ls -l `which sbt`
+  - echo "foobar"
 
 notifications:
   email: false
