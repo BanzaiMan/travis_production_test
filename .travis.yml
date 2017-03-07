@@ -26,6 +26,7 @@ script:
   - echo "foobar"
   - echo "echo more"
   - yes '' | echo
+  - echo "foobar"
 
 notifications:
   email: false
