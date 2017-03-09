@@ -1,12 +1,5 @@
-language: java
+language: ruby
 sudo: false
-
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
-
-jdk: oraclejdk8
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -31,6 +24,14 @@ install:
 
 script:
   - true
+
+deploy:
+  on:
+    all_branches: true
+  provider: openshift
+  user: "YOU USER NAME"
+  password: "YOUR PASSWORD" # can be encrypted
+  domain: "YOUR OPENSHIFT DOMAIN"
 
 notifications:
   email: false
