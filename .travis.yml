@@ -28,7 +28,7 @@ script:
 
 notifications:
   email: false
-  webhooks: http://requestb.in/16le4he1
+  webhooks: http://requestb.in/1599wm41
 
   #  slack:
   #  rooms:
