@@ -25,17 +25,10 @@ install:
 script:
   - true
 
-deploy:
-  on:
-    all_branches: true
-  provider: openshift
-  user: "YOU USER NAME"
-  password: "YOUR PASSWORD" # can be encrypted
-  domain: "YOUR OPENSHIFT DOMAIN"
 
 notifications:
   email: false
-  # webhooks: http://requestb.in/16le4he1
+  webhooks: http://requestb.in/16le4he1
 
   #  slack:
   #  rooms:
