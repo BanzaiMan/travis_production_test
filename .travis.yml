@@ -1,5 +1,10 @@
-language: ruby
+language: node_js
 sudo: false
+
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -23,12 +28,11 @@ install:
   - true
 
 script:
-  - true
+  - java -version
 
 
 notifications:
   email: false
-  webhooks: http://requestb.in/1599wm41
 
   #  slack:
   #  rooms:
