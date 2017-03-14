@@ -1,12 +1,19 @@
-language: java
-sudo: false
+language: crystal
+
+sudo: required
+
+crystal: latest
 
 addons:
-  apt:
-    packages:
-      - oracle-java8-installer
+  postgresql: '9.4'
 
-jdk: oraclejdk8
+env:
+  - TRAVIS_POSTGRESQL_VERSION=9.4
+before_install:
+  - sudo service postgresql stop
+  - sudo service postgresql start $TRAVIS_POSTGRESQL_VERSION
+  - createdb crystal
+  - export DATABASE_URL=postgres://postgres@localhost/crystal
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -23,14 +30,12 @@ jdk: oraclejdk8
 #       dist: trusty
 #       env: DIST=trusty STACK=GCE
 
-before_install:
-  - true
-
 install:
   - true
 
 script:
-  - true
+  - psql crystal -h localhost -c "show server_version;"
+  - psql crystal -h 127.0.0.1 -c "show server_version;"
 
 notifications:
   email: false
