@@ -1,41 +1,27 @@
-language: crystal
+language: ruby
 
 sudo: required
 
-crystal: latest
-
-addons:
-  postgresql: '9.4'
-
 env:
-  - TRAVIS_POSTGRESQL_VERSION=9.4
-before_install:
-  - sudo service postgresql stop
-  - sudo service postgresql start $TRAVIS_POSTGRESQL_VERSION
-  - createdb crystal
-  - export DATABASE_URL=postgres://postgres@localhost/crystal
+  - DIST=precise STACK=EC2
 
-# env:
-#   - DIST=precise STACK=EC2
-
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 install:
   - true
 
 script:
-  - psql crystal -h localhost -c "show server_version;"
-  - psql crystal -h 127.0.0.1 -c "show server_version;"
+  - curl -sfSIL -vv https://services.gradle.org/distributions/gradle-3.4.1-all.zip
 
 notifications:
   email: false
