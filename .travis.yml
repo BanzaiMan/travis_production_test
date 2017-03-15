@@ -1,4 +1,4 @@
-language: ruby
+language: go
 
 sudo: required
 
@@ -21,7 +21,7 @@ install:
   - true
 
 script:
-  - curl -sfSIL -vv https://services.gradle.org/distributions/gradle-3.4.1-all.zip
+  - true
 
 notifications:
   email: false
