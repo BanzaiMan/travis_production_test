@@ -22,6 +22,7 @@ install:
 
 script:
   - echo $TRAVIS
+  - python -c 'import os; print("TRAVIS" in os.environ)'
 
 notifications:
   email: false
