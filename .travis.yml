@@ -17,8 +17,6 @@ matrix:
       dist: trusty
       env: DIST=trusty STACK=GCE
 
-install:
-  - true
 
 script:
   - true
