@@ -1,4 +1,4 @@
-language: ruby
+language: node_js
 
 sudo: required
 
