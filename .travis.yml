@@ -1,22 +1,30 @@
-language: php
+language: python
 
 sudo: required
 
-env:
-  - DIST=precise STACK=EC2
+services:
+  - rabbitmq
+
+# env:
+#   - DIST=precise STACK=EC2
 
 matrix:
   include:
     - sudo: required
       dist: precise
       env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
 
+install:
+  - true
+
+script:
+  - sudo rabbitmqctl status
 
 notifications:
   email: false
