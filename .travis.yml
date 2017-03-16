@@ -18,9 +18,6 @@ matrix:
       env: DIST=trusty STACK=GCE
 
 
-script:
-  - true
-
 notifications:
   email: false
   # webhooks: http://requestb.in/16le4he1
