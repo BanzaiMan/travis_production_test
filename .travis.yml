@@ -23,7 +23,7 @@ install:
   - true
 
 script:
-  - true
+  - ant -version
 
 notifications:
   email: false
