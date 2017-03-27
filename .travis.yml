@@ -1,8 +1,8 @@
-language: java
+language: cpp
 
 sudo: false
 
-jdk: oraclejdk8
+dist: trusty
 
 env:
   - DIST=precise STACK=EC2
@@ -23,7 +23,7 @@ install:
   - true
 
 script:
-  - ant -version
+  - true
 
 notifications:
   email: false
