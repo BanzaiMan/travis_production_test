@@ -1,29 +1,33 @@
-language: cpp
-
 sudo: false
+language: ruby
+rvm: "2.4.0"
 
-dist: trusty
+cache: bundler
 
-env:
-  - DIST=precise STACK=EC2
+install: bundle install
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+script: bundle show i18n
 
-install:
-  - true
+# env:
+#   - DIST=precise STACK=EC2
 
-script:
-  - true
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
+
+# install:
+#   - true
+
+# script:
+#   - true
 
 notifications:
   email: false
