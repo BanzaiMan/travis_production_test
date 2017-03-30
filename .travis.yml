@@ -1,12 +1,17 @@
 sudo: false
 language: ruby
-rvm: "2.4.0"
 
-cache: bundler
+rvm:
+  - default
+  - '2.1.5'
 
-# install: bundle install
+os:
+  - linux
+  - osx
 
-script: bundle show i18n
+install: true
+
+script: true
 
 # env:
 #   - DIST=precise STACK=EC2
