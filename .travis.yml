@@ -1,13 +1,17 @@
-sudo: false
-language: ruby
+language: csharp
 
-rvm:
-  - default
-  - '2.1.5'
+dist: trusty
+
+sudo: required
 
 os:
   - linux
   - osx
+
+mono:
+  - latest
+  - '4.4.2'
+  - '4.0.5'
 
 install: true
 
