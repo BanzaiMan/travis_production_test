@@ -1,21 +1,12 @@
-language: csharp
+language: cpp
 
 dist: trusty
 
 sudo: required
 
-os:
-  - linux
-  - osx
-
-mono:
-  - latest
-  - '4.4.2'
-  - '4.0.5'
-
 install: true
 
-script: true
+script: ls -l ~
 
 # env:
 #   - DIST=precise STACK=EC2
