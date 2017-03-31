@@ -6,7 +6,7 @@ sudo: required
 
 install: true
 
-script: ls -l ~
+script: ls -la ~
 
 # env:
 #   - DIST=precise STACK=EC2
