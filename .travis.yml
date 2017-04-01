@@ -8,7 +8,10 @@ install: true
 
 script: true
 
-cache: bundler
+cache:
+  bundler: true
+  edge:
+    branch: emjoi
 
 # env:
 #   - DIST=precise STACK=EC2
