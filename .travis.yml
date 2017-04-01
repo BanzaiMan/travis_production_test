@@ -11,7 +11,7 @@ script: true
 cache:
   bundler: true
   edge:
-    branch: emjoi
+    branch: emoji
 
 # env:
 #   - DIST=precise STACK=EC2
