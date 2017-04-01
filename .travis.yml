@@ -1,12 +1,14 @@
-language: cpp
+language: ruby
 
 dist: trusty
 
-sudo: required
+sudo: false
 
 install: true
 
-script: ls -la ~
+script: true
+
+cache: bundler
 
 # env:
 #   - DIST=precise STACK=EC2
