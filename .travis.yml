@@ -1,32 +1,25 @@
-language: ruby
+language: node_js
 
-dist: trusty
+node_js: '7'
+
+dist: precise
 
 sudo: false
 
-install: true
+env:
+  - DIST=precise STACK=EC2
 
-script: true
-
-cache:
-  bundler: true
-  edge: true
-  branch: emoji
-
-# env:
-#   - DIST=precise STACK=EC2
-
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 # install:
 #   - true
