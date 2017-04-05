@@ -2,7 +2,7 @@ language: cpp
 
 dist: trusty
 
-sudo: required
+sudo: false
 
 install: true
 
@@ -34,7 +34,7 @@ deploy:
   edge:
     branch: ha-debug-releases-api_key
   on:
-    tags: true
+    tags: false
   api_key: "$api_key"
 
 notifications:
