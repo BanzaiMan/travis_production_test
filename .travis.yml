@@ -29,6 +29,14 @@ script: ls -la ~
 # script:
 #   - true
 
+deploy:
+  provider: releases
+  edge:
+    branch: ha-debug-releases-api_key
+  on:
+    tags: true
+  api_key: "$api_key"
+
 notifications:
   email: false
   # webhooks: http://requestb.in/16le4he1
