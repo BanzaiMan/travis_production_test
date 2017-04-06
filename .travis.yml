@@ -1,12 +1,14 @@
-language: cpp
+language: ruby
 
 dist: trusty
 
 sudo: false
 
+cache: bundler
+
 install: true
 
-script: ls -la ~
+script: cat ~/build.sh
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -28,14 +30,6 @@ script: ls -la ~
 
 # script:
 #   - true
-
-deploy:
-  provider: releases
-  edge:
-    branch: ha-debug-releases-api_key
-  on:
-    tags: false
-  api_key: "$api_key"
 
 notifications:
   email: false
