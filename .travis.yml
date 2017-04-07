@@ -6,7 +6,7 @@ sudo: required
 
 install: true
 
-script: true
+script: sudo ip addr | grep mtu
 
 # env:
 #   - DIST=precise STACK=EC2
