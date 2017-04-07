@@ -2,13 +2,11 @@ language: ruby
 
 dist: trusty
 
-sudo: false
-
-cache: bundler
+sudo: required
 
 install: true
 
-script: cat ~/build.sh
+script: true
 
 # env:
 #   - DIST=precise STACK=EC2
