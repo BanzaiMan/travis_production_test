@@ -1,6 +1,10 @@
-language: ruby
+language: python
 
 sudo: false
+
+python:
+  - '3.5'
+  - '3.6'
 
 install: true
 
