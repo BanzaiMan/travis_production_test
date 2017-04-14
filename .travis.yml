@@ -1,13 +1,10 @@
-language: python
+language: bash
 
 sudo: false
 
-python:
-  - '3.5'
-
 install: true
 
-script: git --version
+script: true
 
 env:
   - DIST=precise STACK=EC2
