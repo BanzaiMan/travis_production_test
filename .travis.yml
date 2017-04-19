@@ -11,7 +11,7 @@ env:
 
 before_install:
   - pip install --user awscli
-  - aws cp s3://travis-build-stages-shared-storage-test/$SHARED_DIR $SHARED_DIR
+  - aws s3 cp s3://travis-build-stages-shared-storage-test/$SHARED_DIR $SHARED_DIR
 
 install: true
 
@@ -25,7 +25,7 @@ jobs:
       script: ls -l $SHARED_DIR/*
 
 after_success:
-  - s3 cp $SHARED_DIR s3://travis-build-stages-shared-storage-test/$SHARED_DIR
+  - aws s3 cp $SHARED_DIR s3://travis-build-stages-shared-storage-test/$SHARED_DIR
 
 # env:
 #   - DIST=precise STACK=EC2
