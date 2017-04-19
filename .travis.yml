@@ -1,4 +1,4 @@
-language: cpp
+language: ruby
 
 dist: trusty
 
@@ -6,7 +6,16 @@ sudo: false
 
 install: true
 
-script: ls -la ~
+jobs:
+  include:
+    - stage: test
+      script: echo hello
+    - stage: test
+      script: echo bar
+    - stage: deploy
+      script: echo baz
+
+script: true
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -28,14 +37,6 @@ script: ls -la ~
 
 # script:
 #   - true
-
-deploy:
-  provider: releases
-  edge:
-    branch: ha-debug-releases-api_key
-  on:
-    tags: false
-  api_key: "$api_key"
 
 notifications:
   email: false
