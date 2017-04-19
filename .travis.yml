@@ -26,7 +26,7 @@ jobs:
       script: ls -l $SHARED_DIR/*; cat $SHARED_DIR/*
 
 after_success:
-  - aws s3 sync s3://travis-build-stages-shared-storage-test $SHARED_DIR
+  - aws s3 sync $SHARED_DIR s3://travis-build-stages-shared-storage-test
 
 # env:
 #   - DIST=precise STACK=EC2
