@@ -19,9 +19,6 @@ jobs:
     - stage: nonsensical
       script: true
 
-matrix:
-  fast_finish: true
-
 # env:
 #   - DIST=precise STACK=EC2
 
