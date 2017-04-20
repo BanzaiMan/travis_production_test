@@ -1,9 +1,5 @@
 language: ruby
 
-rvm:
-  - '2.4.0'
-  - '2.4'
-
 dist: trusty
 
 sudo: false
@@ -11,9 +7,17 @@ sudo: false
 jobs:
   include:
     - stage: test
+      rvm: '2.4'
       script: echo foo
     - stage: test
       script: echo bar
+      rvm: '2.4'
+    - stage: test
+      rvm: '2.4.0'
+      script: echo foo
+    - stage: test
+      script: echo bar
+      rvm: '2.4.0'
     - stage: deploy
       script: echo baz
 
