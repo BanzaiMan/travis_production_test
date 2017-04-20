@@ -1,5 +1,9 @@
 language: ruby
 
+rvm:
+  - '2.4.0'
+  - '2.4'
+
 dist: trusty
 
 sudo: false
@@ -31,11 +35,11 @@ after_success:
 # env:
 #   - DIST=precise STACK=EC2
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
 #     - sudo: false
 #       dist: trusty
 #       env: DIST=trusty STACK=EC2
