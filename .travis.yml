@@ -20,6 +20,8 @@ jobs:
       rvm: '2.4.0'
     - stage: deploy
       script: echo baz
+    - stage: nonsensical
+      script: true
 
 # env:
 #   - DIST=precise STACK=EC2
