@@ -24,10 +24,7 @@ jobs:
       script: true
 
 matrix:
-  allow_failures:
-    - stage: test
-      rvm: '2.4.0'
-      script: 'echo bar'
+  fast_finish: true
 
 # env:
 #   - DIST=precise STACK=EC2
