@@ -8,17 +8,6 @@ cache: bundler
 
 rvm: '2.4'
 
-jobs:
-  include:
-    - stage: test
-      script: echo foo
-    - stage: test
-      script: echo bar
-    - stage: deploy
-      script: echo baz
-    - stage: nonsensical
-      script: true
-
 # env:
 #   - DIST=precise STACK=EC2
 
@@ -39,6 +28,15 @@ jobs:
 
 # script:
 #   - true
+
+before_deploy:
+  - touch foobar
+
+deploy:
+  provider: script
+  script: foobar
+  on:
+    all_branches: true
 
 notifications:
   email: false
