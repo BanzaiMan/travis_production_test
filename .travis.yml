@@ -1,8 +1,6 @@
 language: ruby
 
-dist: trusty
-
-sudo: false
+os: osx
 
 cache: bundler
 
@@ -23,20 +21,11 @@ rvm: '2.4'
 #       dist: trusty
 #       env: DIST=trusty STACK=GCE
 
-# install:
-#   - true
+install:
+  - true
 
-# script:
-#   - true
-
-before_deploy:
-  - touch foobar
-
-deploy:
-  provider: script
-  script: foobar
-  on:
-    all_branches: true
+script:
+  - true
 
 notifications:
   email: false
