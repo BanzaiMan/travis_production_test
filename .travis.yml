@@ -4,8 +4,6 @@ os: osx
 
 cache: bundler
 
-rvm: '2.4'
-
 # env:
 #   - DIST=precise STACK=EC2
 
