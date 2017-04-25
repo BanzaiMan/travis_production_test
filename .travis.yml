@@ -23,7 +23,7 @@ install:
   - true
 
 script:
-  - true
+  - echo hi
 
 notifications:
   email: false
