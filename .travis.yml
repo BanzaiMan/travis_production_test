@@ -4,6 +4,10 @@ os: osx
 
 cache: bundler
 
+addons:
+  apt:
+    - foobar
+
 # env:
 #   - DIST=precise STACK=EC2
 
