@@ -1,8 +1,12 @@
 language: ruby
 
-os: osx
+sudo: false
 
 cache: bundler
+
+addons:
+  apt:
+    - foobar
 
 # env:
 #   - DIST=precise STACK=EC2
