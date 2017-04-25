@@ -1,6 +1,6 @@
 language: ruby
 
-os: osx
+os: linux
 
 cache: bundler
 
