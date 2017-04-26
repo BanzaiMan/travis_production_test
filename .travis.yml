@@ -6,6 +6,7 @@ sudo: false
 
 env:
   - DIST=precise STACK=EC2
+  - PACKAGECLOUD_TOKEN=foo
 
 # matrix:
 #   include:
@@ -23,7 +24,17 @@ install:
   - true
 
 script:
-  - travis_retry echo | false
+  - true
+
+env:
+  global:
+    - PACKAGECLOUD_TOKEN="test"
+
+deploy:
+  provider: script
+  on:
+    condition: "-n ${PACKAGECLOUD_TOKEN} && $CC = gcc"
+  script: echo
 
 notifications:
   email: false
