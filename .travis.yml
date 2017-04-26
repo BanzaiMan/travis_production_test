@@ -1,6 +1,10 @@
-language: ruby
+language: python
 
-sudo: false
+sudo: required
+
+dist: trusty
+
+python: '3.5'
 
 # cache: bundler
 
@@ -25,16 +29,6 @@ install:
 
 script:
   - true
-
-env:
-  global:
-    - PACKAGECLOUD_TOKEN="test"
-
-deploy:
-  provider: script
-  on:
-    condition: "-n ${PACKAGECLOUD_TOKEN} && $CC = gcc"
-  script: echo
 
 notifications:
   email: false
