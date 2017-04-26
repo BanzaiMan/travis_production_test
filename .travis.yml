@@ -4,25 +4,24 @@ sudo: required
 
 dist: trusty
 
-python: '3.5'
+python: '3.6'
 
 # cache: bundler
 
 env:
   - DIST=precise STACK=EC2
-  - PACKAGECLOUD_TOKEN=foo
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 install:
   - true
