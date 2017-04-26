@@ -4,7 +4,7 @@ sudo: required
 
 dist: trusty
 
-python: '3.5'
+python: '3.6'
 
 # cache: bundler
 
@@ -27,7 +27,8 @@ install:
   - true
 
 script:
-  - true
+  - source ~/virtualenv/python3.5/bin/activate
+  - python --version
 
 notifications:
   email: false
