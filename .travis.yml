@@ -1,10 +1,10 @@
-language: python
+language: ruby
 
-sudo: required
+sudo: false
 
-dist: trusty
+dist: precise
 
-python: '3.6'
+rvm: '2.3'
 
 # cache: bundler
 
@@ -27,8 +27,7 @@ install:
   - true
 
 script:
-  - source ~/virtualenv/python3.5/bin/activate
-  - python --version
+  - true
 
 notifications:
   email: false
