@@ -28,7 +28,7 @@ script:
   - true
 
 before_deploy:
-  - rvm default do gem install fog-core -v 1.43.0
+  - rvm $(travis_internal_ruby) do gem install fog-core -v 1.43.0
 
 deploy:
   provider: cloudfiles
