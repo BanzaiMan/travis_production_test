@@ -27,9 +27,6 @@ install:
 script:
   - true
 
-before_deploy:
-  - gem install fog-core -v 1.43.0
-
 deploy:
   provider: cloudfiles
   on:
