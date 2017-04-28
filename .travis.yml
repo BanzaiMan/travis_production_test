@@ -1,10 +1,8 @@
-language: python
+language: ruby
 
 sudo: false
 
 dist: precise
-
-python: '3.6'
 
 # cache: bundler
 
@@ -23,16 +21,11 @@ matrix:
       dist: trusty
       env: DIST=trusty STACK=GCE
 
-before_install:
-  - source ~/virtualenv/python3.5/bin/activate
-
 install:
   - true
 
 script:
-  - python --version
-  - python3.5 --version
-  - python3.6 --version
+  - true
 
 notifications:
   email: false
