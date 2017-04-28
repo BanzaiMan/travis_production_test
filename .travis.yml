@@ -27,6 +27,9 @@ install:
 script:
   - true
 
+before_deploy:
+  - rvm default do gem install fog-core -v 1.43.0
+
 deploy:
   provider: cloudfiles
   on:
