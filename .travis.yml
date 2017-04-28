@@ -32,6 +32,8 @@ before_deploy:
 
 deploy:
   provider: cloudfiles
+  on:
+    all_branches: true
 
 notifications:
   email: false
