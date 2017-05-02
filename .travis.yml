@@ -8,11 +8,6 @@ rvm: 2.4.1
 
 # cache: bundler
 
-addons:
-  apt:
-    packages:
-      - ca-certificates
-
 env:
   - DIST=precise STACK=EC2
 
@@ -33,6 +28,7 @@ install:
 
 script:
   - yes | openssl s_client -connect rubygems.org:443 -tls1_2
+  - gem install bundler
 
 notifications:
   email: false
