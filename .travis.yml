@@ -1,6 +1,8 @@
-language: ruby
+language: java
 
 sudo: false
+
+jdk: oraclejdk8
 
 dist: precise
 
@@ -9,31 +11,23 @@ dist: precise
 env:
   - DIST=precise STACK=EC2
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 install:
   - true
 
 script:
   - true
-
-before_deploy:
-  - rvm $(travis_internal_ruby) do gem install fog-core -v 1.43.0
-
-deploy:
-  provider: cloudfiles
-  on:
-    all_branches: true
 
 notifications:
   email: false
