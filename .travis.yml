@@ -30,7 +30,7 @@ install:
   - true
 
 script:
-  - true
+  - yes | openssl s_client -connect rubygems.org:443 -tls1_2
 
 notifications:
   email: false
