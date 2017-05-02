@@ -6,6 +6,11 @@ dist: precise
 
 # cache: bundler
 
+addons:
+  apt:
+    packages:
+      - ca-certificates
+
 env:
   - DIST=precise STACK=EC2
 
