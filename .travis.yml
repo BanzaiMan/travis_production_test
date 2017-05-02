@@ -4,6 +4,8 @@ sudo: false
 
 dist: precise
 
+rvm: 2.4.1
+
 # cache: bundler
 
 addons:
