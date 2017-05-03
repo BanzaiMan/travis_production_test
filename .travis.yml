@@ -6,6 +6,11 @@ sudo: false
 
 dist: precise
 
+addons:
+  apt:
+    packages:
+      - libssl1.0.0
+
 # cache: bundler
 
 env:
