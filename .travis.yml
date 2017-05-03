@@ -31,6 +31,14 @@ install:
 
 script:
   - cat ~/build.sh
+  - uname
+  - |
+  if [[ $(uname) = 'Linux' ]]; then
+    echo hello?
+  else
+    echo goodbye
+  fi
+
 
 notifications:
   email: false
