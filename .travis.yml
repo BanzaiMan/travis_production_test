@@ -1,6 +1,4 @@
-language: elixir
-
-elixir: 1.4.1
+language: ruby
 
 sudo: false
 
@@ -32,7 +30,7 @@ install:
   - true
 
 script:
-  - true
+  - curl -sf https://www.drupal.org/files/issues/simpletest_is_broken_on-2605284-89.patch
 
 notifications:
   email: false
