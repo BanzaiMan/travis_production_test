@@ -30,7 +30,7 @@ install:
   - true
 
 script:
-  - curl -sf https://www.drupal.org/files/issues/simpletest_is_broken_on-2605284-89.patch
+  - mysql -e "SHOW GLOBAL STATUS LIKE '%innodb_page_size%';"
 
 notifications:
   email: false
