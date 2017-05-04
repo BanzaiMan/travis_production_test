@@ -1,19 +1,30 @@
 language: ruby
-sudo: false
-dist: trusty
+sudo: required
 
-env:
-  global:
-    - BUNDLE_PATH=/home/travis/.bundle
-    - BUNDLE_FOO=bar
-cache:
-  bundler
+services:
+  - docker:
+
+before_install:
+  - sudo apt-get update
+  - docker pull ubuntu
 
 script:
-  - env | grep BUNDLE
-  - export BUNDLE_PATH=/home/travis/.bundle
-  - env | grep BUNDLE
-  - bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/cache}
+  - docker build
+# sudo: false
+# dist: trusty
+
+# env:
+#   global:
+#     - BUNDLE_PATH=/home/travis/.bundle
+#     - BUNDLE_FOO=bar
+# cache:
+#   bundler
+
+# script:
+#   - env | grep BUNDLE
+#   - export BUNDLE_PATH=/home/travis/.bundle
+#   - env | grep BUNDLE
+#   - bundle install --jobs=3 --retry=3 --deployment --path=${BUNDLE_PATH:-vendor/cache}
 
 notifications:
   email: false
