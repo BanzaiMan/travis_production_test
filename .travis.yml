@@ -2,7 +2,7 @@ language: ruby
 sudo: required
 
 services:
-  - docker:
+  - docker
 
 before_install:
   - sudo apt-get update
