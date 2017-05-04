@@ -14,23 +14,31 @@ dist: precise
 env:
   - DIST=precise STACK=EC2
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
 
 install:
   - true
 
 script:
-  - mysql -e "SHOW GLOBAL STATUS LIKE '%innodb_page_size%';"
+  - true
+
+deploy:
+  provider: transifex
+  username: foo
+  password: bar
+  token: deadbeef
+  on:
+    all_branches: true
 
 notifications:
   email: false
