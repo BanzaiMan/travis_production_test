@@ -37,6 +37,8 @@ deploy:
   username: foo
   password: bar
   token: deadbeef
+  edge:
+    branch: ha-transifex
   on:
     all_branches: true
 
