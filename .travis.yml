@@ -6,12 +6,6 @@ sudo: false
 
 dist: precise
 
-addons:
-  apt:
-    packages:
-      - libqtwebkit-dev
-      - libqtwebkit4
-
 # cache: bundler
 
 env:
@@ -30,10 +24,11 @@ matrix:
       env: DIST=trusty STACK=GCE
 
 install:
-  - gem install capybara-webkit
+  - true
 
 script:
-  - true
+  - mysql -e "SHOW GLOBAL STATUS LIKE '%innodb_page_size%';"
+  - mysql -e 'SELECT @@Innodb_page_size'
 
 notifications:
   email: false
