@@ -27,6 +27,7 @@ install:
   - true
 
 script:
+  - mysql --version
   - mysql -e "SHOW GLOBAL STATUS LIKE '%innodb_page_size%';"
   - mysql -e 'SELECT @@Innodb_page_size'
   - mysql -u root -e 'SELECT @@global.Innodb_page_size'
