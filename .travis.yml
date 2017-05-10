@@ -1,32 +1,16 @@
-language: java
-
-sudo: false
-
-dist: precise
-
-jdk: oraclejdk7
-
-# cache: bundler
-
-env:
-  - DIST=precise STACK=EC2
-
+language: php
+dist: trusty
+php:
+  - "7.1"
+  - "7.0"
+  - "5.6"
+  - "5.5"
+  - "5.4"
+  - hhvm
 matrix:
   include:
-    - sudo: required
+    - php: "5.3"
       dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-#     - os: osx
-#       osx_image: xcode8.3
-#       env: RELEASE=sierra
-#     - os: osx
-#       env: RELEASE=default
 
 install:
   - true
