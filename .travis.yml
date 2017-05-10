@@ -1,6 +1,4 @@
-language: python
-
-python: '3.5'
+language: ruby
 
 sudo: false
 
@@ -22,6 +20,11 @@ matrix:
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
+    - os: osx
+      osx_image: xcode8.3
+      env: RELEASE=sierra
+    - os: osx
+      env: RELEASE=default
 
 install:
   - true
