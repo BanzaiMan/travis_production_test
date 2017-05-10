@@ -1,10 +1,10 @@
-language: ruby
+language: java
 
 sudo: false
 
-rvm: '1.9.2'
-
 dist: precise
+
+jdk: oraclejdk7
 
 # cache: bundler
 
