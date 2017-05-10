@@ -1,10 +1,12 @@
-language: java
+language: haskell
 
 sudo: false
 
 dist: precise
 
-jdk: oraclejdk7
+ghc:
+  - 7.8.x
+  - 8.0.x
 
 # cache: bundler
 
@@ -28,11 +30,11 @@ matrix:
 #     - os: osx
 #       env: RELEASE=default
 
-install:
-  - true
+# install:
+#   - true
 
-script:
-  - true
+# script:
+#   - true
 
 notifications:
   email: false
