@@ -2,6 +2,8 @@ language: ruby
 
 sudo: false
 
+rvm: '1.9.2'
+
 dist: precise
 
 # cache: bundler
@@ -9,17 +11,17 @@ dist: precise
 env:
   - DIST=precise STACK=EC2
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 #     - os: osx
 #       osx_image: xcode8.3
 #       env: RELEASE=sierra
@@ -30,7 +32,7 @@ install:
   - true
 
 script:
-  - echo -e $MULTILINE_VAR
+  - true
 
 notifications:
   email: false
