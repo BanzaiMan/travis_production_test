@@ -1,12 +1,17 @@
-language: java
+language: ruby
 
 sudo: false
 
 dist: precise
 
-jdk: oraclejdk7
+ruby: 1.9.2
 
 # cache: bundler
+
+addons:
+  apt:
+    packages:
+      - ruby1.9
 
 env:
   - DIST=precise STACK=EC2
