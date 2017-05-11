@@ -8,11 +8,6 @@ rvm: 1.9.2
 
 # cache: bundler
 
-addons:
-  apt:
-    packages:
-      - ruby1.9.1
-
 env:
   - DIST=precise STACK=EC2
 
@@ -20,7 +15,7 @@ matrix:
   include:
     - sudo: required
       dist: precise
-      env: DIST=precise STACK=GCE
+      env: DIST=precise STACK=GCE LD_LIBRARY_PATH=${rvm_path}/rubies/ruby-1.9.2-p330/lib:${LD_LIBRARY_PATH}
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
