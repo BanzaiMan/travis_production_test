@@ -11,7 +11,7 @@ ruby: 1.9.2
 addons:
   apt:
     packages:
-      - ruby1.9
+      - ruby1.9.1
 
 env:
   - DIST=precise STACK=EC2
