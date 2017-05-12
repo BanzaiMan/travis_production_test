@@ -16,7 +16,7 @@ script:
 jobs:
   include:
     - script: echo y
-    - stage: yes
+    - stage: w00t!
       env: CHANNELS_TO_BUILD="beta"
     - env: CHANNELS_TO_BUILD="nightly"
 
