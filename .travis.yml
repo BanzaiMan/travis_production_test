@@ -11,8 +11,8 @@ env:
     - CHANNELS_TO_BUILD=""
 
 script:
-  - docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
-  - cd compiler && ./build.sh
+  - docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}" || true
+  - cd compiler && ./build.sh || true
 
 jobs:
   include:
