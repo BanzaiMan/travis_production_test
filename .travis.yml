@@ -4,24 +4,28 @@ sudo: false
 
 dist: precise
 
-rvm: 1.9.2
-
 # cache: bundler
 
 env:
   - DIST=precise STACK=EC2
 
-matrix:
+stage: foo
+
+jobs:
   include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE LD_LIBRARY_PATH=${rvm_path}/rubies/ruby-1.9.2-p330/lib:${LD_LIBRARY_PATH}
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    - install: true
+      script: true
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
 #     - os: osx
 #       osx_image: xcode8.3
 #       env: RELEASE=sierra
