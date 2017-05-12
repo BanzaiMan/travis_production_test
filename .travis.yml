@@ -6,26 +6,52 @@ dist: precise
 
 # cache: bundler
 
-env:
-  - DIST=precise STACK=EC2
+jobs:
+  include:
+    - stage: first
+      env: MAKE_RELEASE=true
+    - env: DOCTOCCHECK=true
+    - env: SHELLCHECK=true
+    - env: SHELL=bash TEST_SUITE=install_script
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
-#     - os: osx
-#       osx_image: xcode8.3
-#       env: RELEASE=sierra
-#     - os: osx
-#       env: RELEASE=default
+    - stage: second
+      env: SHELL=sh TEST_SUITE=fast
+    - env: SHELL=dash TEST_SUITE=fast
+    - env: SHELL=bash TEST_SUITE=fast
+    - env: SHELL=zsh TEST_SUITE=fast
+  #  - env: SHELL=ksh TEST_SUITE=fast
+    - env: SHELL=sh TEST_SUITE=sourcing
+    - env: SHELL=dash TEST_SUITE=sourcing
+    - env: SHELL=bash TEST_SUITE=sourcing
+    - env: SHELL=zsh TEST_SUITE=sourcing
+  #  - env: SHELL=ksh TEST_SUITE=sourcing
 
+    - stage: third
+      env: SHELL=sh TEST_SUITE=slow
+    - env: SHELL=dash TEST_SUITE=slow
+    - env: SHELL=bash TEST_SUITE=slow
+    - env: SHELL=zsh TEST_SUITE=slow
+  #  - env:  SHELL=ksh TEST_SUITE=slow
+    - env: SHELL=sh TEST_SUITE=installation_node
+    - env: SHELL=sh TEST_SUITE=installation_node WITHOUT_CURL=1
+    - env: SHELL=dash TEST_SUITE=installation_node
+    - env: SHELL=dash TEST_SUITE=installation_node WITHOUT_CURL=1
+    - env: SHELL=bash TEST_SUITE=installation_node
+    - env: SHELL=bash TEST_SUITE=installation_node WITHOUT_CURL=1
+    - env: SHELL=zsh TEST_SUITE=installation_node
+    - env: SHELL=zsh TEST_SUITE=installation_node WITHOUT_CURL=1
+  #  - env:  SHELL=ksh TEST_SUITE=installation_node
+  #  - env:  SHELL=ksh TEST_SUITE=installation_node WITHOUT_CURL=1
+    - env: SHELL=sh TEST_SUITE=installation_iojs
+    - env: SHELL=sh TEST_SUITE=installation_iojs WITHOUT_CURL=1
+    - env: SHELL=dash TEST_SUITE=installation_iojs
+    - env: SHELL=dash TEST_SUITE=installation_iojs WITHOUT_CURL=1
+    - env: SHELL=bash TEST_SUITE=installation_iojs
+    - env: SHELL=bash TEST_SUITE=installation_iojs WITHOUT_CURL=1
+    - env: SHELL=zsh TEST_SUITE=installation_iojs
+    - env: SHELL=zsh TEST_SUITE=installation_iojs WITHOUT_CURL=1
+  #  - env:  SHELL=ksh TEST_SUITE=installation_iojs
+  #  - env:  SHELL=ksh TEST_SUITE=installation_iojs WITHOUT_CURL=1env:
 install:
   - true
 
