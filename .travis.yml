@@ -1,30 +1,28 @@
-language: php
-
-sudo: false
-
-dist: precise
-
-# cache: bundler
+language: minimal
+sudo: required
+services:
+  - docker
 
 env:
-  - DIST=precise STACK=EC2
+  gloal:
+    - REPOSITORY="${DOCKER_USERNAME}"
+    - BUILD_BASE=""
+    - TOOLS_TO_BUILD=""
+    - CHANNELS_TO_BUILD=""
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
-#     - os: osx
-#       osx_image: xcode8.3
-#       env: RELEASE=sierra
-#     - os: osx
-#       env: RELEASE=default
+script:
+  - docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
+  - cd compiler && ./build.sh
+
+jobs:
+  include:
+    - stage: build compiler base
+      env: BUILD_BASE="true"
+
+    - stage: build compiler containers
+      env: CHANNELS_TO_BUILD="stable"
+    - env: CHANNELS_TO_BUILD="beta"
+    - env: CHANNELS_TO_BUILD="nightly"
 
 install:
   - true
