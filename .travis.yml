@@ -29,8 +29,7 @@ matrix:
 install:
   - true
 
-script:
-  - ruby -rsocket -e 'TCPSocket.new("localhost",8888)'
+script: skip
 
 notifications:
   email: false
