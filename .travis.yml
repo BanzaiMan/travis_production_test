@@ -24,11 +24,6 @@ jobs:
     - env: CHANNELS_TO_BUILD="beta"
     - env: CHANNELS_TO_BUILD="nightly"
 
-install:
-  - true
-
-script: skip
-
 notifications:
   email: false
   # webhooks: http://requestb.in/16le4he1
