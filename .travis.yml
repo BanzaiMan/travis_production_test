@@ -1,4 +1,4 @@
-language: ruby
+language: python
 
 sudo: false
 
@@ -9,12 +9,10 @@ dist: precise
 env:
   - DIST=precise STACK=EC2
 
-stage: foo
-
 jobs:
   include:
     - install: true
-      script: true
+      script: python --version
 # matrix:
 #   include:
 #     - sudo: required
@@ -32,11 +30,11 @@ jobs:
 #     - os: osx
 #       env: RELEASE=default
 
-install:
-  - true
+# install:
+#   - true
 
-script:
-  - true
+# script:
+#   - true
 
 notifications:
   email: false
