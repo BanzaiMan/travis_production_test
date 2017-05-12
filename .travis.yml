@@ -14,14 +14,12 @@ matrix:
     - sudo: required
       dist: precise
       env: DIST=precise STACK=GCE
-      script: sudo lsof -P | grep -w 8888
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
-      script: sudo lsof -P | grep -w 8888
 #     - os: osx
 #       osx_image: xcode8.3
 #       env: RELEASE=sierra
