@@ -10,6 +10,9 @@ env:
     - FOO=1
     - FOO=2
 
+matrix:
+  fast_finish: true
+
 script:
   - true
 
