@@ -4,7 +4,7 @@ services:
   - docker
 
 env:
-  gloal:
+  global:
     - REPOSITORY="${DOCKER_USERNAME}"
     - BUILD_BASE=""
     - TOOLS_TO_BUILD=""
@@ -23,6 +23,8 @@ jobs:
       env: CHANNELS_TO_BUILD="stable"
     - env: CHANNELS_TO_BUILD="beta"
     - env: CHANNELS_TO_BUILD="nightly"
+  exclude:
+    - stage: test # remove default job
 
 notifications:
   email: false
