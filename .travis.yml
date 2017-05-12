@@ -32,7 +32,7 @@ install:
   - true
 
 script:
-  - lsof -P | grep -w 8888
+  - ruby -rsocket -e 'TCPSocket.new("localhost",8888)'
 
 notifications:
   email: false
