@@ -11,7 +11,9 @@ env:
     - FOO=2
 
 matrix:
-  foo: bar
+  exclude:
+    - rvm: '1.9'
+      env: FOO=2
 
 script:
   - true
