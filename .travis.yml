@@ -1,27 +1,25 @@
-language: ruby
+language: python
 
 sudo: false
 
 dist: precise
-
-rvm: '2.3'
 
 # cache: bundler
 
 env:
   - DIST=precise STACK=EC2
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
 #     - os: osx
 #       osx_image: xcode8.3
 #       env: RELEASE=sierra
@@ -32,6 +30,13 @@ install:
   - true
 
 script: skip
+
+deploy:
+  provider: pypi
+  user: "Your username"
+  password: "Your password"
+  on:
+    all_branches: true
 
 notifications:
   email: false
