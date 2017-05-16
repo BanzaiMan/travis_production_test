@@ -33,7 +33,8 @@ script: skip
 
 deploy:
   provider: script
-  script: false
+  script:
+    - false
   edge:
     branch: better-logging
   on:
