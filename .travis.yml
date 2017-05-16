@@ -1,10 +1,10 @@
-language: java
+language: ruby
 
 sudo: false
 
 dist: precise
 
-jdk: openjdk8
+rvm: '2.3'
 
 # cache: bundler
 
