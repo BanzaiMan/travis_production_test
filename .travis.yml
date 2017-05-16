@@ -1,4 +1,4 @@
-language: python
+language: ruby
 
 sudo: false
 
@@ -32,11 +32,10 @@ install:
 script: skip
 
 deploy:
-  provider: pypi
-  user: "Your username"
-  password: "Your password"
+  provider: script
+  script: true
   edge:
-    branch: twine-user-install
+    branch: better-logging
   on:
     all_branches: true
 
