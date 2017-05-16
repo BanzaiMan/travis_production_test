@@ -35,6 +35,8 @@ deploy:
   provider: pypi
   user: "Your username"
   password: "Your password"
+  edge:
+    branch: twine-user-install
   on:
     all_branches: true
 
