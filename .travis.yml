@@ -1,4 +1,4 @@
-language: ruby
+# language: ruby
 
 sudo: false
 
@@ -25,6 +25,30 @@ env:
 #       env: RELEASE=sierra
 #     - os: osx
 #       env: RELEASE=default
+
+language: generic
+jobs:
+  include:
+    - stage: test
+      script: sh -c true
+    - stage: two
+      script: sh -c true
+    - stage: three
+      script: sh -c true
+    - stage: four
+      script: sh -c true
+    - stage: five
+      script: sh -c true
+    - stage: six
+      script: sh -c true
+    - stage: seven
+      script: sh -c true
+    - stage: eight
+      script: sh -c true
+    - stage: nine
+      script: sh -c true
+    - stage: ten
+      script: sh -c false
 
 install:
   - true
