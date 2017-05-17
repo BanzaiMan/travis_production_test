@@ -47,7 +47,7 @@ jobs:
       script: sh -c true
     - stage: nine
       script: sh -c true
-    - stage: ten
+    - stage: foo
       script: sh -c false
 
 install:
