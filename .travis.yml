@@ -1,8 +1,8 @@
 language: ruby
 
-sudo: required
+sudo: false
 
-dist: trusty
+dist: precise
 
 # cache: bundler
 
@@ -38,7 +38,6 @@ deploy:
     branch: v1.8.31
   on:
     all_branches: true
-    tags: true
 
 notifications:
   email: false
