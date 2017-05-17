@@ -29,14 +29,11 @@ env:
 install:
   - true
 
-script: skip
+script: cat ~/build.sh
 
 deploy:
   provider: script
-  script:
-    - false
-  edge:
-    branch: better-logging
+  script: echo yes && echo no
   on:
     all_branches: true
 
