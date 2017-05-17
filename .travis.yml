@@ -33,7 +33,7 @@ script: cat ~/build.sh
 
 deploy:
   provider: script
-  script: echo yes && echo no
+  script: echo "${TRAVIS_REPO_SLUG}"
   on:
     all_branches: true
 
