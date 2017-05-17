@@ -34,6 +34,8 @@ script: cat ~/build.sh
 deploy:
   provider: script
   script: docker images && docker tag "${TRAVIS_REPO_SLUG}:cli" "${TRAVIS_REPO_SLUG}:${TRAVIS_TAG}" && docker push "${TRAVIS_REPO_SLUG}:${TRAVIS_TAG} && docker tag "${TRAVIS_REPO_SLUG}:cli" "${TRAVIS_REPO_SLUG}:latest" && docker push "${TRAVIS_REPO_SLUG}:latest"
+  edge:
+    branch: v1.8.31
   on:
     all_branches: true
     tags: true
