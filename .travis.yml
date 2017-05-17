@@ -1,8 +1,8 @@
 language: ruby
 
-sudo: false
+sudo: required
 
-dist: precise
+dist: trusty
 
 # cache: bundler
 
@@ -33,9 +33,10 @@ script: cat ~/build.sh
 
 deploy:
   provider: script
-  script: echo "${TRAVIS_REPO_SLUG}"
+  script: docker images && docker tag "${TRAVIS_REPO_SLUG}:cli" "${TRAVIS_REPO_SLUG}:${TRAVIS_TAG}" && docker push "${TRAVIS_REPO_SLUG}:${TRAVIS_TAG} && docker tag "${TRAVIS_REPO_SLUG}:cli" "${TRAVIS_REPO_SLUG}:latest" && docker push "${TRAVIS_REPO_SLUG}:latest"
   on:
     all_branches: true
+    tags: true
 
 notifications:
   email: false
