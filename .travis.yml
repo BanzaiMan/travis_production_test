@@ -48,27 +48,27 @@ jobs:
     - stage: neun
       script: sh -c true
     - stage: zehn
-      script: sh -c false
+      script: sh -c true
     - stage: elf
-      script: sh -c false
+      script: sh -c true
     - stage: zwölf
-      script: sh -c false
+      script: sh -c true
     - stage: dreizehn
-      script: sh -c false
+      script: sh -c true
     - stage: vierzehn
-      script: sh -c false
+      script: sh -c true
     - stage: fünfzehn
-      script: sh -c false
+      script: sh -c true
     - stage: sechzehn
-      script: sh -c false
+      script: sh -c true
     - stage: siebzehn
-      script: sh -c false
+      script: sh -c true
     - stage: achtzehn
-      script: sh -c false
+      script: sh -c true
     - stage: neunzehn
-      script: sh -c false
+      script: sh -c true
     - stage: zwanzig
-      script: sh -c false
+      script: sh -c true
 
 install:
   - true
