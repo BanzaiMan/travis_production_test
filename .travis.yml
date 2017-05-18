@@ -26,54 +26,11 @@ env:
 #     - os: osx
 #       env: RELEASE=default
 
-language: generic
-jobs:
-  include:
-    - stage: eins
-      script: sh -c true
-    - stage: zwei
-      script: sh -c true
-    - stage: drei
-      script: sh -c true
-    - stage: vier
-      script: sh -c true
-    - stage: fünf
-      script: sh -c true
-    - stage: sechs
-      script: sh -c true
-    - stage: sieben
-      script: sh -c true
-    - stage: acht
-      script: sh -c true
-    - stage: neun
-      script: sh -c true
-    - stage: zehn
-      script: sh -c true
-    - stage: elf
-      script: sh -c true
-    - stage: zwölf
-      script: sh -c true
-    - stage: dreizehn
-      script: sh -c true
-    - stage: vierzehn
-      script: sh -c true
-    - stage: fünfzehn
-      script: sh -c true
-    - stage: sechzehn
-      script: sh -c true
-    - stage: siebzehn
-      script: sh -c true
-    - stage: achtzehn
-      script: sh -c true
-    - stage: neunzehn
-      script: sh -c true
-    - stage: zwanzig
-      script: sh -c true
 
 install:
   - true
 
-script: cat ~/build.sh
+script: env | grep ^TRAVIS | sort
 
 notifications:
   email: false
