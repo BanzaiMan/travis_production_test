@@ -36,7 +36,7 @@ deploy:
   provider: script
   script: echo hello
   on:
-    condition: true
+    condition: "true"
     all_branches: true
 
 notifications:
