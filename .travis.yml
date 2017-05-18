@@ -13,4 +13,4 @@ deploy:
   provider: script
   script: echo hello
   on:
-    condition: true
+    condition: "true"
