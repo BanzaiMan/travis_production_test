@@ -30,7 +30,13 @@ env:
 install:
   - true
 
-script: env | grep ^TRAVIS | sort
+script: true
+
+deploy:
+  provider: script
+  script: echo hello
+  on:
+    condition: true
 
 notifications:
   email: false
