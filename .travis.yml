@@ -1,25 +1,16 @@
-sudo: required
-dist: trusty
-
-services:
-    - docker
-    - postgresql
-
-matrix:
-  include:
-    - env:
-        SCRIPT=./scripts/build_manylinux1_i686.sh
-    - env:
-        SCRIPT=./scripts/build_manylinux1_x86_64.sh
-    - env:
-        SCRIPT=./scripts/build_sdist.sh
-    - os:
-        osx
-      env:
-        SCRIPT=./scripts/build_osx.sh
+sudo: false
 
 install:
   - true
 
 script:
-  - env | grep TRAVIS | sort
+  - true
+
+notifications:
+  email: false
+
+deploy:
+  provider: script
+  script: echo hello
+  on:
+    condition: true
