@@ -15,12 +15,10 @@ jobs:
     - php: "7.0"
     - php: "7.1"
     - php: "hhvm"
-      script: false
     - stage: next stage
       php: "5.6"
-      script: true
 
-script: true
+script: if [[ $TRAVIS_PHP_VERSION = "hhvm" ]]; false; else true; fi
 
 # env:
 #   - DIST=precise STACK=EC2
