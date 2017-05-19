@@ -1,10 +1,26 @@
-﻿# language: ruby
 
-# sudo: false
+language: php
+sudo: false
+dist: trusty
 
-# dist: precise
+# disable the default submodule logic
+git:
+  submodules: false
 
-# # cache: bundler
+jobs:
+  fast_finish: true
+  allow_failures:
+    - php: "hhvm"
+  include:
+    - php: "7.0"
+    - php: "7.1"
+    - php: "hhvm"
+      script: false
+    - stage: next stage
+      php: "5.6"
+      script: true
+
+script: true
 
 # env:
 #   - DIST=precise STACK=EC2
@@ -32,13 +48,13 @@
 
 # script: env | grep ^TRAVIS | sort
 
-# notifications:
-#   email: false
-#   # webhooks: http://requestb.in/16le4he1
+notifications:
+  email: false
+  # webhooks: http://requestb.in/16le4he1
 
-#   #  slack:
-#   #  rooms:
-#   #    - secure: "KZTfjxhkOdDDZYD2ThBILt2ShYtdEee3PudFZlQBfpxG9N470GfxnKVfOl7Odu4lN6cIupwC4S4BnehubEywSR99l60VmfhePUCTqDLYy+iR9+guTvaECdXdaau3jTKhFdu5u60ITsiw5Yb+hwAaGFO0HmQhqR9XVr/U8IGQlok="
-#   #  template:
-#   #    - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
-#   #  on_success: always
+  #  slack:
+  #  rooms:
+  #    - secure: "KZTfjxhkOdDDZYD2ThBILt2ShYtdEee3PudFZlQBfpxG9N470GfxnKVfOl7Odu4lN6cIupwC4S4BnehubEywSR99l60VmfhePUCTqDLYy+iR9+guTvaECdXdaau3jTKhFdu5u60ITsiw5Yb+hwAaGFO0HmQhqR9XVr/U8IGQlok="
+  #  template:
+  #    - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
+  #  on_success: always
