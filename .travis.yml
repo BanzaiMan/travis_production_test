@@ -1,4 +1,4 @@
-# language: ruby
+language: ruby
 
 sudo: false
 
@@ -9,17 +9,17 @@ dist: precise
 env:
   - DIST=precise STACK=EC2
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 #     - os: osx
 #       osx_image: xcode8.3
 #       env: RELEASE=sierra
@@ -30,7 +30,7 @@ env:
 install:
   - true
 
-script: env | grep ^TRAVIS | sort
+script: curl -IL http://platform.rddigital
 
 notifications:
   email: false
