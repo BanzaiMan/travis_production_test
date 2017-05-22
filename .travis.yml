@@ -1,4 +1,4 @@
-language: ruby
+language: php
 
 sudo: false
 
@@ -6,7 +6,7 @@ dist: precise
 
 addons:
   hosts:
-    - platform.rddigital
+    - platform.rddigital]
 
 # cache: bundler
 
