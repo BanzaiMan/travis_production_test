@@ -1,58 +1,10 @@
+﻿sudo: false
 
-language: php
-sudo: false
-dist: trusty
+language: python
 
-# disable the default submodule logic
-git:
-  submodules: false
+install: true
 
-jobs:
-  fast_finish: true
-  allow_failures:
-    - php: "hhvm"
-  include:
-    - php: "7.0"
-    - php: "7.1"
-    - php: "hhvm"
-    - stage: next stage
-      php: "5.6"
-
-script: if [[ $TRAVIS_PHP_VERSION = "hhvm" ]]; then false; else true; fi
-
-# env:
-#   - DIST=precise STACK=EC2
-
-# # matrix:
-# #   include:
-# #     - sudo: required
-# #       dist: precise
-# #       env: DIST=precise STACK=GCE
-# #     - sudo: false
-# #       dist: trusty
-# #       env: DIST=trusty STACK=EC2
-# #     - sudo: required
-# #       dist: trusty
-# #       env: DIST=trusty STACK=GCE
-# #     - os: osx
-# #       osx_image: xcode8.3
-# #       env: RELEASE=sierra
-# #     - os: osx
-# #       env: RELEASE=default
-
-
-# install:
-#   - true
-
-# script: env | grep ^TRAVIS | sort
+script: true
 
 notifications:
   email: false
-  # webhooks: http://requestb.in/16le4he1
-
-  #  slack:
-  #  rooms:
-  #    - secure: "KZTfjxhkOdDDZYD2ThBILt2ShYtdEee3PudFZlQBfpxG9N470GfxnKVfOl7Odu4lN6cIupwC4S4BnehubEywSR99l60VmfhePUCTqDLYy+iR9+guTvaECdXdaau3jTKhFdu5u60ITsiw5Yb+hwAaGFO0HmQhqR9XVr/U8IGQlok="
-  #  template:
-  #    - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
-  #  on_success: always
