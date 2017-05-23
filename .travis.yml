@@ -2,7 +2,7 @@ language: ruby
 
 sudo: required
 
-dist: precise
+dist: trusty
 
 # env:
 #   - DIST=precise STACK=EC2
