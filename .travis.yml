@@ -4,14 +4,6 @@ sudo: required
 
 dist: precise
 
-addons:
-  apt:
-    sources:
-      - sourceline: 'deb https://debian.neo4j.org/repo stable/'
-        key_url: 'https://debian.neo4j.org/neotechnology.gpg.key'
-    packages:
-      - neo4j
-
 # env:
 #   - DIST=precise STACK=EC2
 
@@ -33,6 +25,10 @@ addons:
 #       env: RELEASE=default
 
 before_install:
+  - wget -O - https://debian.neo4j.org/neotechnology.gpg.key | sudo apt-key add -
+  - echo 'deb https://debian.neo4j.org/repo stable/' | sudo tee /etc/apt/sources.list.d/neo4j.list
+  - sudo apt-get update
+  - sudo apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install neo4j
   - sudo neo4j restart
 
 install:
