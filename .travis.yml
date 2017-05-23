@@ -1,11 +1,19 @@
-language: php
+language: ruby
 
-sudo: false
+sudo: required
 
 dist: precise
 
-env:
-  - DIST=precise STACK=EC2
+addons:
+  apt:
+    sources:
+      - sourceline: 'deb https://debian.neo4j.org/repo stable'
+        key_url: 'https://debian.neo4j.org/neotechnology.gpg.key'
+    packages:
+      - neo4j
+
+# env:
+#   - DIST=precise STACK=EC2
 
 # matrix:
 #   include:
@@ -24,21 +32,24 @@ env:
 #     - os: osx
 #       env: RELEASE=default
 
+before_install:
+  - sudo neo4j restart
 
 install:
   - true
 
-script: true
+script:
+  - true
 
-deploy:
-  provider: script
-  script: "false"
-  on:
-    all_branches: true
+# deploy:
+#   provider: script
+#   script: "false"
+#   on:
+#     all_branches: true
 
-after_script:
-  - echo $?
-  - echo $TRAVIS_TEST_RESULT
+# after_script:
+#   - echo $?
+#   - echo $TRAVIS_TEST_RESULT
 
 notifications:
   email: false
