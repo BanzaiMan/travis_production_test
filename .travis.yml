@@ -32,7 +32,7 @@ script: true
 
 deploy:
   provider: script
-  script: false
+  script: "false"
   on:
     all_branches: true
 
