@@ -35,7 +35,7 @@ install:
   - true
 
 script:
-  - true
+  - neo4j info
 
 # deploy:
 #   provider: script
