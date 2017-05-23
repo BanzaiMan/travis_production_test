@@ -4,6 +4,14 @@ sudo: required
 
 dist: trusty
 
+addons:
+  apt:
+    sources:
+      - sourceline: 'deb https://debian.neo4j.org/repo stable'
+        key_url: 'https://debian.neo4j.org/neotechnology.gpg.key'
+    packages:
+      - neo4j
+
 # env:
 #   - DIST=precise STACK=EC2
 
@@ -25,17 +33,13 @@ dist: trusty
 #       env: RELEASE=default
 
 before_install:
-  - wget -O - https://debian.neo4j.org/neotechnology.gpg.key | sudo apt-key add -
-  - echo 'deb https://debian.neo4j.org/repo stable/' | sudo tee /etc/apt/sources.list.d/neo4j.list
-  - sudo apt-get update
-  - sudo apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install neo4j
-  - sudo neo4j restart
+  - until test -z $(ruby -rsocket -e "TCPSocket.new('localhost',7474)" 2>/dev/null); do sleep 1; done
 
 install:
   - true
 
 script:
-  - neo4j info
+  - true
 
 # deploy:
 #   provider: script
