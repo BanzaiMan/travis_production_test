@@ -40,10 +40,10 @@ deploy:
   secret_access_key:
     secure: "T0wX4SZesvWi5sxdvGgBCnoPksSyGvUgCqrAbPz1feua48a8kG15JeCIieGSrdR4ZJQZLUog9zlB/MLDbqznva/4t+floFdQ8O98Xfrxl2x+4glUa8dAfcqOT2XEByQfwIkpIEvVEyfTvJ9E8WBeNkMOa98WgJlJr0YKzghqUYA="
   region: "us-east-1"
-  app: "foobarapp"
-  env: "foobarapp"
   bucket_name: "travis_elasticbeanstalk_bucket"
   on:
+    edge:
+      branch: eb-v2
     all_branches: true
 
 # after_script:
