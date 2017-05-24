@@ -9,21 +9,25 @@ env:
 
 matrix:
   include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
+    # - os: osx
+    #   osx_image: xcode8.3
+    #   env: RELEASE=sierra
+    # - os: osx
+    #   env: RELEASE=default
     - os: osx
-      osx_image: xcode8.3
-      env: RELEASE=sierra
+      osx_image: xcode6.4
+      env: RELEASE=yosemite
     - os: osx
-      env: RELEASE=default
-    - os: osx
+      rvm: 2.1.8
       osx_image: xcode6.4
       env: RELEASE=yosemite
 
