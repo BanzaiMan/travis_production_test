@@ -26,11 +26,10 @@ matrix:
     - os: osx
       osx_image: xcode6.4
       env: RELEASE=yosemite
-    - os: osx
-      rvm: 2.1.8
-      osx_image: xcode6.4
-      env: RELEASE=yosemite
 
+before_install:
+  - rvm reinstall 2.1.8 --disable-binary
+  - gem install bundler --no-rdoc --no-ri
 
 script:
   - true
