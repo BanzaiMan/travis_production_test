@@ -42,9 +42,9 @@ deploy:
   region: "us-east-1"
   bucket_name: "travis_elasticbeanstalk_bucket"
   on:
-    edge:
-      branch: eb-v2
     all_branches: true
+  edge:
+    branch: eb-v2
 
 # after_script:
 #   - echo $?
