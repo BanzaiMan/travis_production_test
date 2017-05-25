@@ -2,12 +2,10 @@ language: ruby
 
 sudo: false
 
-# dist: precise
+dist: precise
 
-os: osx
-
-# env:
-#   - DIST=precise STACK=EC2
+env:
+  - DIST=precise STACK=EC2
 
 # matrix:
 #   include:
