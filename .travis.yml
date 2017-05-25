@@ -2,17 +2,12 @@ language: ruby
 
 sudo: false
 
-dist: precise
+# dist: precise
 
-rvm: jruby-9.1.9.0
+os: osx
 
-addons:
-  apt:
-    packages:
-      - haveged
-
-env:
-  - DIST=precise STACK=EC2
+# env:
+#   - DIST=precise STACK=EC2
 
 # matrix:
 #   include:
@@ -39,6 +34,16 @@ install:
 
 script:
   - true
+
+  deploy:
+    provider: cloudfoundry
+    username: hulk_hogan@example.com
+    password: supersecretpassword
+    api: https://api.run.pivotal.io
+    organization: myawesomeorganization
+    space: staging
+    edge:
+      branch: ha-cf-mac
 
 # after_script:
 #   - echo $?
