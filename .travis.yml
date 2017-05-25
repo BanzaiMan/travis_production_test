@@ -44,6 +44,8 @@ deploy:
   space: staging
   edge:
     branch: ha-cf-mac
+  on:
+    all_branches: true
 
 # after_script:
 #   - echo $?
