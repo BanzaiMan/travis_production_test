@@ -35,15 +35,15 @@ install:
 script:
   - true
 
-  deploy:
-    provider: cloudfoundry
-    username: hulk_hogan@example.com
-    password: supersecretpassword
-    api: https://api.run.pivotal.io
-    organization: myawesomeorganization
-    space: staging
-    edge:
-      branch: ha-cf-mac
+deploy:
+  provider: cloudfoundry
+  username: hulk_hogan@example.com
+  password: supersecretpassword
+  api: https://api.run.pivotal.io
+  organization: myawesomeorganization
+  space: staging
+  edge:
+    branch: ha-cf-mac
 
 # after_script:
 #   - echo $?
