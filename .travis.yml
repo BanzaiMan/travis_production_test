@@ -8,12 +8,9 @@ before_script:
   - yarn global add gulp
 
 jobs:
-  exclude:
-    - stage: Test
   include:
     # first 2 steps can be combined into one stage, and executes serially
-    - stage: prep
-      script:
+    - script:
         - gulp build
         - gulp test:detec-exclusive
     # step 3 run in parallel; any failure here will cancel the jobs in
