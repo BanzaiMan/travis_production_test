@@ -9,7 +9,7 @@ before_script:
 
 jobs:
   exclude:
-    - stage: test
+    - stage: Test
   include:
     # first 2 steps can be combined into one stage, and executes serially
     - stage: prep
