@@ -31,7 +31,7 @@ install:
   - true
 
 script:
-  - true
+  - false
 
 # after_script:
 #   - echo $?
