@@ -33,25 +33,13 @@ install:
 script:
   - true
 
-deploy:
-  provider: cloudfoundry
-  username: hulk_hogan@example.com
-  password: supersecretpassword
-  api: https://api.run.pivotal.io
-  organization: myawesomeorganization
-  space: staging
-  edge:
-    branch: ha-cf-mac
-  on:
-    all_branches: true
-
 # after_script:
 #   - echo $?
 #   - echo $TRAVIS_TEST_RESULT
 
 notifications:
   email: false
-  # webhooks: http://requestb.in/16le4he1
+  webhooks: https://requestb.in/1n2j1om1
 
   #  slack:
   #  rooms:
