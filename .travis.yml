@@ -40,11 +40,11 @@ jobs:
       sudo: required
       script:
         - export NODE_ENV=development
-        ⋮
+        # ⋮
         - docker build -t sip-ai:$PACKAGE_VERSION -f Dockerfile
-        ⋮
+        # ⋮
         - docker push …
-        ⋮
+        # ⋮
         - gulp test:integration
     # the last 2 steps will run in parallel
     - stage: after success
@@ -52,7 +52,7 @@ jobs:
       script:
         - export NODE_ENV=demo
         - gulp build:infrastructure --environment $NODE_ENV
-        ⋮
+        # ⋮
     - stage: after success
       sudo: required
       script:
