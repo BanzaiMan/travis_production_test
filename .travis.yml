@@ -1,49 +1,63 @@
-language: ruby
-
+# set baseline attributes of this build
+language: node_js
+node_js: '6.9.1'
 sudo: false
+dist: trusty
 
-dist: precise
+branches:
+  only:
+    - master
 
-env:
-  - DIST=precise STACK=EC2
+before_script:
+  - yarn global add gulp
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
-#     - os: osx
-#       osx_image: xcode8.3
-#       env: RELEASE=sierra
-#     - os: osx
-#       env: RELEASE=default
-#     - os: osx
-#       osx_image: xcode6.4
-#       env: RELEASE=yosemite
-
-install:
-  - false
-
-script:
-  - true
-
-# after_script:
-#   - echo $?
-#   - echo $TRAVIS_TEST_RESULT
+jobs:
+  include:
+    # first 2 steps can be combined into one stage, and executes serially
+    - stage: prep
+      script:
+        - gulp build
+        - gulp test:detec-exclusive
+    # step 3 run in parallel; any failure here will cancel the jobs in
+    # the remaining stages
+    - stage: unit tests
+      script:
+        - gulp test:unit:controllers
+    - stage: unit tests
+      script:
+        - gulp test:unit:dataServices
+    - stage: unit tests
+      script:
+        - gulp test:unit:middleware
+    - stage: unit tests
+      script:
+        - gulp test:unit:routes
+    - stage: unit tests
+      script:
+        - gulp test:unit:narrowIntegration
+    # We use GCE to run the remaining stages, as they require `docker` command
+    - stage: docker build
+      sudo: required
+      script:
+        - export NODE_ENV=development
+        ⋮
+        - docker build -t sip-ai:$PACKAGE_VERSION -f Dockerfile
+        ⋮
+        - docker push …
+        ⋮
+        - gulp test:integration
+    # the last 2 steps will run in parallel
+    - stage: after success
+      sudo: required
+      script:
+        - export NODE_ENV=demo
+        - gulp build:infrastructure --environment $NODE_ENV
+        ⋮
+    - stage: after success
+      sudo: required
+      script:
+        - export NODE_ENV=production
+        - gulp build:infrastructure
 
 notifications:
   email: false
-  webhooks: https://requestb.in/1n2j1om1
-
-  #  slack:
-  #  rooms:
-  #    - secure: "KZTfjxhkOdDDZYD2ThBILt2ShYtdEee3PudFZlQBfpxG9N470GfxnKVfOl7Odu4lN6cIupwC4S4BnehubEywSR99l60VmfhePUCTqDLYy+iR9+guTvaECdXdaau3jTKhFdu5u60ITsiw5Yb+hwAaGFO0HmQhqR9XVr/U8IGQlok="
-  #  template:
-  #    - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
-  #  on_success: always
