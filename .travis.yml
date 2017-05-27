@@ -4,36 +4,24 @@ sudo: false
 
 dist: precise
 
+os:
+  - linux
+  - osx
+compiler:
+  - gcc
+  - clang
 env:
-  - DIST=precise STACK=EC2
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - llvm-toolchain-precise-3.5
-    packages:
-      - clang-3.5
-
+  global:
+    - BUILD_JOBS=2
+  matrix:
+    - "all"
+    - "no-asm"
+    - "asan"
+    - "ubsan"
 matrix:
-  include:
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-#     - os: osx
-#       osx_image: xcode8.3
-#       env: RELEASE=sierra
-#     - os: osx
-#       env: RELEASE=default
-#     - os: osx
-#       osx_image: xcode6.4
-#       env: RELEASE=yosemite
+  exclude:
+    - os: osx
+      compiler: gcc
 
 install:
   - true
