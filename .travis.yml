@@ -2,18 +2,16 @@ language: ruby
 
 sudo: false
 
-dist: precise
-
 dist:
   - trusty
   - precise
 
-matrix:
-  include:
-    - sudo: required
-      dist: precise
-    - sudo: required
-      dist: trusty
+# matrix:
+#   include:
+#     - sudo: required
+#       dist: precise
+#     - sudo: required
+#       dist: trusty
 #     - os: osx
 #       osx_image: xcode8.3
 #       env: RELEASE=sierra
