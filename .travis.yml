@@ -1,31 +1,29 @@
-language: ruby
+language: scala
 
-sudo: false
+scala: 2.12.1
 
-dist:
-  - trusty
-  - precise
+jdk: oraclejdk8
 
-# matrix:
-#   include:
-#     - sudo: required
-#       dist: precise
-#     - sudo: required
-#       dist: trusty
-#     - os: osx
-#       osx_image: xcode8.3
-#       env: RELEASE=sierra
-#     - os: osx
-#       env: RELEASE=default
-#     - os: osx
-#       osx_image: xcode6.4
-#       env: RELEASE=yosemite
+script: skip
 
-install:
-  - true
+jobs:
+  include:
+    - stage: verify project version
+      script:
+        - true
 
-script:
-  - true
+    - stage: test
+      script:
+        - true
+    - stage: test
+      script:
+        - true
+
+    - stage: publish build artifacts
+      script:
+        - true
+  exlcude:
+    - script: skip
 
 # after_script:
 #   - echo $?
