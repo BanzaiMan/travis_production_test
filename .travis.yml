@@ -22,7 +22,7 @@ jobs:
     - stage: publish build artifacts
       script:
         - true
-  exlcude:
+  exclude:
     - script: skip
 
 # after_script:
