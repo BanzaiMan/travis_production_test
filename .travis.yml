@@ -12,10 +12,10 @@ jobs:
       script:
         - true
 
-    - stage: test
+    - stage: tests
       script:
         - true
-    - stage: test
+    - stage: tests
       script:
         - true
 
@@ -23,7 +23,7 @@ jobs:
       script:
         - true
   exclude:
-    - script: skip
+    - stage: test
 
 # after_script:
 #   - echo $?
