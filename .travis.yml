@@ -1,21 +1,12 @@
-language: php
+language: ruby
+
+os: osx
+
+osx_image: xcode6.4
 
 sudo: required
 
-addons:
-  apt:
-    sources:
-      - boost-latest
-      - ubuntu-toolchain-r-test
-      - sourceline: "deb http://dl.hhvm.com/ubuntu precise main"
-        key_url: 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x5A16E7281BE7A449'
-    packages:
-      - libboost1.55-all-dev
-      - g++-4.8
-      - hhvm
-
-before_install:
-  - phpenv global hhvm
+cache: bundler
 
 install: skip
 
