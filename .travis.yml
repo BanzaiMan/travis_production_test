@@ -1,39 +1,26 @@
 language: ruby
 
-os: osx
+sudo: false
 
-osx_image: xcode6.4
+dist: precise
 
-sudo: required
+env: DIST=precise STACK=EC2
 
-cache: bundler
+matrix:
+  include:
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 install: skip
 
-script: skip
-
-# jobs:
-#   include:
-#     - stage: verify project version
-#       script:
-#         - true
-
-#     - stage: tests
-#       script:
-#         - true
-#     - stage: tests
-#       script:
-#         - true
-
-#     - stage: publish build artifacts
-#       script:
-#         - true
-#   exclude:
-#     - stage: test
-
-# after_script:
-#   - echo $?
-#   - echo $TRAVIS_TEST_RESULT
+script: git --version
 
 notifications:
   email: false
