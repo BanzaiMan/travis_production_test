@@ -1,6 +1,18 @@
-language: ruby
+language: php
 
 sudo: false
+
+addons:
+  apt:
+    sources:
+      - boost-latest
+      - ubuntu-toolchain-r-test
+    packages:
+      - libboost1.55-all-dev
+      - g++-4.8
+
+php:
+  - hhvm
 
 install: skip
 
