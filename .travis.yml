@@ -10,9 +10,10 @@ addons:
     packages:
       - libboost1.55-all-dev
       - g++-4.8
+      - hhvm
 
-php:
-  - hhvm
+before_install:
+  - phpenv global hhvm
 
 install: skip
 
