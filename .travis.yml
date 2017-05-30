@@ -7,6 +7,8 @@ addons:
     sources:
       - boost-latest
       - ubuntu-toolchain-r-test
+      - sourceline: "deb http://dl.hhvm.com/ubuntu precise main"
+        key_url: 'http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x5A16E7281BE7A449'
     packages:
       - libboost1.55-all-dev
       - g++-4.8
