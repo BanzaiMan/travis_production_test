@@ -1,4 +1,10 @@
-language: ruby
+language: elixir
+
+elixir:
+  - '1.4.2'
+
+otp_release:
+  - '19.3'
 
 sudo: false
 
@@ -24,7 +30,6 @@ script: git --version
 
 notifications:
   email: false
-  webhooks: https://requestb.in/1n2j1om1
 
   #  slack:
   #  rooms:
