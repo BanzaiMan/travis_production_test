@@ -1,10 +1,8 @@
-language: elixir
+language: android
 
-elixir:
-  - '1.4.2'
-
-otp_release:
-  - '19.3'
+android:
+  components:
+    - platform-tools
 
 sudo: false
 
@@ -24,9 +22,9 @@ matrix:
       dist: trusty
       env: DIST=trusty STACK=GCE
 
-install: skip
+install: nvm use 7
 
-script: git --version
+script: skip
 
 notifications:
   email: false
