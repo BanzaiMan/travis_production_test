@@ -4,7 +4,7 @@ language: php
 #   components:
 #     - tools
 
-sudo: false
+sudo: required
 
 dist: trusty
 
