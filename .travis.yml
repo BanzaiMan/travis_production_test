@@ -10,7 +10,7 @@ dist: trusty
 
 php:
   - '5.5'
-  - system
+  - '5.5.9'
   - '7.0'
 
 # matrix:
@@ -30,7 +30,7 @@ php:
 
 install: skip
 
-script: dpkg -l | grep php
+script: skip
 
 notifications:
   email: false
