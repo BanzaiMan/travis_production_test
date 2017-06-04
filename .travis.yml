@@ -4,9 +4,14 @@ language: php
 #   components:
 #     - tools
 
-sudo: required
+sudo: false
 
 dist: trusty
+
+php:
+  - '5.5'
+  - system
+  - '7.0'
 
 # matrix:
 #   include:
