@@ -1,4 +1,4 @@
-language: ruby
+language: php
 
 # android:
 #   components:
@@ -6,7 +6,7 @@ language: ruby
 
 sudo: false
 
-dist: precise
+dist: trusty
 
 # matrix:
 #   include:
@@ -25,17 +25,7 @@ dist: precise
 
 install: skip
 
-script: skip
-
-deploy:
-  provider: script
-  script:
-    - echo foo
-    - echo bar
-  edge:
-    branch: ha-script-warning
-  on:
-    all_branches: true
+script: dpkg -l | grep php
 
 notifications:
   email: false
