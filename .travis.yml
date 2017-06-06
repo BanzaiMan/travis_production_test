@@ -1,10 +1,10 @@
-language: ruby
+language: go
 
 # android:
 #   components:
 #     - tools
 
-sudo: required
+sudo: false
 
 dist: trusty
 
@@ -23,9 +23,7 @@ dist: trusty
 #       dist: trusty
 #       env: DIST=trusty STACK=GCE
 
-install:
-  - sudo apt-get update -qq
-  - sudo apt-get install linux-headers-$(uname -r)
+install: skip
 
 script: skip
 
