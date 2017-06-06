@@ -1,4 +1,6 @@
-language: go
+language: perl
+
+perl: '5.26'
 
 # android:
 #   components:
@@ -6,7 +8,7 @@ language: go
 
 sudo: false
 
-dist: precise
+dist: trusty
 
 # matrix:
 #   include:
