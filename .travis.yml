@@ -28,7 +28,7 @@ osx_image: xcode8.3
 
 install: skip
 
-script: skip
+script: security list-keychains
 
 notifications:
   email: false
