@@ -34,6 +34,7 @@ script:
   - sudo python --version
   - sudo -E python --version
   - sudo PATH=$(dirname `which python`):$PATH python --version
+  - sudo -E PATH=$(dirname `which python`):$PATH python --version
 
 notifications:
   email: false
