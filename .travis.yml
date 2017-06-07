@@ -1,8 +1,11 @@
 language: ruby
 
-os: osx
+sudo: false
 
-osx_image: xcode8.2
+dist: trusty
+
+python:
+  - '3.5'
 
 # android:
 #   components:
@@ -11,24 +14,26 @@ osx_image: xcode8.2
 # addons:
 #   chrome: stable
 
-# matrix:
-#   include:
-#     - sudo: false
-#       dist: precise
-#       env: DIST=precise STACK=EC2
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: false
+      dist: precise
+      env: DIST=precise STACK=EC2
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 install: skip
 
-script: security list-keychains
+script:
+  - wget https://bootstrap.pypa.io/get-pip.py
+  - python get-pip.py
 
 notifications:
   email: false
