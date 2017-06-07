@@ -1,40 +1,30 @@
-language: python
-
-python:
-  - 3.5.2
+language: ruby
 
 # android:
 #   components:
 #     - tools
 
-sudo: required
+addons:
+  chrome: stable
 
-dist: trusty
-
-# matrix:
-#   include:
-#     - sudo: false
-#       dist: precise
-#       env: DIST=precise STACK=EC2
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: false
+      dist: precise
+      env: DIST=precise STACK=EC2
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 install: skip
 
-script:
-  - python --version
-  - which python
-  - sudo python --version
-  - sudo -E python --version
-  - sudo PATH=$(dirname `which python`):$PATH python --version
-  - sudo -E PATH=$(dirname `which python`):$PATH python --version
+script: skip
 
 notifications:
   email: false
