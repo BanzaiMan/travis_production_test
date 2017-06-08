@@ -6,6 +6,8 @@ dist: trusty
 
 python:
   - '3.5'
+  - pypy
+  - pypy3
 
 # android:
 #   components:
@@ -19,9 +21,9 @@ env:
 
 matrix:
   include:
-    - sudo: false
-      dist: precise
-      env: DIST=precise STACK=EC2
+#    - sudo: false
+#      dist: precise
+#      env: DIST=precise STACK=EC2
 #    - sudo: required
 #      dist: precise
 #      env: DIST=precise STACK=GCE
