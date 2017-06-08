@@ -5,6 +5,9 @@ sudo: false
 rvm:
   - 2.1.6
 
+services:
+  - postgresql
+
 install: skip
 
 script: skip
@@ -13,3 +16,5 @@ deploy:
   provider: s3
   api_key:
     secure: FOOBAR
+  on:
+    all_branches: true
