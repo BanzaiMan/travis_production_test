@@ -10,7 +10,7 @@ services:
 
 install: skip
 
-script: skip
+script: echo -n foo
 
 deploy:
   provider: s3
