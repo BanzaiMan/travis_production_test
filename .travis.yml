@@ -22,7 +22,7 @@ matrix:
 install: skip
 
 script:
-  - cat /etc/sudoers
+  -　sudo cat /etc/sudoers
 
 notifications:
   email: false
