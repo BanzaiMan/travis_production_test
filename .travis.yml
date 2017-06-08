@@ -6,7 +6,7 @@ dist: trusty
 
 cache:
   directories:
-    - "foo bar"
+    - "foo\\ bar"
 matrix:
   include:
 #    - sudo: false
@@ -22,7 +22,7 @@ matrix:
 #      dist: trusty
 #      env: DIST=trusty STACK=GCE
 
-install: skip
+install: touch "foo bar/bazz"
 
 script:
   - wget https://bootstrap.pypa.io/get-pip.py
