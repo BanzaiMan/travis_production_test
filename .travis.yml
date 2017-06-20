@@ -4,7 +4,8 @@ language: python
 jobs:
   fast_finish: true
   allow_failures:
-    - env: FOO=bar
+    - python: 2.7
+      env: FOO=bar
   include:
     - python: 2.7
     - python: 2.7
