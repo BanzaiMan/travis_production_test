@@ -1,23 +1,15 @@
 language: node_js
+sudo: false
+dist: trusty
 node_js: v8.1.2
-git:
-    depth: 1
-    submodules: false
-addons:
-    hosts:
-        - dev.quant01.com
-        - stg.quant01.com
-        - www.quant01.com
-    ssh_known_hosts:
-        - stg.quant01.com
-        - www.quant01.com
-before_script:
-    - sudo apt-get install libcap2-bin
-    - sudo setcap 'cap_net_bind_service=+ep' `which node`
+env:
+  global:
+    - PATH=$HOME/.yarn/bin:$PATH
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+
 script:
-   - host www.quant01.com # <= here I should get the resolved ip to a local ip but no output so far
-   - cat /etc/hosts
-   - cat /etc/nsswitch.conf
+  - yarn --version
 
 # matrix:
 #   include:
