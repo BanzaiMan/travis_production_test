@@ -1,27 +1,40 @@
-language: php
+language: node_js
+node_js: v8.1.2
+git:
+    depth: 1
+    submodules: false
+addons:
+    hosts:
+        - dev.quant01.com
+        - stg.quant01.com
+        - www.quant01.com
+    ssh_known_hosts:
+        - stg.quant01.com
+        - www.quant01.com
+before_script:
+    - sudo apt-get install libcap2-bin
+    - sudo setcap 'cap_net_bind_service=+ep' `which node`
+script:
+   - host www.quant01.com # <= here I should get the resolved ip to a local ip but no output so far
 
-sudo: false
-
-php: '5.6'
-
-matrix:
-  include:
-    - sudo: false
-      dist: precise
-      env: DIST=precise STACK=EC2
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+# matrix:
+#   include:
+#     - sudo: false
+#       dist: precise
+#       env: DIST=precise STACK=EC2
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
 
 install: skip
 
-script: echo "hello"
+script: firefox
 
 notifications:
   email: false
