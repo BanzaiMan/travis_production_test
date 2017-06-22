@@ -18,7 +18,6 @@ script:
    - host www.quant01.com # <= here I should get the resolved ip to a local ip but no output so far
    - cat /etc/hosts
    - cat /etc/nsswitch.conf
-sudo: false
 
 # matrix:
 #   include:
