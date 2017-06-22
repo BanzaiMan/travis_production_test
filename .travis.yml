@@ -34,8 +34,6 @@ script:
 
 install: skip
 
-script: firefox
-
 notifications:
   email: false
 
