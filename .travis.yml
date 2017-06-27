@@ -11,7 +11,7 @@ install: skip
 
 script: 'env | grep FOO'
 
-# group: deprecated-2017Q2
+group: deprecated-2017Q2
 
 matrix:
   include:
