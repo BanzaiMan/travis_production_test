@@ -5,6 +5,9 @@ env:
     - FOO=$(date)
     - FOOBAR=$(echo foobar)
 
+before_install:
+  - curl https://sdk.cloud.google.com | bash
+
 install: skip
 
 script: 'env | grep FOO'
