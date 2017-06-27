@@ -1,4 +1,4 @@
-language: python
+language: node_js
 
 env:
   global:
@@ -10,6 +10,8 @@ before_install:
 install: skip
 
 script: 'env | grep FOO'
+
+# group: deprecated-2017Q2
 
 matrix:
   include:
