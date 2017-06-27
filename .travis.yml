@@ -1,18 +1,19 @@
+
 language: node_js
-
+node_js:
+- '8'
+cache:
+  directories:
+  - "$HOME/gcloud/"
 env:
-  global:
-    - CLOUDSDK_CORE_DISABLE_PROMPTS=1
-
-before_install:
-  - if [ ! -d $HOME/google-cloud-sdk ]; then curl https://sdk.cloud.google.com | bash; fi
-
-install: skip
-
-script: 'env | grep FOO'
-
+  - PATH=$PATH:$HOME/google-cloud-sdk/bin CLOUDSDK_CORE_DISABLE_PROMPTS=1
 group: deprecated-2017Q2
-
+before_install:
+- if [ ! -d $HOME/google-cloud-sdk ]; then
+    curl https://sdk.cloud.google.com | bash;
+  fi
+install: skip
+script: skip
 matrix:
   include:
     - sudo: false
