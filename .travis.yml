@@ -1,8 +1,9 @@
 language: python
 
 env:
-  - FOO=`date`
-  - FOOBAR=`echo foobar`
+  global:
+    - FOO=`date`
+    - FOOBAR=`echo foobar`
 
 install: skip
 
