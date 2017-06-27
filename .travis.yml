@@ -1,17 +1,4 @@
-
 language: node_js
-node_js:
-- '8'
-cache:
-  directories:
-  - "$HOME/gcloud/"
-env:
-  - PATH=$PATH:$HOME/google-cloud-sdk/bin CLOUDSDK_CORE_DISABLE_PROMPTS=1
-group: deprecated-2017Q2
-before_install:
-- if [ ! -d $HOME/google-cloud-sdk ]; then
-    curl https://sdk.cloud.google.com | bash;
-  fi
 install: skip
 script: skip
 matrix:
@@ -30,6 +17,13 @@ matrix:
     #   env: DIST=trusty STACK=GCE
     # - os: osx
     #   osx_image: xcode8.3
+deploy:
+  provider: heroku
+  api-key:
+    secure: "evGYHukv8J6nJI/LhjiWZKC8VLdXE6YvrFA6ttxuQr/MLpivgdMZ/vui2zSST9ia+wDPbJ5FnMYoD+JOsnC6mEPMyA9VakG2fzvpdesXUvLosiMX2zVuwj9BeJepL0ND64Scx11Eu/yITlzTIkMel6SAjf8bwCHPPd+JPjt/97I="
+  strategy: git-ssh
+  on:
+    all_branches: true
 
 notifications:
   email: false
