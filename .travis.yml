@@ -1,29 +1,23 @@
 language: node_js
+
 install: skip
-script: skip
+
+script: node -e "console.log('Node has TTY:', process.stdout.isTTY);"
+
 matrix:
   include:
     - sudo: false
       dist: precise
       env: DIST=precise STACK=EC2
-    # - sudo: required
-    #   dist: precise
-    #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
-    # - sudo: required
-    #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
-    # - os: osx
-    #   osx_image: xcode8.3
-deploy:
-  provider: heroku
-  api-key:
-    secure: "evGYHukv8J6nJI/LhjiWZKC8VLdXE6YvrFA6ttxuQr/MLpivgdMZ/vui2zSST9ia+wDPbJ5FnMYoD+JOsnC6mEPMyA9VakG2fzvpdesXUvLosiMX2zVuwj9BeJepL0ND64Scx11Eu/yITlzTIkMel6SAjf8bwCHPPd+JPjt/97I="
-  strategy: git-ssh
-  on:
-    all_branches: true
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 
 notifications:
   email: false
