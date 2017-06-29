@@ -1,14 +1,21 @@
-language: generic
-dist: trusty
-sudo: required
-install: true
-script: env
+language: node_js
 
-deploy:
-  provider: script
-  script: echo true
-  on:
-    all_branches: true
+node_js:
+  - '6'
+  - '8'
+
+env:
+  - NPM_VERSION='latest'
+  - NPM_VERSION=''
+
+dist: precise
+sudo: false
+install: skip
+script:
+  - git clone --depth=50 --branch=tags https://github.com/chalk/chalk.git chalk/chalk
+  - if [[ -n $NPM_VERSION ]]; then npm install npm@latest -g; fi
+  - cd chalk/chalk
+  - npm install
 
 # matrix:
 #   include:
