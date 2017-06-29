@@ -1,23 +1,26 @@
-language: node_js
+language: erlang
+
+otp_release:
+  - '20.0'
 
 install: skip
 
-script: node -e "console.log('Node has TTY:', process.stdout.isTTY);"
+script: skip
 
 matrix:
   include:
     - sudo: false
       dist: precise
       env: DIST=precise STACK=EC2
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
 
 notifications:
   email: false
