@@ -1,10 +1,15 @@
-language: java
-jdk:
-  - oraclejdk8
-sudo: false
+language: elixir
+elixir: '1.4.5'
+otp_release: '20.0'
+sudo: required
+dist: trusty
 
 install: skip
 script: skip
+
+deploy:
+  provider: script
+  script: echo true
 
 # matrix:
 #   include:
