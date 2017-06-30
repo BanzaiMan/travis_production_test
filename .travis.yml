@@ -10,6 +10,8 @@ script: skip
 deploy:
   provider: script
   script: echo true
+  on:
+    all_branches: true
 
 # matrix:
 #   include:
