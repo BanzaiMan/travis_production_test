@@ -1,22 +1,10 @@
-language: node_js
-
-node_js:
-  - '6'
-  - '7'
-  - '8'
-
-env:
-  - NPM_VERSION='latest'
-  - NPM_VERSION=''
-
-dist: precise
+language: java
+jdk:
+  - oraclejdk8
 sudo: false
+
 install: skip
-script:
-  - git clone --depth=50 --branch=tags https://github.com/chalk/chalk.git chalk/chalk
-  - if [[ -n $NPM_VERSION ]]; then npm install npm@latest -g; fi
-  - cd chalk/chalk
-  - npm install
+script: skip
 
 # matrix:
 #   include:
