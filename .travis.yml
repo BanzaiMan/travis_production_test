@@ -3,10 +3,14 @@ language: ruby
 install: skip
 script: skip
 
+env:
+  - API_KEY=foobar
+
 deploy:
-  provider: cloudfoundry
+  provider: releases
+  api_key: "$API_KEY"
   edge:
-    branch: ha-cf-mac
+    branch: releases-debug
   on:
     all_branches: true
 
