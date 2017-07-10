@@ -1,22 +1,24 @@
-language: ruby
+language: c
 
 sudo: false
 
 dist: trusty
 
+compiler: "\"clang --target=aarch64-linux-gnu\""
+
 install: skip
 script: skip
 
-env:
-  - API_KEY=foobar
+# env:
+#   - API_KEY=foobar
 
-deploy:
-  provider: releases
-  api_key: "$API_KEY"
-  edge:
-    branch: releases-debug
-  on:
-    all_branches: true
+# deploy:
+#   provider: releases
+#   api_key: "$API_KEY"
+#   edge:
+#     branch: releases-debug
+#   on:
+#     all_branches: true
 
 # matrix:
 #   include:
