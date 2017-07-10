@@ -7,7 +7,7 @@ dist: trusty
 compiler: "\"clang --target=aarch64-linux-gnu\""
 
 install: skip
-script: skip
+script: $CC
 
 # env:
 #   - API_KEY=foobar
