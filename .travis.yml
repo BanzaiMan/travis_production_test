@@ -1,34 +1,25 @@
 dist: trusty
-sudo: required
+sudo: false
 
-cache: bundler
+language: python
 
-language: ruby
-
-rvm: 2.3.3
-
-matrix:
-  include:
-  - group: stable
-    env: GROUP=stable
-  - group: edge
-    env: GROUP=edge
 
 install: true
 
 script:
-- cat ~/build.sh
+- true
 
 # env:
 #   - API_KEY=foobar
 
-# deploy:
-#   provider: releases
-#   api_key: "$API_KEY"
-#   edge:
-#     branch: releases-debug
-#   on:
-#     all_branches: true
+deploy:
+  provider: pypi
+  user: foobar
+  password: password
+  edge:
+    branch: twine-user-install
+  on:
+    all_branches: true
 
 # matrix:
 #   include:
