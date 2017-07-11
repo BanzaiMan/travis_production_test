@@ -1,13 +1,11 @@
-language: c
+language: node_js
 
-sudo: false
+node_js: '8'
 
-dist: trusty
-
-compiler: "\"clang --target=aarch64-linux-gnu\""
+osx_image: xcode8.1
 
 install: skip
-script: $CC
+script: skip
 
 # env:
 #   - API_KEY=foobar
