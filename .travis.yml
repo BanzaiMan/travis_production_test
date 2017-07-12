@@ -1,42 +1,34 @@
-dist: trusty
-sudo: false
+language: java
 
-language: python
+jdk: openjdk8
 
-python:
-  - '3.6'
-
-install: true
+install: skip
 
 script:
-- true
+- javac -J-Xmx32m -version | grep 8
 
-# env:
-#   - API_KEY=foobar
-
-deploy:
-  provider: pypi
-  user: foobar
-  password: password
-  edge:
-    branch: twine-user-install
-  on:
-    all_branches: true
-
-# matrix:
-#   include:
-#     - sudo: false
-#       dist: precise
-#       env: DIST=precise STACK=EC2
+matrix:
+  include:
+    # - sudo: false
+    #   dist: precise
+    #   env: DIST=precise STACK=EC2
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
-    # - sudo: required
-    #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
+    - sudo: false
+      dist: trusty
+      group: edge
+      env: DIST=trusty STACK=EC2 GROUP=edge
+    - sudo: required
+      dist: trusty
+      group: edge
+      env: DIST=trusty STACK=GCE GROUP=edge
     # - os: osx
 
 notifications:
