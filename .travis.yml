@@ -5,7 +5,7 @@ jdk: openjdk8
 install: skip
 
 script:
-- javac -J-Xmx32m -version | grep 8
+- javac -J-Xmx32m -version
 
 matrix:
   include:
