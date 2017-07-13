@@ -4,6 +4,7 @@ install: skip
 
 script:
 - eval `ssh-agent -s`
+- ssh-agent -k
 
 matrix:
   include:
@@ -16,9 +17,9 @@ matrix:
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     - sudo: false
       dist: trusty
       group: edge
