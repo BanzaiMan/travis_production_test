@@ -1,11 +1,13 @@
-language: java
+language: php
 
-jdk: openjdk8
+php:
+  - '5.6'
+  - '7.0'
 
 install: skip
 
 script:
-- javac -J-Xmx32m -version
+- ./show_php.sh
 
 matrix:
   include:
@@ -18,17 +20,17 @@ matrix:
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     - sudo: false
       dist: trusty
       group: edge
       env: DIST=trusty STACK=EC2 GROUP=edge
-    - sudo: required
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=GCE GROUP=edge
+    # - sudo: required
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=GCE GROUP=edge
     # - os: osx
 
 notifications:
