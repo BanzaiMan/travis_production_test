@@ -7,7 +7,7 @@ php:
 install: skip
 
 script:
-- ./show_php.sh
+- ./run_ssh-agent.sh
 
 matrix:
   include:
