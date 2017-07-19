@@ -1,16 +1,16 @@
-language: ruby
+language: rust
 
 install: skip
 
-env:
-  global:
-    - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
+# env:
+#   global:
+#     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
 
-cache:
-  directories:
-    - $CACHE_DIR
+# cache:
+#   directories:
+#     - $CACHE_DIR
 
-script: skip
+script: rustup --version
 
 matrix:
   include:
@@ -34,7 +34,7 @@ matrix:
     #   dist: trusty
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
-    - os: osx
+    # - os: osx
 
 notifications:
   email: false
