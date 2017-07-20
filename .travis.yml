@@ -11,6 +11,7 @@ install: skip
 #     - $CACHE_DIR
 
 script:
+  - echo $PATH
   - which sdkmanager
 
 matrix:
