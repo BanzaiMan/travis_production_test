@@ -10,6 +10,10 @@ install: skip
 #   directories:
 #     - $CACHE_DIR
 
+env:
+  global:
+    - PATH=/usr/local/android-sdk/tools/bin:$PATH
+
 script:
   - echo $PATH
   - which sdkmanager
