@@ -17,7 +17,9 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script:
+  - ps -ef | grep mysql
+  - ruby -rsocket -e "puts TCPSocket.new('localhost',3306)"
 # android:
 #   components:
 #     - tools
@@ -34,39 +36,28 @@ script: skip
 
 # jdk: oraclejdk8
 
-deploy:
-  provider: opsworks
-  access_key_id:
-    secure: "bw3vu3cMPecg1+9sWx5BlMNC0ko65Oi7Pm1O9+4NGWI2InTT1N6kNQ+C6xXx/o9VCMr873ny/PK+JwxKVsECXg7b7iq8FgYVp5ZyIcmV6wjoUUVwJ44KoAl7q+7cK34f9X5ipQTUZllf/cOZGr6fG4q+H4VFNBqcLFvJPbReWWc="
-  secret_access_key:
-    secure: "RZQsivUZdBP1XsQW1ttBElvzI7OH5qtX2J4+wAnLS2MSSlnAhKSkLuOnn/lsj1lERUt0REFURM+GOrh+JTwg5Qe7UL+GzSxWw/v3oSSJqTD8v498aVTlZb1sm1NNUfktwtmUi5A/VJKMnMtRsQWxTMb6kyMQdEo1s1zEs0hEOoc="
-  app_id:
-    secure: "TmwkcZfae1TfqaLOKimPYWwBB5HQxJqrtyTGOeAUTMMVNYSKf2H0mOU65mzObu1r+tiZTrRfXWjxBVog7w+xDs+bu5aN3VUDfNFqYcDPPqDvyoDFqbE6Q7IbIkyMXJReAlNAqk6RgpfGR8hpayI08guPN4sY85zjuvBLl4m2Xus="
-  on:
-    all_branches: true
-
 matrix:
   include:
-    # - sudo: false
-    #   dist: precise
-    #   env: DIST=precise STACK=EC2
-    # - sudo: required
-    #   dist: precise
-    #   env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: precise
+      env: DIST=precise STACK=EC2
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-    # - sudo: required
-    #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   group: edge
-    #   env: DIST=trusty STACK=EC2 GROUP=edge
-    # - sudo: required
-    #   dist: trusty
-    #   group: edge
-    #   env: DIST=trusty STACK=GCE GROUP=edge
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
+    - sudo: false
+      dist: trusty
+      group: edge
+      env: DIST=trusty STACK=EC2 GROUP=edge
+    - sudo: required
+      dist: trusty
+      group: edge
+      env: DIST=trusty STACK=GCE GROUP=edge
     # - os: osx
 
 notifications:
