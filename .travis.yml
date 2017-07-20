@@ -36,10 +36,12 @@ script: skip
 
 deploy:
   provider: opsworks
-  access_key_id: 'AKIAJ7LIX3NCZZYLK4EQ'
+  access_key_id:
+    secure: "bw3vu3cMPecg1+9sWx5BlMNC0ko65Oi7Pm1O9+4NGWI2InTT1N6kNQ+C6xXx/o9VCMr873ny/PK+JwxKVsECXg7b7iq8FgYVp5ZyIcmV6wjoUUVwJ44KoAl7q+7cK34f9X5ipQTUZllf/cOZGr6fG4q+H4VFNBqcLFvJPbReWWc="
   secret_access_key:
-    secure: "m32YMDQltjOxmnpaghmmDTiWZHIVlg/3XyVgScolfX4DGPPDb5WsgcifQmTdwJhyuxyX8IpybA2w5muEmmTO7BkLlhUUcqg2TOOFfmEWZFzRhJxbIXdnqtdkwSsRNT/Tirt3pDxjOlaKaXVHaK4+IshgXeIbvMlKHVu7pEg7X8E="
-  app_id: '41f58ea1-43bc-4cc3-b13d-7d2ff705cd9e'
+    secure: "RZQsivUZdBP1XsQW1ttBElvzI7OH5qtX2J4+wAnLS2MSSlnAhKSkLuOnn/lsj1lERUt0REFURM+GOrh+JTwg5Qe7UL+GzSxWw/v3oSSJqTD8v498aVTlZb1sm1NNUfktwtmUi5A/VJKMnMtRsQWxTMb6kyMQdEo1s1zEs0hEOoc="
+  app_id:
+    secure: "TmwkcZfae1TfqaLOKimPYWwBB5HQxJqrtyTGOeAUTMMVNYSKf2H0mOU65mzObu1r+tiZTrRfXWjxBVog7w+xDs+bu5aN3VUDfNFqYcDPPqDvyoDFqbE6Q7IbIkyMXJReAlNAqk6RgpfGR8hpayI08guPN4sY85zjuvBLl4m2Xus="
   on:
     all_branches: true
 
