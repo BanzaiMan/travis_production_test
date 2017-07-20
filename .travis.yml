@@ -18,8 +18,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - ps -ef | grep mysql
-  - ruby -rsocket -e "puts TCPSocket.new('localhost',3306)"
+  - dpkg -l | grep -i haveged
 # android:
 #   components:
 #     - tools
