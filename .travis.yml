@@ -19,6 +19,7 @@ install: skip
 
 script:
   - dpkg -l | grep -i haveged
+  - pes -ef | grep -i haveged
 # android:
 #   components:
 #     - tools
