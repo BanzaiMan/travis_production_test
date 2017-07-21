@@ -4,18 +4,8 @@ php:
   - '7'
 
 addons:
-  apt:
-    sources:
-      - mysql-5.7-trusty
-    packages:
-      - mysql-client
-      - mysql-server
-      - mysql-common
   jwt:
     secure: "R/vo2Gxqim125F8NIN7/9Vh9pxt6qUk8CfeCc9T+PIX2F3K4glDt/Zm24l21Btr4868qJYl0U3CSvCN7cpOIciiOpueY5/JQayTn7cDu+vlZSzn3KaIzXBW0Mt+K6e3qswL6i1kHbfAj/ETkCKNpggWRAEsY3lJQhsC4cEvipIk="
-
-services:
-  - mysql
 
 
 install: skip
