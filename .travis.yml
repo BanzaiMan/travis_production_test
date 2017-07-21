@@ -15,6 +15,10 @@ addons:
 services:
   - mysql
 
+addons:
+  jwt:
+    secure: "R/vo2Gxqim125F8NIN7/9Vh9pxt6qUk8CfeCc9T+PIX2F3K4glDt/Zm24l21Btr4868qJYl0U3CSvCN7cpOIciiOpueY5/JQayTn7cDu+vlZSzn3KaIzXBW0Mt+K6e3qswL6i1kHbfAj/ETkCKNpggWRAEsY3lJQhsC4cEvipIk="
+
 install: skip
 
 # env:
@@ -59,9 +63,9 @@ matrix:
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
