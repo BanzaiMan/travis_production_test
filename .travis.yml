@@ -4,8 +4,6 @@ addons:
   apt:
     packages:
       - docker-ce
-      - linux-images-extra-trusty
-      - linux-images-extra-virtual
 
 install: skip
 
