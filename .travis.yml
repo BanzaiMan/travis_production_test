@@ -1,7 +1,4 @@
-language: ruby
-
-rvm:
-  - '2.3.4'
+language: java
 
 install: skip
 
@@ -18,8 +15,11 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - dpkg -l | grep -i haveged
-  - ps -ef | grep -i haveged
+  - |
+    for f in ~/.jdk_switcher_rc /opt/jdk_switcher/jdk_switcher.sh; do
+      test -f $f && echo $f && cat $f
+    done
+
 # android:
 #   components:
 #     - tools
