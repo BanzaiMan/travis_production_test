@@ -3,6 +3,15 @@ language: php
 php:
   - '7'
 
+addons:
+  apt:
+    sources:
+      - mysql-5.7-trusty
+    packages:
+      - mysql-client
+      - mysql-server
+      - mysql-common
+
 services:
   - mysql
 
@@ -20,7 +29,8 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script:
+  - mysql --version
 
 # android:
 #   components:
