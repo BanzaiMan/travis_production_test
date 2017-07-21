@@ -1,9 +1,10 @@
-language: ruby
+language: php
 
-addons:
-  apt:
-    packages:
-      - docker-ce
+php:
+  - '7'
+
+services:
+  - mysql
 
 install: skip
 
@@ -19,7 +20,7 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: dpkg -l | grep docker
+script: skip
 
 # android:
 #   components:
@@ -45,9 +46,9 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
