@@ -5,9 +5,10 @@ install: skip
 jdk:
   - oraclejdk8
 
-apt:
-  packages:
-    - oracle-java9-installer
+addons:
+  apt:
+    packages:
+      - oracle-java9-installer
 
 # env:
 #   global:
