@@ -1,10 +1,11 @@
 language: ruby
 
 addons:
-  packages:
-    - docker-ce
-    - linux-images-extra-trusty
-    - linux-images-extra-virtual
+  apt:
+    packages:
+      - docker-ce
+      - linux-images-extra-trusty
+      - linux-images-extra-virtual
 
 install: skip
 
