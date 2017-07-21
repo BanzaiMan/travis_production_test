@@ -23,7 +23,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - mysql --version
+  - env
 
 # android:
 #   components:
