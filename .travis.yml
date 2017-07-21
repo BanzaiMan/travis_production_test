@@ -1,14 +1,10 @@
-language: java
+language: python
+
+python:
+  - pypy2.7-5.8.0
+  - pypy
 
 install: skip
-
-jdk:
-  - oraclejdk8
-
-addons:
-  apt:
-    packages:
-      - oracle-java9-installer
 
 # env:
 #   global:
@@ -22,14 +18,7 @@ addons:
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-before_install:
-  - jdk_switcher use oraclejdk9
-
-script:
-  - |
-    for f in ~/.jdk_switcher_rc /opt/jdk_switcher/jdk_switcher.sh; do
-      test -f $f && echo $f && cat $f
-    done
+script: skip
 
 # android:
 #   components:
