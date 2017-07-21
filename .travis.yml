@@ -2,6 +2,9 @@ language: java
 
 install: skip
 
+jdk:
+  - oraclejdk9
+
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
