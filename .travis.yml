@@ -3,7 +3,11 @@ language: java
 install: skip
 
 jdk:
-  - oraclejdk9
+  - oraclejdk8
+
+apt:
+  packages:
+    - oracle-java9-installer
 
 # env:
 #   global:
@@ -16,6 +20,9 @@ jdk:
 # env:
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
+
+before_install:
+  - jdk_switcher use oraclejdk9
 
 script:
   - |
