@@ -1,14 +1,8 @@
-language: java
+language: php
+
+php: 7.2
 
 install: skip
-
-jdk:
-  - oraclejdk8
-
-addons:
-  apt:
-    packages:
-      - oracle-java9-installer
 
 # env:
 #   global:
@@ -22,15 +16,8 @@ addons:
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-before_install:
-  - jdk_switcher use oraclejdk9
 
-script:
-  - |
-    for f in ~/.jdk_switcher_rc /opt/jdk_switcher/jdk_switcher.sh; do
-      test -f $f && echo $f && cat $f
-    done
-
+script: skip
 # android:
 #   components:
 #     - tools
@@ -47,29 +34,29 @@ script:
 
 # jdk: oraclejdk8
 
-matrix:
-  include:
+# matrix:
+#   include:
     - sudo: false
       dist: precise
       env: DIST=precise STACK=EC2
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-    - sudo: false
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=EC2 GROUP=edge
-    - sudo: required
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=GCE GROUP=edge
-    # - os: osx
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       group: edge
+#       env: DIST=trusty STACK=EC2 GROUP=edge
+#     - sudo: required
+#       dist: trusty
+#       group: edge
+#       env: DIST=trusty STACK=GCE GROUP=edge
+#     - os: osx
 
 notifications:
   email: false
@@ -79,4 +66,6 @@ notifications:
   #    - secure: "KZTfjxhkOdDDZYD2ThBILt2ShYtdEee3PudFZlQBfpxG9N470GfxnKVfOl7Odu4lN6cIupwC4S4BnehubEywSR99l60VmfhePUCTqDLYy+iR9+guTvaECdXdaau3jTKhFdu5u60ITsiw5Yb+hwAaGFO0HmQhqR9XVr/U8IGQlok="
   #  template:
   #    - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
+  #  on_success: always
+compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
   #  on_success: always
