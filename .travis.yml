@@ -17,6 +17,11 @@ rvm: '2.3'
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
+addons:
+  sauce_connect:
+    username: "Your Sauce Labs username"
+    access_key: "Your Sauce Labs access key"
+
 script:
   - touch Gemfile gemfile
   - ls -l Gemfile*
