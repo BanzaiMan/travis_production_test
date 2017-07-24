@@ -1,6 +1,12 @@
 language: php
 
-php: 7.2
+php:
+  - '7.2'
+  - nightly
+  - hhvm
+
+services:
+  - mysql
 
 install: skip
 
@@ -17,7 +23,8 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 
-script: skip
+script:
+  - mysql travis -e "select 1;"
 # android:
 #   components:
 #     - tools
