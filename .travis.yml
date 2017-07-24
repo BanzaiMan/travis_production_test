@@ -1,16 +1,9 @@
-language: php
+language: objective-c
 
-php:
-  - '7.2'
-  - nightly
-  - hhvm
-
-dist:
-  - trusty
-sudo: false
-
-services:
-  - mysql
+osx_image:
+  - xcode9
+  - xcode8.3
+  - xcode8.2
 
 install: skip
 
@@ -28,7 +21,7 @@ install: skip
 
 
 script:
-  - mysql travis -e "select 1;"
+  - find /usr/include -name features.h -o -name iostream.h -print -exec cat {} \;
 # android:
 #   components:
 #     - tools
