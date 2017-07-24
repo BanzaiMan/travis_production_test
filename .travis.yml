@@ -1,6 +1,6 @@
 language: objective-c
 
-# osx_image: xcode9
+osx_image: xcode9
 
 install: skip
 
@@ -17,9 +17,9 @@ rvm: '2.3'
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-
 script:
-  - grep -e '^#include <features.h>' -r /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/
+  - touch Gemfile gemfile
+  - ls -l Gemfile*
 # android:
 #   components:
 #     - tools
