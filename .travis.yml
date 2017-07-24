@@ -21,7 +21,7 @@ install: skip
 
 
 script:
-  - find /usr/include -name features.h -o -name iostream.h -print -exec cat {} \;
+  - grep -e '^#include <features.h>' -r /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/
 # android:
 #   components:
 #     - tools
