@@ -1,9 +1,6 @@
 language: objective-c
 
-osx_image:
-  - xcode9
-  - xcode8.3
-  - xcode8.2
+# osx_image: xcode9
 
 install: skip
 
