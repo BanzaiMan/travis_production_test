@@ -7,7 +7,7 @@ php:
 
 dist:
   - trusty
-sudo: fasle
+sudo: false
 
 services:
   - mysql
