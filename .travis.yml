@@ -4,6 +4,7 @@ language: objective-c
 
 install: skip
 
+rvm: '2.3'
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
