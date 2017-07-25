@@ -1,5 +1,9 @@
 language: erlang
 
+sudo: false
+
+dist: trusty
+
 otp_release:
   - '19.3'
   - '19.3.6.1'
