@@ -2,6 +2,8 @@ language: ruby
 
 install: skip
 
+rvm: 1.9.3
+
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -14,8 +16,7 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script:
-  - rvm list
+script: skip
 # android:
 #   components:
 #     - tools
@@ -37,24 +38,31 @@ matrix:
     - sudo: false
       dist: precise
       env: DIST=precise STACK=EC2
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-    - sudo: false
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=EC2 GROUP=edge
-    - sudo: required
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=GCE GROUP=edge
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=EC2 GROUP=edge
+    # - sudo: required
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
+
+deploy:
+  provider: openshift
+  edge:
+    branch: openshift-deps
+  on:
+    all_branches: true
 
 notifications:
   email: false
