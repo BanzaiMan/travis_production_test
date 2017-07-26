@@ -1,12 +1,10 @@
-language: erlang
+language: node_js
+
+node_js: 8
 
 sudo: false
 
 dist: trusty
-
-otp_release:
-  - '19.3'
-  - '19.3.6.1'
 
 install: skip
 
@@ -22,7 +20,9 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script:
+  - nvm run 6 npm run lambda:publish
+
 # android:
 #   components:
 #     - tools
