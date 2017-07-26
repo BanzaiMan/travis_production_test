@@ -15,7 +15,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 
-script: dpkg -L docker-engine
+script: dpkg -L docker-ce
 
 # android:
 #   components:
