@@ -1,4 +1,10 @@
-language: node_js
+language: elixir
+
+elixir:
+  - 1.5.0
+
+otp_release:
+  - 20.0.0
 
 install: skip
 
@@ -15,7 +21,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 
-script: dpkg -L docker-ce
+script: elixir --version
 
 # android:
 #   components:
@@ -41,12 +47,12 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
-    - sudo: required
+    - sudo: false
       dist: trusty
-      env: DIST=trusty STACK=GCE
+      env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
