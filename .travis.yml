@@ -17,7 +17,8 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: which sdkmanager
+script: umask
+
 # android:
 #   components:
 #     - tools
