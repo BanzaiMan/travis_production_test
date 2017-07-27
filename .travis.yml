@@ -17,20 +17,20 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
-android:
-  components:
-    - tools
-    - platform-tools
-    - tools
+script: which sdkmanager
+# android:
+#   components:
+#     - tools
+#     - platform-tools
+#     - tools
 
-    - android-26
+#     - android-26
 
-    - build-tools-26.0.0
-    - extra
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - extra-android-support
+#     - build-tools-26.0.0
+#     - extra
+#     - extra-google-m2repository
+#     - extra-android-m2repository
+#     - extra-android-support
 
 # jdk: oraclejdk8
 
