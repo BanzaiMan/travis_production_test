@@ -1,5 +1,7 @@
 language: ruby
 
+sudo: false
+
 install: skip
 
 # env:
@@ -33,6 +35,17 @@ script: echo $TZ
 #     - extra-android-support
 
 # jdk: oraclejdk8
+
+jobs:
+  allow_failures:
+    - before_script: "false"
+  include:
+    - stage: "one"
+      script: true
+    - stage: "two"
+      before_script: "false"
+    - stage: three
+      script: echo three
 
 # matrix:
 #   include:
