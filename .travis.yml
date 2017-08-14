@@ -1,15 +1,16 @@
-language: node_js
+language: java
+sudo: false # optional
 
-node_js: 6.9.1
+addons:
+  apt:
+    packages:
+      - openjdk-8
 
-install: npm install
+jdk: openjdk8
 
-script:
-  - git config --global user.email "you@example.com"
-  - git config --global user.name "Your Name"
-  - git --version
-  - touch foo
-  - git stash --all
+install: skip
+
+script: skip
 
 # android:
 #   components:
