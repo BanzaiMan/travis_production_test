@@ -5,6 +5,7 @@ r: release
 sudo: false
 
 install: skip
+script: cat ~/build.sh
 
 deploy:
   provider: script
