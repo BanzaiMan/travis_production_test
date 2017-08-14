@@ -6,7 +6,10 @@ addons:
     packages:
       - openjdk-8
 
-jdk: openjdk8
+jdk: oraclejdk8
+
+before_isntall:
+  - jdk_switcher use openjdk8
 
 install: skip
 
