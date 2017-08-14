@@ -2,7 +2,7 @@ language: node_js
 
 node_js: 6.9.1
 
-install: skip
+install: npm install
 
 script:
   - git config --global user.email "you@example.com"
