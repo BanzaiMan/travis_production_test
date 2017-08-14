@@ -5,6 +5,8 @@ node_js: 6.9.1
 install: skip
 
 script:
+  - git config --global user.email "you@example.com"
+  - git config --global user.name "Your Name"
   - git --version
   - touch foo
   - git stash --all
