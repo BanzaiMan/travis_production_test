@@ -1,8 +1,17 @@
-language: python
+language: c
 
 sudo: false
 
+before_install:
+  - mkdir $HOME/cmake
+  - wget https://cmake.org/files/v3.9/cmake-3.9.1-Linux-x86_64.sh
+  - sh cmake-3.9.1-Linux-x86_64.sh -- --skip-license --prefix=$HOME/cmake
+
 install: skip
+
+env:
+  global:
+    - PATH=$HOME/cmake/bin:$PATH
 
 # env:
 #   global:
@@ -17,8 +26,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - echo $PATH | tr ":" "\n"
-  - which python
+  - cmake --version
 
 
 matrix:
@@ -35,14 +43,14 @@ matrix:
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
-    - sudo: false
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=EC2 GROUP=edge
-    - sudo: required
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=GCE GROUP=edge
+    # - sudo: false
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=EC2 GROUP=edge
+    # - sudo: required
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
 notifications:
