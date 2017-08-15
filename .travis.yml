@@ -17,7 +17,9 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: android list targets
+script:
+  - df -h
+  - android list targets
 
 # android:
 #   components:
