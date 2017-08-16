@@ -1,7 +1,5 @@
 language: generic
 
-sudo: false
-
 install: skip
 
 dist: trusty
