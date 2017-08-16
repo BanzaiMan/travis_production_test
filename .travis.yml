@@ -7,6 +7,9 @@ install: skip
 dist: trusty
 
 addons:
+  sources:
+    - ubuntu-toolchain-r-test
+    - sourceline: 'ppa:webupd8team/java'
   apt:
     packages:
       - oracle-java8-installer
