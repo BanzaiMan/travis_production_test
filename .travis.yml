@@ -21,7 +21,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - find ~ -name *.pc
+  - find /opt/ -name *.pc
 
 
 # matrix:
