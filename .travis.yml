@@ -24,8 +24,6 @@ script:
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
-
 matrix:
   include:
     - sudo: false
