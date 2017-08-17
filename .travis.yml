@@ -6,10 +6,13 @@ dist: trusty
 
 otp_release:
   - '19.3'
-  - '19.3.6.1'
+  - '20.0'
 
 install: skip
 
+script:
+  - which rebar || true
+  - which rebar3 || true
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
