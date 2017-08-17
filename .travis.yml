@@ -6,7 +6,6 @@ dist: trusty
 
 otp_release:
   - '19.3'
-  - '20.0'
 
 install: skip
 
@@ -26,36 +25,21 @@ script:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script: skip
-# android:
-#   components:
-#     - tools
-#     - platform-tools
-#     - tools
 
-#     - android-25
-
-#     - build-tools-25.0.2
-#     - extra
-#     - extra-google-m2repository
-#     - extra-android-m2repository
-#     - extra-android-support
-
-# jdk: oraclejdk8
-
-# matrix:
-#   include:
-#     - sudo: false
-#       dist: precise
-#       env: DIST=precise STACK=EC2
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-#     - sudo: false
-#       dist: trusty
-#       env: DIST=trusty STACK=EC2
-#     - sudo: required
-#       dist: trusty
-#       env: DIST=trusty STACK=GCE
+matrix:
+  include:
+    - sudo: false
+      dist: precise
+      env: DIST=precise STACK=EC2
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
 #     - sudo: false
 #       dist: trusty
 #       group: edge
