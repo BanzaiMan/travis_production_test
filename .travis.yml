@@ -4,13 +4,14 @@ sudo: false
 
 install: skip
 
-apt:
-  sources:
-    - ubuntu-toolchain-r-test
-    - llvm-toolchain-trusty
-packages:
-  - clang-5.0
-  - g++-5
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-trusty
+    packages:
+      - clang-5.0
+      - g++-5
 
 # env:
 #   global:
