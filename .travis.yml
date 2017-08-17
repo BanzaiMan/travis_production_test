@@ -2,16 +2,15 @@ language: c
 
 sudo: false
 
-before_install:
-  - mkdir $HOME/cmake
-  - wget https://cmake.org/files/v3.9/cmake-3.9.1-Linux-x86_64.sh
-  - sh cmake-3.9.1-Linux-x86_64.sh -- --skip-license --prefix=$HOME/cmake
-
 install: skip
 
-env:
-  global:
-    - PATH=$HOME/cmake/bin:$PATH
+apt:
+  sources:
+    - ubuntu-toolchain-r-test
+    - llvm-toolchain-trusty
+packages:
+  - clang-5.0
+  - g++-5
 
 # env:
 #   global:
@@ -25,18 +24,16 @@ env:
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script:
-  - cmake --version
-
+script: skip
 
 matrix:
   include:
-    - sudo: false
-      dist: precise
-      env: DIST=precise STACK=EC2
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
+    # - sudo: false
+    #   dist: precise
+    #   env: DIST=precise STACK=EC2
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
