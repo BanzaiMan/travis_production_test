@@ -7,7 +7,7 @@ before_deploy:
   - which -a fpm
 deploy:
   provider: script
-  script: bash -c 'echo $PATH && which -a fpm'
+  script: rvm $TRAVIS_RUBY_VERSION do bash -c 'echo $PATH && which -a fpm'
   skip_cleanup: true
   on:
     all_branches: true
