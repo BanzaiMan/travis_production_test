@@ -1,22 +1,12 @@
 language: ruby
-script: true
-before_deploy:
-  - gem install --no-rdoc --no-ri fpm
-  - gem which fpm
-  - echo $PATH
-  - which -a fpm
-deploy:
-  provider: script
-  script: rvm $TRAVIS_RUBY_VERSION do bash -c 'echo $PATH && which -a fpm'
-  skip_cleanup: true
-  on:
-    all_branches: true
 
 sudo: false
 
 dist: trusty
 
-# jdk: oraclejdk8
+install: skip
+
+script: skip
 
 matrix:
   include:
@@ -42,14 +32,14 @@ matrix:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
-# deploy:
-#   provider: releases
-#   api_key:
-#     secure: "JFN13iCV/XC1Jn9nwZ0/fjc18OB+JobYQcZQWFNRP2geAfrfvTb1FcGumMXsa/sQjyuTT7yCjPZtToSk6kqXAIlVq08OXLL5nXz0fiIp/dh6aRrOYn6Ddg8P9Vi05a+VFgWnd280VgeFIP+X8d6TuXKiyPLXVNsr7oCdU67Swj4="
-#   file: "Rakefile"
-#   skip_cleanup: true
-#   on:
-#     all_branches: true
+deploy:
+  provider: releases
+  api_key:
+    secure: "JFN13iCV/XC1Jn9nwZ0/fjc18OB+JobYQcZQWFNRP2geAfrfvTb1FcGumMXsa/sQjyuTT7yCjPZtToSk6kqXAIlVq08OXLL5nXz0fiIp/dh6aRrOYn6Ddg8P9Vi05a+VFgWnd280VgeFIP+X8d6TuXKiyPLXVNsr7oCdU67Swj4="
+  file: "Rakefile"
+  skip_cleanup: true
+  on:
+    all_branches: true
 
 notifications:
   email: false
