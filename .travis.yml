@@ -39,7 +39,7 @@ deploy:
   file: "Rakefile"
   skip_cleanup: true
   on:
-    all_branches: true
+    tags: false
 
 notifications:
   email: false
