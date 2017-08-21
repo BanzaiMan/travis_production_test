@@ -32,6 +32,9 @@ matrix:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
+before_deploy:
+  - git tag "$(git branch | grep \* | cut -d ' ' -f2-)-$(git log --format=%h -1)"
+
 deploy:
   provider: releases
   api_key:
@@ -39,7 +42,7 @@ deploy:
   file: "Rakefile"
   skip_cleanup: true
   on:
-    tags: false
+    all_branches: true
 
 notifications:
   email: false
