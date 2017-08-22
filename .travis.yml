@@ -1,6 +1,6 @@
 language: ruby
 
-sudo: false
+sudo: required
 
 dist: trusty
 
@@ -16,12 +16,12 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    # - sudo: required
+    # - sudo: false
     #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
+    #   env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
@@ -32,15 +32,10 @@ matrix:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
-before_deploy:
-  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
-
 deploy:
-  provider: releases
-  api_key:
-    secure: "JFN13iCV/XC1Jn9nwZ0/fjc18OB+JobYQcZQWFNRP2geAfrfvTb1FcGumMXsa/sQjyuTT7yCjPZtToSk6kqXAIlVq08OXLL5nXz0fiIp/dh6aRrOYn6Ddg8P9Vi05a+VFgWnd280VgeFIP+X8d6TuXKiyPLXVNsr7oCdU67Swj4="
-  file: "Rakefile"
-  skip_cleanup: true
+  provider: script
+  script:
+    - docker --version
   on:
     all_branches: true
 
