@@ -35,7 +35,8 @@ matrix:
 deploy:
   provider: script
   script:
-    - docker --version && docker --version
+    - docker --version && \
+      docker --version
   on:
     all_branches: true
 
