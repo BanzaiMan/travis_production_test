@@ -1,6 +1,6 @@
 language: ruby
 
-sudo: required
+sudo: false
 
 dist: trusty
 
@@ -16,12 +16,12 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
-    - sudo: required
+    - sudo: false
       dist: trusty
-      env: DIST=trusty STACK=GCE
+      env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
@@ -35,8 +35,7 @@ matrix:
 deploy:
   provider: script
   script:
-    - docker --version && \
-      docker --version
+    - echo "foo"
   on:
     all_branches: true
 
