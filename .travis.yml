@@ -23,6 +23,34 @@ jobs:
       - GROUP=examples
       - PYTHON=3.4
       - EXTRA_CMD=--no-js
+    - env:
+      - GROUP=examples
+      - PYTHON=3.4
+      - EXTRA_CMD=--no-js
+    - env:
+      - GROUP=examples
+      - PYTHON=3.4
+      - EXTRA_CMD=--no-js
+    - env:
+      - GROUP=examples
+      - PYTHON=3.4
+      - EXTRA_CMD=--no-js
+    - env:
+      - GROUP=examples
+      - PYTHON=3.4
+      - EXTRA_CMD=--no-js
+    - env:
+      - GROUP=examples
+      - PYTHON=3.4
+      - EXTRA_CMD=--no-js
+    - env:
+      - GROUP=examples
+      - PYTHON=3.4
+      - EXTRA_CMD=--no-js
+    - env:
+      - GROUP=examples
+      - PYTHON=3.4
+      - EXTRA_CMD=--no-js
 
     - stage: deploy
       script: echo yay!
