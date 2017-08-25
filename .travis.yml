@@ -6,21 +6,38 @@ dist: trusty
 
 install: skip
 
-script:
-  - ssh -V
-  - ssh -Q key || trye
+script: skip
 
-matrix:
+jobs:
   include:
-    - sudo: false
-      dist: precise
-      env: DIST=precise STACK=EC2
-    # - sudo: required
-    #   dist: precise
-    #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    - stage: build
+      install: scripts/ci/install:build
+      script: scripts/ci/build
+
+    - stage: test
+      env:
+      - GROUP=examples
+      - PYTHON=2.7
+
+    - env:
+      - GROUP=examples
+      - PYTHON=3.4
+      - EXTRA_CMD=--no-js
+
+    - stage: deploy
+      script: echo yay!
+
+# matrix:
+#   include:
+#     - sudo: false
+#       dist: precise
+#       env: DIST=precise STACK=EC2
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
@@ -33,6 +50,8 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
+
+
 
 notifications:
   email: false
