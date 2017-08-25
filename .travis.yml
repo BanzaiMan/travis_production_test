@@ -10,11 +10,11 @@ script: skip
 
 jobs:
   include:
-    - stage: build
+    - stage: alpha
       install: scripts/ci/install:build
       script: scripts/ci/build
 
-    - stage: test
+    - stage: bravo
       env:
       - GROUP=examples
       - PYTHON=2.7
@@ -52,7 +52,7 @@ jobs:
       - PYTHON=3.4
       - EXTRA_CMD=--no-js
 
-    - stage: deploy
+    - stage: charlie
       script: echo yay!
 
 # matrix:
