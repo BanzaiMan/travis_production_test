@@ -37,7 +37,7 @@ deploy:
     branch: ruby-2.3
   provider: script
   script: ruby --version
-  if:
+  on:
     all_branches: true
 
 notifications:
