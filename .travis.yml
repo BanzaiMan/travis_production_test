@@ -2,6 +2,9 @@ language: ruby
 
 sudo: false
 
+rvm:
+  - '2.3'
+
 dist: trusty
 
 install: skip
@@ -36,7 +39,7 @@ deploy:
   edge:
     branch: ruby-2.3
   provider: script
-  script: ruby --version
+  script: rvm $TRAVIS_RUBY_VERSION do ruby --version
   on:
     all_branches: true
 
