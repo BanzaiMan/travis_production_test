@@ -8,53 +8,6 @@ install: skip
 
 script: skip
 
-jobs:
-  include:
-    - stage: alpha
-      install: scripts/ci/install:build
-      script: scripts/ci/build
-
-    - stage: bravo
-      env:
-      - GROUP=examples
-      - PYTHON=2.7
-
-    - env:
-      - GROUP=examples
-      - PYTHON=3.4
-      - EXTRA_CMD=--no-js
-    - env:
-      - GROUP=examples
-      - PYTHON=3.4
-      - EXTRA_CMD=--no-js
-    - env:
-      - GROUP=examples
-      - PYTHON=3.4
-      - EXTRA_CMD=--no-js
-    - env:
-      - GROUP=examples
-      - PYTHON=3.4
-      - EXTRA_CMD=--no-js
-    - env:
-      - GROUP=examples
-      - PYTHON=3.4
-      - EXTRA_CMD=--no-js
-    - env:
-      - GROUP=examples
-      - PYTHON=3.4
-      - EXTRA_CMD=--no-js
-    - env:
-      - GROUP=examples
-      - PYTHON=3.4
-      - EXTRA_CMD=--no-js
-    - env:
-      - GROUP=examples
-      - PYTHON=3.4
-      - EXTRA_CMD=--no-js
-
-    - stage: charlie
-      script: echo yay!
-
 # matrix:
 #   include:
 #     - sudo: false
@@ -79,7 +32,11 @@ jobs:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
-
+deploy:
+  edge:
+    branch: ruby-2.3
+  provider: script
+  script: ruby --version
 
 notifications:
   email: false
