@@ -1,14 +1,12 @@
-language: python
+alanguage: python
 
 python:
   - '2.7'
 
 sudo: false
 
-install:
-  - true
-script:
-  - touch 'foo bar'
+install: skip
+script: skip
 
 deploy:
   - provider: s3
@@ -18,11 +16,14 @@ deploy:
       secure: "Ld2IKkprljIQA9VexEWPG5b3bcvN6vpfC7anBByHRP805ssnMT+LpZAzb1SqrfhcmzVwRxEGVtGxDkcKCZeviVLZY72eWPipqg037bpvTi+cl8S4LoImTp/YKDHUON+/x/H3NbPatLGzLmtv1quFNu7KgHG+HFr9RKbOflIgDrc="
     bucket: "hiro.test.bucket.com"
     region: 'us-east-1'
-    on:
-      branch: test-s3-deployment
-      condition: $TRAVIS_EVENT_TYPE = cron
     skip_cleanup: true
     detect_encoding: true
-  #  cache_control: "max-age=31536000"
-    expires: "2012-12-21 00:00:00 -0000"
-    upload-dir: foo/bar/baz
+  - provider: codedeploy
+    access_key_id:
+      secure: "BZ5sn7H0WGzLk0HA2QBWGoE6hSgq2ua3ukQSMQlA4JXkSGpBXY4HjMKp4xi9lrgmRYh8s+i5ewTxrNDtKvsUV8KqdWGKrsAs6nV2Lc/8i0khxpy3hmwRQl7SRsHE57Txf6oCbfUVmPgnubw8w2R7VRCu9enWwqzeeL06rFm5QNM="
+    secret_access_key:
+      secure: "Ld2IKkprljIQA9VexEWPG5b3bcvN6vpfC7anBByHRP805ssnMT+LpZAzb1SqrfhcmzVwRxEGVtGxDkcKCZeviVLZY72eWPipqg037bpvTi+cl8S4LoImTp/YKDHUON+/x/H3NbPatLGzLmtv1quFNu7KgHG+HFr9RKbOflIgDrc="
+    bucket: "hiro.test.bucket.com"
+    region: 'us-east-1'
+    skip_cleanup: true
+    detect_encoding: true
