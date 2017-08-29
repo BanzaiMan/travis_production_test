@@ -1,4 +1,4 @@
-alanguage: python
+language: python
 
 python:
   - '2.7'
@@ -18,6 +18,8 @@ deploy:
     region: 'us-east-1'
     skip_cleanup: true
     detect_encoding: true
+    if:
+      all_branches: true
   - provider: codedeploy
     access_key_id:
       secure: "BZ5sn7H0WGzLk0HA2QBWGoE6hSgq2ua3ukQSMQlA4JXkSGpBXY4HjMKp4xi9lrgmRYh8s+i5ewTxrNDtKvsUV8KqdWGKrsAs6nV2Lc/8i0khxpy3hmwRQl7SRsHE57Txf6oCbfUVmPgnubw8w2R7VRCu9enWwqzeeL06rFm5QNM="
@@ -27,3 +29,5 @@ deploy:
     region: 'us-east-1'
     skip_cleanup: true
     detect_encoding: true
+    if:
+      all_branches: true
