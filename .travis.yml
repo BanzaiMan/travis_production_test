@@ -4,10 +4,6 @@ sudo: false
 
 dist: precise
 
-ghc:
-  - 7.8.x
-  - 8.0.x
-
 # cache: bundler
 
 matrix:
@@ -20,6 +16,10 @@ matrix:
     #   env: DIST=precise STACK=GCE
     - sudo: false
       ghc: '7.10'
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: false
+      ghc: '8.0'
       dist: trusty
       env: DIST=trusty STACK=EC2
     # - sudo: required
