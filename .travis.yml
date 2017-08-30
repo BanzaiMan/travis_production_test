@@ -10,25 +10,29 @@ ghc:
 
 # cache: bundler
 
-env:
-  - DIST=precise STACK=EC2
-
 matrix:
   include:
-    - sudo: required
+    - sudo: false
       dist: precise
-      env: DIST=precise STACK=GCE
+      env: DIST=precise STACK=EC2
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=EC2 GROUP=edge
+    # - sudo: required
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-#       osx_image: xcode8.3
-#       env: RELEASE=sierra
-#     - os: osx
-#       env: RELEASE=default
 
 # install:
 #   - true
