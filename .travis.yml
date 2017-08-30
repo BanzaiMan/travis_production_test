@@ -19,7 +19,7 @@ matrix:
       dist: trusty
       env: DIST=trusty STACK=EC2
     - sudo: false
-      ghc: '8.0'
+      ghc: '8.2.1'
       dist: trusty
       env: DIST=trusty STACK=EC2
     # - sudo: required
