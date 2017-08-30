@@ -19,6 +19,7 @@ matrix:
     #   dist: precise
     #   env: DIST=precise STACK=GCE
     - sudo: false
+      ghc: '7.10'
       dist: trusty
       env: DIST=trusty STACK=EC2
     # - sudo: required
