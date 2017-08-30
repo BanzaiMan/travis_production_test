@@ -1,4 +1,7 @@
-sudo: false
+sudo: haskell
+
+ghc:
+  - '7.10'
 
 install:
   - true
@@ -9,8 +12,3 @@ script:
 notifications:
   email: false
 
-deploy:
-  provider: script
-  script: echo hello
-  on:
-    condition: "true"
