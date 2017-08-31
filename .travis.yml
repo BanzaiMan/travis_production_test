@@ -32,8 +32,8 @@ matrix:
 deploy:
   provider: s3
   skip_cleanup: true
-  edge:
-    branch: mac-aws
+  if:
+    all_branches: true
 
 notifications:
   email: false
