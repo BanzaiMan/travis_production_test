@@ -2,9 +2,7 @@ language: ruby
 
 os: osx
 
-osx_image: xcode8.3
-
-rvm: '2.4.1'
+osx_image: xcode8.2
 
 install: skip
 
