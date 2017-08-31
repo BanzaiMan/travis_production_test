@@ -1,16 +1,44 @@
-sudo: false
+language: ruby
 
-install:
-  - true
+install: skip
 
-script:
-  - true
+script: skip
+
+matrix:
+  include:
+    - sudo: false
+      dist: precise
+      env: DIST=precise STACK=EC2
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=EC2 GROUP=edge
+    # - sudo: required
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=GCE GROUP=edge
+    - os: osx
+      osx_image: xcode8.2
+
+deploy:
+  provider: s3
+  skip_cleanup: true
 
 notifications:
   email: false
 
-deploy:
-  provider: script
-  script: echo hello
-  on:
-    condition: "true"
+  #  slack:
+  #  rooms:
+  #    - secure: "KZTfjxhkOdDDZYD2ThBILt2ShYtdEee3PudFZlQBfpxG9N470GfxnKVfOl7Odu4lN6cIupwC4S4BnehubEywSR99l60VmfhePUCTqDLYy+iR9+guTvaECdXdaau3jTKhFdu5u60ITsiw5Yb+hwAaGFO0HmQhqR9XVr/U8IGQlok="
+  #  template:
+  #    - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
+  #  on_success: always
