@@ -1,21 +1,19 @@
 language: java
-sudo: required
+sudo: false
+
+dist: trusty
 
 addons:
   apt:
-    sources:
-      - sourceline: ppa:openjdk-r/ppa
-    # packages:
-    #   - openjdk-8
+    packages:
+      - openjdk-6-jdk
 
-jdk: oraclejdk8
-
-before_isntall:
-  - jdk_switcher use openjdk8
+jdk: openjdk6
 
 install: skip
 
-script: skip
+script:
+  - java -version
 
 # android:
 #   components:
@@ -33,8 +31,8 @@ script: skip
 
 # jdk: oraclejdk8
 
-matrix:
-  include:
+# matrix:
+#   include:
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
@@ -44,9 +42,9 @@ matrix:
     # - sudo: false
     #   dist: trusty
     #   env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
