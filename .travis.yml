@@ -1,14 +1,15 @@
 language: php
 
+php:
+  - '5.6'
+  - '5.6.31'
+  - '7.0'
+
+dist: trusty
+
+sudo: false
+
 install: skip
-
-addons:
-  apt:
-    packages:
-      - haveged
-
-services:
-  - haveged
 
 # env:
 #   global:
@@ -24,7 +25,7 @@ services:
 
 
 script:
-  - ps -ef | grep -i haveged
+  - php <<<'<?php var_dump(gd_info());?>'
 # android:
 #   components:
 #     - tools
@@ -41,28 +42,28 @@ script:
 
 # jdk: oraclejdk8
 
-matrix:
-  include:
-    - sudo: false
-      dist: precise
-      env: DIST=precise STACK=EC2
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
-    - sudo: false
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=EC2 GROUP=edge
-    - sudo: required
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=GCE GROUP=edge
+# matrix:
+#   include:
+#     - sudo: false
+#       dist: precise
+#       env: DIST=precise STACK=EC2
+#     - sudo: required
+#       dist: precise
+#       env: DIST=precise STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       env: DIST=trusty STACK=EC2
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
+#     - sudo: false
+#       dist: trusty
+#       group: edge
+#       env: DIST=trusty STACK=EC2 GROUP=edge
+#     - sudo: required
+#       dist: trusty
+#       group: edge
+#       env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
 notifications:
