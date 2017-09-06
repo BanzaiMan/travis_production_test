@@ -2,6 +2,9 @@ language: python
 
 install: skip
 
+python:
+  '3.4'
+
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -14,10 +17,10 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script:
-  - which hg
-  - dpkg -l | grep -i mercu
-  - dpkg -L mercurial | grep hg$
+script: skip
+
+virtualenv:
+  system_site_packages: true
 
 matrix:
   include:
