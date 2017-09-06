@@ -5,11 +5,7 @@ node_js: 6.9.1
 install: npm install
 
 script:
-  - git config --global user.email "you@example.com"
-  - git config --global user.name "Your Name"
-  - git --version
-  - touch foo
-  - git stash --all
+  - yarn --version
 
 # android:
 #   components:
@@ -29,9 +25,9 @@ script:
 
 matrix:
   include:
-    - sudo: false
-      dist: precise
-      env: DIST=precise STACK=EC2
+    # - sudo: false
+    #   dist: precise
+    #   env: DIST=precise STACK=EC2
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
