@@ -1,8 +1,5 @@
 language: php
 
-php:
-  - '7.0'
-
 # dist: precise
 
 # sudo: false
@@ -22,7 +19,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 
-script: skip
+script: curl -sSf https://www.deadbeef.me/2016/01/ambiguous-function
 
 # android:
 #   components:
@@ -48,16 +45,16 @@ matrix:
 #     - sudo: required
 #       dist: precise
 #       env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
-    - sudo: false
-      dist: trusty
-      group: edge
-      env: DIST=trusty STACK=EC2 GROUP=edge
+    # - sudo: false
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=EC2 GROUP=edge
 #     - sudo: required
 #       dist: trusty
 #       group: edge
