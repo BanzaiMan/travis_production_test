@@ -24,21 +24,17 @@ env:
 
 script: skip
 
-# android:
-#   components:
-#     - tools
-#     - platform-tools
-#     - tools
 
-#     - android-26
+android:
+  components:
+    - tools                             # Tools
+    - platform-tools                    # Platform tools
+    - build-tools-26.0.1                # Build tools version
+    - android-26                        # Target SDK version
+    - extra-android-m2repository        # Support repo
+    - sys-img-x86-android-18
 
-#     - build-tools-26.0.0
-#     - extra
-#     - extra-google-m2repository
-#     - extra-android-m2repository
-#     - extra-android-support
-
-# jdk: oraclejdk8
+jdk: oraclejdk8
 
 matrix:
   include:
