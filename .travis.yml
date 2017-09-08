@@ -12,6 +12,7 @@ install: skip
 script:
   - rvm use 2.2.7 --install --binary --fuzzy
   - rvm use 2.4.1 --install --binary --fuzzy
+  - rvm use 2.4.1 --install --binary --fuzzy
 
 matrix:
   include:
