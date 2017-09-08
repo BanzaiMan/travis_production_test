@@ -1,6 +1,13 @@
 language: node_js
 
-node_js: 6.9.1
+node_js:
+  - '6.9.1'
+  - '8'
+  - 'stable'
+
+sudo: false
+
+dist: trusty
 
 install: npm install
 
@@ -31,9 +38,9 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
