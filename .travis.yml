@@ -4,17 +4,6 @@ sudo: false
 
 install: skip
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - llvm-toolchain-trusty-5.0
-    packages:
-      - clang-5.0
-      - g++-5
-
-compiler: clang-5.0
-
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -27,7 +16,7 @@ compiler: clang-5.0
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script: dpkg -l | egrep 'gcc|g\\+\\+'
 
 matrix:
   include:
