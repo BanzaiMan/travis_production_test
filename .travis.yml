@@ -1,16 +1,15 @@
+language: generic
+
+dist: trusty
+
 sudo: false
 
 install:
   - true
 
 script:
-  - true
+  - which pip
+  - pip --version
 
 notifications:
   email: false
-
-deploy:
-  provider: script
-  script: echo hello
-  on:
-    condition: "true"
