@@ -9,7 +9,9 @@ dist: trusty
 
 install: skip
 
-script: curl -IL https://www.deadbeef.me/2016/01/ambiguous-function
+script:
+  - rvm use 2.2.7 --install --binary --fuzzy
+  - rvm use 2.4.1 --install --binary --fuzzy
 
 matrix:
   include:
@@ -22,9 +24,9 @@ matrix:
     - sudo: false
       dist: trusty
       env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
