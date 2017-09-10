@@ -4,31 +4,30 @@ stage: "unit"
 
 node_js:
   - "8"
-  - "7"
-  - "6"
-  - "node"
+  # - "7"
+  # - "6"
+  # - "node"
 
 install:
   - "npm install"
 
-jobs:
-  include:
-    - stage: lint
-      script: npm run lint
-      install: skip
-    - stage: unit
-      script: npm run test
-    - stage: deploy
-      script: skip
+# jobs:
+#   include:
+#     - stage: lint
+#       script: npm run lint
+#       install: skip
+#     - stage: unit
+#       script: npm run test
+#     - stage: deploy
+#       script: skip
 
 sudo: false
 
 dist: trusty
 
-install: npm install
+install: skip
 
-script:
-  - yarn --version
+script: set -u
 
 # android:
 #   components:
