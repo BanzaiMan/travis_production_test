@@ -3,7 +3,7 @@ language: node_js
 stage: "unit"
 
 node_js:
-  - "0.10"
+  - "8"
   # - "7"
   # - "6"
   # - "node"
