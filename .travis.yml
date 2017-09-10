@@ -8,8 +8,7 @@ node_js:
   # - "6"
   # - "node"
 
-install:
-  - "npm install"
+install: skip
 
 # jobs:
 #   include:
@@ -25,9 +24,9 @@ sudo: false
 
 dist: trusty
 
-install: skip
-
-script: set -u
+script:
+  - nvm use 8
+  - node --version
 
 # android:
 #   components:
