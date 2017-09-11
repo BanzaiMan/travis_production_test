@@ -1,9 +1,11 @@
 language: php
 
-# dist: precise
+dist: trusty
 
-# sudo: false
+sudo: false
 
+php:
+  - hhvm
 install: skip
 
 # env:
@@ -19,7 +21,8 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 
-script: curl -sSf https://www.deadbeef.me/2016/01/ambiguous-function
+script:
+  - phpenv config-add .travis.php.ini
 
 # android:
 #   components:
