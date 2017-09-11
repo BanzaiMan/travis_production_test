@@ -4,8 +4,6 @@ dist: trusty
 
 sudo: false
 
-php:
-  - hhvm
 install: skip
 
 # env:
@@ -21,9 +19,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 
-script:
-  - touch .travis.php.ini
-  - phpenv config-add .travis.php.ini
+script: skip
 
 # android:
 #   components:
@@ -64,6 +60,12 @@ matrix:
 #       group: edge
 #       env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
+
+deploy:
+  provider: script
+  script: echo yo
+  on:
+    tags: "not!"
 
 notifications:
   email: false
