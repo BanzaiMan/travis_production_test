@@ -1,19 +1,14 @@
 language: ruby
 
-sudo: false
+sudo: required
 
-rvm:
-  - '2.3'
+dist: xenial
 
-dist: trusty
+group: edge
 
 install: skip
 
-script:
-  - rvm use 2.2.7 --install --binary --fuzzy
-  - rvm use 2.4.1 --install --binary --fuzzy
-  - rvm use 2.4.1 --install --binary --fuzzy
-  - cat ~/.rvm/hooks/after_use || true
+script: skip
 
 matrix:
   include:
@@ -23,9 +18,9 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
