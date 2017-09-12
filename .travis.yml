@@ -8,7 +8,9 @@ group: edge
 
 install: skip
 
-script: skip
+script:
+  - lsb_release -cs
+  - dpkg -l
 
 matrix:
   include:
