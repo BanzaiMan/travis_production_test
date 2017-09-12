@@ -14,10 +14,10 @@ install: skip
 #   directories:
 #     - $CACHE_DIR
 
-# env:
-#   global:
-#     - PATH=/usr/local/android-sdk/tools/bin:$PATH
-
+env:
+  global:
+    - APP_HOST=www.example.com
+    - APP_URL=http://$APP_HOST:8080
 
 script: skip
 
