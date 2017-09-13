@@ -10,6 +10,11 @@ install: skip
 
 script: skip
 
+addons:
+  apt:
+    packages:
+      - haveged
+
 matrix:
   include:
     # - sudo: false
