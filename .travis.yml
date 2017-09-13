@@ -26,6 +26,7 @@ script:
   - which python${TRAVIS_PYTHON_VERSION}-config
   - python${TRAVIS_PYTHON_VERSION}-config --ldflags
   - /opt/python/${TRAVIS_PYTHON_VERSION}/bin/python${TRAVIS_PYTHON_VERSION}-config --ldflags
+  - python -c "import distutils; print distutils.sysconfig.get_config_var('LIBPL')"
 
 matrix:
   include:
