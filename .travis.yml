@@ -10,15 +10,13 @@ install: skip
 
 script: skip
 
-addons:
-  apt:
-    packages:
-      - haveged
-services:
-  - haveged
+cache: bundler
 
-matrix:
+jobs:
   include:
+    - stage: cache
+    - stage: next
+      cache:
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
