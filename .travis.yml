@@ -1,16 +1,16 @@
 language: ruby
 
-sudo: required
+rvm: jruby
 
-dist: xenial
+jdk: oracljdk8
 
-group: edge
+sudo: false
+
+dist: trusty
 
 install: skip
 
-script:
-  - lsb_release -cs
-  - dpkg -l
+script: skip
 
 matrix:
   include:
