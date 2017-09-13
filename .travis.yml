@@ -23,8 +23,8 @@ python:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - which python-${TRAVIS_PYTHON_VERSION}-config
-  - python-${TRAVIS_PYTHON_VERSION}-config --ldflags
+  - which python${TRAVIS_PYTHON_VERSION}-config
+  - python${TRAVIS_PYTHON_VERSION}-config --ldflags
   - /opt/python/${TRAVIS_PYTHON_VERSION}/bin/python*-config --ldflags
 
 matrix:
