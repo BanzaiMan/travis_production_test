@@ -2,8 +2,13 @@ language: python
 
 install: skip
 
+dist: trusty
+
+sudo: false
+
 python:
   - '3.6'
+  - '2.7'
 
 # env:
 #   global:
@@ -17,7 +22,10 @@ python:
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script:
+  - which python-${TRAVIS_PYTHON_VERSION}-config
+  - python-${TRAVIS_PYTHON_VERSION}-config --ldflags
+  - /opt/python/${TRAVIS_PYTHON_VERSION}/bin/python*-config --ldflags
 
 matrix:
   include:
@@ -27,12 +35,12 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
