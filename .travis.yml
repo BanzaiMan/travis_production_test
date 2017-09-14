@@ -1,12 +1,15 @@
-language: ruby
+language: java
 
 os: osx
 
 osx_image: xcode8.2
 
+before_install:
+  - brew install gradle
+
 install: skip
 
-script: true
+script: which gradle
 
 # matrix:
 #   include:
