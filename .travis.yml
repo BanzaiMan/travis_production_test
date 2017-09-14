@@ -1,22 +1,22 @@
 language: ruby
 
-rvm: jruby
-
 sudo: false
 
 dist: trusty
 
 install: skip
 
-script: skip
+script:
+  - echo 1
+  - echo 2
 
 cache: bundler
 
-jobs:
-  include:
-    - stage: cache
-    - stage: next
-      cache:
+# jobs:
+#   include:
+#     - stage: cache
+#     - stage: next
+#       cache:
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
