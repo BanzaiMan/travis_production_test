@@ -1,16 +1,12 @@
 language: ruby
 
-addons:
-  ssh_known_hosts:
-    secure: "COHDB0Mrz9QgXLwUatOtWYGUDhB4i5vyJQL8SuqDhyz8VtnqDBCn7QVSHhCS/Tp5n/uZSDLNLQcLM4rwSLhHV3ScrwlIpIylXzWOHKiomWra6qClSEfkGZLpL806Xu5q4LVuule/lHXSoVvsldn9gpyM9BgnEo4qiQRWd+8LyIk="
-
 sudo: false
 
 dist: trusty
 
 install: skip
 
-script: skip
+script: touch foo-sudo
 
 # jobs:
 #   include:
