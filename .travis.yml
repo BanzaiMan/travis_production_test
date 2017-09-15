@@ -10,6 +10,8 @@ install: skip
 script:
   - mvn -version
 
+group: deprecated-2017Q3
+
 # android:
 #   components:
 #     - tools
