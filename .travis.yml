@@ -1,8 +1,19 @@
+dist: trusty
+sudo: required
 language: go
-
-go: '1.9.x'
-
+go: 1.9
+services:
+  - docker
 install: skip
+script: skip
+before_deploy:
+  - rvm list
+  - gem install fpm
+  - which fpm # /home/travis/.rvm/gems/ruby-2.4.1/bin/fpm
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: rvm travis_internal_ruby do which fpm # fails
 
 # env:
 #   global:
