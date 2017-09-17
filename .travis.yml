@@ -1,5 +1,5 @@
 dist: trusty
-sudo: required
+sudo: false
 language: go
 go: 1.9
 services:
@@ -13,7 +13,7 @@ before_deploy:
 deploy:
   skip_cleanup: true
   provider: script
-  script: rvm use travis_internal_ruby do which fpm # fails
+  script: rvm use $(travis_internal_ruby) do which fpm # fails
   on:
     branch: go
 
