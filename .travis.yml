@@ -13,7 +13,7 @@ before_deploy:
 deploy:
   skip_cleanup: true
   provider: script
-  script: rvm use $(travis_internal_ruby) do which fpm # fails
+  script: rvm use 2.4.1 do which fpm # fails
   on:
     branch: go
 
