@@ -3,14 +3,16 @@ sudo: false
 
 dist: trusty
 
-jdk: oraclejdk8
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+  - openjdk6
+  - openjdk7
 
 install: skip
 
 script:
   - mvn -version
-
-group: deprecated-2017Q3
 
 # android:
 #   components:
