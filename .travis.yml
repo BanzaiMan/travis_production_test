@@ -8,11 +8,11 @@ install: skip
 
 script: skip
 
-# jobs:
-#   include:
-#     - stage: cache
-#     - stage: next
-#       cache:
+matrix:
+  include:
+    - env: FOO=bar
+    - env: FOO=baz
+      if: branch = master
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
