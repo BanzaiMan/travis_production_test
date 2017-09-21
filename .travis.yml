@@ -5,29 +5,19 @@ sudo: false
 dist: trusty
 
 env:
-  - SERVICE=lint
-  - SERVICE=feeds
-  - SERVICE=projections
-
-script: echo ${SERVICE}
-
-stages:
-  - name: lint
-    if: env(SERVICE) = lint
-  - name: test
-    if: NOT env(SERVICE) = lint
-  - name: deploy
-
+  global:
+    - BUILD_DIR=/tmp/docker
 
 jobs:
   include:
     - stage: lint
-      script: echo 1
-    - stage: test
       env: SERVICE=lint
-      script: echo 2
+    - stage: test
+      env: SERVICE=feeds
+    - stage: test
+      env: SERVICE=projections
     - stage: deploy
-      script: echo 3
+      script: echo overridden
 
 notifications:
   email: false
