@@ -12,7 +12,7 @@ matrix:
   include:
     - env: FOO=bar
     - env: FOO=baz
-      if: branch = master
+      if: branch = ruby
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
