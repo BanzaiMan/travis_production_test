@@ -1,7 +1,6 @@
 language: c
 
 sudo: false
-
 install: skip
 
 dist: trusty
@@ -18,7 +17,7 @@ dist: trusty
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script: ./xvfb.sh
 
 matrix:
   include:
@@ -28,12 +27,12 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
-    # - sudo: required
-    #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
@@ -46,8 +45,6 @@ matrix:
 
 notifications:
   email: false
-  webhooks:
-    - https://requestb.in/y27or6y2
 
   #  slack:
   #  rooms:
