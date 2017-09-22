@@ -1,6 +1,6 @@
 language: c
 
-sudo: required
+sudo: false
 
 install: skip
 
@@ -18,7 +18,7 @@ dist: trusty
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: curl -v https://uploads.github.com/
+script: skip
 
 matrix:
   include:
@@ -46,6 +46,8 @@ matrix:
 
 notifications:
   email: false
+  webhooks:
+    - https://requestb.in/y27or6y2
 
   #  slack:
   #  rooms:
