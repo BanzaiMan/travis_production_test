@@ -10,6 +10,7 @@ if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
     trap : USR1
     (trap '' USR1; Xvfb $DISPLAY -screen 0 640x480x8 -nolisten tcp > /dev/null 2>&1) &
     XVFBPID=$!
+    ps -flp $XVFBPID
     wait || :
     trap '' USR1
     if ! kill -0 $XVFBPID 2> /dev/null; then

@@ -27,12 +27,12 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
