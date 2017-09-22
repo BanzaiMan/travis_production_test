@@ -1,7 +1,6 @@
 language: c
 
 sudo: false
-
 install: skip
 
 dist: trusty
