@@ -1,8 +1,10 @@
 language: c
 
-sudo: false
+sudo: required
 
 install: skip
+
+dist: trusty
 
 # env:
 #   global:
@@ -16,7 +18,7 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: dpkg -l | egrep 'gcc|g\\+\\+'
+script: curl -v https://uploads.github.com/
 
 matrix:
   include:
@@ -26,9 +28,9 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
