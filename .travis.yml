@@ -5,8 +5,11 @@ sudo: false
 script:
   - "echo $PATH | tr : \"\\n\""
   - evm install $EVM_EMACS --use --skip
+  - "echo $PATH | tr : \"\\n\""
   - evm list
+  - "echo $PATH | tr : \"\\n\""
   - export CASK_EMACS="$(evm bin "$EVM_EMACS")"
+  - "echo $PATH | tr : \"\\n\""
   - /usr/bin/env python --version
   - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
   - /usr/bin/env python -c "import os; print(os.environ['PATH'])"
