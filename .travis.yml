@@ -6,9 +6,15 @@ install: skip
 
 script:
   - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
+  - /usr/bin/env python -c "import os; print(os.environ['PATH'])"
   - "echo $PATH | tr : \"\n\""
   - curl -fsSkL https://gist.github.com/rejeep/ebcd57c3af83b049833b/raw > x.sh && source ./x.sh
   - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
+  - /usr/bin/env python -c "import os; print(os.environ['PATH'])"
+  - "echo $PATH | tr : \"\n\""
+  - evm install emacs-25.2-travis --use --skip
+  - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
+  - /usr/bin/env python -c "import os; print(os.environ['PATH'])"
   - "echo $PATH | tr : \"\n\""
 
 matrix:
