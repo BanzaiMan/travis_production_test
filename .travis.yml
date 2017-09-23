@@ -5,14 +5,18 @@ dist: trusty
 install: skip
 
 script:
+  - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
+  - "echo $PATH | tr : \"\n\""
+  - curl -fsSkL https://gist.github.com/rejeep/ebcd57c3af83b049833b/raw > x.sh && source ./x.sh
+  - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
   - "echo $PATH | tr : \"\n\""
 
 matrix:
   include:
-    - env: FOO=bar
-    - env: FOO=baz
-      if: branch = ruby
-    # - sudo: false
+    # - env: FOO=bar
+    # - env: FOO=baz
+    #   if: branch = ruby
+    # # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
     # - sudo: required
