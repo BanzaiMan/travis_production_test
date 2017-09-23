@@ -1,12 +1,11 @@
 language: ruby
-
 sudo: false
-
 dist: trusty
 
 install: skip
 
-script: skip
+script:
+  - "echo $PATH | tr : \"\n\""
 
 matrix:
   include:
