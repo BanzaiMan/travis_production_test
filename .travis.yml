@@ -1,9 +1,8 @@
-language: emacs-lisp
+language: python
 dist: trusty
 sudo: false
 
 script:
-  - source
   - which python
   - "echo $PATH | tr : \"\\n\""
   - evm install $EVM_EMACS --use --skip
@@ -16,10 +15,6 @@ script:
   - /usr/bin/python -c "import sys; print('\n'.join(sys.path))"
   - /usr/bin/python -c "import os; print(os.environ['PATH'])"
   - "echo $PATH | tr : \"\\n\""
-  - cask exec sh -c 'echo $PATH'
-  - emacs --version
-  - cask exec emacs --version
-  - cask install
   - make test
 
 env:
