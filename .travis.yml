@@ -3,6 +3,7 @@ dist: trusty
 sudo: false
 
 script:
+  - source
   - which python
   - "echo $PATH | tr : \"\\n\""
   - evm install $EVM_EMACS --use --skip
@@ -11,9 +12,9 @@ script:
   - "echo $PATH | tr : \"\\n\""
   - export CASK_EMACS="$(evm bin "$EVM_EMACS")"
   - "echo $PATH | tr : \"\\n\""
-  - /usr/bin/env python --version
-  - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
-  - /usr/bin/env python -c "import os; print(os.environ['PATH'])"
+  - /usr/bin/python --version
+  - /usr/bin/python -c "import sys; print('\n'.join(sys.path))"
+  - /usr/bin/python -c "import os; print(os.environ['PATH'])"
   - "echo $PATH | tr : \"\\n\""
   - cask exec sh -c 'echo $PATH'
   - emacs --version
