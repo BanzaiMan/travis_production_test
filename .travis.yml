@@ -1,16 +1,11 @@
-sudo: false
+language: ruby
+sudo: required
+dist: trusty
 
-install:
-  - true
+install: skip
 
 script:
   - true
 
 notifications:
   email: false
-
-deploy:
-  provider: script
-  script: echo hello
-  on:
-    condition: "true"
