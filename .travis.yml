@@ -3,6 +3,7 @@ dist: trusty
 sudo: false
 
 script:
+  - which python
   - "echo $PATH | tr : \"\\n\""
   - evm install $EVM_EMACS --use --skip
   - "echo $PATH | tr : \"\\n\""
