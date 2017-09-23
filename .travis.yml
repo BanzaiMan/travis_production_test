@@ -1,5 +1,6 @@
 language: emacs-lisp
 dist: trusty
+sudo: false
 
 script:
   - "echo $PATH | tr : \"\\n\""
