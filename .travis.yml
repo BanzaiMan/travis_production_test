@@ -41,7 +41,9 @@ deploy:
   provider: script
   script: "false"
   on:
-    all_branches: true
+    branch:
+      - master
+      - emacs
 
 after_deploy:
   - echo "yay!"
