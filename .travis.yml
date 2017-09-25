@@ -2,27 +2,7 @@ language: python
 dist: trusty
 sudo: false
 
-script:
-  - which python
-  - "echo $PATH | tr : \"\\n\""
-  - evm install $EVM_EMACS --use --skip
-  - "echo $PATH | tr : \"\\n\""
-  - evm list
-  - "echo $PATH | tr : \"\\n\""
-  - export CASK_EMACS="$(evm bin "$EVM_EMACS")"
-  - "echo $PATH | tr : \"\\n\""
-  - /usr/bin/python --version
-  - /usr/bin/python -c "import sys; print('\n'.join(sys.path))"
-  - /usr/bin/python -c "import os; print(os.environ['PATH'])"
-  - "echo $PATH | tr : \"\\n\""
-  - make test
-
-env:
-  matrix:
-    - EVM_EMACS=emacs-24.4-travis
-
-before_install:
-  - curl -fsSkL https://gist.github.com/rejeep/ebcd57c3af83b049833b/raw > x.sh && source ./x.sh
+script: skip
 
 matrix:
   include:
@@ -57,14 +37,14 @@ matrix:
 #       echo "2.3"
 #     }
 
-# deploy:
-#   edge:
-#     branch: ruby-2.3
-#   provider: script
-#   script: rvm $TRAVIS_RUBY_VERSION do ruby --version
-#   on:
-#     all_branches: true
+deploy:
+  provider: script
+  script: true
+  on:
+    all_branches: true
 
+after_deploy:
+  - echo "yay!"
 notifications:
   email: false
 
