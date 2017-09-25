@@ -39,7 +39,7 @@ matrix:
 
 deploy:
   provider: script
-  script: true
+  script: "echo true"
   on:
     all_branches: true
 
