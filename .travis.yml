@@ -4,7 +4,9 @@ sudo: false
 
 install: skip
 
-script: mount
+script:
+  - mount
+  - ls -l `which ping`
 
 matrix:
   include:
