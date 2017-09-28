@@ -4,6 +4,9 @@ dist: trusty
 
 sudo: false
 
+php:
+  - hhvm
+
 install: skip
 
 # env:
@@ -14,28 +17,7 @@ install: skip
 #   directories:
 #     - $CACHE_DIR
 
-env:
-  global:
-    - APP_HOST=www.example.com
-    - APP_URL=http://$APP_HOST:8080
-
 script: skip
-
-# android:
-#   components:
-#     - tools
-#     - platform-tools
-#     - tools
-
-#     - android-25
-
-#     - build-tools-25.0.2
-#     - extra
-#     - extra-google-m2repository
-#     - extra-android-m2repository
-#     - extra-android-support
-
-# jdk: oraclejdk8
 
 matrix:
   include:
