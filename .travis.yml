@@ -17,7 +17,8 @@ install: skip
 #   directories:
 #     - $CACHE_DIR
 
-script: skip
+script:
+  - env RBENV_DEBUG=1 phpunit --version
 
 matrix:
   include:
