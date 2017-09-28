@@ -6,7 +6,7 @@ install: skip
 
 script:
   - mount
-  - ls -l `which ping`
+  - bash foobar
 
 matrix:
   include:
