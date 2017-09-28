@@ -2,7 +2,9 @@ language: python
 dist: trusty
 sudo: false
 
-script: skip
+install: skip
+
+script: mount
 
 matrix:
   include:
@@ -37,16 +39,7 @@ matrix:
 #       echo "2.3"
 #     }
 
-deploy:
-  provider: script
-  script: "false"
-  on:
-    branch:
-      - master
-      - /emacs/
 
-after_deploy:
-  - echo "yay!"
 notifications:
   email: false
 
