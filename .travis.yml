@@ -1,21 +1,8 @@
 dist: trusty
 sudo: false
 language: go
-go: 1.9
-services:
-  - docker
 install: skip
-script: skip
-before_deploy:
-  - rvm list
-  - gem install fpm
-  - which fpm # /home/travis/.rvm/gems/ruby-2.4.1/bin/fpm
-deploy:
-  skip_cleanup: true
-  provider: script
-  script: rvm use 2.4.1 do which fpm # fails
-  on:
-    branch: go
+script: echo $TMPDIR
 
 # env:
 #   global:
@@ -30,23 +17,6 @@ deploy:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 
-script: skip
-# android:
-#   components:
-#     - tools
-#     - platform-tools
-#     - tools
-
-#     - android-25
-
-#     - build-tools-25.0.2
-#     - extra
-#     - extra-google-m2repository
-#     - extra-android-m2repository
-#     - extra-android-support
-
-# jdk: oraclejdk8
-
 matrix:
   include:
     # - sudo: false
@@ -55,9 +25,9 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
