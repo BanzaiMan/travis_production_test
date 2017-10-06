@@ -4,8 +4,15 @@ dist: trusty
 
 sudo: false
 
-php:
-  - hhvm
+services:
+  postgresql: "9.3"
+
+addons:
+  apt:
+    packages:
+      - language-pack-de
+
+php: '7.0'
 
 install: skip
 
@@ -16,9 +23,7 @@ install: skip
 # cache:
 #   directories:
 #     - $CACHE_DIR
-
-script:
-  - env RBENV_DEBUG=1 phpunit --version
+script: skip
 
 matrix:
   include:
@@ -31,9 +36,9 @@ matrix:
     # - sudo: false
     #   dist: trusty
     #   env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
