@@ -4,7 +4,9 @@ dist: trusty
 
 install: skip
 
-script: dpkg -l | grep -i sqlite
+script:
+  - dpkg -l | grep -i sqlite
+  - sqlite3 --version
 
 matrix:
   include:
