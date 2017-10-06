@@ -3,7 +3,7 @@ sudo: false
 language: go
 install: skip
 script:
-  - go compile temp.go
+  - go build temp.go
   - ./temp
   - env TMPDIR=/foo ./temp
   - env TMPDIR= ./temp
