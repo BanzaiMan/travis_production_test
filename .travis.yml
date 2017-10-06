@@ -4,18 +4,7 @@ dist: trusty
 
 install: skip
 
-script:
-  - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
-  - /usr/bin/env python -c "import os; print(os.environ['PATH'])"
-  - "echo $PATH | tr : \"\n\""
-  - curl -fsSkL https://gist.github.com/rejeep/ebcd57c3af83b049833b/raw > x.sh && source ./x.sh
-  - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
-  - /usr/bin/env python -c "import os; print(os.environ['PATH'])"
-  - "echo $PATH | tr : \"\n\""
-  - evm install emacs-25.2-travis --use --skip
-  - /usr/bin/env python -c "import sys; print('\n'.join(sys.path))"
-  - /usr/bin/env python -c "import os; print(os.environ['PATH'])"
-  - "echo $PATH | tr : \"\n\""
+script: dpkg -l | grep -i sqlite
 
 matrix:
   include:
@@ -25,9 +14,9 @@ matrix:
     # # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
-    # - sudo: required
-    #   dist: precise
-    #   env: DIST=precise STACK=GCE
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   env: DIST=trusty STACK=EC2
