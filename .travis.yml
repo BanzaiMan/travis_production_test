@@ -4,6 +4,14 @@ sudo: false
 
 dist: trusty
 
+addons:
+  apt:
+    packages:
+      - oracle-java9-installer
+
+before_install:
+  - jdk_switcher use oraclejdk9
+
 install: skip
 # env:
 #   global:
