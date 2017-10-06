@@ -4,10 +4,8 @@ dist: trusty
 
 sudo: false
 
-services:
-  postgresql: "9.3"
-
 addons:
+  postgresql: "9.3"
   apt:
     packages:
       - language-pack-de
