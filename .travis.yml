@@ -21,7 +21,7 @@ install: skip
 #   directories:
 #     - $CACHE_DIR
 
-script: skip
+script: javac -J-Xmx32m -version
 
 
 android:
