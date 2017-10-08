@@ -10,9 +10,9 @@ python:
   - '3.6'
   - '2.7'
 
-# env:
-#   global:
-#     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
+env:
+  global:
+    - PATH=$PYENV_ROOT/bin:$PATH
 
 # cache:
 #   directories:
@@ -24,6 +24,9 @@ python:
 
 script:
   - echo $PATH | grep --color pyenv
+  - pyenv global $TRAVIS_PYTHON_VERSION
+  - python --version
+
 
 matrix:
   include:
