@@ -26,6 +26,7 @@ script:
   - echo $PATH | grep --color pyenv
   - pyenv global $TRAVIS_PYTHON_VERSION
   - python --version
+  - echo $PATH | grep --color pyenv
 
 
 matrix:
