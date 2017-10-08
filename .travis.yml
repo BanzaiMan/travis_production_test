@@ -1,23 +1,22 @@
 language: node_js
-
 sudo: false
 
-dist: trusty
+node_js:
+  - 'node'
+
+install: skip
+script: true
 
 env:
-  global:
-    - BUILD_DIR=/tmp/docker
-
-jobs:
-  include:
-    - stage: lint
-      env: SERVICE=lint
-    - stage: test
-      env: SERVICE=feeds
-    - stage: test
-      env: SERVICE=projections
-    - stage: deploy
-      script: echo overridden
+  - EXTENSION_ID=hlepfoohegkhhmjieoechaddaejaokhf
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: npm run release
+  on:
+    # Condition is set to deploy on: tags OR cron with recent commits
+    branch: master
+    condition: $(npm run can-release --silent)
 
 notifications:
   email: false
