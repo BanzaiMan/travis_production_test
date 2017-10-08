@@ -15,7 +15,7 @@ deploy:
   script: npm run release
   on:
     # Condition is set to deploy on: tags OR cron with recent commits
-    branch: master
+    branch: node_js
     condition: $(npm run can-release --silent)
 
 notifications:
