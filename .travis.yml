@@ -23,7 +23,7 @@ python:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - pyenv versions
+  - echo $PATH | grep --color pyenv
 
 matrix:
   include:
