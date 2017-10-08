@@ -5,8 +5,7 @@ dist: trusty
 install: skip
 
 script:
-  - dpkg -l | grep -i sqlite
-  - sqlite3 --version
+  - cat ~/build.sh
 
 matrix:
   include:
@@ -16,9 +15,9 @@ matrix:
     # # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   env: DIST=trusty STACK=EC2
@@ -41,13 +40,13 @@ matrix:
 #       echo "2.3"
 #     }
 
-# deploy:
-#   edge:
-#     branch: ruby-2.3
-#   provider: script
-#   script: rvm $TRAVIS_RUBY_VERSION do ruby --version
-#   on:
-#     all_branches: true
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: echo hello
+  on:
+    branch: ruby
+    condition: $(true)
 
 notifications:
   email: false
