@@ -23,7 +23,7 @@ python:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - curl -v https://uploads.github.com/
+  - pyenv versions
 
 matrix:
   include:
