@@ -4,8 +4,12 @@ dist: trusty
 
 install: skip
 
-script:
-  - cat ~/build.sh
+script: skip
+
+addons:
+  apt:
+    packages:
+      - sqlite3
 
 matrix:
   include:
