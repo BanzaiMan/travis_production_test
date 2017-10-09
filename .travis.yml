@@ -1,17 +1,10 @@
 language: ruby
 sudo: required
-dist: precise
+dist: trusty
 
 install: skip
 
 script: skip
-
-addons:
-  apt:
-    sources:
-      - mongodb-3.2-precise
-    packages:
-      - mongodb-org
 
 matrix:
   include:
