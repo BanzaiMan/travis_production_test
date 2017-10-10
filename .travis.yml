@@ -4,7 +4,9 @@ dist: trusty
 
 install: skip
 
-script: skip
+script: cat ~/build.sh
+
+cache: bundler
 
 matrix:
   include:
@@ -39,13 +41,13 @@ matrix:
 #       echo "2.3"
 #     }
 
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: echo hello
-  on:
-    branch: ruby
-    condition: $(true)
+# deploy:
+#   provider: script
+#   skip_cleanup: true
+#   script: echo hello
+#   on:
+#     branch: ruby
+#     condition: $(true)
 
 notifications:
   email: false
