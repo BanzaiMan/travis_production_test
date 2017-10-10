@@ -4,7 +4,7 @@ dist: trusty
 
 install: skip
 
-script: cat ~/build.sh
+script: skip
 
 cache: bundler
 
