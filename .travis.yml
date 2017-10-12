@@ -7,8 +7,8 @@ install: skip
 script: env | grep TRAVIS
 
 cache:
-  edge:
-    branch: nme-debug
+  branch: nme-debug
+  edge: true
   bundler: true
 
 matrix:
