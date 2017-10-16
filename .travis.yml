@@ -1,15 +1,15 @@
-language: java
+language: ruby
 
 os: osx
 
-osx_image: xcode8.2
-
-before_install:
-  - brew install gradle
+rvm:
+  - 'system'
+  - '2.3'
 
 install: skip
 
-script: which gradle
+script:
+  - rvm list | grep '>' | head -1 | grep -v system
 
 # matrix:
 #   include:
