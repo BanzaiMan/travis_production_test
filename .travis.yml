@@ -2,6 +2,8 @@ language: erlang
 
 sudo: false
 
+otp_release: 'R16B03-1'
+
 dist: trusty
 
 install: skip
