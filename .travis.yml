@@ -1,14 +1,11 @@
 language: elixir
 
 elixir:
-  - '1.5.1'
   - '1.5.2'
-  - '1.5'
 
 otp_release:
-  - '18.0'
-  - '20.0'
   - '20.1'
+  - 'R16B03-1'
 
 install: skip
 
@@ -25,7 +22,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 
-script: elixir --version
+script: skip
 
 # android:
 #   components:
