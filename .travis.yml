@@ -5,18 +5,7 @@ node_js:
   - 'node'
 
 install: skip
-script: true
-
-env:
-  - EXTENSION_ID=hlepfoohegkhhmjieoechaddaejaokhf
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: npm run release
-  on:
-    # Condition is set to deploy on: tags OR cron with recent commits
-    branch: node_js
-    condition: $(npm run can-release --silent)
+script: cat build.sh
 
 notifications:
   email: false
