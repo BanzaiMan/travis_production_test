@@ -1,11 +1,7 @@
 language: c
-
-sudo: false
+os: osx
 
 install: skip
-
-dist: trusty
-
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -18,7 +14,9 @@ dist: trusty
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script:
+  - gem --version
+  - ruby -r stringio -e "puts 'hello'"
 
 matrix:
   include:
