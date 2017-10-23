@@ -10,7 +10,7 @@ install: skip
 
 script:
   - psql --version
-  - psql -c "SELECT version();" -U postgres -P 5433
+  - psql -c "SELECT version();" -U postgres -p 5433
 
 matrix:
   include:
