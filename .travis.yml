@@ -2,10 +2,17 @@ language: ruby
 sudo: false
 dist: trusty
 
+addons:
+  postgresql: '10'
+  apt:
+    packages:
+      - postgresql-10
+
 install: skip
 
 script:
-  - env | grep TRAVIS | sort
+  - psql --version
+  - psql -C "SELECT version();" -U postgres
 
 matrix:
   include:
