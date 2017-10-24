@@ -1,5 +1,9 @@
-language: c
-os: osx
+language: cpp
+dist: trusty
+sudo: false
+
+compiler:
+  - cpp
 
 install: skip
 # env:
@@ -15,8 +19,7 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - gem --version
-  - ruby -r stringio -e "puts 'hello'"
+  - find /usr -name libomp.so
 
 matrix:
   include:
