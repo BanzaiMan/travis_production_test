@@ -1,17 +1,11 @@
 language: ruby
-sudo: required
+sudo: false
 dist: trusty
 
-before_install:
-  - sudo service postgresql stop
-  - sudo apt-get install postgresql-10
-  - sudo service postgresql start 10
 install: skip
 
 script:
-  - psql --version
-  - psql -c "SELECT version();" -U postgres -p 5433
-
+  - curl http://169.254.169.254/latest/meta-data/public-ipv4
 matrix:
   include:
     # - env: FOO=bar
@@ -44,13 +38,6 @@ matrix:
 #     function travis_internal_ruby() {
 #       echo "2.3"
 #     }
-
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: echo hello
-  on:
-    branch: ruby
 
 
 notifications:
