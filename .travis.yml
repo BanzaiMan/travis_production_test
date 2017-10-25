@@ -1,11 +1,12 @@
 language: php
 
-dist: trusty
+dist: precise
 
-sudo: false
+sudo: required
 
 php:
-  - '7.0.24'
+  - '5.2'
+  - '5.3'
 
 install: skip
 
@@ -41,12 +42,6 @@ matrix:
 #       group: edge
 #       env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-
-deploy:
-  provider: script
-  script: echo yo
-  on:
-    tags: "not!"
 
 notifications:
   email: false
