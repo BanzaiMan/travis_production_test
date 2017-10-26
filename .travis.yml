@@ -1,15 +1,12 @@
 language: ruby
-sudo: false
+sudo: required
 dist: trusty
-
-cache: bundler
-
-rvm:
-  - '2.4.1'
 
 install: skip
 
-script: skip
+script:
+  - sudo apt-get update
+
 matrix:
   include:
     # - env: FOO=bar
