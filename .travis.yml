@@ -1,4 +1,4 @@
-language: ruby
+language: perl
 sudo: required
 dist: trusty
 
