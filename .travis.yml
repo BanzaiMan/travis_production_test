@@ -7,9 +7,8 @@ install: skip
 script: skip
 
 env:
-  global:
-    FOO: bar
-    BAR: baz
+  FOO: bar
+  BAR: baz
 
 matrix:
   include:
