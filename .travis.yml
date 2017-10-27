@@ -11,9 +11,9 @@ before_install:
     - sudo apt-get install ruby-dev build-essential debhelper devscripts rpm xalan wget -y
 
 script:
-    - sudo gem install fpm
+    - gem install fpm
     - env
-    - sudo gem env
+    - gem env
     - type -a fpm
     - fpm --help
 
