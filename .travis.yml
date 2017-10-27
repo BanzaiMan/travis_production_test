@@ -1,14 +1,13 @@
 language: ruby
-sudo: false
 dist: trusty
-
+sudo: false
 install: skip
 
+rvm:
+  - '1.9'
+  - '2.2'
+  - '2.3'
 script: skip
-
-env:
-  FOO: bar
-  BAR: baz
 
 matrix:
   include:
@@ -36,6 +35,11 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
+deploy:
+  provider: script
+  script: echo $(travis_internal_ruby)
+  on:
+    all_branches: true
 
 # before_deploy:
 #   - |
