@@ -6,7 +6,10 @@ install: skip
 
 script: skip
 
-if: NOT tag =~ \+d2$
+env:
+  global:
+    FOO: bar
+    BAR: baz
 
 matrix:
   include:
