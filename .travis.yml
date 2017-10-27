@@ -1,11 +1,12 @@
 language: ruby
-sudo: required
+sudo: false
 dist: trusty
 
 install: skip
 
-script:
-  - sudo apt-get update
+script: skip
+
+if: NOT tag =~ \+d2$
 
 matrix:
   include:
