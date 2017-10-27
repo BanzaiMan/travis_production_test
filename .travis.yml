@@ -1,7 +1,10 @@
 sudo: haskell
 
-ghc:
-  - '7.10'
+dist: trusty
+sudo: false
+
+ghc: '8.2.2'
+cabal: head
 
 install:
   - true
