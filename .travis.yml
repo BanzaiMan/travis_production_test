@@ -3,7 +3,7 @@ language: haskell
 dist: trusty
 sudo: false
 
-ghc: '8.2.2'
+ghc: '8.2.1'
 cabal: head
 
 install:
