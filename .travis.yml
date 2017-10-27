@@ -6,6 +6,10 @@ install: skip
 
 script: skip
 
+env:
+  global:
+    - GLOBAL=YES
+
 matrix:
   include:
     # - env: FOO=bar
