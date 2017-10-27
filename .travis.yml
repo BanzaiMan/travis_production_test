@@ -1,11 +1,10 @@
 language: ruby
-sudo: required
+sudo: false
 dist: trusty
 
 install: skip
 
-script:
-  - sudo apt-get update
+script: skip
 
 matrix:
   include:
@@ -40,6 +39,8 @@ matrix:
 #       echo "2.3"
 #     }
 
+after_script:
+  - echo $REPO_A_COMMIT
 
 notifications:
   email: false
