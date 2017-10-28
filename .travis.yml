@@ -9,6 +9,10 @@ rvm:
   - '2.3'
 script: skip
 
+cache:
+  bundler: true
+  edge: true
+
 matrix:
   include:
     # - env: FOO=bar
