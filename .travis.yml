@@ -2,14 +2,11 @@ language: ruby
 
 os: osx
 
-rvm:
-  - 'system'
-  - '2.3'
-
 install: skip
 
-script:
-  - rvm list | grep '>' | head -1 | grep -v system
+script: skip
+
+cache: bundler
 
 # matrix:
 #   include:
