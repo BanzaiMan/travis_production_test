@@ -3,16 +3,11 @@ dist: trusty
 sudo: false
 install: skip
 
-rvm:
-  - '1.9'
-  - '2.2'
-  - '2.3'
 script: skip
 
 cache:
+  debug: true
   bundler: true
-  edge: true
-
 matrix:
   include:
     # - env: FOO=bar
@@ -24,12 +19,12 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
-    # - sudo: required
-    #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
@@ -39,11 +34,11 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-deploy:
-  provider: script
-  script: echo $(travis_internal_ruby)
-  on:
-    all_branches: true
+# deploy:
+#   provider: script
+#   script: echo $(travis_internal_ruby)
+#   on:
+#     all_branches: true
 
 # before_deploy:
 #   - |
