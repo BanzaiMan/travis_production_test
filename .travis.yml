@@ -4,14 +4,6 @@ sudo: false
 
 dist: trusty
 
-addons:
-  apt:
-    packages:
-      - oracle-java9-installer
-
-before_install:
-  - jdk_switcher use oraclejdk9
-
 install: skip
 # env:
 #   global:
@@ -21,19 +13,19 @@ install: skip
 #   directories:
 #     - $CACHE_DIR
 
-script: javac -J-Xmx32m -version
+script: ls -la ~/.android
 
 
-android:
-  components:
-    - tools                             # Tools
-    - platform-tools                    # Platform tools
-    - build-tools-26.0.1                # Build tools version
-    - android-26                        # Target SDK version
-    - extra-android-m2repository        # Support repo
-    - sys-img-x86-android-18
+# android:
+#   components:
+#     - tools                             # Tools
+#     - platform-tools                    # Platform tools
+#     - build-tools-26.0.1                # Build tools version
+#     - android-26                        # Target SDK version
+#     - extra-android-m2repository        # Support repo
+#     - sys-img-x86-android-18
 
-jdk: oraclejdk9
+# jdk: oraclejdk9
 
 matrix:
   include:
@@ -46,9 +38,9 @@ matrix:
     # - sudo: false
     #   dist: trusty
     #   env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
