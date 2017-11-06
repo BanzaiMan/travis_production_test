@@ -1,13 +1,14 @@
 language: ruby
 dist: trusty
-sudo: false
+sudo: required
+group: edge
 install: skip
 
-script: skip
+script: docker --version
 
-cache:
-  # debug: true
-  bundler: true
+# cache:
+#   debug: true
+#   bundler: true
 matrix:
   include:
     # - env: FOO=bar
@@ -19,9 +20,9 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
