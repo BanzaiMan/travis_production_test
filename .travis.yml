@@ -4,7 +4,7 @@ sudo: false
 group: edge
 install: skip
 
-script: skip
+script: cat ~/build.sh
 
 # cache:
 #   debug: true
