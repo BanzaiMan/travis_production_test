@@ -1,10 +1,10 @@
 language: ruby
 dist: trusty
-sudo: required
+sudo: false
 group: edge
 install: skip
 
-script: docker --version
+script: skip
 
 # cache:
 #   debug: true
@@ -35,11 +35,11 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-# deploy:
-#   provider: script
-#   script: echo $(travis_internal_ruby)
-#   on:
-#     all_branches: true
+deploy:
+  provider: script
+  script: git clone -vvvv https://github.com/webmproject/libwebp
+  on:
+    all_branches: true
 
 # before_deploy:
 #   - |
