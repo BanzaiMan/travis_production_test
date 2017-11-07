@@ -4,7 +4,7 @@ sudo: false
 group: edge
 install: skip
 
-script: cat ~/build.sh
+script: skip
 
 # cache:
 #   debug: true
@@ -37,7 +37,7 @@ matrix:
 #     - os: osx
 deploy:
   provider: script
-  script: git clone -vvvv https://github.com/webmproject/libwebp
+  script: git clone -vvvv https://github.com/webmproject/libwebp.git
   on:
     all_branches: true
 
