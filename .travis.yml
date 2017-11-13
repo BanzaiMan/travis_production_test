@@ -9,12 +9,12 @@ script: skip
 # cache:
 #   debug: true
 #   bundler: true
-matrix:
-  include:
-    - language: c
-      os: linux
-      dist: trusty
-      env: JOB='Linux' GENERATOR='Unix Makefiles' CMAKE_FLAGS='-DPLATFORM_BUILD_SHARED=TRUE -DPLATFORM_ENABLE_DEBUG=FALSE'
+# matrix:
+#   include:
+#     - language: c
+#       os: linux
+#       dist: trusty
+#       env: JOB='Linux' GENERATOR='Unix Makefiles' CMAKE_FLAGS='-DPLATFORM_BUILD_SHARED=TRUE -DPLATFORM_ENABLE_DEBUG=FALSE'
     # # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
@@ -36,11 +36,11 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-# deploy:
-#   provider: script
-#   script: git clone -vvvv https://github.com/webmproject/libwebp.git
-#   on:
-#     all_branches: true
+deploy:
+  provider: script
+  script: echo hello
+  on:
+    all_branches: true
 
 # before_deploy:
 #   - |
