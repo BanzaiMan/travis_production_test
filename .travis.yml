@@ -1,32 +1,31 @@
 language: ruby
 dist: trusty
 sudo: false
-group: edge
 install: skip
 
-script: skip
+script: cat /etc/hosts
 
 # cache:
 #   debug: true
 #   bundler: true
-# matrix:
-#   include:
+matrix:
+  include:
 #     - language: c
 #       os: linux
 #       dist: trusty
 #       env: JOB='Linux' GENERATOR='Unix Makefiles' CMAKE_FLAGS='-DPLATFORM_BUILD_SHARED=TRUE -DPLATFORM_ENABLE_DEBUG=FALSE'
-    # # - sudo: false
+    # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
-    # - sudo: required
-    #   dist: precise
-    #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
-    # - sudo: required
-    #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
+    - sudo: required
+      dist: precise
+      env: DIST=precise STACK=GCE
+    - sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
+    - sudo: required
+      dist: trusty
+      env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
@@ -36,11 +35,11 @@ script: skip
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-deploy:
-  provider: script
-  script: echo hello
-  on:
-    all_branches: true
+# deploy:
+#   provider: script
+#   script: echo hello
+#   on:
+#     all_branches: true
 
 # before_deploy:
 #   - |
