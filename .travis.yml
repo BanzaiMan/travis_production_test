@@ -4,6 +4,7 @@ sudo: false
 install: skip
 
 script:
+  - dpkg -l | sort | grep -i openssh
   - cat /etc/hosts
   - cat /etc/ssh/ssh{,d}_config
   - ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
