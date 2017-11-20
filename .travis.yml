@@ -14,7 +14,6 @@ script:
   - echo "  Ciphers aes128-ctr" >> /home/travis/.ssh/config
   - chmod g-rw,o-rw /home/travis/.ssh/*
   - ssh -f -vvv 127.0.0.1 sleep 1
-  - sudo cat /var/log/auth.log
   - sleep 2
 
 # cache:
