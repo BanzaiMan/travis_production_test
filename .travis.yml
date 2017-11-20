@@ -3,7 +3,18 @@ dist: trusty
 sudo: false
 install: skip
 
-script: cat /etc/hosts
+script:
+  - cat /etc/hosts
+  - cat /etc/ssh/ssh{,d}_config
+  - ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
+  - cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+  - echo "Host 127.0.0.1" >> /home/travis/.ssh/config
+  - echo "  StrictHostKeyChecking no" >> /home/travis/.ssh/config
+  - echo "  Ciphers aes128-ctr" >> /home/travis/.ssh/config
+  - chmod g-rw,o-rw /home/travis/.ssh/*
+  - ssh -f -vvv 127.0.0.1 sleep 1
+  - sudo cat /var/log/auth.log
+  - sleep 2
 
 # cache:
 #   debug: true
