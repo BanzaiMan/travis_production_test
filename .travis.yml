@@ -2,6 +2,9 @@ language: ruby
 
 os: osx
 
+before_install:
+  - brew install openssl
+
 install: skip
 
 script: skip
