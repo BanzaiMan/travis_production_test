@@ -3,6 +3,7 @@ language: ruby
 os: osx
 
 before_install:
+  - rvm 2.3 do brew update
   - brew install openssl
 
 install: skip
