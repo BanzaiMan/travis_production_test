@@ -4,11 +4,11 @@ sudo: required
 install: skip
 
 script:
-  - hwclock
   - sudo service ntp stop
   - sudo date --set="23 June 2017 01:02:03"
   - date
-  - hwclock
+  - sleep 10
+  - date
 
 # cache:
 #   debug: true
