@@ -1,20 +1,14 @@
 language: ruby
 dist: trusty
-sudo: false
+sudo: required
 install: skip
 
 script:
-  - dpkg -l | sort | grep -i openssh
-  - cat /etc/hosts
-  - cat /etc/ssh/ssh{,d}_config
-  - ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
-  - cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-  - echo "Host 127.0.0.1" >> /home/travis/.ssh/config
-  - echo "  StrictHostKeyChecking no" >> /home/travis/.ssh/config
-  - echo "  Ciphers aes128-ctr" >> /home/travis/.ssh/config
-  - chmod g-rw,o-rw /home/travis/.ssh/*
-  - ssh -f -vvv 127.0.0.1 sleep 1
-  - sleep 2
+  - hwclock
+  - sudo service ntp stop
+  - sudo date --set="23 June 2017 01:02:03"
+  - date
+  - hwclock
 
 # cache:
 #   debug: true
@@ -28,15 +22,15 @@ matrix:
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
-    - sudo: required
-      dist: precise
-      env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
     # - sudo: false
     #   dist: trusty
     #   group: edge
