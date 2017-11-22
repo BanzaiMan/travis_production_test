@@ -5,6 +5,7 @@ os: osx
 rvm: '2.3'
 
 before_install:
+  - rvm use 2.3 --install --binary --fuzzy
   - rvm 2.3 do brew update
   - brew install openssl
 
