@@ -6,8 +6,7 @@ install: skip
 script: skip
 
 cache:
-  edge:
-    branch: no-symlink
+  branch: no-symlink
   directories:
     - /opt/pyenv/versions
 
