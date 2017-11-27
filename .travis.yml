@@ -1,14 +1,15 @@
 language: ruby
 dist: trusty
-sudo: required
+sudo: false
 install: skip
 
-script:
-  - sudo service ntp stop
-  - sudo date --set="23 June 2017 01:02:03"
-  - date
-  - sleep 10
-  - date
+script: skip
+
+cache:
+  edge:
+    branch: no-symlink
+  directories:
+    - /opt/pyenv/versions
 
 # cache:
 #   debug: true
