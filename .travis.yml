@@ -2,17 +2,10 @@ language: python
 
 install: skip
 
-dist: trusty
+dist: precise
 
 sudo: false
 
-python:
-  - '3.6'
-  - '2.7'
-
-env:
-  global:
-    - PATH=$PYENV_ROOT/bin:$PATH
 
 # cache:
 #   directories:
@@ -22,12 +15,7 @@ env:
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script:
-  - echo $PATH | grep --color pyenv
-  - pyenv global $TRAVIS_PYTHON_VERSION
-  - python --version
-  - echo $PATH | grep --color pyenv
-
+script: skip
 
 matrix:
   include:
