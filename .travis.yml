@@ -1,11 +1,15 @@
 language: perl
-sudo: required
+sudo: false
 dist: trusty
+
+perl:
+  - '5.26'
+  - '5.24'
 
 install: skip
 
 script:
-  - sudo apt-get install eclipse
+  - env | grep PERL
 
 matrix:
   include:
