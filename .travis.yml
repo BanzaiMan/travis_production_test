@@ -5,11 +5,9 @@ install: skip
 
 script: skip
 
-cache:
-  branch: no-symlink
-  directories:
-    - /opt/pyenv/versions
-
+env:
+  global:
+    - secure: "HAqb4OxMEv7k7nwAdeFqpCGGFwATZXXnwgl4FRw2UDTM0srRent16aYZzNHA4xDjvYOX1jbCX5UO/rPLXenPSYZPY/kBVVxHhmGjxoqaSYjwa5d5I+DziYSpxekcnToxULY3qw/blttplxyFWvJebqCBt1uH5PID24eXQPbyJS4="
 # cache:
 #   debug: true
 #   bundler: true
