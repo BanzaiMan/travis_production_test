@@ -1,12 +1,37 @@
 language: node_js
 sudo: false
-
+dist: trusty
 node_js:
-  - 'node'
-
-install: skip
-script: cat build.sh
-
+    - 'node'
+    - '8'
+    - '7'
+    - '6'
+    - 'node'
+    - '8'
+    - '7'
+    - '6'
+    - 'node'
+    - '8'
+    - '7'
+    - '6'
+    - 'node'
+    - '8'
+    - '7'
+    - '6'
+    - 'node'
+    - '8'
+    - '7'
+    - '6'
+    - 'node'
+    - '8'
+    - '7'
+    - '6'
+before_script:
+    - "export DISPLAY=:99.0"
+    - "sh -e /etc/init.d/xvfb start"
+    - sleep 3 # give xvfb some time to start
+addons:
+    chrome: stable
 notifications:
   email: false
 
