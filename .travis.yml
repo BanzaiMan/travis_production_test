@@ -11,6 +11,9 @@ env:
   global:
     - MY_VAR=${TRAVIS_NODE_VERSION}_hello
 
+script:
+  - echo $MY_VAR
+
 addons:
     chrome: stable
 notifications:
