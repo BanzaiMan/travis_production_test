@@ -3,11 +3,12 @@ dist: trusty
 sudo: false
 install: skip
 
-script: skip
+script: env | grep MY_VAR
 
 env:
   global:
-    - secure: "HAqb4OxMEv7k7nwAdeFqpCGGFwATZXXnwgl4FRw2UDTM0srRent16aYZzNHA4xDjvYOX1jbCX5UO/rPLXenPSYZPY/kBVVxHhmGjxoqaSYjwa5d5I+DziYSpxekcnToxULY3qw/blttplxyFWvJebqCBt1uH5PID24eXQPbyJS4="
+    - MY_VAR=${TRAVIS_BUILD_DIR}_hello
+
 # cache:
 #   debug: true
 #   bundler: true
