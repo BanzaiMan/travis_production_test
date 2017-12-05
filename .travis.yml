@@ -2,17 +2,10 @@ language: node_js
 sudo: false
 dist: trusty
 node_js:
-    - 'node'
     - '8'
-    - '7'
-    - '6'
-
-env:
-  global:
-    - MY_VAR=${TRAVIS_NODE_VERSION}_hello
 
 script:
-  - echo $MY_VAR
+  - hg clone https://bitbucket.org/shlomif/shlomif-cmake-modules
 
 addons:
     chrome: stable
