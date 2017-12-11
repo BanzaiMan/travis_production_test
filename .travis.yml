@@ -5,7 +5,7 @@ services:
   - redis-server
 install: skip
 
-script: skip
+script: redis-cli ping
 
 # cache:
 #   debug: true
