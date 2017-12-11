@@ -1,18 +1,11 @@
 language: ruby
 dist: trusty
 sudo: false
+services:
+  - redis-server
 install: skip
 
 script: skip
-
-jobs:
-  include:
-    - stage: test
-      script: ./test 1
-    - # stage name not required, will continue to use `test`
-      script: ./test 2
-    - stage: deploy
-      script: ./deploy
 
 # cache:
 #   debug: true
