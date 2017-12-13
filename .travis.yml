@@ -1,11 +1,13 @@
 language: ruby
 dist: trusty
 sudo: false
-services:
-  - redis-server
+
 install: skip
 
-script: redis-cli ping
+script:
+  - gem install bundler
+  - which bundler
+  - bundler --version
 
 # cache:
 #   debug: true
