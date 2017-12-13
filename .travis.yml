@@ -2,7 +2,7 @@ language: python
 
 install: skip
 
-dist: precise
+dist: trusty
 
 sudo: false
 
@@ -15,7 +15,7 @@ sudo: false
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script: python --version
 
 matrix:
   include:
