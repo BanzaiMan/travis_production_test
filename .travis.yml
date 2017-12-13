@@ -1,13 +1,10 @@
 language: ruby
 dist: trusty
-sudo: false
+sudo: required
 
 install: skip
 
-script:
-  - gem install bundler
-  - which bundler
-  - bundler --version
+script: which aws
 
 # cache:
 #   debug: true
