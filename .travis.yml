@@ -4,7 +4,7 @@ sudo: false
 
 install: skip
 
-script: which yarn
+script: echo $PATH | tr ':' "\n" | sort
 
 # cache:
 #   debug: true
