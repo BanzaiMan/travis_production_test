@@ -6,6 +6,8 @@ dist: trusty
 
 sudo: false
 
+env:
+  - PYTHONPATH=$HOME/virtualenv/python2.7.14/lib/python2.7/site-packages
 
 # cache:
 #   directories:
