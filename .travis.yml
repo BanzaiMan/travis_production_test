@@ -1,10 +1,10 @@
 language: ruby
 dist: trusty
-sudo: required
+sudo: false
 
 install: skip
 
-script: which aws
+script: which yarn
 
 # cache:
 #   debug: true
