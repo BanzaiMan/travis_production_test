@@ -4,7 +4,7 @@ sudo: false
 
 dist: trusty
 
-install: skip
+install: echo $PATH
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -16,14 +16,14 @@ install: skip
 script: skip
 
 
-# android:
-#   components:
-#     - tools                             # Tools
-#     - platform-tools                    # Platform tools
-#     - build-tools-26.0.1                # Build tools version
-#     - android-26                        # Target SDK version
-#     - extra-android-m2repository        # Support repo
-#     - sys-img-x86-android-18
+android:
+  components:
+    - tools                             # Tools
+    - platform-tools                    # Platform tools
+    - build-tools-26.0.1                # Build tools version
+    - android-26                        # Target SDK version
+    - extra-android-m2repository        # Support repo
+    - sys-img-x86-android-18
 
 jdk: oraclejdk9
 
