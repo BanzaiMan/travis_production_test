@@ -19,7 +19,8 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - find /usr -name libomp.so
+  - find /usr -name libLLVM-5.0.so
+  - find /usr -name libllvm-5.0.so
 
 matrix:
   include:
