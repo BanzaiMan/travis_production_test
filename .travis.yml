@@ -4,9 +4,7 @@ dist: trusty
 
 sudo: false
 
-php:
-  - '7.2'
-  - '7.2.0RC5'
+php: '5.6'
 
 install: skip
 
@@ -43,6 +41,25 @@ matrix:
 #       env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
+deploy:
+   - provider: script
+     script: "${BLT_DIR}/scripts/travis/deploy_branch"
+     skip_cleanup: true
+     on:
+       branch: php
+       php: '5.6'
+   - provider: script
+     script: "${BLT_DIR}/scripts/travis/deploy_branch"
+     skip_cleanup: true
+     on:
+       branch: master
+       php: '5.6'
+   - provider: script
+     script: "${BLT_DIR}/scripts/travis/deploy_tag"
+     skip_cleanup: true
+     on:
+       tags: true
+       php: '5.6'
 notifications:
   email: false
 
