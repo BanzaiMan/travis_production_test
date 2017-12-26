@@ -4,8 +4,11 @@ sudo: false
 
 install: skip
 
-script: echo $PATH | tr ':' "\n" | sort
+script: skip
 
+rvm:
+  - '2.5'
+  - '2.5.0'
 # cache:
 #   debug: true
 #   bundler: true
