@@ -2,7 +2,8 @@ language: erlang
 
 sudo: false
 
-otp_release: 'R16B03-1'
+otp_release:
+  - '20.2'
 
 dist: trusty
 
