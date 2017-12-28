@@ -9,7 +9,7 @@ dist: trusty
 
 install: skip
 
-script: skip
+script: redis-cli ping
 
 services:
   - redis-server
