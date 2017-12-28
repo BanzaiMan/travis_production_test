@@ -3,7 +3,7 @@ language: erlang
 sudo: false
 
 otp_release:
-  - '20.2'
+  - '20.2.2'
 
 dist: trusty
 
