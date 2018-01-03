@@ -7,8 +7,7 @@ install: skip
 script: skip
 
 rvm:
-  - '2.5'
-  - '2.5.0'
+  - '2.4'
 # cache:
 #   debug: true
 #   bundler: true
