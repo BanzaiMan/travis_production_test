@@ -8,8 +8,8 @@ install:
   - true
 
 script:
-  - which pip
-  - pip --version
+  - wget http://apertium.projectjj.com/apt/install-nightly.sh -O - | sudo bash
+  - sudo apt-get install hfst python3-libhfst libhfst-dev
 
 notifications:
   email: false
