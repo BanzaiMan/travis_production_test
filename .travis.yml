@@ -2,11 +2,12 @@ dist: trusty
 sudo: false
 language: go
 install: skip
-script:
-  - go build temp.go
-  - ./temp
-  - env TMPDIR=/foo ./temp
-  - env TMPDIR= ./temp
+script: skip
+
+addons:
+  apt:
+    packages:
+      - mysql-common
 
 # env:
 #   global:
