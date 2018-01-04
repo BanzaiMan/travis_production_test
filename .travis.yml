@@ -6,6 +6,8 @@ script: skip
 
 addons:
   apt:
+    sources:
+      - mysql-5.7-trusty
     packages:
       - mysql-common
 
