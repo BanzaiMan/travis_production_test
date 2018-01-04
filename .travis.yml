@@ -9,8 +9,13 @@ addons:
     sources:
       - mysql-5.7-trusty
     packages:
+      - libmysqlclient-dev
+      - libmysqlclient20
+      - mysql-client-5.7
+      - mysql-client-core-5.7
       - mysql-common
-
+      - mysql-server-5.7
+      - mysql-server-core-5.7
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
