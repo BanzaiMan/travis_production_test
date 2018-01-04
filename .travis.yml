@@ -2,7 +2,7 @@ dist: trusty
 sudo: false
 language: go
 install: skip
-script: skip
+script: mysql --version
 
 addons:
   apt:
