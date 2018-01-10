@@ -16,7 +16,7 @@ script: skip
 
 cache:
   directories:
-    - $HOME/.rvm
+    - /home/travis/.rvm
 matrix:
   include:
 #     - language: c
