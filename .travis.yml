@@ -2,11 +2,6 @@ language: ruby
 dist: trusty
 sudo: false
 
-before_install:
-  - openssl aes-256-cbc -K $encrypted_5880cf525281_key -iv $encrypted_5880cf525281_iv -in id_test.enc -out id_test -d
-  - chmod 0600 id_test
-  - eval "$(ssh-agent -s)"; echo -e "foobar\n" | ssh-add id_test
-
 install: skip
 
 script: skip
@@ -18,6 +13,10 @@ script: skip
 # cache:
 #   debug: true
 #   bundler: true
+
+cache:
+  directories:
+    - $HOME/.rvm
 matrix:
   include:
 #     - language: c
