@@ -5,7 +5,8 @@ sudo: false
 # install: skip
 
 script:
-  - bundle exec bundle --version
+  - true
+  - false
 
 rvm:
   - '2.4'
@@ -15,16 +16,14 @@ rvm:
 #   debug: true
 #   bundler: true
 
-before_install:
-  - rm -f ~/.rvm/hooks/after_use
-  - test -x /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)/bin/ruby || rvm reinstall $(cat .ruby-version) --binary
-  - rvm use $(cat .ruby-version) --create
-  - ruby --version
+before_cache:
+  - if [[ $TRAVIS_TEST_RESULT == 0 ]]; then
+      echo "yes!"
+    fi
 
 cache:
   bundler: true
-  directories:
-    - /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)
+
 matrix:
   include:
 #     - language: c
