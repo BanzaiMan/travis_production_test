@@ -15,9 +15,12 @@ rvm:
 #   debug: true
 #   bundler: true
 
+before_install:
+  - test -d ~/.rvm/rubies/ruby-$(cat .ruby-version) || rvm install $(cat .ruby-version) --use --binary --fuzzy
+
 cache:
   directories:
-    - /home/travis/.rvm
+    - /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)
 matrix:
   include:
 #     - language: c
