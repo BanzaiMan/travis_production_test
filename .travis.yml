@@ -7,7 +7,7 @@ install: skip
 script: skip
 
 rvm:
-  - jruby-9.1.15.0
+  - jruby-9.1.15.0200
 #   - '2.3'
 #   - '2.3.6'
 # cache:
