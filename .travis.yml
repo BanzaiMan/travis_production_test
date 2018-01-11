@@ -17,8 +17,8 @@ rvm:
 
 before_install:
   - rm -f ~/.rvm/hooks/after_use
-  - test -x /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)/bin/ruby || rvm reinstall $(cat .ruby-version) --binary --create
-  - rvm use $(cat .ruby-version)
+  - test -x /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)/bin/ruby || rvm reinstall $(cat .ruby-version) --binary
+  - rvm use $(cat .ruby-version) --create
   - ruby --version
 
 cache:
