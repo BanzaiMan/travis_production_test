@@ -6,7 +6,6 @@ sudo: false
 
 script:
   - true
-  - false
 
 rvm:
   - '2.4'
