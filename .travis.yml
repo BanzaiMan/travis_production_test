@@ -16,9 +16,9 @@ rvm:
 #   bundler: true
 
 before_install:
-  - rm ~/.rvm/hooks/after_use
+  - rm -f ~/.rvm/hooks/after_use
   - rvm install $(cat .ruby-version) --binary --create
-  - rvm use $(cat .ruby-version)
+  # - rvm use $(cat .ruby-version)
   - ruby --version
 
 cache:
