@@ -8,7 +8,7 @@ script:
   - bundle exec bundle --version
 
 rvm:
-  - '2.2'
+  - '2.4'
 #   - '2.3'
 #   - '2.3.6'
 # cache:
