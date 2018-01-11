@@ -2,10 +2,10 @@ language: ruby
 dist: trusty
 sudo: false
 
-install: skip
+# install: skip
 
 script:
-  - ls -lad /var/log
+  - bundle exec bundle --version
 
 rvm:
   - '2.2'
@@ -20,7 +20,6 @@ before_install:
   - test -x /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)/bin/ruby || rvm reinstall $(cat .ruby-version) --binary
   - rvm use $(cat .ruby-version) --create
   - ruby --version
-  - bundle exec bundle --version
 
 cache:
   directories:
