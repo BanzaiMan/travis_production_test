@@ -22,6 +22,7 @@ before_install:
   - ruby --version
 
 cache:
+  bundler: true
   directories:
     - /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)
 matrix:
