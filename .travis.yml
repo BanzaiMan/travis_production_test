@@ -17,7 +17,9 @@ rvm:
 
 before_install:
   - rm ~/.rvm/hooks/after_use
-  - rvm use $(cat .ruby-version) --install --binary --create
+  - rvm install $(cat .ruby-version) --binary --create
+  - rvm use $(cat .ruby-version)
+  - ruby --version
 
 cache:
   directories:
