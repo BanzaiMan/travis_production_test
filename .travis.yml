@@ -16,6 +16,7 @@ rvm:
 #   bundler: true
 
 before_install:
+  - export REALLY_GEM_UPDATE_SYSTEM=1
   - rvm use $(cat .ruby-version) --install --binary --create
 
 cache:
