@@ -20,6 +20,7 @@ before_install:
   - test -x /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)/bin/ruby || rvm reinstall $(cat .ruby-version) --binary
   - rvm use $(cat .ruby-version) --create
   - ruby --version
+  - bundle exec bundle --version
 
 cache:
   directories:
