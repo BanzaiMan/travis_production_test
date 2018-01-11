@@ -16,7 +16,7 @@ rvm:
 #   bundler: true
 
 before_install:
-  - rvm use $(cat .ruby-version) --install --binary --fuzzy
+  - rvm use $(cat .ruby-version) --install --binary
 
 cache:
   directories:
