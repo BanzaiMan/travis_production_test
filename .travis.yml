@@ -2,28 +2,27 @@ language: ruby
 dist: trusty
 sudo: false
 
-# install: skip
+install: skip
 
-script:
-  - true
+script: skip
 
 rvm:
-  - '2.4'
+  - jruby-9.1.15.0
 #   - '2.3'
 #   - '2.3.6'
 # cache:
 #   debug: true
 #   bundler: true
 
-before_cache:
-  - echo $TRAVIS_TEST_RESULT
-  - |
-    if [[ $TRAVIS_TEST_RESULT = 0 ]]; then
-      echo "yes!"
-    fi
+# before_cache:
+#   - echo $TRAVIS_TEST_RESULT
+#   - |
+#     if [[ $TRAVIS_TEST_RESULT = 0 ]]; then
+#       echo "yes!"
+#     fi
 
-cache:
-  bundler: true
+# cache:
+#   bundler: true
 
 matrix:
   include:
