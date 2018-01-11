@@ -18,7 +18,7 @@ rvm:
 
 before_cache:
   - echo $TRAVIS_TEST_RESULT
-  -|
+  - |
     if [[ $TRAVIS_TEST_RESULT = 0 ]]; then
       echo "yes!"
     fi
