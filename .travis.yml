@@ -17,7 +17,7 @@ rvm:
 #   bundler: true
 
 before_cache:
-  - if [[ $TRAVIS_TEST_RESULT == 0 ]]; then
+  - if [[ $TRAVIS_TEST_RESULT = 0 ]]; then
       echo "yes!"
     fi
 
