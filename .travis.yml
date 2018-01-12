@@ -60,6 +60,8 @@ deploy:
   body: "foobar baz\n\n\nyay!"
   on:
     tags: true
+  edge:
+    branch: shell-escase-gh-releases-body
 #   provider: script
 #   script: echo hello
 #   on:
