@@ -59,7 +59,7 @@ deploy:
   skip_cleanup: true
   body: "foobar baz\n\n\nyay!"
   on:
-    tages: true
+    tags: true
 #   provider: script
 #   script: echo hello
 #   on:
