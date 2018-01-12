@@ -63,8 +63,8 @@ deploy:
     aye!
   on:
     tags: true
-  edge:
-    branch: shell-escase-gh-releases-body
+  # edge:
+  #   branch: shell-escase-gh-releases-body
 #   provider: script
 #   script: echo hello
 #   on:
