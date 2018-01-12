@@ -6,8 +6,8 @@ install: skip
 
 script: skip
 
-rvm:
-  - jruby
+# rvm:
+#   - jruby
 #   - '2.3'
 #   - '2.3.6'
 # cache:
@@ -51,7 +51,15 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-# deploy:
+deploy:
+  provider: releases
+  api_key:
+    secure: "nFs+PGI8tTSaKbaIcVRyeBuuetZYFEhRHoWDQtnYYPigWYDr6U7W93c8zWKEyNfj69XE9fzge2uzaCsIM4AAcCqSNmfd7ux5+ZsvS57cXs4hjzlIQ8QIYd5vQwLVaJYKBNyomZI5CocSnLIdDClxE8e0CQTR3820QsXpvxzRb7M="
+  file: "foobar"
+  skip_cleanup: true
+  body: "foobar baz\n\n\nyay!"
+  on:
+    tages: true
 #   provider: script
 #   script: echo hello
 #   on:
