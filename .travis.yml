@@ -9,8 +9,8 @@ script: skip
 rvm:
   # - jruby-9.1
   # - jruby-9.1.15
-#   - '2.3'
-#   - '2.3.6'
+  - '2.3'
+  - '2.3.6'
 # cache:
 #   debug: true
 #   bundler: true
