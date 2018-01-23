@@ -2,15 +2,21 @@ language: ruby
 dist: trusty
 sudo: false
 
+env:
+  global:
+    - TZ=Europe/London
+
 install: skip
 
-script: skip
+script:
+  - find /usr/share/zoneinfo.default
+  - ruby -e "puts ENV[\"TZ\"]"
 
 rvm:
   # - jruby-9.1
   # - jruby-9.1.15
-    - '2.3'
-    - '2.3.6'
+    # - '2.3'
+    # - '2.3.6'
 # cache:
 #   debug: true
 #   bundler: true
