@@ -1,6 +1,6 @@
 language: ruby
 dist: trusty
-sudo: false
+sudo: required
 
 env:
   global:
@@ -9,7 +9,7 @@ env:
 install: skip
 
 script:
-  - find /usr/share/zoneinfo.default
+  - find /usr/share -name London
   - ruby -e "puts ENV[\"TZ\"]"
 
 rvm:
