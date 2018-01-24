@@ -4,7 +4,8 @@ sudo: false
 
 # install: skip
 
-script: true
+script: rake --version
+
 rvm: '2.5.0'
 
 # cache:
