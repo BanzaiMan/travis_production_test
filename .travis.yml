@@ -1,22 +1,12 @@
 language: ruby
 dist: trusty
-sudo: required
+sudo: false
 
-env:
-  global:
-    - TZ=Europe/London
+# install: skip
 
-install: skip
+script: true
+rvm: '2.5.0'
 
-script:
-  - find /usr/share -name London
-  - ruby -e "puts ENV[\"TZ\"]"
-
-rvm:
-  # - jruby-9.1
-  # - jruby-9.1.15
-    # - '2.3'
-    # - '2.3.6'
 # cache:
 #   debug: true
 #   bundler: true
@@ -58,19 +48,19 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-deploy:
-  provider: releases
-  api_key:
-    secure: "nFs+PGI8tTSaKbaIcVRyeBuuetZYFEhRHoWDQtnYYPigWYDr6U7W93c8zWKEyNfj69XE9fzge2uzaCsIM4AAcCqSNmfd7ux5+ZsvS57cXs4hjzlIQ8QIYd5vQwLVaJYKBNyomZI5CocSnLIdDClxE8e0CQTR3820QsXpvxzRb7M="
-  file: "foobar"
-  skip_cleanup: true
-  name: "super duper release"
-  body: |
-    foobar!
+# deploy:
+#   provider: releases
+#   api_key:
+#     secure: "nFs+PGI8tTSaKbaIcVRyeBuuetZYFEhRHoWDQtnYYPigWYDr6U7W93c8zWKEyNfj69XE9fzge2uzaCsIM4AAcCqSNmfd7ux5+ZsvS57cXs4hjzlIQ8QIYd5vQwLVaJYKBNyomZI5CocSnLIdDClxE8e0CQTR3820QsXpvxzRb7M="
+#   file: "foobar"
+#   skip_cleanup: true
+#   name: "super duper release"
+#   body: |
+#     foobar!
 
-    aye!
-  on:
-    tags: true
+#     aye!
+#   on:
+#     tags: true
   # edge:
   #   branch: shell-escase-gh-releases-body
 #   provider: script
