@@ -2,11 +2,11 @@ language: ruby
 dist: trusty
 sudo: false
 
-# install: skip
+install: skip
 
-# script: rake --version
+script: rake --version
 
-rvm: '2.5.0'
+# rvm: '2.5.0'
 
 # cache:
 #   debug: true
@@ -59,15 +59,11 @@ matrix:
 #   body: |
 #     foobar!
 
-#     aye!
-#   on:
-#     tags: true
-  # edge:
-  #   branch: shell-escase-gh-releases-body
-#   provider: script
-#   script: echo hello
-#   on:
-#     all_branches: true
+
+deploy:
+  provider: codedeploy
+  edge:
+    branch: code_deploy-head_object
 
 # before_deploy:
 #   - |
