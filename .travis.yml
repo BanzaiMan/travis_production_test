@@ -59,6 +59,8 @@ matrix:
 #   body: |
 #     foobar!
 
+before_deploy:
+  - cd path
 
 deploy:
   provider: codedeploy
