@@ -64,6 +64,8 @@ deploy:
   provider: codedeploy
   edge:
     branch: code_deploy-head_object
+  all_branches:
+    true
 
 # before_deploy:
 #   - |
