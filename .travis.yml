@@ -79,7 +79,7 @@ matrix:
 
 notifications:
   email: false
-  webhook:
+  webhooks:
     urls:
       - https://requestb.in/twl96stw
 
