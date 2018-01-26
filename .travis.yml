@@ -6,7 +6,7 @@ install: skip
 
 script: rake --version
 
-# rvm: '2.5.0'
+rvm: '2.4'
 
 # cache:
 #   debug: true
@@ -79,7 +79,11 @@ matrix:
 
 notifications:
   email: false
-  webhook: https://requestb.in/twl96stw
+  webhook:
+    urls:
+      - https://requestb.in/twl96stw
+
+    on_success: always
   #  slack:
   #  rooms:
   #    - secure: "KZTfjxhkOdDDZYD2ThBILt2ShYtdEee3PudFZlQBfpxG9N470GfxnKVfOl7Odu4lN6cIupwC4S4BnehubEywSR99l60VmfhePUCTqDLYy+iR9+guTvaECdXdaau3jTKhFdu5u60ITsiw5Yb+hwAaGFO0HmQhqR9XVr/U8IGQlok="
