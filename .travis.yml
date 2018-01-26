@@ -59,16 +59,16 @@ matrix:
 #   body: |
 #     foobar!
 
-before_deploy:
-  - cd path
+# before_deploy:
+#   - cd path
 
-deploy:
-  provider: codedeploy
-  edge:
-    branch: code_deploy-head_object
-  on:
-    all_branches:
-      true
+# deploy:
+#   provider: codedeploy
+#   edge:
+#     branch: code_deploy-head_object
+#   on:
+#     all_branches:
+#       true
 
 # before_deploy:
 #   - |
@@ -79,7 +79,7 @@ deploy:
 
 notifications:
   email: false
-
+  webhook: https://requestb.in/twl96stw
   #  slack:
   #  rooms:
   #    - secure: "KZTfjxhkOdDDZYD2ThBILt2ShYtdEee3PudFZlQBfpxG9N470GfxnKVfOl7Odu4lN6cIupwC4S4BnehubEywSR99l60VmfhePUCTqDLYy+iR9+guTvaECdXdaau3jTKhFdu5u60ITsiw5Yb+hwAaGFO0HmQhqR9XVr/U8IGQlok="
