@@ -2,11 +2,18 @@ language: ruby
 dist: trusty
 sudo: required
 
+rvm: '2.4'
+
 install: skip
 
 script:
+  - git clone https://github.com/finspin/testmeplease.site.git
+  - cd testmeplease.site
+  - export VERSION=$(cat VERSION)
   - docker ps
-# rvm: '2.5.0'
+  - pip install --use awscli
+  - docker build -t testmeplease.site/web:$VERSION .
+  # rvm: '2.5.0'
 
 # cache:
 #   debug: true
