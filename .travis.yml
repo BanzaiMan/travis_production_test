@@ -11,7 +11,7 @@ script:
   - cd testmeplease.site
   - export VERSION=$(cat VERSION)
   - docker ps
-  - pip install --use awscli
+  - pip install --user awscli
   - docker build -t testmeplease.site/web:$VERSION .
   # rvm: '2.5.0'
 
