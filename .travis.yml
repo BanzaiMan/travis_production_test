@@ -1,23 +1,14 @@
 language: ruby
 # dist: trusty
 
-services:
-  - docker
-sudo: required
+dist: trusty
+sudo: false
 
 rvm: '2.4'
 
 install: skip
 
-script:
-  - git clone https://github.com/finspin/testmeplease.site.git
-  - cd testmeplease.site
-  - export VERSION=$(cat VERSION)
-  - docker ps
-  - pip install --user awscli
-  - docker build -t testmeplease.site/web:$VERSION .
-  # rvm: '2.5.0'
-
+script: skip
 # cache:
 #   debug: true
 #   bundler: true
@@ -59,15 +50,18 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-# deploy:
-#   provider: releases
-#   api_key:
-#     secure: "nFs+PGI8tTSaKbaIcVRyeBuuetZYFEhRHoWDQtnYYPigWYDr6U7W93c8zWKEyNfj69XE9fzge2uzaCsIM4AAcCqSNmfd7ux5+ZsvS57cXs4hjzlIQ8QIYd5vQwLVaJYKBNyomZI5CocSnLIdDClxE8e0CQTR3820QsXpvxzRb7M="
-#   file: "foobar"
-#   skip_cleanup: true
-#   name: "super duper release"
-#   body: |
-#     foobar!
+deploy:
+  provider: releases
+  api_key:
+    secure: "nFs+PGI8tTSaKbaIcVRyeBuuetZYFEhRHoWDQtnYYPigWYDr6U7W93c8zWKEyNfj69XE9fzge2uzaCsIM4AAcCqSNmfd7ux5+ZsvS57cXs4hjzlIQ8QIYd5vQwLVaJYKBNyomZI5CocSnLIdDClxE8e0CQTR3820QsXpvxzRb7M="
+  file: "foobar"
+  skip_cleanup: true
+  edge:
+    source: travis-ci/dpl
+    branch: master
+  on:
+    all_branches: true
+
 
 # before_deploy:
 #   - |
