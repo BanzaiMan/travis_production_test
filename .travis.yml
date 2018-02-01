@@ -1,14 +1,14 @@
-language: generic
+language: ruby
 
 dist: trusty
 
-sudo: required
+sudo: false
 
 install:
   - true
 
 script:
-  - ps -ef
+  - cat /etc/hosts
 
 notifications:
   email: false
