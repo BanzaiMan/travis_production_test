@@ -1,5 +1,6 @@
 language: ruby
 # dist: trusty
+version: "=0"
 
 dist: trusty
 sudo: false
