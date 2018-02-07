@@ -7,14 +7,20 @@ sudo: false
 rvm: '2.4'
 
 env:
-  global:
-  secure: foobar
+  - FOO=3.1
+  - FOO=3.2
+
 install: skip
 
 script: skip
 # cache:
 #   debug: true
 #   bundler: true
+
+matrix:
+  exclude:
+    - FOO=3.1
+    - FOO="3.1"
 
 # before_cache:
 #   - echo $TRAVIS_TEST_RESULT
