@@ -4,9 +4,11 @@ language: ruby
 dist: trusty
 sudo: false
 
-rvm:
-  - '2.4'
-  - '2.5'
+rvm: '2.4'
+
+env:
+  - FOO=1
+  - FOO=2
 
 install: skip
 
