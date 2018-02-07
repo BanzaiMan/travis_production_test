@@ -7,8 +7,7 @@ sudo: false
 rvm: '2.4'
 
 env:
-secure: foobarbaz
-
+secure: "nFs+PGI8tTSaKbaIcVRyeBuuetZYFEhRHoWDQtnYYPigWYDr6U7W93c8zWKEyNfj69XE9fzge2uzaCsIM4AAcCqSNmfd7ux5+ZsvS57cXs4hjzlIQ8QIYd5vQwLVaJYKBNyomZI5CocSnLIdDClxE8e0CQTR3820QsXpvxzRb7M="
 install: skip
 
 script: skip
