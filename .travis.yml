@@ -1,11 +1,12 @@
 language: ruby
 # dist: trusty
-version: "= 0"
 
 dist: trusty
 sudo: false
 
-rvm: '2.4'
+rvm:
+  - '2.4'
+  - '2.5'
 
 install: skip
 
@@ -24,7 +25,7 @@ script: skip
 # cache:
 #   bundler: true
 
-matrix:
+jobs:
   include:
 #     - language: c
 #       os: linux
@@ -36,9 +37,10 @@ matrix:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
+    - stage: second
+      sudo: false
+      dist: trusty
+      env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
@@ -51,25 +53,17 @@ matrix:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-deploy:
-  provider: releases
-  api_key:
-    secure: "nFs+PGI8tTSaKbaIcVRyeBuuetZYFEhRHoWDQtnYYPigWYDr6U7W93c8zWKEyNfj69XE9fzge2uzaCsIM4AAcCqSNmfd7ux5+ZsvS57cXs4hjzlIQ8QIYd5vQwLVaJYKBNyomZI5CocSnLIdDClxE8e0CQTR3820QsXpvxzRb7M="
-  file: "foobar"
-  SkipCleanup: true
-  edge:
-    source: travis-ci/dpl
-    branch: master
-  on:
-    all_branches: true
-
-
-# before_deploy:
-#   - |
-#     function travis_internal_ruby() {
-#       echo "2.3"
-#     }
-
+# deploy:
+#   provider: releases
+#   api_key:
+#     secure: "nFs+PGI8tTSaKbaIcVRyeBuuetZYFEhRHoWDQtnYYPigWYDr6U7W93c8zWKEyNfj69XE9fzge2uzaCsIM4AAcCqSNmfd7ux5+ZsvS57cXs4hjzlIQ8QIYd5vQwLVaJYKBNyomZI5CocSnLIdDClxE8e0CQTR3820QsXpvxzRb7M="
+#   file: "foobar"
+#   SkipCleanup: true
+#   edge:
+#     source: travis-ci/dpl
+#     branch: master
+#   on:
+#     all_branches: true
 
 notifications:
   email: false
