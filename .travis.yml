@@ -7,8 +7,6 @@ sudo: false
 rvm: '2.4'
 
 env:
-  - FOO=1
-  - FOO=2
 
 install: skip
 
@@ -39,10 +37,10 @@ jobs:
     # - sudo: required
     #   dist: precise
     #   env: DIST=precise STACK=GCE
-    - stage: second
-      sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - stage: second
+    #   sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
