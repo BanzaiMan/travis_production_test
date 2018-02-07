@@ -19,8 +19,7 @@ script: skip
 
 matrix:
   exclude:
-    - FOO=3.1
-    - FOO="3.1"
+    - env: FOO="3.1"
 
 # before_cache:
 #   - echo $TRAVIS_TEST_RESULT
