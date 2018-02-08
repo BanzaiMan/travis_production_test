@@ -6,6 +6,7 @@ install: skip
 
 script:
   - python --version
+  - export CLOUDSDK_CORE_CHECK_GCE_METADATA=False
   - export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash >/dev/null
 
 matrix:
