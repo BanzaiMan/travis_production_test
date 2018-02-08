@@ -6,7 +6,7 @@ install: skip
 
 script:
   - brew update
-  - brew install ack
+  - brew install openssl || true
 
 matrix:
   include:
