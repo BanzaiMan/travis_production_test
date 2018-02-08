@@ -5,6 +5,7 @@ os: osx
 install: skip
 
 script:
+  - brew update
   - brew install ack
 
 matrix:
