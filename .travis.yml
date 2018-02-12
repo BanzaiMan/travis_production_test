@@ -5,7 +5,7 @@ os: osx
 install: skip
 
 script:
-  - sw_version
+  - sw_vers
 
 matrix:
   include:
