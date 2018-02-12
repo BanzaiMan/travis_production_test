@@ -2,13 +2,13 @@ language: python
 
 install: skip
 
-dist: trusty
+dist: precise
 
 sudo: false
 
 python:
   - pypy
-  - pypy3.5-5.10
+  - pypy3.5
 
 # cache:
 #   directories:
