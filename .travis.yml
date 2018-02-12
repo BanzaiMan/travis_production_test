@@ -5,8 +5,7 @@ os: osx
 install: skip
 
 script:
-  - brew update
-  - brew install openssl || true
+  - sw_version
 
 matrix:
   include:
