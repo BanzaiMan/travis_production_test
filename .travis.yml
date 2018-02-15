@@ -6,20 +6,12 @@ sudo: false
 
 rvm: '2.4'
 
-env:
-  - FOO=3.1
-  - FOO=3.2
-
 install: skip
 
-script: skip
+script: []
 # cache:
 #   debug: true
 #   bundler: true
-
-matrix:
-  exclude:
-    - env: FOO=3.1
 
 # before_cache:
 #   - echo $TRAVIS_TEST_RESULT
@@ -59,17 +51,12 @@ jobs:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-# deploy:
-#   provider: releases
-#   api_key:
-#     secure: "nFs+PGI8tTSaKbaIcVRyeBuuetZYFEhRHoWDQtnYYPigWYDr6U7W93c8zWKEyNfj69XE9fzge2uzaCsIM4AAcCqSNmfd7ux5+ZsvS57cXs4hjzlIQ8QIYd5vQwLVaJYKBNyomZI5CocSnLIdDClxE8e0CQTR3820QsXpvxzRb7M="
-#   file: "foobar"
-#   SkipCleanup: true
-#   edge:
-#     source: travis-ci/dpl
-#     branch: master
-#   on:
-#     all_branches: true
+deploy:
+  provider: script
+  script: echo foo
+  skip_cleanup: true
+  on:
+    all_branches: true
 
 notifications:
   email: false
