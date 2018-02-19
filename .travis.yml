@@ -3,9 +3,9 @@ language: ruby
 
 dist: trusty
 sudo: false
-
-
+ 
 rvm: '2.4'
+
 
 install: skip
 
