@@ -1,12 +1,15 @@
 language: node_js
-node_js: 9
+node_js: 8
 
 sudo: false
 dist: trusty
 
+before_install: npm i -g npm@next
+
 install: skip
 
-script: skip
+script:
+  - npm --version
 
 matrix:
   include:
