@@ -4,12 +4,9 @@ node_js: 8
 sudo: false
 dist: trusty
 
-before_install: npm i -g npm@next
+install: true
 
-install: skip
-
-script:
-  - npm --version
+script: true
 
 matrix:
   include:
@@ -26,6 +23,12 @@ matrix:
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
     # - os: osx
+deploy:
+  provider: script
+  script: echo true
+  edge: true
+  on:
+    all_branches: true
 
 notifications:
   email: false
