@@ -24,8 +24,7 @@ matrix:
     #   env: DIST=trusty STACK=GCE
     # - os: osx
 deploy:
-  provider: script
-  script: echo true
+  provider: elasticbeanstalk
   edge: true
   on:
     all_branches: true
