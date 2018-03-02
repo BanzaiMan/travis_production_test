@@ -24,11 +24,9 @@ matrix:
     #   env: DIST=trusty STACK=GCE
     # - os: osx
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: foo
-  edge:
-    branch: v1.9-pages
+  provider: script
+  script: >
+    echo "the 14th letter of the alphabet is "
   on:
     all_branches: true
 
