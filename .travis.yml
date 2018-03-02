@@ -24,7 +24,7 @@ matrix:
     #   env: DIST=trusty STACK=GCE
     # - os: osx
 deploy:
-  provider: elasticbeanstalk
+  provider: cloudfoundry
   edge: true
   on:
     all_branches: true
