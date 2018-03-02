@@ -27,7 +27,8 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: foo
-  edge: true
+  edge:
+    branch: v1.9-pages
   on:
     all_branches: true
 
