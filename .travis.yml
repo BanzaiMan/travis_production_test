@@ -23,7 +23,9 @@ matrix:
     #   env: DIST=trusty STACK=GCE
     # - os: osx
 deploy:
-  provider: cloudfoundry
+  provider: pages
+  skip_cleanup: true
+  github_token: foo
   edge: true
   on:
     all_branches: true
