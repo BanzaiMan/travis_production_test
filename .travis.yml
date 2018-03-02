@@ -58,7 +58,8 @@ deploy:
     skip_cleanup: true
     on:
       all_branches: true
-  - provider: pages
+  - provider: script
+    script: echo bar
     skip_cleanup: true
     github_token: foo
     edge: true
