@@ -6,8 +6,7 @@ dist: trusty
 
 install: true
 
-script: true
-
+script: []
 matrix:
   include:
 #     - sudo: false
@@ -23,11 +22,11 @@ matrix:
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
     # - os: osx
-deploy:
-  provider: cloudfoundry
-  edge: true
-  on:
-    all_branches: true
+# deploy:
+#   provider: cloudfoundry
+#   edge: true
+#   on:
+#     all_branches: true
 
 notifications:
   email: false
