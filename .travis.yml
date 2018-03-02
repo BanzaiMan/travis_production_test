@@ -6,8 +6,7 @@ dist: trusty
 
 install: true
 
-script: >
-  echo "foobar"
+script: true
 
 matrix:
   include:
@@ -25,9 +24,10 @@ matrix:
     #   env: DIST=trusty STACK=GCE
     # - os: osx
 deploy:
-  provider: script
-  script: >
-    echo "the 14th letter of the alphabet is "
+  provider: pages
+  skip_cleanup: true
+  github_token: foo
+  edge: true
   on:
     all_branches: true
 
