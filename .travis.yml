@@ -3,11 +3,11 @@ language: ruby
 
 dist: trusty
 sudo: false
- 
+
 rvm: '2.4'
 
 
-install: skip
+install: true
 
 script: true
 # cache:
@@ -53,12 +53,15 @@ jobs:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: foo
-  edge: true
-  on:
-    all_branches: true
+  - provider: script
+    script: echo foo
+    skip_cleanup: true
+  - provider: pages
+    skip_cleanup: true
+    github_token: foo
+    edge: true
+    on:
+      all_branches: true
 
 
 notifications:
