@@ -63,7 +63,6 @@ deploy:
     script: echo bar
     skip_cleanup: true
     github_token: foo
-    edge: true
     on:
       all_branches: true
 
