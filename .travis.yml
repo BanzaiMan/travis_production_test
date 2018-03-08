@@ -5,6 +5,10 @@ jdk:
   - oraclejdk8
   - oraclejdk9
   - openjdk8
+addons:
+  apt:
+    packages:
+      - git-lfs
 before_install:
   - ls -la ~
 # travis gradle is 4 which does not work with java 9
