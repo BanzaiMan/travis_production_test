@@ -3,8 +3,6 @@ sudo: false
 dist: trusty
 jdk:
   - oraclejdk8
-  - oraclejdk9
-  - openjdk8
 addons:
   apt:
     packages:
@@ -12,7 +10,7 @@ addons:
 before_install:
   - ls -la ~
 # travis gradle is 4 which does not work with java 9
-script: skip
+script: cat ~/build.sh
 
 
 # android:
