@@ -14,7 +14,7 @@ deploy:
     branch: opsworks-update-app-on-success
   app-id: foobar
   on:
-    all_branchesa: true
+    all_branches: true
 
 
 # android:
