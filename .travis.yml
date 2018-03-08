@@ -2,14 +2,16 @@ language: ruby
 # dist: trusty
 
 dist: trusty
-sudo: false
+sudo: required
 
 rvm: '2.4'
 
 
 install: true
 
-script: true
+script:
+  - sudo service docker start
+  - ls -lF /var/run
 # cache:
 #   debug: true
 #   bundler: true
