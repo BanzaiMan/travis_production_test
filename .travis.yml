@@ -11,7 +11,7 @@ install: true
 
 script:
   - sudo service docker start
-  - ls -lF /var/run
+  - ls -lFH /var/run
 # cache:
 #   debug: true
 #   bundler: true
