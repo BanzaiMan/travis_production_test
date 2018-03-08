@@ -3,14 +3,18 @@ sudo: required
 dist: trusty
 jdk:
   - oraclejdk8
-addons:
-  apt:
-    packages:
-      - curl
-before_install:
-  - ls -la ~
+
 # travis gradle is 4 which does not work with java 9
-script: cat ~/build.sh
+script: skip
+
+deploy:
+  provider: opsworks
+  edge:
+    source: dazz/dpl
+    branch: opsworks-update-app-on-success
+  app-id: foobar
+  on:
+    all_branchesa: true
 
 
 # android:
