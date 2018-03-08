@@ -6,7 +6,7 @@ jdk:
   - oraclejdk9
   - openjdk8
 before_install:
-  - ls -l ~
+  - ls -la ~
 # travis gradle is 4 which does not work with java 9
 script: skip
 
