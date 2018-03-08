@@ -1,4 +1,3 @@
-
 language: java
 sudo: false
 dist: trusty
@@ -6,11 +5,10 @@ jdk:
   - oraclejdk8
   - oraclejdk9
   - openjdk8
+before_install:
+  - ls -l ~
 # travis gradle is 4 which does not work with java 9
-script:
-  - curl -LO https://services.gradle.org/distributions/gradle-4.4.1-bin.zip
-  - unzip -q gradle-4.4.1-bin.zip
-  - ./gradle-4.4.1/bin/gradle test
+script: skip
 
 
 # android:
