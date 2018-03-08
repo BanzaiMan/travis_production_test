@@ -6,7 +6,7 @@ jdk:
 addons:
   apt:
     packages:
-      - git-lfs
+      - curl
 before_install:
   - ls -la ~
 # travis gradle is 4 which does not work with java 9
