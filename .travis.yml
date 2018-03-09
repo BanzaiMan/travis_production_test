@@ -2,7 +2,7 @@ language: ruby
 # dist: trusty
 
 dist: trusty
-sudo: required
+sudo: false
 
 rvm: '2.4'
 
