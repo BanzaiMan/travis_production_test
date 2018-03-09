@@ -55,18 +55,17 @@ jobs:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 deploy:
-  - provider: script
-    script: echo foo
-    skip_cleanup: true
-    edge: true
+  provider: opsworks
+    edge:
+       source: dazz/dpl
+       branch: opsworks-update-app-on-success
+    access_key_id: abcdefg
+    secret_access_key: ultrA-5ecr3t
+    app-id: 11223344-5566-7788-9900-aabbccddeeff
     on:
       all_branches: true
-  - provider: script
-    script: echo bar
-    skip_cleanup: true
-    github_token: foo
-    on:
-      all_branches: true
+    wait-until-deployed: true
+    update-app-on-success: true
 
 
 notifications:
