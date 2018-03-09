@@ -53,7 +53,7 @@ jobs:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 deploy:
-  provider: opsworks
+  provider: ops_works
   edge:
      source: dazz/dpl
      branch: opsworks-update-app-on-success
