@@ -17,9 +17,10 @@ cache:
     - vendor
 
 script:
-  - cd vendor
+  - pushd vendor
   - ls
   - touch this that vendor.json
+  - popd
 
 # cache:
 #   debug: true
