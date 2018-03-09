@@ -18,6 +18,7 @@ cache:
 
 script:
   - cd vendor
+  - ls
   - touch this that vendor.json
 
 # cache:
