@@ -9,9 +9,7 @@ rvm: '2.4'
 
 install: true
 
-script:
-  - sudo service docker start
-  - ls -lFH /var/run
+script: skip
 # cache:
 #   debug: true
 #   bundler: true
