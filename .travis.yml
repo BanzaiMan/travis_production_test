@@ -4,24 +4,19 @@ language: ruby
 dist: trusty
 sudo: false
 
-rvm: '2.4'
-
-
 install: true
 
-before_cache:
-  - shopt -s extglob
-  - rm -rf vendor/!(vendor.json)
-cache:
-  directories:
-    - vendor
+script: skip
 
-script:
-  - pushd vendor
-  - ls
-  - touch this that vendor.json
-  - popd
-
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  local-dir: build
+  target-branch: gh-pages
+  verbose: true
+  on:
+    all_branches: true
 # cache:
 #   debug: true
 #   bundler: true
