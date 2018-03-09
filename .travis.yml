@@ -17,6 +17,8 @@ deploy:
   local-dir: build
   target-branch: gh-pages
   verbose: true
+  edge:
+    branch: ha-pages-post-1_9_0
   on:
     all_branches: true
 # cache:
