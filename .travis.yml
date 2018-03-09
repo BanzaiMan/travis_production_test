@@ -6,7 +6,9 @@ sudo: false
 
 install: true
 
-script: skip
+script:
+  - mkdir build
+  - touch build/foo
 
 deploy:
   provider: pages
