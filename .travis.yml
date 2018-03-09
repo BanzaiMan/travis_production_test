@@ -9,7 +9,17 @@ rvm: '2.4'
 
 install: true
 
-script: skip
+before_cache:
+  - shopt -s extglob
+  - rm -rf vendor/!(vendor.json)
+cache:
+  directories:
+    - vendor
+
+script:
+  - cd vendor
+  - touch this that vendor.json
+
 # cache:
 #   debug: true
 #   bundler: true
@@ -52,19 +62,6 @@ jobs:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-deploy:
-  provider: ops_works
-  edge:
-     source: dazz/dpl
-     branch: opsworks-update-app-on-success
-  access_key_id: abcdefg
-  secret_access_key: ultrA-5ecr3t
-  app-id: 11223344-5566-7788-9900-aabbccddeeff
-  on:
-    all_branches: true
-  wait-until-deployed: true
-  update-app-on-success: true
-
 
 notifications:
   email: false
