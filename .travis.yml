@@ -6,15 +6,13 @@ sudo: false
 
 install: true
 
-script:
-  - mkdir build
-  - echo '{}' > build/foo
+script: true
 
 deploy:
   - edge:
       branch: bintray-unauth
     provider: bintray
-    file: build/foo
+    file: bintray.js
     user: fg2it
     key: foobar
     skip_cleanup: true
@@ -23,7 +21,7 @@ deploy:
   - edge:
       branch: bintray-unauth
     provider: bintray
-    file: build/foo
+    file: bintray.js
     user: fg2it
     key: foobar
     skip_cleanup: true
