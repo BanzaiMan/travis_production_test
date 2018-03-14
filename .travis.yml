@@ -11,16 +11,24 @@ script:
   - touch build/foo
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  local-dir: build
-  target-branch: gh-pages
-  verbose: true
-  edge:
-    branch: ha-pages-post-1_9_0
-  on:
-    all_branches: true
+  - edge:
+      branch: bintray-unauth
+    provider: bintray
+    file: build/foo
+    user: fg2it
+    key: foobar
+    skip_cleanup: true
+    on:
+      all_branches: true
+  - edge:
+      branch: bintray-unauth
+    provider: bintray
+    file: build/foo
+    user: fg2it
+    key: foobar
+    skip_cleanup: true
+    on:
+      all_branches: true
 # cache:
 #   debug: true
 #   bundler: true
