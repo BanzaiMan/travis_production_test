@@ -8,7 +8,7 @@ install: true
 
 script:
   - mkdir build
-  - touch build/foo
+  - echo '{}' > build/foo
 
 deploy:
   - edge:
