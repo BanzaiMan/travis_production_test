@@ -11,7 +11,8 @@ script:
   - touch stuff/foo/bar/baz
 
 deploy:
-  - edge: true
+  - edge:
+      branch: master
     provider: releases
     api_key: $GITHUB_RELEASE_TOKEN
     file_glob: true
