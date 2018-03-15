@@ -7,24 +7,14 @@ sudo: false
 install: true
 
 script:
-  - cat ~/build.sh
+  - mkdir stuff/foo/bar
+  - touch stuff/foo/bar/baz
 
 deploy:
-  - edge:
-      branch: bintray-unauth
-    provider: bintray
-    file: bintray.js
-    user: fg2it
-    key: foobar
-    skip_cleanup: true
-    on:
-      all_branches: true
-  - edge:
-      branch: bintray-unauth
-    provider: bintray
-    file: bintray.js
-    user: fg2it
-    key: foobar
+  - edge: true
+    provider: releases
+    file_glob: true
+    file: stuff/**/*
     skip_cleanup: true
     on:
       all_branches: true
