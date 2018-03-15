@@ -7,7 +7,7 @@ sudo: false
 install: true
 
 script:
-  - mkdir stuff/foo/bar
+  - mkdir -p stuff/foo/bar
   - touch stuff/foo/bar/baz
 
 deploy:
