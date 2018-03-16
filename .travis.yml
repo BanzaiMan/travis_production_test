@@ -6,7 +6,7 @@ dist: trusty
 
 install: true
 
-script: true
+script: which yarn
 
 matrix:
   include:
@@ -23,13 +23,7 @@ matrix:
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
     # - os: osx
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: foo
-  edge: true
-  on:
-    all_branches: true
+
 
 notifications:
   email: false
