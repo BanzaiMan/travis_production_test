@@ -1,13 +1,8 @@
 language: python
 
-sudo: false
+sudo: true
 
 dist: trusty
-
-python:
-  - pypy3
-  - pypy
-  - pypy3.5-5.10.1
 
 install: skip
 
@@ -23,7 +18,7 @@ install: skip
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script: sudo cat /etc/apt/sources.list.d/*
 
 # android:
 #   components:
