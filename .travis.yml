@@ -4,22 +4,10 @@ language: ruby
 dist: trusty
 sudo: false
 
-install: true
+rvm:
+  - 2.6.0-preview1
 
-script:
-  - mkdir -p stuff/foo/bar
-  - touch stuff/foo/bar/baz
 
-deploy:
-  - edge:
-      branch: master
-    provider: releases
-    api_key: $GITHUB_RELEASE_TOKEN
-    file_glob: true
-    file: stuff/**/*
-    skip_cleanup: true
-    on:
-      all_branches: true
 # cache:
 #   debug: true
 #   bundler: true
