@@ -9,8 +9,6 @@ rvm:
 
 gemfile: our_gemfile
 
-before_install:
-  - echo -e "source 'https://rubygems.org\ngem 'rake'" > our_gemfile
 # cache:
 #   debug: true
 #   bundler: true
