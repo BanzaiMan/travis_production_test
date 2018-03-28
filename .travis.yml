@@ -49,6 +49,9 @@ jobs:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
+
+before_deploy:
+  - git tag super_awesome_tag_1
 deploy:
   provider: releases
   api_key:
