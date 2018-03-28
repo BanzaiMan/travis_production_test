@@ -51,6 +51,8 @@ jobs:
 #     - os: osx
 
 before_deploy:
+  - git config --local user.name "travis deploy"
+  - git config --local user.email "foo@example.com"
   - git tag super_awesome_tag_1
 deploy:
   provider: releases
