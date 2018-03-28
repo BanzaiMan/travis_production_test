@@ -53,7 +53,7 @@ jobs:
 before_deploy:
   - git config --local user.name "travis deploy"
   - git config --local user.email "foo@example.com"
-  - git tag super_awesome_tag_1
+  - git tag super_awesome_tag_1 -f
 deploy:
   provider: releases
   api_key:
