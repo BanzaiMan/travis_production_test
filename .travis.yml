@@ -61,6 +61,8 @@ deploy:
   file: test.rb
   on:
     all_branches: true
+  edge:
+    branch: releases-verbose
 
 notifications:
   email: false
