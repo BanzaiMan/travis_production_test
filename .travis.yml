@@ -49,7 +49,12 @@ jobs:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-
+deploy:
+  provider: releases
+  api_key:
+    secure: "Z1nvXbiv2qZT42nuz9T+Xx1BfQFsuYDKfdTIZVzu1RVj4uff3ZR9O7ACf4jipcFF37QSBDT1bIlIu+FYPclXHYNkWyQwahIpr5knQ2V7vv9KK2PvPoSgRXPtWwqUmwstDtUgsoaQz2Q1Yfyyyh4jWsNAEe+HJBdAMRfzFsDXNM4="
+  file: test.rb
+  tag_name: super duper release
 notifications:
   email: false
 
