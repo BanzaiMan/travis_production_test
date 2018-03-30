@@ -2,10 +2,11 @@ language: ruby
 # dist: trusty
 
 dist: trusty
-sudo: false
+sudo: required
 
 install: skip
-script: skip
+script:
+  docker install -u foo -p bar -y
 
 # cache:
 #   debug: true
@@ -50,19 +51,19 @@ jobs:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
-before_deploy:
-  - git config --local user.name "travis deploy"
-  - git config --local user.email "foo@example.com"
-  - git tag super_awesome_tag_1 -f
-deploy:
-  provider: releases
-  api_key:
-    secure: "Z1nvXbiv2qZT42nuz9T+Xx1BfQFsuYDKfdTIZVzu1RVj4uff3ZR9O7ACf4jipcFF37QSBDT1bIlIu+FYPclXHYNkWyQwahIpr5knQ2V7vv9KK2PvPoSgRXPtWwqUmwstDtUgsoaQz2Q1Yfyyyh4jWsNAEe+HJBdAMRfzFsDXNM4="
-  file: test.rb
-  on:
-    all_branches: true
-  edge:
-    branch: releases-verbose
+# before_deploy:
+#   - git config --local user.name "travis deploy"
+#   - git config --local user.email "foo@example.com"
+#   - git tag super_awesome_tag_1 -f
+# deploy:
+#   provider: releases
+#   api_key:
+#     secure: "Z1nvXbiv2qZT42nuz9T+Xx1BfQFsuYDKfdTIZVzu1RVj4uff3ZR9O7ACf4jipcFF37QSBDT1bIlIu+FYPclXHYNkWyQwahIpr5knQ2V7vv9KK2PvPoSgRXPtWwqUmwstDtUgsoaQz2Q1Yfyyyh4jWsNAEe+HJBdAMRfzFsDXNM4="
+#   file: test.rb
+#   on:
+#     all_branches: true
+#   edge:
+#     branch: releases-verbose
 
 notifications:
   email: false
