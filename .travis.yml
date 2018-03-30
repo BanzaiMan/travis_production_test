@@ -2,11 +2,10 @@ language: ruby
 # dist: trusty
 
 dist: trusty
-sudo: required
+sudo: false
 
 install: skip
-script:
-  - echo foo | docker login -u foo --password-stdin
+script: skip
 
 # cache:
 #   debug: true
@@ -67,7 +66,6 @@ jobs:
 
 notifications:
   email: false
-  webhooks: https://user:password@travis-requestbin.herokuapp.com/tt6vrvtt
 
   #  slack:
   #  rooms:
