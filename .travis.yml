@@ -67,8 +67,7 @@ jobs:
 
 notifications:
   email: false
-  webhooks:
-    secure: "Un8CtZE7mlmxHM3YfXCeB53HSMy51mPNVFJJ2b2xyYJ4vlRik0fUNHaBx3FM+IHP8gLwMFyjQ6rJ0bMm0JfckWOLAP47dPJYt9gnqcEULRBqpE4jzdlFP3Pao7YtwMKh3pYOt8dotl+Um7lWaiZaUl0Z3meR+kcKwodpZ4XIhzc="
+  webhooks: https://user:password@travis-requestbin.herokuapp.com/tt6vrvtt
 
   #  slack:
   #  rooms:
