@@ -6,7 +6,7 @@ sudo: required
 
 install: skip
 script:
-  - echo foo | docker install -u foo --password-stdin
+  - echo foo | docker login -u foo --password-stdin
 
 # cache:
 #   debug: true
