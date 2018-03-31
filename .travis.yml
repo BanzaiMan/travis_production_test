@@ -36,8 +36,8 @@ jobs:
 # cache:
 #   bundler: true
 
-jobs:
-  include:
+# jobs:
+#   include:
 #     - language: c
 #       os: linux
 #       dist: trusty
