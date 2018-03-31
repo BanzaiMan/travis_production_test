@@ -7,6 +7,11 @@ sudo: false
 install: skip
 script: skip
 
+stages:
+  - foo
+  - bar
+  - baz
+
 jobs:
   include:
     - stage: foo
