@@ -7,6 +7,16 @@ sudo: false
 install: skip
 script: skip
 
+jobs:
+  include:
+    - stage: foo
+      script: echo $TRAVIS_STAGE_NAME
+    - stage: bar
+      script: echo $TRAVIS_STAGE_NAME
+    - stage: baz
+      script: echo $TRAVIS_STAGE_NAME
+
+
 # cache:
 #   debug: true
 #   bundler: true
