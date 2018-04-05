@@ -1,26 +1,10 @@
 language: ruby
-# dist: trusty
-
 dist: trusty
 sudo: false
 
-install: skip
+gemfile: our_gemfile
+
 script: skip
-
-stages:
-  - foo
-  - bar
-  - baz
-
-jobs:
-  include:
-    - stage: foo
-      script: echo $TRAVIS_STAGE_NAME
-    - stage: bar
-      script: echo $TRAVIS_STAGE_NAME
-    - stage: baz
-      script: echo $TRAVIS_STAGE_NAME
-
 
 # cache:
 #   debug: true
