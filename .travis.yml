@@ -6,7 +6,7 @@ rvm:
   - default
   - '2.4.4'
   - '2.5.1'
-gemfile: our_gemfile
+# gemfile: our_gemfile
 
 # script: skip
 
