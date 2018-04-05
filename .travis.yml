@@ -2,7 +2,7 @@ language: ruby
 dist: trusty
 sudo: false
 
-gemfile: our_gemfile
+# gemfile: our_gemfile
 
 # script: skip
 
