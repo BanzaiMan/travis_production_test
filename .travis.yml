@@ -3,8 +3,7 @@ dist: trusty
 sudo: false
 
 before_install:
-  - gem uninstall -aIx bundler
-  - gem install bundler -v 1.16.0
+  - gem uninstall -aIx executable_hooks
 # gemfile: our_gemfile
 
 # script: skip
