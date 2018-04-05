@@ -3,7 +3,7 @@ dist: trusty
 sudo: false
 
 before_install:
-  - gem uninstall bundler
+  - gem uninstall -aIx bundler
   - gem install bundler -v 1.16.0
 # gemfile: our_gemfile
 
