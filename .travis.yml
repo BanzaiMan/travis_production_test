@@ -1,77 +1,82 @@
-language: ruby
 dist: trusty
-sudo: false
+rvm: 2.4.1
+cache:
+  bundler: true
+  directories:
+  - vendor/bundle
+  - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+    - ca-certificates
+stages:
+  - name: Test
+    if: sender != svenfuchs AND sender != imgbot[bot]
+  - name: imgbot
+    if: sender IN (svenfuchs, imgbot[bot])
+  - name: Run build
+    if: type IN (push, cron) AND (branch = master OR tag IS present)
+jobs:
+  include:
+    - &test-baseline
+      stage: Test
+      script:
+        bundle exec rake
 
-install: skip
-script: skip
-# gemfile: our_gemfile
+    - <<: *test-baseline
+      script:
+        bundle exec rake proof_external
+      if: type IN (pull_request, cron) OR (type = push AND branch = master)
 
-# script: skip
+    - stage: imgbot
+      script:
+        bundle exec rake verify
 
-# cache:
-#   debug: true
-#   bundler: true
-
-# before_cache:
-#   - echo $TRAVIS_TEST_RESULT
-#   - |
-#     if [[ $TRAVIS_TEST_RESULT = 0 ]]; then
-#       echo "yes!"
-#     fi
-
-# cache:
-#   bundler: true
-
-# jobs:
-#   include:
-#     - language: c
-#       os: linux
-#       dist: trusty
-#       env: JOB='Linux' GENERATOR='Unix Makefiles' CMAKE_FLAGS='-DPLATFORM_BUILD_SHARED=TRUE -DPLATFORM_ENABLE_DEBUG=FALSE'
-    # - sudo: false
-    #   dist: precise
-    #   env: DIST=precise STACK=EC2
-    # - sudo: required
-    #   dist: precise
-    #   env: DIST=precise STACK=GCE
-    # - stage: second
-    #   sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
-    # - sudo: required
-    #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   group: edge
-    #   env: DIST=trusty STACK=EC2 GROUP=edge
-    # - sudo: required
-    #   dist: trusty
-    #   group: edge
-    #   env: DIST=trusty STACK=GCE GROUP=edge
-#     - os: osx
-
-# before_deploy:
-#   - git config --local user.name "travis deploy"
-#   - git config --local user.email "foo@example.com"
-#   - git tag super_awesome_tag_1 -f
-deploy:
-  provider: releases
-  api_key: $GITHUB_OAUTH_TOKEN
-    # secure: "Z1nvXbiv2qZT42nuz9T+Xx1BfQFsuYDKfdTIZVzu1RVj4uff3ZR9O7ACf4jipcFF37QSBDT1bIlIu+FYPclXHYNkWyQwahIpr5knQ2V7vv9KK2PvPoSgRXPtWwqUmwstDtUgsoaQz2Q1Yfyyyh4jWsNAEe+HJBdAMRfzFsDXNM4="
-  file: test.rb
-  on:
-    all_branches: true
-    tags: true
-#   edge:
-#     branch: releases-verbose
-
+    - stage: Run build
+      sudo: true
+      env:
+        NEXT_BUILD_TAG=latest
+      script:
+      - if [ "$TRAVIS_TAG" != "" ]; then
+          NEXT_BUILD_TAG=`date +"%m-%d-%Y"`;
+        fi
+      - if [ "$TRAVIS_EVENT_TYPE" == "cron" ]; then
+          NEXT_BUILD_TAG=`date +"%m-%d-%Y"`;
+        fi
+      - echo ".git" > .dockerignore
+      - echo $NEXT_BUILD_TAG
+      - bundle exec rake docker:build
+      - docker tag acceptbitcoincash/acceptbitcoincash acceptbitcoincash/acceptbitcoincash:"$NEXT_BUILD_TAG"
+      - cp ./_site/js/main.js ./js/main.js
+      deploy:
+      - provider: script
+        skip-cleanup: true
+        script:
+        # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push acceptbitcoincash/acceptbitcoincash
+          docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"; docker push acceptbitcoincash/acceptbitcoincash
+        on:
+          condition: $NEXT_BUILD_TAG != "latest"
+      - provider: pages
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+        fqdn: beta.acceptbitco.in
+        keep-history: true
+        repo: acceptbitcoincash/acceptbitcoincash
+        target_branch: gh-pages
+  allow_failures:
+    - stage: Test
+      script:
+        bundle exec rake proof_external
+      if: type IN (pull_request, cron) OR (type = push AND branch = master)
 notifications:
-  email: false
-
-  #  slack:
-  #  rooms:
-  #    - secure: "KZTfjxhkOdDDZYD2ThBILt2ShYtdEee3PudFZlQBfpxG9N470GfxnKVfOl7Odu4lN6cIupwC4S4BnehubEywSR99l60VmfhePUCTqDLYy+iR9+guTvaECdXdaau3jTKhFdu5u60ITsiw5Yb+hwAaGFO0HmQhqR9XVr/U8IGQlok="
-  #  template:
-  #    - "Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
-  #  on_success: always
+  webhooks:
+    urls: https://www.travisbuddy.com/
+    on_failure: always
+    on_success: never
+  slack:
+    rooms:
+      - secure: "vIMiDIutWLX4xPWK4+HRh39MdAaNLl+UcK7UjNlehHIuopZPbnH+TmqFg5726ZDhkQ6QN/lHYVuHTvW9Kp+f7uiuRX2QLJH4vZZrcvsXeRccWbVx7MlMW9hbOnvB73nUmezaHploSpMINKWRD51PhLlONbztLCzYmOoBfLRDvrmEY7kzoiMFCCZwPIzIiyB1LrEhSQD3YELgZ+ZDipFUeVA2yrBKZSZZoM7ubcpqNZHhx+3uAJrpQ66k36eprrXM7IC8Qy8u2AcV1hNnczNM+jUts/PKyCjH4vIjh4JEVNN/gBLY30oDOR6d95szme/4BWEPCcP2Sz3MQTtkN5tXaAmRRKqwYUv+lB0lTB5EB28SD9Sa3Q6HJhIQ5BVuO0Lmdwe8CVBTy7lmwcyuUqW5y0MHQF6HAZj2lSN8pktInFD40o+FQgC03YEiXWJbCYzny7LmE0T6ZgycvFzr/S28cDXiPemPMg4333aDjHj02631gRZtMG9dh7u35UnjuWU1Qs2ke2Irx2GJadp5LHp7++ssHWdmZKVJlKSvh679QCNvlG5CvWD/VinBvibTR61Py+b0Zk+k3++fz3YcJZ89ZCAyQ4yWCsGB7nNjpaMYcBHgHwgNBF6Gk3x71A2N3NfQrm2pcoB3+KM3QMVFmZrUD74Ni8TLXOdK2GHmYaqMI9A="
+    on_success: change
+    on_failure: always
+    on_pull_requests: change
