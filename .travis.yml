@@ -1,23 +1,27 @@
-language: ruby
-
-os: osx
+language: swift
 
 rvm:
-  '2.0.0'
+  - '2.0.0'
+  - '2.5.1'
 
-script:
-  - sw_vers
+xcode_scheme:
+  - '1'
+  - '2'
+  - '3'
 
-matrix:
-  include:
-   - osx_image: xcode9.3beta
-   # - osx_image: xcode9.2
-   # - osx_image: xcode9.1
-   # - osx_image: xcode9
-   - osx_image: xcode8.3
-   - osx_image: xcode8
-   # - osx_image: xcode7.3
-   - osx_image: xcode6.4
+install: skip
+script: skip
+
+# matrix:
+#   include:
+#    - osx_image: xcode9.3beta
+#    # - osx_image: xcode9.2
+#    # - osx_image: xcode9.1
+#    # - osx_image: xcode9
+#    - osx_image: xcode8.3
+#    - osx_image: xcode8
+#    # - osx_image: xcode7.3
+#    - osx_image: xcode6.4
 #     - language: generic
 #     - language: java
     # - sudo: false
