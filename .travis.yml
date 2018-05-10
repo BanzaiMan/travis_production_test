@@ -1,27 +1,12 @@
-language: generic
+language: smalltalk
 
 install: skip
 
-dist: trusty
+smalltalk_vm:
+  - 1
+  - 2
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - sourceline: 'ppa:webupd8team/java'
-    packages:
-      - g++-6
-      - cmake
-      - python3
-      - python3-pip
-      - python3-setuptools
-      - nodejs
-      - npm
-      - libsfml-dev
-      - libprotobuf-dev
-      - protobuf-compiler
-      - libzmq-dev
-      - oracle-java8-installer
+dist: trusty
 
 # env:
 #   global:
@@ -37,10 +22,10 @@ addons:
 
 script: true
 
-matrix:
-  include:
-    - language: generic
-    - language: java
+# matrix:
+#   include:
+#     - language: generic
+#     - language: java
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
