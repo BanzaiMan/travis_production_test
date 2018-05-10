@@ -1,6 +1,8 @@
 language: ruby
 dist: trusty
-sudo: false
+sudo:
+  - required
+  - false
 
 install: skip
 script: skip
