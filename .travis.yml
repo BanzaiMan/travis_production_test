@@ -1,8 +1,6 @@
 language: ruby
-dist: trusty
-sudo:
-  - required
-  - false
+sudo: false
+rvm: 2.5.0
 
 install: skip
 script: skip
