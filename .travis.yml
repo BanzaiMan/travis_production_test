@@ -6,6 +6,9 @@ script: skip
 env:
   global:
     - FOO=bar
+  matrix:
+    - BAR=foo
+    - BAR=baz
 
 
 
@@ -30,11 +33,10 @@ env:
 
 jobs:
   include:
-    - stage: global
+    - stage: foo
+      if: env(FOO) = foo
     - stage: bar
       if: env(FOO) = bar
-    - stage: baz
-      if: env(FOO) = baz
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
