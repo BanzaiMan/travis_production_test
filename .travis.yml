@@ -4,8 +4,8 @@ install: skip
 script: skip
 
 env:
-  - FOO=bar
-  - FOO=baz
+  global:
+    - FOO=bar
 
 
 
