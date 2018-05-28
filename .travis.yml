@@ -37,6 +37,8 @@ jobs:
       if: env(BAR) = foo
     - stage: bar
       if: env(BAR) = bar
+    - stage: tag
+      if: tag IS present
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
