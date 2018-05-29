@@ -6,10 +6,11 @@ matrix:
     - stage: one
       script: skip
     - stage: one
-      script: skip
+      script: sleep 30
       env: FOO=bar
     - stage: two
       script: skip
+      env: FOO=bar
   allow_failures:
     - env: FOO=bar
 
