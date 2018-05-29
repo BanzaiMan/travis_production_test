@@ -1,10 +1,17 @@
 language: ruby
 sudo: false
-env:
-  - SCRIPT='echo foo'
-  - SCRIPT='echo foo && echo bar'
-script:
-  - $SCRIPT
+matrix:
+  fast_finish: true
+  include:
+    - stage: one
+      script: skip
+    - stage: one
+      script: skip
+      env: FOO=bar
+    - stage: two
+      script: skip
+  allow_failures:
+    - env: FOO=bar
 
 # gemfile: our_gemfile
 
