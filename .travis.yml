@@ -1,6 +1,6 @@
 language: java
 sudo: required
-dist: trusty
+os: osx
 jdk:
   - oraclejdk8
   - oraclejdk10
