@@ -1,13 +1,7 @@
 sudo: false
 dist: trusty
 language: php
-php:
-  - '7.2'
-  - '7.2.1'
-  - '5.6'
-  - '5.6.33'
-  - '7.0.27'
-  - '7.1.13'
+php: nightly
 
 install: skip
 
@@ -18,7 +12,16 @@ install: skip
 # cache:
 #   directories:
 #     - $CACHE_DIR
-script: skip
+script: php test-https.php
+
+jobs:
+  include:
+    - env: SSLLIB=gnutls
+    - env: SSLLIB=opesnssl
+      addons:
+        apt:
+          packages:
+            - libcurl4-openssl-dev
 
 # matrix:
 #   include:
