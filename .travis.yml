@@ -16,7 +16,7 @@ script: php test-https.php
 
 jobs:
   include:
-    - env: SSLLIB=gnutls
+    - php: '7.2'
     - env: SSLLIB=opesnssl
       addons:
         apt:
