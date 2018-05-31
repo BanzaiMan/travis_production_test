@@ -1,30 +1,9 @@
-sudo: false
-dist: trusty
-language: php
-php:
-  - '7.1'
-  - '7.0'
-  - '5.6'
-
+sudo: required
+dist: xenial
+language: ruby
 install: skip
 
-# env:
-#   global:
-#     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
-
-# cache:
-#   directories:
-#     - $CACHE_DIR
-script: php test-https.php
-
-jobs:
-  include:
-    - php: '7.2'
-    - env: SSLLIB=opesnssl
-      addons:
-        apt:
-          packages:
-            - libcurl4-openssl-dev
+script: skip
 
 # matrix:
 #   include:
