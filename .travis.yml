@@ -1,7 +1,7 @@
 sudo: required
 dist: xenial
 group: edge
-language: ruby
+language: generic
 install: skip
 
 script: skip
