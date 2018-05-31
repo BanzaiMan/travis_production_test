@@ -1,5 +1,6 @@
 sudo: required
 dist: xenial
+group: edge
 language: ruby
 install: skip
 
