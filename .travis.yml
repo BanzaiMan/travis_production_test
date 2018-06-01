@@ -10,16 +10,16 @@ script:
 
 # script: skip
 
-# cache:
-#   debug: true
-#   bundler: true
-
-# before_cache:
-#   - echo $TRAVIS_TEST_RESULT
-#   - |
-#     if [[ $TRAVIS_TEST_RESULT = 0 ]]; then
-#       echo "yes!"
-#     fi
+addons:
+  apt:
+    sources: &anchor
+       - sourceline: 'deb https://packages.chef.io/repos/apt/stable trusty main'
+jobs:
+  include:
+    - addons:
+        apt:
+          sources:
+            - *anchor
 
 # cache:
 #   bundler: true
