@@ -19,7 +19,8 @@ jobs:
     - addons:
         apt:
           sources:
-            - *anchor
+            *anchor
+
 
 # cache:
 #   bundler: true
