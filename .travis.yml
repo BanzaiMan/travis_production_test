@@ -1,26 +1,15 @@
 language: ruby
 sudo: false
-env:
-  - SCRIPT='echo foo'
-  - SCRIPT='echo foo && echo bar'
+addons:
+  apt:
+    packages:
+      - haveged
 script:
-  - $SCRIPT
+  - time sh -c "head -c 100000 /dev/random > /dev/null"
 
 # gemfile: our_gemfile
 
 # script: skip
-
-addons:
-  apt:
-    sources: &anchor
-       - sourceline: 'deb https://packages.chef.io/repos/apt/stable trusty main'
-jobs:
-  include:
-    - addons:
-        apt:
-          sources:
-            *anchor
-
 
 # cache:
 #   bundler: true
