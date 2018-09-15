@@ -1,10 +1,8 @@
-sudo: false
-dist: trusty
+sudo: required
+dist: xenial
 language: php
 php:
-  - '7.1'
-  - '7.0'
-  - '5.6'
+  - '7.3.0RC1'
 
 install: skip
 
@@ -16,15 +14,6 @@ install: skip
 #   directories:
 #     - $CACHE_DIR
 script: php test-https.php
-
-jobs:
-  include:
-    - php: '7.2'
-    - env: SSLLIB=opesnssl
-      addons:
-        apt:
-          packages:
-            - libcurl4-openssl-dev
 
 # matrix:
 #   include:
