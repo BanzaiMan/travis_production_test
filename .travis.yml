@@ -14,24 +14,23 @@ deploy:
       secure: "BZ5sn7H0WGzLk0HA2QBWGoE6hSgq2ua3ukQSMQlA4JXkSGpBXY4HjMKp4xi9lrgmRYh8s+i5ewTxrNDtKvsUV8KqdWGKrsAs6nV2Lc/8i0khxpy3hmwRQl7SRsHE57Txf6oCbfUVmPgnubw8w2R7VRCu9enWwqzeeL06rFm5QNM="
     secret_access_key:
       secure: "Ld2IKkprljIQA9VexEWPG5b3bcvN6vpfC7anBByHRP805ssnMT+LpZAzb1SqrfhcmzVwRxEGVtGxDkcKCZeviVLZY72eWPipqg037bpvTi+cl8S4LoImTp/YKDHUON+/x/H3NbPatLGzLmtv1quFNu7KgHG+HFr9RKbOflIgDrc="
-    bucket: "hiro.test.bucket.com"
-    region: 'us-east-1'
+    endpoint: https://nyc3.digitaloceanspaces.com
     skip_cleanup: true
     detect_encoding: true
     if:
       all_branches: true
     edge:
-      branch: aws-sdk-2
-  - provider: codedeploy
-    access_key_id:
-      secure: "BZ5sn7H0WGzLk0HA2QBWGoE6hSgq2ua3ukQSMQlA4JXkSGpBXY4HjMKp4xi9lrgmRYh8s+i5ewTxrNDtKvsUV8KqdWGKrsAs6nV2Lc/8i0khxpy3hmwRQl7SRsHE57Txf6oCbfUVmPgnubw8w2R7VRCu9enWwqzeeL06rFm5QNM="
-    secret_access_key:
-      secure: "Ld2IKkprljIQA9VexEWPG5b3bcvN6vpfC7anBByHRP805ssnMT+LpZAzb1SqrfhcmzVwRxEGVtGxDkcKCZeviVLZY72eWPipqg037bpvTi+cl8S4LoImTp/YKDHUON+/x/H3NbPatLGzLmtv1quFNu7KgHG+HFr9RKbOflIgDrc="
-    bucket: "hiro.test.bucket.com"
-    region: 'us-east-1'
-    skip_cleanup: true
-    detect_encoding: true
-    if:
-      all_branches: true
-    edge:
-      branch: aws-sdk-2
+      branch: ha-s3-endpoint
+  # - provider: codedeploy
+  #   access_key_id:
+  #     secure: "BZ5sn7H0WGzLk0HA2QBWGoE6hSgq2ua3ukQSMQlA4JXkSGpBXY4HjMKp4xi9lrgmRYh8s+i5ewTxrNDtKvsUV8KqdWGKrsAs6nV2Lc/8i0khxpy3hmwRQl7SRsHE57Txf6oCbfUVmPgnubw8w2R7VRCu9enWwqzeeL06rFm5QNM="
+  #   secret_access_key:
+  #     secure: "Ld2IKkprljIQA9VexEWPG5b3bcvN6vpfC7anBByHRP805ssnMT+LpZAzb1SqrfhcmzVwRxEGVtGxDkcKCZeviVLZY72eWPipqg037bpvTi+cl8S4LoImTp/YKDHUON+/x/H3NbPatLGzLmtv1quFNu7KgHG+HFr9RKbOflIgDrc="
+  #   bucket: "hiro.test.bucket.com"
+  #   region: 'us-east-1'
+  #   skip_cleanup: true
+  #   detect_encoding: true
+  #   if:
+  #     all_branches: true
+  #   edge:
+  #     branch: aws-sdk-2
