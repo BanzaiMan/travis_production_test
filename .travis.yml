@@ -1,12 +1,7 @@
 language: java
-sudo: required
-os: osx
+sudo: false
 jdk:
-  - oraclejdk8
-  - oraclejdk10
-  - oraclejdk-ea
-  - openjdk10
-  - openjdk11
+  - openjdk8
 
 # travis gradle is 4 which does not work with java 9
 script: skip
