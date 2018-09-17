@@ -11,10 +11,11 @@ script: skip
 deploy:
   - provider: s3
     access_key_id:
-      secure: "BZ5sn7H0WGzLk0HA2QBWGoE6hSgq2ua3ukQSMQlA4JXkSGpBXY4HjMKp4xi9lrgmRYh8s+i5ewTxrNDtKvsUV8KqdWGKrsAs6nV2Lc/8i0khxpy3hmwRQl7SRsHE57Txf6oCbfUVmPgnubw8w2R7VRCu9enWwqzeeL06rFm5QNM="
+      secure: "DX7CXn2WyMgalNAa4cqJcpRzX+6wbVbPwMIQBpW0eMa1XSfUmmdg9Vg+Vofzkt3sF6iWzESo/MTQv60L1QNMx1pPQNFwmRgFRRDjR/6CHs9RtMFhuNto0QcBsA7mh/mnMKX9SoYWXNaUqWwgp/vg2P8ioAjhv+unA5+3MME8D1A="
     secret_access_key:
-      secure: "Ld2IKkprljIQA9VexEWPG5b3bcvN6vpfC7anBByHRP805ssnMT+LpZAzb1SqrfhcmzVwRxEGVtGxDkcKCZeviVLZY72eWPipqg037bpvTi+cl8S4LoImTp/YKDHUON+/x/H3NbPatLGzLmtv1quFNu7KgHG+HFr9RKbOflIgDrc="
+      secure: "KwemkXPkClCXF4/bhM4BHl0ycFd1ScOfud0xStMqv+hWhK5sgwsTXlD5lIFteKV9RlljCqH+fVxHSeGTkXoeFW5nvqjSsaO2r1ob7evv7YgqQnf6B2Ojrv1cMRfc+b1FaEPo4J0Sy+4hlx8ua5uQfVqTnVX6VRFnxE7OY8mB/pE="
     endpoint: https://nyc3.digitaloceanspaces.com
+    bucket: travis-ci-spaces-testing
     skip_cleanup: true
     detect_encoding: true
     if:
