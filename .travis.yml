@@ -1,5 +1,5 @@
 language: node_js
-node_js: 8
+node_js: '0.6'
 
 sudo: false
 dist: trusty
@@ -7,6 +7,10 @@ dist: trusty
 install: true
 
 script: true
+
+env:
+  -
+  - CCFLAGS='-w' # suppress all warnings
 
 matrix:
   include:
@@ -23,13 +27,6 @@ matrix:
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE
     # - os: osx
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: foo
-  edge: true
-  on:
-    all_branches: true
 
 notifications:
   email: false
