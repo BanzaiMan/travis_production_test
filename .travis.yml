@@ -1,26 +1,11 @@
 language: ruby
 sudo: false
-env:
-  - SCRIPT='echo foo'
-  - SCRIPT='echo foo && echo bar'
-script:
-  - $SCRIPT
+install: skip
+script: skip
 
 # gemfile: our_gemfile
 
 # script: skip
-
-addons:
-  apt:
-    sources: &anchor
-       - sourceline: 'deb https://packages.chef.io/repos/apt/stable trusty main'
-jobs:
-  include:
-    - addons:
-        apt:
-          sources:
-            *anchor
-
 
 # cache:
 #   bundler: true
@@ -58,7 +43,12 @@ jobs:
 #   - git config --local user.name "travis deploy"
 #   - git config --local user.email "foo@example.com"
 #   - git tag super_awesome_tag_1 -f
-#deploy:
+deploy:
+  provider: puppet
+  edge:
+    branch: puppet-5
+  on:
+    all_branches: true
 #  provider: releases
 #  api_key: $GITHUB_OAUTH_TOKEN
 #    # secure: "Z1nvXbiv2qZT42nuz9T+Xx1BfQFsuYDKfdTIZVzu1RVj4uff3ZR9O7ACf4jipcFF37QSBDT1bIlIu+FYPclXHYNkWyQwahIpr5knQ2V7vv9KK2PvPoSgRXPtWwqUmwstDtUgsoaQz2Q1Yfyyyh4jWsNAEe+HJBdAMRfzFsDXNM4="
