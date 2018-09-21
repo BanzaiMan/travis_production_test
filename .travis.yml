@@ -19,7 +19,8 @@ install: skip
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script:
-  - df -h
+  - uname -r
+  - ls -l /lib/mod*
 
 matrix:
   include:
@@ -35,10 +36,10 @@ matrix:
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE GROUP=deprecated-2017Q4
-      group: deprecated-2017Q4
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE GROUP=deprecated-2017Q4
+    #   group: deprecated-2017Q4
     # - sudo: false
     #   dist: trusty
     #   group: edge
