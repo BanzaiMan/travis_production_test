@@ -20,7 +20,7 @@ install: skip
 
 script:
   - uname -r
-  - ls -l /lib/mod*
+  - ls -l /lib/mod*/*
 
 matrix:
   include:
