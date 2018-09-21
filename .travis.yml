@@ -5,7 +5,8 @@ sudo: false
 compiler:
   - cpp
 
-install: skip
+install:
+  - sudo apt-get install linux-headers-$(uname -r)
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -30,9 +31,9 @@ matrix:
     - sudo: required
       dist: precise
       env: DIST=precise STACK=GCE
-    - sudo: false
-      dist: trusty
-      env: DIST=trusty STACK=EC2
+    # - sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
     - sudo: required
       dist: trusty
       env: DIST=trusty STACK=GCE
