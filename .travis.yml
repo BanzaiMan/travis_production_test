@@ -44,7 +44,7 @@ script: skip
 #   - git config --local user.email "foo@example.com"
 #   - git tag super_awesome_tag_1 -f
 deploy:
-  provider: puppet
+  provider: puppetforge
   edge:
     branch: puppet-5
   on:
