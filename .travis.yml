@@ -21,7 +21,7 @@ install:
 
 script:
   - uname -r
-  - ls -lL /lib/mod*/*
+  - ls -lL /lib/mod*/*/build
 
 matrix:
   include:
