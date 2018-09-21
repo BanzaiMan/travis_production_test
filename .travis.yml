@@ -22,7 +22,7 @@ install:
 script:
   - uname -r
   - find /lib/modules/$(uname -r)
-  - cat /lib/modules/$(uname -r)/Makefile
+  - cat /lib/modules/$(uname -r)/build/Makefile
 
 matrix:
   include:
