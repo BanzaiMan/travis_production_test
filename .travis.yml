@@ -2,13 +2,18 @@ language: python
 
 install: skip
 
-dist: trusty
+dist: xenial
 
-sudo: false
+sudo: required
 
 python:
-  - pypy
-  - pypy3.5
+  - '3.7'
+addons:
+  apt:
+    sources:
+      - deadsnakes
+    packages:
+      - python3.7-dev
 
 # cache:
 #   directories:
