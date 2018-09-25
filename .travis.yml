@@ -5,9 +5,11 @@ install: skip
 script:
   - sw_vers
   - sudo echo yes
-  - sudo -v
 
 addons:
+  apt:
+    packages:
+      - cmake
   homebrew:
     packages:
       - qt5
