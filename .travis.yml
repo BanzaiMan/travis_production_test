@@ -14,9 +14,6 @@ addons:
     packages:
       - qt5
 
-before_install:
-  - true
-
 # matrix:
 #   include:
 #    - osx_image: xcode9.3beta
