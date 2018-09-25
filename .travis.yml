@@ -1,7 +1,7 @@
 language: java
 sudo: required
 jdk:
-  - openjdk8
+  - openjdk11
 
 # travis gradle is 4 which does not work with java 9
 script: skip
