@@ -2,10 +2,10 @@ language: ruby
 dist: trusty
 sudo: false
 
-# install: skip
+install: skip
 
 script:
-  - bundle exec bundle --version
+  - skip
 
 rvm:
   - '2.4'
@@ -16,15 +16,12 @@ rvm:
 #   bundler: true
 
 before_install:
-  - rm -f ~/.rvm/hooks/after_use
-  - test -x /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)/bin/ruby || rvm reinstall $(cat .ruby-version) --binary
-  - rvm use $(cat .ruby-version) --create
-  - ruby --version
+  - touch this_file
 
 cache:
   bundler: true
   directories:
-    - /home/travis/.rvm/rubies/ruby-$(cat .ruby-version)
+    - this_file
 matrix:
   include:
 #     - language: c
