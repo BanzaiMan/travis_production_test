@@ -1,7 +1,9 @@
 language: ruby
-sudo: false
+dist: precise
+sudo: require
 install: skip
-script: skip
+script:
+  - curl -sSL https://cli-assets.heroku.com/heroku-linux-x64.tar.xz | tar Jx
 
 # gemfile: our_gemfile
 
@@ -43,12 +45,7 @@ script: skip
 #   - git config --local user.name "travis deploy"
 #   - git config --local user.email "foo@example.com"
 #   - git tag super_awesome_tag_1 -f
-deploy:
-  provider: puppetforge
-  edge:
-    branch: puppet-5
-  on:
-    all_branches: true
+
 #  provider: releases
 #  api_key: $GITHUB_OAUTH_TOKEN
 #    # secure: "Z1nvXbiv2qZT42nuz9T+Xx1BfQFsuYDKfdTIZVzu1RVj4uff3ZR9O7ACf4jipcFF37QSBDT1bIlIu+FYPclXHYNkWyQwahIpr5knQ2V7vv9KK2PvPoSgRXPtWwqUmwstDtUgsoaQz2Q1Yfyyyh4jWsNAEe+HJBdAMRfzFsDXNM4="
