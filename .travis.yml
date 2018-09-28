@@ -1,9 +1,13 @@
 language: ruby
-dist: precise
+# dist: precise
 sudo: require
 install: skip
 script:
   - curl -sSL https://cli-assets.heroku.com/heroku-linux-x64.tar.xz | tar Jx
+
+os:
+  - linux
+  - osx
 
 # gemfile: our_gemfile
 
