@@ -1,8 +1,8 @@
-sudo: required
-dist: xenial
+sudo: false
+dist: trusty
 language: php
 php:
-  - '7.3.0RC1'
+  - '7.1.22'
 
 install: skip
 
@@ -13,7 +13,8 @@ install: skip
 # cache:
 #   directories:
 #     - $CACHE_DIR
-script: php test-https.php
+script:
+  - php -r "echo 'PHP cUrl version:\ '.curl_version()['version'];"
 
 # matrix:
 #   include:
