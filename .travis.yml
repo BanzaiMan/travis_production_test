@@ -1,13 +1,13 @@
-language: ruby
+language: rust
 # dist: precise
-sudo: require
-install: skip
-script:
-  - curl -sSL https://cli-assets.heroku.com/heroku-linux-x64.tar.xz | tar Jx
+sudo: false
+dist: trusty
+rust:
+  - nightly-2018-08-14
 
-os:
-  - linux
-  - osx
+install: skip
+script: skip
+
 
 # gemfile: our_gemfile
 
