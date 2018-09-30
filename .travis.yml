@@ -1,10 +1,16 @@
-language: java
-sudo: required
-jdk:
-  - openjdk11
+sudo: false
 
-# travis gradle is 4 which does not work with java 9
-script: skip
+language: java
+
+before_install:
+  - env
+  - echo "TERM $TERM"
+  - wget https://raw.githubusercontent.com/sormuras/bach/master/install-jdk.sh
+  - . ./install-jdk.sh -F 10 -L GPL -C
+
+install: true
+script: true
+
 
 # android:
 #   components:
