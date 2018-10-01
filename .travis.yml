@@ -2,9 +2,6 @@ language: rust
 # dist: precise
 sudo: false
 dist: trusty
-rust:
-  - nightly-2018-08-14
-
 install: skip
 script: skip
 
