@@ -1,18 +1,7 @@
 language: php
 php: '7.2'
 
-sudo: required
-env:
-  global:
-    - TRAVIS_PYTHON_VERSION=2.7.10
-    - UBUNTU_RELEASE=$(lsb_release -rs)
-    - PYENV_PATH_FILE='/etc/profile.d/pyenv.sh'
-before_install:
-  - curl -sSf -o python.tar.bz2 https://s3.amazonaws.com/travis-python-archives/binaries/ubuntu/${UBUNTU_RELEASE}/x86_64/python-${TRAVIS_PYTHON_VERSION}.tar.bz2
-  - sudo tar xjf python.tar.bz2 --directory /
-  - echo 'export PATH=/opt/python/#{TRAVIS_PYTHON_VERSION}/bin:$PATH' | sudo tee -a #{PYENV_PATH_FILE}
-  - source ~/virtualenv/python${TRAVIS_PYTHON_VERSION}/bin/activate
-  - python --version
+sudo: false
 
 # env:
 #   global:
@@ -22,7 +11,8 @@ before_install:
 #   directories:
 #     - $CACHE_DIR
 install: skip
-script: skip
+script:
+  - python --version
 
 # matrix:
 #   include:
