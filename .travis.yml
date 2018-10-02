@@ -1,15 +1,10 @@
-sudo: false
+sudo: required
 
 language: java
 
-before_install:
-  - env
-  - echo "TERM $TERM"
-  - wget https://raw.githubusercontent.com/sormuras/bach/master/install-jdk.sh
-  - . ./install-jdk.sh -F 10 -L GPL -C
-
 install: true
-script: true
+script:
+  - export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash
 
 
 # android:
