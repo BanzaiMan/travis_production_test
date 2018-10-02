@@ -1,6 +1,7 @@
-sudo: required
+# sudo: required
 
 os: windows
+dist: server-2016
 
 install:
   - true
