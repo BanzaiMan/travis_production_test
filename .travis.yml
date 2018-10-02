@@ -1,4 +1,6 @@
-sudo: false
+sudo: required
+
+os: windows
 
 install:
   - true
