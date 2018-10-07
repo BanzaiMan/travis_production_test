@@ -16,7 +16,7 @@ matrix:
       env: FOO=2
 
 script:
-  - true
+  - echo $TRAVIS_BUILD_STAGE_NAME
 
 jobs:
   include:
