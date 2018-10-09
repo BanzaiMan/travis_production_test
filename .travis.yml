@@ -1,6 +1,14 @@
 sudo: required
+language: node_js
 
-os: windows
+os: 
+  - windows
+  - linux
+  - osx
+
+node_js:
+  - '10'
+  - '9'
 
 install:
   - true
@@ -10,9 +18,3 @@ script:
 
 notifications:
   email: false
-
-deploy:
-  provider: script
-  script: echo hello
-  on:
-    condition: "true"
