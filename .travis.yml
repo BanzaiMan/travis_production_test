@@ -1,20 +1,16 @@
 sudo: required
-language: node_js
+os: windows
 
-os: 
-  - windows
-  - linux
-  - osx
+language: node_js
 
 node_js:
   - '10'
-  - '9'
 
-install:
-  - true
-
-script:
-  - true
-
-notifications:
-  email: false
+before_install:
+  - mkdir -p ${TRAVIS_HOME}/bin
+  - curl -sLf -o ${TRAVIS_HOME}/bin/gimme https://build-staging.travis-ci.com/files/gimme
+  - chmod +x ${TRAVIS_HOME}/bin/gimme
+  - export PATH=${TRAVIS_HOME}/bin:$PATH
+  - choco install rsync
+  - eval $(gimme 1.10.1)
+  - go version
