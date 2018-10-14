@@ -17,6 +17,7 @@ node_js:
 env:
   global:
     - ZF_TRAVIS_COMMAND=test:javascript:units
+matrix:
   include:
     - os: windows
       node_js: stable
