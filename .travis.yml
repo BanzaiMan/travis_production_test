@@ -2,17 +2,14 @@ language: objective-c
 
 install: skip
 
+osx_image:
+  - xcode10
+  - xcode9.4
+
 script:
   - sw_vers
   - sudo echo yes
 
-addons:
-  apt:
-    packages:
-      - cmake
-  homebrew:
-    packages:
-      - qt5
 
 # matrix:
 #   include:
