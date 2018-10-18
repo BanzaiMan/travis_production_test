@@ -8,7 +8,7 @@ stages:
   - name: one
     if: branch = master
   - name: two
-    if: branch = ruby
+    if: env(FOO) IS present
 
 jobs:
   include:
@@ -19,7 +19,7 @@ jobs:
       if: branch = master
     - stage: two
       script: echo two
-      if: branch = foo OR branch = baz
+      if: branch = ruby
 
 # gemfile: our_gemfile
 
