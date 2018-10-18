@@ -16,8 +16,10 @@ jobs:
       script: echo one
     - stage: two
       script: echo two
+      if: branch = master
     - stage: two
       script: echo two
+      if: branch = ruby
 
 # gemfile: our_gemfile
 
