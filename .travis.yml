@@ -16,7 +16,7 @@ jobs:
       script: echo one
     - stage: two
       script: echo two
-      if: branch = master
+      if: branch = ruby
     - stage: two
       script: echo two
       if: branch = ruby
