@@ -1,11 +1,23 @@
 language: ruby
 # dist: precise
-sudo: require
+sudo: false
 install: skip
-script:
-  - gem list
-os: osx
-osx_image: xcode9.4
+script: skip
+
+stages:
+  - name: one
+    if: true # always
+  - name: two
+    if: false # never!
+
+jobs:
+  include:
+    - stage: one
+      script: echo one
+    - stage: two
+      script: echo two
+    - stage: two
+      script: echo two
 
 # gemfile: our_gemfile
 
