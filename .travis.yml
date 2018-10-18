@@ -10,6 +10,8 @@ node_js:
 
 deploy:
   provider: pypi
+  edge:
+    branch: pypi-user-install
   user: "foobarbbz"
   password: "hunter2"
   on:
