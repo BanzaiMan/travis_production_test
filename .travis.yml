@@ -19,7 +19,7 @@ jobs:
       if: branch = master
     - stage: two
       script: echo two
-      if: branch = ruby
+      if: branch = foo
 
 # gemfile: our_gemfile
 
