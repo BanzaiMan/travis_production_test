@@ -6,9 +6,9 @@ script: skip
 
 stages:
   - name: one
-    if: branch = ruby
-  - name: two
     if: branch = master
+  - name: two
+    if: branch = ruby
 
 jobs:
   include:
