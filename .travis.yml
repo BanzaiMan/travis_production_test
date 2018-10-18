@@ -4,30 +4,16 @@ sudo: false
 
 install: true
 
-script: which yarn
-
-os:
-  - windows
-  - linux
-  - osx
+script: skip
 node_js:
-  - lts/boron
-  - lts/carbon
-  - stable
-env:
-  - ZF_TRAVIS_COMMAND=test:javascript:units
-matrix:
-  include:
-    - os: windows
-      node_js: stable
-      env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
-    - os: linux
-      node_js: stable
-      env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
-    - os: osx
-      node_js: stable
-      env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
-      
+  - node
+
+deploy:
+  provider: pypi
+  user: "foobarbbz"
+  password: "hunter2"
+  on:
+    all_branches: true
 notifications:
   email: false
 
