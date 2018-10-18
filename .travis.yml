@@ -1,30 +1,33 @@
 language: node_js
-node_js: 8
 
 sudo: false
-dist: trusty
 
 install: true
 
 script: which yarn
 
+os:
+  - windows
+  - linux
+  - osx
+node_js:
+  - lts/boron
+  - lts/carbon
+  - stable
+env:
+  - ZF_TRAVIS_COMMAND=test:javascript:units
 matrix:
   include:
-#     - sudo: false
-#       dist: precise
-#       env: DIST=precise STACK=EC2
-#     - sudo: required
-#       dist: precise
-#       env: DIST=precise STACK=GCE
-    # - sudo: false
-    #   dist: trusty
-    #   env: DIST=trusty STACK=EC2
-    # - sudo: required
-    #   dist: trusty
-    #   env: DIST=trusty STACK=GCE
-    # - os: osx
-
-
+    - os: windows
+      node_js: stable
+      env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
+    - os: linux
+      node_js: stable
+      env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
+    - os: osx
+      node_js: stable
+      env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
+      
 notifications:
   email: false
 
