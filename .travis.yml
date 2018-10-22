@@ -2,24 +2,12 @@ language: ruby
 # dist: precise
 sudo: false
 install: skip
-script: skip
+script:
+  - echo ${FOO:1}
 
-stages:
-  - name: one
-    if: branch = master
-  - name: two
-    if: env(FOO) IS present
-
-jobs:
-  include:
-    - stage: one
-      script: echo one
-    - stage: two
-      script: echo two
-      if: branch = ruby
-    - stage: two
-      script: echo two
-      if: branch = ruby
+env:
+  global:
+    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 
 # gemfile: our_gemfile
 
