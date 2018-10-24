@@ -5,5 +5,4 @@ sudo: false
 install:
   - true
   
-script:
-  - cat /proc/sys/net/ipv4/tcp_ecn
+script: skip
