@@ -6,3 +6,5 @@ install:
   - true
   
 script: skip
+
+cache: bundler
