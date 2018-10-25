@@ -6,28 +6,11 @@ install: true
 
 script: true
 
-os:
-  - windows
-  - linux
-  - osx
 node_js:
-  - lts/boron
-  - lts/carbon
-  - stable
-env:
-  - ZF_TRAVIS_COMMAND=test:javascript:units
-matrix:
-  include:
-    - os: windows
-      node_js: stable
-      env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
-    - os: linux
-      node_js: stable
-      env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
-    - os: osx
-      node_js: stable
-      env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
-      
+  - "10"
+
+cache: npm
+
 notifications:
   email: false
 
