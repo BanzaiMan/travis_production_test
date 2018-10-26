@@ -8,10 +8,8 @@ osx_image:
   - xcode9.3
 
 script:
-  - brew update 2&>1
+  - brew update
   - brew cask uninstall oclint
-  - brew tap oclint/formulae
-  - brew install oclint
   - brew install gcc
 
 # matrix:
