@@ -4,10 +4,9 @@ install: skip
 
 osx_image:
   - xcode10
-  - xcode9.4
 
 script:
-  - brew --version
+  - brew uninstall oclint
   - brew upgrade "sqlite"
 
 
