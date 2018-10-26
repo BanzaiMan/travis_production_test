@@ -1,6 +1,7 @@
 language: ruby
 # dist: precise
-sudo: false
+sudo: required
+dist: trusty
 install: skip
 script:
   - echo ${FOO:1}
