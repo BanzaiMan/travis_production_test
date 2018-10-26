@@ -4,6 +4,8 @@ install: skip
 
 osx_image:
   - xcode10
+  - xcode9.4
+  - xcode9.3
 
 script:
   - brew uninstall oclint
