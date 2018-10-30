@@ -14,7 +14,7 @@ sudo: required
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script:skip
+script: skip
 
 matrix:
   include:
