@@ -2,13 +2,13 @@ language: objective-c
 
 install: skip
 
+rvm: ruby-head
+
 osx_image:
   - xcode8
+  - xcode10
 
-script:
-  - rvm use 2.3
-  - brew update
-  - brew upgrade openssl
+script: skip
 # matrix:
 #   include:
 #    - osx_image: xcode9.3beta
