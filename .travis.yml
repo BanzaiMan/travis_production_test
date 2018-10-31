@@ -1,13 +1,13 @@
-language: objective-c
+language: node_js
 
 install: skip
-
-rvm: ruby-head
-
+os: osx
 osx_image:
-  - xcode8
-  - xcode10
-
+  - xcode6.4
+addons:
+  homebrew:
+    packages:
+      - openssl
 script: skip
 # matrix:
 #   include:
