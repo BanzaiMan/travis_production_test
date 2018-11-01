@@ -1,9 +1,21 @@
-language: node_js
+language: ruby
+rvm:
+  - 2.4.4
+  - 2.5.3
 
 install: skip
 os: osx
 osx_image:
   - xcode6.4
+  - xcode7.3
+  - xcode8
+  - xcode8.3
+  - xcode9
+  - xcode9.1
+  - xcode9.2
+  - xcode9.3
+  - xcode9.4
+  - xcode10
 addons:
   homebrew:
     packages:
