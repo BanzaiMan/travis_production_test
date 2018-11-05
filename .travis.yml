@@ -2,14 +2,23 @@ language: node_js
 
 sudo: required
 
+addons:
+  apt:
+    packages:
+      - redis-tools
+
+before_install:
+  - sudo sed -e 's/^bind.*/bind 127.0.0.1/' /etc/redis/redis.conf > redis.conf
+  - sudo mv redis.conf /etc/redis
+  - sudo service redis-server start
+  - echo PING | nc localhost 6379
+
 install: true
 
 script: true
 
 node_js:
   - "10"
-
-cache: npm
 
 notifications:
   email: false
