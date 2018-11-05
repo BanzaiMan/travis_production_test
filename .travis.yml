@@ -3,7 +3,7 @@ language: node_js
 sudo: required
 
 install:
-  - while true; do sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9; sleep 10; done
+  - while true; do sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9; sleep 10; sudo apt-key del E084DAB9; done
 
 script: true
 
