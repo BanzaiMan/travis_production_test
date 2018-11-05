@@ -2,18 +2,8 @@ language: node_js
 
 sudo: required
 
-addons:
-  apt:
-    packages:
-      - redis-tools
-
-before_install:
-  - sudo sed -e 's/^bind.*/bind 127.0.0.1/' /etc/redis/redis.conf > redis.conf
-  - sudo mv redis.conf /etc/redis
-  - sudo service redis-server start
-  - echo PING | nc localhost 6379
-
-install: true
+install:
+  - while true; do sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9; done
 
 script: true
 
