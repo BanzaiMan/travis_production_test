@@ -12,7 +12,7 @@ before_install:
   - sudo service postgresql stop
   - sed -e 's/^port.*/port = 5432/' /etc/postgresql/10/main/postgresql.conf > postgresql.conf
   - sudo mv postgresql.conf /etc/postgresql/10/main
-  - sudo service postgresql start
+  - sudo service postgresql start 10
 install: skip
 script:
   - sudo -u postgres psql postgres -c 'SELECT version()'
