@@ -1,9 +1,17 @@
 dist: trusty
 sudo: false
 language: go
-go: 1.10
+go:
+  - 1.7.x
+  - 1.7
+  - '1.10'
 install: skip
 script: skip
+deploy:
+  provider: script
+  script: echo deploy!
+  on:
+    condition: $TRAVIS_GO_VERSION =~ ^1\.7\.
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
