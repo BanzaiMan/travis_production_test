@@ -1,24 +1,21 @@
 language: bash
-sudo: required
-dist: trusty
 
-env:
-    - PATH=/home/travis/.gem/ruby/2.4.0/bin:/bin:/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/X11R6/bin
+os: linux
 
-before_install:
-    - sudo apt-get update
-    - sudo apt-get upgrade
-    - sudo apt-get install ruby-dev build-essential debhelper devscripts rpm xalan wget -y
+dist: xenial
 
 script:
-    - sudo rvm implode
-    - sudo gem install fpm
-    - env
-    - gem env
-    - type -a fpm
-    - fpm --help
-
-
+- rvm implode --force
+- sudo apt purge ruby
+- unset GEM_HOME GEM_PATH
+- sudo snap install ruby --classic
+- which ruby
+- ruby -v
+- which bundle
+- bundle -v
+- gem install bundler
+- which bundle
+- bundle -v
 matrix:
   include:
     # - env: FOO=bar
