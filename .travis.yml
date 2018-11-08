@@ -12,6 +12,7 @@ deploy:
   script: echo deploy!
   on:
     condition: $TRAVIS_GO_VERSION =~ ^1\.7\.
+    all_branches: true
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
