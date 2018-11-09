@@ -17,6 +17,7 @@ deploy:
   credentials: "travis.json"
   local_dir: 'path/to'
   bucket: my_travis_test_bucket
+  skip_cleanup: true
   on:
     all_branches: true
 # gemfile: our_gemfile
