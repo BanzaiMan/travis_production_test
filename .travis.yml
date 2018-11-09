@@ -16,6 +16,8 @@ deploy:
   project_id: "travis-staging-1"
   credentials: "travis.json"
   local_dir: 'path/to'
+  on:
+    all_branches: true
 # gemfile: our_gemfile
 
 # script: skip
