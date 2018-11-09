@@ -1,8 +1,7 @@
 language: r
 
 r: release
-
-sudo: false
+os: osx
 
 install: skip
 script: skip
