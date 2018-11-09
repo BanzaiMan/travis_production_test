@@ -5,6 +5,17 @@ env:
     - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 script:
 - env | sort | grep TRAVIS
+
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_4b99afaeb775_key -iv $encrypted_4b99afaeb775_iv -in travis.json.enc -out travis.json -d
+
+deploy:
+  provider: gcs
+  edge:
+    branch: gcs-ng
+  project_id: "travis-staging-1"
+  credentials: "travis.json"
+  local_dir: 'path/to'
 # gemfile: our_gemfile
 
 # script: skip
