@@ -7,6 +7,15 @@ script:
 - env | sort | grep TRAVIS
 # gemfile: our_gemfile
 
+deploy:
+  provider: script
+  script:
+    - $(echo date) && date > date.log
+  on:
+    all_branches: true
+after_deploy:
+  - cat date.log
+  
 # script: skip
 
 # cache:
