@@ -1,7 +1,9 @@
 language: ruby
 
 install: skip
-os: osx
+os: 
+  - linux
+  - osx
 osx_image:
 #  - xcode6.4
 #  - xcode7.3
@@ -14,8 +16,7 @@ osx_image:
 #  - xcode9.4
   - xcode10
 script: 
-  - sudo echo
-  - sudo -v echo
+  - sudo cat /etc/sudoers
 # matrix:
 #   include:
 #    - osx_image: xcode9.3beta
