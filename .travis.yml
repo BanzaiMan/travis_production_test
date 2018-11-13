@@ -1,10 +1,21 @@
 sudo: required
 
+dist: trusty
 language: java
 
-install: true
+addons:
+  apt:
+    packages:
+      - openjdk-6-jdk
+
+jdk: openjdk6
+
+before_install:
+  - jdk_switcher use openjdk6
+install:
+  - javac -version
 script:
-  - export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash
+  - skip
 
 
 # android:
