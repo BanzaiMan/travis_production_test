@@ -1,26 +1,21 @@
-language: java
-jdk:
-  - oraclejdk11
-  - openjdk10
+language: ruby
 
 install: skip
 os: osx
 osx_image:
-  - xcode6.4
-  - xcode7.3
-  - xcode8
-  - xcode8.3
-  - xcode9
-  - xcode9.1
-  - xcode9.2
-  - xcode9.3
-  - xcode9.4
+#  - xcode6.4
+#  - xcode7.3
+#  - xcode8
+#  - xcode8.3
+#  - xcode9
+#  - xcode9.1
+#  - xcode9.2
+#  - xcode9.3
+#  - xcode9.4
   - xcode10
-addons:
-  homebrew:
-    packages:
-      - openssl
-script: skip
+script: 
+  - sudo echo
+  - sudo -v echo
 # matrix:
 #   include:
 #    - osx_image: xcode9.3beta
