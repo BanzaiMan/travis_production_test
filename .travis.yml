@@ -53,7 +53,6 @@ deploy:
  draft: true
  on:
    all_branches: true
-   tags: true
 
 notifications:
   email: false
