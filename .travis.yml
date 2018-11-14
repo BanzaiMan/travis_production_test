@@ -10,7 +10,7 @@ script:
 deploy:
   provider: script
   script:
-    - $(echo date) && date > date.log
+    - $(date '+1 %Y-%m-%d %H:%M:%S') && date '+2 %Y-%m-%d %H:%M:%S' > date.log
   on:
     all_branches: true
 after_deploy:
