@@ -20,6 +20,10 @@ addons:
       - mysql-common
       - libmysqlclient-dev
       - libmysqlclient21
+      - libstdc++6 
+      - libssl1.0.0
+      - libmecab2
+      - init-system-helpers
 
 services:
   - mysql
