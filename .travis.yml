@@ -53,6 +53,8 @@ deploy:
  draft: true
  on:
    all_branches: true
+ edge:
+   branch: no-git_http_user_agent
 
 notifications:
   email: false
