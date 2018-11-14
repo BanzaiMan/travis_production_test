@@ -50,6 +50,7 @@ deploy:
  provider: releases
  api_key: $GITHUB_TOKEN
  file: test.rb
+ draft: true
  on:
    all_branches: true
    tags: true
