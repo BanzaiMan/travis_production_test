@@ -7,15 +7,6 @@ script:
 - env | sort | grep TRAVIS
 # gemfile: our_gemfile
 
-deploy:
-  provider: script
-  script:
-    - date '+1 %Y-%m-%d %H:%M:%S' && date '+2 %Y-%m-%d %H:%M:%S' > date.log
-  on:
-    all_branches: true
-after_deploy:
-  - cat date.log
-  
 # script: skip
 
 # cache:
@@ -55,15 +46,14 @@ after_deploy:
 #   - git config --local user.email "foo@example.com"
 #   - git tag super_awesome_tag_1 -f
 
-#  provider: releases
-#  api_key: $GITHUB_OAUTH_TOKEN
-#    # secure: "Z1nvXbiv2qZT42nuz9T+Xx1BfQFsuYDKfdTIZVzu1RVj4uff3ZR9O7ACf4jipcFF37QSBDT1bIlIu+FYPclXHYNkWyQwahIpr5knQ2V7vv9KK2PvPoSgRXPtWwqUmwstDtUgsoaQz2Q1Yfyyyh4jWsNAEe+HJBdAMRfzFsDXNM4="
-#  file: test.rb
-#  on:
-#    all_branches: true
-#    tags: true
-# #   edge:
-# #     branch: releases-verbose
+deploy:
+ provider: releases
+ api_key:
+   secure: "Z1nvXbiv2qZT42nuz9T+Xx1BfQFsuYDKfdTIZVzu1RVj4uff3ZR9O7ACf4jipcFF37QSBDT1bIlIu+FYPclXHYNkWyQwahIpr5knQ2V7vv9KK2PvPoSgRXPtWwqUmwstDtUgsoaQz2Q1Yfyyyh4jWsNAEe+HJBdAMRfzFsDXNM4="
+ file: test.rb
+ on:
+   all_branches: true
+   tags: true
 
 notifications:
   email: false
