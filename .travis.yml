@@ -18,6 +18,7 @@ addons:
       - mysql-client
       - mysql-server
       - mysql-common
+      - libmysqlclient-dev
 
 services:
   - mysql
