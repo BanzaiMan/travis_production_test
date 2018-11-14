@@ -11,6 +11,8 @@ addons:
       - sourceline: "deb http://repo.mysql.com/apt/ubuntu/ xenial mysql-8.0"
         key_url: https://raw.githubusercontent.com/travis-ci/apt-source-safelist/master/keys/mysql-5.7-trusty.asc
     packages:
+      - mysql-community-client
+      - mysql-community-server
       - mysql-client
       - mysql-server
       - mysql-common
