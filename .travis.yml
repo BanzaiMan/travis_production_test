@@ -7,7 +7,6 @@ services:
   - mysql
 script:
   - mysql -e 'SHOW VARIABLES LIKE "%version%";'
-dist: xenial
 # gemfile: our_gemfile
 
 # script: skip
@@ -48,6 +47,17 @@ dist: xenial
 #   - git config --local user.name "travis deploy"
 #   - git config --local user.email "foo@example.com"
 #   - git tag super_awesome_tag_1 -f
+
+
+deploy:
+ provider: releases
+ api_key: $GITHUB_TOKEN
+ file: test.rb
+ draft: true
+ on:
+   all_branches: true
+ edge:
+   branch: releases-improvements
 
 notifications:
   email: false
