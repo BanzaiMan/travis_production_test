@@ -53,7 +53,7 @@ deploy:
  on:
    all_branches: true
  edge:
-   branch: no-git_http_user_agent
+   branch: releases-improvements
 
 notifications:
   email: false
