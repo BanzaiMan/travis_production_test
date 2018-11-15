@@ -5,6 +5,9 @@ env:
     - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 script:
 - env | sort | grep TRAVIS
+os:
+  - linux
+  - osx
 # gemfile: our_gemfile
 
 # script: skip
@@ -47,14 +50,11 @@ script:
 #   - git tag super_awesome_tag_1 -f
 
 deploy:
- provider: releases
- api_key: $GITHUB_TOKEN
- file: test.rb
- draft: true
+ provider: cloudfoundry
  on:
    all_branches: true
  edge:
-   branch: releases-improvements
+   branch: ha-cf-uname
 
 notifications:
   email: false
