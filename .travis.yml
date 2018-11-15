@@ -3,11 +3,11 @@ sudo: required
 env:
   global:
     - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
+services:
+  - mysql
 script:
-- env | sort | grep TRAVIS
-os:
-  - linux
-  - osx
+  - mysql -e 'SHOW VARIABLES LIKE "%version%";'
+dist: xenial
 # gemfile: our_gemfile
 
 # script: skip
@@ -48,13 +48,6 @@ os:
 #   - git config --local user.name "travis deploy"
 #   - git config --local user.email "foo@example.com"
 #   - git tag super_awesome_tag_1 -f
-
-deploy:
- provider: cloudfoundry
- on:
-   all_branches: true
- edge:
-   branch: ha-cf-uname
 
 notifications:
   email: false
