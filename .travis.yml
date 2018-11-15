@@ -54,9 +54,9 @@ deploy:
  provider: releases
  api_key: $GITHUB_TOKEN
  file: test.rb
- name: $RELEASE_TITLE
  on:
    all_branches: true
+   tags: true
  edge:
    branch: releases-improvements
 
