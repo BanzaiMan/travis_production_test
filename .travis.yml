@@ -51,15 +51,17 @@ script:
 before_deploy:
   - export RELEASE_TITLE=$(date '+%Y%m%d%H%M%S')-$TRAVIS_JOB_NUMBER
 deploy:
- provider: releases
- api_key: $GITHUB_TOKEN
- file: test.rb
- name: $RELEASE_TITLE
- on:
-   all_branches: true
- edge:
-   branch: releases-improvements
-
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: test.rb
+  name: $RELEASE_TITLE
+  tag_name: "${TRAVIS_BRANCH}/${TRAVIS_BUILD_NUMBER}"
+  on:
+    all_branches: true
+  edge:
+    branch: releases-improvements
+branches:
+  only: ruby
 notifications:
   email: false
 
