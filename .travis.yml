@@ -2,22 +2,13 @@ language: node_js
 
 sudo: required
 
-install:
-  - sudo apt-key adv --keyserver ha.pool.sks-keyservers.net --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-
-script: true
+install: skip
+script: skip
 
 node_js:
-  - "10"
-  - "10"
-  - "10"
-  - "10"
-  - "10"
-  - "10"
-  - "10"
-  - "10"
-  - "10"
-  - "10"
+  - lts/*
+
+cache: npm
 
 notifications:
   email: false
