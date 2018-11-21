@@ -4,7 +4,7 @@ dist: trusty
 language: ruby
 
 env:
-  - FOO=$(echo foo | tr -d '\015')
+  - "MSAN_SYMBOLIZER_PATH=\"$(ls -1 /usr/local/clang*/bin/llvm-symbolizer | head | tr -d '\015')\""
 # gemfile: our_gemfile
 
 
