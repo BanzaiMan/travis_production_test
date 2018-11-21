@@ -4,7 +4,7 @@ dist: trusty
 language: ruby
 
 env:
-  - FOO=$(echo foo | tr -d '\0')
+  - FOO=$(echo foo | tr -d '\015')
 # gemfile: our_gemfile
 
 
