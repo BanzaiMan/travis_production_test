@@ -10,16 +10,21 @@ env:
 install: skip
 script: date > file-$TRAVIS_OS_NAME.txt
 
-os:
-  - linux
-  - osx
-
 jobs:
   include:
-    - stage: publish
+    - stage: compile macos assets
       script: skip
       api_token: $GITHUB_TOKEN
-      name: $RELEASE_TITLE
+      file: file-$TRAVIS_OS_NAME.txt
+      deploy:
+        draft: true
+        provider: releases
+        on:
+          all_branches: true
+    - stage: compile linux assets and publish
+      script: skip
+      api_token: $GITHUB_TOKEN
+      file: file-$TRAVIS_OS_NAME.txt
       deploy:
         draft: false
         provider: releases
@@ -62,17 +67,6 @@ jobs:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
-before_deploy:
-  - export RELEASE_TITLE=$(date '+%Y%m%d%H%M%S')-$TRAVIS_BUILD_NUMBER
-deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
-  file: file-$TRAVIS_OS_NAME.txt
-  name: $RELEASE_TITLE
-  draft: true
-  skip_cleanup: true
-  on:
-    all_branches: true
 notifications:
   email: false
 
