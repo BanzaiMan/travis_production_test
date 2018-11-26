@@ -14,19 +14,21 @@ jobs:
   include:
     - stage: compile macos assets
       os: osx
-      api_token: $GITHUB_TOKEN
-      file: file-$TRAVIS_OS_NAME.txt
       deploy:
-        draft: true
         provider: releases
+        api_token: $GITHUB_TOKEN
+        draft: true
+        skip_cleanup: true
+        file: file-$TRAVIS_OS_NAME.txt
         on:
           all_branches: true
     - stage: compile linux assets and publish
-      api_token: $GITHUB_TOKEN
-      file: file-$TRAVIS_OS_NAME.txt
       deploy:
-        draft: false
         provider: releases
+        api_token: $GITHUB_TOKEN
+        draft: false
+        skip_cleanup: true
+        file: file-$TRAVIS_OS_NAME.txt
         on:
           all_branches: true
 
