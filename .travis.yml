@@ -16,7 +16,7 @@ jobs:
       os: osx
       deploy:
         provider: releases
-        api_token: $GITHUB_TOKEN
+        api_key: $GITHUB_TOKEN
         draft: true
         skip_cleanup: true
         file: file-$TRAVIS_OS_NAME.txt
@@ -25,7 +25,7 @@ jobs:
     - stage: compile linux assets and publish
       deploy:
         provider: releases
-        api_token: $GITHUB_TOKEN
+        api_key: $GITHUB_TOKEN
         draft: false
         skip_cleanup: true
         file: file-$TRAVIS_OS_NAME.txt
