@@ -13,6 +13,7 @@ script: date > file-$TRAVIS_OS_NAME.txt
 jobs:
   include:
     - stage: compile macos assets
+      os: osx
       script: skip
       api_token: $GITHUB_TOKEN
       file: file-$TRAVIS_OS_NAME.txt
