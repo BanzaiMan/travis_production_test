@@ -19,6 +19,7 @@ jobs:
     - stage: publish
       script: skip
       api_token: $GITHUB_TOKEN
+      name: $RELEASE_TITLE
       deploy:
         draft: false
         provider: releases
