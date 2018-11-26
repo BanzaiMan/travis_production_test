@@ -18,6 +18,7 @@ jobs:
   include:
     - stage: publish
       script: skip
+      api_token: $GITHUB_TOKEN
       deploy:
         draft: false
         provider: releases
