@@ -3,19 +3,12 @@ sudo: required
 dist: trusty
 language: java
 
-addons:
-  apt:
-    packages:
-      - openjdk-6-jdk
+jdk: 
+  - openjdk8
+  - oraclejdk11
 
-jdk: openjdk6
-
-before_install:
-  - jdk_switcher use openjdk6
-install:
-  - javac -version
-script:
-  - skip
+install: skip
+script: ski
 
 
 # android:
