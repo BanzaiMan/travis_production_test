@@ -1,36 +1,15 @@
-language: ruby
-sudo: false
+language: elm
 dist: trusty
 
-language: ruby
+elm:
+  - 0.19.0
+  - 0.18.0
 
 env:
   global:
     - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 install: skip
-script: date > file-$TRAVIS_OS_NAME.txt
-
-jobs:
-  include:
-    - stage: compile macos assets
-      os: osx
-      deploy:
-        provider: releases
-        api_key: $GITHUB_TOKEN
-        draft: true
-        skip_cleanup: true
-        file: file-$TRAVIS_OS_NAME.txt
-        on:
-          all_branches: true
-    - stage: compile linux assets and publish
-      deploy:
-        provider: releases
-        api_key: $GITHUB_TOKEN
-        draft: false
-        skip_cleanup: true
-        file: file-$TRAVIS_OS_NAME.txt
-        on:
-          all_branches: true
+script: skip
 
 # gemfile: our_gemfile
 
