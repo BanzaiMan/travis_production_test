@@ -3,12 +3,12 @@ sudo: required
 dist: trusty
 language: java
 
-jdk: 
+jdk:
   - openjdk8
   - oraclejdk11
 
 install: skip
-script: ski
+script: skip
 
 
 # android:
