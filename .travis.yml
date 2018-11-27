@@ -4,15 +4,13 @@ sudo: false
 
 otp_release:
   - '20.2.2'
+  - '21.1'
 
 dist: trusty
 
 install: skip
 
-script: redis-cli ping
-
-services:
-  - redis-server
+script: skip
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
