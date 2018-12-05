@@ -5,8 +5,8 @@ sudo: true
 dist: xenial
 
 python:
-  - pypy2.7-6.0
-  - pypy3.5-6.0
+  - pypy2.7
+  - pypy3.5
 
 install: skip
 
