@@ -25,7 +25,8 @@ android:
     - extra-android-m2repository        # Support repo
     - sys-img-x86-android-18
 
-jdk: oraclejdk9
+jdk: 
+  - openjdk11
 
 matrix:
   include:
