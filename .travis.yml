@@ -1,6 +1,8 @@
 language: php
-php: '7.2'
+php: '7.3'
 
+dist:
+  - xenial
 sudo: required
 
 # env:
@@ -11,8 +13,7 @@ sudo: required
 #   directories:
 #     - $CACHE_DIR
 install: skip
-script:
-  - python --version
+script: skip
 
 # matrix:
 #   include:
