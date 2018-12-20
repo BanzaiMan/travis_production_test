@@ -13,6 +13,8 @@ env:
 before_install:
   - gem update --system
   - cat ~/.gemrc
+
+script: skip
   
 # gemfile: our_gemfile
 
@@ -67,6 +69,11 @@ before_install:
 #     all_branches: true
 #   edge:
 #     branch: releases-improvements
+deploy:
+  provider: script
+  script: echo "yes"
+  on:
+    all_branches: true
 # branches:
 #   only: ruby
 notifications:
