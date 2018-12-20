@@ -12,6 +12,7 @@ env:
 
 before_install:
   - gem update --system
+  - cat ~/.gemrc
   
 # gemfile: our_gemfile
 
