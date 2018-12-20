@@ -69,6 +69,8 @@ script: skip
 #     all_branches: true
 #   edge:
 #     branch: releases-improvements
+before_deploy:
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem update --system
 deploy:
   provider: script
   script: echo "yes"
