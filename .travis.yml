@@ -1,14 +1,12 @@
 language: ruby
 
-dist: trusty
-
-sudo: false
+dist: xenial
 
 install:
   - true
 
 script:
-  - which python
+  - true
 
 notifications:
   email: false
