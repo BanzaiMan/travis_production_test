@@ -4,7 +4,7 @@ install: skip
 os: osx
 addons:
   firefox: latest
-#osx_image:
+osx_image:
 #  - xcode6.4
 #  - xcode7.3
 #  - xcode8
