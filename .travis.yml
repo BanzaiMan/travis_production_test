@@ -1,6 +1,6 @@
 language: ruby
 sudo: false
-dist: trusty
+dist: precise
 
 language: ruby
 
@@ -10,11 +10,7 @@ env:
   global:
     - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 
-before_install:
-  - gem update --system
-  - cat ~/.gemrc
-
-script: skip
+script: curl -V
   
 # gemfile: our_gemfile
 
