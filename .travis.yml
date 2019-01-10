@@ -62,7 +62,9 @@ deploy:
   file: test.rb
   name: $RELEASE_TITLE
   tag_name: "${TRAVIS_BRANCH}/${TRAVIS_BUILD_NUMBER}"
-  body: "Title!\nmore stuff!"
+  body: |
+    Title!
+    more stuff
   on:
     all_branches: true
   edge:
