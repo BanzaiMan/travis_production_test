@@ -9,7 +9,6 @@ language: ruby
 #    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 
 script:
-  - curl -V
   - cat ~/build.sh
   
 # gemfile: our_gemfile
@@ -66,6 +65,8 @@ deploy:
   body: "Title!\nmore stuff!"
   on:
     all_branches: true
+  edge:
+    branch: "releases-body-escape"
 
 # branches:
 #   only: ruby
