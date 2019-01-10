@@ -5,7 +5,7 @@ dist: trusty
 rvm: 2.3.7
 
 before_install:
-  - ruby -S gem uninstall -i $(rvm gemdir)@global -ax bundler
+  - gem uninstall -i $(rvm gemdir)@global -ax bundler
   - gem install bundler -v '<2'
   - bundle --version
 
