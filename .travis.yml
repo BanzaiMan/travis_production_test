@@ -2,6 +2,12 @@ sudo: required
 group: edge
 language: generic
 install: skip
+dist: xenial
+
+addons:
+  apt:
+    packages:
+      - bash
 
 script: 
   - cat /etc/hosts
@@ -9,12 +15,7 @@ script:
   - cat /etc/nsswitch.conf
   - ruby -rsocket -e "puts TCPSocket.new('localhost',22)"
   - ruby -rsocket -e "puts TCPSocket.new('localhost.',22)"
-jobs:
-  include:
-    - dist: trusty
-      name: Trusty
-    - dist: xenial
-      name: Xenial
+
 
 # matrix:
 #   include:
