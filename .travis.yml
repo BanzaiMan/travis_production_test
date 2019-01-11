@@ -1,5 +1,4 @@
 sudo: required
-group: edge
 language: generic
 install: skip
 dist: xenial
