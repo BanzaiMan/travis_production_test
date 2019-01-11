@@ -63,8 +63,9 @@ deploy:
   name: $RELEASE_TITLE
   tag_name: "${TRAVIS_BRANCH}/${TRAVIS_BUILD_NUMBER}"
   body: |
-    Title!
+    # Title!
     more stuff
+    ## Now with simple Markdown!
   on:
     all_branches: true
   edge:
