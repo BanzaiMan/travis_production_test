@@ -9,6 +9,9 @@ addons:
     packages:
       - bash
 
+before_script:
+  - sudo apt update
+
 script: 
   - cat /etc/hosts
   - cat /etc/resolv.conf
