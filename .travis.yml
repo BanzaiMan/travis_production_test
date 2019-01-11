@@ -15,7 +15,7 @@ osx_image:
   - xcode10
 script: 
   - uname -r
-  - ssh-keygen -t ecdsa -f secrets -N foobarbaz || exit
+  - jq --help
 # matrix:
 #   include:
 #    - osx_image: xcode9.3beta
