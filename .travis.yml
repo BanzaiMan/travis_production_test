@@ -13,6 +13,8 @@ osx_image:
   - xcode9.3
   - xcode9.4
   - xcode10
+env:
+  - HOMEBREW_NO_AUTO_UPDATE=1
 script: 
   - rvm use 2.3 --install --fuzzy --binary
   - brew install lz4
