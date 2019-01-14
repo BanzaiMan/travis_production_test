@@ -3,22 +3,21 @@ language: ruby
 install: skip
 os: osx
 osx_image:
-#  - xcode6.4
-#  - xcode7.3
-#  - xcode8
-#  - xcode8.3
-#  - xcode9
-#  - xcode9.1
-#  - xcode9.2
-#  - xcode9.3
-#  - xcode9.4
+  - xcode6.4
+  - xcode7.3
+  - xcode8
+  - xcode8.3
+  - xcode9
+  - xcode9.1
+  - xcode9.2
+  - xcode9.3
+  - xcode9.4
   - xcode10
 # env:
 #  - HOMEBREW_NO_AUTO_UPDATE=1
 script: 
+  - echo 1.2.3.4 | grep --only '[0-9\.][0-9\.]*'
 #  - rvm use 2.3 --install --fuzzy --binary
-  - brew install lz4
-  - brew --version
 # matrix:
 #   include:
 #    - osx_image: xcode9.3beta
