@@ -14,7 +14,7 @@ jobs:
   include:
     - stage: compile macos assets
       os: osx
-      deploy:
+      deploy: &deploy_base
         provider: releases
         api_key: $GITHUB_TOKEN
         draft: true
@@ -24,13 +24,8 @@ jobs:
           all_branches: true
     - stage: compile linux assets and publish
       deploy:
-        provider: releases
-        api_key: $GITHUB_TOKEN
+        <<: *deploy_base
         draft: false
-        skip_cleanup: true
-        file: file-$TRAVIS_OS_NAME.txt
-        on:
-          all_branches: true
 
 # gemfile: our_gemfile
 
