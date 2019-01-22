@@ -13,9 +13,8 @@ osx_image:
   - xcode9.3
   - xcode9.4
   - xcode10
-env:
+script:
   - MATRIX_EVAL="brew install gcc && CC=gcc-7 && CXX=g++-7"
-script: 
   - eval $MATRIX_EVAL
 #  - rvm use 2.3 --install --fuzzy --binary
 # matrix:
