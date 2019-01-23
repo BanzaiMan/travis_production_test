@@ -3,11 +3,23 @@ language: ruby
 install: skip
 os: osx
 osx_image:
+  - xcode6.4
+  - xcode7.3
   - xcode8
+  - xcode8.3
+  - xcode9
+  - xcode9.1
+  - xcode9.2
+  - xcode9.3
+  - xcode9.4
+  - xcode10
 
 script:
+  - brew --version
+  - bash --version
   - MATRIX_EVAL="brew install gcc && CC=gcc-7 && CXX=g++-7"
   - eval "${MATRIX_EVAL}"
+  - brew --version
 #  - rvm use 2.3 --install --fuzzy --binary
 # matrix:
 #   include:
