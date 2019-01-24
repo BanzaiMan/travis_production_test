@@ -9,4 +9,4 @@ cache:
   directories:
     - node_modules
 install: skip
-script: skip
+script: env | grep TRAVIS | sort
