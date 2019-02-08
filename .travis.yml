@@ -1,7 +1,7 @@
 language: node_js
 node_js: 'lts/*'
 
-before_install: false
+before_install: 'false'
 
 install: true
 script: skip
