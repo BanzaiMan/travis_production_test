@@ -1,7 +1,13 @@
 language: r
-
-r: release
+warnings_are_errors: false
+fortran: false
+latex: false
+pandoc: false
 os: osx
+jobs:
+  include:
+    - disable_homebrew: true
+    - disable_homebrew: false
 
 install: skip
 script: skip
