@@ -4,7 +4,7 @@ install: skip
 os: osx
 jobs:
   include:
-    -
+    - disable_homebrew: false
     - disable_homebrew: true
 # matrix:
 #   include:
