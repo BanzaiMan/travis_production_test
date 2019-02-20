@@ -1,13 +1,23 @@
 language: ruby
 sudo: false
-dist: trusty
-
-language: ruby
+os: osx
+osx_image:
+  - xcode6.4
+  - xcode7.3
+  - xcode8
+  - xcode8.3
+  - xcode9
+  - xcode9.1
+  - xcode9.2
+  - xcode9.3
+  - xcode9.4
+  - xcode10
+  - xcode10.1
 
 # env:
 #  global:
 #    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
-
+install: skip
 script: skip
 
 # gemfile: our_gemfile
@@ -52,24 +62,6 @@ script: skip
 #   - git config --local user.name "travis deploy"
 #   - git config --local user.email "foo@example.com"
 #   - git tag super_awesome_tag_1 -f
-
-before_deploy:
-  - export RELEASE_TITLE=$(date '+%Y%m%d%H%M%S')-$TRAVIS_JOB_NUMBER
-deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
-  file: test.rb
-  name: $RELEASE_TITLE
-  tag_name: "${TRAVIS_BRANCH}/${TRAVIS_BUILD_NUMBER}"
-  body: |
-    # Title!
-    more stuff
-    ## Now with simple Markdown!
-  on:
-    all_branches: true
-  edge:
-    branch: "releases-body-escape"
-
 # branches:
 #   only: ruby
 notifications:
