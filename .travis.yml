@@ -1,27 +1,26 @@
 language: ruby
-sudo: false
-os: osx
-osx_image:
-  - xcode6.4
-  - xcode7.3
-  - xcode8
-  - xcode8.3
-  - xcode9
-  - xcode9.1
-  - xcode9.2
-  - xcode9.3
-  - xcode9.4
-  - xcode10
-  - xcode10.1
 
 # env:
 #  global:
 #    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 install: skip
-script: skip
+script: cat ~/build.sh
 
 # gemfile: our_gemfile
 
+deploy:
+  provider: s3
+  cache_control:
+    - "max-age=300": "*.js"
+    - "max-age=3000":
+      - "*.css"
+      - "*.png"
+    - "no-cache"
+  secret_key_id: foobar
+  secret_access_key: deadbeef
+  skip_cleanup: true
+  on:
+    all_branches: true
 
 
 # script: skip
