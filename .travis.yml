@@ -3,25 +3,16 @@ rvm: 2.5.1
 # env:
 #  global:
 #    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
+
+dist: xenial
+
+addons:
+  snaps:
+    - hugo
+
 install: skip
-before_install:
-  - |
-    sed 's/./x/' << EOF
-    first line
-    second line
-    EOF
-script:
-  - |
-    sed 's/./x/' << EOF
-    first line
-    second line
-    EOF
-  - cat ~/build.sh
-# gemfile: our_gemfile
 
-
-
-# script: skip
+script: skip
 
 # cache:
 #   bundler: true
