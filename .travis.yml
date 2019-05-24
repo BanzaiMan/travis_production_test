@@ -1,14 +1,15 @@
 dist: trusty
 language: go
-go: master
+go: "1.12"
 env:
   - GOFLAGS="-mod=readonly"
 
-before_install:
+install:
   - |
     function travis_install_go_dependencies() {
       env | grep ^GO
     }
+  - travis_install_go_dependencies
 script: skip
 
 # env:
