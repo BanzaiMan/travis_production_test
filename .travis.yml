@@ -1,18 +1,16 @@
 dist: trusty
-sudo: false
 language: go
-go:
-  - 1.7.x
-  - 1.7
-  - '1.10'
-install: skip
+go: master
+env:
+  - GOFLAGS="-mod=readonly"
+
+before_install:
+  - |
+    function travis_install_go_dependencies() {
+      env | grep ^GO
+    }
 script: skip
-deploy:
-  provider: script
-  script: echo deploy!
-  on:
-    condition: $TRAVIS_GO_VERSION =~ ^1\.7\.
-    all_branches: true
+
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
