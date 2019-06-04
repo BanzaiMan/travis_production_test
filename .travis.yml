@@ -43,6 +43,8 @@ script: bundle --version
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
+deploy:
+  provider: releases
 # before_deploy:
 #   - git config --local user.name "travis deploy"
 #   - git config --local user.email "foo@example.com"
