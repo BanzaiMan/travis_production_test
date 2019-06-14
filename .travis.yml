@@ -13,7 +13,7 @@ script: bundle --version
 
 cache:
   bundler: true
-
+  branch: expand_path
 # jobs:
 #   include:
 #     - language: c
@@ -43,10 +43,6 @@ cache:
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
 
-deploy:
-  provider: releases
-  on:
-    all_branches: true
 # before_deploy:
 #   - git config --local user.name "travis deploy"
 #   - git config --local user.email "foo@example.com"
