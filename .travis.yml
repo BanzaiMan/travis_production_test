@@ -1,5 +1,8 @@
 language: ruby
 dist: xenial
+addons:
+  apt:
+    - rabbitmq-server
 services:
   - rabbitmq
 
