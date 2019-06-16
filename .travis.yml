@@ -2,7 +2,8 @@ language: ruby
 dist: xenial
 addons:
   apt:
-    - rabbitmq-server
+    packages:
+      - rabbitmq-server
 services:
   - rabbitmq
 
