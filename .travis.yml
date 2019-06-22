@@ -1,11 +1,6 @@
-language: ruby
+language: nix
 dist: xenial
-addons:
-  apt:
-    packages:
-      - rabbitmq-server
-services:
-  - rabbitmq
+isntall: skip
 
 # env:
 #  global:
