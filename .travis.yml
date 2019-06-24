@@ -2,6 +2,7 @@ sudo: required
 os: windows
 
 language: node_js
+node_js: 12
 
 install: skip
 script:
