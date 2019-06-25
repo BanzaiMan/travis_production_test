@@ -5,6 +5,8 @@ install: skip
 script:
   - mkdir output
   - echo $TRAVIS_OS_NAME > output/$TRAVIS_OS_NAME.txt
+cache:
+  branch: bash-multi
 jobs:
   include:
     - stage: build binaries
