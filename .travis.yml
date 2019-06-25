@@ -1,10 +1,29 @@
 language: ruby
 dist: xenial
-addons:
-  postgresql: "11"
 install: skip
-script: skip
 
+jobs:
+  include:
+    - stage: warm_cache
+      script:
+        - echo "foo" > foo.txt
+        - echo "bar" > bar.txt
+      workspaces:
+        create:
+          - name: ws1
+            paths:
+              - foo.txt
+          - name: ws2
+            paths:
+              - bar.txt
+    - stage: use_cache
+      workspaces:
+        use:
+          - ws1
+          - ws2
+      script:
+        - cat foo.txt || true
+        - cat bar.txt || true
 # env:
 #  global:
 #    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
