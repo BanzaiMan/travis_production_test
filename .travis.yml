@@ -1,9 +1,9 @@
 language: ruby
 dist: xenial
-
+addons:
+  postgresql: "11"
 install: skip
-script:
-  - git config -l
+script: skip
 
 # env:
 #  global:
