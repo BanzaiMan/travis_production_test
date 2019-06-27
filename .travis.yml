@@ -1,9 +1,9 @@
 language: ruby
 dist: xenial
-addons:
-  postgresql: "11"
+
 install: skip
-script: skip
+script:
+  - test -e ~/.m2/settings.xml && cat ~/.m2/settings.xml
 
 # env:
 #  global:
