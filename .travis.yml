@@ -1,8 +1,8 @@
-language: r
+language: ruby
 
 install: skip
 os: osx
-osx_images:
+osx_image:
   - xcode10.2
   - xcode9.4
 # matrix:
