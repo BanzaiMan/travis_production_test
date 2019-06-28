@@ -4,7 +4,6 @@ install: skip
 os: osx
 osx_image:
   - xcode10.2
-  - xcode9.4
 # matrix:
 #   include:
 #    - osx_image: xcode9.3beta
