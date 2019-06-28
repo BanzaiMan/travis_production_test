@@ -2,10 +2,9 @@ language: r
 
 install: skip
 os: osx
-jobs:
-  include:
-    - disable_homebrew: false
-    - disable_homebrew: true
+osx_images:
+  - xcode10.2
+  - xcode9.4
 # matrix:
 #   include:
 #    - osx_image: xcode9.3beta
