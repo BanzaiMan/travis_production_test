@@ -1,16 +1,14 @@
-language: ruby
+language: python
+
+python:
+  - 
+  - "3.7"
 
 install: skip
-
-env:
-  global:
-    - PATH=$HOME/.local/bin:$PATH
-before_install:
-  # set up awscli packages
-  - pip3 install -U pip
-  - pip3 install --user awscli
   
-script: skip
+script: 
+  - python -c "import os; print(os.getcwd())"
+  
 notifications:
   email: false
 
