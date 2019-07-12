@@ -1,12 +1,12 @@
 language: cpp
-dist: trusty
-sudo: false
+dist: xenial
 
 compiler:
   - cpp
 
 install:
-  - sudo apt-get install linux-headers-$(uname -r)
+  - /usr/bin/python --version || true
+  - /usr/bin/python3 --version || true
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -54,8 +54,6 @@ matrix:
 
 notifications:
   email: false
-  webhooks:
-    - https://requestb.in/y27or6y2
 
   #  slack:
   #  rooms:
