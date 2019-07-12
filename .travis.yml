@@ -5,6 +5,8 @@ compiler:
   - cpp
 
 install:
+  - which python && python --version
+  - which python3 && python3 --version || true
   - /usr/bin/python --version || true
   - /usr/bin/python3 --version || true
 # env:
@@ -19,11 +21,7 @@ install:
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script:
-  - uname -r
-  - find /lib/modules/$(uname -r)
-  - cat /lib/modules/$(uname -r)/build/Makefile
-
+script: skip
 matrix:
   include:
     # - sudo: false
