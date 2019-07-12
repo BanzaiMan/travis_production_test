@@ -33,9 +33,9 @@ matrix:
     # - sudo: false
     #   dist: trusty
     #   env: DIST=trusty STACK=EC2
-    - sudo: required
-      dist: trusty
-      env: DIST=trusty STACK=GCE
+#     - sudo: required
+#       dist: trusty
+#       env: DIST=trusty STACK=GCE
     # - sudo: required
     #   dist: trusty
     #   env: DIST=trusty STACK=GCE GROUP=deprecated-2017Q4
