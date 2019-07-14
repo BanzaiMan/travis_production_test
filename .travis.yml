@@ -2,7 +2,7 @@ language: ruby
 dist: xenial
 
 install: skip
-script: skip
+script: false
 
 # env:
 #  global:
