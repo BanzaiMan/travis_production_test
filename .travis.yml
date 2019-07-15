@@ -4,11 +4,6 @@ dist: xenial
 compiler:
   - cpp
 
-install:
-  - which python && python --version
-  - which python3 && python3 --version || true
-  - /usr/bin/python --version || true
-  - /usr/bin/python3 --version || true
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -21,7 +16,10 @@ install:
 #   global:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
-script: skip
+script: 
+  - g++ printf.cpp
+  - ./a.out
+
 matrix:
   include:
     # - sudo: false
