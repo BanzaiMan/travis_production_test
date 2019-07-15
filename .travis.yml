@@ -3,8 +3,10 @@ install: skip
 script: skip
 os: osx 
 osx_image: 
-- xcode10.2 
-- xcode11.0 
+- xcode11
+cache:
+  bundler: true
+  cocoapods: true
 script: 
 - sw_vers 
 - python3 --version 
