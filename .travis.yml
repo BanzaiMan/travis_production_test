@@ -1,14 +1,8 @@
-language: ruby
+language: hack
 dist: xenial
 
 install: skip
 script: skip
-
-rvm:
-  - jruby
-  - jruby-9.2.7.0
-  - jruby-head
-  - ruby-head
 
 # env:
 #  global:
