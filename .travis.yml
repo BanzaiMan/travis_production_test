@@ -7,6 +7,7 @@ osx_image:
 cache:
   bundler: true
   cocoapods: true
+  branch: check-paths
 script: 
 - sw_vers 
 - python3 --version 
