@@ -2,13 +2,10 @@ language: ruby
 dist: xenial
 
 install: skip
-script: skip
+script: echo $FOO
 
-rvm:
-  - jruby
-  - jruby-9.2.7.0
-  - jruby-head
-  - ruby-head
+env:
+  - FOO="123=456"
 
 # env:
 #  global:
