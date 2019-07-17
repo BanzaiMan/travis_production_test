@@ -3,6 +3,7 @@ node_js:
   - 
   - lts/*
 
+os: windows
 
 install: true
 script: skip
