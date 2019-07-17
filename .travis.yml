@@ -42,11 +42,11 @@ env:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-
-# before_deploy:
-#   - git config --local user.name "travis deploy"
-#   - git config --local user.email "foo@example.com"
-#   - git tag super_awesome_tag_1 -f
+deploy:
+  on:
+    all_branches: true
+  provider: script
+  script: echo $FOO
 # branches:
 #   only: ruby
 notifications:
