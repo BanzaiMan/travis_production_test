@@ -45,8 +45,7 @@ env:
 deploy:
   on:
     all_branches: true
-  provider: script
-  script: echo $FOO
+    provider: surge
 # branches:
 #   only: ruby
 notifications:
