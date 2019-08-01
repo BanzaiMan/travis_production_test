@@ -45,7 +45,7 @@ env:
 deploy:
   on:
     all_branches: true
-    provider: surge
+  provider: surge
 # branches:
 #   only: ruby
 notifications:
