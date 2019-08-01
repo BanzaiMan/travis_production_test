@@ -1,8 +1,9 @@
 language: ruby
-dist: xenial
+dist: bionic
+
 
 install: skip
-script: which surge || true
+script: skip
 
 env:
   - FOO="123=456"
@@ -42,10 +43,10 @@ env:
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-deploy:
-  on:
-    all_branches: true
-  provider: surge
+# deploy:
+#   on:
+#     all_branches: true
+#   provider: surge
 # branches:
 #   only: ruby
 notifications:
