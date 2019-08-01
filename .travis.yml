@@ -2,6 +2,7 @@ language: rust
 # dist: precise
 sudo: false
 dist: bionic
+group: dev
 install: skip
 script: skip
 
