@@ -2,7 +2,7 @@ language: ruby
 dist: xenial
 
 install: skip
-script: echo $FOO
+script: which surge || true
 
 env:
   - FOO="123=456"
