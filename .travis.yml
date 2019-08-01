@@ -3,10 +3,8 @@ node_js:
   - 
   - lts/*
 
-os: windows
-
-install: true
-script: skip
+install: skip
+script: cat ~/build.sh
 notifications:
   email: false
 
