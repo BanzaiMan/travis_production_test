@@ -1,14 +1,16 @@
 language: python
-dist: xenial
-python:
-  - 
-  - "3.7"
 
 install: skip
   
 script: 
-  - python -c "import os; print(os.getcwd())"
-  
+  - cat /etc/boto.cfg
+
+jobs:
+  include:
+    - dist: trusty
+    - dist: xenial
+    - dist: bionic
+    
 notifications:
   email: false
 
