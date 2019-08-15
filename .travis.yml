@@ -50,7 +50,10 @@ env:
 # branches:
 #   only: ruby
 notifications:
-  email: false
+  email:
+    recipients:
+      - secure: "JKz+WDOE+h1k//OLxcJQE4up1XrNHgczqC/cVK4Pm3XPMTWP8gZJyybWzKXd9PYrBJjQBGBswcTX7TrReU691j26n662jlAW/Tyiu4oDHn7xTPNdU+xvbP0t2QJOkw1xcDy5jKjCZIpAQnN8TvCkuBiIoDg1QHu9AOum3dAO2X0="
+    on_success: always
 
   #  slack:
   #  rooms:
