@@ -17,6 +17,7 @@ deploy:
     secure: "foJvvyvx1LvRpc55Z0XqnzWfM+E8rKeBZ1GNaJYF7vNi/LEQS8htMqasGR1DDKMLjTmCfyhhf6Pab5lxoJl7t4evPGeeT3cciz8WpY6ySlcPkZ5/avLnDGD77AGgt7bUk2g2UD/BWdXRwhZOuqOS/6k1WpXN5y9LySzb3DAvGBM="
   skip_cleanup: true
   bucket: hiro-test-bucket
+  acl: public
   edge:
     branch: master
   on:
