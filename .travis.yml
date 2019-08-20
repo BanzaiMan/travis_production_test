@@ -11,7 +11,7 @@ script:
 
 deploy:
   provider: s3
-  secret_key_id:
+  access_key_id:
     secure: "Kj8zPCErm01jjuIbmK7O1gH5pvkBFH26HEJbZQJRuhXEkArdkG77y9rxbkPePFMXjhZCm1XCVmuLAUM3ciw57tiskYPDg6SqJ2xVP/w024PIXIK9+Vq3TjihpmBQVw3KgQMZgDj7cpKrByVkdbJJU37Z9B8TKFwLgo3XWp1rhRQ="
   secret_access_key:
     secure: "foJvvyvx1LvRpc55Z0XqnzWfM+E8rKeBZ1GNaJYF7vNi/LEQS8htMqasGR1DDKMLjTmCfyhhf6Pab5lxoJl7t4evPGeeT3cciz8WpY6ySlcPkZ5/avLnDGD77AGgt7bUk2g2UD/BWdXRwhZOuqOS/6k1WpXN5y9LySzb3DAvGBM="
