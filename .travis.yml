@@ -2,45 +2,18 @@ language: generic
 
 install: skip
 
-dist: trusty
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - sourceline: 'ppa:webupd8team/java'
-    packages:
-      - g++-6
-      - cmake
-      - python3
-      - python3-pip
-      - python3-setuptools
-      - nodejs
-      - npm
-      - libsfml-dev
-      - libprotobuf-dev
-      - protobuf-compiler
-      - libzmq-dev
-      - oracle-java8-installer
-
-# env:
-#   global:
-#     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
-
-# cache:
-#   directories:
-#     - $CACHE_DIR
-
-# env:
-#   global:
-#     - PATH=/usr/local/android-sdk/tools/bin:$PATH
+env:
+  # 'foobar'
+  - secure: "OZr2op7qbDAFuk1KiXcy9jmM24YWAnP0OfNByPURp+QXpLqcDIatTD6D4znI7qAvtc9FWz5/zuC3BdX64OSowJHjlZp0l81vU/zeHNsajog8v7Cec33gS+1ekYMpKBKfmktfQmuyilSVoVfIkcdfZKpvqyyFIL0e6YEnIdcvbbo="
+  # 'foo=secret'
+  - secure: "dykvWiPGCZVPiGu1ioHajN7jWkBM9r/7c0xDJQH3+kYj0sd+dTBdAXdirqyLx9ELoSGY8Q5j7MxOFaDQ3eMkqJbGCGkAzSvbnSXyc2QcFCMPc4sl+xKs5CoQ3+6WOnQbWtwZCbVqhummiYrLYs5p2FJVdbPGj9g5CEb2fHF2Ia0="
 
 script: true
 
-matrix:
-  include:
-    - language: generic
-    - language: java
+# matrix:
+#   include:
+#     - language: generic
+#     - language: java
     # - sudo: false
     #   dist: precise
     #   env: DIST=precise STACK=EC2
