@@ -1,7 +1,10 @@
 language: ruby
 dist: bionic
 
-
+arch:
+  key: value
+  key2: value2
+  
 install: skip
 script: skip
 
