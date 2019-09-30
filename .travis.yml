@@ -4,6 +4,9 @@ dist: bionic
 install: skip
 script: skip
 
+rvm:
+  - 2.4.7
+
 env:
   - FOO="123=456"
 
