@@ -52,13 +52,13 @@ notifications:
   email: false
   slack:
     - rooms:
-      - secure: "LXvYCqogk99SG2Ob0vmIzkJ7CUjm9u2WxJWV1ZXK+tdpPk+ABL3ft1iJDUEu3lz1mZCdVUUgRB9Xf8Oy4p52UUB3Z7TSBtGHtBaU2PBFfZ2LI054hXUgu1HOcC6QEEM7PTHcbbsxEq005EgGtJ7rGFXCsPNK4rc5HAXNihJ8lr0="
+      - secure: "LV6Wmu98nfLN0wOJrSY2ftXVnug7SQERmZ69vHARTuJ5TEIcXnC8n5/ci705nkXQnSxcidDjJuDWfL+FSus6Nb9ZjDU+yssicAHmfB4vcK7gVx8O7/kKbTpXLmafKKM0oVz5drZIJMLWYaSt0HyJcfm9t71m5ZPgPOjXUxoHW4Q="
       template:
         - "SUCCESS: Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
       on_success: always
       on_failure: never
     - rooms:
-      - secure: "LXvYCqogk99SG2Ob0vmIzkJ7CUjm9u2WxJWV1ZXK+tdpPk+ABL3ft1iJDUEu3lz1mZCdVUUgRB9Xf8Oy4p52UUB3Z7TSBtGHtBaU2PBFfZ2LI054hXUgu1HOcC6QEEM7PTHcbbsxEq005EgGtJ7rGFXCsPNK4rc5HAXNihJ8lr0="
+      - secure: "LV6Wmu98nfLN0wOJrSY2ftXVnug7SQERmZ69vHARTuJ5TEIcXnC8n5/ci705nkXQnSxcidDjJuDWfL+FSus6Nb9ZjDU+yssicAHmfB4vcK7gVx8O7/kKbTpXLmafKKM0oVz5drZIJMLWYaSt0HyJcfm9t71m5ZPgPOjXUxoHW4Q="
       template:
         - "FAILURE: Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
       on_success: never
