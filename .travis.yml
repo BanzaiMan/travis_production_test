@@ -1,11 +1,11 @@
 language: ruby
-sudo: required
-dist: trusty
+dist: xenial
 
 install: skip
 
 script:
-  - true
+  - travis_wait docker run -dit --entrypoint=/sbin/init alpine
+  - ls -la travis_wait_*.log
 
 notifications:
   email: false
