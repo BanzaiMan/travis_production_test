@@ -1,14 +1,10 @@
 language: ruby
 dist: bionic
-  
+arch:
+  - amd64
+  - arm64
 install: skip
 script: skip
-
-rvm:
-  - 2.4.7
-
-env:
-  - FOO="123=456"
 
 # env:
 #  global:
