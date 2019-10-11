@@ -5,6 +5,8 @@ arch:
 
 install: skip
 
+filter_secrets: redirect_io
+
 script:
   - sleep 10
   - sleep 20
