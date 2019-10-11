@@ -5,7 +5,9 @@ arch:
 
 install: skip
 
-script: skip
+script:
+  - sleep 10
+  - sleep 20
 
 notifications:
   email: false
