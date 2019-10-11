@@ -1,12 +1,11 @@
-language: ruby
+language: generic
+arch:
+  - amd64
+  - arm64
 
-dist: xenial
+install: skip
 
-install:
-  - true
-
-script:
-  - true
+script: skip
 
 notifications:
   email: false
