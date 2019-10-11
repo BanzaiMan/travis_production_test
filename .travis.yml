@@ -9,7 +9,9 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-6
-
+cache:
+  directories:
+    - foo
 compiler:
   - cpp
 
@@ -28,6 +30,7 @@ compiler:
 script: 
   - g++ printf.cpp
   - ./a.out
+  - cp a.out foo
 
 matrix:
   include:
