@@ -10,8 +10,8 @@ notifications:
   email: false
 
 before_deploy:
-  - rvm $(travis_internal_ruby) gem install aws-sdk -v 2.11.359
-  
+  - gem install aws-sdk -v 2.11.359
+  - gem install dpl-s3 -v 1.10.13
 deploy:
   provider: s3
   access_key_id: "YOUR AWS ACCESS KEY"
