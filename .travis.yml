@@ -1,20 +1,10 @@
-language: swift
+language: ruby
 install: skip
 script: skip
 os: osx 
-osx_image: 
-- xcode11
 cache:
-  cocoapods: true
-  branch: check-paths
-script: 
-- sw_vers 
-- python3 --version 
-- pip3 --version 
-- python2 --version 
-- pip2 --version 
-- python --version 
-- pip --version
+  bundler: true
+  branch: format-posix
 
 # matrix:
 #   include:
