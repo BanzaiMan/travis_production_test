@@ -5,6 +5,8 @@ arch:
   - arm64
 install: skip
 script:
+  - ps -ef
+  - jobs
   - exit 1
 
 # env:
