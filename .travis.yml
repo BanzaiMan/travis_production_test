@@ -4,7 +4,8 @@ arch:
   - amd64
   - arm64
 install: skip
-script: skip
+script:
+  - exit 1
 
 # env:
 #  global:
