@@ -7,7 +7,7 @@ install: skip
 script:
   - ps -ef
   - jobs
-  - exit 1
+  - travis_terminate 1
 
 # env:
 #  global:
