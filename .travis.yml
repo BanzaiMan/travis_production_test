@@ -1,14 +1,12 @@
-language: ruby
-dist: bionic
+language: node_js
+os:
+  - osx
+  - linux
+  - windows
   
 install: skip
-script: skip
-
-rvm:
-  - 2.4.7
-
-env:
-  - FOO="123=456"
+script: 
+  - git config -l
 
 # env:
 #  global:
