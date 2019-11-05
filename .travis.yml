@@ -1,8 +1,7 @@
 language: rust
-# dist: precise
-sudo: false
-dist: bionic
-group: dev
+before_install:
+  - cargo install --force cargo-audit
+  - cargo audit --version
 install: skip
 script: skip
 
