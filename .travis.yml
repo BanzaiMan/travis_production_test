@@ -8,7 +8,7 @@ env:
   # 'foo=secret'
   - secure: "dykvWiPGCZVPiGu1ioHajN7jWkBM9r/7c0xDJQH3+kYj0sd+dTBdAXdirqyLx9ELoSGY8Q5j7MxOFaDQ3eMkqJbGCGkAzSvbnSXyc2QcFCMPc4sl+xKs5CoQ3+6WOnQbWtwZCbVqhummiYrLYs5p2FJVdbPGj9g5CEb2fHF2Ia0="
 
-script: true
+script: sleep 300
 
 # matrix:
 #   include:
