@@ -16,6 +16,7 @@ before_install:
 install: skip
 
 cache:
+  branch: md5deep-symlink
   directories:
     - foo
 
