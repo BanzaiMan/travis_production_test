@@ -1,6 +1,6 @@
 language: generic
 arch:
-#   - amd64
+  - amd64
   - arm64
 before_install:
   - uname -a
@@ -8,6 +8,7 @@ before_install:
   - dpkg -l | grep deep
   - sudo apt-get install md5deep
   - ls -l /usr/bin/*deep
+  - dpkg -S /usr/bin/md5deep
   - which md5deep
   - md5deep -h
   - md5deep -v
