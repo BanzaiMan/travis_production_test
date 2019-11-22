@@ -4,6 +4,7 @@ arch:
   - arm64
 before_install:
   - uname -a
+  - lsb_release -a
   - sudo apt-get install md5deep
   - ls -l /usr/bin/*deep
   - which md5deep
