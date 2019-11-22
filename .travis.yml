@@ -3,6 +3,7 @@ arch:
 #   - amd64
   - arm64
 before_install:
+  - sudo apt-get install md5deep
   - which md5deep
   - md5deep -h
   - md5deep -v
