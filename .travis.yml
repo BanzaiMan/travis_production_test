@@ -1,8 +1,12 @@
 language: generic
 arch:
-  - amd64
+#   - amd64
   - arm64
-
+before_install:
+  - which md5deep
+  - md5deep -h
+  - md5deep -v
+  - bash -x ~/.casher/bin/casher add foobar
 install: skip
 
 cache:
