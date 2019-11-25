@@ -2,9 +2,7 @@ language: cpp
 arch:
   - amd64
   - arm64
-dist:
-  - xenial
-  - bionic
+dist: bionic
 addons:
   apt:
     sources:
