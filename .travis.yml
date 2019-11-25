@@ -2,11 +2,12 @@ language: generic
 arch:
   - amd64
   - arm64
+  - ppc64le
+  - s390x
 
 install: skip
 
 cache:
-  branch: md5deep-symlink
   directories:
     - foo
 
