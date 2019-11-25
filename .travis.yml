@@ -2,7 +2,9 @@ language: cpp
 arch:
   - amd64
   - arm64
-
+dist:
+  - xenial
+  - bionic
 addons:
   apt:
     sources:
@@ -14,6 +16,7 @@ cache:
     - foo
 compiler:
   - cpp
+  - clang
 
 # env:
 #   global:
