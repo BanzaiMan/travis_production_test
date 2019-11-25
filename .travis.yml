@@ -29,7 +29,7 @@ compiler:
 #     - PATH=/usr/local/android-sdk/tools/bin:$PATH
 
 script: 
-  - g++ printf.cpp
+  - ${CXX} printf.cpp
   - ./a.out
   - cp a.out foo
 
