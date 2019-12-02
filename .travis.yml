@@ -1,20 +1,16 @@
 language: generic
+dist: bionic
 arch:
   - amd64
   - arm64
   - ppc64le
   - s390x
 
+addons:
+  snaps:
+    - hugo
+  
 install: skip
-
-cache:
-  directories:
-    - foo
-
-filter_secrets: redirect_io
-
-env:
-  - secure: "TDRdB0JazJAtxPyTZsOmhAV9VhY5QXSd6tSox/g5Yn7Fweqz/CjJBwaLY3QBwAFobwaRlg+TrIcBlyNs7+yzxRMN1PVp5DZ1eWtk0yU3bk0vH+CWXhp1hsu8zDvWeX/xD4eRFtE7VWtOTWKIXoVyumpLN6zGcn9xrxymIF2Snng="
 
 script: skip
 notifications:
