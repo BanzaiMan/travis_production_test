@@ -40,9 +40,9 @@ before_install:
    - go get -u github.com/stretchr/testify
 # before_cache:
 #    - rm -f $HOME/fresh-cache
-# before_script:
-#    - export DISPLAY=:99.0
-#    - sh -e /etc/init.d/xvfb start
+before_script:
+   - export DISPLAY=:99.0
+   - sh -e /etc/init.d/xvfb start
 # script:
 #    - echo "Running tests"
 #    - make test_with_coverage
