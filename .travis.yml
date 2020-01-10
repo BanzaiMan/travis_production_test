@@ -43,11 +43,11 @@ before_install:
 before_script:
    - export DISPLAY=:99.0
    - sh -e /etc/init.d/xvfb start
-# script:
-#    - echo "Running tests"
-#    - make test_with_coverage
-#    - echo "Checking that code is well-formatted"
-#    - make fmt_check
+script:
+   - echo "Running tests"
+   - make test_with_coverage
+   - echo "Checking that code is well-formatted"
+   - make fmt_check
 # after_success:
 #    - bash <(curl -s https://codecov.io/bash) -f "../profile.cov"
 # branches:
