@@ -10,31 +10,31 @@ go:
 matrix:
    allow_failures:
       - go: tip
-# addons:
-#    apt:
-#       packages:
-#          - libgmp-dev
-#          - build-essential
-#          - cmake
-#          - git
-#          - libgtk2.0-dev
-#          - pkg-config
-#          - libavcodec-dev
-#          - libavformat-dev
-#          - libswscale-dev
-#          - libtbb2
-#          - libtbb-dev
-#          - libjpeg-dev
-#          - libpng-dev
-#          - libtiff-dev
-#          - libjasper-dev
-#          - libdc1394-22-dev
-#          - libsdl2-dev
-#          - libsdl2-image-dev
-#          - libsdl2-2.0.0
-#          - libusb-dev
-#          - xvfb
-#          - unzip
+addons:
+   apt:
+      packages:
+         - libgmp-dev
+         - build-essential
+         - cmake
+         - git
+         - libgtk2.0-dev
+         - pkg-config
+         - libavcodec-dev
+         - libavformat-dev
+         - libswscale-dev
+         - libtbb2
+         - libtbb-dev
+         - libjpeg-dev
+         - libpng-dev
+         - libtiff-dev
+         - libjasper-dev
+         - libdc1394-22-dev
+         - libsdl2-dev
+         - libsdl2-image-dev
+         - libsdl2-2.0.0
+         - libusb-dev
+         - xvfb
+         - unzip
 # before_install:
 #    - ./travis_build_opencv.sh
 #    - export PKG_CONFIG_PATH=$(pkg-config --variable pc_path pkg-config):$HOME/usr/lib/pkgconfig
