@@ -1,4 +1,4 @@
-language: ruby
+language: cpp
 install: skip
 script: skip
 os: osx 
