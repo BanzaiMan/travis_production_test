@@ -2,9 +2,11 @@ language: ruby
 install: skip
 script: skip
 os: osx 
-cache:
-  bundler: true
-  branch: format-posix
+osx_image: xcode9.2
+deploy:
+  provider: script
+  edge: true
+  script: true
 
 # matrix:
 #   include:
