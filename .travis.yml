@@ -19,11 +19,14 @@ jobs:
   - r: devel
     r_github_packages: r-lib/usethis
   - r: release
+    r_github_packages:
   - r: devel
+    r_github_packages:
   allow_failures:
   - r: release
-    r_github_packages: r-lib/usethis
-
+    r_github_packages:
+  - r: devel
+    r_github_packages:
 
 notifications:
   email: false
