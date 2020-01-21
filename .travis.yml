@@ -1,16 +1,31 @@
 language: r
+cache: packages
 warnings_are_errors: false
-fortran: false
-latex: false
-pandoc: false
-os: osx
+# environment variables set for all builds
+
+os:
+  - linux
+
+# do not build vignettes...takes too long and times out on travis
+r_build_args: --no-build-vignettes --no-manual
+r_check_args: --no-build-vignettes --no-manual --timings
+
+r_github_packages:
+
 jobs:
   include:
-    - disable_homebrew: true
-    - disable_homebrew: false
+  - r: release
+    r_github_packages: r-lib/usethis
+  - r: devel
+    r_github_packages: r-lib/usethis
+  - r: release
+  - r: devel
+  allow_failures:
+  - r: release
+    r_github_packages:
+  - r: devel
+    r_github_packages:
 
-install: skip
-script: skip
 
 notifications:
   email: false
