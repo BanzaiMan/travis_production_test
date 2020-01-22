@@ -1,5 +1,14 @@
-language: scala
+language: bash
+env:
+  matrix:
+  - SOLR_VER="8.4.1" TAGS="${SOLR_VER},8.4,8,latest" TESTABC_ASD="1.2.3" TESTZXC="${TESTABC_ASD},4,5"
 
+install: skip
+script:
+- echo "${SOLR_VER}"
+- echo "${TAGS}"
+- echo "${TESTABC_ASD}"
+- echo "${TESTZXC}"
 # matrix:
 #   include:
 #     - language: generic
