@@ -1,5 +1,9 @@
-language: scala
+language: node_js
 
+jobs:
+  include:
+    - os: windows
+    - os: linux
 # matrix:
 #   include:
 #     - language: generic
@@ -25,7 +29,11 @@ language: scala
     #   group: edge
     #   env: DIST=trusty STACK=GCE GROUP=edge
 #     - os: osx
-
+install: skip
+script:
+  - source foo
+  - travis_retry source foo
+  
 notifications:
   email: false
 

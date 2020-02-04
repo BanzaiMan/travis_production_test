@@ -1,0 +1,4 @@
+set -e
+false
+echo "not here"
+set +e
