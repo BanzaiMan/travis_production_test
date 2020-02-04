@@ -33,7 +33,7 @@ install: skip
 script:
   - echo $-
   - set -x
-  - travis_retry source foo
+  - travis_retry "echo $-; source foo"
   - set +x
 
 notifications:
