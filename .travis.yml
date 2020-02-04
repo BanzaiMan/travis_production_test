@@ -31,6 +31,7 @@ jobs:
 #     - os: osx
 install: skip
 script:
+  - set +x
   - travis_retry source foo
 
 notifications:
