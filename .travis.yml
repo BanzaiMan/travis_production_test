@@ -4,8 +4,7 @@ language: ruby
 #  global:
 #    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 install: skip
-script: 
-  - cat ~/build.sh
+script: skip
 # gemfile: our_gemfile
 
 deploy:
