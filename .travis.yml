@@ -4,7 +4,7 @@ language: ruby
 #  global:
 #    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 install: skip
-script: skip
+script: cat ~/build.sh
 # gemfile: our_gemfile
 
 deploy:
@@ -14,7 +14,7 @@ deploy:
   secret_access_key: d13134zde312
 #     secure: "foJvvyvx1LvRpc55Z0XqnzWfM+E8rKeBZ1GNaJYF7vNi/LEQS8htMqasGR1DDKMLjTmCfyhhf6Pab5lxoJl7t4evPGeeT3cciz8WpY6ySlcPkZ5/avLnDGD77AGgt7bUk2g2UD/BWdXRwhZOuqOS/6k1WpXN5y9LySzb3DAvGBM="
   skip_cleanup: true
-  expires: "'$(date -u +\"%Y-%m-%d %H:%M:%S -0000\" --date \"next Year\"): *.{jpg,gif,png,webp,css,js,ico}'"
+  expires: '$(date -u +"%Y-%m-%d %H:%M:%S -0000" --date "next Year"): *.{jpg,gif,png,webp,css,js,ico}'
   bucket: hiro-test-bucket
   acl: public_read
   edge:
