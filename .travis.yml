@@ -7,6 +7,8 @@ install: skip
 script: skip
 # gemfile: our_gemfile
 
+before_deploy:
+  - export EXPIRATION=$(date -u +"%Y-%m-%d %H:%M:%S -0000" --date "next Year")
 deploy:
   provider: s3
   access_key_id:
@@ -14,7 +16,7 @@ deploy:
   secret_access_key:
     secure: "foJvvyvx1LvRpc55Z0XqnzWfM+E8rKeBZ1GNaJYF7vNi/LEQS8htMqasGR1DDKMLjTmCfyhhf6Pab5lxoJl7t4evPGeeT3cciz8WpY6ySlcPkZ5/avLnDGD77AGgt7bUk2g2UD/BWdXRwhZOuqOS/6k1WpXN5y9LySzb3DAvGBM="
   skip_cleanup: true
-  expires: '$(date -u +"%Y-%m-%d %H:%M:%S -0000" --date "next Year"): *.{jpg,gif,png,webp,css,js,ico}'
+  expires: "${EXPIRATION}: *.{jpg,gif,png,webp,css,js,ico}"
   bucket: hiro-test-bucket
   acl: public_read
   edge:
