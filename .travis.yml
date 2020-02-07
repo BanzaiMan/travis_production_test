@@ -1,22 +1,24 @@
 language: c++
-
+os: osx
+script:
+  - otool -l /System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib
 matrix:
   include:
-    - os: osx
-      osx_image: xcode9.2
-      script: skip
+    - osx_image: xcode9.2
+    - osx_image: xcode11.3
+    - osx_image: xcode10.3
 
 
-deploy:
-  provider: releases
-  api_key: "$GITHUB_TOKEN"
-  file: release/*
-  file_glob: true
-  prerelease: true
-  overwrite: true
-  edge: true
-  on:
-    all_branches: true
+# deploy:
+#   provider: releases
+#   api_key: "$GITHUB_TOKEN"
+#   file: release/*
+#   file_glob: true
+#   prerelease: true
+#   overwrite: true
+#   edge: true
+#   on:
+#     all_branches: true
 # matrix:
 #   include:
 #    - osx_image: xcode9.3beta
