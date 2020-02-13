@@ -2,11 +2,12 @@ dist: xenial
 language: java
 
 jdk:
-  - openjdk7
-  - openjdk8
-  - oraclejdk8
   - oraclejdk11
 
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install openjdk-8-jdk
+  - javac -version
 install: skip
 script: skip
 
