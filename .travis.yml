@@ -3,7 +3,7 @@ language: node_js
 install:
   - git clone https://github.com/travis-ci/travis.rb.git
   - pushd travis.rb
-  - "git am < 0001-*.patch"
+  - "git am < ../0001-*.patch"
   - gem build travis.gemspec
   - gem install travis-*.gem
   - popd
