@@ -1,10 +1,14 @@
 language: node_js
-node_js:
-  - 
-  - lts/*
 
-install: skip
-script: cat ~/build.sh
+install:
+  - git clone https://github.com/travis-ci/travis.rb.git
+  - pushd travis.rb
+  - "git am < 0001-*.patch"
+  - gem build travis.gemspec
+  - gem install travis-*.gem
+  - popd
+script:
+  - travis help
 notifications:
   email: false
 

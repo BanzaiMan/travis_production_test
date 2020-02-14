@@ -1,0 +1,25 @@
+From 60837d3c1eabc85e6a62f5185cd0fca68453a309 Mon Sep 17 00:00:00 2001
+From: Hiro Asari <asari.ruby@gmail.com>
+Date: Fri, 14 Feb 2020 16:12:55 -0500
+Subject: [PATCH] Skip command completion check unless $stdin is tty
+
+---
+ lib/travis/cli/command.rb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lib/travis/cli/command.rb b/lib/travis/cli/command.rb
+index c9c0221..c379be1 100644
+--- a/lib/travis/cli/command.rb
++++ b/lib/travis/cli/command.rb
+@@ -166,7 +166,7 @@ module Travis
+       end
+ 
+       def check_completion
+-        return if skip_completion_check? or !interactive?
++        return if skip_completion_check? or !interactive? or !$stdin.tty?
+ 
+         if config['checked_completion']
+           Tools::Completion.update_completion if config['completion_version'] != Travis::VERSION
+-- 
+2.20.1
+
