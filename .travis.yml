@@ -1,4 +1,10 @@
 language: node_js
+os:
+  - linux
+matrix:
+  exclude:
+    - os:
+        - linux
 
 install:
   - git clone https://github.com/travis-ci/travis.rb.git
