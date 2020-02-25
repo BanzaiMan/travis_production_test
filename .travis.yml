@@ -1,9 +1,9 @@
-language: erlang
+language: elixir
 
 sudo: false
 
 otp_release: '22.2.7'
-
+elixir: '1.10'
 dist: bionic
 
 install: skip
