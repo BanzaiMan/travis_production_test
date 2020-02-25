@@ -2,11 +2,9 @@ language: erlang
 
 sudo: false
 
-otp_release:
-  - '20.2.2'
-  - '21.1'
+otp_release: '22.2.7'
 
-dist: trusty
+dist: bionic
 
 install: skip
 
