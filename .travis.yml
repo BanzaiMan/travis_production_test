@@ -12,8 +12,8 @@ jobs:
       name: bionic
     - dist: xenial
       name: xenial
-      before_install:
-        - sudo service postgresql start
+#       before_install:
+#         - sudo service postgresql start
 
 # matrix:
 #   include:
