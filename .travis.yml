@@ -1,4 +1,14 @@
-language: scala
+language: ruby
+dist: bionic
+addons:
+  postgresql: "11"
+  
+jobs:
+  include:
+    - dist: bionic
+      name: bionic
+    - dist: xenial
+      name: xenial
 
 # matrix:
 #   include:
