@@ -4,6 +4,8 @@ dist: bionic
 install: skip
 script: skip
 
+if: tag IS blank
+
 jobs:
   include:
     - name: one
