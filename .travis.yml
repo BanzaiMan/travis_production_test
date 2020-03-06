@@ -4,12 +4,11 @@ dist: bionic
 install: skip
 script: skip
 
-rvm:
-  - 2.4.7
-  - 2.7.0
-
-env:
-  - FOO="123=456"
+jobs:
+  include:
+    - name: one
+    - name: two
+      if: type = push AND env(FOO) is present
 
 # env:
 #  global:
