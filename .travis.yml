@@ -1,19 +1,13 @@
 language: ruby
 dist: bionic
-addons:
-  postgresql: "11"
+
 rvm: 2.5.4
 
-before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-jobs:
-  include:
-    - dist: bionic
-      name: bionic
-    - dist: xenial
-      name: xenial
-#       before_install:
-#         - sudo service postgresql start
+install: skip
+script: skip
+
+env:
+  - secure:
 
 # matrix:
 #   include:
