@@ -6,7 +6,7 @@ script: echo "This is ${TRAVIS_JOB_NAME}"
 
 env:
   global:
-    - OFFICIAL_REPO_SLUG=BanzaiMan/travis_production_test
+    - FOO=BanzaiMan/travis_production_test
     
 jobs:
   include:
