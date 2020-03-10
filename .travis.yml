@@ -6,14 +6,14 @@ script: echo "This is ${TRAVIS_JOB_NAME}"
 
 env:
   global:
-    - X=Y
-
+    - OFFICIAL_REPO_SLUG=BanzaiMan/travis_production_test
+    
 jobs:
   include:
     - name: one
     - name: two
-      if: type = push AND env(FOO) is present
-      
+      if: type = push AND env(FOO) = BanzaiMan/travis_production_test
+    
 
 # env:
 #  global:
