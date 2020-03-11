@@ -1,7 +1,5 @@
-language: ruby
-dist: bionic
+language: shell
   
-install: skip
 script: echo "This is ${TRAVIS_JOB_NAME}"
 
 env:
@@ -14,6 +12,7 @@ jobs:
     - name: two
       if: type = push AND env(FOO) = BanzaiMan/travis_production_test
     
+
 
 # env:
 #  global:
