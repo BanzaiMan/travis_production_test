@@ -1,6 +1,16 @@
-language: ruby
+sudo: false
 
-install: true
+install:
+  - true
 
 script:
   - true
+
+notifications:
+  email: false
+
+deploy:
+  provider: script
+  script: echo hello
+  on:
+    condition: "true"
