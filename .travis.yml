@@ -14,3 +14,4 @@ deploy:
   script: echo hello
   on:
     condition: "true"
+
