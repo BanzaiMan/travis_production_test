@@ -7,9 +7,7 @@ install: skip
 script: skip
 
 env:
-  global:
-    - FOO=bar
-    - secure: "ftuzy3awt9o/ZlyHiodHd/LcxrkBwcnBEE1W3Ou4lKNNuR7S9IFq9JCfPEFOhVigiE2WKaYpCC7Tr6dNOTOJ+LB6pdgk1bqwY9kPNOcubJaFbzxNlqNFNMPf+tY9HPTKP35Y95Yqv4vy4cA+44ZAhm81U8xYZV7+AYXd978a7eo="
+  - secure: "ftuzy3awt9o/ZlyHiodHd/LcxrkBwcnBEE1W3Ou4lKNNuR7S9IFq9JCfPEFOhVigiE2WKaYpCC7Tr6dNOTOJ+LB6pdgk1bqwY9kPNOcubJaFbzxNlqNFNMPf+tY9HPTKP35Y95Yqv4vy4cA+44ZAhm81U8xYZV7+AYXd978a7eo="
 
 # matrix:
 #   include:
