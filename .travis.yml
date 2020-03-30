@@ -9,6 +9,7 @@ addons:
     token:
       secure: "*********" # encrypted value of your token
 
+
 install: skip
 script: skip
 
