@@ -3,6 +3,12 @@ dist: bionic
 
 rvm: 2.5.4
 
+addons:
+  sonarcloud:
+    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    token:
+      secure: "*********" # encrypted value of your token
+
 install: skip
 script: skip
 
