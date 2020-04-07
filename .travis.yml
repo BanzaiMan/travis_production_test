@@ -1,7 +1,7 @@
 language: ruby
 dist: bionic
 
-rvm: jruby
+rvm: jruby-9.2
 
 install: skip
 script: echo "This is ${TRAVIS_JOB_NAME}"
