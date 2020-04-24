@@ -6,6 +6,11 @@ rvm: 2.5.4
 install: skip
 script: skip
 
+stages:
+  - test
+  - develop
+  - Test
+  - Develop
 jobs:
   include:
     - stage: test
