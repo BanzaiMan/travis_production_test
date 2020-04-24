@@ -6,9 +6,11 @@ rvm: 2.5.4
 install: skip
 script: skip
 
-env:
-  - secure:
-  
+jobs:
+  include:
+    - stage: test
+    - stage: develop
+    - stage: Test
 
 # matrix:
 #   include:
