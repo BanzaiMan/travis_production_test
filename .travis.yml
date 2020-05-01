@@ -1,16 +1,11 @@
 language: haskell
 
-dist: trusty
-sudo: false
-
-ghc: '8.2.1'
+os: osx
 cabal: head
 
-install:
-  - true
+install: skip
 
-script:
-  - true
+script: skip
 
 notifications:
   email: false
