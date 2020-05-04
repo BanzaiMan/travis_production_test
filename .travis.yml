@@ -2,8 +2,9 @@ language: python
 
 install: skip
   
-script: 
-  - cat /etc/boto.cfg
+script: skip
+virtualenv:
+  system_site_packages: true
 
 jobs:
   include:
