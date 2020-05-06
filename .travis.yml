@@ -1,24 +1,16 @@
 language: ruby
 dist: bionic
 
-rvm: jruby-9.2
-
+before_install:
+  - openssl aes-256-cbc -K $encrypted_8ec9a00bfd09_key -iv $encrypted_8ec9a00bfd09_iv -in README.md.enc -out new.md -d
 install: skip
-script: echo "This is ${TRAVIS_JOB_NAME}"
-
-jobs:
-  include:
-    - name: one
-    - name: two
-      if: type = push AND env(FOO) is present
-      
 
 # env:
 #  global:
 #    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
 # gemfile: our_gemfile
 
-# script: skip
+script: skip
 
 # jobs:
 #   include:
