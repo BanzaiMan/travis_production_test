@@ -1,17 +1,11 @@
 language: ruby
-dist: bionic
-
-rvm: 2.5.4
+os: freebsd
+dist: '12.1'
+rvm: '2.7.0
 
 install: skip
 script: skip
 
-jobs:
-  include:
-    - stage: test
-    - stage: deVeloP
-    - stage: Test
-    - stage: develop
 
 # matrix:
 #   include:
