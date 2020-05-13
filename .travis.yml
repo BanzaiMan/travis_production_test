@@ -1,17 +1,13 @@
 language: ruby
 dist: bionic
 
-rvm: 2.5.4
+rvm: 2.7.0
 
 install: skip
 script: skip
 
-jobs:
-  include:
-    - stage: test
-    - stage: deVeloP
-    - stage: Test
-    - stage: develop
+addons:
+  rethinkdb: '2.3.4'
 
 # matrix:
 #   include:
