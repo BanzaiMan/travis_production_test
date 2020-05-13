@@ -1,7 +1,7 @@
 language: ruby
 os: freebsd
 dist: '12.1'
-rvm: '2.7.0
+rvm: '2.7.0'
 
 install: skip
 script: skip
