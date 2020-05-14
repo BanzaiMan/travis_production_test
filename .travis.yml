@@ -3,6 +3,10 @@ os: freebsd
 dist: '12.1'
 rvm: '2.7.0'
 
+env:
+  global:
+    - ASSUME_ALWAYS_YES=YES
+
 install: skip
 script:
   - pkg search tmate
