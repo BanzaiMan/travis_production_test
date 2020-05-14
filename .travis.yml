@@ -9,6 +9,7 @@ env:
 
 install: skip
 script:
+  - uname
   - pkg search tmate
   - sudo pkg install tmate
 
