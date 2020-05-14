@@ -4,7 +4,9 @@ dist: '12.1'
 rvm: '2.7.0'
 
 install: skip
-script: skip
+script:
+  - pkg search tmate
+  - sudo pkg install tmate
 
 
 # matrix:
