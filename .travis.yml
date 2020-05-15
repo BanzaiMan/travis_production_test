@@ -1,6 +1,8 @@
 language: ruby
 dist: bionic
 
+addons:
+  chrome: stable
 rvm: 2.5.4
 
 install: skip
@@ -8,11 +10,12 @@ script: skip
 
 jobs:
   include:
-    - stage: test
-    - stage: deVeloP
-    - stage: Test
-    - stage: develop
-
+    - dist: trusty
+      name: trusty
+    - dist: xenial
+      name: xenial
+    - dist: bionic
+      name: bionic
 # matrix:
 #   include:
 #     - language: generic
