@@ -6,6 +6,8 @@ os:
 
 r_github_packages:
 
+before_install:
+  - sudo apt-get install python3
 install: skip
 script:
   - python3 --version
