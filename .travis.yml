@@ -1,29 +1,14 @@
 language: r
-cache: packages
-warnings_are_errors: false
-# environment variables set for all builds
+dist: bionic
 
 os:
   - linux
 
-# do not build vignettes...takes too long and times out on travis
-r_build_args: --no-build-vignettes --no-manual
-r_check_args: --no-build-vignettes --no-manual --timings
-
 r_github_packages:
 
-jobs:
-  include:
-  - r: release
-    r_github_packages: r-lib/usethis
-  - r: devel
-    r_github_packages: r-lib/usethis
-  - r: release
-    env: ALLOW=true
-  - r: devel
-    env: ALLOW=true
-  allow_failures:
-  - env: ALLOW=true
+install: skip
+script:
+  - python3 --version
 notifications:
   email: false
 
