@@ -1,13 +1,14 @@
-language: c++
+language: ruby
 os: osx
-script:
-  - otool -l /System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib
+rvm:
+  - 2.6.0
 matrix:
   include:
     - osx_image: xcode9.2
     - osx_image: xcode11.3
     - osx_image: xcode10.3
-
+install: skip
+script: skip
 
 # deploy:
 #   provider: releases
