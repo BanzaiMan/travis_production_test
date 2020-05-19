@@ -13,6 +13,7 @@ script:
   - pkg search tmate
   - sudo pkg install tmate
   - which bash
+  - ls -l /bin/bash
   - cat ~/build.sh
 
 # matrix:
