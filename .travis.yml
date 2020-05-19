@@ -12,7 +12,8 @@ script:
   - uname
   - pkg search tmate
   - sudo pkg install tmate
-
+  - which bash
+  - cat ~/build.sh
 
 # matrix:
 #   include:
