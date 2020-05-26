@@ -9,7 +9,7 @@ before_install:
   - curl -o ~/bin/install-jdk.sh https://raw.githubusercontent.com/sormuras/bach/master/install-jdk.sh
   - chmod +x ~/bin/install-jdk.sh
   - sed -i.bak -e 's%11) url=".*"%11) url="https://edelivery.oracle.com/akam/otn/java/jdk/11.0.7+8/8c7daf89330c48f0b9e32f57169f7bac/jdk-11.0.7_${os}_bin.tar.gz"%' ~/bin/install-jdk.sh
-  - bash -v ~/bin/install-jdk.sh --target $JAVA_HOME --workspace "/home/travis/.cache/install-jdk" --feature "11" --license "GPL" --cacerts
+  - bash -v ~/bin/install-jdk.sh -v --target $JAVA_HOME --workspace "/home/travis/.cache/install-jdk" --feature "11" --license "GPL" --cacerts
 install: skip
 script:
   - javac -version
