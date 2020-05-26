@@ -2,12 +2,13 @@ dist: xenial
 language: java
 
 jdk:
-  - openjdk11
+  - openjdk12
 
 before_install:
   - export JAVA_HOME=~/openjdk11
   - curl -o ~/bin/install-jdk.sh https://raw.githubusercontent.com/sormuras/bach/master/install-jdk.sh
   - chmod +x ~/bin/install-jdk.sh
+  - sed -i.bak -e 's/openjdk-11\.0\.2/openjdk-11.0.7/' ~/bin/install-jdk.sh
   - ~/bin/install-jdk.sh --target $JAVA_HOME --workspace "/home/travis/.cache/install-jdk" --feature "11" --license "GPL" --cacerts
 install: skip
 script: 
