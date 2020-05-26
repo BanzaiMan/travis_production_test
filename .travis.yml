@@ -5,6 +5,8 @@ jdk:
   - openjdk11
 
 before_install:
+  - curl -o ~/bin/install-jdk.sh https://raw.githubusercontent.com/sormuras/bach/master/install-jdk.sh
+  - chmod +x ~/bin/install-jdk.sh
   - ~/bin/install-jdk.sh --target $JAVA_HOME --workspace "/home/travis/.cache/install-jdk" --feature "11" --license "GPL" --cacerts
 install: skip
 script: 
