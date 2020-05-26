@@ -2,15 +2,13 @@ dist: xenial
 language: java
 
 jdk:
-  - oraclejdk11
+  - openjdk11
 
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install openjdk-8-jdk
-  - javac -version
+  - ~/bin/install-jdk.sh --target $JAVA_HOME --workspace "/home/travis/.cache/install-jdk" --feature "11" --license "GPL" --cacerts
 install: skip
-script: skip
-
+script: 
+  - javac -version
 
 # android:
 #   components:
