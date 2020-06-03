@@ -1,14 +1,13 @@
-language: ruby
+language: c
 os: osx
-rvm:
-  - 2.6.0
 matrix:
   include:
     - osx_image: xcode9.2
     - osx_image: xcode11.3
     - osx_image: xcode10.3
 install: skip
-script: skip
+script:
+  - $CC --version
 
 # deploy:
 #   provider: releases
