@@ -1,4 +1,4 @@
-language: c
+language: cpp
 os: freebsd
 dist: '12.1'
 
@@ -13,8 +13,12 @@ script:
   - env | sort
   - which gcc
   - gcc --version
+  - which g++
+  - g++ --version
   - which cc
   - cc --version
+  - which c++
+  - c++ --version
   - $CC --version
 
 
