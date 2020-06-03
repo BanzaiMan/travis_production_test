@@ -12,12 +12,9 @@ script:
   - pkg search tmate
   - sudo pkg install tmate
   - which bash
-  - ls -l /bin/bash
-  - cat ~/build.sh
-  - which env
-  - ls /bin
-  - env
+  - env | sort
   - which gcc
+  - which cc
 
 
 # matrix:
