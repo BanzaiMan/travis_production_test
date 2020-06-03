@@ -1,7 +1,6 @@
-language: ruby
+language: c
 os: freebsd
 dist: '12.1'
-rvm: '2.7.0'
 
 env:
   global:
@@ -17,6 +16,8 @@ script:
   - cat ~/build.sh
   - which env
   - ls /bin
+  - env
+  - which gcc
 
 
 # matrix:
