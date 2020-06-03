@@ -8,6 +8,7 @@ matrix:
 install: skip
 script:
   - $CC --version
+  - env | sort
 
 # deploy:
 #   provider: releases
