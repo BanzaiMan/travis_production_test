@@ -9,12 +9,13 @@ env:
 install: skip
 script:
   - uname
-  - pkg search tmate
-  - sudo pkg install tmate
   - which bash
   - env | sort
   - which gcc
+  - gcc --version
   - which cc
+  - cc --version
+  - $CC --version
 
 
 # matrix:
