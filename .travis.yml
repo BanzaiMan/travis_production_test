@@ -2,25 +2,8 @@ language: cpp
 os: freebsd
 dist: '12.1'
 
-env:
-  global:
-    - ASSUME_ALWAYS_YES=YES
-
-install: skip
-script:
-  - uname
-  - which bash
+before_script:
   - env | sort
-  - which gcc
-  - gcc --version
-  - which g++
-  - g++ --version
-  - which cc
-  - cc --version
-  - which c++
-  - c++ --version
-  - $CC --version
-
 
 # matrix:
 #   include:
