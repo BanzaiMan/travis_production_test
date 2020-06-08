@@ -2,9 +2,8 @@ language: python
 
 install: skip
   
-script: skip
-virtualenv:
-  system_site_packages: true
+script:
+  - curl -vv https://ondemand.saucelabs.com/wd/hub
 
 jobs:
   include:
