@@ -4,6 +4,7 @@ dist: bionic
 rvm: 2.5.4
 
 install: skip
+
 script: skip
 
 jobs:
