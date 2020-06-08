@@ -1,4 +1,4 @@
-language: cpp
+language: crystal
 dist: bionic
 
 addons:
