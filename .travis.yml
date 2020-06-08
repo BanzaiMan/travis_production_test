@@ -1,15 +1,6 @@
 language: ruby
-dist: bionic
+dist: xenial
 
-addons:
-  postgresql: "12"
-  apt:
-    packages:
-    - postgresql-12
-    - postgresql-client-12
-
-before_install:
-  - openssl aes-256-cbc -K $encrypted_8ec9a00bfd09_key -iv $encrypted_8ec9a00bfd09_iv -in README.md.enc -out new.md -d
 install: skip
 
 # env:
