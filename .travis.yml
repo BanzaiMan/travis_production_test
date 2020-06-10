@@ -1,9 +1,6 @@
 language: php
 
-dist:
-  - trusty
-sudo: required
-
+php: "7.3"
 # env:
 #   global:
 #     - CACHE_DIR=$([ $TRAVIS_OS_NAME = 'linux' ] && echo "FOO" || echo "BAR")
@@ -11,8 +8,6 @@ sudo: required
 # cache:
 #   directories:
 #     - $CACHE_DIR
-install: skip
-script: skip
 
 # matrix:
 #   include:
