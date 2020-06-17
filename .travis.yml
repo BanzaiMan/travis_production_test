@@ -7,12 +7,7 @@ install: skip
 
 script: skip
 
-jobs:
-  include:
-    - stage: test
-    - stage: deVeloP
-    - stage: Test
-    - stage: develop
+after_script: echo hello
 
 # matrix:
 #   include:
