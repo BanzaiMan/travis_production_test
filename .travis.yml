@@ -22,7 +22,7 @@ jobs:
   include:
     - name: empty deploy
       script: cat -n $HOME/.travis/job_stages
-      deploy:
+      deploy: ":"
 
 # jobs:
 #   include:
