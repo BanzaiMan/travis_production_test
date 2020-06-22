@@ -3,11 +3,21 @@ dist: bionic
 
 rvm: 2.5.4
 
+env:
+  - foo = $(date) # wrong
+  - bar=$(date)
+
 install: skip
 
-script: skip
+script:
+  - echo ${foo}
+  - echo ${bar}
 
-after_script: echo hello
+deploy:
+  provider: script
+  script: echo ${bar}
+  on:
+    all_branches: true
 
 # matrix:
 #   include:
