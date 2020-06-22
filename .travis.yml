@@ -1,10 +1,8 @@
 language: ruby
-dist: xenial
+dist: bionic
 
-rvm:
-  - 2.7.0
-  - 2.6.3
-  
+rvm: jruby-9
+
 install: skip
 
 # env:
@@ -13,16 +11,6 @@ install: skip
 # gemfile: our_gemfile
 
 script: skip
-
-deploy:
-  provider: script
-  script: echo hello
-
-jobs:
-  include:
-    - name: empty deploy
-      script: cat -n $HOME/.travis/job_stages
-      deploy: ":"
 
 # jobs:
 #   include:
