@@ -5,7 +5,8 @@ rvm: 2.5.4
 
 install: skip
 
-script: skip
+script:
+  - env | sort | grep TRAVIS
 
 after_script: echo hello
 
