@@ -2,8 +2,10 @@ os: freebsd
 dist: '12.1'
 
 language: bash
+before_install:
+  - set -v
 install: skip
-script: skip
+script: cat ~/build.sh
 
 cache:
   directories:
