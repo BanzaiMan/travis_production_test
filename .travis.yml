@@ -1,10 +1,13 @@
-language: cpp
 os: freebsd
 dist: '12.1'
 
-before_script:
-  - env | sort
+language: bash
+install: skip
+script: skip
 
+cache:
+  directories:
+    - foo/bar
 # matrix:
 #   include:
 #     - language: generic
