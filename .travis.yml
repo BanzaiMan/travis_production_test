@@ -1,10 +1,5 @@
-language: cpp
+language: c
 dist: bionic
-
-addons:
-  apt:
-    packages:
-      - libc-bin
 
 # env:
 #   global:
