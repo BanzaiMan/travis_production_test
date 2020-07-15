@@ -1,9 +1,6 @@
 language: node_js
 os: linux
-dist:
-  - trusty
-  - xenial
-  - bionic
+dist: bionic
 install: skip
 script:
   - python --version
