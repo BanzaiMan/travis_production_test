@@ -1,18 +1,12 @@
 language: node_js
 os: linux
-matrix:
-  exclude:
-    - os: linux
-
-install:
-  - git clone https://github.com/travis-ci/travis.rb.git
-  - pushd travis.rb
-  - "git am < ../0001-*.patch"
-  - gem build travis.gemspec
-  - gem install travis-*.gem
-  - popd
+dist:
+  - trusty
+  - xenial
+  - bionic
+install: skip
 script:
-  - travis help
+  - python --version
 notifications:
   email: false
 
