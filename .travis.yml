@@ -10,7 +10,7 @@ install: gem install travis
 
 script: 
   - echo "n" | travis lint -x
-  - while true do; echo "n" | travis lint -x; done
+  - while true; do echo "n" | travis lint -x; done
 
 # jobs:
 #   include:
