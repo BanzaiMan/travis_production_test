@@ -3,14 +3,8 @@ language: python
 install: skip
   
 script:
-  - curl -vv https://ondemand.saucelabs.com/wd/hub
+  - cat ضروریاں.txt
 
-jobs:
-  include:
-    - dist: trusty
-    - dist: xenial
-    - dist: bionic
-    
 notifications:
   email: false
 
