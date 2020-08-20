@@ -1,13 +1,21 @@
 language: ruby
 dist: bionic
 
-rvm: 2.5.4
+rvm: 2.6.6
 
 install: skip
 
 script: skip
 
 after_script: echo hello
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: readdir.c
+  skip_cleanup: true
+  on:
+    tags: true
 
 # matrix:
 #   include:
