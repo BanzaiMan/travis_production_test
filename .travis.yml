@@ -12,10 +12,10 @@ install:
     }
 script: skip
 
-before_deploy:
-  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install aws-sdk -v 3.0.1
 deploy:
   - provider: s3
+    edge:
+      branch: v1-aws-sdk-v3
     access_key_id:
       secure: "DX7CXn2WyMgalNAa4cqJcpRzX+6wbVbPwMIQBpW0eMa1XSfUmmdg9Vg+Vofzkt3sF6iWzESo/MTQv60L1QNMx1pPQNFwmRgFRRDjR/6CHs9RtMFhuNto0QcBsA7mh/mnMKX9SoYWXNaUqWwgp/vg2P8ioAjhv+unA5+3MME8D1A="
     secret_access_key:
