@@ -5,7 +5,11 @@ python:
 
 sudo: false
 
-install: skip
+install:
+  - |
+    function travis_internal_ruby() {
+      echo "2.7.0"
+    }
 script: skip
 
 deploy:
