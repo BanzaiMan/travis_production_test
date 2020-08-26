@@ -12,6 +12,8 @@ install:
     }
 script: skip
 
+before_deploy:
+  - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install aws-sdk -v 3.0.1
 deploy:
   - provider: s3
     access_key_id:
