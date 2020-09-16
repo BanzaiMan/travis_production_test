@@ -1,6 +1,7 @@
 language: ruby
 os: osx
 xcode_image: xcode10.1
+rvm: '2.3.0'
 
 before_install:
   - brew tap shivammathur/homebrew-openssl-deprecated
@@ -14,8 +15,7 @@ install: gem install travis
 # gemfile: our_gemfile
 
 script: 
-  - travis lint -x
-  - while true; do echo "n" | travis lint -x; done
+  - "ruby -v -ropenssl -e \"puts OpenSSL::VERSION\""
 
 # jobs:
 #   include:
