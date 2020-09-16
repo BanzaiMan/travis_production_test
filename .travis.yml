@@ -1,5 +1,10 @@
 language: ruby
-dist: bionic
+os: osx
+xcode_image: xcode10.1
+
+before_install:
+  - brew tap shivammathur/homebrew-openssl-deprecated
+  - brew install openssl@1.0
 
 install: gem install travis
 
