@@ -10,7 +10,10 @@ install:
   - true
 
 script:
-  - ruby -v
+  - "ruby -v -ropenssl -e \"puts OpenSSL::VERSION\""
+cache:
+  directories:
+    - /usr/local/Cellar/openssl@1.0
 
 notifications:
   email: false
