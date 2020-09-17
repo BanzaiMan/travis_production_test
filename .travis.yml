@@ -1,12 +1,16 @@
-language: ruby
+language: generic
+os: osx
+osx_image: xcode10.3
 
-dist: xenial
-
+before_install:
+  - brew tap shivammathur/homebrew-openssl-deprecated
+  - brew install openssl@1.0
+  - rvm install 2.3.0
 install:
   - true
 
 script:
-  - true
+  - ruby -v
 
 notifications:
   email: false
