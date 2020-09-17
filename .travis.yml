@@ -2,12 +2,15 @@ language: ruby
 os: osx
 xcode_image: xcode10.1
 rvm: '2.3.0'
+addons:
+  homebrew:
+    taps:
+      - shivammathur/homebrew-openssl-deprecated
+    packages:
+      - openssl@1.0
+    update: true
 
-before_install:
-  - brew tap shivammathur/homebrew-openssl-deprecated
-  - brew install openssl@1.0
-
-install: gem install travis
+install: skip
 
 # env:
 #  global:
