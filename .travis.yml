@@ -10,10 +10,6 @@ install:
 
 script:
   - "ruby -v -ropenssl -e \"puts OpenSSL::VERSION\""
-cache:
-  directories:
-    - /usr/local/Cellar/openssl@1.0
-    - /Users/travis/.rvm/rubies/ruby-2.3.0
 
 notifications:
   email: false
