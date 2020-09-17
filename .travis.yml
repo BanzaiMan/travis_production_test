@@ -3,7 +3,7 @@ os: osx
 osx_image: xcode10.3
 
 before_install:
-  - brew install rbenv/tap/openssl@1.0
+  - test -f $(brew --prefix openssl@1.0)/bin || brew install rbenv/tap/openssl@1.0
   - rvm install 2.3.0 --with-openssl-dir=$(brew --prefix openssl@1.0)
 install:
   - true
@@ -13,6 +13,7 @@ script:
 cache:
   directories:
     - /usr/local/Cellar/openssl@1.0
+    - /Users/travis/.rvm/rubies/ruby-2.3.0
 
 notifications:
   email: false
