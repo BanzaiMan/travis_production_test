@@ -3,8 +3,8 @@ os: osx
 osx_image: xcode10.3
 
 before_install:
-  - test -f $(brew --prefix openssl@1.0)/bin || brew install rbenv/tap/openssl@1.0
-  - rvm install 2.3.0 --with-openssl-dir=$(brew --prefix openssl@1.0)
+  - test -d $(brew --prefix openssl@1.0)/bin && brew link openssl@1.0 || brew install rbenv/tap/openssl@1.0
+  - rvm reinstall 2.3.0 --with-openssl-dir=$(brew --prefix openssl@1.0)
 install:
   - true
 
