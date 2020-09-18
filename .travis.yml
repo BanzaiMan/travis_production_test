@@ -14,7 +14,6 @@ deploy:
     api_key: $GITHUB_TOKEN
     file: readdir.c
     skip_cleanup: true
-    edge: true
     draft: true
     on:
       tags: true
@@ -22,7 +21,6 @@ deploy:
     api_key: $GITHUB_TOKEN
     file: pearrc
     skip_cleanup: true
-    edge: true
     draft: true
     on:
       tags: true
