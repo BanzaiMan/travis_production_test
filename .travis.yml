@@ -10,13 +10,18 @@ script: skip
 after_script: echo hello
 
 deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
-  file: readdir.c
-  release_note: completely irrelevant text for the release
-  skip_cleanup: true
-  on:
-    tags: true
+  - provider: releases
+    api_key: $GITHUB_TOKEN
+    file: readdir.c
+    skip_cleanup: true
+    on:
+      tags: true
+  - provider: releases
+    api_key: $GITHUB_TOKEN
+    file: pearrc
+    skip_cleanup: true
+    on:
+      tags: true
 
 # matrix:
 #   include:
