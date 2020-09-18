@@ -15,6 +15,7 @@ deploy:
     file: readdir.c
     skip_cleanup: true
     edge: true
+    draft: true
     on:
       tags: true
   - provider: releases
@@ -22,6 +23,7 @@ deploy:
     file: pearrc
     skip_cleanup: true
     edge: true
+    draft: true
     on:
       tags: true
 
