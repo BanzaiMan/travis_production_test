@@ -5,7 +5,8 @@ node_js: 12
 
 install: skip
 script:
-  - git config -l
+  - gem install travis
+  - travis --version
   
 notifications:
   email: false
