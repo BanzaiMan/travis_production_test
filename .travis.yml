@@ -1,9 +1,5 @@
 language: python
-
-install: skip
-  
-script:
-  - curl -vv https://ondemand.saucelabs.com/wd/hub
+script: skip
 
 jobs:
   include:
