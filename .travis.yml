@@ -1,11 +1,12 @@
 language: python
+dist: bionic
 script: skip
 
 jobs:
   include:
-    - dist: trusty
-    - dist: xenial
-    - dist: bionic
+    - name: upgrade pip
+      before_install: python -m pip install --upgrade pip
+    - name: default pip
     
 notifications:
   email: false
