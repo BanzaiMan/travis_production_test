@@ -1,13 +1,12 @@
-language: ruby
-dist: bionic
-
-rvm: 2.5.4
+arch: arm64-graviton2
+virt: lxd
+os: linux
+dist: focal
+group: edge
 
 install: skip
 
 script: skip
-
-after_script: echo hello
 
 # matrix:
 #   include:
