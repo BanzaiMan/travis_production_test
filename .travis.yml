@@ -1,12 +1,18 @@
 language: ruby
 dist: bionic
 
+addons:
+  apt:
+    packages:
+      - lftp
 rvm: 2.5.4
 
 install: skip
 
-script: skip
-
+before_script:
+  - ssh-keyscan -p 54433 mooltipass-tests.com
+script:
+  - lftp -d -p 54433 sftp://mooltipass-tests.com -e "ls"
 after_script: echo hello
 
 # matrix:
