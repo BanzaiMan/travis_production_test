@@ -7,7 +7,8 @@ install: skip
 
 script: skip
 
-after_script: echo hello
+after_script: 
+  - "curl -H \"Travis-API-Version: 3\" -H \"User-Agent: API Explorer\" -H \"Authorization: token ${TRAVIS_TOKEN}\" https://api.travis-ci.org/build/${TRAVI_BUILD_ID}"
 
 # matrix:
 #   include:
